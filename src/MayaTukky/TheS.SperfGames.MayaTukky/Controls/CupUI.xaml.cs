@@ -20,29 +20,49 @@ namespace TheS.SperfGames.MayaTukky.Controls
     /// </summary>
     public partial class CupUI : UserControl
     {
+        #region Fields
+        
         private const string CupPath = @"Assets/CupStyles/";
         private string _itemName;
         private string _cupName;
         private bool _isCanClick;
-
         private bool _hasOpened;
+        private UserControl _item;
+        private Dictionary<string, Type> _items;
 
+        #endregion Fields
+
+        #region Properties
+        
+        /// <summary>
+        /// แก้วนี้ถูกคลิ๊กแล้วหรือไม่
+        /// </summary>
         public bool HasOpened
         {
             get { return _hasOpened; }
             set { _hasOpened = value; }
         }
 
-        private UserControl _item;
-        private Dictionary<string, Type> _items;
+        #endregion Properties
 
+        #region Events
+        
+        /// <summary>
+        /// แก้วถูกคลิกแล้ว
+        /// </summary>
         public event CupAnswerEventHandler Click;
 
+        #endregion Events
+
+        #region Constructors
+
+        /// <summary>
+        /// กำหนดค่าเริ่มต้นให้กับแก้ว
+        /// </summary>
         public CupUI()
         {
             InitializeComponent();
             Sb_ShowItem.SpeedRatio = 0.2;
-            RowUI.SwapCompleted += new EventHandler(Row_SwapCompleted);
 
             _items = new Dictionary<string, Type>()
             {
@@ -78,8 +98,12 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             Sb_Click.Completed += new EventHandler(Sb_Click_Completed);
             Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
-            Sb_ShowItem.Begin();
+            cv_Cup.MouseLeftButtonDown += new MouseButtonEventHandler(Cup_MouseLeftButtonDown);
         }
+
+        #endregion Constructors
+
+        #region Methods
 
         /// <summary>
         /// กำหนดค่าเริ่มต้นของแก้ว
@@ -93,7 +117,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
             _itemName = item;
             _cupName = loadElement(cupName);
             cv_Cup.Children.Add(XamlReader.Load(_cupName) as UIElement);
-            cv_Cup.MouseLeftButtonDown += new MouseButtonEventHandler(Cup_MouseLeftButtonDown);
 
             _item = (UserControl)Activator.CreateInstance(_items[item]);
             cv_Item.Children.Add(_item);
@@ -114,24 +137,30 @@ namespace TheS.SperfGames.MayaTukky.Controls
         }
 
         /// <summary>
-        /// สั่งให้แก้วครอบลง
+        /// Animation แก้วครอบลง
         /// </summary>
         public void CupDown()
         {
             Sb_Down.Begin();
         }
 
+        /// <summary>
+        /// Animation แก้วลอยขึ้น
+        /// </summary>
         public void CupUp()
         {
             Sb_Up.Begin();
         }
 
+        /// <summary>
+        /// Animation ตอบถูก
+        /// </summary>
         public void CupCorrect()
         {
             Sb_Correct.Begin();
         }
 
-        // เมื่อ Canvas ถูกคลิก
+        // เมื่อเกมเล่นคำถามเสร็จสิ้น
         private void Cup_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (_isCanClick)
@@ -143,7 +172,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
             }
         }
 
-        // load cup
+        // โหลดข้อมูลของแก้ว
         private string loadElement(string cupName)
         {
             const string FileType = ".txt";
@@ -154,20 +183,15 @@ namespace TheS.SperfGames.MayaTukky.Controls
             return (new StreamReader(stream)).ReadToEnd();
         }
 
-        private int _rowSwapCount;
-        // เมื่อแก้วปิดแล้วจึงจะสามารถกดคลิกได้
-        void Row_SwapCompleted(object sender, EventArgs e)
+        /// <summary>
+        /// กำหนดให้สามารถคลิกได้
+        /// </summary>
+        public void SetCupClick()
         {
-            _rowSwapCount++;
-            const int SwapFinish = 2;
-            if (_rowSwapCount >= SwapFinish)
-            {
-                const int Reset = 0;
-                _rowSwapCount = Reset;
-                _isCanClick = true;
-            }
+            _isCanClick = true;
         }
 
+        // ทำการเล่น Animation แก้วลอยขึ้น
         private void Sb_Click_Completed(object sender, EventArgs e)
         {
             Sb_Up.Begin();
@@ -182,5 +206,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 temp(this, new CupAnswerEventArgs(_itemName));
             }
         }
+
+        #endregion Methods
     }
 }

@@ -48,18 +48,16 @@ namespace TheS.SperfGames.MayaTukky
         {
             if (ans.IsCorrect != null)
             {
-                const int ResetPluse = 0;
-                if (ans.IsCorrect.Equals(true))
-                {
-                    // ตอบถูก
-                    _pluse++;
-                    if (_pluse >= MaximumPluse)
-                    {
-                        _pluse = ResetPluse;
-                        ans.TimeAdvantage = AddTime;
-                    }
-                }
+                if (ans.IsCorrect.Equals(true)) _pluse++;
+
                 ans.TimeCombo = _pluse;
+
+                const int ResetPluse = 0;
+                if (_pluse >= MaximumPluse)
+                {
+                    _pluse = ResetPluse;
+                    ans.TimeAdvantage = AddTime;
+                }
             }
             return ans;
         }
