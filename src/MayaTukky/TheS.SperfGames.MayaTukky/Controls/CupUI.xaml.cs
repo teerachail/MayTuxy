@@ -24,6 +24,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         private string _itemName;
         private string _cupName;
         private bool _isCanClick;
+        private int _rowSwapCount;
 
         private bool _hasOpened;
 
@@ -154,9 +155,8 @@ namespace TheS.SperfGames.MayaTukky.Controls
             return (new StreamReader(stream)).ReadToEnd();
         }
 
-        private int _rowSwapCount;
         // เมื่อแก้วปิดแล้วจึงจะสามารถกดคลิกได้
-        void Row_SwapCompleted(object sender, EventArgs e)
+        private void Row_SwapCompleted(object sender, EventArgs e)
         {
             _rowSwapCount++;
             const int SwapFinish = 2;

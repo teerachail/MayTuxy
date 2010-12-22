@@ -24,7 +24,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         private CupUI _lastClickedCup;
         private Canvas[] _cupCanvases;
         private QuestionRow _question;
-        //private List<Cup> _cups;
+        private bool _isFinish;
 
         /// <summary>
         /// ถ้วยที่เหลือ
@@ -49,15 +49,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
             InitializeComponent();
 
             // กำหนดแก้วทั้งหมด
-            //_cups = new List<Cup>()
-            //{
-            //    new Cup(),
-            //    new Cup(),
-            //    new Cup(),
-            //    new Cup(),
-            //    new Cup(),
-            //};
-
             _cupCanvases = new Canvas[] {
                 canvas1,
                 canvas2,
@@ -97,7 +88,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
             const int Easy = 3;
             const int Normal = 4;
             const int Hard = 5;
-
             switch (question.CupCount)
             {
                 case Easy: _cupRowState = "threeCup"; break;
@@ -108,43 +98,19 @@ namespace TheS.SperfGames.MayaTukky.Controls
             setCupRowState();
 
             // เคลียแก้ว
-            foreach (var canvas in _cupCanvases) (canvas.Children[CupElementIndex] as CupUI).ResetState();
+            foreach (var canvas in _cupCanvases) 
+                (canvas.Children[CupElementIndex] as CupUI).ResetState();
 
-            // เคลียแก้ว
-            //foreach (var canvas in _cupCanvases) canvas.Children.Clear();
-            //foreach (var cup in _cups) cup.ResetState();
-
-            //// กำหนดค่าของแก้วที่จะนำมาแสดงผล
-            //foreach (var itemName in _question.BeforeCup)
-            //{
-            //    Cup cup = new Cup();
-            //    cup.Initialize(itemName, getCupStyleName());
-            //    _cups.Add(cup);
-
-            //}
+            // กำหนดลายแก้ว และ วัตถุภายในแก้ว
             for (int canvasIndex = 0; canvasIndex < question.BeforeCup.Count; canvasIndex++)
-            {
                 (_cupCanvases[canvasIndex].Children[CupElementIndex] as CupUI)
                     .Initialize(_question.BeforeCup[canvasIndex], getCupStyleName());
-            }
+
+            // กำหนดวัตถุที่ไม่ได้ถูกนำมาแสดงผลให้ไม่สามารถเปิดแก้วได้
             for (int canvasIndex = question.BeforeCup.Count; canvasIndex < _cupCanvases.Count(); canvasIndex++)
-            {
                 (_cupCanvases[canvasIndex].Children[CupElementIndex] as CupUI).HasOpened = true;
-            }
 
-            //// นำแก้วที่ได้รับไปใส่ลงใน canvas
-            //for (int cupIndex = 0; cupIndex < _cups.Count; cupIndex++)
-            //{
-            //    Canvas canvas = _cupCanvases[cupIndex];
-            //    canvas.Children.Add(_cups[cupIndex]);
-            //}
-
-            //// กำหนดเหตุการณ์เมื่อแก้วถูกคลิก
-            //foreach (var cup in _cups) cup.Click += new CupAnswerEventHandler(OnClickAnswer);
-
-            //// กำหนดเหตุการณ์เมื่อแก้วถูกครอบเสร็จสิ้น
-            //_cups.Last().Sb_Down.Completed += new EventHandler(swapCup);
-
+            // ทำการเปิดแสดงวัตถุที่อยู่ภายในแก้ว
             foreach (var canvas in _cupCanvases) (canvas.Children[CupElementIndex] as CupUI).Sb_ShowItem.Begin();
         }
 
@@ -155,9 +121,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             //foreach (var cup in _cups) cup.CupDown();
             foreach (var canvas in _cupCanvases)
-            {
                 (canvas.Children[0] as CupUI).CupDown();
-            }
         }
 
         /// <summary>
@@ -165,16 +129,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// </summary>
         public void SetAfterCupItem()
         {
-            //for (int cupIndex = 0; cupIndex < _cups.Count; cupIndex++)
-            //{
-            //    _cups[cupIndex].Initialize(_question.AfterCup[cupIndex], getCupStyleName());
-            //}
-
             for (int canvasIndex = 0; canvasIndex < _question.AfterCup.Count; canvasIndex++)
-            {
                 (_cupCanvases[canvasIndex].Children[CupElementIndex] as CupUI)
                     .Initialize(_question.AfterCup[canvasIndex], getCupStyleName());
-            }
         }
 
         /// <summary>
@@ -183,14 +140,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="result">ผลลัพธ์</param>
         public void PlayAnswerResult(AnswerResult result)
         {
-            if (result.IsCorrect == true && _lastClickedCup != null)
-            {
+            if (result.IsCorrect == true && _lastClickedCup != null) 
                 _lastClickedCup.CupCorrect();
-            }
-            if (result.IsFinish)
-            {
+
+            if (result.IsFinish) 
                 _isFinish = true;
-            }
         }
 
         // แสดงจำนวนแก้ว
@@ -198,9 +152,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             VisualStateManager.GoToState(this, _cupRowState, false);
         }
-
-        // เกมจบลงแล้ว
-        private bool _isFinish;
 
         // เปิดแก้วทุกใบ
         private void Sb_Correct_Completed(object sender, EventArgs e)
@@ -217,13 +168,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
                 }
 
-                //foreach (var cup in _cups)
-                //{
-                //    if (!cup.HasOpened)
-                //    {
-                //        cup.CupUp();
-                //    }
-                //}
                 _lastClickedCup.Sb_Correct.Completed -= new EventHandler(Sb_Correct_Completed);
             }
         }

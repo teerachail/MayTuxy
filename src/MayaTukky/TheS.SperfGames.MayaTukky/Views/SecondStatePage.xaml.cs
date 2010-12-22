@@ -17,12 +17,16 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class SecondStatePage : Page
     {
-       private const int PlayTukkyAnimation = 5;
-        private string _cupStyleName;
-        private string[] _cupStyles;
+        private const int PlayTukkyAnimation = 5;
+        private int _timeCombo;
+        private bool _resetGame;
+        private bool _isGameStart;
         private int _correctCount;
+        private string[] _cupStyles;
         private int _incorrectCount;
         private int _timeLeftSecond;
+        private string _cupStyleName;
+        private int _swapCompletedCount;
         private RowUI _fronRow;
         private RowUI _backRow;
         private TimeOutLayerUI _timeOutLayer;
@@ -30,8 +34,6 @@ namespace TheS.SperfGames.MayaTukky.Views
         private DispatcherTimer _timer;
         private GameStageManager _gameManager;
         private PrepareLayerUI _prepareLayer;
-        private int _timeCombo;
-        private bool _isGameStart;
 
         public SecondStatePage()
         {
@@ -41,8 +43,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             LayoutRoot.Children.Add(_prepareLayer);
             _prepareLayer.Sb_Start.Begin();
             _prepareLayer.Sb_Start.Completed += new EventHandler(Sb_Start_Completed);
-
-           
 
             // กำหนดชนิดของแก้ว
             _cupStyles = new string[]{
@@ -62,13 +62,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             
             Canvas.SetTop(_fronRow, 35);
 
-           
-
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
             _fronRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
             _backRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
-
-          
 
             // จัดการการแสดงผลของ tukky และ 3เกลอ
             tukkyLose.PlayCompleted += new EventHandler(tukkyLose_PlayCompleted);
@@ -98,6 +94,39 @@ namespace TheS.SperfGames.MayaTukky.Views
             this.MouseLeftButtonDown += new MouseButtonEventHandler(MainPage_MouseLeftButtonDown);
         }
 
+        /// <summary>
+        /// ทำการเล่นคำถาม
+        /// </summary>
+        public void PlayQuestion()
+        {
+            _isGameStart = true;
+            _fronRow.PlayCupDown();
+            _backRow.PlayCupDown();
+        }
+
+        // สุ่มแก้วที่จะนำมาแสดงผลใน state นี้
+        private string randomCupStyle()
+        {
+            const int MaximumStyle = 3;
+            var _random = new Random();
+            return _cupStyles[_random.Next(MaximumStyle)];
+        }
+
+        private void Row_SwapCompleted(object sender, EventArgs e)
+        {
+            _swapCompletedCount++;
+            const int SetAfterItem = 2;
+            if (_swapCompletedCount >= SetAfterItem)
+            {
+                const int Reset = 0;
+                _swapCompletedCount = Reset;
+                _fronRow.SetAfterCupItem();
+                _backRow.SetAfterCupItem();
+
+                tukkyHand.StopPlay();
+            }
+        }
+
         private void Sb_Start_Completed(object sender, EventArgs e)
         {
             // สร้างตัวจับเวลา
@@ -124,40 +153,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เรียกขอคำถาม
             GetQuestion();
-        }
-
-        int _swapCompletedCount;
-        private void Row_SwapCompleted(object sender, EventArgs e)
-        {
-            _swapCompletedCount++;
-            const int SetAfterItem = 2;
-            if (_swapCompletedCount >= SetAfterItem)
-            {
-                const int Reset = 0;
-                _swapCompletedCount = Reset;
-                _fronRow.SetAfterCupItem();
-                _backRow.SetAfterCupItem();
-
-                tukkyHand.StopPlay();
-            }
-        }
-
-        /// <summary>
-        /// ทำการเล่นคำถาม
-        /// </summary>
-        public void PlayQuestion()
-        {
-            _isGameStart = true;
-            _fronRow.PlayCupDown();
-            _backRow.PlayCupDown();
-        }
-
-        // สุ่มแก้วที่จะนำมาแสดงผลใน state นี้
-        private string randomCupStyle()
-        {
-            const int MaximumStyle = 3;
-            var _random = new Random();
-            return _cupStyles[_random.Next(MaximumStyle)];
         }
 
         // เรียกคำถาม
@@ -258,8 +253,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
             }
         }
-
-        private bool _resetGame;
 
         // เวลาเดิน
         private void _timer_Tick(object sender, EventArgs e)

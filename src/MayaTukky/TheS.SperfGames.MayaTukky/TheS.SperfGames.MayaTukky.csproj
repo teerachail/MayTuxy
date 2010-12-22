@@ -66,14 +66,14 @@
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="MonsterAnimation">
-      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\MonsterAnimation\MonsterAnimation\Bin\Debug\MonsterAnimation.dll</HintPath>
+      <HintPath>C:\Users\Sakul\Desktop\MonsterAnimation.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="PerfEx.Infrastructure.Silverlight">
       <HintPath>..\..\..\..\WorkHorse\lib\PerfEx.Infrastructure.Silverlight.dll</HintPath>
     </Reference>
     <Reference Include="PoisonAnimation">
-      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\PoisonAnimation\PoisonAnimation\Bin\Debug\PoisonAnimation.dll</HintPath>
+      <HintPath>C:\Users\Sakul\Desktop\PoisonAnimation.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
@@ -86,7 +86,7 @@
     <Reference Include="System.Windows.Browser" />
     <Reference Include="System.Windows.Controls" />
     <Reference Include="testVoodooAnime">
-      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\testVoodooAnime\testVoodooAnime\Bin\Debug\testVoodooAnime.dll</HintPath>
+      <HintPath>C:\Users\Sakul\Desktop\testVoodooAnime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
