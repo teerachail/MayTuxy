@@ -118,6 +118,9 @@
     <Compile Include="Controls\ScoreBoardUI.xaml.cs">
       <DependentUpon>ScoreBoardUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ShowItemLayerUI.xaml.cs">
+      <DependentUpon>ShowItemLayerUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ThreeTopLoseUI.xaml.cs">
       <DependentUpon>ThreeTopLoseUI.xaml</DependentUpon>
     </Compile>
@@ -226,6 +229,10 @@
     <Page Include="Controls\ScoreBoardUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShowItemLayerUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\ThreeTopLoseUI.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -17,7 +17,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class SecondStatePage : Page
     {
-       private const int PlayTukkyAnimation = 5;
+        private const int PlayTukkyAnimation = 5;
         private string _cupStyleName;
         private string[] _cupStyles;
         private int _correctCount;
@@ -88,8 +88,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 clock.Sb_Clock3.Stop();
                 clock.Sb_Clock4.Stop();
                 clock.Sb_Clock5.Stop();
-
-                //clock.Sb_TimeUp.Begin();
             };
 
             _trueFalseMark.Sb_Good.Completed += (s, e) => { _trueFalseMark.Sb_Good.Stop(); };

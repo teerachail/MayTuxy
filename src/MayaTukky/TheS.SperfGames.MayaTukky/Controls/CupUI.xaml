@@ -57,6 +57,7 @@
         			</DiscreteObjectKeyFrame.Value>
         		</DiscreteObjectKeyFrame>
         	</ObjectAnimationUsingKeyFrames>
+        	<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
         </Storyboard>
         <Storyboard x:Name="Sb_Down">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="cv_Cup">
