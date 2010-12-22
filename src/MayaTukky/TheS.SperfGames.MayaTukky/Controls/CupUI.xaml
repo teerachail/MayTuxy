@@ -1,0 +1,492 @@
+﻿<UserControl x:Class="TheS.SperfGames.MayaTukky.Controls.CupUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="210" d:DesignWidth="110">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="Sb_ShowItem">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="cv_Cup">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-210"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-210">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Cup">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Item">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BounceEase EasingMode="EaseIn" Bounciness="-25" Bounces="2"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_Item">
+            	<DiscreteObjectKeyFrame KeyTime="0">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            	<DiscreteObjectKeyFrame KeyTime="0:0:1.2">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Sb_Up">
+        	<DoubleAnimation Duration="0:0:0.5" To="-210" Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_Item">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Sb_Down">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="cv_Cup">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-210"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_Item">
+            	<DiscreteObjectKeyFrame KeyTime="0">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Sb_Correct">
+            <DoubleAnimation Duration="0:0:0.3" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="cv_Item" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.3" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="cv_Item" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.3" To="50" Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="cv_Item" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.3" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Item" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_Smoke">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="smoke">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.45"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="smoke">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.45"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-60">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="65">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-60">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="55">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-60">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-55">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="60">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-55">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="55">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="60">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.25">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="canvas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.25">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="canvas1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="S_1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0" To="-210" Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_Item">
+            	<DiscreteObjectKeyFrame KeyTime="0">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            	<DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Collapsed</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Sb_Click">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="cv_Cup">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.05"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="cv_Cup">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.05"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_Item">
+            	<DiscreteObjectKeyFrame KeyTime="0">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            	<DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Canvas x:Name="LayoutRoot">
+        <Canvas x:Name="cv_Shadow" Height="210" Width="110">
+            <Canvas x:Name="shadow" Width="109.725" Height="41.499" Canvas.Top="163">
+                <Path Opacity="0.6" Fill="#ff1f110b" Data="F1 M 109.725,20.749 C 109.725,32.209 85.162,41.499 54.862,41.499 C 24.562,41.499 0.000,32.209 0.000,20.749 C 0.000,9.290 24.562,0.000 54.862,0.000 C 85.162,0.000 109.725,9.290 109.725,20.749 Z" UseLayoutRounding="False" Canvas.Top="1.25"/>
+            </Canvas>
+        </Canvas>
+        <Canvas x:Name="cv_Item" Height="210" Width="110" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+        </Canvas>
+        <Canvas x:Name="cv_Smoke" Height="210" Width="110" Visibility="Collapsed">
+            <Canvas x:Name="smoke" Height="299" Canvas.Left="-82" Width="274" RenderTransformOrigin="0.5,0.5" Canvas.Top="5">
+                <Canvas.RenderTransform>
+                    <CompositeTransform ScaleX="0.45" ScaleY="0.45"/>
+                </Canvas.RenderTransform>
+                <Canvas Height="277" x:Name="S_1" Width="272" RenderTransformOrigin="0.5,0.5" Canvas.Left="6" Canvas.Top="22">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+
+                    <Canvas Height="45" x:Name="canvas2" Width="40" RenderTransformOrigin="0.5,0.5" Canvas.Left="29" Canvas.Top="126">
+
+                        <Canvas.RenderTransform>
+                            <CompositeTransform/>
+                        </Canvas.RenderTransform>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffc6c5c5" Data="F1 M 41.021,134.888 C 41.021,134.888 38.690,128.672 32.977,131.191 C 32.977,131.191 28.657,129.343 27.030,135.244 C 27.030,135.244 24.190,138.244 29.384,142.146 C 29.384,142.146 22.892,151.708 32.351,155.367 C 32.351,155.367 30.737,163.235 42.211,161.365 C 42.211,161.365 47.605,169.712 55.702,161.733 C 55.702,161.733 63.289,153.922 47.364,149.208 C 47.364,149.208 51.518,143.219 46.903,140.458 C 46.903,140.458 47.870,134.471 41.021,134.888 Z" Canvas.Left="-24" Canvas.Top="-123"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffe2e2e1" Data="F1 M 42.113,132.985 C 42.113,132.985 39.780,126.768 34.064,129.286 C 34.064,129.286 28.208,129.972 26.385,135.267 C 26.385,135.267 24.422,138.891 28.787,142.484 C 28.787,142.484 26.309,153.136 33.309,154.614 C 33.309,154.614 35.992,161.696 42.358,159.821 C 42.358,159.821 46.693,168.154 55.149,160.461 C 55.149,160.461 62.847,149.954 48.454,147.307 C 48.454,147.307 52.607,141.313 47.994,138.554 C 47.994,138.554 48.961,132.564 42.113,132.985 Z" Canvas.Left="-24" Canvas.Top="-123"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffc6c5c5" Data="F1 M 29.391,135.760 C 29.391,135.760 27.422,138.390 29.924,141.395 C 29.924,141.395 28.790,142.695 29.854,144.747 C 29.854,144.747 28.277,146.434 30.310,148.128 C 30.310,148.128 29.706,145.849 31.298,144.781 C 31.298,144.781 29.843,142.977 31.488,141.083 C 31.488,141.083 28.220,138.972 29.391,135.760 Z" Canvas.Left="-24" Canvas.Top="-123"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffc6c5c5" Data="F1 M 34.999,152.989 C 34.999,152.989 33.583,155.301 36.850,156.721 C 36.850,156.721 37.496,160.350 40.803,159.211 C 40.803,159.211 43.867,159.451 43.406,156.481 C 43.406,156.481 41.648,158.735 40.290,157.323 C 40.290,157.323 38.660,158.673 37.346,155.444 C 37.346,155.444 35.369,155.996 34.999,152.989 Z" Canvas.Left="-24" Canvas.Top="-123"/>
+
+                    </Canvas>
+
+                    <Canvas Height="69" x:Name="canvas3" Width="64" RenderTransformOrigin="0.5,0.5" Canvas.Left="192" Canvas.Top="100">
+
+                        <Canvas.RenderTransform>
+                            <CompositeTransform/>
+                        </Canvas.RenderTransform>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffc6c5c5" Data="F1 M 227.346,137.075 C 227.346,137.075 235.568,140.295 232.108,147.840 C 232.108,147.840 234.484,153.617 226.607,155.668 C 226.607,155.668 222.566,159.386 217.478,152.408 C 217.478,152.408 204.646,160.854 199.957,148.209 C 199.957,148.209 189.470,150.206 192.173,134.987 C 192.173,134.987 181.180,127.658 191.942,117.049 C 191.942,117.049 202.472,107.110 208.434,128.370 C 208.434,128.370 216.475,122.963 220.057,129.150 C 220.057,129.150 228.034,127.982 227.346,137.075 Z" Canvas.Left="-184" Canvas.Top="-99"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffe2e2e1" Data="F1 M 229.898,135.662 C 229.898,135.662 238.120,138.880 234.663,146.432 C 234.663,146.432 233.639,154.201 226.564,156.528 C 226.564,156.528 221.711,159.067 217.016,153.194 C 217.016,153.194 202.810,156.286 200.977,146.951 C 200.977,146.951 191.614,143.249 194.228,134.823 C 194.228,134.823 183.234,128.901 193.622,117.807 C 193.622,117.807 207.737,107.774 210.980,126.962 C 210.980,126.962 219.026,121.554 222.606,127.736 C 222.606,127.736 230.589,126.566 229.898,135.662 Z" Canvas.Left="-184" Canvas.Top="-99"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffc6c5c5" Data="F1 M 225.968,152.521 C 225.968,152.521 222.434,155.087 218.488,151.705 C 218.488,151.705 216.736,153.188 214.028,151.734 C 214.028,151.734 211.758,153.795 209.544,151.063 C 209.544,151.063 212.562,151.910 214.010,149.813 C 214.010,149.813 216.385,151.780 218.931,149.632 C 218.931,149.632 221.678,154.015 225.968,152.521 Z" Canvas.Left="-184" Canvas.Top="-99"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffc6c5c5" Data="F1 M 203.171,144.737 C 203.171,144.737 200.070,146.573 198.244,142.204 C 198.244,142.204 193.434,141.278 195.009,136.901 C 195.009,136.901 194.751,132.825 198.690,133.495 C 198.690,133.495 195.659,135.789 197.512,137.619 C 197.512,137.619 195.686,139.763 199.950,141.569 C 199.950,141.569 199.179,144.188 203.171,144.737 Z" Canvas.Left="-184" Canvas.Top="-99"/>
+
+                    </Canvas>
+
+                    <Canvas Height="119" x:Name="canvas4" Width="120" RenderTransformOrigin="0.5,0.5" Canvas.Left="163" Canvas.Top="15">
+
+                        <Canvas.RenderTransform>
+                            <CompositeTransform/>
+                        </Canvas.RenderTransform>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffe2e2e1" Data="F1 M 167.398,25.065 C 167.398,25.065 182.522,7.775 200.953,34.671 C 200.953,34.671 224.110,11.094 239.231,35.815 C 239.231,35.815 256.244,78.163 227.891,84.457 C 227.891,84.457 244.903,81.596 243.014,99.336 C 243.014,99.336 238.521,135.179 209.223,124.308 C 209.223,124.308 180.631,124.518 184.412,90.180 C 184.412,90.180 169.762,79.880 182.995,54.128 C 182.995,54.128 173.545,66.144 165.037,52.982 C 165.037,52.982 154.875,35.771 167.398,25.065 Z" Canvas.Left="-152" Canvas.Top="-11"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffd3d3d3" Data="F1 M 232.008,121.875 C 226.949,126.125 219.659,128.180 209.223,124.308 C 209.223,124.308 180.631,124.518 184.412,90.180 C 184.412,90.180 169.762,79.880 182.995,54.128 C 182.995,54.128 173.545,66.144 165.037,52.982 C 165.037,52.982 154.875,35.771 167.398,25.065 C 167.398,25.065 170.923,21.037 176.642,19.894 C 176.642,19.894 180.514,23.647 181.223,27.192 C 181.223,27.192 221.747,38.770 208.514,66.180 C 208.514,66.180 232.144,62.399 226.590,98.079 C 226.590,98.079 232.144,116.273 211.349,119.583 C 212.713,118.997 216.224,120.201 217.507,120.594 C 220.298,121.451 222.603,123.598 225.670,123.412 C 228.343,123.250 231.090,121.973 233.324,120.586 L 232.008,121.875 Z" Canvas.Left="-152" Canvas.Top="-11"/>
+
+                    </Canvas>
+
+                    <Canvas Height="141" x:Name="canvas5" Width="96" RenderTransformOrigin="0.5,0.5" Canvas.Left="11" Canvas.Top="9">
+
+                        <Canvas.RenderTransform>
+                            <CompositeTransform/>
+                        </Canvas.RenderTransform>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffe2e2e1" Data="F1 M 90.345,35.309 C 90.345,35.309 80.167,14.543 57.776,20.081 C 57.776,20.081 44.884,23.542 42.170,33.232 C 42.170,33.232 32.670,13.851 10.957,21.465 C 10.957,21.465 -2.613,29.771 3.493,44.999 C 3.493,44.999 -9.398,67.841 14.350,74.070 C 14.350,74.070 -7.363,123.213 36.742,136.365 C 36.742,136.365 61.169,141.211 69.311,112.140 C 69.311,112.140 84.917,83.761 66.597,71.302 C 66.597,71.302 83.560,80.991 93.738,54.689 C 93.738,54.689 98.488,40.154 90.345,35.309 Z" Canvas.Top="-3"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffd3d3d3" Data="F1 M 83.844,26.856 C 89.762,25.578 90.345,35.309 90.345,35.309 C 98.488,40.154 93.738,54.689 93.738,54.689 C 83.560,80.991 66.597,71.302 66.597,71.302 C 84.917,83.761 69.311,112.140 69.311,112.140 C 61.169,141.211 36.742,136.365 36.742,136.365 C -7.363,123.213 14.350,74.070 14.350,74.070 C 14.350,74.070 10.029,93.117 19.009,103.042 C 19.009,103.042 23.263,104.932 27.988,103.514 C 27.988,103.514 33.186,86.501 45.473,83.666 C 45.473,83.666 35.549,47.277 73.828,39.243 C 73.828,39.243 71.177,29.592 83.844,26.856 Z" Canvas.Top="-3"/>
+
+                    </Canvas>
+
+                    <Canvas Height="125" x:Name="canvas6" Width="112" RenderTransformOrigin="0.5,0.5" Canvas.Left="5" Canvas.Top="144">
+
+                        <Canvas.RenderTransform>
+                            <CompositeTransform/>
+                        </Canvas.RenderTransform>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffe2e2e1" Data="F1 M 47.836,148.882 C 47.836,148.882 32.241,153.608 29.878,169.203 C 29.878,169.203 9.557,166.366 8.612,183.853 C 8.612,183.853 1.997,214.098 27.988,213.625 C 27.988,213.625 28.460,236.781 50.199,229.221 C 50.199,229.221 56.815,250.960 84.225,232.530 C 84.225,232.530 108.799,198.976 73.828,189.997 C 73.828,189.997 87.533,164.004 66.739,150.772 C 66.739,150.772 55.871,139.432 47.836,148.882 Z" Canvas.Top="-139"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffd3d3d3" Data="F1 M 50.199,229.221 C 50.199,229.221 56.815,250.960 84.225,232.530 C 84.225,232.530 108.799,198.976 73.828,189.997 C 73.828,189.997 87.533,164.004 66.739,150.772 C 66.739,150.772 55.871,139.432 47.836,148.882 C 47.836,148.882 47.364,151.246 51.381,151.481 C 51.381,151.481 22.080,170.857 30.351,201.102 C 30.351,201.102 37.203,212.917 49.490,210.790 C 49.490,210.790 53.271,223.784 59.650,224.731 C 59.650,224.731 60.123,226.858 57.997,228.040 C 57.997,228.040 54.925,231.819 50.199,229.221 Z" Canvas.Top="-139"/>
+
+                    </Canvas>
+
+                    <Canvas Height="111" x:Name="canvas7" Width="96" RenderTransformOrigin="0.5,0.5" Canvas.Left="171" Canvas.Top="130">
+
+                        <Canvas.RenderTransform>
+                            <CompositeTransform ScaleX="1"/>
+                        </Canvas.RenderTransform>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffe2e2e1" Data="F1 M 202.664,139.431 C 202.664,139.431 184.233,148.646 188.486,179.128 C 188.486,179.128 168.284,171.685 167.221,198.267 C 167.221,198.267 168.638,214.571 187.778,213.153 C 187.778,213.153 235.627,246.116 249.449,211.735 C 249.449,211.735 261.442,182.672 235.923,181.963 C 235.923,181.963 250.158,158.570 230.311,143.684 C 230.311,143.684 219.677,125.253 202.664,139.431 Z" Canvas.Left="-160" Canvas.Top="-123"/>
+
+                        <!-- Layer 5/<Group>/<Path> -->
+                        <Path Fill="#ffd3d3d3" Data="F1 M 198.836,219.520 C 192.242,216.229 187.778,213.153 187.778,213.153 C 168.638,214.571 167.221,198.267 167.221,198.267 C 168.284,171.685 188.486,179.128 188.486,179.128 C 184.233,148.646 202.664,139.431 202.664,139.431 C 219.677,125.253 230.311,143.684 230.311,143.684 C 230.311,143.684 241.830,160.814 232.615,184.916 C 232.615,184.916 235.806,205.474 213.830,211.499 C 213.830,211.499 210.640,221.423 200.361,220.714 L 198.836,219.520 Z" Canvas.Left="-160" Canvas.Top="-123"/>
+
+                    </Canvas>
+
+                </Canvas>
+
+                <Canvas Height="296" x:Name="canvas" Width="304" RenderTransformOrigin="0.5,0.5">
+
+                    <Canvas.RenderTransform>
+                        <CompositeTransform/>
+                    </Canvas.RenderTransform>
+
+                    <!-- Layer 7/<Path> -->
+                    <Path Fill="#ffe9e9e9" Height="265" x:Name="path" Width="239" RenderTransformOrigin="0.5,0.5" Canvas.Left="14.143" Canvas.Top="12.14" Data="F1 M61.068001,236.15907 C61.068001,236.15907 91.550003,275.85507 156.76601,241.83006 C156.76601,241.83006 194.336,251.75407 208.51401,221.27206 C208.51401,221.27206 247.502,206.38606 230.489,158.18307 C230.489,158.18307 224.108,136.20908 198.59,134.08109 C198.59,134.08109 226.944,132.66408 224.108,105.72707 C224.108,105.72707 227.653,83.043076 205.679,82.334076 C205.679,82.334076 210.64,46.890076 178.741,44.055077 C178.741,44.055077 173.07001,14.991077 152.51401,14.991077 C152.51401,14.991077 131.95599,10.737077 124.867,36.966076 C124.867,36.966076 88.004997,21.371078 75.246002,55.397076 C75.246002,55.397076 40.511002,66.738075 58.233002,105.01807 C58.233002,105.01807 29.878,107.85307 29.878,140.46107 C29.878,140.46107 32.713001,162.43607 55.396999,165.27206 C55.396999,165.27206 36.257999,175.90508 34.131001,192.20908 C34.131001,192.20908 33.422001,219.14607 53.271,219.85507 C53.271,219.85507 50.436001,232.61507 61.068001,236.15907 z">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0" Y="2.5"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+
+                </Canvas>
+
+                <Canvas Height="254" x:Name="canvas1" Width="241" RenderTransformOrigin="0.5,0.5" Canvas.Left="26" Canvas.Top="24">
+
+                    <Canvas.RenderTransform>
+                        <CompositeTransform/>
+                    </Canvas.RenderTransform>
+
+                    <!-- Layer 4/<Path> -->
+                    <Path Fill="#ffe2e2e1" Data="F1 M 61.068,221.423 C 61.068,221.423 91.550,261.119 156.766,227.094 C 156.766,227.094 194.336,237.018 208.514,206.536 C 208.514,206.536 247.502,191.650 230.489,143.447 C 230.489,143.447 224.108,121.473 198.590,119.345 C 198.590,119.345 226.944,117.928 224.108,90.991 C 224.108,90.991 227.653,68.307 205.679,67.598 C 205.679,67.598 210.640,32.154 178.741,29.319 C 178.741,29.319 173.070,0.255 152.514,0.255 C 152.514,0.255 131.956,-3.999 124.867,22.230 C 124.867,22.230 88.005,6.635 75.246,40.661 C 75.246,40.661 40.511,52.002 58.233,90.282 C 58.233,90.282 29.878,93.117 29.878,125.725 C 29.878,125.725 32.713,147.700 55.397,150.536 C 55.397,150.536 36.258,161.169 34.131,177.473 C 34.131,177.473 33.422,204.410 53.271,205.119 C 53.271,205.119 50.436,217.879 61.068,221.423 Z" x:Name="path1" Canvas.Left="-12" Canvas.Top="5"/>
+
+                    <!-- Layer 4/<Path> -->
+                    <Path Fill="#ffd3d3d3" Data="F1 M 55.397,150.536 C 55.397,150.536 36.258,161.169 34.131,177.473 C 34.131,177.473 33.422,204.410 53.271,205.119 C 53.271,205.119 50.436,217.879 61.068,221.423 C 61.068,221.423 91.550,261.119 156.766,227.094 C 156.766,227.094 177.325,229.221 183.940,210.790 C 183.940,210.790 200.480,211.264 202.370,201.812 C 202.370,201.812 187.720,209.371 181.576,204.174 C 181.576,204.174 168.817,216.459 148.023,202.756 C 148.023,202.756 141.880,222.604 117.778,222.132 C 117.778,222.132 90.369,224.494 92.731,198.502 C 92.731,198.502 70.047,216.460 62.486,192.359 C 62.486,192.359 31.769,182.436 55.397,150.536 Z" x:Name="path2" Canvas.Left="-12" Canvas.Top="5"/>
+
+                    <!-- Layer 4/<Path> -->
+                    <Path Fill="#ffc6c5c5" Data="F1 M 143.534,29.083 C 143.534,29.083 123.213,22.467 109.981,44.206 C 109.981,44.206 99.583,39.953 89.187,50.822 C 89.187,50.822 75.481,44.678 69.339,60.746 C 69.339,60.746 82.098,52.241 92.022,59.800 C 92.022,59.800 100.057,47.041 115.179,53.185 C 115.179,53.185 121.323,28.610 143.534,29.083 Z" x:Name="path3" Canvas.Left="-12" Canvas.Top="5"/>
+
+                    <!-- Layer 4/<Path> -->
+                    <Path Fill="#ffc6c5c5" Data="F1 M 218.294,136.502 C 218.294,136.502 197.896,116.072 181.739,136.804 C 181.739,136.804 171.277,121.710 160.330,127.366 C 160.330,127.366 142.247,115.104 135.316,136.611 C 135.316,136.611 118.379,146.692 124.459,162.698 C 124.459,162.698 125.836,142.094 144.139,142.094 C 144.139,142.094 145.432,127.225 161.867,136.375 C 161.867,136.375 172.732,129.512 181.885,143.811 C 181.885,143.811 192.938,126.909 218.294,136.502 Z" x:Name="path4" Canvas.Left="-12" Canvas.Top="5"/>
+
+                    <!-- Layer 4/<Path> -->
+                    <Path Fill="#ffc6c5c5" Data="F1 M 80.217,109.106 C 80.217,109.106 70.983,101.398 62.638,114.814 C 62.638,114.814 46.297,115.286 49.138,130.532 C 49.138,130.532 46.104,143.828 59.432,143.737 C 59.432,143.737 50.688,134.561 57.761,129.507 C 57.761,129.507 52.893,121.492 67.915,117.819 C 67.915,117.819 66.772,108.782 80.217,109.106 Z" x:Name="path5" Canvas.Left="-12" Canvas.Top="5"/>
+
+                </Canvas>
+            </Canvas>
+        </Canvas>
+        <Canvas x:Name="cv_Cup" Height="210" Width="110" RenderTransformOrigin="0.5,0.5" Canvas.Top="-210">
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+        </Canvas>
+    </Canvas>
+</UserControl>

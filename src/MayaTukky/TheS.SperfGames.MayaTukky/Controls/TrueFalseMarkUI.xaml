@@ -8,18 +8,6 @@
     d:DesignHeight="300" d:DesignWidth="400" Width="625" Height="488">
     <UserControl.Resources>
         <Storyboard x:Name="Sb_Good">
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:1.1">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
     		<DoubleAnimation Duration="0:0:0.5" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path_Copy" d:IsOptimized="True"/>
     		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="path_Copy">
     			<EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
@@ -77,18 +65,6 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
                     <DiscreteObjectKeyFrame.Value>
                         <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>

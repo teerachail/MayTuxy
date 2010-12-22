@@ -65,9 +65,15 @@
     <Reference Include="Microsoft.Expression.Effects, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MonsterAnimation">
+      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\MonsterAnimation\MonsterAnimation\Bin\Debug\MonsterAnimation.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="PerfEx.Infrastructure.Silverlight">
       <HintPath>..\..\..\..\WorkHorse\lib\PerfEx.Infrastructure.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="PoisonAnimation">
+      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\PoisonAnimation\PoisonAnimation\Bin\Debug\PoisonAnimation.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
@@ -79,6 +85,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="System.Windows.Controls" />
+    <Reference Include="testVoodooAnime">
+      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\testVoodooAnime\testVoodooAnime\Bin\Debug\testVoodooAnime.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnswerResult.cs" />
@@ -87,6 +96,9 @@
     </Compile>
     <Compile Include="Controls\ClockUI.xaml.cs">
       <DependentUpon>ClockUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CupUI.xaml.cs">
+      <DependentUpon>CupUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\EmptyItemUI.xaml.cs">
       <DependentUpon>EmptyItemUI.xaml</DependentUpon>
@@ -99,6 +111,9 @@
     </Compile>
     <Compile Include="Controls\PrepareLayerUI.xaml.cs">
       <DependentUpon>PrepareLayerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RowUI.xaml.cs">
+      <DependentUpon>RowUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ScoreBoardUI.xaml.cs">
       <DependentUpon>ScoreBoardUI.xaml</DependentUpon>
@@ -133,6 +148,7 @@
     <Compile Include="Controls\VoodooSealUI.xaml.cs">
       <DependentUpon>VoodooSealUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CupAnswerEventHandler.cs" />
     <Compile Include="GameCombo.cs" />
     <Compile Include="GameLevel.cs" />
     <Compile Include="GameLevelSecond.cs" />
@@ -142,6 +158,7 @@
     <Compile Include="GameRoundSecond.cs" />
     <Compile Include="GameStageManager.cs" />
     <Compile Include="GameStageManagerSecond.cs" />
+    <Compile Include="GlobalScore.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="QuestionRow.cs" />
     <Compile Include="SwapHelper.cs" />
@@ -182,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\CupUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\EmptyItemUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -195,6 +216,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\PrepareLayerUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RowUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -287,7 +312,21 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Image\bg.jpg" />
+    <Resource Include="Assets\Images\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\CupStyles\CylindricalCup_1.txt" />
+    <Content Include="Assets\CupStyles\CylindricalCup_2.txt" />
+    <Content Include="Assets\CupStyles\CylindricalCup_3.txt" />
+    <Content Include="Assets\CupStyles\CylindricalCup_4.txt" />
+    <Content Include="Assets\CupStyles\TallCup_1.txt" />
+    <Content Include="Assets\CupStyles\TallCup_2.txt" />
+    <Content Include="Assets\CupStyles\TallCup_3.txt" />
+    <Content Include="Assets\CupStyles\TallCup_4.txt" />
+    <Content Include="Assets\CupStyles\TriangleCup_1.txt" />
+    <Content Include="Assets\CupStyles\TriangleCup_2.txt" />
+    <Content Include="Assets\CupStyles\TriangleCup_3.txt" />
+    <Content Include="Assets\CupStyles\TriangleCup_4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
