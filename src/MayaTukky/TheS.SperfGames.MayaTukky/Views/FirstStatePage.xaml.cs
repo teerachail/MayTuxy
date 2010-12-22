@@ -17,6 +17,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class FirstStatePage : Page
     {
+        private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private const int PlayTukkyAnimation = 5;
         private string _cupStyleName;
         private string[] _cupStyles;
@@ -37,56 +38,64 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             InitializeComponent();
 
-            // หน้า เริ่มต้น นับอยหลัง
+            // ตัวนับเวลาก่อนเกมเริ่ม
             _prepareLayer = new PrepareLayerUI();
             LayoutRoot.Children.Add(_prepareLayer);
-            _prepareLayer.Sb_Start.Begin();
-            _prepareLayer.Sb_Start.Completed += new EventHandler(Sb_Start_Completed);
 
             // ค่าเริ่มต้น
-            //_gameManager = new GameStageManagerFirst();
+            _gameManager = new GameStageManagerFirst();
             _frontRow = new RowUI();
             _trueFalseMark = new TrueFalseMarkUI();
 
-            // กำหนดชนิดของแก้ว
-            _cupStyles = new string[]{
-                "CylindricalCup",
-                "TallCup",
-                "TriangleCup",
-            };
-
-            // สุ่มถ้วยที่จะนำมาใช้ในเกม
+            // กำหนดชนิดของแก้ว และทำการสุ่มลายแก้วที่จะนำมาใช้ในเกม
+            _cupStyles = new string[] { "CylindricalCup", "TallCup", "TriangleCup" };
             _cupStyleName = randomCupStyle();
 
+            // สร้างตัวจับเวลา
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
+
+            // กำหนดเหตุการณ์ของเกม
+            initializeEvents();
+
+            // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
+            _prepareLayer.Sb_Start.Begin();
+        }
+
+        // กำหนดเหตุการณ์ของเกม
+        private void initializeEvents()
+        {
+            // ตัวนับเวลาก่อนเริ่มเล่นเกม
+            _prepareLayer.Sb_Start.Completed += new EventHandler(Sb_Start_Completed);
 
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
             _frontRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
 
-            // เล่น 3 เกลอ Normal
-            tukkyWin.ThreeTopNormal.StartPlay();
-
-            //// จัดการการแสดงผลของ tukky และ 3เกลอ
+            // กำหนดเหตุกาณ์ในการแสดงผลทักกี้ และสามเกลอ
             tukkyLose.PlayCompleted += new EventHandler(tukkyLose_PlayCompleted);
-
+            tukkyWin.ThreeTopNormal.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
             tukkyWin.ThreeTopLose.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
             tukkyWin.ThreeTopWin.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
 
-            //RowUI.SwapCompleted += new EventHandler(Row_SwapCompleted);
-
-            clock.Sb_Clock5.Completed += (s, e) =>
-            {
-                clock.Sb_Clock1.Stop();
-                clock.Sb_Clock2.Stop();
-                clock.Sb_Clock3.Stop();
-                clock.Sb_Clock4.Stop();
-                clock.Sb_Clock5.Stop();
-            };
-
+            // เครื่องหมายที่แสดงผลการตอบถูกหรือตอบผิด
             _trueFalseMark.Sb_Good.Completed += (s, e) => { _trueFalseMark.Sb_Good.Stop(); };
             _trueFalseMark.Sb_Fail.Completed += (s, e) => { _trueFalseMark.Sb_Fail.Stop(); };
 
+            // คลิกเพื่อเล่นการแสดงคำถาม
             this.MouseLeftButtonDown += new MouseButtonEventHandler(MainPage_MouseLeftButtonDown);
-           
+
+            // กำหนดเหตุการ์ณ์ของนาฬิกาจับเวลา
+            clock.Sb_Clock5.Completed += new EventHandler(Sb_Clock5_Completed);
+        }
+
+        // กำหนดเหตุการ์ณ์ของนาฬิกาจับเวลา
+        private void Sb_Clock5_Completed(object sender, EventArgs e)
+        {
+            clock.Sb_Clock1.Stop();
+            clock.Sb_Clock2.Stop();
+            clock.Sb_Clock3.Stop();
+            clock.Sb_Clock4.Stop();
+            clock.Sb_Clock5.Stop();
         }
 
         /// <summary>
@@ -191,13 +200,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             }
         }
 
+        // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง
         private void Sb_Start_Completed(object sender, EventArgs e)
         {
-            // สร้างตัวจับเวลา
-            _timer = new DispatcherTimer();
-            const int OneSecond = 1;
-            _timer.Interval = TimeSpan.FromSeconds(OneSecond);
-            _timer.Tick += new EventHandler(_timer_Tick);
             _timer.Start();
 
             LayoutRoot.Children.Remove(_prepareLayer);
@@ -248,12 +253,13 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             _resetGame = false;
             _isGameStart = false;
+
             // เรียกคำถาม
             var question = _gameManager.GetNextQuestion();
 
-            // กำหนดข้อมูลของแถวหน้าและแถวหลัง
+            MessageBox.Show("CupLevel: "+question.CupLevel);
+            // กำหนดข้อมูลของแถวหน้า
             _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, question.CupLevel);
-            
         }
 
         private void _timer_Tick(object sender, EventArgs e)

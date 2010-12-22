@@ -45,6 +45,21 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// </summary>
         public event CupAnswerEventHandler ClickAnswer;
 
+        /// <summary>
+        /// แก้วที่อยู่ภายในแถวนี้
+        /// </summary>
+        public CupUI[] Cups
+        {
+            get
+            {
+                CupUI[] cups = new CupUI[_cupCanvases.Count()];
+                for (int cupIndex = 0; cupIndex < _cupCanvases.Count(); cupIndex++)
+                    cups[cupIndex] = _cupCanvases[cupIndex].Children[ElementCupIndex] as CupUI;
+
+                return cups;
+            }
+        }
+
         #endregion Events
 
         #region Constructors
@@ -103,6 +118,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             // เคลียแก้ว
             foreach (var canvas in _cupCanvases) (canvas.Children[ElementCupIndex] as CupUI).ResetState();
+
 
             // กำหนดลายแก้ว และวัตถุภายในแก้ว
             for (int canvasIndex = 0; canvasIndex < _cupCanvases.Count(); canvasIndex++)

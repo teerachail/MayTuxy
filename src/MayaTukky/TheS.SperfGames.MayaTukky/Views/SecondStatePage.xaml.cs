@@ -22,17 +22,17 @@ namespace TheS.SperfGames.MayaTukky.Views
     {
         #region Fields
 
-        private const int PlayTukkyAnimation = 5; // จำนวนครั้งที่จะเล่น animation ของทักกี้
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private bool _isGetNextQuestion; // เมื่อเล่น animation สามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
+        private int _cupAutoAnswerCount; // ตัวนับแก้วที่ถูกตอบอัตโนมัติ
         private int _timeCombo;
         private int _incorrectCount;
         private int _correctCount;
         private int _timeLeftSecond;
         private string[] _cupStyles;
         private string _cupStyleName;
-        private RowUI _fronRow;
+        private RowUI _frontRow;
         private RowUI _backRow;
         private DispatcherTimer _timer;
         private GameStageManager _gameManager;
@@ -57,11 +57,11 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดตัวควบคุมเกม และ แถวหน้ากับแถวหลัง
             _gameManager = new GameStageManagerSecond();
-            _fronRow = new RowUI();
+            _frontRow = new RowUI();
             _backRow = new RowUI();
 
             // กำหนดตำแหน่งของแถวหน้า
-            Canvas.SetTop(_fronRow, 35);
+            Canvas.SetTop(_frontRow, 35);
 
             // ย่อขนาดของแถวหลัง
             ScaleTransform scale = new ScaleTransform();
@@ -81,12 +81,11 @@ namespace TheS.SperfGames.MayaTukky.Views
             // สร้างตัวจับเวลา
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
-            _timer.Tick += new EventHandler(_timer_Tick);
 
             // นำเครื่องหมาย True Flase เข้ามา
             LayoutRoot.Children.Add(_trueFalseMark);
 
-            // กำหนดเหตุการณ์ต่างๆในการเล่นเกม
+            // กำหนดเหตุการณ์ของเกม
             initializeEvents();
 
             // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
@@ -103,7 +102,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         public void PlayQuestion()
         {
             _isWaitingClickForPlayQuestion = false;
-            _fronRow.PlayCupDown();
+            _frontRow.PlayCupDown();
             _backRow.PlayCupDown();
         }
 
@@ -118,6 +117,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เรียกคำถาม
         private void GetQuestion()
         {
+            const int Reset = 0;
+            _cupAutoAnswerCount = Reset;
             _isGetNextQuestion = false;
             _isWaitingClickForPlayQuestion = true;
 
@@ -126,19 +127,26 @@ namespace TheS.SperfGames.MayaTukky.Views
             string cupLevel = question.CupLevel;
 
             // กำหนดข้อมูลของแถวหน้าและแถวหลัง พร้อมกับกำหนดคำถาม
-            _fronRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
+            _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
             _backRow.SetQuestionRow(question.BackRow, _cupStyleName, cupLevel);
         }
 
-        // กำหนดเหตุการณ์ต่างๆ
+        // กำหนดเหตุการณ์ของเกม
         private void initializeEvents()
         {
             // ตัวนับเวลาก่อนเริ่มเล่นเกม
             _prepareLayer.Sb_Start.Completed += new EventHandler(Sb_Start_Completed);
 
+            // เหตุการณ์เมื่อเวลาเดิน
+            _timer.Tick += new EventHandler(_timer_Tick);
+
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
-            _fronRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
+            _frontRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
             _backRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
+
+            // ทำการติดตามเมื่อแก้วถูกเปิดเสร็จสิ้น
+            foreach (var cup in _frontRow.Cups) cup.Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
+            foreach (var cup in _backRow.Cups) cup.Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
 
             // กำหนดเหตุกาณ์ในการแสดงผลทักกี้ และสามเกลอ
             tukkyLose.PlayCompleted += new EventHandler(tukkyLose_PlayCompleted);
@@ -151,7 +159,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             _trueFalseMark.Sb_Fail.Completed += (s, e) => { _trueFalseMark.Sb_Fail.Stop(); };
 
             // เมื่อแก้วสลับเสร็จสิ้น
-            _fronRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
+            _frontRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
             _backRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
 
             // คลิกเพื่อเล่นการแสดงคำถาม
@@ -172,12 +180,10 @@ namespace TheS.SperfGames.MayaTukky.Views
                 // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา
                 _timeCombo = result.TimeCombo;
 
-                const int ResetAnswerCount = 0;
                 if (result.IsCorrect == false)
                 {
                     // จัดการตัวนับการตอบผิด
                     _incorrectCount++;
-                    _correctCount = ResetAnswerCount;
 
                     // ตอบผิด ทำการเรียกคำถามใหม่
                     _isGetNextQuestion = true;
@@ -194,10 +200,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    // จัดการตัวนับการตอบถูก
-                    _correctCount++;
-                    _incorrectCount = ResetAnswerCount;
-
                     // จัดการการแสดงผลคะแนนและเวลา
                     _timeLeftSecond += result.TimeAdvantage;
                     GlobalScore.Second += (int)result.Score;
@@ -205,7 +207,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.Sb_ScoreUp.Begin();
 
                     // แสดงผล animation ตอบถูกของ item
-                    _fronRow.PlayAnswerResult(result);
+                    _frontRow.PlayAnswerResult(result);
                     _backRow.PlayAnswerResult(result);
 
                     // ตรวจสอบการจบระดับความยากนี้
@@ -213,19 +215,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     {
                         // ตอบถูก ทำการตรวจสอบการเลื่อนระดับความยาก
                         _isGetNextQuestion = true;
-
-                        scoreBoard.Sb_RoundEnd.Stop();
-                        scoreBoard.Sb_RoundEnd.Begin();
                     }
-
-                    // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่น animation
-                    tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
-                    tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
-                    tukkyWin.ThreeTopLose.Visibility = System.Windows.Visibility.Visible;
-                    tukkyWin.ThreeTopLose.StartPlay();
-
-                    // แสดง animation การตอบถูก
-                    _trueFalseMark.Sb_Good.Begin();
                 }
 
                 // TODO: การเล่น animation ของนาฬิกา
@@ -242,22 +232,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 {
                     clock.Sb_Clock5.Begin();
                     clock.Sb_TimeUp.Begin();
-                }
-
-                // จัดการการแสดงผลของทักกี้
-                if (_incorrectCount >= PlayTukkyAnimation)
-                {
-                    // เล่น aniamtion ทักกีี้หัวเราะ
-                    tukkyWin.StartPlay();
-                    _incorrectCount = ResetAnswerCount;
-                }
-                else if (_correctCount >= PlayTukkyAnimation)
-                {
-                    // เล่น aniamtion ทักกีี้ร้องไห้
-                    tukkyWin.Visibility = System.Windows.Visibility.Collapsed;
-                    tukkyLose.Visibility = System.Windows.Visibility.Visible;
-                    tukkyLose.StartPlay();
-                    _correctCount = ResetAnswerCount;
                 }
             }
         }
@@ -279,6 +253,21 @@ namespace TheS.SperfGames.MayaTukky.Views
                 // แสดงผล animation หมดเวลา
                 _timeOutLayer = new TheS.SperfGames.MayaTukky.Controls.TimeOutLayerUI();
                 LayoutRoot.Children.Add(_timeOutLayer);
+
+                // จัดการการแสดงผลของทักกี้
+                if (_incorrectCount >= _correctCount)
+                {
+                    // เล่น aniamtion ทักกีี้หัวเราะ
+                    tukkyWin.StartPlay();
+                }
+                else
+                {
+                    // เล่น aniamtion ทักกีี้ร้องไห้
+                    tukkyWin.Visibility = System.Windows.Visibility.Collapsed;
+                    tukkyLose.Visibility = System.Windows.Visibility.Visible;
+                    tukkyLose.StartPlay();
+                }
+
                 _timeOutLayer.Sb_TimeOut.Begin();
             }
         }
@@ -332,7 +321,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 tukkyHand.StopPlay();
 
                 // กำหนดข้อมูลให้แถวหลัง
-                _fronRow.SetAfterCupItem();
+                _frontRow.SetAfterCupItem();
                 _backRow.SetAfterCupItem();
             }
         }
@@ -345,10 +334,37 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // นำแถวหน้าและแถวหลังเข้ามาภายในตัวเกม
             LayoutRoot.Children.Add(_backRow);
-            LayoutRoot.Children.Add(_fronRow);
+            LayoutRoot.Children.Add(_frontRow);
 
             // เริ่มทำการจับเวลา
             _timer.Start();
+        }
+
+        // เมื่อแก้วลอยขึ้นจนสุดแล้ว
+        private void Sb_Up_Completed(object sender, EventArgs e)
+        {
+            if (_isGetNextQuestion)
+            {
+                _cupAutoAnswerCount++;
+                const int AutoCupAmount = 2;
+                if (_cupAutoAnswerCount >= AutoCupAmount)
+                {
+                    // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
+                    tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
+                    tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
+                    tukkyWin.ThreeTopLose.Visibility = System.Windows.Visibility.Visible;
+                    tukkyWin.ThreeTopLose.StartPlay();
+
+                    // เล่นอนิเมชันดาว
+                    scoreBoard.Sb_RoundEnd.Stop();
+                    scoreBoard.Sb_RoundEnd.Begin();
+
+                    // แสดง animation การตอบถูก
+                    _trueFalseMark.Sb_Good.Begin();
+
+                    _correctCount++;
+                }
+            }
         }
 
         // Executes when the user navigates to this page.

@@ -154,12 +154,17 @@
     <Compile Include="CupAnswerEventHandler.cs" />
     <Compile Include="GameCombo.cs" />
     <Compile Include="GameLevel.cs" />
+    <Compile Include="GameLevelFirst.cs" />
+    <Compile Include="GameLevelFirstCompute.cs" />
+    <Compile Include="GameLevelFirstFix.cs" />
     <Compile Include="GameLevelSecond.cs" />
     <Compile Include="GameLevelSecondCompute.cs" />
     <Compile Include="GameLevelSecondFix.cs" />
     <Compile Include="GameRound.cs" />
+    <Compile Include="GameRoundFirst.cs" />
     <Compile Include="GameRoundSecond.cs" />
     <Compile Include="GameStageManager.cs" />
+    <Compile Include="GameStageManagerFirst.cs" />
     <Compile Include="GameStageManagerSecond.cs" />
     <Compile Include="GlobalScore.cs" />
     <Compile Include="Question.cs" />
