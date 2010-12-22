@@ -15,32 +15,40 @@ using TheS.SperfGames.MayaTukky.Controls;
 
 namespace TheS.SperfGames.MayaTukky.Controls
 {
+    /// <summary>
+    /// การแสดงผลของแถว
+    /// </summary>
     public partial class RowUI : UserControl
     {
-        private const int CupElementIndex = 0;
-        private string _cupRowState;
+        #region Fields
+        
+        private const int ElementCupIndex = 0; // ตำแหน่งของแก้วที่อยู่ภายใน Canvas
+        private string _cupRowState; // การแสดงผล state ของ cup
         private string _cupStyleName;
         private string _cupLevel;
         private CupUI _lastClickedCup;
         private Canvas[] _cupCanvases;
         private QuestionRow _question;
-        private bool _isFinish;
+        private bool _isAutoAnswerOn;
 
-        /// <summary>
-        /// ถ้วยที่เหลือ
-        /// </summary>
-        public int CurrentCup { get; set; }
+        #endregion Fields
 
+        #region Events
+        
         /// <summary>
         /// การสลับแก้วเสร็จสิ้น
         /// </summary>
-        public static event EventHandler SwapCompleted;
+        public event EventHandler SwapCompleted;
 
         /// <summary>
         /// เมื่อมีการคลิกเพื่อทำการตอบคำถาม
         /// </summary>
         public event CupAnswerEventHandler ClickAnswer;
 
+        #endregion Events
+
+        #region Constructors
+        
         /// <summary>
         /// กำหนดค่าเริ่มต้นให้กับแถว
         /// </summary>
@@ -58,17 +66,12 @@ namespace TheS.SperfGames.MayaTukky.Controls
             };
             foreach (var canvas in _cupCanvases) canvas.Children.Add(new CupUI());
 
-            // กำหนดเหตุการณ์เมื่อแก้วถูกคลิก
-            foreach (var canvas in _cupCanvases)
-                (canvas.Children[CupElementIndex] as CupUI).Click += new CupAnswerEventHandler(OnClickAnswer);
-
-            // กำหนดเหตุการณ์เมื่อแก้วถูกครอบเสร็จสิ้น
-            (_cupCanvases.Last().Children[CupElementIndex] as CupUI).Sb_Down.Completed += new EventHandler(swapCup);
-
-            // กำหนดเหตุการณ์เมื่อการสลับแก้วทั้งสองแบบจบลง
-            Storyboard1.Completed += new EventHandler(swapCup);
-            Storyboard2.Completed += new EventHandler(swapCup);
+            initializeEvents();
         }
+
+        #endregion Constructors
+
+        #region Methods
 
         /// <summary>
         /// กำหนดคำถาม
@@ -78,11 +81,10 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="cupLevel">ชนิดระดับความยากของแก้ว</param>
         public void SetQuestionRow(QuestionRow question, string cupStyleName, string cupLevel)
         {
+            _lastClickedCup = null;
             _cupStyleName = cupStyleName;
             _cupLevel = cupLevel;
-            CurrentCup = question.BeforeCup.Count;
             _question = question;
-            _lastClickedCup = null;
 
             // กำหนด state เริ่มต้นจากจำนวนแก้ว
             const int Easy = 3;
@@ -95,23 +97,31 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 case Hard: _cupRowState = "fiveCup"; break;
                 default: break;
             }
-            setCupRowState();
+
+            // กำหนดการใช้งานของ state manager เพื่อกำหนดการแสดงผลของแก้วที่จะนำไปใช้งาน
+            VisualStateManager.GoToState(this, _cupRowState, false);
 
             // เคลียแก้ว
-            foreach (var canvas in _cupCanvases) 
-                (canvas.Children[CupElementIndex] as CupUI).ResetState();
+            foreach (var canvas in _cupCanvases) (canvas.Children[ElementCupIndex] as CupUI).ResetState();
 
-            // กำหนดลายแก้ว และ วัตถุภายในแก้ว
-            for (int canvasIndex = 0; canvasIndex < question.BeforeCup.Count; canvasIndex++)
-                (_cupCanvases[canvasIndex].Children[CupElementIndex] as CupUI)
-                    .Initialize(_question.BeforeCup[canvasIndex], getCupStyleName());
-
-            // กำหนดวัตถุที่ไม่ได้ถูกนำมาแสดงผลให้ไม่สามารถเปิดแก้วได้
-            for (int canvasIndex = question.BeforeCup.Count; canvasIndex < _cupCanvases.Count(); canvasIndex++)
-                (_cupCanvases[canvasIndex].Children[CupElementIndex] as CupUI).HasOpened = true;
+            // กำหนดลายแก้ว และวัตถุภายในแก้ว
+            for (int canvasIndex = 0; canvasIndex < _cupCanvases.Count(); canvasIndex++)
+            {
+                if (canvasIndex < question.BeforeCup.Count)
+                {
+                    // กำหนดข้อมูลของแก้วที่นำไปแสดงผล
+                    (_cupCanvases[canvasIndex].Children[ElementCupIndex] as CupUI)
+                        .Initialize(_question.BeforeCup[canvasIndex], getCupStyleName());
+                }
+                else
+                {
+                    // กำหนดวัตถุที่ไม่ได้ถูกนำมาแสดงผลให้ไม่สามารถเปิดแก้วได้
+                    (_cupCanvases[canvasIndex].Children[ElementCupIndex] as CupUI).HasOpened = true;
+                }
+            }
 
             // ทำการเปิดแสดงวัตถุที่อยู่ภายในแก้ว
-            foreach (var canvas in _cupCanvases) (canvas.Children[CupElementIndex] as CupUI).Sb_ShowItem.Begin();
+            foreach (var canvas in _cupCanvases) (canvas.Children[ElementCupIndex] as CupUI).Sb_ShowItem.Begin();
         }
 
         /// <summary>
@@ -119,9 +129,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// </summary>
         public void PlayCupDown()
         {
-            //foreach (var cup in _cups) cup.CupDown();
-            foreach (var canvas in _cupCanvases)
-                (canvas.Children[0] as CupUI).CupDown();
+            foreach (var canvas in _cupCanvases) (canvas.Children[0] as CupUI).CupDown();
         }
 
         /// <summary>
@@ -130,8 +138,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
         public void SetAfterCupItem()
         {
             for (int canvasIndex = 0; canvasIndex < _question.AfterCup.Count; canvasIndex++)
-                (_cupCanvases[canvasIndex].Children[CupElementIndex] as CupUI)
-                    .Initialize(_question.AfterCup[canvasIndex], getCupStyleName());
+            {
+                var cup = _cupCanvases[canvasIndex].Children[ElementCupIndex] as CupUI;
+                cup.Initialize(_question.AfterCup[canvasIndex], getCupStyleName());
+                cup.SetCupClick();
+            }
         }
 
         /// <summary>
@@ -140,39 +151,28 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="result">ผลลัพธ์</param>
         public void PlayAnswerResult(AnswerResult result)
         {
-            if (result.IsCorrect == true && _lastClickedCup != null) 
+            if (result.IsCorrect == true && _lastClickedCup != null)
                 _lastClickedCup.CupCorrect();
 
-            if (result.IsFinish) 
-                _isFinish = true;
+            if (result.IsFinish) _isAutoAnswerOn = true;
         }
 
-        // แสดงจำนวนแก้ว
-        private void setCupRowState()
-        {
-            VisualStateManager.GoToState(this, _cupRowState, false);
-        }
-
-        // เปิดแก้วทุกใบ
+        // ทำการเปิดแก้วทุกใบ
         private void Sb_Correct_Completed(object sender, EventArgs e)
         {
-            if (_isFinish)
+            if (_isAutoAnswerOn)
             {
-                _isFinish = false;
+                _isAutoAnswerOn = false;
 
                 foreach (var canvas in _cupCanvases)
                 {
-                    var cup = (canvas.Children[CupElementIndex] as CupUI);
-                    if (!cup.HasOpened)
-                        cup.CupUp();
-
+                    var cup = (canvas.Children[ElementCupIndex] as CupUI);
+                    if (!cup.HasOpened) cup.CupUp();
                 }
-
-                _lastClickedCup.Sb_Correct.Completed -= new EventHandler(Sb_Correct_Completed);
             }
         }
 
-        // เล่นอนิเมชันการครอบแก้วเสร็จสิ้น
+        // ทำการสลับแก้วหลังจากเล่นอนิเมชันการครอบแก้วเสร็จสิ้น
         private void swapCup(object sender, EventArgs e)
         {
             Storyboard1.Stop();
@@ -180,11 +180,13 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             // กำหนดตำแหน่งของแก้วใหม่
             VisualStateManager.GoToState(this, "none", false);
-            setCupRowState();
+
+            // กำหนดการใช้งานของ state manager เพื่อกำหนดการแสดงผลของแก้วที่จะนำไปใช้งาน
+            VisualStateManager.GoToState(this, _cupRowState, false);
 
             // ตรวจสอบจำนวนคำถามที่เหลือ
-            const int EmptyQueue = 0;
-            if (_question.Sequence.Count > EmptyQueue)
+            const int EmptyQuestion = 0;
+            if (_question.Sequence.Count > EmptyQuestion)
             {
                 // เริ่มทำการสลับแก้ว
                 var sequence = _question.Sequence.Dequeue();
@@ -199,11 +201,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
             }
             else
             {
-                // สลับแก้วเสร็จหมด ทำการแจ้งว่าสามารถตอบคำถามได้แล้ว
+                // กระจายข่าวว่า แถวนี้ทำการสลับแก้วเสร็จสิ้น
                 var temp = SwapCompleted;
                 if (temp != null)
                 {
-                    temp(null, null);
+                    temp(_question.IsFronRow, null);
                 }
             }
         }
@@ -260,13 +262,29 @@ namespace TheS.SperfGames.MayaTukky.Controls
         private void OnClickAnswer(object sender, CupAnswerEventArgs objName)
         {
             _lastClickedCup = (CupUI)sender;
-            CurrentCup--;
             var temp = ClickAnswer;
             if (temp != null)
             {
                 temp(sender, objName);
             }
+            _lastClickedCup.Sb_Correct.Completed -= new EventHandler(Sb_Correct_Completed);
             _lastClickedCup.Sb_Correct.Completed += new EventHandler(Sb_Correct_Completed);
         }
+
+        // กำหนดเหตุการณ์ต่างๆภายในเกม
+        private void initializeEvents()
+        {
+            // กำหนดเหตุการณ์เมื่อแก้วถูกคลิก
+            foreach (var canvas in _cupCanvases) (canvas.Children[ElementCupIndex] as CupUI).Click += new CupAnswerEventHandler(OnClickAnswer);
+
+            // กำหนดเหตุการณ์เมื่อแก้วถูกครอบเสร็จสิ้น
+            (_cupCanvases.Last().Children[ElementCupIndex] as CupUI).Sb_Down.Completed += new EventHandler(swapCup);
+
+            // กำหนดเหตุการณ์เมื่อการสลับแก้วทั้งสองแบบจบลง
+            Storyboard1.Completed += new EventHandler(swapCup);
+            Storyboard2.Completed += new EventHandler(swapCup);
+        }
+
+        #endregion Methods
     }
 }
