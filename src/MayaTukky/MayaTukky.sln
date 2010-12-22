@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheS.SperfGames.MayaTukky", "TheS.SperfGames.MayaTukky\TheS.SperfGames.MayaTukky.csproj", "{4E6F520F-AA97-429E-B00C-77072660333B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheS.SperfGames.MayaTukky.Web", "TheS.SperfGames.MayaTukky.Web\TheS.SperfGames.MayaTukky.Web.csproj", "{819A91D0-30C7-439E-BF50-D755174D6373}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E6F520F-AA97-429E-B00C-77072660333B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6F520F-AA97-429E-B00C-77072660333B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6F520F-AA97-429E-B00C-77072660333B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6F520F-AA97-429E-B00C-77072660333B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819A91D0-30C7-439E-BF50-D755174D6373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819A91D0-30C7-439E-BF50-D755174D6373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819A91D0-30C7-439E-BF50-D755174D6373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819A91D0-30C7-439E-BF50-D755174D6373}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
