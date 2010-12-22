@@ -71,7 +71,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             tukkyWin.ThreeTopLose.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
             tukkyWin.ThreeTopWin.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
 
-            RowUI.SwapCompleted += new EventHandler(Row_SwapCompleted);
+            //RowUI.SwapCompleted += new EventHandler(Row_SwapCompleted);
 
             clock.Sb_Clock5.Completed += (s, e) =>
             {
