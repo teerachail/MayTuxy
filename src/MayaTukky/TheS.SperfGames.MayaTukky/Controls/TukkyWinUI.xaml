@@ -1,0 +1,1375 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" x:Class="TheS.SperfGames.MayaTukky.Controls.TukkyWinUI"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="Tukky_happyStory1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="-231"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="-231"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Head1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="9.544"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="9.544"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Head1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Head">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-6.816"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-6.952"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="291.341003417969,322.591003417969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="297.551780506877,310.868585078596"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="291.341003417969,322.591003417969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="297.551780506877,310.868585078596"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="291.341003417969,322.591003417969"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="312.674011230469,330.591003417969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="318.884788319377,318.868585078596"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="312.674011230469,330.591003417969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="318.884788319377,318.868585078596"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="312.674011230469,330.591003417969"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="312.674011230469,330.591003417969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="318.884788319377,318.868585078596"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="312.674011230469,330.591003417969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="318.884788319377,318.868585078596"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="312.674011230469,330.591003417969"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="327.259002685547,360.394989013672"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="331.546226039463,367.840980616722"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="327.259002685547,360.394989013672"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="331.546226039463,367.840980616722"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="327.259002685547,360.394989013672"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="307.8330078125,393.173004150391"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="312.120231166416,400.61899575344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="307.8330078125,393.173004150391"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="312.120231166416,400.61899575344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="307.8330078125,393.173004150391"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="307.8330078125,393.173004150391"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="312.120231166416,400.61899575344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="307.8330078125,393.173004150391"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="312.120231166416,400.61899575344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="307.8330078125,393.173004150391"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="287.509002685547,326.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="294.477337290311,316.355237464653"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="287.509002685547,326.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="294.477337290311,316.355237464653"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="287.509002685547,326.674011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="308.842010498047,334.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="315.810345102811,324.355237464653"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="308.842010498047,334.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="315.810345102811,324.355237464653"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="308.842010498047,334.674011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="308.842010498047,334.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="315.810345102811,324.355237464653"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="308.842010498047,334.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="315.810345102811,324.355237464653"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="308.842010498047,334.674011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="323.808990478516,366.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="326.49577329492,373.087495900386"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="323.808990478516,366.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="326.49577329492,373.087495900386"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="323.808990478516,366.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="306.450988769531,387.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="309.137771585936,394.087495900386"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="306.450988769531,387.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="309.137771585936,394.087495900386"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="306.450988769531,387.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="306.450988769531,387.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="309.137771585936,394.087495900386"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="306.450988769531,387.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="309.137771585936,394.087495900386"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="306.450988769531,387.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="286.842010498047,352.105010986328"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="289.525981212534,344.857627363895"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="286.842010498047,352.105010986328"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="289.525981212534,344.857627363895"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="286.842010498047,352.105010986328"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="302.726989746094,337.440002441406"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="305.410960460581,330.192618818973"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="302.726989746094,337.440002441406"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="305.410960460581,330.192618818973"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="302.726989746094,337.440002441406"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="302.726989746094,337.440002441406"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="305.410960460581,330.192618818973"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="302.726989746094,337.440002441406"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="305.410960460581,330.192618818973"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="302.726989746094,337.440002441406"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="242.341995239258,347.786010742188"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="243.488186760666,335.533180714556"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="242.341995239258,347.786010742188"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="243.488186760666,335.533180714556"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="242.341995239258,347.786010742188"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="259.342010498047,352.105010986328"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="260.488202019455,339.852180958697"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="259.342010498047,352.105010986328"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="260.488202019455,339.852180958697"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="259.342010498047,352.105010986328"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="259.342010498047,352.105010986328"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="260.488202019455,339.852180958697"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="259.342010498047,352.105010986328"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="260.488202019455,339.852180958697"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="259.342010498047,352.105010986328"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="314.838012695313,381.253997802734"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="314.600431188704,385.654866582977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="314.838012695313,381.253997802734"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="314.600431188704,385.654866582977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="314.838012695313,381.253997802734"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="305.726989746094,383.18701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="305.489408239486,387.587880498992"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="305.726989746094,383.18701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="305.489408239486,387.587880498992"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="305.726989746094,383.18701171875"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="305.726989746094,383.18701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="305.489408239486,387.587880498992"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="305.726989746094,383.18701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="305.489408239486,387.587880498992"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="305.726989746094,383.18701171875"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="300.592010498047,384.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="300.354428991439,388.824880010711"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="300.592010498047,384.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="300.354428991439,388.824880010711"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="300.592010498047,384.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="297.598999023438,380.169006347656"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="297.361417516829,384.569875127899"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="297.598999023438,380.169006347656"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="297.361417516829,384.569875127899"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="297.598999023438,380.169006347656"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="297.598999023438,380.169006347656"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="297.361417516829,384.569875127899"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="297.598999023438,380.169006347656"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="297.361417516829,384.569875127899"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="297.598999023438,380.169006347656"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="276.231994628906,372.924987792969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="275.636867519727,373.728782079269"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="276.231994628906,372.924987792969"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="275.636867519727,373.728782079269"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="276.231994628906,372.924987792969"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="259.3330078125,375.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="258.737880703321,376.477805516769"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="259.3330078125,375.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="258.737880703321,376.477805516769"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="259.3330078125,375.674011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="259.3330078125,375.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="258.737880703321,376.477805516769"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="259.3330078125,375.674011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="258.737880703321,376.477805516769"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="259.3330078125,375.674011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="314.170013427734,336.428009033203"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="316.162027231466,335.80697971789"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="314.170013427734,336.428009033203"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="316.162027231466,335.80697971789"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="314.170013427734,336.428009033203"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="312.369995117188,364.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="314.362008920919,363.802981915156"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="312.369995117188,364.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="314.362008920919,363.802981915156"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="312.369995117188,364.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="312.369995117188,364.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="314.362008920919,363.802981915156"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="312.369995117188,364.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="314.362008920919,363.802981915156"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="312.369995117188,364.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="21.5541496276855,196.904708862305"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="19.2057011171112,177.762416795622"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="21.5541496276855,196.904708862305"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="19.2057011171112,177.762416795622"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="21.5541496276855,196.904708862305"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="20.7911491394043,193.347702026367"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="18.44270062883,174.205409959685"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="20.7911491394043,193.347702026367"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="18.44270062883,174.205409959685"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="20.7911491394043,193.347702026367"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="20.3961601257324,191.506698608398"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="18.0477116151581,172.364406541716"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="20.3961601257324,191.506698608398"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="18.0477116151581,172.364406541716"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="20.3961601257324,191.506698608398"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="18.5521507263184,189.202713012695"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="16.203702215744,170.060420946013"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="18.5521507263184,189.202713012695"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="16.203702215744,170.060420946013"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="18.5521507263184,189.202713012695"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="18.0451469421387,187.389724731445"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="15.6966984315643,168.247432664763"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="18.0451469421387,187.389724731445"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="15.6966984315643,168.247432664763"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="18.0451469421387,187.389724731445"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="16.5051536560059,187.794723510742"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="14.1567051454315,168.65243144406"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="16.5051536560059,187.794723510742"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="14.1567051454315,168.65243144406"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="16.5051536560059,187.794723510742"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="14.7691459655762,188.107711791992"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="12.4206974550018,168.96541972531"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="14.7691459655762,188.107711791992"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="12.4206974550018,168.96541972531"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="14.7691459655762,188.107711791992"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="13.2171592712402,187.583724975586"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="10.8687107606659,168.441432908904"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="13.2171592712402,187.583724975586"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="10.8687107606659,168.441432908904"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="13.2171592712402,187.583724975586"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="11.2941551208496,186.933700561523"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="8.94570661027527,167.791408494841"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="11.2941551208496,186.933700561523"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="8.94570661027527,167.791408494841"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="11.2941551208496,186.933700561523"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="11.4771537780762,184.594711303711"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="9.12870526750183,165.452419237029"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="11.4771537780762,184.594711303711"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="9.12870526750183,165.452419237029"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="11.4771537780762,184.594711303711"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="11.9261589050293,182.957717895508"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="9.57771039445495,163.815425828825"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="11.9261589050293,182.957717895508"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="9.57771039445495,163.815425828825"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="11.9261589050293,182.957717895508"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="12.0891532897949,182.361709594727"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="9.74070477922058,163.219417528044"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="12.0891532897949,182.361709594727"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="9.74070477922058,163.219417528044"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="12.0891532897949,182.361709594727"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="14.0941581726074,175.24772644043"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="11.7457096620331,156.105434373747"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="14.0941581726074,175.24772644043"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="11.7457096620331,156.105434373747"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="14.0941581726074,175.24772644043"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="17.3311576843262,167.744705200195"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="14.9827091737518,148.602413133513"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="17.3311576843262,167.744705200195"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="14.9827091737518,148.602413133513"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="17.3311576843262,167.744705200195"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="-20.180850982666,158.85270690918"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="-22.5292994932404,139.710414842497"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="-20.180850982666,158.85270690918"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="-22.5292994932404,139.710414842497"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="-20.180850982666,158.85270690918"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="24.5671501159668,127.340713500977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="22.2187016053925,108.198421434294"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="24.5671501159668,127.340713500977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="22.2187016053925,108.198421434294"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="24.5671501159668,127.340713500977"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="24.5671501159668,127.340713500977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="22.2187016053925,108.198421434294"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="24.5671501159668,127.340713500977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="22.2187016053925,108.198421434294"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="24.5671501159668,127.340713500977"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="24.715160369873,127.46272277832"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="22.3667118592987,108.320430711638"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="24.715160369873,127.46272277832"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="22.3667118592987,108.320430711638"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="24.715160369873,127.46272277832"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[10].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="74.5291595458984,245.839706420898"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="72.6671638294024,251.903788092052"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="74.5291595458984,245.839706420898"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="72.6671638294024,251.903788092052"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="74.5291595458984,245.839706420898"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[10].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="74.5291595458984,245.839706420898"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="72.6671638294024,251.903788092052"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="74.5291595458984,245.839706420898"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="72.6671638294024,251.903788092052"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="74.5291595458984,245.839706420898"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[11].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="14.1351585388184,252.050704956055"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="12.2731628223224,258.114786627208"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="14.1351585388184,252.050704956055"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="12.2731628223224,258.114786627208"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="14.1351585388184,252.050704956055"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[11].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="11.1761589050293,247.090713500977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="9.31416318853332,253.15479517213"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="11.1761589050293,247.090713500977"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="9.31416318853332,253.15479517213"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="11.1761589050293,247.090713500977"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[11].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="8.87015724182129,234.012710571289"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="7.00816152532531,240.076792242443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="8.87015724182129,234.012710571289"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="7.00816152532531,240.076792242443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="8.87015724182129,234.012710571289"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[12].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="8.87015724182129,234.012710571289"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="7.00816152532531,240.076792242443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="8.87015724182129,234.012710571289"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="7.00816152532531,240.076792242443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="8.87015724182129,234.012710571289"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[12].(BezierSegment.Point2)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="4.53014516830444,215.682723999023"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="2.66814945180846,221.746805670177"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.53014516830444,215.682723999023"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="2.66814945180846,221.746805670177"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="4.53014516830444,215.682723999023"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[12].(BezierSegment.Point3)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="20.0661582946777,209.333724975586"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="18.2041625781818,215.397806646739"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="20.0661582946777,209.333724975586"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="18.2041625781818,215.397806646739"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="20.0661582946777,209.333724975586"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[13].(BezierSegment.Point1)" Storyboard.TargetName="path3">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="20.0661582946777,209.333724975586"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="18.2041625781818,215.397806646739"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="20.0661582946777,209.333724975586"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="18.2041625781818,215.397806646739"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="20.0661582946777,209.333724975586"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="path4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-18.384"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-18.384"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-2.327"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-2.327"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="path5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-12.211"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-11"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="path6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-14.251"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-14.004"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="3.924"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="197.464642750341,340.86754987402"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="197.464642750341,340.86754987402"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="199.886993408203,359.174011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="197.464642750341,340.86754987402"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="197.464642750341,340.86754987402"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="199.886993408203,359.174011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="205.639999389648,372.049011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="205.577806833798,353.493973294125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="205.639999389648,372.049011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="205.577806833798,353.493973294125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="205.639999389648,372.049011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="197.464642750341,340.86754987402"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="197.464642750341,340.86754987402"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="199.886993408203,359.174011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="212.141006469727,378.227996826172"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="210.437527298602,384.25206844015"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="212.141006469727,378.227996826172"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="210.437527298602,384.25206844015"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="212.141006469727,378.227996826172"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="202.367004394531,380.743011474609"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="200.663525223406,386.767083088588"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="202.367004394531,380.743011474609"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="200.663525223406,386.767083088588"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="202.367004394531,380.743011474609"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="202.367004394531,380.743011474609"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="200.663525223406,386.767083088588"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="202.367004394531,380.743011474609"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="200.663525223406,386.767083088588"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="202.367004394531,380.743011474609"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="198.559151740155,342.817434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="198.559151740155,342.817434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="199.886993408203,359.174011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="198.559151740155,342.817434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="198.559151740155,342.817434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="199.886993408203,359.174011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="205.639999389648,372.049011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="204.3121577216,355.692434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="205.639999389648,372.049011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="204.3121577216,355.692434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="205.639999389648,372.049011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="198.559151740155,342.817434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="199.886993408203,359.174011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="198.559151740155,342.817434503278"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="199.886993408203,359.174011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="215.958999633789,375.782012939453"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="215.505811634411,379.154124130286"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="215.958999633789,375.782012939453"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="215.505811634411,379.154124130286"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="215.958999633789,375.782012939453"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="201.996002197266,380.850006103516"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="201.542814197888,384.222117294349"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="201.996002197266,380.850006103516"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="201.542814197888,384.222117294349"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="201.996002197266,380.850006103516"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="201.996002197266,380.850006103516"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="201.542814197888,384.222117294349"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="201.996002197266,380.850006103516"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="201.542814197888,384.222117294349"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="201.996002197266,380.850006103516"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="280.092010498047,389.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="281.143145026641,384.415319622139"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="280.092010498047,389.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="281.143145026641,384.415319622139"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="280.092010498047,389.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="240.332992553711,378.861999511719"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="240.354704524645,379.360310212468"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="240.332992553711,378.861999511719"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="240.354704524645,379.360310212468"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="240.332992553711,378.861999511719"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path1">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="240.332992553711,378.861999511719"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="240.354704524645,379.360310212468"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="240.332992553711,378.861999511719"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="240.354704524645,379.360310212468"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="240.332992553711,378.861999511719"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="201.108993530273,362.2080078125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="198.67871841534,345.314573627443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="201.108993530273,362.2080078125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="198.67871841534,345.314573627443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="201.108993530273,362.2080078125"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="201.108993530273,362.2080078125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="198.67871841534,345.314573627443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="201.108993530273,362.2080078125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="198.67871841534,345.314573627443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="201.108993530273,362.2080078125"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="203.654998779297,368.486999511719"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="201.224723664363,351.593565326662"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="203.654998779297,368.486999511719"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="201.224723664363,351.593565326662"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="203.654998779297,368.486999511719"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="201.108993530273,362.2080078125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="198.67871841534,345.314573627443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="201.108993530273,362.2080078125"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="198.67871841534,345.314573627443"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="201.108993530273,362.2080078125"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="219.871002197266,373.234985351563"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="218.761959072461,374.400107762863"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="219.871002197266,373.234985351563"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="218.761959072461,374.400107762863"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="219.871002197266,373.234985351563"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="202.723007202148,377.93701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="201.613964077344,379.10213413005"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="202.723007202148,377.93701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="201.613964077344,379.10213413005"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="202.723007202148,377.93701171875"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="202.723007202148,377.93701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="201.613964077344,379.10213413005"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="202.723007202148,377.93701171875"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="201.613964077344,379.10213413005"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="202.723007202148,377.93701171875"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="256.092010498047,378.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="255.734004970899,374.83553256755"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="256.092010498047,378.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="255.734004970899,374.83553256755"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="256.092010498047,378.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="250.341995239258,378.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="249.98398971211,374.83553256755"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="250.341995239258,378.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="249.98398971211,374.83553256755"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="250.341995239258,378.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point1)" Storyboard.TargetName="path2">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="250.341995239258,378.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="249.98398971211,374.83553256755"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="250.341995239258,378.424011230469"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="249.98398971211,374.83553256755"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="250.341995239258,378.424011230469"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="191.809997558594,408.580993652344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="189.753357504075,409.815255246962"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="191.809997558594,408.580993652344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="189.753357504075,409.815255246962"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="191.809997558594,408.580993652344"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="191.809997558594,408.580993652344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="189.753357504075,409.815255246962"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="191.809997558594,408.580993652344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="189.753357504075,409.815255246962"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="191.809997558594,408.580993652344"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="191.809997558594,408.580993652344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="189.753357504075,409.815255246962"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="191.809997558594,408.580993652344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="189.753357504075,409.815255246962"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="191.809997558594,408.580993652344"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="251.535995483398,417.518005371094"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="251.179595865101,424.227268523359"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="251.535995483398,417.518005371094"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="251.179595865101,424.227268523359"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="251.535995483398,417.518005371094"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="251.535995483398,417.518005371094"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="251.179595865101,424.227268523359"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="251.535995483398,417.518005371094"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="251.179595865101,424.227268523359"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="251.535995483398,417.518005371094"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="193.477005004883,431.108001708984"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="181.040178876051,436.929672605465"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="193.477005004883,431.108001708984"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="181.040178876051,436.929672605465"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="193.477005004883,431.108001708984"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="246.70100402832,425.998992919922"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="220.137194415957,431.053067650561"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="246.70100402832,425.998992919922"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="220.137194415957,431.053067650561"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="246.70100402832,425.998992919922"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="269.049987792969,396.122009277344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="268.93213681749,404.689198554879"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="269.049987792969,396.122009277344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="268.93213681749,404.689198554879"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="269.049987792969,396.122009277344"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="269.049987792969,396.122009277344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="268.93213681749,404.689198554879"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="269.049987792969,396.122009277344"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="268.93213681749,404.689198554879"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="269.049987792969,396.122009277344"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="286.135009765625,410.089996337891"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="285.501874567812,414.475746927246"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="286.135009765625,410.089996337891"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="285.501874567812,414.475746927246"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="286.135009765625,410.089996337891"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="337.523010253906,411.733001708984"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="336.889875056093,416.11875229834"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="337.523010253906,411.733001708984"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="336.889875056093,416.11875229834"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="337.523010253906,411.733001708984"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)" Storyboard.TargetName="path7">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="415.627014160156,414.230987548828"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="414.993878962343,418.616738138184"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="415.627014160156,414.230987548828"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="414.993878962343,418.616738138184"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="415.627014160156,414.230987548828"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="path8">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-14.744"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.617" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="path9">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-14.744"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.617" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path8">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="2.991"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.617" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="path9">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="2.991"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-8.955"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-12"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <!-- Generated by Adobe Illustrator CS -> XAML Export Plug-In Version 0.19 PC   -->
+    <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
+
+    <Canvas
+  xmlns="http://schemas.microsoft.com/client/2007"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="672.730" Height="606.505"
+  >
+        <Canvas x:Name="canvas" Height="476" Width="459" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+
+            <Canvas d:IsHidden="True">
+
+                <!-- Layer 1/<Path> -->
+                <Path Fill="#ff493c38" Data="F1 M 585.865,567.768 C 610.204,519.456 589.289,474.096 584.305,464.784 C 579.226,455.271 580.917,447.442 577.537,441.292 C 574.147,435.135 563.989,431.221 562.858,421.709 C 561.207,407.812 563.989,403.252 549.311,381.438 C 534.631,359.625 541.154,350.592 532.215,296.376 C 523.280,242.160 490.903,214.499 490.903,214.499 C 490.903,214.499 430.912,182.147 320.051,161.388 C 204.537,139.758 201.120,190.012 201.120,190.012 C 198.328,220.245 195.651,265.081 193.477,278.446 C 188.943,306.344 163.106,378.999 162.438,403.055 C 161.677,430.467 155.974,460.223 145.368,474.599 C 134.756,488.988 139.782,507.799 139.223,511.667 C 138.665,515.535 140.898,519.415 133.641,526.602 C 109.414,550.602 123.341,561.902 128.834,570.524 C 127.045,578.032 127.238,590.055 140.237,602.002 C 159.725,619.921 220.787,579.030 230.475,572.340 L 488.393,571.195 C 490.983,574.863 511.182,601.670 551.140,605.500 C 594.043,609.618 587.999,581.700 585.865,567.772 C 585.865,567.772 585.865,567.772 585.865,567.768 Z"/>
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/S/<Group>/<Path> -->
+                        <Path Fill="#ff5b5b5b" Data="F1 M 199.638,442.268 C 199.638,442.268 189.395,491.604 174.950,499.547 C 160.504,507.493 136.688,544.807 136.688,544.807 L 131.905,566.285 L 488.025,566.285 L 483.243,544.807 C 483.243,544.807 459.427,507.493 444.981,499.547 C 430.533,491.604 420.289,442.268 420.289,442.268"/>
+
+                        <!-- Layer 1/S/<Group>/<Path> -->
+                        <Path Opacity="0.4" Data="F1 M 199.638,442.268 C 199.638,442.268 189.395,491.604 174.950,499.547 C 160.504,507.493 136.688,544.807 136.688,544.807 L 131.905,566.285 L 488.025,566.285 L 483.243,544.807 C 483.243,544.807 459.427,507.493 444.981,499.547 C 430.533,491.604 420.289,442.268 420.289,442.268"/>
+
+                    </Canvas>
+
+                    <Canvas>
+
+                        <Canvas>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff007dc5" Data="F1 M 204.186,422.456 C 204.186,422.456 194.580,533.356 193.477,565.533 L 418.051,565.533 C 418.051,565.533 405.699,437.635 400.931,423.530"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path StrokeThickness="1.0" Stroke="#ff00699e" StrokeMiterLimit="1.0" Fill="#ff00699e" Data="F1 M 294.368,516.262 C 294.368,521.620 290.022,525.966 284.666,525.966 C 279.309,525.966 274.959,521.620 274.959,516.262 C 274.959,510.909 279.309,506.558 284.666,506.558 C 290.022,506.558 294.368,510.909 294.368,516.262 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff00699e" Data="F1 M 371.445,462.563 C 371.445,462.563 392.518,498.930 410.243,490.428 L 409.021,479.605 C 409.021,479.605 362.410,429.014 371.445,462.563 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff00699e" Data="F1 M 198.990,487.192 C 198.990,487.192 218.651,478.679 221.750,475.913 C 221.750,475.913 230.008,492.484 239.816,494.166 C 249.623,495.855 270.268,473.319 270.268,473.319 C 270.268,473.319 287.821,498.716 300.211,499.615 C 312.598,500.497 326.021,473.319 326.021,473.319 C 326.021,473.319 340.816,493.952 350.708,493.093 C 360.604,492.237 373.799,466.305 373.799,466.305 C 373.799,466.305 387.614,493.509 410.243,494.166 L 406.509,458.617 L 297.164,459.292 L 198.990,462.129 L 198.990,487.192 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path StrokeThickness="3.0" Stroke="#ff005e8c" StrokeMiterLimit="1.0" Data="F1 M 304.237,565.533 L 304.237,433.690"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path StrokeThickness="2.0" Stroke="#ff004e6d" StrokeMiterLimit="1.0" Fill="#ff005e8c" Data="F1 M 293.515,513.344 C 293.515,518.227 289.552,522.196 284.666,522.196 C 279.774,522.196 275.813,518.227 275.813,513.344 C 275.813,508.459 279.774,504.497 284.666,504.497 C 289.552,504.497 293.515,508.459 293.515,513.344 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff815020" Data="F1 M 216.331,525.581 C 216.331,525.581 130.741,441.743 119.813,426.186 C 108.885,410.638 67.185,343.825 32.150,361.042 C -2.889,378.250 6.761,383.846 4.219,391.965 C 1.682,400.094 -1.873,421.819 1.175,426.186 C 4.219,430.562 17.425,456.788 21.486,460.430 C 25.547,464.073 49.918,469.462 62.617,466.512 C 75.310,463.561 73.282,456.592 73.787,452.973 C 74.294,449.347 76.326,403.010 52.968,406.125 C 29.611,409.235 56.520,430.581 49.413,435.901 C 42.304,441.221 31.133,437.668 21.994,423.956 C 16.408,408.729 23.498,368.629 54.998,387.758 C 61.091,391.458 73.881,402.133 83.433,441.904 C 85.466,450.369 89.370,451.013 98.335,452.973 C 107.302,454.933 216.331,544.296 216.331,544.296 L 216.331,525.581 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff6b3d1a" Data="F1 M 49.413,435.901"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 50.507,434.286 C 50.507,434.286 47.146,439.952 38.350,437.708 C 29.557,435.464 22.384,424.527 22.384,424.527 C 22.384,424.527 28.909,439.118 38.350,439.959 C 47.794,440.797 50.578,436.871 50.507,434.286 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 98.335,452.973 C 98.335,452.973 107.311,451.438 112.508,447.421 C 112.508,447.421 106.707,453.327 102.532,455.177 C 102.532,455.177 100.614,453.471 98.335,452.973 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 84.268,444.668 C 84.268,444.668 87.498,446.764 88.034,439.959 C 88.574,433.137 71.242,392.794 54.998,387.758 C 54.998,387.758 74.892,399.590 84.268,444.668 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 120.476,427.097 C 120.476,427.097 121.729,434.368 119.672,438.217 C 119.672,438.217 126.169,433.901 125.088,432.655 L 119.813,426.186"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 29.830,463.925 C 29.830,463.925 58.167,471.709 69.254,463.925 C 78.475,459.010 72.854,429.961 72.854,429.961 C 72.854,429.961 79.619,472.772 29.830,463.925 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 4.629,389.995 C 4.629,389.995 5.984,394.511 7.531,396.057 C 7.531,396.057 4.551,396.430 3.286,395.387 C 3.286,395.387 4.526,391.857 4.629,389.995 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 1.175,426.186 C 1.175,426.186 13.301,433.854 23.967,461.889 C 23.967,461.889 23.569,461.524 21.486,460.430 C 19.404,459.333 1.662,427.174 1.175,426.186 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 84.268,444.710 C 84.268,444.710 88.504,445.789 88.168,439.314 C 88.168,439.314 95.273,451.113 112.313,448.293 C 112.313,448.293 101.667,453.673 98.836,453.061 C 98.836,453.061 90.638,451.498 88.733,450.114 C 86.829,448.723 85.133,447.485 84.268,444.710 Z"/>
+
+                            <Canvas>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 23.967,375.224 C 23.967,375.224 24.242,373.292 31.991,375.224"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 51.629,372.271 C 51.629,372.271 70.161,379.098 76.801,400.122"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 73.204,382.976 C 73.204,382.976 81.780,390.993 84.268,400.122"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 5.990,406.125 C 5.990,406.125 7.371,440.600 25.350,445.538"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 18.990,428.616 C 18.990,428.616 22.032,438.024 26.734,439.959"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 53.012,410.638 C 53.012,410.638 53.564,419.061 67.120,432.688"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 50.248,419.493 C 50.248,419.493 52.211,431.102 62.970,434.286"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 60.064,414.231 C 60.064,414.231 62.109,421.157 67.120,423.633"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 50.248,451.262 C 50.248,451.262 56.332,451.848 58.267,447.421"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 56.610,457.383 C 56.610,457.383 59.096,456.584 60.064,452.973"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 26.734,457.383 C 26.734,457.383 33.374,460.163 38.350,455.177"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 38.350,460.421 C 38.350,460.421 40.284,460.311 40.838,458.159"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 90.886,397.016 C 90.886,397.016 86.722,405.176 88.459,410.638"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 84.268,414.231 C 84.268,414.231 87.123,438.749 109.962,439.959"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 94.699,414.231 C 94.699,414.231 94.367,429.087 111.350,432.688"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 119.672,447.421 C 119.672,448.694 138.313,469.510 143.735,473.319"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 140.138,459.292 C 140.138,459.292 150.539,472.278 153.315,473.319"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 168.013,481.273 C 168.013,481.273 162.431,484.764 154.105,485.113"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 161.059,490.260 C 161.059,490.260 170.037,489.815 172.527,487.192"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 172.527,503.142 C 172.527,503.142 181.703,503.142 184.332,501.411"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 178.426,507.657 C 178.426,507.657 187.306,506.614 187.998,505.572"/>
+
+                                <!-- Layer 1/S/<Group>/<Group>/<Group>/<Path> -->
+                                <Path Opacity="0.4" StrokeThickness="1.5" Stroke="#ff6b3d1a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 89.462,442.167 C 89.462,442.167 91.578,446.423 99.557,448.256 C 107.531,450.086 111.350,454.338 111.350,454.338"/>
+
+                            </Canvas>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 106.730,452.526 C 106.730,452.526 209.366,533.279 216.331,537.924 L 216.331,544.296 C 216.331,544.296 115.148,460.907 104.416,456.405 L 102.532,455.177 L 106.730,452.526 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff915c30" Data="F1 M 21.208,368.877 C 21.208,368.877 41.147,356.229 64.214,367.326 C 64.214,367.326 48.312,349.516 21.208,368.877 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff915c30" Data="F1 M 5.411,387.758 C 5.411,387.758 4.949,377.518 14.111,373.131 C 14.111,373.131 7.934,378.418 5.411,387.758 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff915c30" Data="F1 M 3.286,398.809 C 3.286,398.809 1.015,414.292 1.175,423.458 C 1.175,423.458 4.981,406.044 3.286,398.809 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff915c30" Data="F1 M 34.716,367.839 C 34.716,367.839 43.416,363.713 50.507,367.839 C 50.507,367.839 43.488,365.942 34.716,367.839 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#ff6b3d1a" Data="F1 M 21.208,422.456 C 21.208,422.456 12.790,398.557 23.967,384.356 C 35.148,370.166 56.610,387.758 56.610,387.758 C 56.610,387.758 37.657,375.709 27.979,388.055 C 18.302,400.397 19.666,419.614 21.208,422.456 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff716558" Data="F1 M 165.318,412.848 L 447.324,412.848 C 447.324,412.848 452.024,455.190 433.926,475.359 C 429.452,480.342 424.603,462.633 421.443,462.633 C 418.289,462.633 413.020,489.190 405.881,489.744 C 398.742,490.294 377.374,463.743 371.583,463.743 C 365.792,463.743 355.314,488.102 350.222,489.751 C 345.131,491.402 327.565,467.065 325.180,467.065 C 322.793,467.065 307.427,491.952 300.034,493.060 C 292.639,494.166 274.772,467.065 270.862,467.065 C 266.952,467.065 251.319,488.638 244.059,489.744 C 236.798,490.846 225.214,469.278 222.068,469.278 C 218.929,469.278 187.563,485.321 180.909,484.212 C 174.251,483.105 163.085,471.487 165.318,412.848 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff5e5449" Data="F1 M 169.944,440.965 C 169.944,440.965 170.251,463.743 176.360,464.848 C 182.466,465.960 184.332,435.901 184.332,435.901 C 184.332,435.901 175.676,410.993 169.944,440.965 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff796f63" Data="F1 M 182.526,412.848 L 180.757,412.848 L 440.455,412.848 C 440.455,412.848 447.888,452.572 432.993,460.421 C 432.993,460.421 418.042,442.305 413.112,441.135 C 408.179,439.959 401.557,462.697 396.568,464.881 C 391.587,467.065 373.883,441.198 369.454,441.135 C 365.030,441.063 349.539,470.938 345.115,470.938 C 340.687,470.938 327.966,451.024 321.322,450.464 C 314.686,449.911 302.215,475.913 295.727,475.913 C 289.238,475.913 278.174,451.574 270.427,450.464 C 262.684,449.355 249.409,472.600 243.318,473.153 C 237.236,473.700 225.760,451.024 221.539,450.464 C 217.321,449.911 201.139,463.866 189.900,464.881 C 184.127,465.405 182.526,412.848 182.526,412.848 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff665c52" Data="F1 M 400.442,448.661 C 400.442,452.014 397.719,454.743 394.358,454.743 C 390.999,454.743 388.276,452.014 388.276,448.661 C 388.276,445.297 390.999,442.578 394.358,442.578 C 397.719,442.578 400.442,445.297 400.442,448.661 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff665c52" Data="F1 M 350.708,454.743 C 350.708,458.103 347.984,460.832 344.622,460.832 C 341.263,460.832 338.539,458.103 338.539,454.743 C 338.539,451.383 341.263,448.661 344.622,448.661 C 347.984,448.661 350.708,451.383 350.708,454.743 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff665c52" Data="F1 M 301.811,460.430 C 301.811,463.790 299.084,466.512 295.727,466.512 C 292.364,466.512 289.643,463.790 289.643,460.430 C 289.643,457.069 292.364,454.342 295.727,454.342 C 299.084,454.342 301.811,457.069 301.811,460.430 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff665c52" Data="F1 M 248.835,458.617 C 248.835,461.977 246.111,464.701 242.753,464.701 C 239.391,464.701 236.664,461.977 236.664,458.617 C 236.664,455.256 239.391,452.526 242.753,452.526 C 246.111,452.526 248.835,455.256 248.835,458.617 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff665c52" Data="F1 M 202.518,450.321 C 202.518,453.677 199.796,456.405 196.439,456.405 C 193.074,456.405 190.351,453.677 190.351,450.321 C 190.351,446.957 193.074,444.229 196.439,444.229 C 199.796,444.229 202.518,446.957 202.518,450.321 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff5e5449" Data="F1 M 442.902,437.282 C 442.902,437.282 440.653,459.954 433.828,460.494 C 427.009,461.028 427.469,430.907 427.469,430.907 C 427.469,430.907 439.091,406.889 442.902,437.282 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff00699e" Data="F1 M 198.990,485.113"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff6b6056" Data="F1 M 183.683,436.338 C 183.683,436.338 221.602,442.295 260.118,433.286 C 260.118,433.286 295.418,448.491 339.193,433.286 C 339.193,433.286 411.374,440.629 426.406,435.313 L 425.989,425.999 L 246.701,425.999 L 183.283,429.166 C 183.283,429.166 183.041,434.682 183.683,436.338 Z"/>
+
+                            <!-- Layer 1/S/<Group>/<Group>/<Path> -->
+                            <Path Fill="#ff665b51" Data="F1 M 169.944,470.592 C 169.944,470.592 174.786,477.619 183.211,477.619 C 191.640,477.619 217.790,466.602 221.231,464.881 C 224.676,463.167 239.147,484.418 242.753,484.461 C 246.356,484.494 266.312,463.167 270.788,463.167 C 275.262,463.167 293.796,488.802 300.211,488.727 C 306.625,488.650 318.275,462.133 325.502,463.167 C 332.731,464.197 342.535,485.113 350.708,485.113 C 358.883,485.113 362.052,460.518 372.673,460.903 C 378.156,461.103 398.798,487.473 406.026,487.192 C 413.254,486.909 414.628,459.758 421.513,460.430 C 428.401,461.103 429.338,481.565 439.881,466.512 C 439.881,466.512 435.766,476.140 431.823,476.190 C 427.881,476.241 424.771,462.600 421.443,462.633 C 418.119,462.676 413.260,487.867 406.861,489.489 C 400.457,491.113 376.776,463.499 371.583,463.743 C 366.389,463.987 354.921,488.551 350.708,489.537 C 346.492,490.522 336.923,479.324 334.402,476.472 C 331.883,473.627 327.344,467.266 325.868,467.385 C 324.390,467.502 323.984,467.975 313.328,481.084 C 312.547,482.044 304.333,492.508 300.034,493.060 C 295.737,493.616 282.750,479.654 277.628,473.045 C 272.507,466.436 271.542,466.897 270.862,467.065 C 270.178,467.234 266.801,469.784 259.902,476.748 C 252.998,483.718 247.407,490.102 242.753,489.705 C 238.096,489.313 230.303,478.386 229.038,476.748 C 227.775,475.113 223.487,469.792 222.781,469.530 C 222.068,469.278 220.704,468.997 203.762,476.748 C 186.823,484.494 181.778,484.415 180.909,484.212 C 180.037,484.006 174.226,483.015 169.944,470.592 Z"/>
+
+                        </Canvas>
+
+                        <!-- Layer 1/S/<Group>/<Path> -->
+                        <Path Fill="#ff6b6056" Data="F1 M 183.283,429.166 L 182.526,412.848 L 426.561,412.610 L 426.406,435.313"/>
+
+                    </Canvas>
+
+                </Canvas>
+
+            </Canvas>
+            <Canvas x:Name="Head1" Height="476" Width="459" RenderTransformOrigin="0.647,0.447">
+                <Canvas.RenderTransform>
+                    <CompositeTransform/>
+                </Canvas.RenderTransform>
+                <Canvas d:IsHidden="True">
+
+                    <!-- Layer 1/<Group>/<Path> -->
+                    <Path Fill="#ff5a3418" Data="F1 M 110.482,246.088 C 110.482,246.088 171.125,260.624 210.719,259.621 C 210.719,259.621 235.779,196.470 205.039,188.284 C 205.039,188.284 139.048,211.003 110.482,246.088 Z"/>
+
+                    <!-- Layer 1/<Group>/<Path> -->
+                    <Path Fill="#ff4f2f1d" Data="F1 M 175.801,205.157 C 170.272,207.756 164.841,211.975 160.077,215.715 C 155.252,219.506 143.948,228.834 145.110,236.002 C 146.808,246.432 211.448,255.125 211.221,256.948 C 210.887,259.621 210.220,259.955 210.220,259.955 C 210.220,259.955 138.713,254.942 114.990,246.923 C 114.990,246.923 131.028,226.207 175.801,205.157 Z"/>
+
+                </Canvas>
+
+                <Canvas x:Name="Head" Height="387" Width="324" Canvas.Left="135" Canvas.Top="89" RenderTransformOrigin="0.5,0.5">
+                    <Canvas.RenderTransform>
+                        <CompositeTransform/>
+                    </Canvas.RenderTransform>
+
+                    <Canvas Height="0" Width="0" Canvas.Left="-147" Canvas.Top="-84">
+                        <!-- Layer 1/<Path> -->
+                        <Path x:Name="path3" Fill="#fff7dac6" UseLayoutRounding="False" Height="254.563" Width="257.789" Canvas.Left="181.842" Canvas.Top="171.784">
+                            <Path.Data>
+                                <PathGeometry FillRule="EvenOdd">
+                                    <PathFigure IsFilled="True" IsClosed="True" StartPoint="21.6584453582764,203.153503417969">
+                                        <BezierSegment Point3="20.7911491394043,193.347702026367" Point2="21.5541496276855,196.904708862305" Point1="21.6824474334717,199.503509521484"/>
+                                        <BezierSegment Point3="18.0451469421387,187.389724731445" Point2="18.5521507263184,189.202713012695" Point1="20.3961601257324,191.506698608398"/>
+                                        <BezierSegment Point3="13.2171592712402,187.583724975586" Point2="14.7691459655762,188.107711791992" Point1="16.5051536560059,187.794723510742"/>
+                                        <BezierSegment Point3="11.9261589050293,182.957717895508" Point2="11.4771537780762,184.594711303711" Point1="11.2941551208496,186.933700561523"/>
+                                        <BezierSegment Point3="17.3311576843262,167.744705200195" Point2="14.0941581726074,175.24772644043" Point1="12.0891532897949,182.361709594727"/>
+                                        <BezierSegment Point3="24.5671501159668,127.340713500977" Point2="24.5671501159668,127.340713500977" Point1="-20.180850982666,158.85270690918"/>
+                                        <BezierSegment Point3="11.1801567077637,24.3857116699219" Point2="11.1801567077637,24.3857116699219" Point1="24.715160369873,127.46272277832"/>
+                                        <BezierSegment Point3="184.208145141602,33.4407234191895" Point2="184.208145141602,33.4407234191895" Point1="89.7031707763672,-35.3422813415527"/>
+                                        <BezierSegment Point3="217.621170043945,82.2217102050781" Point2="217.621170043945,82.2217102050781" Point1="209.024154663086,40.7317237854004"/>
+                                        <BezierSegment Point3="257.233154296875,243.62971496582" Point2="257.233154296875,243.62971496582" Point1="265.573181152344,221.194717407227"/>
+                                        <BezierSegment Point3="74.5291595458984,245.839706420898" Point2="74.5291595458984,245.839706420898" Point1="201.004165649414,256.997741699219"/>
+                                        <BezierSegment Point3="8.87015724182129,234.012710571289" Point2="11.1761589050293,247.090713500977" Point1="14.1351585388184,252.050704956055"/>
+                                        <BezierSegment Point3="20.0661582946777,209.333724975586" Point2="4.53014516830444,215.682723999023" Point1="8.87015724182129,234.012710571289"/>
+                                        <BezierSegment Point3="21.6584453582764,203.153503417969" Point2="21.6464519500732,204.960510253906" Point1="20.0661582946777,209.333724975586"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+
+                        <!-- Layer 1/<Path> -->
+                        <Path x:Name="path7" Fill="#ffe8c7b1" UseLayoutRounding="False" Height="427.949" Width="440.22">
+                            <Path.Data>
+                                <PathGeometry FillRule="Nonzero">
+                                    <PathFigure IsFilled="True" IsClosed="True" StartPoint="414.174011230469,302.221008300781">
+                                        <BezierSegment Point3="439.533996582031,415.039001464844" Point2="439.533996582031,415.039001464844" Point1="446.778015136719,384.255004882813"/>
+                                        <BezierSegment Point3="251.535995483398,417.518005371094" Point2="251.535995483398,417.518005371094" Point1="427.079986572266,428.739013671875"/>
+                                        <BezierSegment Point3="191.809997558594,408.580993652344" Point2="191.809997558594,408.580993652344" Point1="193.477005004883,431.108001708984"/>
+                                        <BezierSegment Point3="269.049987792969,396.122009277344" Point2="246.70100402832,425.998992919922" Point1="191.809997558594,408.580993652344"/>
+                                        <BezierSegment Point3="337.523010253906,411.733001708984" Point2="286.135009765625,410.089996337891" Point1="269.049987792969,396.122009277344"/>
+                                        <BezierSegment Point3="406.688995361328,302.221008300781" Point2="433.285003662109,416.365997314453" Point1="415.627014160156,414.230987548828"/>
+                                        <LineSegment Point="414.174011230469,302.221008300781"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+
+                        <!-- Layer 1/<Path> -->
+                        <Path Fill="#ff493c38" Data="F1 M34.008324,4.9209709 C34.008324,4.9209709 212.87532,-21.470036 255.09734,47.980968 C255.09734,47.980968 275.68631,118.35598 238.73833,194.26498 C229.54433,161.17996 220.32732,142.59097 202.09633,128.70798 C197.31831,125.07296 187.32832,114.66796 184.31133,109.65395 C184.40633,121.82397 176.33131,137.05597 165.78831,145.06299 C170.70631,131.21097 169.86433,123.49398 162.28032,110.32296 C162.28032,110.32296 152.42534,95.786964 151.84032,75.23896 C151.09633,49.017971 139.51332,32.600964 109.97132,34.482967 C96.590309,35.339977 84.066322,40.973965 73.013313,48.28297 C67.942329,51.634975 56.665321,61.278973 50.580315,62.646969 C41.702324,64.64196 -4.8826828,134.07098 1.1103289,54.855968 C1.1103289,54.85397 -3.447685,33.650967 5.9063187,9.2599754 C5.9063187,9.2599754 14.666328,2.1019707 34.008324,4.9209709 z" UseLayoutRounding="False" Height="194.265" Canvas.Left="190.279" Canvas.Top="150.301" Width="260.817"/>
+
+                        <Canvas>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#fff7dac6" Data="F1 M 438.056,257.329 C 433.194,241.637 426.988,230.515 426.988,230.515 C 366.327,234.720 372.475,278.292 372.475,278.292 L 386.369,337.404 C 437.863,324.281 443.319,287.417 438.056,257.329 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#ffcea691" Data="F1 M 379.678,270.993 C 379.678,270.993 383.615,266.445 391.513,264.616 C 399.418,262.780 413.907,262.854 424.267,244.796 C 424.267,244.796 409.976,257.110 400.403,259.073 C 390.827,261.038 377.633,263.891 379.678,270.993 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Opacity="0.5" Fill="#fffefefe" Data="F1 M 380.246,255.739 C 380.246,255.739 389.688,235.163 425.429,232.719 C 425.429,232.719 397.348,238.230 380.246,255.739 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#ffdfbba9" Data="F1 M 386.369,337.404 C 437.863,324.281 441.923,287.447 438.056,257.329 C 447.783,288.752 452.103,338.532 390.320,354.198 C 390.320,354.198 378.450,347.515 386.369,337.404 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#ffeac7b0" Data="F1 M 387.793,275.826 C 387.793,275.826 382.723,280.211 387.687,286.016 C 387.687,286.016 393.118,291.656 387.219,294.852 C 387.219,294.852 372.229,303.308 388.952,315.360 C 388.952,315.360 411.388,324.809 419.819,297.375 C 419.819,297.375 420.776,269.588 387.793,275.826 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#ffdfbba9" Data="F1 M 403.844,277.053 C 403.844,277.053 424.218,278.194 417.195,305.328 C 417.195,305.328 407.920,317.950 388.952,315.360 C 388.952,315.360 422.956,311.639 414.525,287.153 C 414.525,287.153 411.433,279.327 403.844,277.053 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#ffcea691" Data="F1 M 403.411,322.473 C 403.411,322.473 431.263,316.783 424.450,292.467 C 424.450,292.467 419.162,270.495 387.793,275.826 C 387.793,275.826 387.510,276.110 387.264,276.614 C 387.264,276.614 389.279,276.089 390.168,275.963 C 390.168,275.963 417.646,272.036 418.055,295.857 C 418.055,295.857 418.671,314.731 388.952,315.360 C 388.952,315.360 390.638,318.643 395.765,321.419 C 395.765,321.419 398.225,322.745 403.411,322.473 Z"/>
+
+                            <!-- Layer 1/<Group>/<Path> -->
+                            <Path Fill="#ffdfbba9" Data="F1 M 387.264,276.614 C 387.264,276.614 384.877,281.348 388.952,286.522 C 388.952,286.522 394.432,293.084 387.782,295.948 C 387.782,295.948 377.667,304.614 388.952,315.360 C 388.952,315.360 372.653,306.212 385.718,295.861 C 385.718,295.861 388.483,293.631 389.325,292.833 C 389.325,292.833 391.432,289.971 388.108,286.690 C 388.108,286.690 382.862,280.843 387.264,276.614 Z"/>
+
+                        </Canvas>
+
+                    </Canvas>
+
+                    <!-- Layer 2/<Path> -->
+
+                    <!-- Layer 2/<Path> -->
+                    <Path x:Name="path4" Fill="#ff231f20" Data="F1 M 215.623,339.037 C 211.823,336.521 210.751,339.017 199.149,339.775 C 196.259,344.258 195.961,345.087 194.961,352.571 C 210.323,352.965 221.474,349.775 221.474,349.775 C 221.474,349.775 222.759,343.755 215.623,339.037 Z" Canvas.Left="-147" UseLayoutRounding="False" Canvas.Top="-84" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <CompositeTransform/>
+                        </Path.RenderTransform>
+                    </Path>
+
+                    <!-- Layer 2/<Path> -->
+                    <Path x:Name="path6" Fill="#ffd3af97" Data="F1 M 305.727,283.311 C 303.344,295.983 296.592,349.939 244.309,327.823 C 244.309,327.823 235.615,342.036 223.064,321.743 C 223.064,321.743 237.079,334.328 244.108,324.250 C 244.108,324.250 292.262,354.919 305.727,283.311 Z" Canvas.Left="-147" UseLayoutRounding="False" Canvas.Top="-84" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <CompositeTransform/>
+                        </Path.RenderTransform>
+                    </Path>
+
+                    <!-- Layer 2/<Path> -->
+                    <Path x:Name="path5" Fill="#ffd3af97" Data="F1 M 217.473,301.221 C 217.473,301.221 231.019,326.512 205.047,329.037 C 205.047,329.037 225.474,326.782 217.473,301.221 Z" Canvas.Left="-147" UseLayoutRounding="False" Canvas.Top="-84" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <CompositeTransform/>
+                        </Path.RenderTransform>
+                    </Path>
+
+                    <!-- Layer 2/<Path> -->
+
+                    <Canvas x:Name="Mouth" Canvas.Left="-147" Canvas.Top="-84">
+
+                        <!-- Layer 2/<Group>/<Path> -->
+                        <Path x:Name="path" Fill="#ffd3af97" Height="400.619" UseLayoutRounding="False" Width="341.477">
+                            <Path.Data>
+                                <PathGeometry FillRule="Nonzero">
+                                    <PathFigure IsFilled="True" IsClosed="True" StartPoint="199.886993408203,359.174011230469">
+                                        <BezierSegment Point3="333.333333333333,322.666666666666" Point2="312.000325520833,314.666666666666" Point1="199.886993408203,359.174011230469"/>
+                                        <BezierSegment Point3="332.666666666666,361.333333333333" Point2="351,327" Point1="333.333333333333,322.666666666666"/>
+                                        <BezierSegment Point3="242.75,382.976013183594" Point2="286.572998046875,393.695007324219" Point1="332.666666666666,361.333333333333"/>
+                                        <BezierSegment Point3="202.367004394531,380.743011474609" Point2="212.141006469727,378.227996826172" Point1="242.75,382.976013183594"/>
+                                        <BezierSegment Point3="199.886993408203,359.174011230469" Point2="205.639999389648,372.049011230469" Point1="202.367004394531,380.743011474609"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+
+                        <!-- Layer 2/<Group>/<Path> -->
+                        <Path x:Name="path1" Fill="#fffefefe" Height="394.087" UseLayoutRounding="False" Width="337.879">
+                            <Path.Data>
+                                <PathGeometry FillRule="Nonzero">
+                                    <PathFigure IsFilled="True" IsClosed="True" StartPoint="199.886993408203,359.174011230469">
+                                        <BezierSegment Point3="331.333333333333,325.333333333333" Point2="264,329.333333333333" Point1="224.666666666667,357"/>
+                                        <BezierSegment Point3="330.333333333333,361" Point2="344.333333333333,343.333333333333" Point1="331.333333333333,325.333333333333"/>
+                                        <BezierSegment Point3="239,381.666676839193" Point2="273.333343505859,393.000020345052" Point1="330.333333333333,361"/>
+                                        <BezierSegment Point3="201.996002197266,381.516682942708" Point2="215.958999633789,376.448689778646" Point1="239,381.666676839193"/>
+                                        <BezierSegment Point3="199.886993408203,359.174011230469" Point2="205.639999389648,372.049011230469" Point1="201.996002197266,381.516682942708"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+
+                        <!-- Layer 2/<Group>/<Path> -->
+                        <Path x:Name="path2" Fill="#ff231f20" Height="387.755" UseLayoutRounding="False" Width="332.603">
+                            <Path.Data>
+                                <PathGeometry FillRule="Nonzero">
+                                    <PathFigure IsFilled="True" IsClosed="True" StartPoint="201.108993530273,362.2080078125">
+                                        <BezierSegment Point3="258,347.333333333334" Point2="245.333333333333,361.666666666667" Point1="201.108993530273,362.2080078125"/>
+                                        <BezierSegment Point3="327.666666666667,329" Point2="304.189676920573,332.559997558594" Point1="258,347.333333333334"/>
+                                        <BezierSegment Point3="330,352.333333333334" Point2="337,332" Point1="327.666666666667,329"/>
+                                        <BezierSegment Point3="305.666666666667,360" Point2="314,357.666666666667" Point1="330,352.333333333334"/>
+                                        <BezierSegment Point3="298.666666666667,368.333333333333" Point2="296,360.666666666667" Point1="305.666666666667,360"/>
+                                        <BezierSegment Point3="278,375.333333333333" Point2="286.583343505859,373.833333333333" Point1="298.666666666667,368.333333333333"/>
+                                        <BezierSegment Point3="250.78826815724,378.387500599763" Point2="256.538283416029,378.387500599763" Point1="278,375.333333333333"/>
+                                        <BezierSegment Point3="202.723007202148,377.93701171875" Point2="219.871002197266,373.234985351563" Point1="250.78826815724,378.387500599763"/>
+                                        <BezierSegment Point3="201.108993530273,362.2080078125" Point2="203.654998779297,368.486999511719" Point1="202.723007202148,377.93701171875"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+
+                    </Canvas>
+                    <Canvas x:Name="canvas1" Height="0" Canvas.Left="-147" Canvas.Top="-84" Width="0" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <CompositeTransform/>
+                        </Canvas.RenderTransform>
+                        <!-- Layer 2/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff231f20" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Fill="#ff231f20" Data="F1 M 276.563,245.114 C 276.563,245.114 268.206,243.872 266.249,242.446 C 264.290,241.028 248.281,233.915 236.368,244.048 C 224.453,254.181 211.825,261.301 209.162,262.011 C 209.162,262.011 216.986,260.586 230.323,254.005 C 243.662,247.428 242.954,244.048 251.487,243.514 C 260.026,242.982 266.779,248.850 276.563,245.114 Z" UseLayoutRounding="False"/>
+                        <Canvas Width="35.682" Height="16.125"
+  Canvas.Top="266" Canvas.Left="225">
+
+                            <Canvas>
+
+                                <Canvas>
+
+                                    <!-- Layer 1/<Group>/<Path> -->
+                                    <Path Fill="#ffd3af97" Data="F1 M 26.265,10.373 C 26.265,10.373 32.793,11.069 33.771,5.057 C 33.771,5.057 34.578,12.305 26.265,10.373 Z"/>
+
+                                    <!-- Layer 1/<Group>/<Path> -->
+                                    <Path Fill="#ffd3af97" Data="F1 M 26.515,11.643 C 26.515,11.643 31.767,15.571 35.682,10.894 C 35.682,10.894 32.676,17.543 26.515,11.643 Z"/>
+
+                                    <!-- Layer 1/<Group>/<Path> -->
+                                    <Path Fill="#ff000000" Data="F1 M 5.002,2.344 C 5.002,2.344 -0.209,11.596 11.496,15.359 C 23.213,19.126 25.135,7.769 25.135,7.769 L 5.002,2.344 Z"/>
+
+                                    <!-- Layer 1/<Group>/<Path> -->
+                                    <Path StrokeThickness="1.0" Stroke="#ffd3af97" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 0.500,0.500 C 0.500,0.500 12.631,5.778 28.429,8.479"/>
+
+                                </Canvas>
+
+                            </Canvas>
+                        </Canvas>
+
+                        <!-- Layer 2/<Path> -->
+
+                        <!-- Layer 2/<Path> -->
+
+                        <!-- Layer 2/<Path> -->
+
+                        <!-- Layer 2/<Path> -->
+
+                    </Canvas>
+
+                    <!-- Layer 2/<Path> -->
+
+                    <!-- Layer 2/<Path> -->
+
+                    <!-- Layer 2/<Path> -->
+
+                    <!-- Layer 2/<Path> -->
+
+                    <!-- Layer 2/<Path> -->
+                    <Path x:Name="path8" Fill="#ffd3af97" Data="F1 M 303.092,324.674 C 303.092,324.674 320.925,323.049 323.217,325.299 C 323.217,325.299 330.217,334.674 328.092,345.272 C 328.092,345.272 336.342,309.174 303.092,324.674 Z" Canvas.Left="-127.02" UseLayoutRounding="False" Canvas.Top="-92.016" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <CompositeTransform/>
+                        </Path.RenderTransform>
+                    </Path>
+
+                    <!-- Layer 2/<Path> -->
+                    <Path x:Name="path9" Fill="#ffd3af97" Data="F1 M 317.929,317.758 C 317.929,317.758 331.926,317.758 331.426,331.258 C 331.426,331.258 335.266,316.091 317.929,317.758 Z" Canvas.Left="-127.02" UseLayoutRounding="False" Canvas.Top="-92.016" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <CompositeTransform/>
+                        </Path.RenderTransform>
+                    </Path>
+
+                </Canvas>
+                <Canvas x:Name="Hat_Copy">
+
+                    <Canvas>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 217.021,112.799 C 217.021,112.799 149.164,128.923 147.015,191.567 C 147.015,191.567 173.006,201.116 182.018,185.479 C 191.032,169.844 272.922,142.877 217.021,112.799 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ffb17746" Data="F1 M 228.099,96.217 L 244.969,73.393 C 244.969,73.393 265.161,80.726 289.229,81.833 C 313.292,82.938 353.344,73.391 357.425,78.997 C 361.520,84.600 355.778,113.796 287.015,110.047 C 271.802,109.217 228.099,96.217 228.099,96.217 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff9d6438" StrokeMiterLimit="1.0" Data="F1 M 245.320,101.081 L 260.184,77.700"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff9d6438" StrokeMiterLimit="1.0" Data="F1 M 266.667,106.481 L 279.604,81.059"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff9d6438" StrokeMiterLimit="1.0" Data="F1 M 289.229,110.381 L 301.665,81.657"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff9d6438" StrokeMiterLimit="1.0" Data="F1 M 312.783,109.797 L 324.824,79.422"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff9d6438" StrokeMiterLimit="1.0" Data="F1 M 337.108,103.959 L 343.163,77.700"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff815020" Data="F1 M 491.586,102.143 C 503.515,106.358 509.799,102.143 509.799,102.143 C 519.739,108.768 554.517,122.018 574.324,127.747 C 626.432,142.834 667.263,128.487 670.954,118.901 C 674.641,109.309 674.641,104.146 650.297,97.505 C 625.963,90.868 561.046,46.611 544.081,33.333 C 527.115,20.055 491.698,1.615 459.248,0.141 C 426.797,-1.336 361.148,8.990 326.478,21.532 C 326.478,21.532 292.549,25.956 260.094,22.266 C 227.634,18.583 254.191,56.939 260.094,62.840 C 260.094,62.840 257.878,68.003 237.225,70.211 C 228.375,70.955 253.357,99.417 350.084,81.278 C 361.883,79.067 353.775,98.981 316.152,104.883 C 278.531,110.784 228.948,86.202 215.835,93.552 C 211.407,96.030 224.000,96.343 215.835,115.946 C 212.144,124.801 213.623,157.254 218.044,178.647 C 218.044,178.647 337.965,138.815 443.235,184.548 C 443.235,184.548 492.571,126.327 491.586,102.143 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff77461d" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 352.667,73.903 C 352.667,73.903 365.205,69.845 361.520,84.600"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff77461d" Data="F1 M 399.191,42.711 C 400.825,51.256 388.284,60.834 371.179,64.110 C 354.073,67.381 338.881,63.107 337.245,54.565 C 335.612,46.018 348.158,36.438 365.258,33.165 C 382.363,29.893 397.556,34.167 399.191,42.711 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff3b2314" Data="F1 M 387.882,44.685 C 388.972,50.382 380.610,56.769 369.205,58.953 C 357.802,61.133 347.668,58.286 346.581,52.590 C 345.491,46.893 353.858,40.502 365.258,38.323 C 376.662,36.142 386.797,38.989 387.882,44.685 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff4f3121" Data="F1 M 383.738,45.479 C 384.605,50.033 377.926,55.139 368.812,56.881 C 359.697,58.625 351.602,56.348 350.725,51.794 C 349.859,47.244 356.542,42.137 365.651,40.393 C 374.766,38.649 382.870,40.924 383.738,45.479 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff684333" Data="F1 M 383.647,47.167 C 384.056,49.288 380.943,51.670 376.690,52.482 C 372.440,53.299 368.661,52.235 368.257,50.112 C 367.848,47.989 370.968,45.606 375.216,44.792 C 379.468,43.979 383.242,45.042 383.647,47.167 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 246.478,25.038 C 246.478,25.038 240.017,29.731 249.477,47.542 C 249.477,47.542 255.725,58.777 259.958,62.840 C 259.958,62.840 268.795,61.351 269.050,59.417 C 269.311,57.481 256.404,25.503 246.478,25.038 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff3b2314" Data="F1 M 265.230,50.325 C 266.715,53.225 267.112,55.987 266.118,56.499 C 265.116,57.010 263.107,55.075 261.616,52.171 C 260.135,49.276 259.729,46.508 260.729,45.999 C 261.726,45.490 263.741,47.424 265.230,50.325 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 235.583,71.448 C 235.583,71.448 239.855,86.475 293.260,87.309 C 293.260,87.309 332.382,85.998 350.084,81.278 C 350.084,81.278 261.123,94.614 235.583,71.448 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 214.865,94.610 C 214.865,94.610 242.854,94.780 251.282,102.348 C 251.282,102.348 224.733,93.413 214.865,94.610 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 269.050,59.417 C 269.050,59.417 321.277,31.356 324.824,25.038 C 324.824,25.038 301.961,45.393 269.050,59.417 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 214.865,94.610 C 214.865,94.610 214.671,94.905 216.321,96.924 C 217.968,98.944 219.562,103.053 218.070,108.764 C 216.576,114.474 248.206,100.690 248.206,100.690 C 248.206,100.690 230.285,94.316 214.865,94.610 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff77461d" Data="F1 M 470.149,73.903 C 470.149,73.903 550.208,122.850 599.882,126.779 C 649.555,130.711 671.349,117.827 671.349,117.827 C 671.349,117.827 667.332,132.887 618.467,134.306 C 571.664,135.727 494.923,100.176 470.149,73.903 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff77461d" Data="F1 M 455.566,93.633 C 455.566,93.633 486.599,114.485 485.029,124.055 C 485.029,124.055 491.586,111.918 491.598,103.053 C 491.598,103.053 468.877,98.372 455.566,93.633 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff7c491e" Data="F1 M 460.097,85.152"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff77461d" Data="F1 M 508.339,101.971 C 508.339,101.971 463.976,96.196 457.154,88.479 L 455.566,91.488 C 455.566,91.488 482.333,106.623 508.339,101.971 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff6d401a" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 455.566,92.276 C 474.004,102.897 513.672,104.413 509.799,102.143 C 505.933,99.875 467.734,73.903 467.734,73.903"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff8c582d" Data="F1 M 246.478,25.038 C 246.478,25.038 249.584,21.407 256.692,22.031 C 263.801,22.653 293.241,25.139 316.014,22.579 L 324.824,21.958 C 324.824,21.958 312.848,25.038 279.663,25.038 C 279.663,25.038 254.020,21.770 246.478,25.038 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff77461d" Data="F1 M 586.208,62.640 C 586.208,62.640 638.933,96.214 653.222,98.333 C 653.222,98.333 611.250,93.477 586.208,62.640 Z"/>
+
+                    </Canvas>
+
+                    <!-- Layer 1/Hat/<Path> -->
+                    <Path Fill="#ff77461d" Data="F1 M 471.924,99.638"/>
+
+                    <Canvas>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff6d3e18" Data="F1 M 399.372,42.583 C 401.016,51.178 388.404,60.825 371.198,64.125 C 353.992,67.432 338.704,63.139 337.047,54.548 C 335.399,45.949 348.015,36.301 365.225,32.999 C 382.428,29.692 397.719,33.981 399.372,42.583 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ff3b2314" Data="F1 M 387.995,44.577 C 389.091,50.305 380.681,56.741 369.209,58.940 C 357.737,61.142 347.542,58.286 346.442,52.553 C 345.344,46.823 353.754,40.388 365.227,38.189 C 376.699,35.985 386.892,38.845 387.995,44.577 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Fill="#ffd94026" Data="F1 M 383.819,45.375 C 384.699,49.958 377.979,55.099 368.808,56.858 C 359.640,58.622 351.496,56.332 350.612,51.754 C 349.739,47.170 356.456,42.030 365.626,40.272 C 374.795,38.509 382.944,40.797 383.819,45.375 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Opacity="0.2" Fill="#ffb12e24" Data="F1 M 383.808,47.057 C 381.838,50.505 376.362,53.706 369.511,55.020 C 360.344,56.780 352.197,54.494 351.312,49.917 C 351.207,49.360 351.215,48.797 351.326,48.234 C 350.657,49.401 350.388,50.596 350.612,51.754 C 351.496,56.332 359.640,58.622 368.808,56.858 C 376.868,55.310 383.029,51.154 383.808,47.057 Z"/>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Data="F1 M 351.312,49.917 C 352.197,54.494 360.344,56.780 369.511,55.020 C 376.362,53.706 381.838,50.505 383.808,47.057 C 383.916,46.495 383.925,45.928 383.819,45.375 C 382.944,40.797 374.795,38.509 365.626,40.272 C 358.773,41.585 353.296,44.786 351.326,48.234 C 351.215,48.797 351.207,49.360 351.312,49.917 Z">
+                            <Path.Fill>
+                                <LinearGradientBrush MappingMode="Absolute" StartPoint="253.153,1052.852" EndPoint="260.550,1033.581">
+                                    <LinearGradientBrush.Transform>
+                                        <MatrixTransform Matrix="0.755,0.656,0.656,-0.755,-510.733,666.439" />
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Offset="0.00" Color="#ffffffff"/>
+                                    <GradientStop Offset="0.20" Color="#ffec9f92"/>
+                                    <GradientStop Offset="1.00" Color="#ffd94026"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Data="F1 M 356.108,50.291 C 355.495,47.104 360.168,43.534 366.539,42.310 C 372.912,41.084 378.570,42.674 379.186,45.856 C 379.792,49.038 375.123,52.614 368.752,53.833 C 362.380,55.058 356.715,53.469 356.108,50.291 Z">
+                            <Path.Fill>
+                                <LinearGradientBrush MappingMode="Absolute" StartPoint="779.853,1116.403" EndPoint="771.072,1124.309">
+                                    <LinearGradientBrush.Transform>
+                                        <MatrixTransform Matrix="-0.755,-0.656,-0.656,0.755,1687.954,-288.680" />
+                                    </LinearGradientBrush.Transform>
+                                    <GradientStop Offset="0.00" Color="#ffa93019"/>
+                                    <GradientStop Offset="0.87" Color="#ffd4978c"/>
+                                    <GradientStop Offset="1.00" Color="#ffffffff"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+
+                        <!-- Layer 1/Hat/<Group>/<Path> -->
+                        <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 381.646,44.980 C 381.901,42.950 378.810,40.889 374.746,40.384 C 373.203,40.190 371.741,40.249 370.508,40.507 C 361.322,40.726 353.726,47.593 353.726,47.593 C 358.202,44.985 362.826,43.680 366.939,43.083 C 366.937,43.100 366.925,43.116 366.923,43.137 C 366.667,45.167 369.760,47.229 373.825,47.737 C 377.893,48.249 381.395,47.014 381.646,44.980 Z"/>
+
+                    </Canvas>
+
+                    <Canvas x:Name="ThreeTop" Height="300" Width="400" Canvas.Left="119" Canvas.Top="20" RenderTransformOrigin="0.5,0.5">
+
+                        <TheS_SperfGames_MayaTukky_Controls:ThreeTopNormalUI x:Name="ThreeTopNormal"/>
+                        <TheS_SperfGames_MayaTukky_Controls:ThreeTopLoseUI Visibility="Collapsed" x:Name="ThreeTopLose" Canvas.Top="11" Canvas.Left="-8"/>
+                        <TheS_SperfGames_MayaTukky_Controls:ThreeTopWinUI Visibility="Collapsed" x:Name="ThreeTopWin" Canvas.Top="7" Canvas.Left="-4"/>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</UserControl>

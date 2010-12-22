@@ -1,0 +1,111 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="TheS.SperfGames.MayaTukky.Controls.TrueFalseMarkUI"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" Width="625" Height="488">
+    <UserControl.Resources>
+        <Storyboard x:Name="Sb_Good">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<DoubleAnimation Duration="0:0:0.5" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path_Copy" d:IsOptimized="True"/>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="path_Copy">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="path_Copy">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path_Copy">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    	</Storyboard>
+        <Storyboard x:Name="Sb_Fail">
+            <DoubleAnimation Duration="0:0:0.5" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="path">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Canvas x:Name="LayoutRoot" Width="625" Height="488">
+        <Path x:Name="path_Copy" Fill="#ff38b449" Data="F1 M 135.925,227.122 C 135.925,227.122 134.761,223.588 141.382,219.697 C 143.799,218.773 144.200,225.422 144.200,225.422 C 144.200,225.422 157.797,211.511 159.139,212.271 C 159.285,212.354 159.315,212.577 159.332,212.726 C 159.367,213.044 159.336,213.374 159.296,213.691 C 159.236,214.162 159.141,214.627 159.028,215.087 C 158.888,215.674 158.719,216.255 158.532,216.830 C 158.314,217.507 158.070,218.176 157.806,218.837 C 157.511,219.577 157.191,220.307 156.849,221.026 C 156.480,221.803 156.085,222.566 155.662,223.316 C 155.220,224.102 154.748,224.873 154.244,225.623 C 153.729,226.393 153.180,227.143 152.597,227.865 C 152.006,228.595 151.381,229.295 150.717,229.959 C 150.054,230.623 149.351,231.250 148.607,231.824 C 147.867,232.398 147.085,232.920 146.268,233.377 C 145.727,233.678 145.172,233.950 144.602,234.188 C 144.140,234.382 143.564,234.722 143.045,234.614 C 142.758,234.554 142.491,234.378 142.271,234.192 C 141.946,233.918 141.689,233.569 141.474,233.206 C 140.940,232.303 140.627,231.268 140.438,230.242 C 140.365,229.843 140.313,229.441 140.281,229.037 C 140.270,228.841 140.260,228.646 140.256,228.452 C 140.256,228.397 140.231,227.893 140.264,227.883 C 140.262,227.883 136.595,228.956 135.925,227.122 Z" UseLayoutRounding="False" Height="177.928" Stretch="Fill" Width="202.191" RenderTransformOrigin="0.5,0.5" Canvas.Left="215.119" Canvas.Top="235" Opacity="0" Visibility="Collapsed">
+        	<Path.RenderTransform>
+        		<CompositeTransform/>
+        	</Path.RenderTransform>
+        </Path>
+        <Path x:Name="path" Data="M77.893387,0.70710969 L120.10661,0.70710677 L120.10661,77.893387 L198,77.186279 L197.29289,120.10661 L120.10661,120.10661 L120.10661,197.29289 L77.893387,198.70711 L77.893387,120.10661 L-2.4203235E-08,120.81372 L-2.4203235E-08,77.186279 L77.893387,77.893387 z" Fill="#FFCA2525" Height="198" Canvas.Left="220.5" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Canvas.Top="233" UseLayoutRounding="False" Width="198" Opacity="0" StrokeThickness="8" Visibility="Collapsed" >
+            <Path.RenderTransform>
+                <CompositeTransform Rotation="45" TranslateY="1.5616551536368206E-06"/>
+            </Path.RenderTransform>
+        </Path>
+        <Rectangle x:Name="rectangle" Fill="Black" Height="412" StrokeThickness="8" Canvas.Top="76" Width="625" Opacity="0.0001" Visibility="Collapsed"/>
+    </Canvas>
+</UserControl>

@@ -60,20 +60,80 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Effects, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
-    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="PerfEx.Infrastructure.Silverlight">
+      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\slref\PerfEx.Infrastructure.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="System.Windows.Controls" />
-    <Reference Include="System.Windows.Controls.Navigation" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClockUI.xaml.cs">
+      <DependentUpon>ClockUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmptyItemUI.xaml.cs">
+      <DependentUpon>EmptyItemUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MonsterSealUI.xaml.cs">
+      <DependentUpon>MonsterSealUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PoisonSealUI.xaml.cs">
+      <DependentUpon>PoisonSealUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrepareLayerUI.xaml.cs">
+      <DependentUpon>PrepareLayerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScoreBoardUI.xaml.cs">
+      <DependentUpon>ScoreBoardUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThreeTopLoseUI.xaml.cs">
+      <DependentUpon>ThreeTopLoseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThreeTopNormalUI.xaml.cs">
+      <DependentUpon>ThreeTopNormalUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThreeTopWinUI.xaml.cs">
+      <DependentUpon>ThreeTopWinUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimeOutLayerUI.xaml.cs">
+      <DependentUpon>TimeOutLayerUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrueFalseMarkUI.xaml.cs">
+      <DependentUpon>TrueFalseMarkUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TukkyHandUI.xaml.cs">
+      <DependentUpon>TukkyHandUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TukkyLoseUI.xaml.cs">
+      <DependentUpon>TukkyLoseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TukkyPresentUI.xaml.cs">
+      <DependentUpon>TukkyPresentUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TukkyWinUI.xaml.cs">
+      <DependentUpon>TukkyWinUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VoodooSealUI.xaml.cs">
+      <DependentUpon>VoodooSealUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmExitUI.xaml.cs">
+      <DependentUpon>ConfirmExitUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
@@ -103,6 +163,74 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\ClockUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\EmptyItemUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MonsterSealUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PoisonSealUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PrepareLayerUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ScoreBoardUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ThreeTopLoseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ThreeTopNormalUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ThreeTopWinUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TimeOutLayerUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TrueFalseMarkUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TukkyHandUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TukkyLoseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TukkyPresentUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TukkyWinUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\VoodooSealUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConfirmExitUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\FirstStatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,8 +268,10 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Image\bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

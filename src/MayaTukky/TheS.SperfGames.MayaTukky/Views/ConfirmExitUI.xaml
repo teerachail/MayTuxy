@@ -1,0 +1,384 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TheS.SperfGames.MayaTukky.Controls.ConfirmExitUI"
+           Width="220" Height="101.333">
+    <controls:ChildWindow.Resources>
+        <Style x:Key="ChildWindowStyle1" TargetType="controls:ChildWindow">
+            <Setter Property="IsTabStop" Value="false"/>
+            <Setter Property="TabNavigation" Value="Cycle"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="OverlayBrush" Value="#7F000000"/>
+            <Setter Property="OverlayOpacity" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="controls:ChildWindow">
+                        <Grid x:Name="Root" d:LayoutOverrides="VerticalAlignment">
+                            <Grid.Resources>
+                                <Style x:Key="ButtonStyle" TargetType="Button">
+                                    <Setter Property="Background" Value="#FF1F3B53"/>
+                                    <Setter Property="Foreground" Value="#FF000000"/>
+                                    <Setter Property="Padding" Value="3"/>
+                                    <Setter Property="BorderThickness" Value="1"/>
+                                    <Setter Property="BorderBrush">
+                                        <Setter.Value>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                                                <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                                                <GradientStop Color="#FF718597" Offset="0.375"/>
+                                                <GradientStop Color="#FF617584" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid x:Name="grid" Background="#02FFFFFF" HorizontalAlignment="Center" Height="14" VerticalAlignment="Center" Width="15">
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal"/>
+                                                            <VisualState x:Name="MouseOver">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz2">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz1">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz0">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <DoubleAnimation Duration="0" To="0.95" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="0.85" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz2">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz1">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz0">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Disabled">
+                                                                <Storyboard>
+                                                                    <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                    <Path x:Name="X_Fuzz2" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#14C51900" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="1" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="#14C51900" Visibility="Collapsed" VerticalAlignment="Center" Width="9">
+                                                        <Path.RenderTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform ScaleY="1.3" ScaleX="1.3"/>
+                                                            </TransformGroup>
+                                                        </Path.RenderTransform>
+                                                    </Path>
+                                                    <Path x:Name="X_Fuzz1" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#1EC51900" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="1" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="#1EC51900" Visibility="Collapsed" VerticalAlignment="Center" Width="9">
+                                                        <Path.RenderTransform>
+                                                            <TransformGroup>
+                                                                <ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+                                                            </TransformGroup>
+                                                        </Path.RenderTransform>
+                                                    </Path>
+                                                    <Path x:Name="X_Fuzz0" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#FFC51900" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="1" Stretch="Fill" Stroke="#FFC51900" Visibility="Collapsed" VerticalAlignment="Center" Width="9"/>
+                                                    <Path x:Name="X" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#FFFFFFFF" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="0.7" Stretch="Fill" VerticalAlignment="Center" Width="9">
+                                                        <Path.Stroke>
+                                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                                <GradientStop Color="#FF313131" Offset="1"/>
+                                                                <GradientStop Color="#FF8E9092" Offset="0"/>
+                                                            </LinearGradientBrush>
+                                                        </Path.Stroke>
+                                                    </Path>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Grid.Resources>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="WindowStates">
+                                    <VisualState x:Name="Open">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Overlay">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                                <EasingDoubleKeyFrame KeyTime="00:00:00.3" Value="1"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="(RenderTransform).(Children)[0].ScaleX" Storyboard.TargetName="ContentRoot">
+                                                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.25" Value="0"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.4" Value="1"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.5,1" KeyTime="00:00:00.45" Value="1.05"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.55" Value="1"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="(RenderTransform).(Children)[0].ScaleY" Storyboard.TargetName="ContentRoot">
+                                                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.25" Value="0"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.4" Value="1"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.5,1" KeyTime="00:00:00.45" Value="1.05"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.55" Value="1"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Closed">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Overlay">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <EasingDoubleKeyFrame KeyTime="00:00:00.3" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="(RenderTransform).(Children)[0].ScaleX" Storyboard.TargetName="ContentRoot">
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="1"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.25" Value="1.05"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="(RenderTransform).(Children)[0].ScaleY" Storyboard.TargetName="ContentRoot">
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="1"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.25" Value="1.05"/>
+                                                <SplineDoubleKeyFrame KeyTime="00:00:00.45" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Grid x:Name="Overlay" Background="{TemplateBinding OverlayBrush}" HorizontalAlignment="Stretch" Opacity="{TemplateBinding OverlayOpacity}" VerticalAlignment="Top"/>
+                            <Grid x:Name="ContentRoot" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Height="{TemplateBinding Height}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="{TemplateBinding VerticalAlignment}" Width="{TemplateBinding Width}">
+                                <Grid.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Grid.RenderTransform>
+                                <Border BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+                                    <Border CornerRadius="1.5" Margin="1">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Border x:Name="Chrome" BorderThickness="0,0,0,1" Width="Auto">
+                                                <Grid Height="Auto" Width="Auto">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition Width="30"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ContentControl Content="{TemplateBinding Title}" FontWeight="Bold" HorizontalAlignment="Stretch" IsTabStop="False" Margin="6,0,6,0" VerticalAlignment="Center"/>
+                                                    <Button x:Name="CloseButton1" Grid.Column="1" HorizontalAlignment="Center" Height="14" IsTabStop="False" Style="{StaticResource ButtonStyle}" VerticalAlignment="Center" Width="15"/>
+                                                </Grid>
+                                            </Border>
+                                            <Canvas Margin="-1,-1,-2,-3" Grid.RowSpan="2">
+
+                                                <Canvas>
+
+                                                    <!-- Layer 1/<Group>/<Path> -->
+                                                    <Path Opacity="0.5" StrokeThickness="1.0" Stroke="#ff020202" StrokeMiterLimit="1.0" Data="F1 M 218.500,91.500 C 218.500,96.471 214.471,100.500 209.500,100.500 L 9.500,100.500 C 4.529,100.500 0.500,96.471 0.500,91.500 L 0.500,9.500 C 0.500,4.529 4.529,0.500 9.500,0.500 L 209.500,0.500 C 214.471,0.500 218.500,4.529 218.500,9.500 L 218.500,91.500 Z" Height="102" Stretch="Fill" UseLayoutRounding="False" Width="218">
+                                                        <Path.Fill>
+                                                            <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                                                                <GradientStop Color="#FF414141" Offset="0"/>
+                                                                <GradientStop Color="White" Offset="1"/>
+                                                            </LinearGradientBrush>
+                                                        </Path.Fill>
+                                                    </Path>
+
+                                                    <!-- Layer 1/<Group>/<Path> -->
+                                                    <Path Fill="#FF09374C" Data="F1 M 210.500,94.500 L 8.500,94.500 L 8.500,16.500 L 210.500,16.500 L 210.500,94.500 Z"/>
+
+                                                </Canvas>
+                                                <Button x:Name="CloseButton" HorizontalAlignment="Center" Height="14" IsTabStop="False" Style="{StaticResource ButtonStyle}" VerticalAlignment="Center" Width="15" Canvas.Left="194"/>
+                                                <ContentPresenter x:Name="ContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Height="101" Width="219"/>
+
+                                            </Canvas>
+                                        </Grid>
+                                    </Border>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF1F3B53"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="grid" Background="#02FFFFFF" HorizontalAlignment="Center" Height="14" VerticalAlignment="Center" Width="15">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz2">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz0">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimation Duration="0" To="0.95" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="0.85" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz2">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="X_Fuzz0">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Path x:Name="X_Fuzz2" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#14C51900" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="1" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="#14C51900" Visibility="Collapsed" VerticalAlignment="Center" Width="9">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="1.3" ScaleX="1.3"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                            <Path x:Name="X_Fuzz1" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#1EC51900" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="1" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="#1EC51900" Visibility="Collapsed" VerticalAlignment="Center" Width="9">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="1.1" ScaleX="1.1"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                            <Path x:Name="X_Fuzz0" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#FFC51900" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="1" Stretch="Fill" Stroke="#FFC51900" Visibility="Collapsed" VerticalAlignment="Center" Width="9"/>
+                            <Path x:Name="X" Data="F1 M 6.742676,3.852539 L 9.110840,1.559570 L 8.910645,0.500000 L 6.838379,0.500000 L 4.902832,2.435547 L 2.967285,0.500000 L 0.895020,0.500000 L 0.694824,1.559570 L 3.062988,3.852539 L 0.527832,6.351563 L 0.689941,7.600586 L 2.967285,7.600586 L 4.897949,5.575195 L 6.854004,7.600586 L 9.115723,7.600586 L 9.277832,6.351563 L 6.742676,3.852539 Z" Fill="#FFFFFFFF" HorizontalAlignment="Center" Height="8" Margin="0,-1,0,0" Opacity="0.7" Stretch="Fill" VerticalAlignment="Center" Width="9">
+                                <Path.Stroke>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF313131" Offset="1"/>
+                                        <GradientStop Color="#FF8E9092" Offset="0"/>
+                                    </LinearGradientBrush>
+                                </Path.Stroke>
+                            </Path>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle1" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Canvas>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="#FF4B9F27" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <!-- Layer 1/<Path> -->
+                            <Path StrokeThickness="3.0" Stroke="#ff373837" StrokeMiterLimit="1.0" Fill="#ff494849" Data="F1 M 33.923,54.152 C 33.923,54.152 69.989,39.673 78.377,61.801 C 78.377,61.801 88.442,86.444 56.150,86.444 C 56.150,86.444 27.632,89.381 29.729,71.767 C 29.729,71.767 28.471,59.186 33.923,54.152 Z" UseLayoutRounding="False" Canvas.Top="-44" Canvas.Left="-24"/>
+                            <TextBlock x:Name="textBlock" Height="24" Canvas.Left="13" TextWrapping="Wrap" Text="Ok." Canvas.Top="11" Width="37" FontSize="18.667"/>
+                        </Canvas>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="Myriad Pro Bold"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="21.333"/>
+            <Setter Property="Foreground" Value="#FF5C9641"/>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Canvas>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="Red" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <!-- Layer 1/<Path> -->
+                            <Path StrokeThickness="3.0" Stroke="#ff373837" StrokeMiterLimit="1.0" Fill="#ff494849" Data="F1 M 116.560,55.812 C 116.560,55.812 175.508,42.394 189.218,62.899 C 189.218,62.899 205.668,85.737 152.889,85.737 C 152.889,85.737 106.277,88.458 109.705,72.135 C 109.705,72.135 107.649,60.476 116.560,55.812 Z" UseLayoutRounding="False" Canvas.Top="-48" Canvas.Left="-111"/>
+                            <TextBlock x:Name="textBlock" Height="19" Canvas.Left="9" TextWrapping="Wrap" Text="Cancel." Canvas.Top="10" Width="77" FontSize="16"/>
+                        </Canvas>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="Myriad Pro Bold"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="18.667"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </controls:ChildWindow.Resources>
+    <controls:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowStyle1"/>
+    </controls:ChildWindow.Style>
+    <Canvas x:Name="LayoutRoot" Margin="-8,-8,-10,-6">
+        <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
+
+        <Canvas
+			xmlns="http://schemas.microsoft.com/client/2007"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="101" Canvas.Left="8" Canvas.Top="8" Width="219">
+
+            <Canvas>
+
+                <Button x:Name="CancelButton" Content="" Height="42" Canvas.Left="113" Style="{StaticResource ButtonStyle2}" Canvas.Top="47" Width="78" Cursor="Hand"/>
+                <Button x:Name="OKButton" Content="" Height="47" Canvas.Left="30" Style="{StaticResource ButtonStyle1}" Canvas.Top="43" Width="62" Foreground="White" Cursor="Hand"/>
+
+            </Canvas>
+            <TextBlock Height="22" Canvas.Left="38" TextWrapping="Wrap" Text="Are you sure to exit ?" Canvas.Top="21" Width="156" Foreground="White" FontWeight="Bold" FontSize="16" FontFamily="Myriad Pro"/>
+        </Canvas>
+    </Canvas>
+</controls:ChildWindow>
