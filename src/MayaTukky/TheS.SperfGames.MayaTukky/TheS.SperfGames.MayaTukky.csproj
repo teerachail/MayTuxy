@@ -67,7 +67,7 @@
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
     <Reference Include="PerfEx.Infrastructure.Silverlight">
-      <HintPath>..\..\..\..\Silverlight\MayaTukkyProject\slref\PerfEx.Infrastructure.Silverlight.dll</HintPath>
+      <HintPath>..\..\..\..\WorkHorse\lib\PerfEx.Infrastructure.Silverlight.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
@@ -81,6 +81,7 @@
     <Reference Include="System.Windows.Controls" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerResult.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -132,6 +133,20 @@
     <Compile Include="Controls\VoodooSealUI.xaml.cs">
       <DependentUpon>VoodooSealUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GameCombo.cs" />
+    <Compile Include="GameLevel.cs" />
+    <Compile Include="GameLevelSecond.cs" />
+    <Compile Include="GameLevelSecondCompute.cs" />
+    <Compile Include="GameLevelSecondFix.cs" />
+    <Compile Include="GameRound.cs" />
+    <Compile Include="GameRoundSecond.cs" />
+    <Compile Include="GameStageManager.cs" />
+    <Compile Include="GameStageManagerSecond.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="QuestionRow.cs" />
+    <Compile Include="SwapHelper.cs" />
+    <Compile Include="SwapSequence.cs" />
+    <Compile Include="TimeCombo.cs" />
     <Compile Include="Views\ConfirmExitUI.xaml.cs">
       <DependentUpon>ConfirmExitUI.xaml</DependentUpon>
     </Compile>
@@ -268,6 +283,7 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
