@@ -93,6 +93,6 @@
     			</TextBlock.Effect>
             </TextBlock>
         </Canvas>
-        <Canvas Height="488" Width="625" Background="Black" Opacity="1E-05"/>
+        <Canvas Height="488" Width="625" Background="Black" Opacity="0.0001"/>
     </Canvas>
 </UserControl>

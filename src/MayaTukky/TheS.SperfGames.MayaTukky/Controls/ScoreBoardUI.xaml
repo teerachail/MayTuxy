@@ -353,7 +353,7 @@
     			</TextBlock.Effect>
     		</TextBlock>
     		<Canvas x:Name="canvas" Margin="0,14" Opacity="0">
-    			<ed:RegularPolygon x:Name="regularPolygon" Fill="#FFFDFF00" Height="39.897" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="41.25" RenderTransformOrigin="0.5,0.5" Canvas.Left="8">
+    			<ed:RegularPolygon x:Name="regularPolygon" Fill="#FFFDFF00" Height="39.897" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="41.25" RenderTransformOrigin="0.5,0.5" Canvas.Left="27">
     				<ed:RegularPolygon.RenderTransform>
     					<CompositeTransform/>
     				</ed:RegularPolygon.RenderTransform>
@@ -361,7 +361,7 @@
     					<BlurEffect Radius="3"/>
     				</ed:RegularPolygon.Effect>
     			</ed:RegularPolygon>
-    			<ed:RegularPolygon x:Name="regularPolygon1" Fill="#FFFDFF00" Height="29.742" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" Canvas.Top="7.045" UseLayoutRounding="False" Width="30.75" RenderTransformOrigin="0.5,0.5" Canvas.Left="9">
+    			<ed:RegularPolygon x:Name="regularPolygon1" Fill="#FFFDFF00" Height="29.742" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" Canvas.Top="7.045" UseLayoutRounding="False" Width="30.75" RenderTransformOrigin="0.5,0.5" Canvas.Left="28">
     				<ed:RegularPolygon.RenderTransform>
     					<CompositeTransform/>
     				</ed:RegularPolygon.RenderTransform>
@@ -369,7 +369,7 @@
     					<BlurEffect Radius="3"/>
     				</ed:RegularPolygon.Effect>
     			</ed:RegularPolygon>
-    			<ed:RegularPolygon x:Name="regularPolygon2" Fill="#FFFDFF00" Height="39.414" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="40.75" Canvas.Top="0.483" RenderTransformOrigin="0.5,0.5" Canvas.Left="8">
+    			<ed:RegularPolygon x:Name="regularPolygon2" Fill="#FFFDFF00" Height="39.414" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="40.75" Canvas.Top="0.483" RenderTransformOrigin="0.5,0.5" Canvas.Left="27">
     				<ed:RegularPolygon.RenderTransform>
     					<CompositeTransform/>
     				</ed:RegularPolygon.RenderTransform>
@@ -377,7 +377,7 @@
     					<BlurEffect Radius="3"/>
     				</ed:RegularPolygon.Effect>
     			</ed:RegularPolygon>
-    			<ed:RegularPolygon x:Name="regularPolygon3" Fill="#FFFDFF00" Height="16.676" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="17.241" Canvas.Top="14.545" RenderTransformOrigin="0.5,0.5" Canvas.Left="21">
+    			<ed:RegularPolygon x:Name="regularPolygon3" Fill="#FFFDFF00" Height="16.676" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="17.241" Canvas.Top="14.545" RenderTransformOrigin="0.5,0.5" Canvas.Left="40">
     				<ed:RegularPolygon.RenderTransform>
     					<CompositeTransform/>
     				</ed:RegularPolygon.RenderTransform>
@@ -385,7 +385,7 @@
     					<BlurEffect Radius="3"/>
     				</ed:RegularPolygon.Effect>
     			</ed:RegularPolygon>
-    			<ed:RegularPolygon x:Name="regularPolygon4" Fill="#FFFDFF00" Height="24.176" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="24.996" Canvas.Top="7.045" RenderTransformOrigin="0.5,0.5" Canvas.Left="18">
+    			<ed:RegularPolygon x:Name="regularPolygon4" Fill="#FFFDFF00" Height="24.176" InnerRadius="0.632" PointCount="5" StrokeStartLineCap="Square" Stretch="Fill" StrokeEndLineCap="Square" StrokeLineJoin="Round" UseLayoutRounding="False" Width="24.996" Canvas.Top="7.045" RenderTransformOrigin="0.5,0.5" Canvas.Left="37">
     				<ed:RegularPolygon.RenderTransform>
     					<CompositeTransform/>
     				</ed:RegularPolygon.RenderTransform>

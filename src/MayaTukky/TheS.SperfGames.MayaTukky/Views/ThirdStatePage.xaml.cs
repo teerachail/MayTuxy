@@ -207,7 +207,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     }
 
                     // เลื่อนกรอบคำถาม
-                    showItemUI.Sb_NextItem.Begin();
+                    //showItemUI.Sb_NextItem.Begin();
                 }
 
                 const int First = 1;
