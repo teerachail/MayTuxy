@@ -82,7 +82,6 @@ namespace TheS.SperfGames.MayaTukky
             }
 
             answer.Score = _currentPoint;
-            answer.IsFinish = true;
             return answer;
         }
 

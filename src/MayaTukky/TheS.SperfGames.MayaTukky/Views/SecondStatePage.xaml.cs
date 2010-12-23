@@ -83,9 +83,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
 
-            // นำเครื่องหมาย True Flase เข้ามา
-            LayoutRoot.Children.Add(_trueFalseMark);
-
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
 
@@ -334,6 +331,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // นำแถวหน้าและแถวหลังเข้ามาภายในตัวเกม
             LayoutRoot.Children.Add(_backRow);
             LayoutRoot.Children.Add(_frontRow);
+
+            // นำเครื่องหมาย True Flase เข้ามา
+            LayoutRoot.Children.Add(_trueFalseMark);
 
             // เริ่มทำการจับเวลา
             _timer.Start();

@@ -23,6 +23,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         #region Fields
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
+        private const int AutoPlayQuestionTimeSecond = 2; // เวลาในการรอให้จำโจทย์ วินาที
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
         private string _cupStyleName;
         private string[] _cupStyles;
@@ -34,6 +35,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private TimeOutLayerUI _timeOutLayer;
         private TrueFalseMarkUI _trueFalseMark;
         private DispatcherTimer _timer;
+        private DispatcherTimer _autoPlayQuestionTimer;
         private GameStageManager _gameManager;
         private PrepareLayerUI _prepareLayer;
 
@@ -64,6 +66,8 @@ namespace TheS.SperfGames.MayaTukky.Views
             // สร้างตัวจับเวลา
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
+            _autoPlayQuestionTimer = new DispatcherTimer();
+            _autoPlayQuestionTimer.Interval = TimeSpan.FromSeconds(AutoPlayQuestionTimeSecond);
 
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
@@ -80,6 +84,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         public void PlayQuestion()
         {
             _isWaitingClickForPlayQuestion = false;
+            tukkyHand.StartPlay();
             _frontRow.PlayCupDown();
         }
 
@@ -91,12 +96,16 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เหตุการณ์เมื่อเวลาเดิน
             _timer.Tick += new EventHandler(_timer_Tick);
+            _autoPlayQuestionTimer.Tick += new EventHandler(_autoPlayQuestionTimer_Tick);
 
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
             _frontRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
 
             // เมื่อแก้วสลับเสร็จสิ้น
             _frontRow.SwapCompleted += new EventHandler(_frontRow_SwapCompleted);
+
+            // เมื่อแก้วโชว์เสร็จสิ้น
+            _frontRow.ShowItemCompleted += new EventHandler(_frontRow_ShowItemCompleted);
 
             // กำหนดเหตุกาณ์ในการแสดงผลทักกี้ และสามเกลอ
             tukkyWin.ThreeTopNormal.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
@@ -162,6 +171,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.First);
                     scoreBoard.Sb_ScoreUp.Begin();
 
+                    // แสดงผลอนิเมชันตอบถูกของ item
+                    _frontRow.PlayAnswerResult(result);
+
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
                     tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
@@ -221,7 +233,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง
         private void Sb_Start_Completed(object sender, EventArgs e)
         {
-            _timer.Start();
+            // เรียกขอคำถาม
+            GetQuestion();
 
             LayoutRoot.Children.Remove(_prepareLayer);
             LayoutRoot.Children.Add(_frontRow);
@@ -229,9 +242,8 @@ namespace TheS.SperfGames.MayaTukky.Views
             // นำเครื่องหมาย True Flase เข้ามา
             LayoutRoot.Children.Add(_trueFalseMark);
 
-            // เรียกขอคำถาม
-            GetQuestion();
-
+            // เริ่มทำการจับเวลา
+            _timer.Start();
         }
 
         // เมื่อการเล่นอนิเมชันของสามเกลอเสร็จสิ้น
@@ -287,8 +299,20 @@ namespace TheS.SperfGames.MayaTukky.Views
             if (_isWaitingClickForPlayQuestion)
             {
                 PlayQuestion();
-                tukkyHand.StartPlay();
             }
+        }
+
+        // เมื่อเล่นอนิเมชันโชว์วัตถุในแก้วเสร็จสิ้น
+        private void _frontRow_ShowItemCompleted(object sender, EventArgs e)
+        {
+            _autoPlayQuestionTimer.Start();
+        }
+
+        // เมื่อหมดเวลาในการดูวัตถุในแก้ว
+        private void _autoPlayQuestionTimer_Tick(object sender, EventArgs e)
+        {
+            _autoPlayQuestionTimer.Stop();
+            PlayQuestion();
         }
 
         // Executes when the user navigates to this page.
