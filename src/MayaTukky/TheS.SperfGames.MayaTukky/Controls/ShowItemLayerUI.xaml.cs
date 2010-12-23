@@ -18,9 +18,14 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         private Dictionary<string, Type> _items;
         private Canvas[] _itemCanvas;
+        private string _cupRowState;
+        private int _correctCount;
 
         #endregion Fields
 
+        /// <summary>
+        /// กำหนดค่าเริ่มต้นให้กับตัวแสดงคำถาม
+        /// </summary>
         public ShowItemLayerUI()
         {
             InitializeComponent();
@@ -66,15 +71,78 @@ namespace TheS.SperfGames.MayaTukky.Controls
             };
         }
 
-        public void Initialize(List<string> question)
+        /// <summary>
+        /// กำหนดการแสดงผลของคำถาม
+        /// </summary>
+        /// <param name="question">คำถามที่ต้องการนำมาแสดง</param>
+        public void SetQuestion(List<string> question)
         {
+            const int Reset = 0;
+            _correctCount = Reset;
+            resetAnimation();
+
             foreach (var canvas in _itemCanvas) canvas.Children.Clear();
+
+            const int Easy = 3;
+            const int Normal = 4;
+            const int Hard = 5;
+
+            switch (question.Count)
+            {
+                case Easy: _cupRowState = "threeCup"; break;
+                case Normal: _cupRowState = "fourCup"; break;
+                case Hard: _cupRowState = "fiveCup"; break;
+                default: break;
+            }
+
+            // กำหนดการใช้งานของ state manager เพื่อกำหนดการแสดงผลของแก้วที่จะนำไปใช้งาน
+            VisualStateManager.GoToState(this, "none", false);
+            VisualStateManager.GoToState(this, _cupRowState, false);
 
             for (int itemIndex = 0; itemIndex < question.Count; itemIndex++)
             {
                 UserControl item = (UserControl)Activator.CreateInstance(_items[question[itemIndex]]);
                 _itemCanvas[itemIndex].Children.Add(item);
             }
+        }
+
+        /// <summary>
+        /// แสดงการเล่นอนิเมชันเมื่อตอบถูก
+        /// </summary>
+        /// <param name="result">ผลลัพธ์ของการเล่นเกม</param>
+        public void PlayAnswerResult(AnswerResult result)
+        {
+            if (result.IsCorrect == true)
+            {
+                _correctCount++;
+
+                const int GotoQuestionTwo = 1;
+                const int GotoQuestionThree = 2;
+                const int GotoQuestioFour = 3;
+                const int GotoQuestionFive = 4;
+                const int Finish = 5;
+
+                switch (_correctCount)
+                {
+                    case GotoQuestionTwo: Sb_NextItemTwo.Begin(); break;
+                    case GotoQuestionThree: Sb_NextItemThree.Begin(); break;
+                    case GotoQuestioFour: Sb_NextItemFour.Begin(); break;
+                    case GotoQuestionFive: Sb_NextItemFive.Begin(); break;
+                    case Finish: Sb_FadeAway.Begin(); break;
+                    default: break;
+                }
+            }
+        }
+
+        // กำหนดการแสดงคำถามใหม่
+        private void resetAnimation()
+        {
+            Sb_FadeAway.Stop();
+            Sb_NextItemFive.Stop();
+            Sb_NextItemFour.Stop();
+            Sb_NextItemThree.Stop();
+            Sb_NextItemTwo.Stop();
+            Sb_ShowLayer.Stop();
         }
     }
 }

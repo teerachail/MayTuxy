@@ -121,7 +121,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 // กำหนดข้อมูลของแถวหน้า พร้อมกับกำหนดคำถาม
                 _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
-                showItemUI.Initialize(question.BackRow.BeforeCup);
+                showItemUI.SetQuestion(question.BackRow.BeforeCup);
         }
 
         // กำหนดเหตุการณ์ของเกม
@@ -185,7 +185,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     // แสดงอนิเมชันการตอบผิด
                     _trueFalseMark.Sb_Fail.Begin();
-
+                    showItemUI.Sb_FadeAway.Begin();
                 }
                 else if (result.IsCorrect == true)
                 {
@@ -194,6 +194,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                     GlobalScore.Second += (int)result.Score;
                     scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.Second);
                     scoreBoard.Sb_ScoreUp.Begin();
+
+                    // จัดการการแสดงผลของตัวแสดงคำถาม
+                    showItemUI.PlayAnswerResult(result);
 
                     // แสดงผลอนิเมชันตอบถูกของ item
                     _frontRow.PlayAnswerResult(result);
@@ -205,9 +208,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                         _isGetNextQuestion = true;
                         _isRoundFinish = true;
                     }
-
-                    // เลื่อนกรอบคำถาม
-                    //showItemUI.Sb_NextItem.Begin();
                 }
 
                 const int First = 1;
