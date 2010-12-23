@@ -202,6 +202,15 @@
     <Compile Include="Views\ThirdStatePage.xaml.cs">
       <DependentUpon>ThirdStatePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TotalScoreFirstPage.xaml.cs">
+      <DependentUpon>TotalScoreFirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TotalScoreSecondPage.xaml.cs">
+      <DependentUpon>TotalScoreSecondPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TotalScoreThirdPage.xaml.cs">
+      <DependentUpon>TotalScoreThirdPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -297,6 +306,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ThirdStatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalScoreFirstPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalScoreSecondPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalScoreThirdPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
