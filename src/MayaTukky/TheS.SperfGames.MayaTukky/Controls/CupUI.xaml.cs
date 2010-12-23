@@ -160,6 +160,14 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sb_Correct.Begin();
         }
 
+        /// <summary>
+        /// กำหนดให้สามารถคลิกได้
+        /// </summary>
+        public void SetCupClick()
+        {
+            _isCanClick = true;
+        }
+
         // เมื่อเกมเล่นคำถามเสร็จสิ้น
         private void Cup_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -181,14 +189,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             Stream stream = Application.GetResourceStream(new Uri(cupPath.ToString(), UriKind.RelativeOrAbsolute)).Stream;
             return (new StreamReader(stream)).ReadToEnd();
-        }
-
-        /// <summary>
-        /// กำหนดให้สามารถคลิกได้
-        /// </summary>
-        public void SetCupClick()
-        {
-            _isCanClick = true;
         }
 
         // ทำการเล่นอนิเมชันแก้วลอยขึ้น

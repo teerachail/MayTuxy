@@ -312,7 +312,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private void _autoPlayQuestionTimer_Tick(object sender, EventArgs e)
         {
             _autoPlayQuestionTimer.Stop();
-            PlayQuestion();
+            if (_isWaitingClickForPlayQuestion) PlayQuestion();
         }
 
         // Executes when the user navigates to this page.
