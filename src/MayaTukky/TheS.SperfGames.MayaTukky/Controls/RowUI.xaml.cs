@@ -46,6 +46,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
         public event CupAnswerEventHandler ClickAnswer;
 
         /// <summary>
+        /// การแสดงอนิเมชันโชว์วัตถุในแก้วเสร็จสิ้น
+        /// </summary>
+        public event EventHandler ShowItemCompleted;
+
+        /// <summary>
         /// แก้วที่อยู่ภายในแถวนี้
         /// </summary>
         public CupUI[] Cups
@@ -296,9 +301,22 @@ namespace TheS.SperfGames.MayaTukky.Controls
             // กำหนดเหตุการณ์เมื่อแก้วถูกครอบเสร็จสิ้น
             (_cupCanvases.Last().Children[ElementCupIndex] as CupUI).Sb_Down.Completed += new EventHandler(swapCup);
 
+            // กำหนดเหตุการณ์เมื่อแก้วโชว์วัตถุในแก้วเสร็จแล้ว
+            (_cupCanvases.Last().Children[ElementCupIndex] as CupUI).Sb_ShowItem.Completed += new EventHandler(Sb_ShowItem_Completed);
+
             // กำหนดเหตุการณ์เมื่อการสลับแก้วทั้งสองแบบจบลง
             Storyboard1.Completed += new EventHandler(swapCup);
             Storyboard2.Completed += new EventHandler(swapCup);
+        }
+
+        // แจ้งข่าวสารอนิเมชันโชว์วัตถุในแก้วเสร็จสิ้น
+        private void Sb_ShowItem_Completed(object sender, EventArgs e)
+        {
+            var temp = ShowItemCompleted;
+            if (temp != null)
+            {
+                temp(this,null);
+            }
         }
 
         #endregion Methods
