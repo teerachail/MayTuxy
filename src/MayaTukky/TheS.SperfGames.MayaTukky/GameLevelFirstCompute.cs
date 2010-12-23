@@ -19,9 +19,12 @@ namespace TheS.SperfGames.MayaTukky
         #region Fields
 
         private const int AddPoint = 50;
+        private const int AddSwapCount = 1;
 
         #endregion Fields
 
+        #region Constructors
+        
         /// <summary>
         /// กำหนดค่าเริ่มต้นให่้กับระดับความยาก Stage 1
         /// </summary>
@@ -33,6 +36,10 @@ namespace TheS.SperfGames.MayaTukky
             _level = level;
         }
 
+        #endregion Constructors
+
+        #region Methods
+        
         /// <summary>
         /// สร้างรอบเกมใหม่
         /// </summary>
@@ -44,10 +51,13 @@ namespace TheS.SperfGames.MayaTukky
             else _level--;
             int gamePoint = AddPoint + (_level * AddPoint);
 
-            GameRoundFirst previous = previousGameRound as GameRoundFirst;
+            var previous = previousGameRound as GameRoundFirst;
             _swapSpeed = previous.SwapSpeed + AddSwapSpeed;
+            _swapCount = previous.SwapCount + AddSwapCount;
 
-            return new GameRoundFirst(gamePoint, _swapSpeed, previous.SwapCount, previous.CupCount,previous.CupLevel);
+            return new GameRoundFirst(gamePoint, _swapSpeed, _swapCount, previous.CupCount, previous.CupLevel);
         }
+
+        #endregion Methods
     }
 }

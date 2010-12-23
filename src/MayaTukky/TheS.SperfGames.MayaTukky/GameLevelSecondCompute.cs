@@ -51,8 +51,8 @@ namespace TheS.SperfGames.MayaTukky
             int gamePoint = AddPoint + (_level * AddPoint);
 
             var previous = previousGameRound as GameRoundSecond;
-            var swapSpeed = previous.SwapSpeed + AddSwapSpeed;
-            return new GameRoundSecond(gamePoint, swapSpeed, previous.SwapCount
+            _swapSpeed = previous.SwapSpeed + AddSwapSpeed;
+            return new GameRoundSecond(gamePoint, _swapSpeed, previous.SwapCount
                 , previous.CupCount, previous.BackSwapCount, previous.BackCupCount, previous.MaximumCorrect, previous.CupLevel);
         }
 

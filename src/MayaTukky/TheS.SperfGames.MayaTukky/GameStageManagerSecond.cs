@@ -73,36 +73,6 @@ namespace TheS.SperfGames.MayaTukky
             return newGameLevel;
         }
 
-        // ลดความยาก
-        protected override GameLevel previousLevel()
-        {
-            GameLevel newGameLevel = null;
-
-            // ตรวจสอบการลดระดับความยากของเกม
-            const int MinimumLevel = 0;
-            if (_currentLevelIndex > MinimumLevel)
-            {
-                _currentLevelIndex--;
-            }
-
-            // ตรวจสอบช่วงระดับความยากของเกม เพื่อทำการสร้างระดับความยากใหม่
-            const int MaximumLevel = 9;
-            if (_currentLevelIndex <= MaximumLevel)
-            {
-                // ระดับความยากของเกมอยู่ในระดับมาตรฐานที่กำหนดไว้ (Level 1-10)
-                _gameLevels[_currentLevelIndex].IsLevelUp = false;
-                newGameLevel = _gameLevels[_currentLevelIndex];
-            }
-            else
-            {
-                // ระดับความยากของเกมเกินระดับมาตรฐานที่กำหนดไว้ (Level 10+)
-                _currentLevel.IsLevelUp = false;
-                newGameLevel = _currentLevel;
-            }
-
-            return newGameLevel;
-        }
-
         #endregion Methods
     }
 }

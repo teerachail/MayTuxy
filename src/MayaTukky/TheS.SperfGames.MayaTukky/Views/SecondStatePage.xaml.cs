@@ -23,6 +23,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         #region Fields
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
+        private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่น animation สามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
         private int _cupAutoAnswerCount; // ตัวนับแก้วที่ถูกตอบอัตโนมัติ
@@ -119,6 +120,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             const int Reset = 0;
             _cupAutoAnswerCount = Reset;
+            _isRoundFinish = false;
             _isGetNextQuestion = false;
             _isWaitingClickForPlayQuestion = true;
 
@@ -215,6 +217,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     {
                         // ตอบถูก ทำการตรวจสอบการเลื่อนระดับความยาก
                         _isGetNextQuestion = true;
+                        _isRoundFinish = true;
                     }
                 }
 
@@ -249,6 +252,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             if (result)
             {
                 _timer.Stop();
+
+                // แสดง
+                _frontRow.Visibility = System.Windows.Visibility.Collapsed;
+                _backRow.Visibility = System.Windows.Visibility.Collapsed;
 
                 // แสดงผล animation หมดเวลา
                 _timeOutLayer = new TheS.SperfGames.MayaTukky.Controls.TimeOutLayerUI();
@@ -347,7 +354,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             {
                 _cupAutoAnswerCount++;
                 const int AutoCupAmount = 2;
-                if (_cupAutoAnswerCount >= AutoCupAmount)
+                if (_cupAutoAnswerCount >= AutoCupAmount && _isRoundFinish)
                 {
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;

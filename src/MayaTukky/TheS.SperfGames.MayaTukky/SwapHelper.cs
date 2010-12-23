@@ -18,8 +18,14 @@ namespace TheS.SperfGames.MayaTukky
     /// </summary>
     public class SwapHelper
     {
+        #region Fields
+        
         private Random _randomElementIndex;
 
+        #endregion Fields
+
+        #region Constructors
+        
         /// <summary>
         /// กำหนดค่าเริ่มต้นที่ใช้ในการสร้างการสลับแก้ว
         /// </summary>
@@ -27,6 +33,10 @@ namespace TheS.SperfGames.MayaTukky
         {
             _randomElementIndex = new Random();
         }
+
+        #endregion Constructors
+
+        #region Methods
 
         /// <summary>
         /// สร้างคำถามก่อนทำการสลับ
@@ -46,6 +56,24 @@ namespace TheS.SperfGames.MayaTukky
                 result.Add(sourceNames[elementIndex]);
                 sourceNames.Remove(sourceNames[elementIndex]);
             }
+            return result;
+        }
+
+        /// <summary>
+        /// สร้างคำถามก่อนทำการสลับ
+        /// </summary>
+        /// <param name="itemNames">รายชื่อสิ่งของที่นำมาแสดงผล</param>
+        /// <param name="cupCount">จำนวนแก้ว</param>
+        /// <returns>คำถามก่อนการสลับแก้ว</returns>
+        public List<string> CreateQuestionBefore(IEnumerable<string> itemNames, int cupCount, string emptyItemName)
+        {
+            if (itemNames.Count() < cupCount) throw new ArgumentException("List of name can't low than cup count.");
+
+            var sourceNames = itemNames.ToList<string>();
+            var result = new List<string>();
+            int elementIndex = _randomElementIndex.Next(sourceNames.Count);
+            result.Add(sourceNames[elementIndex]);
+            while (result.Count < cupCount) result.Add(emptyItemName);
             return result;
         }
 
@@ -92,5 +120,7 @@ namespace TheS.SperfGames.MayaTukky
 
             return sourceItem;
         }
+
+        #endregion Methods
     }
 }

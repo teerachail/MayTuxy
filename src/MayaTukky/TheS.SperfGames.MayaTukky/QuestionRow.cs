@@ -53,11 +53,15 @@ namespace TheS.SperfGames.MayaTukky
 
         #endregion Properties
 
+        #region Constructors
+        
         public QuestionRow()
         {
             AfterCup = new List<string>(CupCount);
             BeforeCup = new List<string>(CupCount);
             Sequence = new Queue<SwapSequence>();
         }
+
+        #endregion Constructors
     }
 }

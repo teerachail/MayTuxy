@@ -84,9 +84,10 @@ namespace TheS.SperfGames.MayaTukky
                 "voodoo4",
                 "voodoo5",
                 "voodoo6",
+                //"voodoo7",
                 "voodoo8",
             };
-
+            
             _items = _questionManager.CreateQuestionBefore(_items, backCupCount);
             Question.BackRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, backCupCount);
             Question.BackRow.Sequence = _questionManager.CreateSwapSequence(backCupCount, backSwapCount);

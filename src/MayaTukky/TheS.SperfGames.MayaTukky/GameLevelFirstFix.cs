@@ -16,6 +16,8 @@ namespace TheS.SperfGames.MayaTukky
     /// </summary>
     public class GameLevelFirstFix : GameLevelFirst
     {
+        #region Constructor
+
         /// <summary>
         /// กำหนดค่าเริ่มต้นให่้กับ Stage 1 ชนิดที่มีการกำหนดไว้ก่อนแล้ว
         /// </summary>
@@ -24,9 +26,7 @@ namespace TheS.SperfGames.MayaTukky
         /// <param name="currentPoint">คะแนนที่จะได้เมื่อผลลัพธ์ถูกต้อง</param>
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="level">ระดับความยาก</param>
-
-        #region Constructor
-
+        /// <param name="cupLevel">ถ้วยที่จะนำมาใช้ในการแสดงผล</param>
         public GameLevelFirstFix(int cupCount, int swapCount, int currentPoint, float swapSpeed, int level,string cupLevel)
         {
             _cupCount = cupCount;
@@ -48,7 +48,7 @@ namespace TheS.SperfGames.MayaTukky
         /// <returns>รอบเกมใหม่</returns>
         public override GameRound CreateGameRound(GameRound previousGameRound)
         {
-            return new GameRoundFirst(_currentPoint, _swapSpeed, _swapCount, _cupCount,_cupLevel);
+            return new GameRoundFirst(_currentPoint, _swapSpeed, _swapCount, _cupCount, _cupLevel);
         }
 
         #endregion Methods

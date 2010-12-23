@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 
 namespace TheS.SperfGames.MayaTukky
 {
@@ -16,6 +17,12 @@ namespace TheS.SperfGames.MayaTukky
     /// </summary>
     public class GameRoundFirst : GameRound
     {
+        #region Fields
+        
+        private const string IncorrectAnswerItem = "EmptyItem";
+
+        #endregion Fields
+
         #region Constructors
 
         /// <summary>
@@ -29,8 +36,25 @@ namespace TheS.SperfGames.MayaTukky
         public GameRoundFirst(int currentPoint, float swapSpeed, int swapCount, int cupCount,string cupLevel)
             : base(currentPoint, swapSpeed, swapCount, cupCount)
         {
-            CreateQuestion();
             _cupLevel = cupLevel;
+            CreateQuestion();
+
+            // TODO: Items name
+            _items = new List<string>{
+                "voodoo1",
+                "voodoo2",
+                "voodoo3",
+                "voodoo4",
+                "voodoo5",
+                "voodoo6",
+                //"voodoo7",
+                "voodoo8",
+            };
+            
+            _items = _questionManager.CreateQuestionBefore(_items, cupCount,IncorrectAnswerItem);
+            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, cupCount);
+            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(cupCount, swapCount);
+            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
         }
 
         #endregion Constructors
@@ -46,13 +70,15 @@ namespace TheS.SperfGames.MayaTukky
         {
             AnswerResult answer = new AnswerResult();
 
-            if (objName.Equals(true))
+            if (objName.Equals(IncorrectAnswerItem))
             {
-                answer.IsCorrect = true;
+                // ตอบผิด
+                answer.IsCorrect = false;
             }
             else
             {
-                answer.IsCorrect = false;
+                // ตอบถูก
+                answer.IsCorrect = true;
             }
 
             answer.IsFinish = true;

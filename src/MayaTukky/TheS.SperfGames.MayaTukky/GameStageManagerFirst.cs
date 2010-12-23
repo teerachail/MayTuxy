@@ -17,6 +17,8 @@ namespace TheS.SperfGames.MayaTukky
     /// </summary>
     public class GameStageManagerFirst : GameStageManager
     {
+        #region Constructors
+
         /// <summary>
         /// สร้างระดับความยากของเกมตอนเริ่มต้น
         /// </summary>
@@ -43,33 +45,33 @@ namespace TheS.SperfGames.MayaTukky
             _gameCombo = new GameCombo(AddPluseCombo);
         }
 
+        #endregion Constructors
+
+        #region Methods
+
         //เพิ่มความยาก
         protected override GameLevel nextLevel()
         {
             GameLevel newGameLevel = null;
+            _currentLevelIndex++;
+
+            // ตรวจสอบช่วงระดับความยากของเกม เพื่อทำการสร้างระดับความยากใหม่
             const int MaximumLevel = 9;
             if (_currentLevelIndex <= MaximumLevel)
             {
-                _currentLevelIndex++;
+                // ระดับความยากของเกมอยู่ในระดับมาตรฐานที่กำหนดไว้ (Level 1-10)
                 _gameLevels[_currentLevelIndex].IsLevelUp = true;
                 newGameLevel = _gameLevels[_currentLevelIndex];
             }
             else
             {
+                // ระดับความยากของเกมเกินระดับมาตรฐานที่กำหนดไว้ (Level 10+)
                 newGameLevel = new GameLevelFirstCompute(true, _currentLevelIndex);
             }
 
             return newGameLevel;
         }
 
-        //ลดความยาก
-        protected override GameLevel previousLevel()
-        {
-            const int MinimumLevel = 0;
-            if (_currentLevelIndex > MinimumLevel) _currentLevelIndex--;
-            _gameLevels[_currentLevelIndex].IsLevelUp = false;
-
-            return _gameLevels[_currentLevelIndex];
-        }
+        #endregion Methods
     }
 }
