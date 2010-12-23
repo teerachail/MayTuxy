@@ -45,11 +45,19 @@
     		</ObjectAnimationUsingKeyFrames>
     		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="shadow">
     			<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.00002"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1.1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.19993">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<CircleEase EasingMode="EaseIn"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
     		</DoubleAnimationUsingKeyFrames>
     		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="shadow">
     			<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.00002"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1.1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.19993">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<CircleEase EasingMode="EaseIn"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
     		</DoubleAnimationUsingKeyFrames>
     	</Storyboard>
     	<Storyboard x:Name="Sb_Up">
@@ -64,11 +72,11 @@
     		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
     		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="shadow">
     			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2"/>
     		</DoubleAnimationUsingKeyFrames>
     		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="shadow">
     			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2"/>
     		</DoubleAnimationUsingKeyFrames>
     	</Storyboard>
     	<Storyboard x:Name="Sb_Down">
@@ -328,19 +336,26 @@
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
     	</Storyboard>
+    	<Storyboard x:Name="Storyboard1">
+    		<DoubleAnimation Duration="0" To="0.1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
+    	</Storyboard>
     </UserControl.Resources>
 
     <Canvas x:Name="LayoutRoot">
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="VisualStateGroup">
     			<VisualState x:Name="none"/>
-    			<VisualState x:Name="over"/>
+    			<VisualState x:Name="over">
+    				<Storyboard>
+    					<DoubleAnimation Duration="0" To="0.1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
+    				</Storyboard>			
+				</VisualState>
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
         <Canvas x:Name="cv_Shadow" Height="210" Width="110">
             <Canvas x:Name="shadow" Width="109.725" Height="41.499" Canvas.Top="163" RenderTransformOrigin="0.5,0.5">
             	<Canvas.RenderTransform>
-            		<CompositeTransform ScaleX="1.1" ScaleY="1.1"/>
+            		<CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
             	</Canvas.RenderTransform>
                 <Path Opacity="0.6" Fill="#ff1f110b" Data="F1 M 109.725,20.749 C 109.725,32.209 85.162,41.499 54.862,41.499 C 24.562,41.499 0.000,32.209 0.000,20.749 C 0.000,9.290 24.562,0.000 54.862,0.000 C 85.162,0.000 109.725,9.290 109.725,20.749 Z" UseLayoutRounding="False" Canvas.Top="1.25"/>
             </Canvas>
@@ -507,13 +522,16 @@
                 </Canvas>
             </Canvas>
         </Canvas>
-        <Canvas x:Name="cv_Cup" Height="210" Width="110" RenderTransformOrigin="0.5,0.5" Canvas.Top="-210" Background="{x:Null}">
+        <Canvas x:Name="cv_Cup" Height="210" Width="110" RenderTransformOrigin="0.5,0.5" Canvas.Top="-210">
             <Canvas.RenderTransform>
                 <CompositeTransform/>
             </Canvas.RenderTransform>
         	<i:Interaction.Triggers>
         		<i:EventTrigger EventName="MouseEnter">
         			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="over"/>
+        		</i:EventTrigger>
+        		<i:EventTrigger EventName="MouseLeave">
+        			<ei:GoToStateAction StateName="none"/>
         		</i:EventTrigger>
         	</i:Interaction.Triggers>
         </Canvas>
