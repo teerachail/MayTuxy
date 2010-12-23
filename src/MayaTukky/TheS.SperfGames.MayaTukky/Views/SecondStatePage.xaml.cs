@@ -24,7 +24,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
-        private bool _isGetNextQuestion; // เมื่อเล่น animation สามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
+        private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
         private int _cupAutoAnswerCount; // ตัวนับแก้วที่ถูกตอบอัตโนมัติ
         private int _timeCombo;
@@ -151,7 +151,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             foreach (var cup in _backRow.Cups) cup.Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
 
             // กำหนดเหตุกาณ์ในการแสดงผลทักกี้ และสามเกลอ
-            tukkyLose.PlayCompleted += new EventHandler(tukkyLose_PlayCompleted);
             tukkyWin.ThreeTopNormal.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
             tukkyWin.ThreeTopLose.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
             tukkyWin.ThreeTopWin.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
@@ -190,13 +189,13 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // ตอบผิด ทำการเรียกคำถามใหม่
                     _isGetNextQuestion = true;
 
-                    // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่น animation
+                    // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Visible;
                     tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
                     tukkyWin.ThreeTopLose.Visibility = System.Windows.Visibility.Collapsed;
                     tukkyWin.ThreeTopWin.StartPlay();
 
-                    // แสดง animation การตอบผิด
+                    // แสดงอนิเมชันการตอบผิด
                     _trueFalseMark.Sb_Fail.Begin();
 
                 }
@@ -208,7 +207,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.Second);
                     scoreBoard.Sb_ScoreUp.Begin();
 
-                    // แสดงผล animation ตอบถูกของ item
+                    // แสดงผลอนิเมชันตอบถูกของ item
                     _frontRow.PlayAnswerResult(result);
                     _backRow.PlayAnswerResult(result);
 
@@ -221,7 +220,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     }
                 }
 
-                // TODO: การเล่น animation ของนาฬิกา
+                // TODO: การเล่นอนิเมชันของนาฬิกา
                 const int First = 1;
                 const int Second = 2;
                 const int Third = 3;
@@ -253,11 +252,11 @@ namespace TheS.SperfGames.MayaTukky.Views
             {
                 _timer.Stop();
 
-                // แสดง
+                // ปิดการแสดงผลของแถวหน้าและแถวหลัง
                 _frontRow.Visibility = System.Windows.Visibility.Collapsed;
                 _backRow.Visibility = System.Windows.Visibility.Collapsed;
 
-                // แสดงผล animation หมดเวลา
+                // แสดงผลอนิเมชันหมดเวลา
                 _timeOutLayer = new TheS.SperfGames.MayaTukky.Controls.TimeOutLayerUI();
                 LayoutRoot.Children.Add(_timeOutLayer);
 
@@ -277,13 +276,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 _timeOutLayer.Sb_TimeOut.Begin();
             }
-        }
-
-        // จัดการการแสดงผลของทักกี้
-        private void tukkyLose_PlayCompleted(object sender, EventArgs e)
-        {
-            tukkyWin.Visibility = System.Windows.Visibility.Visible;
-            tukkyLose.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         // กำหนดการแสดงผลของสามเกลอ
@@ -366,7 +358,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.Sb_RoundEnd.Stop();
                     scoreBoard.Sb_RoundEnd.Begin();
 
-                    // แสดง animation การตอบถูก
+                    // แสดงอนิเมชันการตอบถูก
                     _trueFalseMark.Sb_Good.Begin();
 
                     _correctCount++;

@@ -137,7 +137,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         }
 
         /// <summary>
-        /// Animation แก้วครอบลง
+        /// อนิเมชันแก้วครอบลง
         /// </summary>
         public void CupDown()
         {
@@ -145,7 +145,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         }
 
         /// <summary>
-        /// Animation แก้วลอยขึ้น
+        /// อนิเมชันแก้วลอยขึ้น
         /// </summary>
         public void CupUp()
         {
@@ -153,7 +153,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         }
 
         /// <summary>
-        /// Animation ตอบถูก
+        /// อนิเมชันตอบถูก
         /// </summary>
         public void CupCorrect()
         {
@@ -191,7 +191,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
             _isCanClick = true;
         }
 
-        // ทำการเล่น Animation แก้วลอยขึ้น
+        // ทำการเล่นอนิเมชันแก้วลอยขึ้น
         private void Sb_Click_Completed(object sender, EventArgs e)
         {
             Sb_Up.Begin();

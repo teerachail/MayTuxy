@@ -41,14 +41,14 @@ namespace TheS.SperfGames.MayaTukky
 
             // TODO: Items name
             _items = new List<string>{
-                "voodoo1",
-                "voodoo2",
-                "voodoo3",
-                "voodoo4",
-                "voodoo5",
-                "voodoo6",
-                //"voodoo7",
-                "voodoo8",
+                "poison1",
+                "poison2",
+                "poison3",
+                "poison4",
+                "poison5",
+                "poison6",
+                "poison7",
+                "poison8",
             };
             
             _items = _questionManager.CreateQuestionBefore(_items, cupCount,IncorrectAnswerItem);
@@ -81,6 +81,7 @@ namespace TheS.SperfGames.MayaTukky
                 answer.IsCorrect = true;
             }
 
+            answer.Score = _currentPoint;
             answer.IsFinish = true;
             return answer;
         }

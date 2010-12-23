@@ -30,7 +30,7 @@ namespace TheS.SperfGames.MayaTukky
         public GameLevelFirstFix(int cupCount, int swapCount, int currentPoint, float swapSpeed, int level,string cupLevel)
         {
             _cupCount = cupCount;
-            _swapSpeed = swapSpeed;
+            _swapCount = swapCount;
             _currentPoint = currentPoint;
             _swapSpeed = swapSpeed;
             _level = level;
