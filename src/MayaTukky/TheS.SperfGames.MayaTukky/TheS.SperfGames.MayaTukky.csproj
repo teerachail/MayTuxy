@@ -160,12 +160,17 @@
     <Compile Include="GameLevelSecond.cs" />
     <Compile Include="GameLevelSecondCompute.cs" />
     <Compile Include="GameLevelSecondFix.cs" />
+    <Compile Include="GameLevelThird.cs" />
+    <Compile Include="GameLevelThirdCompute.cs" />
+    <Compile Include="GameLevelThirdFix.cs" />
     <Compile Include="GameRound.cs" />
     <Compile Include="GameRoundFirst.cs" />
     <Compile Include="GameRoundSecond.cs" />
+    <Compile Include="GameRoundThird.cs" />
     <Compile Include="GameStageManager.cs" />
     <Compile Include="GameStageManagerFirst.cs" />
     <Compile Include="GameStageManagerSecond.cs" />
+    <Compile Include="GameStageManagerThird.cs" />
     <Compile Include="GlobalScore.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="QuestionRow.cs" />

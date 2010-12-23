@@ -39,7 +39,6 @@ namespace TheS.SperfGames.MayaTukky
             _cupLevel = cupLevel;
             CreateQuestion();
 
-            // TODO: Items name
             _items = new List<string>{
                 "poison1",
                 "poison2",
@@ -79,9 +78,9 @@ namespace TheS.SperfGames.MayaTukky
             {
                 // ตอบถูก
                 answer.IsCorrect = true;
+                answer.Score = _currentPoint;
             }
 
-            answer.Score = _currentPoint;
             return answer;
         }
 
