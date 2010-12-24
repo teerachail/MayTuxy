@@ -26,6 +26,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
+        private bool _isAutoAnswerCompleted; // การตอบอัตโนมัติเสร็จสิ้น
         private int _timeCombo;
         private int _incorrectCount;
         private int _correctCount;
@@ -111,6 +112,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เรียกคำถาม
         private void GetQuestion()
         {
+            _isAutoAnswerCompleted = false;
             _isRoundFinish = false;
             _isGetNextQuestion = false;
             _isWaitingClickForPlayQuestion = true;
@@ -119,9 +121,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             Question question = _gameManager.GetNextQuestion();
             string cupLevel = question.CupLevel;
 
-                // กำหนดข้อมูลของแถวหน้า พร้อมกับกำหนดคำถาม
-                _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
-                showItemUI.SetQuestion(question.BackRow.BeforeCup);
+            // กำหนดข้อมูลของแถวหน้า พร้อมกับกำหนดคำถาม
+            _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
+            showItemUI.SetQuestion(question.BackRow.BeforeCup);
         }
 
         // กำหนดเหตุการณ์ของเกม
@@ -195,11 +197,11 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.Second);
                     scoreBoard.Sb_ScoreUp.Begin();
 
-                    // จัดการการแสดงผลของตัวแสดงคำถาม
-                    showItemUI.PlayAnswerResult(result);
-
                     // แสดงผลอนิเมชันตอบถูกของ item
                     _frontRow.PlayAnswerResult(result);
+
+                    // จัดการการแสดงผลของตัวแสดงคำถาม
+                    showItemUI.PlayAnswerResult(result);
 
                     // ตรวจสอบการจบระดับความยากนี้
                     if (result.IsFinish == true)
@@ -333,23 +335,28 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             if (_isGetNextQuestion && _isRoundFinish)
             {
-                // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
-                tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
-                tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
-                tukkyWin.ThreeTopLose.Visibility = System.Windows.Visibility.Visible;
-                tukkyWin.ThreeTopLose.StartPlay();
+                if (_isAutoAnswerCompleted)
+                {
+                    // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
+                    tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
+                    tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
+                    tukkyWin.ThreeTopLose.Visibility = System.Windows.Visibility.Visible;
+                    tukkyWin.ThreeTopLose.StartPlay();
 
-                // เล่นอนิเมชันดาว
-                scoreBoard.Sb_RoundEnd.Stop();
-                scoreBoard.Sb_RoundEnd.Begin();
+                    // เล่นอนิเมชันดาว
+                    scoreBoard.Sb_RoundEnd.Stop();
+                    scoreBoard.Sb_RoundEnd.Begin();
 
-                // แสดงอนิเมชันการตอบถูก
-                _trueFalseMark.Sb_Good.Begin();
+                    // แสดงอนิเมชันการตอบถูก
+                    _trueFalseMark.Sb_Good.Begin();
 
-                // ปิดตัวแสดงคำถาม
-                showItemUI.Sb_FadeAway.Begin();
+                    // ปิดตัวแสดงคำถาม
+                    showItemUI.Sb_FadeAway.Begin();
 
-                _correctCount++;
+                    _correctCount++; 
+                }
+
+                _isAutoAnswerCompleted = true;
             }
         }
 
