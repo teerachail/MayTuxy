@@ -7,7 +7,7 @@
            mc:Ignorable="d"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
            d:DesignWidth="625" d:DesignHeight="488"
-           Title="SecondStatePage Page">
+           Title="SecondStatePage Page" Width="625" Height="488">
     <Canvas x:Name="LayoutRoot" Clip="M0.5,0.5 L624.5,0.5 L624.5,487.5 L0.5,487.5 z">
         <Image Height="488" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Width="625"/>
         <TheS_SperfGames_MayaTukky_Controls:TukkyLoseUI RenderTransformOrigin="0.5,0.5" Visibility="Collapsed" Canvas.Top="29" Canvas.Left="7" x:Name="tukkyLose">
