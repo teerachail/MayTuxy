@@ -116,7 +116,7 @@
 		</Storyboard>
 	</UserControl.Resources>
     
-    <Canvas x:Name="LayoutRoot" Width="625" Height="488" Visibility="Collapsed">
+    <Canvas x:Name="LayoutRoot" Width="625" Height="488">
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="Position">
     			<VisualState x:Name="threeCup">
@@ -165,39 +165,40 @@
     				</Storyboard>
     			</VisualState>
     			<VisualState x:Name="fiveCup"/>
+    			<VisualState x:Name="none"/>
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
-    	<Rectangle x:Name="rectangle1" Fill="#FF25110B" Height="78" RadiusX="15" RadiusY="15" Opacity="0.6" Width="450" Canvas.Left="93" Canvas.Top="372" RenderTransformOrigin="0.5,0.5">
+    	<Rectangle x:Name="rectangle1" Fill="#FF25110B" Height="90" RadiusX="15" RadiusY="15" Opacity="0.6" Width="450" Canvas.Left="93" Canvas.Top="360" RenderTransformOrigin="0.5,0.5">
     		<Rectangle.RenderTransform>
     			<CompositeTransform/>
     		</Rectangle.RenderTransform>
     	</Rectangle>
     	<Canvas x:Name="cv_ShowItemOne" Height="210" Canvas.Left="91" Canvas.Top="260" Width="110" RenderTransformOrigin="0.5,0.5">
     		<Canvas.RenderTransform>
-    			<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
     		</Canvas.RenderTransform>
     	</Canvas>
     	<Canvas x:Name="cv_ShowItemTwo" Height="210" Canvas.Left="176" Canvas.Top="260" Width="110" RenderTransformOrigin="0.5,0.5">
     		<Canvas.RenderTransform>
-    			<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
     		</Canvas.RenderTransform>
     	</Canvas>
     	<Canvas x:Name="cv_ShowItemThree" Height="210" Canvas.Left="261" Canvas.Top="260" Width="110" RenderTransformOrigin="0.5,0.5">
     		<Canvas.RenderTransform>
-    			<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
     		</Canvas.RenderTransform>
     	</Canvas>
     	<Canvas x:Name="cv_ShowItemFour" Height="210" Canvas.Left="346" Canvas.Top="260" Width="110" RenderTransformOrigin="0.5,0.5">
     		<Canvas.RenderTransform>
-    			<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
     		</Canvas.RenderTransform>
     	</Canvas>
     	<Canvas x:Name="cv_ShowItemFive" Height="210" Canvas.Left="431" Canvas.Top="260" Width="110" RenderTransformOrigin="0.5,0.5">
     		<Canvas.RenderTransform>
-    			<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
     		</Canvas.RenderTransform>
     	</Canvas>
-    	<Rectangle x:Name="rectangle" Height="74" Canvas.Left="91" RadiusY="8" RadiusX="8" Canvas.Top="374" Width="110" Stroke="#FFF1FF00" StrokeThickness="4" RenderTransformOrigin="0.5,0.5">
+    	<Rectangle x:Name="rectangle" Height="82" Canvas.Left="91" RadiusY="8" RadiusX="8" Canvas.Top="366" Width="110" Stroke="#FFF1FF00" StrokeThickness="4" RenderTransformOrigin="0.5,0.5">
     		<Rectangle.RenderTransform>
     			<CompositeTransform ScaleX="0.8"/>
     		</Rectangle.RenderTransform>
