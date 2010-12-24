@@ -7,7 +7,7 @@
            xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" x:Class="TheS.SperfGames.MayaTukky.Views.TotalScoreThirdPage"
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
-           Title="TotalScoreThirdPage Page">
+           Title="TotalScoreThirdPage Page" Width="625" Height="488">
     <Canvas x:Name="LayoutRoot">
 		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
 		<TheS_SperfGames_MayaTukky_Controls:TukkyPresentUI/>
