@@ -9,20 +9,20 @@
 
     <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
 
-        <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
+        <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}" Margin="0" Background="White" BorderBrush="{x:Null}">
 
             <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
-                              Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
+                              Source="/FirstStatePage" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed" BorderThickness="1">
                 <navigation:Frame.UriMapper>
                   <uriMapper:UriMapper>
-                    <uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>
+                        <uriMapper:UriMapping Uri="" MappedUri="/Views/FirstStatePage.xaml"/>
                     <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
                   </uriMapper:UriMapper>
                 </navigation:Frame.UriMapper>
             </navigation:Frame>
         </Border>
 
-        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}">
+        <Grid Visibility="Collapsed" x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}">
 
             <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
                 <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
@@ -37,13 +37,28 @@
             <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}">
                 <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
 
-                    <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Home" TargetName="ContentFrame" Content="home"/>
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/FirstStatePage" TargetName="ContentFrame" Content="FirstStatePage"/>
 									 
-                    <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>
-					
-                    <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/About" TargetName="ContentFrame" Content="about"/>
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/TotalScoreFirstPage" TargetName="ContentFrame" Content="TotalScoreFirstPage"/>
+
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/SecondStatePage" TargetName="ContentFrame" Content="SecondStatePage"/>
+
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/TotalScoreSecondPage" TargetName="ContentFrame" Content="TotalScoreSecondPage"/>
+
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/ThirdStatePage" TargetName="ContentFrame" Content="ThirdStatePage"/>
+
+                    <Rectangle Style="{StaticResource DividerStyle}"/>
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/TotalScoreThirdPage" TargetName="ContentFrame" Content="TotalScoreThirdPage"/>
 
                 </StackPanel>
             </Border>

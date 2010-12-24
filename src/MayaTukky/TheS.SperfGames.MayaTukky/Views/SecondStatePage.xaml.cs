@@ -43,6 +43,13 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         #endregion Fields
 
+        #region Events
+
+        // TODO: Game state 2 finish event
+        public static event EventHandler GameFinish;
+
+        #endregion Events
+
         #region Constructors
 
         /// <summary>
@@ -165,6 +172,21 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดเหตุการ์ณ์ของนาฬิกาจับเวลา
             clock.Sb_Clock5.Completed += new EventHandler(Sb_Clock5_Completed);
+
+            // กำหนดเหตุการณ์เมื่อทักกี้แสดงอารมณ์เสร็จ
+            tukkyLose.Tukky_SadStory1.Completed += new EventHandler(Tukky_emotion_Completed);
+            tukkyWin.Tukky_happyStory1.Completed += new EventHandler(Tukky_emotion_Completed);
+        }
+
+        // แจ้งเหตุการณ์ว่าเกมจบแล้ว
+        private void Tukky_emotion_Completed(object sender, EventArgs e)
+        {
+            // TODO: event
+            var temp = GameFinish;
+            if (temp != null)
+            {
+                temp(this, null);
+            }
         }
 
         // ตรวจสอบคำตอบ
