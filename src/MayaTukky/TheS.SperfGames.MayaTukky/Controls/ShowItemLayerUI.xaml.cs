@@ -30,6 +30,10 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             InitializeComponent();
 
+            btn.Click += new RoutedEventHandler(btn_Click);
+            VisualStateManager.GoToState(this, "fiveCup", false);
+
+
             _itemCanvas = new Canvas[]{
                 cv_ShowItemOne,
                 cv_ShowItemTwo,
@@ -124,10 +128,10 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
                 switch (_correctCount)
                 {
-                    case GotoQuestionTwo: Sb_NextItemTwo.Begin(); break;
-                    case GotoQuestionThree: Sb_NextItemThree.Begin(); break;
-                    case GotoQuestioFour: Sb_NextItemFour.Begin(); break;
-                    case GotoQuestionFive: Sb_NextItemFive.Begin(); break;
+                    case GotoQuestionTwo: Sb_FadeItemOne.Begin(); break;
+                    case GotoQuestionThree: Sb_FadeItemTwo.Begin(); break;
+                    case GotoQuestioFour: Sb_FadeItemThree.Begin(); break;
+                    case GotoQuestionFive: Sb_FadeItemFour.Begin(); break;
                     case Finish: Sb_FadeAway.Begin(); break;
                     default: break;
                 }
@@ -138,11 +142,43 @@ namespace TheS.SperfGames.MayaTukky.Controls
         private void resetAnimation()
         {
             Sb_FadeAway.Stop();
-            Sb_NextItemFive.Stop();
-            Sb_NextItemFour.Stop();
-            Sb_NextItemThree.Stop();
-            Sb_NextItemTwo.Stop();
+            Sb_FadeItemFour.Stop();
+            Sb_FadeItemThree.Stop();
+            Sb_FadeItemTwo.Stop();
+            Sb_FadeItemOne.Stop();
             Sb_ShowLayer.Stop();
+        }
+
+        private bool _checkPlayNextFirst = true;
+        private double _point;
+        private void nextItem(double xPoint)
+        {
+            const int x = 85;
+            if (_checkPlayNextFirst)
+            {
+                _point = xPoint;
+                DbNext.To = _point;
+                _checkPlayNextFirst = false;
+            }
+            else
+            {
+                _point = _point + x;
+                DbNext.To = _point;
+            }
+            Sb_NextItem.Begin();
+        }
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            // 5 cup use 85
+            // 4 cup use 127.5
+            // 3 cup use 170
+            nextItem(85);
+        }
+
+        public void ResetPoint()
+        {
+            _point = 0;
+            _checkPlayNextFirst = true;
         }
     }
 }
