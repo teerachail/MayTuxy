@@ -265,6 +265,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             {
                 _timer.Stop();
 
+                // ปิดการแสดงผลของคำถาม
+                showItemUI.Sb_FadeAway.Begin();
+
                 // ปิดการแสดงผลของแถวหน้าและแถวหลัง
                 _frontRow.Visibility = System.Windows.Visibility.Collapsed;
 

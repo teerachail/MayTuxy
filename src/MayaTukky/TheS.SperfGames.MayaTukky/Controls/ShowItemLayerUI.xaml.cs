@@ -20,6 +20,10 @@ namespace TheS.SperfGames.MayaTukky.Controls
         private Canvas[] _itemCanvas;
         private string _cupRowState;
         private int _correctCount;
+        private float _nextQuestionRectangle;
+        private bool _checkPlayNextFirst;
+        private double _point;
+        private int _answerRequest;
 
         #endregion Fields
 
@@ -30,10 +34,8 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             InitializeComponent();
 
-            btn.Click += new RoutedEventHandler(btn_Click);
             VisualStateManager.GoToState(this, "fiveCup", false);
-
-
+            
             _itemCanvas = new Canvas[]{
                 cv_ShowItemOne,
                 cv_ShowItemTwo,
@@ -81,7 +83,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="question">คำถามที่ต้องการนำมาแสดง</param>
         public void SetQuestion(List<string> question)
         {
+            _checkPlayNextFirst = true;
             const int Reset = 0;
+
             _correctCount = Reset;
             resetAnimation();
 
@@ -93,9 +97,30 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             switch (question.Count)
             {
-                case Easy: _cupRowState = "threeCup"; break;
-                case Normal: _cupRowState = "fourCup"; break;
-                case Hard: _cupRowState = "fiveCup"; break;
+                case Easy:
+                    {
+                        _cupRowState = "threeCup";
+                        const float AddPointThree = 170;
+                        _nextQuestionRectangle = AddPointThree;
+                        _answerRequest = Easy;
+                        break;
+                    }
+                case Normal:
+                    {
+                        _cupRowState = "fourCup";
+                        const float AddPointFour = 127.5f;
+                        _nextQuestionRectangle = AddPointFour;
+                        _answerRequest = Normal;
+                        break;
+                    }
+                case Hard:
+                    {
+                        _cupRowState = "fiveCup";
+                        const float AddPointFive = 85;
+                        _nextQuestionRectangle = AddPointFive;
+                        _answerRequest = Hard;
+                        break;
+                    }
                 default: break;
             }
 
@@ -126,13 +151,20 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 const int GotoQuestionFive = 4;
                 const int Finish = 5;
 
+                // เลื่อนกรอบคำถาม
+                if (_correctCount < _answerRequest) nextItem(_nextQuestionRectangle);
+
+                // ปิดการแสดงผลของคำถามที่ตอบถูกแล้ว
                 switch (_correctCount)
                 {
                     case GotoQuestionTwo: Sb_FadeItemOne.Begin(); break;
                     case GotoQuestionThree: Sb_FadeItemTwo.Begin(); break;
                     case GotoQuestioFour: Sb_FadeItemThree.Begin(); break;
                     case GotoQuestionFive: Sb_FadeItemFour.Begin(); break;
-                    case Finish: Sb_FadeAway.Begin(); break;
+                    case Finish: 
+                        Sb_FadeAway.Begin(); 
+                        resetPoint(); 
+                        break;
                     default: break;
                 }
             }
@@ -149,9 +181,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sb_ShowLayer.Stop();
         }
 
-        private bool _checkPlayNextFirst = true;
-        private double _point;
-        private void nextItem(double xPoint)
+        private void nextItem(float xPoint)
         {
             const int x = 85;
             if (_checkPlayNextFirst)
@@ -167,17 +197,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
             }
             Sb_NextItem.Begin();
         }
-        private void btn_Click(object sender, RoutedEventArgs e)
-        {
-            // 5 cup use 85
-            // 4 cup use 127.5
-            // 3 cup use 170
-            nextItem(85);
-        }
 
-        public void ResetPoint()
+        private void resetPoint()
         {
-            _point = 0;
+            const int ResetPoint = 0;
+            _point = ResetPoint;
             _checkPlayNextFirst = true;
         }
     }

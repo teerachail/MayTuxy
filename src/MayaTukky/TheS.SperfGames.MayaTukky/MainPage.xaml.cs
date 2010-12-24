@@ -34,11 +34,17 @@ namespace TheS.SperfGames.MayaTukky
             Views.FirstStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.SecondStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.ThirdStatePage.GameFinish += new EventHandler(NavigationPage);
+            Views.TotalScoreFirstPage.CalculateScoreCompleted += new EventHandler(NavigationPage);
+            Views.TotalScoreSecondPage.CalculateScoreCompleted += new EventHandler(NavigationPage);
+            Views.TotalScoreThirdPage.CalculateScoreCompleted += new EventHandler(NavigationPage);
         }
 
         private void NavigationPage(object sender, EventArgs e)
         {
-            ContentFrame.Navigate(new Uri(_pages[_gamePageIndex++], UriKind.Relative));
+            // TODO: Game Finish
+            if (_gamePageIndex < _pages.Count()) _gamePageIndex++;
+            else MessageBox.Show("End Game");
+            ContentFrame.Navigate(new Uri(_pages[_gamePageIndex], UriKind.Relative));
         }
 
         // After the Frame navigates, ensure the HyperlinkButton representing the current page is selected

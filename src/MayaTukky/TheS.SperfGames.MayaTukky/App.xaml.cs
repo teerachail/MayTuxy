@@ -24,11 +24,7 @@ namespace TheS.SperfGames.MayaTukky
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            //this.RootVisual = new MainPage();
-            //this.RootVisual = new Views.FirstStatePage();
-            //this.RootVisual = new Views.SecondStatePage();
-            //this.RootVisual = new Views.ThirdStatePage();
-            this.RootVisual = new Controls.ShowItemLayerUI();
+            this.RootVisual = new MainPage();
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)

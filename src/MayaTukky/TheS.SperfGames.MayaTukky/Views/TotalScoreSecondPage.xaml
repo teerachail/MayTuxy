@@ -8,6 +8,91 @@
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
            Title="TotalScoreSecondPage Page" Width="625" Height="488">
+	<navigation:Page.Resources>
+        <Storyboard x:Name="SB_SumScore">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="poisonSeal">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="voodooSeal">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="0"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="81"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="162"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="243"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="324"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="405"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="486"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="564"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.8" Value="648"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="728"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="806"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="81"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.2" Value="162"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="243"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.4" Value="324"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="405"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="486"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.7" Value="564"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="648"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="728"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="806"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="0"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.1" Value="161"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.2" Value="322"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.3" Value="484"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.4" Value="645"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="806"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="967"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.7" Value="1128"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.8" Value="1290"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="1451"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="1612"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </navigation:Page.Resources>
     <Canvas x:Name="LayoutRoot" Height="488" Width="625" >
 
 		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
@@ -55,8 +140,8 @@
 
 			</Canvas>
 		</Canvas>
-		<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI x:Name="poisonSeal" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Width, Height" Canvas.Left="22" Canvas.Top="115"/>
-		<Canvas x:Name="Score1" Width="211.776" Height="74.266" RenderTransformOrigin="0.5,0.5" Canvas.Left="123" Canvas.Top="121">
+		<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI x:Name="poisonSeal" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Width, Height" Canvas.Left="22" Canvas.Top="115" Visibility="Collapsed"/>
+		<Canvas x:Name="Score1" Width="211.776" Height="74.266" RenderTransformOrigin="0.5,0.5" Canvas.Left="123" Canvas.Top="121" Visibility="Collapsed">
 			<Canvas.RenderTransform>
 				<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
 			</Canvas.RenderTransform>
@@ -87,8 +172,8 @@
 					<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FFEBE7C9"/>
 				</TextBlock.Effect></TextBlock>
 		</Canvas>
-		<TheS_SperfGames_MayaTukky_Controls:VoodooSealUI x:Name="voodooSeal" d:LayoutOverrides="Width, Height" Canvas.Left="22" Canvas.Top="218"/>
-		<Canvas x:Name="Score2" Width="211.776" Height="74.266" RenderTransformOrigin="0.5,0.5" Canvas.Left="124" Canvas.Top="219">
+		<TheS_SperfGames_MayaTukky_Controls:VoodooSealUI x:Name="voodooSeal" d:LayoutOverrides="Width, Height" Canvas.Left="22" Canvas.Top="218" Visibility="Collapsed"/>
+		<Canvas x:Name="Score2" Width="211.776" Height="74.266" RenderTransformOrigin="0.5,0.5" Canvas.Left="124" Canvas.Top="219" Visibility="Collapsed">
 			<Canvas.RenderTransform>
 				<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
 			</Canvas.RenderTransform>
@@ -119,7 +204,7 @@
 					<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FF931938"/>
 				</TextBlock.Effect></TextBlock>
 		</Canvas>
-		<Canvas x:Name="TotalScoreSeal" Height="85" Width="122" Canvas.Left="19" Canvas.Top="325">
+		<Canvas x:Name="TotalScoreSeal" Height="85" Width="122" Canvas.Left="19" Canvas.Top="325" Visibility="Collapsed">
 
                     <!-- Layer 1/<Group>/<Path> -->
 			<Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 10.881,359.220 C 10.881,359.220 7.679,360.263 7.857,343.533 C 8.035,326.802 12.386,326.297 15.815,325.571 C 19.243,324.844 91.229,319.106 101.671,330.426 C 110.155,340.500 112.604,360.816 105.250,363.489 C 99.481,365.586 27.428,366.121 10.881,359.220 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
@@ -187,7 +272,7 @@
 			</Canvas>
 
 		</Canvas>
-		<Canvas x:Name="AllScore" Width="164.727" Height="87.555" RenderTransformOrigin="0.5,0.5" Canvas.Left="149" Canvas.Top="313">
+		<Canvas x:Name="AllScore" Width="164.727" Height="87.555" RenderTransformOrigin="0.5,0.5" Canvas.Left="149" Canvas.Top="313" Visibility="Collapsed">
 			<Canvas.RenderTransform>
 				<CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
 			</Canvas.RenderTransform>

@@ -76,7 +76,7 @@
         </Storyboard>
     </UserControl.Resources>
     
-    <Canvas x:Name="LayoutRoot" Width="625" Height="488">
+    <Canvas x:Name="LayoutRoot" Width="625" Height="488" Visibility="Collapsed">
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="Position">
     			<VisualState x:Name="threeCup">
@@ -166,6 +166,5 @@
     			<BlurEffect Radius="3"/>
     		</Rectangle.Effect>
     	</Rectangle>
-    	<Button x:Name="btn" Content="Button" Height="24" Canvas.Left="487" Canvas.Top="258" Width="56"/>
     </Canvas>
 </UserControl>

@@ -8,10 +8,27 @@
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
            Title="TotalScoreFirstPage Page" Width="625" Height="488">
+	<navigation:Page.Resources>
+		<Storyboard x:Name="SB_SumScore">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock">
+				<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="0"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="81"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="162"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="243"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="324"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="405"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="486"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="564"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.8" Value="648"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="728"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2" Value="806"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+	</navigation:Page.Resources>
     <Canvas x:Name="LayoutRoot" Height="488" Width="625" >
 		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
 		<TheS_SperfGames_MayaTukky_Controls:TukkyPresentUI/>
-		<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5" Canvas.Left="172" Canvas.Top="142">
+		<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5" Canvas.Left="172" Canvas.Top="142" x:Name="poisonSeal">
 			<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI.RenderTransform>
 				<CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
 			</TheS_SperfGames_MayaTukky_Controls:PoisonSealUI.RenderTransform>

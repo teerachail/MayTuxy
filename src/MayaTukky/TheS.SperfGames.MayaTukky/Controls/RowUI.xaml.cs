@@ -216,9 +216,10 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 Canvas first = _cupCanvases[sequence.First];
                 Canvas second = _cupCanvases[sequence.Second];
 
-                // ตรวจสอบวิธีการสลับ
-                if (sequence.First < sequence.Second) setStoryBoardFront(first, second);
-                else setStoryBoardBack(first, second);
+                // TODO: ตรวจสอบวิธีการสลับ
+                //if (sequence.First < sequence.Second) setStoryBoardFront(first, second);
+                //else setStoryBoardBack(first, second);
+                setStoryBoardFront(first, second);
             }
             else
             {
