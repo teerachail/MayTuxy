@@ -193,8 +193,8 @@ namespace TheS.SperfGames.MayaTukky.Views
                 {
                     // จัดการการแสดงผลคะแนนและเวลา
                     _timeLeftSecond += result.TimeAdvantage;
-                    GlobalScore.Second += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.Second);
+                    GlobalScore.Third += (int)result.Score;
+                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.Third);
                     scoreBoard.Sb_ScoreUp.Begin();
 
                     // แสดงผลอนิเมชันตอบถูกของ item
