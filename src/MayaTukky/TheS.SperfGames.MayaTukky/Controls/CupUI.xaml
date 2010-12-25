@@ -346,9 +346,9 @@
     		<VisualStateGroup x:Name="VisualStateGroup">
     			<VisualState x:Name="none"/>
     			<VisualState x:Name="over">
-    				<Storyboard>
+    				<!--<Storyboard>
     					<DoubleAnimation Duration="0" To="0.1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="cv_Cup" d:IsOptimized="True"/>
-    				</Storyboard>			
+    				</Storyboard>-->			
 				</VisualState>
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
