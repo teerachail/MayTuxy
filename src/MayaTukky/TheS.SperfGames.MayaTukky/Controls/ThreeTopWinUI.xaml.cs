@@ -25,6 +25,24 @@ namespace TheS.SperfGames.MayaTukky.Controls
             WinB2_Story2.Completed += new EventHandler(WinB2_Story2_Completed);
             WinB1_Story1.Completed += new EventHandler(WinB1_Story1_Completed);
             WinB1_Story2.Completed += new EventHandler(WinB1_Story2_Completed);
+            WinB1_Story3.Completed += new EventHandler(WinB1_Story3_Completed);
+            WinB2_Story3.Completed += new EventHandler(WinB2_Story3_Completed);
+            WinB3_Story3.Completed += new EventHandler(WinB3_Story3_Completed);
+        }
+
+        private void WinB3_Story3_Completed(object sender, EventArgs e)
+        {
+            completeAnime();
+        }
+
+        private void WinB2_Story3_Completed(object sender, EventArgs e)
+        {
+            completeAnime();
+        }
+
+        private void WinB1_Story3_Completed(object sender, EventArgs e)
+        {
+            completeAnime();
         }
 
         private void ThreeTopWin_Loaded(object sender, RoutedEventArgs e)
@@ -36,7 +54,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         }
         private void WinB3_Story2_Completed(object sender, EventArgs e)
         {
-            completeAnime();
+            WinB3_Story3.Begin();
         }
 
         private void WinB3_Story1_Completed(object sender, EventArgs e)
@@ -46,7 +64,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         private void WinB2_Story2_Completed(object sender, EventArgs e)
         {
-            completeAnime();
+            WinB2_Story3.Begin();
         }
 
         private void WinB2_Story1_Completed(object sender, EventArgs e)
@@ -56,7 +74,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         private void WinB1_Story2_Completed(object sender, EventArgs e)
         {
-            completeAnime();
+            WinB1_Story3.Begin();
         }
 
         private void WinB1_Story1_Completed(object sender, EventArgs e)
@@ -117,6 +135,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 WinB2_Story2.SpeedRatio = value;
                 WinB1_Story1.SpeedRatio = value;
                 WinB1_Story2.SpeedRatio = value;
+                WinB1_Story3.SpeedRatio = value;
+                WinB2_Story3.SpeedRatio = value;
+                WinB3_Story3.SpeedRatio = value;
             }
         }
 
@@ -135,6 +156,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
             WinB2_Story2.Stop();
             WinB1_Story1.Stop();
             WinB1_Story2.Stop();
+            WinB1_Story3.Stop();
+            WinB2_Story3.Stop();
+            WinB3_Story3.Stop();
         }
 
         #endregion

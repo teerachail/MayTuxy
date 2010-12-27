@@ -72,7 +72,7 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-56.671"/>
             </DoubleAnimationUsingKeyFrames>
@@ -81,14 +81,10 @@
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Fa" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-8.991"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-8.991"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="-8.991"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1170000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Fa" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1.998"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1.998"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="1.998"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1170000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="H" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="12"/>
@@ -97,14 +93,10 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="12"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="12"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="12"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="12"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1170000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Fa" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="12"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="12"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="12"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1170000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="H" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="3.33"/>
@@ -113,8 +105,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1.342"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="4.1648430824279785"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="3.33"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="3.33"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1170000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="H" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-0.333"/>
@@ -123,8 +113,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-0.333"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-0.33300000429153442"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-0.333"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="-0.333"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1170000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad1" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00">
@@ -157,11 +145,6 @@
                         <Visibility>Visible</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:01">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Normal" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00">
@@ -174,43 +157,31 @@
                         <Visibility>Collapsed</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:01">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0.9"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0.9"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-56.671"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-57.344"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-53.114"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-55.583"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-57.167"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-56.671"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-56.671"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="-12.985"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.9830000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.4000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-56.7"/>
             </DoubleAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
                 <SplinePointKeyFrame KeyTime="00:00:00" Value="94.1750030517578,88.9789962768555"/>
@@ -758,32 +729,14 @@
                 <SplinePointKeyFrame KeyTime="00:00:00.3500000" Value="0.5,0.5"/>
                 <SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="0.5,0.5"/>
             </PointAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8500000" Value="1"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1.05"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8500000" Value="1"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1.05"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8500000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-0.424"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8500000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-0.321"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.9830000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.4000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
@@ -957,7 +910,7 @@
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1500000" Value="-18.294"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-26.965"/>
@@ -973,16 +926,6 @@
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000">
                     <DiscreteObjectKeyFrame.Value>
                         <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:00.9500000">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:01">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -1017,26 +960,14 @@
                         <Visibility>Visible</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:00.9500000">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:01">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-26.965"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-35.226"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-25.631"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-35.226"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-26.965"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-26.965"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.8670000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.3170000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-27"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path16" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
@@ -1508,13 +1439,13 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.025"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Body1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
@@ -1624,11 +1555,11 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-4.669"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-4.669"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-59.363"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
@@ -1677,11 +1608,6 @@
                         <Visibility>Visible</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:01.1500000">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Normal2" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00">
@@ -1699,11 +1625,6 @@
                         <Visibility>Collapsed</Visibility>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="00:00:01.1500000">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-5"/>
@@ -1712,9 +1633,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-6"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-5"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-5"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-17"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-10.672"/>
@@ -1723,9 +1641,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-7.745"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-7.745"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-10.672"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-10.672"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-5.0024943351745605"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-4.669"/>
@@ -1734,29 +1649,22 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-5.662"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-5.662"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-4.669"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-4.669"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-2.1885912418365479"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-59.363"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-71.457"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-59.363"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-66.165"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-59.363"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-59.363"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2500000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-59.5"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2500000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bddy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-17"/>
@@ -1764,8 +1672,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-17"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3500000" Value="-17"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-17"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-17"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bddy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.5"/>
@@ -1773,8 +1679,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0.5"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3500000" Value="0.5"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.5"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="0.5"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="0.5"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bddy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-2"/>
@@ -1782,8 +1686,6 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="-2"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.3500000" Value="-3.333"/>
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-2"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:00.7500000" Value="-2"/>
-                <SplineDoubleKeyFrame KeyTime="00:00:01.2000000" Value="-2"/>
             </DoubleAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
                 <SplinePointKeyFrame KeyTime="00:00:00" Value="0.5,0.5"/>
@@ -2273,6 +2175,1178 @@
                 <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="Sad_B1_Story3">
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Fa" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-8.991"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="-8.991"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Fa" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="1.998"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1.998"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="H" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="12"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="12"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Fa" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="12"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="12"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="H" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="3.33"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="3.33"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="H" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-0.333"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.333"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad1" Storyboard.TargetProperty="(UIElement.Visibility)">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Normal" Storyboard.TargetProperty="(UIElement.Visibility)">
+        		<DiscreteObjectKeyFrame KeyTime="00:00:00">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="00:00:01">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-56.671"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-56.671"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="-12.985"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="94.1750030517578,88.9789962768555"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="95.754997253418,87.1669998168945"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="95.754997253418,87.1669998168945"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="96.9449996948242,85.0930023193359"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="99.1869964599609,84.1490020751953"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="99.1869964599609,84.1490020751953"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="110.578002929688,76.6729965209961"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="118.789001464844,77.2969970703125"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="118.789001464844,77.2969970703125"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="120.994003295898,81.5650024414063"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="117.502998352051,79.2480010986328"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="117.502998352051,79.2480010986328"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="106.803001403809,77.3359985351563"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="98.1399993896484,87.6399993896484"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="98.1399993896484,87.6399993896484"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="122.754997253418,78.8089981079102"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="0" Value="93.1809997558594,83.6709976196289"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="93.1809997558594,83.6709976196289"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="92.3339996337891,89.4879989624023"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path11" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="93.1809997558594,83.6709976196289"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="0" Value="91.7060012817383,79.5189971923828"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="91.7060012817383,79.5189971923828"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="92.0309982299805,76.911003112793"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="100.529998779297,73.6689987182617"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="102.055000305176,73.0879974365234"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="103.944999694824,73.9440002441406"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="105.625999450684,73.3379974365234"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="107.399002075195,72.6989974975586"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="108.974998474121,70.75"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="110.845001220703,70.1289978027344"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="115.862998962402,68.463996887207"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="117.061996459961,69.6269989013672"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="120.247001647949,70.4390029907227"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="120.247001647949,70.4390029907227"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="91.2330017089844,90.1460037231445"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="91.7060012817383,79.5189971923828"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="0" Value="92.4079971313477,79.9120025634766"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="92.4079971313477,79.9120025634766"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="94.2259979248047,77.6470031738281"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="99.0309982299805,75.1849975585938"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="100.666000366211,74.3479995727539"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="101.125999450684,75.9369964599609"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="105.731002807617,74.2089996337891"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="109.791999816895,72.6869964599609"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="111.379997253418,70.6750030517578"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="113.052001953125,70.3399963378906"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="116.119003295898,69.7259979248047"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="116.996002197266,70.3659973144531"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="120.004997253418,71.1330032348633"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="120.004997253418,71.1330032348633"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="91.995002746582,89.2160034179688"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="92.4079971313477,79.9120025634766"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="127.305000305176,77.1309967041016"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="127.152000427246,81.4929962158203"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="127.152000427246,81.4929962158203"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="121.427001953125,85.0479965209961"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="117.891998291016,85.5559997558594"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="117.891998291016,85.5559997558594"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="109.01000213623,84.3359985351563"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="103.125,90.7149963378906"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="103.125,90.7149963378906"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="95.8410034179688,96.1520004272461"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="93.9240036010742,93.7580032348633"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path12" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="93.9240036010742,93.7580032348633"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="121.509002685547,82.5759963989258"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="118.414001464844,83.0210037231445"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="118.414001464844,83.0210037231445"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="107.682998657227,80.8880004882813"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="103.387001037598,88.088996887207"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path13" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="103.387001037598,88.088996887207"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path14" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path14" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path14" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path15" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path15" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path15" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path14" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path15" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.05"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1.05"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="-0.424"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="-0.321"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Body" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Body" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="T" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="T" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas4" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0.462999999523163,0.699999988079071"/>
+        	</PointAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Sad_B2_Story3">
+        	<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Normal1" Storyboard.TargetProperty="(UIElement.Visibility)">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad" Storyboard.TargetProperty="(UIElement.Visibility)">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-26.965"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-26.965"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path16" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.665"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.665"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path16" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-1.167"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-1.167"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path17" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.668"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.668"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path17" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.499"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.499"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path18" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.167"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.167"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path18" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-0.668"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.2500000" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-0.668"/>
+        		<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="221.850997924805,58.6720008850098"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="221.684005737305,56.5029983520508"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="221.850997924805,58.6720008850098"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="221.684005737305,56.5029983520508"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="221.850997924805,58.6720008850098"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="221.850997924805,58.6720008850098"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="221.684005737305,56.5029983520508"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="221.850997924805,58.6720008850098"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="221.684005737305,56.5029983520508"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="221.850997924805,58.6720008850098"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="262.088012695313,56.9329986572266"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="261.921020507813,54.7639961242676"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="262.088012695313,56.9329986572266"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="261.921020507813,54.7639961242676"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="262.088012695313,56.9329986572266"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="258.351989746094,57.007999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="258.184997558594,54.838996887207"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="258.351989746094,57.007999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="258.184997558594,54.838996887207"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="258.351989746094,57.007999420166"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="258.351989746094,57.007999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="258.184997558594,54.838996887207"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="258.351989746094,57.007999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="258.184997558594,54.838996887207"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="258.351989746094,57.007999420166"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="245.735992431641,58.8959999084473"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="245.569000244141,56.7269973754883"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="245.735992431641,58.8959999084473"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="245.569000244141,56.7269973754883"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="245.735992431641,58.8959999084473"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="238.783996582031,59.1209983825684"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="238.617004394531,56.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="238.783996582031,59.1209983825684"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="238.617004394531,56.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="238.783996582031,59.1209983825684"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="238.783996582031,59.1209983825684"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="238.617004394531,56.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="238.783996582031,59.1209983825684"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="238.617004394531,56.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="238.783996582031,59.1209983825684"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="221.945007324219,50.7290000915527"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="221.778015136719,48.5599975585938"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="221.945007324219,50.7290000915527"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="221.778015136719,48.5599975585938"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="221.945007324219,50.7290000915527"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="221.850997924805,58.6720008850098"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="221.684005737305,56.5029983520508"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="221.850997924805,58.6720008850098"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="221.684005737305,56.5029983520508"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="221.850997924805,58.6720008850098"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="221.720001220703,70.838996887207"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="221.893005371094,72.5979919433594"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="221.720001220703,70.838996887207"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="221.893005371094,72.5979919433594"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="221.720001220703,70.838996887207"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="229.944000244141,69.193000793457"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="230.117004394531,70.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="229.944000244141,69.193000793457"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="230.117004394531,70.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="229.944000244141,69.193000793457"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="229.944000244141,69.193000793457"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="230.117004394531,70.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="229.944000244141,69.193000793457"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="230.117004394531,70.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="229.944000244141,69.193000793457"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="240.559005737305,60.2980003356934"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="240.732009887695,62.0569953918457"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="240.559005737305,60.2980003356934"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="240.732009887695,62.0569953918457"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="240.559005737305,60.2980003356934"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="248.035003662109,69.4179992675781"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="248.2080078125,71.1769943237305"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="248.035003662109,69.4179992675781"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="248.2080078125,71.1769943237305"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="248.035003662109,69.4179992675781"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path19" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="248.035003662109,69.4179992675781"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="248.2080078125,71.1769943237305"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="248.035003662109,69.4179992675781"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="248.2080078125,71.1769943237305"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="248.035003662109,69.4179992675781"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="222.697006225586,58.382999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="223.060012817383,56.3479957580566"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="222.697006225586,58.382999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="223.060012817383,56.3479957580566"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="222.697006225586,58.382999420166"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="222.697006225586,58.382999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="223.060012817383,56.3479957580566"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="222.697006225586,58.382999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="223.060012817383,56.3479957580566"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="222.697006225586,58.382999420166"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="261.540985107422,58.265998840332"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="261.903991699219,56.2309951782227"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="261.540985107422,58.265998840332"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="261.903991699219,56.2309951782227"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="261.540985107422,58.265998840332"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="256.929992675781,58.2789993286133"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="257.292999267578,56.2439956665039"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="256.929992675781,58.2789993286133"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="257.292999267578,56.2439956665039"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="256.929992675781,58.2789993286133"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="256.929992675781,58.2789993286133"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="257.292999267578,56.2439956665039"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="256.929992675781,58.2789993286133"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="257.292999267578,56.2439956665039"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="256.929992675781,58.2789993286133"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="247.024993896484,60.5589981079102"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="247.388000488281,58.5239944458008"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="247.024993896484,60.5589981079102"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="247.388000488281,58.5239944458008"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="247.024993896484,60.5589981079102"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="238.503997802734,59.7369995117188"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="238.867004394531,57.7019958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="238.503997802734,59.7369995117188"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="238.867004394531,57.7019958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="238.503997802734,59.7369995117188"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="238.503997802734,59.7369995117188"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="238.867004394531,57.7019958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="238.503997802734,59.7369995117188"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="238.867004394531,57.7019958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="238.503997802734,59.7369995117188"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="223.440002441406,53.7929992675781"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="223.803009033203,51.7579956054688"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="223.440002441406,53.7929992675781"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="223.803009033203,51.7579956054688"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="223.440002441406,53.7929992675781"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="222.697006225586,58.382999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="223.060012817383,56.3479957580566"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="222.697006225586,58.382999420166"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="223.060012817383,56.3479957580566"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="222.697006225586,58.382999420166"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="225.195999145508,70.2119979858398"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="225.496002197266,72.1139907836914"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="225.195999145508,70.2119979858398"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="225.496002197266,72.1139907836914"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="225.195999145508,70.2119979858398"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="230.317001342773,67.1750030517578"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="230.617004394531,69.0769958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="230.317001342773,67.1750030517578"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="230.617004394531,69.0769958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="230.317001342773,67.1750030517578"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="230.317001342773,67.1750030517578"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="230.617004394531,69.0769958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="230.317001342773,67.1750030517578"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="230.617004394531,69.0769958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="230.317001342773,67.1750030517578"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="243.475006103516,61.1199989318848"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="243.775009155273,63.0219917297363"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="243.475006103516,61.1199989318848"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="243.775009155273,63.0219917297363"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="243.475006103516,61.1199989318848"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="248.708999633789,67.3249969482422"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="249.009002685547,69.2269897460938"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="248.708999633789,67.3249969482422"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="249.009002685547,69.2269897460938"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="248.708999633789,67.3249969482422"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="248.708999633789,67.3249969482422"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="249.009002685547,69.2269897460938"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="248.708999633789,67.3249969482422"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="249.009002685547,69.2269897460938"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="248.708999633789,67.3249969482422"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path20" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="252.744003295898,70.3899993896484"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="252.992004394531,73.0769958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="252.744003295898,70.3899993896484"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="252.992004394531,73.0769958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="252.744003295898,70.3899993896484"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="223.813995361328,57.4379997253418"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="224.177001953125,55.9429969787598"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="223.813995361328,57.4379997253418"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="224.177001953125,55.9429969787598"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="223.813995361328,57.4379997253418"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="223.813995361328,57.4379997253418"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="224.177001953125,55.9429969787598"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="223.813995361328,57.4379997253418"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="224.177001953125,55.9429969787598"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="223.813995361328,57.4379997253418"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="222.759994506836,64.806999206543"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="224.047668457031,61.2528610229492"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="222.759994506836,64.806999206543"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="224.047668457031,61.2528610229492"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="222.759994506836,64.806999206543"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="226.177001953125,63.5069999694824"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="227.46467590332,59.9528617858887"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="226.177001953125,63.5069999694824"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="227.46467590332,59.9528617858887"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="226.177001953125,63.5069999694824"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="226.177001953125,63.5069999694824"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="227.46467590332,59.9528617858887"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="226.177001953125,63.5069999694824"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="227.46467590332,59.9528617858887"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="226.177001953125,63.5069999694824"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="227.451995849609,63.048999786377"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="228.68620300293,60.0268745422363"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="227.451995849609,63.048999786377"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="228.68620300293,60.0268745422363"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="227.451995849609,63.048999786377"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="230.005996704102,62.2280006408691"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="231.240203857422,59.2058753967285"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="230.005996704102,62.2280006408691"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="231.240203857422,59.2058753967285"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="230.005996704102,62.2280006408691"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="230.005996704102,62.2280006408691"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="231.240203857422,59.2058753967285"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="230.005996704102,62.2280006408691"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="231.240203857422,59.2058753967285"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="230.005996704102,62.2280006408691"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="243.716995239258,59.3450012207031"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="244.026916503906,56.1657752990723"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="243.716995239258,59.3450012207031"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="244.026916503906,56.1657752990723"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="243.716995239258,59.3450012207031"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="252.003997802734,64.1969985961914"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="252.313919067383,61.0177726745605"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="252.003997802734,64.1969985961914"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="252.313919067383,61.0177726745605"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="252.003997802734,64.1969985961914"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="252.003997802734,64.1969985961914"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="252.313919067383,61.0177726745605"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="252.003997802734,64.1969985961914"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="252.313919067383,61.0177726745605"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="252.003997802734,64.1969985961914"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="256.186004638672,65.1790008544922"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="255.430999755859,63.1419982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="256.186004638672,65.1790008544922"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="255.430999755859,63.1419982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="256.186004638672,65.1790008544922"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="257.64599609375,59.3860015869141"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="258.009002685547,57.890998840332"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="257.64599609375,59.3860015869141"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="258.009002685547,57.890998840332"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="257.64599609375,59.3860015869141"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="257.64599609375,59.3860015869141"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="258.009002685547,57.890998840332"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="257.64599609375,59.3860015869141"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="258.009002685547,57.890998840332"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="257.64599609375,59.3860015869141"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="222.615997314453,59.4550018310547"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="222.97900390625,57.9599990844727"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="222.615997314453,59.4550018310547"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="222.97900390625,57.9599990844727"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="222.615997314453,59.4550018310547"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="223.813995361328,57.4379997253418"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="224.177001953125,55.9429969787598"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="223.813995361328,57.4379997253418"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="224.177001953125,55.9429969787598"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="223.813995361328,57.4379997253418"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="251.539001464844,71.0800018310547"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="252.326995849609,72.0169982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="251.539001464844,71.0800018310547"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="252.326995849609,72.0169982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="251.539001464844,71.0800018310547"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="252.054992675781,65.4130020141602"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="251.832000732422,67.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="252.054992675781,65.4130020141602"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="251.832000732422,67.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="252.054992675781,65.4130020141602"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="252.054992675781,65.4130020141602"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="251.832000732422,67.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="252.054992675781,65.4130020141602"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="251.832000732422,67.9519958496094"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="252.054992675781,65.4130020141602"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="242.593994140625,58.2309989929199"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="244.884994506836,61.1539916992188"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="242.593994140625,58.2309989929199"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="244.884994506836,61.1539916992188"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="242.593994140625,58.2309989929199"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="226.15299987793,64.8440017700195"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="228.444000244141,67.7669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="226.15299987793,64.8440017700195"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="228.444000244141,67.7669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="226.15299987793,64.8440017700195"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="226.15299987793,64.8440017700195"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="228.444000244141,67.7669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="226.15299987793,64.8440017700195"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="228.444000244141,67.7669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="226.15299987793,64.8440017700195"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="225.158996582031,70.8949966430664"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="225.447998046875,72.7669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="225.158996582031,70.8949966430664"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="225.447998046875,72.7669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="225.158996582031,70.8949966430664"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path21" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="00:00:00" Value="257.790985107422,61.5309982299805"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.1000000" Value="257.434997558594,61.2669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.2500000" Value="257.790985107422,61.5309982299805"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.4000000" Value="257.434997558594,61.2669982910156"/>
+        		<SplinePointKeyFrame KeyTime="00:00:00.5000000" Value="257.790985107422,61.5309982299805"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path22" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path23" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Body1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas5" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head2" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas13" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Sad_B3_Story3">
+        	<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad2" Storyboard.TargetProperty="(UIElement.Visibility)">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Normal2" Storyboard.TargetProperty="(UIElement.Visibility)">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-5"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-5"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="-17"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-10.672"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-10.672"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="-5.0024943351745605"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-4.669"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-4.669"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.6" Value="-2.1885912418365479"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-59.363"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-59.363"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="B3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bddy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-17"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-17"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bddy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0.5"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="0.5"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bddy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+        		<SplineDoubleKeyFrame KeyTime="0:0:0.7" Value="-2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head1" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas7" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas9" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas10" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas11" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas11" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas11" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas12" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+        		<SplinePointKeyFrame KeyTime="0" Value="0,0"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas12" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path24" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path24" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="375.346984863281,87.5749969482422"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="368.031005859375,83.8160018920898"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="360.713989257813,80.0599975585938"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="355.837005615234,71.4940032958984"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="370.779998779297,78.3550033569336"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="385.730987548828,85.2229995727539"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="363.997985839844,78.8219985961914"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="364.776000976563,79.2099990844727"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="365.552001953125,79.5930023193359"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="367.135009765625,83.7109985351563"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="371.529998779297,82.4160003662109"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="373.373992919922,81.9130020141602"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="372.125,81.3949966430664"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="370.869995117188,80.8769989013672"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="369.39599609375,81.7630004882813"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="368.247009277344,81.0419998168945"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="367.102996826172,80.3239974975586"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="367.264007568359,79.0149993896484"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="365.214996337891,78.0830001831055"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="363.161010742188,77.1510009765625"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path27" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path28" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path27" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path28" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Eye2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="350.442993164063,79.0940017700195"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="350.442993164063,79.0940017700195"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="350.442993164063,79.0940017700195"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="0" Value="383.64599609375,94.5989990234375"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="383.64599609375,94.5989990234375"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(LineSegment.Point)">
+        		<SplinePointKeyFrame KeyTime="0" Value="383.64599609375,94.5989990234375"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)">
+        		<SplinePointKeyFrame KeyTime="0" Value="346.778015136719,79.7760009765625"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="346.778015136719,79.7760009765625"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="385.269989013672,97.2249984741211"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="384.841003417969,98.0869979858398"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)">
+        		<SplinePointKeyFrame KeyTime="0" Value="384.412994384766,98.9499969482422"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)">
+        		<SplinePointKeyFrame KeyTime="0" Value="344.699005126953,81.9700012207031"/>
+        	</PointAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path25" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)">
+        		<SplinePointKeyFrame KeyTime="0" Value="346.778015136719,79.7760009765625"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="path26" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="F_Bad2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+        		<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </UserControl.Resources>
     <!-- Generated by Adobe Illustrator CS -> XAML Export Plug-In Version 0.19 PC   -->
     <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
@@ -2284,12 +3358,7 @@
         <Canvas Height="124" x:Name="B1" Width="80" RenderTransformOrigin="0.5,0.5" Canvas.Left="70.25" Canvas.Top="-48.25">
 
             <Canvas.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
+            	<CompositeTransform ScaleY="1"/>
             </Canvas.RenderTransform>
 
             <Canvas Height="32.25" Width="36" Canvas.Left="41.375" Canvas.Top="74.625" x:Name="T" RenderTransformOrigin="0.5,0.5">
@@ -2450,7 +3519,7 @@
                         </TransformGroup>
                     </Canvas.RenderTransform>
 
-                    <Canvas Height="67.438" Width="57.999" x:Name="F_Normal" RenderTransformOrigin="0.5,0.5" Canvas.Left="12" Canvas.Top="24.974" d:IsLocked="True">
+                    <Canvas Height="67.438" Width="57.999" x:Name="F_Normal" RenderTransformOrigin="0.5,0.5" Canvas.Left="12" Canvas.Top="24.974">
                         <Canvas.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -2889,15 +3958,10 @@
 
         </Canvas>
 
-        <Canvas Height="113.916" x:Name="B2" Width="61.917" RenderTransformOrigin="0.5,0.5" Canvas.Left="209.083" Canvas.Top="-67.916">
+        <Canvas Height="113.916" x:Name="B2" Width="61.917" RenderTransformOrigin="0.5,0.5" Canvas.Left="209.083" Canvas.Top="-67.916" d:IsLocked="True">
 
             <Canvas.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
+            	<CompositeTransform ScaleX="1"/>
             </Canvas.RenderTransform>
             <Canvas Height="112.957" Width="62.243" x:Name="Body1" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
@@ -3305,14 +4369,9 @@
 
         <Canvas Height="120" x:Name="B3" Width="80" Canvas.Left="335.249" Canvas.Top="-38.832" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
             <Canvas.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
+            	<CompositeTransform/>
             </Canvas.RenderTransform>
-            <Canvas Height="36.336" Width="70.248" Canvas.Left="0.75" Canvas.Top="79.664" x:Name="Bddy" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
+            <Canvas Height="36.336" Width="70.248" Canvas.Left="0.75" Canvas.Top="79.664" x:Name="Bddy" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -3478,7 +4537,7 @@
 
                 </Canvas>
 
-                <Canvas Height="104.494" Width="72" x:Name="F_Normal2" Canvas.Left="2.171" Canvas.Top="0.247" d:IsHidden="True" d:IsLocked="True">
+                <Canvas Height="104.494" Width="72" x:Name="F_Normal2" Canvas.Left="2.171" Canvas.Top="0.247">
 
                     <!-- B3/<Group>/<Path> -->
                     <Path Fill="#ffd5b4a1" Data="F1 M 38.589,34.566 C 38.589,34.566 36.850,40.793 31.430,42.835 C 31.430,42.835 38.766,42.549 38.589,34.566 Z"/>
@@ -3615,7 +4674,7 @@
 
                     </Canvas>
 
-                    <Canvas Height="3.338" Width="0.504" Canvas.Left="-334.081" Canvas.Top="-18.755" x:Name="Eye2" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
+                    <Canvas Height="3.338" Width="0.504" Canvas.Left="-334.081" Canvas.Top="-18.755" x:Name="Eye2" RenderTransformOrigin="0.5,0.5">
                         <Canvas.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>

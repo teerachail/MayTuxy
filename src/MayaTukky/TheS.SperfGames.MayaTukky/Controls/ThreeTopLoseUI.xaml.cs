@@ -25,6 +25,24 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sad_B1_Story2.Completed += new EventHandler(Sad_B1_Story2_Completed);
             Sad_B2_Story2.Completed += new EventHandler(Sad_B2_Story2_Completed);
             Sad_B3_Story2.Completed += new EventHandler(Sad_B3_Story2_Completed);
+            Sad_B1_Story3.Completed += new EventHandler(Sad_B1_Story3_Completed);
+            Sad_B2_Story3.Completed += new EventHandler(Sad_B2_Story3_Completed);
+            Sad_B3_Story3.Completed += new EventHandler(Sad_B3_Story3_Completed);
+        }
+
+        private void Sad_B3_Story3_Completed(object sender, EventArgs e)
+        {
+            completeAnime();
+        }
+
+        private void Sad_B2_Story3_Completed(object sender, EventArgs e)
+        {
+            completeAnime();
+        }
+
+        private void Sad_B1_Story3_Completed(object sender, EventArgs e)
+        {
+            completeAnime();
         }
 
         private void ThreeTopSad_Loaded(object sender, RoutedEventArgs e)
@@ -36,17 +54,17 @@ namespace TheS.SperfGames.MayaTukky.Controls
         }
         private void Sad_B3_Story2_Completed(object sender, EventArgs e)
         {
-            completeAnime();
+            Sad_B3_Story3.Begin();
         }
 
         private void Sad_B2_Story2_Completed(object sender, EventArgs e)
         {
-            completeAnime();
+            Sad_B2_Story3.Begin();
         }
 
         private void Sad_B1_Story2_Completed(object sender, EventArgs e)
         {
-            completeAnime();
+            Sad_B1_Story3.Begin();
         }
 
         private void Sad_B3_Story1_Completed(object sender, EventArgs e)
@@ -117,6 +135,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 Sad_B1_Story2.SpeedRatio = value;
                 Sad_B2_Story2.SpeedRatio = value;
                 Sad_B3_Story2.SpeedRatio = value;
+                Sad_B1_Story3.SpeedRatio = value;
+                Sad_B2_Story3.SpeedRatio = value;
+                Sad_B3_Story3.SpeedRatio = value;
             }
         }
 
@@ -135,6 +156,10 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sad_B1_Story2.Stop();
             Sad_B2_Story2.Stop();
             Sad_B3_Story2.Stop();
+            Sad_B1_Story3.Stop();
+            Sad_B2_Story3.Stop();
+            Sad_B3_Story3.Stop();
+            
         }
 
         #endregion
