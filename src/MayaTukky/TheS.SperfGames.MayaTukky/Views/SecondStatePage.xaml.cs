@@ -37,6 +37,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private RowUI _frontRow;
         private RowUI _backRow;
         private DispatcherTimer _timer;
+        private DispatcherTimer _timerAfterPlayQuestion;
         private GameStageManager _gameManager;
         private TimeOutLayerUI _timeOutLayer;
         private TrueFalseMarkUI _trueFalseMark;
@@ -92,6 +93,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             // สร้างตัวจับเวลา
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
+
+            // timer for after play question
+            _timerAfterPlayQuestion = new DispatcherTimer();
+            _timerAfterPlayQuestion.Interval = TimeSpan.FromSeconds(0.08);
 
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
@@ -149,6 +154,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // เหตุการณ์เมื่อเวลาเดิน
             _timer.Tick += new EventHandler(_timer_Tick);
 
+            // delay for set after cup items
+            _timerAfterPlayQuestion.Tick += new EventHandler(_timerAfterPlayQuestion_Tick);
+
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
             _frontRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
             _backRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
@@ -182,6 +190,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดเหตุการณ์เมื่อเล่นการนับเวลาจบ
             _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
+        }
+
+        void _timerAfterPlayQuestion_Tick(object sender, EventArgs e)
+        {
+            _timerAfterPlayQuestion.Stop();
+            completePlayQuestion();
         }
 
         // แจ้งเหตุการณ์ว่าเกมจบแล้ว
@@ -329,13 +343,16 @@ namespace TheS.SperfGames.MayaTukky.Views
         }
 
         // เมื่อแถวสลับเสร็จสิ้น
-        bool first = true;
         private void Row_SwapCompleted(object sender, EventArgs e)
         {
             // แถวที่สลับเสร็จเป็นแถวหน้า
-
             tukkyHand.StopPlay();
 
+            _timerAfterPlayQuestion.Start();
+        }
+
+        private void completePlayQuestion()
+        {
             // กำหนดข้อมูลให้แถวหลัง
             _backRow.SetAfterCupItem();
             _frontRow.SetAfterCupItem();
