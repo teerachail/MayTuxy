@@ -40,6 +40,11 @@ namespace TheS.SperfGames.MayaTukky
         public List<string> AfterCup { get; set; }
 
         /// <summary>
+        /// ความเร็วในการสลับแก้ว
+        /// </summary>
+        public float SwapSpeed { get; set; }
+
+        /// <summary>
         /// ลำดับในการสลับ
         /// </summary>
         public Queue<SwapSequence> Sequence { get; set; }

@@ -27,16 +27,16 @@ namespace TheS.SperfGames.MayaTukky
         {
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
-                new GameLevelThirdFix(3,3,50,2.0f,1,2,"1"),
-                new GameLevelThirdFix(3,1,75,2.2f,2,2,"1"),
-                new GameLevelThirdFix(3,2,100,2.4f,3,2,"1"),
-                new GameLevelThirdFix(4,1,125,2.6f,4,3,"1"),
-                new GameLevelThirdFix(4,2,150,2.8f,5,3,"2"),
+                new GameLevelThirdFix(3,0,050,1.0f,1,2,"1"),
+                new GameLevelThirdFix(3,1,075,1.0f,2,2,"1"),
+                new GameLevelThirdFix(3,2,100,2.0f,3,2,"1"),
+                new GameLevelThirdFix(4,1,125,1.0f,4,3,"1"),
+                new GameLevelThirdFix(4,2,150,2.0f,5,3,"2"),
                 new GameLevelThirdFix(4,3,175,3.0f,6,3,"2"),
-                new GameLevelThirdFix(5,2,200,3.2f,7,4,"3"),
-                new GameLevelThirdFix(5,3,225,3.4f,8,4,"3"),
-                new GameLevelThirdFix(5,4,250,3.6f,9,4,"4"),
-                new GameLevelThirdFix(5,5,275,3.8f,10,4,"4"),
+                new GameLevelThirdFix(5,2,200,2.0f,7,4,"3"),
+                new GameLevelThirdFix(5,3,225,3.0f,8,4,"3"),
+                new GameLevelThirdFix(5,4,250,4.0f,9,4,"4"),
+                new GameLevelThirdFix(5,5,275,5.0f,10,4,"4"),
             };
             _currentLevel = _gameLevels.First();
 
