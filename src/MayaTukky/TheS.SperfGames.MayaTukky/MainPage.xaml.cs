@@ -10,7 +10,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Navigation;
 
 namespace TheS.SperfGames.MayaTukky
 {
@@ -44,6 +43,7 @@ namespace TheS.SperfGames.MayaTukky
             ContentFrame.Navigate(new Uri(_pages[_gamePageIndex], UriKind.Relative));
 
             // TODO: Game Finish
+            ContentFrame.Navigate(new Uri(_pages[_gamePageIndex], UriKind.Relative));
             if (_gamePageIndex < _pages.Count()) _gamePageIndex++;
             else MessageBox.Show("End Game");
         }
