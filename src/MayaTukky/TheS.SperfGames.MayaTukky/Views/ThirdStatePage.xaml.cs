@@ -328,15 +328,11 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เมื่อแถวสลับเสร็จสิ้น
         private void Row_SwapCompleted(object sender, EventArgs e)
         {
-            // แถวที่สลับเสร็จเป็นแถวหน้า
-            if ((bool)sender)
-            {
-                tukkyHand.StopPlay();
+            tukkyHand.StopPlay();
 
-                // กำหนดข้อมูลให้แถวหลัง
-                _frontRow.SetAfterCupItem();
-                showItemUI.Sb_ShowLayer.Begin();
-            }
+            // กำหนดข้อมูลให้แถวหลัง
+            _frontRow.SetAfterCupItem();
+            showItemUI.Sb_ShowLayer.Begin();
         }
 
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง

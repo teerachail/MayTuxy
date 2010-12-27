@@ -98,10 +98,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         public void ClearItem()
         {
-            if (cv_Item.Children.Count > 0)
-            {
-                cv_Item.Children.Clear();
-            }
+            cv_Item.Children.Clear();
         }
 
         /// <summary>

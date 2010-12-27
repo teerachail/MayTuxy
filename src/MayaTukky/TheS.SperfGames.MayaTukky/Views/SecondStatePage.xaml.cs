@@ -165,7 +165,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เมื่อแก้วสลับเสร็จสิ้น
             _frontRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
-            _backRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
+            //_backRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
 
             // คลิกเพื่อเล่นการแสดงคำถาม
             this.MouseLeftButtonDown += new MouseButtonEventHandler(MainPage_MouseLeftButtonDown);
@@ -330,18 +330,16 @@ namespace TheS.SperfGames.MayaTukky.Views
         }
 
         // เมื่อแถวสลับเสร็จสิ้น
+        bool first = true;
         private void Row_SwapCompleted(object sender, EventArgs e)
         {
             // แถวที่สลับเสร็จเป็นแถวหน้า
-            if ((bool)sender)
-            {
 
-                tukkyHand.StopPlay();
+            tukkyHand.StopPlay();
 
-                // กำหนดข้อมูลให้แถวหลัง
-                _frontRow.SetAfterCupItem();
-                _backRow.SetAfterCupItem();
-            }
+            // กำหนดข้อมูลให้แถวหลัง
+            _backRow.SetAfterCupItem();
+            _frontRow.SetAfterCupItem();
         }
 
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง

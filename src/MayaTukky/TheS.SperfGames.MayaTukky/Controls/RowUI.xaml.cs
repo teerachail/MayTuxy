@@ -233,7 +233,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 var temp = SwapCompleted;
                 if (temp != null)
                 {
-                    temp(_question.IsFronRow, null);
+                    temp(this, EventArgs.Empty);
                 }
             }
         }
