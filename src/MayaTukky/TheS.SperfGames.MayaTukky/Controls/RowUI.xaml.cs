@@ -108,6 +108,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
             _cupLevel = cupLevel;
             _question = question;
 
+            Storyboard1.SpeedRatio = question.SwapSpeed;
+            Storyboard2.SpeedRatio = question.SwapSpeed;
+
             // กำหนด state เริ่มต้นจากจำนวนแก้ว
             const int Easy = 3;
             const int Normal = 4;

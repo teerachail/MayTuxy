@@ -31,6 +31,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private int _incorrectCount;
         private int _correctCount;
         private int _timeLeftSecond;
+        private int _gameCombo;
         private string[] _cupStyles;
         private string _cupStyleName;
         private RowUI _frontRow;
@@ -44,7 +45,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         #region Events
 
-        // TODO: Game state 3 finish event
         public static event EventHandler GameFinish;
 
         #endregion Events
@@ -65,6 +65,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // กำหนดตัวควบคุมเกม และ แถวหน้ากับแถวหลัง
             _gameManager = new GameStageManagerThird();
             _frontRow = new RowUI();
+
+            // กำหนดค่าให้ตัวแจ้งเวลาจบเกม
+            _timeOutLayer = new TheS.SperfGames.MayaTukky.Controls.TimeOutLayerUI();
 
             // กำหนดตำแหน่งของแถวหน้า
             Canvas.SetTop(_frontRow, 35);
@@ -169,12 +172,14 @@ namespace TheS.SperfGames.MayaTukky.Views
             // กำหนดเหตุการณ์เมื่อทักกี้แสดงอารมณ์เสร็จ
             tukkyLose.Tukky_SadStory1.Completed += new EventHandler(Tukky_emotion_Completed);
             tukkyWin.Tukky_happyStory1.Completed += new EventHandler(Tukky_emotion_Completed);
+
+            // กำหนดเหตุการณ์เมื่อเล่นการนับเวลาจบ
+            _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
         }
 
         // แจ้งเหตุการณ์ว่าเกมจบแล้ว
         private void Tukky_emotion_Completed(object sender, EventArgs e)
         {
-            // TODO: event
             var temp = GameFinish;
             if (temp != null)
             {
@@ -195,6 +200,10 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 if (result.IsCorrect == false)
                 {
+                    // จัดการตัวนับการตอบถูกติดต่อกัน
+                    const int ResetGameCombo = 0;
+                    _gameCombo = ResetGameCombo;
+
                     // จัดการตัวนับการตอบผิด
                     _incorrectCount++;
 
@@ -213,10 +222,15 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
+                    // จัดการตัวนับการตอบถูกติดต่อกัน
+                    _gameCombo++;
+                    if (GlobalScore.FirstMaximumCombo < _gameCombo)
+                        GlobalScore.FirstMaximumCombo = _gameCombo;
+
                     // จัดการการแสดงผลคะแนนและเวลา
                     _timeLeftSecond += result.TimeAdvantage;
-                    GlobalScore.Third += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.Third);
+                    GlobalScore.ThirdScore += (int)result.Score;
+                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.ThirdScore);
                     scoreBoard.Sb_ScoreUp.Begin();
 
                     // แสดงผลอนิเมชันตอบถูกของ item
@@ -266,28 +280,13 @@ namespace TheS.SperfGames.MayaTukky.Views
                 _timer.Stop();
 
                 // ปิดการแสดงผลของคำถาม
-                showItemUI.Sb_FadeAway.Begin();
+                showItemUI.Visibility = System.Windows.Visibility.Collapsed;
 
                 // ปิดการแสดงผลของแถวหน้าและแถวหลัง
                 _frontRow.Visibility = System.Windows.Visibility.Collapsed;
 
                 // แสดงผลอนิเมชันหมดเวลา
-                _timeOutLayer = new TheS.SperfGames.MayaTukky.Controls.TimeOutLayerUI();
                 LayoutRoot.Children.Add(_timeOutLayer);
-
-                // จัดการการแสดงผลของทักกี้
-                if (_incorrectCount >= _correctCount)
-                {
-                    // เล่น aniamtion ทักกีี้หัวเราะ
-                    tukkyWin.StartPlay();
-                }
-                else
-                {
-                    // เล่น aniamtion ทักกีี้ร้องไห้
-                    tukkyWin.Visibility = System.Windows.Visibility.Collapsed;
-                    tukkyLose.Visibility = System.Windows.Visibility.Visible;
-                    tukkyLose.StartPlay();
-                }
 
                 _timeOutLayer.Sb_TimeOut.Begin();
             }
@@ -378,6 +377,24 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
 
                 _isAutoAnswerCompleted = true;
+            }
+        }
+
+        // แสดงผลการเล่นอนิเมชันของทักกี้
+        private void Sb_TimeOut_Completed(object sender, EventArgs e)
+        {
+            // จัดการการแสดงผลของทักกี้
+            if (_incorrectCount >= _correctCount)
+            {
+                // เล่น aniamtion ทักกีี้หัวเราะ
+                tukkyWin.StartPlay();
+            }
+            else
+            {
+                // เล่น aniamtion ทักกีี้ร้องไห้
+                tukkyWin.Visibility = System.Windows.Visibility.Collapsed;
+                tukkyLose.Visibility = System.Windows.Visibility.Visible;
+                tukkyLose.StartPlay();
             }
         }
 

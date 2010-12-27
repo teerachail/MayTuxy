@@ -42,18 +42,20 @@ namespace TheS.SperfGames.MayaTukky
         /// </summary>
         /// <param name="cupCount">จำนวนของแก้ว</param>
         /// <param name="swapCount">จำนวนครั้งในการสลับ</param>
+        /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="isFrontRow">ชนิดแถว
         /// true: แถวหน้า
         /// false: แถวหลัง
         /// </param>
         /// <returns></returns>
-        public QuestionRow AddQuestionRow(int cupCount, int swapCount, bool isFrontRow)
+        public QuestionRow AddQuestionRow(int cupCount, int swapCount,float swapSpeed, bool isFrontRow)
         {
             return new QuestionRow
             {
                 CupCount = cupCount,
                 SwapCount = swapCount,
-                IsFronRow = isFrontRow
+                IsFronRow = isFrontRow,
+                SwapSpeed = swapSpeed
             };
         }
 

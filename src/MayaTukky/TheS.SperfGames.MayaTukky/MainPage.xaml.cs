@@ -40,6 +40,8 @@ namespace TheS.SperfGames.MayaTukky
 
         private void NavigationPage(object sender, EventArgs e)
         {
+            ContentFrame.Navigate(new Uri(_pages[_gamePageIndex], UriKind.Relative));
+
             // TODO: Game Finish
             ContentFrame.Navigate(new Uri(_pages[_gamePageIndex], UriKind.Relative));
             if (_gamePageIndex < _pages.Count()) _gamePageIndex++;

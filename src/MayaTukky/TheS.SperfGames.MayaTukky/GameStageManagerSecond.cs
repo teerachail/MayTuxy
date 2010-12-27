@@ -28,15 +28,15 @@ namespace TheS.SperfGames.MayaTukky
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
                new GameLevelSecondFix(3,0,2,3,0,050,1.0f,1,"1"),
-               new GameLevelSecondFix(3,0,2,3,1,75,1.5f,2,"1"),
-               new GameLevelSecondFix(4,0,3,4,0,100,2.0f,3,"1"),
-               new GameLevelSecondFix(4,0,3,4,1,125,2.5f,4,"1"),
-               new GameLevelSecondFix(4,0,3,4,2,150,3.0f,5,"2"),
-               new GameLevelSecondFix(4,0,4,5,0,175,3.5f,6,"2"),
-               new GameLevelSecondFix(4,0,4,5,1,200,4.0f,7,"3"),
-               new GameLevelSecondFix(4,0,4,5,2,225,4.5f,8,"3"),
-               new GameLevelSecondFix(5,0,4,5,1,250,5.0f,9,"4"),
-               new GameLevelSecondFix(5,0,4,5,2,275,5.5f,10,"4"),
+               new GameLevelSecondFix(3,0,2,3,1,075,2.0f,2,"1"),
+               new GameLevelSecondFix(4,0,3,4,0,100,1.0f,3,"1"),
+               new GameLevelSecondFix(4,0,3,4,1,125,2.0f,4,"1"),
+               new GameLevelSecondFix(4,0,3,4,2,150,4.0f,5,"2"),
+               new GameLevelSecondFix(4,0,4,5,0,175,1.0f,6,"2"),
+               new GameLevelSecondFix(4,0,4,5,1,200,2.0f,7,"3"),
+               new GameLevelSecondFix(4,0,4,5,2,225,4.0f,8,"3"),
+               new GameLevelSecondFix(5,0,4,5,1,250,2.0f,9,"4"),
+               new GameLevelSecondFix(5,0,4,5,2,275,4.0f,10,"4"),
             };
             _currentLevel = _gameLevels.First();
 

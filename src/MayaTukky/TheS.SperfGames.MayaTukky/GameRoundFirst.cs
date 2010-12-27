@@ -79,6 +79,7 @@ namespace TheS.SperfGames.MayaTukky
                 // ตอบถูก
                 answer.IsCorrect = true;
                 answer.Score = _currentPoint;
+                answer.IsFinish = true;
             }
 
             return answer;
@@ -93,7 +94,7 @@ namespace TheS.SperfGames.MayaTukky
             {
                 CupLevel = _cupLevel
             };
-            Question.FrontRow = Question.AddQuestionRow(CupCount, SwapCount, true);
+            Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount,_swapSpeed, true);
         }
 
         #endregion Methods
