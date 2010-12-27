@@ -1,0 +1,839 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PerfEx.Infrastructure.Silverlight</name>
+    </assembly>
+    <members>
+        <member name="T:PerfEx.Infrastructure.ServiceObjectProviderBase`1">
+            <summary>
+            Base class for ServiceObjectProvider suggested implementation.<br />
+            This class will dispose the ServiceObject instance automatically, if Dispose().
+            </summary>
+            <typeparam name="T">Type of ServiceObject.</typeparam>
+        </member>
+        <member name="T:PerfEx.Infrastructure.DisposableObject">
+            <summary>
+            Keep track objects that should be disposed and blend it to the IDisposable pattern.<br />
+            This class can use as a base class or an aggregation.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DisposableObject.AddToDisposableList(System.IDisposable)">
+            <summary>
+            Add an object to the disposable list.
+            </summary>
+            <param name="obj">An object to add to a disposable list.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DisposableObject.AddRangeToDisposableList(System.Collections.Generic.IEnumerable{System.IDisposable})">
+            <summary>
+            Add objects to the disposable list.
+            </summary>
+            <param name="collection">A collection of disposable object.</param>
+            <returns>This instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DisposableObject.Dispose(System.Boolean)">
+            <summary>
+            Unsafe disopse operation
+            </summary>
+            <param name="disposing">True if called from Dispose() method, false called from GC.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DisposableObject.DisposeCore(System.Boolean)">
+            <summary>
+            Override this method for safe dispose operation
+            </summary>
+            <param name="disposing">Is called from Dispose() method, false called from GC.</param>
+        </member>
+        <member name="P:PerfEx.Infrastructure.DisposableObject.Disposed">
+            <summary>
+            True if this object has been disposed.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.IServiceObjectProvider`1">
+            <summary>
+            An abstract interface to provides access to the service object.
+            </summary>
+            <typeparam name="T">A service type.</typeparam>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IServiceObjectProvider`1.ServiceProxy">
+            <summary>
+            Gets the service instance.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.ServiceObjectProviderBase`1.CreateServiceObject">
+            <summary>
+            Do actual work of creating a service object when needed.
+            </summary>
+            <returns>A service object.</returns>
+        </member>
+        <member name="P:PerfEx.Infrastructure.ServiceObjectProviderBase`1.ServiceProxy">
+            <summary>
+            Gets the service object.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.CommandExecutorRegistry">
+            <summary>
+            Specialize dependency registry for command executors.<br />
+            This class is just an adapter to the real dependency registry.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.IDependencyRegistry">
+            <summary>
+            An abstract interface to the dependency registry.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.Initialize">
+            <summary>
+            Initializes a dependency registry instance.<br />
+            Usually implementors use this method to register types and objects to the registry.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.Register``2">
+            <summary>
+            Add an entry to the dependency registry.
+            </summary>
+            <typeparam name="MapFrom">A type to map from.</typeparam>
+            <typeparam name="MapTo">A type to map to.</typeparam>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.Register``2(System.String)">
+            <summary>
+            Add an entry to the dependency registry.
+            </summary>
+            <typeparam name="MapFrom">A type to map from.</typeparam>
+            <typeparam name="MapTo">A type to map to.</typeparam>
+            <param name="name">A mapping name.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.RegisterMultiple``2">
+            <summary>
+            Add an entry to the dependency registry.<br />
+            This method allows the more than one registration to the same type.
+            </summary>
+            <typeparam name="MapFrom">A type to map from.</typeparam>
+            <typeparam name="MapTo">A type to map to.</typeparam>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.RegisterInstance``1(``0)">
+            <summary>
+            Add an entry to the dependency registry.
+            </summary>
+            <typeparam name="TType">A type of an instance to be reigsitered.</typeparam>
+            <param name="instance">An instance to add to the dependency registry.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.Register(System.Type,System.Type)">
+            <summary>
+            Add an entry to the dependency registry.
+            </summary>
+            <param name="typeMapFrom">A type to map from.</param>
+            <param name="typeMapTo">A type to map to.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyRegistry.RegisterMultiple(System.Type,System.Type)">
+            <summary>
+            Add an entry to the dependency registry.<br />
+            This method allows the more than one registration to the same type.
+            </summary>
+            <param name="typeMapFrom">A type to map from.</param>
+            <param name="typeMapTo">A type to map to.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandExecutorRegistry.#ctor(PerfEx.Infrastructure.IDependencyRegistry)">
+            <summary>
+            Initializes a new instance of CommandExecutorRegistry with target registry.
+            </summary>
+            <param name="registry">The real target dependency registry.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandExecutorRegistry.RegisterCommandExecutor``2">
+            <summary>
+            Register the executor to the command.
+            </summary>
+            <typeparam name="TCmd">The command to be handled.</typeparam>
+            <typeparam name="TExecutor">The command executor.</typeparam>
+        </member>
+        <member name="T:PerfEx.Infrastructure.LightUpload.FileInitializedEventArgs">
+            <summary>
+            Contains file information which has been added to the upload client.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.LightUpload.FileInitializedEventArgs.File">
+            <summary>
+            File information which added to the upload queue.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.SynchronousCommandExecutorBase`1">
+            <summary>
+            Base class for command executor which works synchronously.
+            </summary>
+            <typeparam name="T">The command type.</typeparam>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.CommandExecutorBase`1">
+            <summary>
+            Base class for all command executor.<br />
+            Provides the default implementation of the command executor.<br />
+            This class is not intended to be derived directly, you should use Asynchronous or Synchronous CommandExecutorBase instead.
+            </summary>
+            <typeparam name="T">The command type.</typeparam>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.ICommandExecutor`1">
+            <summary>
+            The executor used to executes the command.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.ICommandExecutor`1.Execute(`0,System.Action{`0})">
+            <summary>
+            Execute the command.
+            </summary>
+            <param name="command">THe command to be executed.</param>
+            <param name="callback">The callback method notify the framework that the command execution has been done.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandExecutorBase`1.Execute(`0,System.Action{`0})">
+            <summary>
+            Initialize a new instance of the command executor.
+            </summary>
+            <param name="command">The command to be executed.</param>
+            <param name="callback">The callback action to call when command execution has finished.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandExecutorBase`1.RaiseExecuteCompleted">
+            <summary>
+            Notify the system that the command execution has been completed.<br />
+            The command executor will response by calling callback.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandExecutorBase`1.InvokeCallbackCore(System.Action{`0},`0)">
+            <summary>
+            Overridable InvokeCallbackCore() will invoke the callback passed to the command executor.
+            </summary>
+            <param name="callback">Callback action to be invoke.</param>
+            <param name="command">The executed command.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandExecutorBase`1.GetServiceObject``1(`0,PerfEx.Infrastructure.IServiceObjectProvider{``0})">
+            <summary>
+            Get the service object.<br />
+            This method will get the service object from the command context, if exists.<br />
+            Otherwise, it will use the service object provider to get access to the object.
+            </summary>
+            <param name="command">The command which might attach the command context.(optional)</param>
+            <param name="svcProvider">The service provider for accessing the object if the context doesn't exists<br />
+            or no object associated witht the context.</param>
+            <returns>The service object.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.SynchronousCommandExecutorBase`1.ExecuteCore(`0)">
+            <summary>
+            Handle the command execution.
+            </summary>
+            <param name="command">The command to be executed.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.SynchronousCommandExecutorBase`1.ExecuteCommand(`0)">
+            <summary>
+            Inherited class should implement this method to do the actual command execution.
+            </summary>
+            <param name="command">The command object to be executed.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.SynchronousCommandExecutorBase`1.RaiseExecuteCompleted">
+            <summary>
+            Hides the base class method, since synchronous command should not call this method directly.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.IAttachCommandContext">
+            <summary>
+            Specify this object may have the context attached to it.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.IAttachCommandContext.GetCommandContext">
+            <summary>
+            Get the attached command context.
+            </summary>
+            <returns>The command context.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.IAttachCommandContext.ReleaseContext">
+            <summary>
+            Destroy the attached command context.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.ServerJobChecker">
+            <summary>
+            Check whether the server job has done.<br />
+            This worker periodically checks the server using the polling technique.<br />
+            If the server send back the non-null non-empty string back as a response to the client.<br />
+            This worker will assume that the server job has been done.<br />
+            If not, it will check for the completeness later.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.ServerJobChecker.PollingInterval">
+            <summary>
+            The polling interval in milliseconds.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.ServerJobChecker.ServerUri">
+            <summary>
+            Url to the server job polling endpoint.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.NonLoadedAttribute">
+            <summary>
+            Mark that the framework should skip loading the class.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.NonLoadedAttribute.IsEffective">
+            <summary>
+            Is attribute has cause effect on the dynamic loading module.
+            The default is true.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.MachineWebInfo">
+            <summary>
+            A web information for a machine.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.MachineWebInfo.GetMachineWebInfo(System.String)">
+            <summary>
+            Retrieves the MachineWebInfo from the service specified with the url.
+            </summary>
+            <param name="webInfoUrl">The url of the service to get the MachineWebInfo.</param>
+            <returns>A MachineWebInfo information object.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.MachineWebInfo.Parse(System.IO.TextReader)">
+            <summary>
+            Parse a MachineWebInfo object from the TextReader stream.
+            </summary>
+            <param name="reader">The stream containing MachinWebInfo information.</param>
+            <returns>The resulting MachineWebInfo instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.MachineWebInfo.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Writes a MachineWebInfo object to the TextWriter stream.
+            </summary>
+            <param name="sb">The text stream to write information.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.MachineWebInfo.ToString">
+            <summary>
+            Provides the string information represent this MachinWebInfo.
+            </summary>
+            <returns>The string which represents this MachinWebInfo.</returns>
+        </member>
+        <member name="P:PerfEx.Infrastructure.MachineWebInfo.IPAddress">
+            <summary>
+            An ip address.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.MachineWebInfo.MachineName">
+            <summary>
+            A machine name.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.Resources.ErrMsg">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.Resources.ErrMsg.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.Resources.ErrMsg.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.Resources.ErrMsg.Command_NoExecutor">
+            <summary>
+              Looks up a localized string similar to There is no registered executor for the command &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.Resources.ErrMsg.Common_StringCanNotBeEmptyOrNull">
+            <summary>
+              Looks up a localized string similar to String can not be empty or null..
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.Resources.ErrMsg.GetMachineWebInfo_InvalidFormat">
+            <summary>
+              Looks up a localized string similar to The input content contains an invalid format element..
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.Converters.BooleanToVisibilityConverter">
+            <summary>
+            Two way IValueConverter that lets you bind a property on a bindable object
+            that can be an boolean value to a dependency property that should 
+            be set to <see cref="T:System.Windows.Visibility"/> in that case
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.BooleanToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the <paramref name="value"/> to a <see cref="T:System.Windows.Visibility"/>.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <param name="targetType">The target output type (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture to use in the format operation (ignored).</param>
+            <returns>The converted value</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.BooleanToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts <see cref="T:System.Windows.Visibility"/> back to <see cref="!:String.Boolean"/>.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <param name="targetType">The expected type of the result (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture for the conversion (ignored).</param>
+            <returns>If <paramref name="value"/> is <c>Visible</c>, it returns true otherwise false.</returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.AsynchronousCommandExecutorBase`1">
+            <summary>
+            Base class for the command executor which works asynchronously.<br />
+            Implementor should invoke RaiseExecuteCompleted() method when the executor finish its task.
+            </summary>
+            <typeparam name="T">The command type.</typeparam>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.AsynchronousCommandExecutorBase`1.ExecuteCommand(`0)">
+            <summary>
+            Inherited class should implement this method to do the actual command execution.
+            </summary>
+            <param name="command">The command object to be executed.</param>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.ICommandContext">
+            <summary>
+            The context to attach to the command.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.ICommandContext.GetContextItem``1(PerfEx.Infrastructure.IServiceObjectProvider{``0})">
+            <summary>
+            Get the item from the current context if exists, <br />
+            unless create and return a new one.
+            </summary>
+            <typeparam name="T">The type of object we need to obtain.</typeparam>
+            <param name="svcProvider">Service object provider which create the object if not exists.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.Web.LightUpload.LightUploadPostKeys">
+            <summary>
+            Keys (constants) for posting and accessing LightUpload information in the query string.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.LightUpload.UploadProgressEventArgs">
+            <summary>
+            Contains FileInfo and progress information of the file upload in progress.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.LightUpload.UploadProgressEventArgs.File">
+            <summary>
+            FileInfo of the upload file in progress.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.LightUpload.UploadProgressEventArgs.ProgressPercentage">
+            <summary>
+            Gets the percentage of the progress of an operation.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.IAnime">
+            <summary>
+            Animation UserControl
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IAnime.StartPlay">
+            <summary>
+            Play the animation
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IAnime.StopPlay">
+            <summary>
+            Stop the animation
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IAnime.SpeedRatio">
+            <summary>
+            Gets or sets the rate, relative to its parent, at which time progresses for the Anime. The defualt value is 1.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IAnime.BeginTime">
+            <summary>
+            Gets or sets the time at which this Anime should begin. The default value is 0.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IAnime.AnimationName">
+            <summary>
+            The name of a specific animation to play. The default value is null.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IAnime.AutoPlay">
+            <summary>
+            Play the animation automatically when the user control has been loaded.
+            </summary>
+        </member>
+        <member name="E:PerfEx.Infrastructure.IAnime.PlayCompleted">
+            <summary>
+            Occurs when the animation object has completed playing.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.IExceptionAware">
+            <summary>
+            An interface indicates that the implementor has an exception awareness behavior.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IExceptionAware.Exception">
+            <summary>
+            Gets or sets the exception which has occurred.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.IExceptionAware.ExceptionHandled">
+            <summary>
+            Gets or sets whether the exception has been handled, if it has occurred.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.IDependencyContainerAbstractFactory">
+            <summary>
+            An abstract interface to the abstract factory pattern to create the dependency registry and the dependency container.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainerAbstractFactory.CreateRegistry">
+            <summary>
+            Creates a dependency registry.
+            </summary>
+            <returns>A dependency registry instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainerAbstractFactory.CreateContainer(PerfEx.Infrastructure.IDependencyRegistry)">
+            <summary>
+            Creates a dependency container for the specified dependency registry.
+            </summary>
+            <param name="registry">A registered dependency registry.</param>
+            <returns>A dependency container object populates with the information from the registry.</returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.DependencyContainerWrapper">
+            <summary>
+            Act as a proxy to the target dependency container.<br />
+            In some scenarios we need to assign the target dependency container after the registration has been done.<br />
+            This class allows you to register this dependency container to the registry then assign the target dependency container to this instance later.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.IDependencyContainer">
+            <summary>
+            Provides abstract interface to the dependency container.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainer.GetInstance(System.Type)">
+            <summary>
+            Get an instance of the given <paramref name="serviceType"/>.
+            </summary>
+            <param name="serviceType">Type of object requested.</param>
+            <returns>The requested service instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainer.GetInstance(System.Type,System.String)">
+            <summary>
+            Get an instance of the given named <paramref name="serviceType"/>.
+            </summary>
+            <param name="serviceType">Type of object requested.</param>
+            <param name="key">Name the object was registered with.</param>
+            <returns>The requested service instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainer.GetAllInstances(System.Type)">
+            <summary>
+            Get all instances of the given <paramref name="serviceType"/> currently
+            registered in the container.
+            </summary>
+            <param name="serviceType">Type of object requested.</param>
+            <returns>A sequence of instances of the requested <paramref name="serviceType"/>.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainer.GetInstance``1">
+            <summary>
+            Get an instance of the given <typeparamref name="TService"/>.
+            </summary>
+            <typeparam name="TService">Type of object requested.</typeparam>
+            <returns>The requested service instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainer.GetInstance``1(System.String)">
+            <summary>
+            Get an instance of the given named <typeparamref name="TService"/>.
+            </summary>
+            <typeparam name="TService">Type of object requested.</typeparam>
+            <param name="key">Name the object was registered with.</param>
+            <returns>The requested service instance.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.IDependencyContainer.GetAllInstances``1">
+            <summary>
+            Get all instances of the given <typeparamref name="TService"/> currently
+            registered in the container.
+            </summary>
+            <typeparam name="TService">Type of object requested.</typeparam>
+            <returns>A sequence of instances of the requested <typeparamref name="TService"/>.</returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.MefServiceObjectProvider`1">
+            <summary>
+            Provides a capability for creating an object from MEF.
+            </summary>
+            <typeparam name="T">A target type of the service to create.</typeparam>
+        </member>
+        <member name="M:PerfEx.Infrastructure.MefServiceObjectProvider`1.#ctor(System.ComponentModel.Composition.Hosting.CompositionContainer)">
+            <summary>
+            Initializes a new instance of the provider, also instantiate the service object using the MEF container.
+            </summary>
+            <param name="container">The MEF CompositionContainer.</param>
+        </member>
+        <member name="P:PerfEx.Infrastructure.MefServiceObjectProvider`1.ServiceProxy">
+            <summary>
+            Gets the service object.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.MefServiceObjectProvider`2">
+            <summary>
+            Provides a capability for creating an object from MEF with an adapter to an interface.
+            </summary>
+            <typeparam name="T">The type of the service object to create.</typeparam>
+            <typeparam name="I">The contract interface.</typeparam>
+        </member>
+        <member name="M:PerfEx.Infrastructure.MefServiceObjectProvider`2.#ctor(System.ComponentModel.Composition.Hosting.CompositionContainer)">
+            <summary>
+            Initializes a new instance of the provider, also instantiate the service object using the MEF container.
+            </summary>
+            <param name="container">The MEF CompositionContainer.</param>
+        </member>
+        <member name="P:PerfEx.Infrastructure.MefServiceObjectProvider`2.ServiceObject">
+            <summary>
+            Provides access from MEF to set a service instance.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.MefServiceObjectProvider`2.ServiceProxy">
+            <summary>
+            Gets the service object.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.LightUpload.UploadStatusChangedEventArgs">
+            <summary>
+            Contains file information and its current status.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.LightUpload.UploadStatusChangedEventArgs.File">
+            <summary>
+            File information which status has been changed.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.LightUpload.UploadStatusChangedEventArgs.UploadStatus">
+            <summary>
+            Status of the file.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.RegisterCommandExecutorsAttribute">
+            <summary>
+            Mark the assembly that it contains the executor for the specified filtered.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.RegisterCommandExecutorsAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of RegisterCommandExecutorsAttribute.
+            </summary>
+            <param name="name">The name use to filter the registration when calling from RegisterReferenceExecutors().</param>
+        </member>
+        <member name="P:PerfEx.Infrastructure.CommandPattern.RegisterCommandExecutorsAttribute.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.Converters.StringFormatValueConverter">
+            <summary>
+            Two way IValueConverter that lets you bind a property on a bindable object
+            that can be an empty string value to a dependency property that should 
+            be set to null in that case
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.StringFormatValueConverter.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:PerfEx.Infrastructure.Converters.StringFormatValueConverter"/>
+            </summary>
+            <param name="formatString">Format string, it can take zero or one parameters, the first one being replaced by the source value</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.StringFormatValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the <paramref name="value"/> to a formatted string using the
+            format specified in the constructor.
+            </summary>
+            <param name="value">The value to format.</param>
+            <param name="targetType">The target output type (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture to use in the format operation.</param>
+            <returns>The formatted string</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.StringFormatValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Not supported.
+            </summary>
+            <param name="value">Ignored.</param>
+            <param name="targetType">Ignored.</param>
+            <param name="parameter">Ignored.</param>
+            <param name="culture">Ignored.</param>
+            <returns>No value is returned.</returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.Converters.NotOperatorValueConverter">
+            <summary>
+            Two way <see cref="T:System.Windows.Data.IValueConverter"/> that lets you bind the inverse of a boolean property
+            to a dependency property
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.NotOperatorValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the given <paramref name="value"/> to be its inverse
+            </summary>
+            <param name="value">The <c>bool</c> value to convert.</param>
+            <param name="targetType">The type to convert to (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture of the conversion (ignored).</param>
+            <returns>The inverse of the input <paramref name="value"/>.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.NotOperatorValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            The inverse of the <see cref="M:PerfEx.Infrastructure.Converters.NotOperatorValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)"/>.
+            </summary>
+            <param name="value">The value to convert back.</param>
+            <param name="targetType">The type to convert to (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture of the conversion (ignored).</param>
+            <returns>The inverse of the input <paramref name="value"/>.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DataBindingExtensions.CreateOneWayBinding(System.ComponentModel.INotifyPropertyChanged,System.String)">
+            <summary>
+            Creates a new <see cref="T:System.Windows.Data.Binding"/> using <paramref name="bindingSource"/> as the <see cref="P:System.Windows.Data.Binding.Source"/>
+            and <paramref name="propertyPath"/> as the <see cref="P:System.Windows.Data.Binding.Path"/>.
+            </summary>
+            <param name="bindingSource">The object to use as the new binding's <see cref="P:System.Windows.Data.Binding.Source"/>.</param>
+            <param name="propertyPath">The property path to use as the new binding's <see cref="P:System.Windows.Data.Binding.Path"/>.</param>
+            <returns>A new <see cref="T:System.Windows.Data.Binding"/> object.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DataBindingExtensions.CreateOneWayBinding(System.ComponentModel.INotifyPropertyChanged,System.String,System.Windows.Data.IValueConverter)">
+            <summary>
+            Creates a new <see cref="T:System.Windows.Data.Binding"/> using <paramref name="bindingSource"/> as the <see cref="P:System.Windows.Data.Binding.Source"/>,
+            <paramref name="propertyPath"/> as the <see cref="P:System.Windows.Data.Binding.Path"/>,
+            and <paramref name="converter"/> as the <see cref="P:System.Windows.Data.Binding.Converter"/>.
+            </summary>
+            <param name="bindingSource">The object to use as the new binding's <see cref="P:System.Windows.Data.Binding.Source"/>.</param>
+            <param name="propertyPath">The property path to use as the new binding's <see cref="P:System.Windows.Data.Binding.Path"/>.</param>
+            <param name="converter">The converter to use as the new binding's <see cref="P:System.Windows.Data.Binding.Converter"/>.</param>
+            <returns>A new <see cref="T:System.Windows.Data.Binding"/> object.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.DataBindingExtensions.CreateCopy(System.Windows.Data.Binding)">
+            <summary>
+            Creates a new <see cref="T:System.Windows.Data.Binding"/> object by copying all properties
+            from another <see cref="T:System.Windows.Data.Binding"/> object.
+            </summary>
+            <param name="binding"><see cref="T:System.Windows.Data.Binding"/> from which property values will be copied</param>
+            <returns>A new <see cref="T:System.Windows.Data.Binding"/> object.</returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.Converters.TargetNullValueConverter">
+            <summary>
+            Two way IValueConverter that lets you bind a property on a bindable object
+            that can be an empty string value to a dependency property that should 
+            be set to null in that case
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.TargetNullValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts <c>null</c> or empty strings to <c>null</c>.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <param name="targetType">The expected type of the result (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture for the conversion (ignored).</param>
+            <returns>If the <paramref name="value"/>is <c>null</c> or empty, this method returns <c>null</c> otherwise it returns the <paramref name="value"/>.</returns>
+        </member>
+        <member name="M:PerfEx.Infrastructure.Converters.TargetNullValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts <c>null</c> back to <see cref="F:System.String.Empty"/>.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <param name="targetType">The expected type of the result (ignored).</param>
+            <param name="parameter">Optional parameter (ignored).</param>
+            <param name="culture">The culture for the conversion (ignored).</param>
+            <returns>If <paramref name="value"/> is <c>null</c>, it returns <see cref="F:System.String.Empty"/> otherwise <paramref name="value"/>.</returns>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.NullCommand">
+            <summary>
+            Null type concept for Command.<br />
+            This class is use in the sense of general command instead of a base class in the hierarchy.<br />
+            Usage: DO NullCommand.Instance, DO NOT: new NullCommand().
+            </summary>
+        </member>
+        <member name="F:PerfEx.Infrastructure.CommandPattern.NullCommand.Instance">
+            <summary>
+            Get the singleton instance of NullCommand.
+            </summary>
+        </member>
+        <member name="T:PerfEx.Infrastructure.CommandPattern.CommandManagerBase">
+            <summary>
+            Base class for implementing the command manager.
+            </summary>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.#ctor(PerfEx.Infrastructure.IDependencyContainerAbstractFactory,PerfEx.Infrastructure.IDependencyRegistry)">
+            <summary>
+            Initialize the new instance of CommandManagerBase with pre-reigstered dependecy registry.
+            </summary>
+            <param name="factory">The dependency container abstract factory use to create all dependency-related classes.</param>
+            <param name="registry">The pre-registered dependecy registry, contains the essential registrations shared with the other modules.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.#ctor(PerfEx.Infrastructure.IDependencyContainerAbstractFactory)">
+            <summary>
+            Initialize the new instance of CommandManagerBase.
+            </summary>
+            <param name="factory">The dependency container abstract factory use to create all dependency-related classes.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.Execute``1(``0,System.Action{``0})">
+            <summary>
+            Execute the command.
+            </summary>
+            <typeparam name="TCmd">command type</typeparam>
+            <param name="command">The command to execute.</param>
+            <param name="callback">a callback method</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.Execute``1(``0)">
+            <summary>
+            Execute the one-way command.
+            </summary>
+            <typeparam name="TCmd">command type</typeparam>
+            <param name="command">The command to be executed.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.Execute``1(``0,System.Action{``0},System.Object)">
+            <summary>
+            Execute the command.
+            </summary>
+            <typeparam name="TCmd">command type</typeparam>
+            <param name="command">The command to be executed.</param>
+            <param name="callback">The expression to be invoked when the command execution has completed.</param>
+            <param name="additionalParameter">The parameter pass to the command executor before executing the command.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.RegisterReferenceExecutors(PerfEx.Infrastructure.CommandPattern.CommandExecutorRegistry,System.String,System.Reflection.Assembly[])">
+            <summary>
+            Register command executors from the provided assemblies.
+            </summary>
+            <param name="registry">The command executor dependency registry object.</param>
+            <param name="filter">The keyword provided in the RegisterCommandExecutorsAttribute to filter the assemblies to registered.</param>
+            <param name="assemblies">The list of assemblies to search for the command.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.InitCommandRegistry(PerfEx.Infrastructure.CommandPattern.CommandExecutorRegistry)">
+            <summary>
+            Initialize the list of relation between command and command executors.
+            </summary>
+            <param name="registry">The dependency registry use to register the command information.</param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.InitCommandExecutor``1(PerfEx.Infrastructure.CommandPattern.ICommandExecutor{``0},``0,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TCmd"></typeparam>
+            <param name="executor"></param>
+            <param name="command"></param>
+            <param name="additionalParameter"></param>
+        </member>
+        <member name="M:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.ExecuteCommandExecutor``1(PerfEx.Infrastructure.CommandPattern.ICommandExecutor{``0},``0,System.Action{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TCmd"></typeparam>
+            <param name="executor"></param>
+            <param name="command"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="P:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.DependencyContainer">
+            <summary>
+            Gets a DependencyContainer instance used by this CommandManager.
+            </summary>
+        </member>
+        <member name="P:PerfEx.Infrastructure.CommandPattern.CommandManagerBase.SkipRegisterDependencyContainer">
+            <summary>
+            Overridalbe, gets whether the instance of IDependencyContainer should be skip to register to the container or not, default is false.
+            </summary>
+        </member>
+    </members>
+</doc>
