@@ -151,8 +151,9 @@ namespace TheS.SperfGames.MayaTukky
             {
                 CupLevel = _cupLevel
             };
-            Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount, true);
-            Question.BackRow = Question.AddQuestionRow(_backCupCount, _backSwapCount, false);
+            Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount,_swapSpeed, true);
+            // TODO: Back swap speed
+            Question.BackRow = Question.AddQuestionRow(_backCupCount, _backSwapCount, _swapSpeed, false);
         }
 
         #endregion Methods

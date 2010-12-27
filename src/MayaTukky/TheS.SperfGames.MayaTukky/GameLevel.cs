@@ -18,7 +18,6 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        protected float AddSwapSpeed = 0.2f;
         protected float MaximumSwapSpeed = 8;
         protected int _level;
         protected int _cupCount;

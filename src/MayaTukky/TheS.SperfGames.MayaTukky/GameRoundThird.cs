@@ -133,8 +133,8 @@ namespace TheS.SperfGames.MayaTukky
             };
 
             const int backSwapCount = 0;
-            Question.FrontRow = Question.AddQuestionRow(CupCount, SwapCount, true);
-            Question.BackRow = Question.AddQuestionRow(CupCount, backSwapCount, false);
+            Question.FrontRow = Question.AddQuestionRow(CupCount, SwapCount,_swapSpeed, true);
+            Question.BackRow = Question.AddQuestionRow(CupCount, backSwapCount, _swapSpeed, false);
         }
 
         #endregion Methods

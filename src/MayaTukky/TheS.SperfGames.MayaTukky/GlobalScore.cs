@@ -13,8 +13,12 @@ namespace TheS.SperfGames.MayaTukky
 {
     public static class GlobalScore
     {
-        public static int First { get; set; }
-        public static int Second { get; set; }
-        public static int Third { get; set; }
+        public static int FirstScore { get; set; }
+        public static int SecondScore { get; set; }
+        public static int ThirdScore { get; set; }
+
+        public static int FirstMaximumCombo { get; set; }
+        public static int SecondMaximumCombo { get; set; }
+        public static int ThirdMaximumCombo { get; set; }
     }
 }

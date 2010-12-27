@@ -76,6 +76,8 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             InitializeComponent();
 
+            var items = new TheS.SperfGames.MayaTukky.Models.CupItems();
+
             // กำหนดแก้วทั้งหมด
             _cupCanvases = new Canvas[] {
                 canvas1,
@@ -84,7 +86,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 canvas4,
                 canvas5
             };
-            foreach (var canvas in _cupCanvases) canvas.Children.Add(new CupUI());
+            foreach (var canvas in _cupCanvases) canvas.Children.Add(new CupUI(items));
 
             initializeEvents();
         }
@@ -106,6 +108,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
             _cupLevel = cupLevel;
             _question = question;
 
+            Storyboard1.SpeedRatio = question.SwapSpeed;
+            Storyboard2.SpeedRatio = question.SwapSpeed;
+
             // กำหนด state เริ่มต้นจากจำนวนแก้ว
             const int Easy = 3;
             const int Normal = 4;
@@ -123,7 +128,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             // เคลียแก้ว
             foreach (var canvas in _cupCanvases) (canvas.Children[ElementCupIndex] as CupUI).ResetState();
-
 
             // กำหนดลายแก้ว และวัตถุภายในแก้ว
             for (int canvasIndex = 0; canvasIndex < _cupCanvases.Count(); canvasIndex++)
@@ -158,6 +162,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// </summary>
         public void SetAfterCupItem()
         {
+            for (int canvasIndex = 0; canvasIndex < _question.AfterCup.Count; canvasIndex++)
+            {
+                var cup = _cupCanvases[canvasIndex].Children[ElementCupIndex] as CupUI;
+                cup.ClearItem();
+            }
             for (int canvasIndex = 0; canvasIndex < _question.AfterCup.Count; canvasIndex++)
             {
                 var cup = _cupCanvases[canvasIndex].Children[ElementCupIndex] as CupUI;
@@ -227,7 +236,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 var temp = SwapCompleted;
                 if (temp != null)
                 {
-                    temp(_question.IsFronRow, null);
+                    temp(this, EventArgs.Empty);
                 }
             }
         }

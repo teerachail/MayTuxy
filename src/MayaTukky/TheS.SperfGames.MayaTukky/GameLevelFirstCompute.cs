@@ -20,6 +20,7 @@ namespace TheS.SperfGames.MayaTukky
 
         private const int AddPoint = 50;
         private const int AddSwapCount = 1;
+        protected const float AddSwapSpeed = 0.35f;
 
         #endregion Fields
 

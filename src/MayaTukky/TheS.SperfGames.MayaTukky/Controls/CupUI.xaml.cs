@@ -28,7 +28,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         private bool _isCanClick;
         private bool _hasOpened;
         private UserControl _item;
-        private Dictionary<string, Type> _items;
+        private TheS.SperfGames.MayaTukky.Models.CupItems _items = new Models.CupItems();
 
         #endregion Fields
 
@@ -59,42 +59,13 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <summary>
         /// กำหนดค่าเริ่มต้นให้กับแก้ว
         /// </summary>
-        public CupUI()
+        public CupUI(TheS.SperfGames.MayaTukky.Models.CupItems cupItems)
         {
             InitializeComponent();
+
+            _items = cupItems;
+
             Sb_ShowItem.SpeedRatio = 0.2;
-
-            _items = new Dictionary<string, Type>()
-            {
-                { "voodoo1", typeof(testVoodooAnime.Voodoo.Voodoo1.Voodoo1_Place) },
-                { "voodoo2", typeof(testVoodooAnime.Voodoo.Voodoo2.Voodoo2_Place) },
-                { "voodoo3", typeof(testVoodooAnime.Voodoo.Voodoo3.Voodoo3_Place) },
-                { "voodoo4", typeof(testVoodooAnime.Voodoo.Voodoo4.Voodoo4_Place) },
-                { "voodoo5", typeof(testVoodooAnime.Voodoo.Voodoo5.Voodoo5_Place) },
-                { "voodoo6", typeof(testVoodooAnime.Voodoo.Voodoo6.Voodoo6_Place) },
-                { "voodoo7", typeof(testVoodooAnime.Voodoo.Voodoo7.Voodoo7_Place) },
-                { "voodoo8", typeof(testVoodooAnime.Voodoo.Voodoo8.Voodoo8_Place) },
-
-                { "monster1", typeof(MonsterAnimation.Item.Monster_Crab.Crab) },
-                { "monster2", typeof(MonsterAnimation.Item.Monster_Duckking.Duckking) },
-                { "monster3", typeof(MonsterAnimation.Item.Monster_GearDodo.GearDodo) },
-                { "monster4", typeof(MonsterAnimation.Item.Monster_GhostJellyFish.GhostJellyFish) },
-                { "monster5", typeof(MonsterAnimation.Item.Monster_Snail.Snail) },
-                { "monster6", typeof(MonsterAnimation.Item.Monster_Spider.Spider) },
-                { "monster7", typeof(MonsterAnimation.Item.Monster_Squdy.Squdy) },
-                { "monster8", typeof(MonsterAnimation.Item.Monster_TheTree.TheTree) },
-
-                { "poison1", typeof(PoisonAnimation.Item.Poison1) },
-                { "poison2", typeof(PoisonAnimation.Item.Poison2) },
-                { "poison3", typeof(PoisonAnimation.Item.Poison3) },
-                { "poison4", typeof(PoisonAnimation.Item.Poison4) },
-                { "poison5", typeof(PoisonAnimation.Item.Poison5) },
-                { "poison6", typeof(PoisonAnimation.Item.Poison6) },
-                { "poison7", typeof(PoisonAnimation.Item.Poison7) },
-                { "poison8", typeof(PoisonAnimation.Item.Poison8) },
-
-                { "EmptyItem", typeof(Controls.EmptyItemUI) },
-            };
 
             Sb_Click.Completed += new EventHandler(Sb_Click_Completed);
             Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
@@ -112,14 +83,22 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="cupName">ชื่อของแก้วที่จะนำมาแสดงผล</param>
         public void Initialize(string item, string cupName)
         {
-            cv_Cup.Children.Clear();
-            cv_Item.Children.Clear();
-            _itemName = item;
-            _cupName = loadElement(cupName);
-            cv_Cup.Children.Add(XamlReader.Load(_cupName) as UIElement);
+            if (_cupName != cupName)
+            {
+                cv_Cup.Children.Clear();
+                _cupName = loadElement(cupName);
+                cv_Cup.Children.Add(XamlReader.Load(_cupName) as UIElement);
+            }
 
-            _item = (UserControl)Activator.CreateInstance(_items[item]);
+            ClearItem();
+            _itemName = item;
+            _item = _items[item];
             cv_Item.Children.Add(_item);
+        }
+
+        public void ClearItem()
+        {
+            cv_Item.Children.Clear();
         }
 
         /// <summary>
@@ -134,6 +113,8 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sb_Up.Stop();
             Sb_Down.Stop();
             Sb_Correct.Stop();
+
+            ClearItem();
         }
 
         /// <summary>
