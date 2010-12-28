@@ -17,7 +17,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
         public CloudUI()
         {
             InitializeComponent();
-            Sb_CloudIn.Begin();
         }
     }
 }

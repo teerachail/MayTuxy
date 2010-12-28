@@ -18,8 +18,31 @@ namespace TheS.SperfGames.MayaTukky.Controls
         public TukkyLoseUI()
         {
             InitializeComponent();
+            Sb_Cry.RepeatBehavior = new RepeatBehavior(3);
             Loaded += new RoutedEventHandler(SadTukkyEmotion_Loaded);
-            Tukky_SadStory1.Completed += new EventHandler(Tukky_SadStory1_Completed);
+            Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
+            Sb_Cry.Completed += new EventHandler(Sb_Cry_Completed);
+            Sb_Down.Completed += new EventHandler(Sb_Down_Completed);
+        }
+
+        private void Sb_Down_Completed(object sender, EventArgs e)
+        {
+            StopPlay();
+            EventHandler temp = PlayCompleted;
+            if (temp != null)
+            {
+                temp(this,EventArgs.Empty);
+            }
+        }
+
+        private void Sb_Cry_Completed(object sender, EventArgs e)
+        {
+            Sb_Down.Begin();
+        }
+
+        private void Sb_Up_Completed(object sender, EventArgs e)
+        {
+            Sb_Cry.Begin();
         }
 
         private void SadTukkyEmotion_Loaded(object sender, RoutedEventArgs e)
@@ -27,16 +50,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
             if (AutoPlay)
             {
                 StartPlay();
-            }
-        }
-
-        private void Tukky_SadStory1_Completed(object sender, EventArgs e)
-        {
-            StopPlay();
-            EventHandler temp = PlayCompleted;
-            if (temp != null)
-            {
-                temp(this, EventArgs.Empty);
             }
         }
 
@@ -58,11 +71,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             get
             {
-                return Tukky_SadStory1.BeginTime;
+                return Sb_Up.BeginTime;
             }
             set
             {
-                Tukky_SadStory1.BeginTime = value;
+                Sb_Up.BeginTime = value;
             }
         }
 
@@ -72,22 +85,26 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             get
             {
-                return Tukky_SadStory1.SpeedRatio;
+                return Sb_Up.SpeedRatio;
             }
             set
             {
-                Tukky_SadStory1.SpeedRatio = value;
+                Sb_Up.SpeedRatio = value;
+                Sb_Down.SpeedRatio = value;
+                Sb_Cry.SpeedRatio = value;
             }
         }
 
         public void StartPlay()
         {
-            Tukky_SadStory1.Begin();
+            Sb_Up.Begin();
         }
 
         public void StopPlay()
         {
-            Tukky_SadStory1.Stop();
+            Sb_Up.Stop();
+            Sb_Down.Stop();
+            Sb_Cry.Stop();
         }
 
         #endregion

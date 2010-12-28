@@ -19,17 +19,28 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             InitializeComponent();
             Loaded += new RoutedEventHandler(HappyTukkyEmotion_Loaded);
-            Tukky_happyStory1.Completed += new EventHandler(Tukky_happyStory1_Completed);
+            Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
+            Sb_Down.Completed += new EventHandler(Sb_Down_Completed);
+            Sb_Laugh.Completed += new EventHandler(Sb_Laugh_Completed);
         }
 
-        private void Tukky_happyStory1_Completed(object sender, EventArgs e)
+        private void Sb_Laugh_Completed(object sender, EventArgs e)
         {
-            StopPlay();
+            Sb_Down.Begin();
+        }
+
+        private void Sb_Down_Completed(object sender, EventArgs e)
+        {
             EventHandler temp = PlayCompleted;
             if (temp != null)
             {
-                temp(this, EventArgs.Empty);
+                temp(this,EventArgs.Empty);
             }
+        }
+
+        private void Sb_Up_Completed(object sender, EventArgs e)
+        {
+            Sb_Laugh.Begin();
         }
 
         private void HappyTukkyEmotion_Loaded(object sender, RoutedEventArgs e)
@@ -58,11 +69,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             get
             {
-                return Tukky_happyStory1.BeginTime;
+                return Sb_Up.BeginTime;
             }
             set
             {
-                Tukky_happyStory1.BeginTime = value;
+                Sb_Up.BeginTime = value;
             }
         }
 
@@ -72,22 +83,26 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             get
             {
-                return Tukky_happyStory1.SpeedRatio;
+                return Sb_Up.SpeedRatio;
             }
             set
             {
-                Tukky_happyStory1.SpeedRatio = value;
+                Sb_Up.SpeedRatio = value;
+                Sb_Down.SpeedRatio = value;
+                Sb_Laugh.SpeedRatio = value;
             }
         }
 
         public void StartPlay()
         {
-            Tukky_happyStory1.Begin();
+            Sb_Up.Stop();
         }
 
         public void StopPlay()
         {
-            Tukky_happyStory1.Stop();
+            Sb_Up.Stop();
+            Sb_Down.Stop();
+            Sb_Laugh.Stop();
         }
 
         #endregion
