@@ -69,17 +69,22 @@ namespace TheS.SperfGames.MayaTukky
         {
             AnswerResult answer = new AnswerResult();
 
-            if (objName.Equals(IncorrectAnswerItem))
+            if (_isHasFinished == false)
             {
-                // ตอบผิด
-                answer.IsCorrect = false;
-            }
-            else
-            {
-                // ตอบถูก
-                answer.IsCorrect = true;
-                answer.Score = _currentPoint;
-                answer.IsFinish = true;
+                _isHasFinished = true;
+
+                if (objName.Equals(IncorrectAnswerItem))
+                {
+                    // ตอบผิด
+                    answer.IsCorrect = false;
+                }
+                else
+                {
+                    // ตอบถูก
+                    answer.IsCorrect = true;
+                    answer.Score = _currentPoint;
+                    answer.IsFinish = true;
+                } 
             }
 
             return answer;

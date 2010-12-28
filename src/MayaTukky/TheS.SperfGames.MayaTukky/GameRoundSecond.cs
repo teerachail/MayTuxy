@@ -77,6 +77,7 @@ namespace TheS.SperfGames.MayaTukky
             _cupLevel = cupLevel;
             CreateQuestion();
 
+            // TODO: Voodoo 7 error
             _items = new List<string>{
                 "voodoo1",
                 "voodoo2",
@@ -115,28 +116,39 @@ namespace TheS.SperfGames.MayaTukky
         public override AnswerResult CheckAnswer(string objName)
         {
             var answer = new AnswerResult();
-            if (string.IsNullOrEmpty(_answer))
-            {
-                _answer = objName;
-                answer.IsCorrect = null;
-            }
-            else
-            {
-                if (_answer.Equals(objName))
-                {
-                    answer.IsCorrect = true;
-                    answer.Score = _currentPoint;
-                    _correctCount++;
-                    if (_correctCount >= _maximumCorrect)
-                    {
-                        const int ResetCorrectAnswer = 0;
-                        _correctCount = ResetCorrectAnswer;
-                        answer.IsFinish = true;
-                    }
-                }
-                else answer.IsCorrect = false;
 
-                _answer = string.Empty;
+            if (_isHasFinished == false)
+            {
+                if (string.IsNullOrEmpty(_answer))
+                {
+                    _answer = objName;
+                    answer.IsCorrect = null;
+                }
+                else
+                {
+                    if (_answer.Equals(objName))
+                    {
+                        answer.IsCorrect = true;
+                        answer.Score = _currentPoint;
+                        _correctCount++;
+
+                        // ตรวจสอบการจบรอบเกมนี้แล้วหรือไม่
+                        if (_correctCount >= _maximumCorrect)
+                        {
+                            _isHasFinished = true;
+                            const int ResetCorrectAnswer = 0;
+                            _correctCount = ResetCorrectAnswer;
+                            answer.IsFinish = true;
+                        }
+                    }
+                    else
+                    {
+                        answer.IsCorrect = false;
+                        _isHasFinished = true;
+                    }
+
+                    _answer = string.Empty;
+                } 
             }
 
             return answer;
@@ -152,7 +164,6 @@ namespace TheS.SperfGames.MayaTukky
                 CupLevel = _cupLevel
             };
             Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount,_swapSpeed, true);
-            // TODO: Back swap speed
             Question.BackRow = Question.AddQuestionRow(_backCupCount, _backSwapCount, _swapSpeed, false);
         }
 

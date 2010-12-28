@@ -76,6 +76,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             InitializeComponent();
 
+
             var items = new TheS.SperfGames.MayaTukky.Models.CupItems();
 
             // กำหนดแก้วทั้งหมด
@@ -86,9 +87,11 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 canvas4,
                 canvas5
             };
+
             foreach (var canvas in _cupCanvases) canvas.Children.Add(new CupUI(items));
 
             initializeEvents();
+
         }
 
         #endregion Constructors

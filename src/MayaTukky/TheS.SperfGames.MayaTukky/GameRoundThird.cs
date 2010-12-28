@@ -55,27 +55,16 @@ namespace TheS.SperfGames.MayaTukky
 
             CreateQuestion();
 
-            // TODO: Monster error
-            //_items = new List<string>{
-            //    "monster1",
-            //    "monster2",
-            //    "monster3",
-            //    "monster4",
-            //    "monster5",
-            //    "monster6",
-            //    "monster7",
-            //    "monster8",
-            //};
-
+            // TODO: Monster 3 error
             _items = new List<string>{
-                "voodoo1",
-                "voodoo2",
-                "voodoo3",
-                "voodoo4",
-                "voodoo5",
-                "voodoo6",
-                //"voodoo7",
-                "voodoo8",
+                "monster1",
+                "monster2",
+                //"monster3",
+                "monster4",
+                "monster5",
+                "monster6",
+                "monster7",
+                "monster8",
             };
 
             _items = _questionManager.CreateQuestionBefore(_items, cupCount);
@@ -100,24 +89,29 @@ namespace TheS.SperfGames.MayaTukky
             AnswerResult answer = new AnswerResult();
 
             const int ResetCorrectAnswer = 0;
-            if (objName.Equals(Question.BackRow.BeforeCup[_questionIndex]))
+            if (_isHasFinished == false)
             {
-                _questionIndex++;
-                _correctCount++;
-                answer.IsCorrect = true;
-                answer.Score = _currentPoint;
-
-                if (_correctCount >= _maximumCorrect)
+                if (objName.Equals(Question.BackRow.BeforeCup[_questionIndex]))
                 {
-                    _correctCount = ResetCorrectAnswer;
-                    answer.IsFinish = true;
+                    _questionIndex++;
+                    _correctCount++;
+                    answer.IsCorrect = true;
+                    answer.Score = _currentPoint;
+
+                    if (_correctCount >= _maximumCorrect)
+                    {
+                        _correctCount = ResetCorrectAnswer;
+                        answer.IsFinish = true;
+                        _isHasFinished = true;
+                    }
                 }
+                else
+                {
+                    answer.IsCorrect = false;
+                    _correctCount = ResetCorrectAnswer;
+                    _isHasFinished = true;
+                } 
             }
-            else
-            {
-                answer.IsCorrect = false;
-                _correctCount = ResetCorrectAnswer;
-            }            
 
             return answer;
         }

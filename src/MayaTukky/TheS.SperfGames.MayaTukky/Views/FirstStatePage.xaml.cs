@@ -39,6 +39,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private DispatcherTimer _autoPlayQuestionTimer;
         private GameStageManager _gameManager;
         private PrepareLayerUI _prepareLayer;
+        private CloudUI _clound;
 
         #endregion Fields
 
@@ -79,11 +80,15 @@ namespace TheS.SperfGames.MayaTukky.Views
             _autoPlayQuestionTimer = new DispatcherTimer();
             _autoPlayQuestionTimer.Interval = TimeSpan.FromSeconds(AutoPlayQuestionTimeSecond);
 
+            // สร้างหน้าก้อนเมฆในการแสดงการเปลี่ยนฉาก
+            _clound = new CloudUI();
+
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
 
             // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
             _prepareLayer.Sb_Start.Begin();
+            Sb_Dark.Begin();
         }
 
         #endregion Constructors
@@ -117,6 +122,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // เมื่อแก้วโชว์เสร็จสิ้น
             _frontRow.ShowItemCompleted += new EventHandler(_frontRow_ShowItemCompleted);
 
+            // กำหนดเหตุการณ์เมื่อก้อนเมฆเปลี่ยนฉากเล่นจบ
+            _clound.Sb_CloudIn.Completed += new EventHandler(Sb_CloudIn_Completed);
+
             // กำหนดเหตุกาณ์ในการแสดงผลทักกี้ และสามเกลอ
             tukkyWin.ThreeTopNormal.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
             tukkyWin.ThreeTopLose.PlayCompleted += new EventHandler(ThreeTop_PlayCompleted);
@@ -140,8 +148,15 @@ namespace TheS.SperfGames.MayaTukky.Views
             _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
         }
 
-        // แจ้งเหตุการณ์ว่าเกมจบแล้ว
+        // แสดงการเล่นเมฆในการเปลี่ยนฉาก
         private void Tukky_emotion_Completed(object sender, EventArgs e)
+        {
+            LayoutRoot.Children.Add(_clound);
+            _clound.Sb_CloudIn.Begin();
+        }
+
+        // แจ้งเหตุการณ์ว่าเกมจบแล้ว
+        private void Sb_CloudIn_Completed(object sender, EventArgs e)
         {
             var temp = GameFinish;
             if (temp != null)
@@ -271,6 +286,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง
         private void Sb_Start_Completed(object sender, EventArgs e)
         {
+            Sb_Dark.Stop();
+
             // เรียกขอคำถาม
             GetQuestion();
 
