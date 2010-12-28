@@ -18,6 +18,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         public TukkyWinUI()
         {
             InitializeComponent();
+            Sb_Laugh.RepeatBehavior = new RepeatBehavior(3);
             Loaded += new RoutedEventHandler(HappyTukkyEmotion_Loaded);
             Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
             Sb_Down.Completed += new EventHandler(Sb_Down_Completed);
@@ -31,6 +32,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         private void Sb_Down_Completed(object sender, EventArgs e)
         {
+            StopPlay();
             EventHandler temp = PlayCompleted;
             if (temp != null)
             {
@@ -95,7 +97,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         public void StartPlay()
         {
-            Sb_Up.Stop();
+            Sb_Up.Begin();
         }
 
         public void StopPlay()

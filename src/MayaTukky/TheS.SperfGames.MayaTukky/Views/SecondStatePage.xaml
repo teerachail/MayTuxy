@@ -12,8 +12,8 @@
 	<navigation:Page.Resources>
 		<Storyboard x:Name="Sb_Dark">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0.7"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.3"/>
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.85"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="scoreBoard">
 				<DiscreteObjectKeyFrame KeyTime="0">
@@ -43,12 +43,12 @@
                 <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
                 </TheS_SperfGames_MayaTukky_Controls:TukkyWinUI.RenderTransform>
             </TheS_SperfGames_MayaTukky_Controls:TukkyWinUI>
-        <TheS_SperfGames_MayaTukky_Controls:ScoreBoardUI x:Name="scoreBoard" d:LayoutOverrides="Width, Height" Canvas.Top="37" Canvas.Left="-6" RenderTransformOrigin="0.5,0.5" Canvas.ZIndex="1">
+        <TheS_SperfGames_MayaTukky_Controls:ScoreBoardUI x:Name="scoreBoard" d:LayoutOverrides="Width, Height" Canvas.Top="37" Canvas.Left="-6" RenderTransformOrigin="0.5,0.5">
             <TheS_SperfGames_MayaTukky_Controls:ScoreBoardUI.RenderTransform>
                 <CompositeTransform ScaleX="0.75" ScaleY="0.75"/>
                 </TheS_SperfGames_MayaTukky_Controls:ScoreBoardUI.RenderTransform>
             </TheS_SperfGames_MayaTukky_Controls:ScoreBoardUI>
-        <TheS_SperfGames_MayaTukky_Controls:ClockUI x:Name="clock" d:LayoutOverrides="Width, Height" Canvas.Top="82" RenderTransformOrigin="0.5,0.5" Canvas.Left="-3" Canvas.ZIndex="1">
+        <TheS_SperfGames_MayaTukky_Controls:ClockUI x:Name="clock" d:LayoutOverrides="Width, Height" Canvas.Top="82" RenderTransformOrigin="0.5,0.5" Canvas.Left="-3">
             <TheS_SperfGames_MayaTukky_Controls:ClockUI.RenderTransform>
                 <CompositeTransform ScaleX="0.7" ScaleY="0.75"/>
                 </TheS_SperfGames_MayaTukky_Controls:ClockUI.RenderTransform>

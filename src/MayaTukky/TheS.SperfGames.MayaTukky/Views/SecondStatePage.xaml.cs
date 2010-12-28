@@ -192,8 +192,8 @@ namespace TheS.SperfGames.MayaTukky.Views
             clock.Sb_Clock5.Completed += new EventHandler(Sb_Clock5_Completed);
 
             // กำหนดเหตุการณ์เมื่อทักกี้แสดงอารมณ์เสร็จ
-            tukkyLose.Tukky_SadStory1.Completed += new EventHandler(Tukky_emotion_Completed);
-            tukkyWin.Tukky_happyStory1.Completed += new EventHandler(Tukky_emotion_Completed);
+            tukkyLose.PlayCompleted += new EventHandler(Tukky_emotion_Completed);
+            tukkyWin.PlayCompleted += new EventHandler(Tukky_emotion_Completed);
 
             // กำหนดเหตุการณ์เมื่อเล่นการนับเวลาจบ
             _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
@@ -375,6 +375,12 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง
         private void Sb_Start_Completed(object sender, EventArgs e)
         {
+            // เคลียร์ขัวนับ
+            _prepareLayer.Sb_Start.Stop();
+            LayoutRoot.Children.Remove(_prepareLayer);
+
+            Sb_Dark.Stop();
+
             // เรียกขอคำถาม
             GetQuestion();
 
