@@ -33,7 +33,17 @@ namespace TheS.SperfGames.MayaTukky.Controls
         #endregion Fields
 
         #region Properties
-        
+
+        /// <summary>
+        /// เปิดการแสดงผลเมื่อเมาส์เลื่อนมาชี้แก้ว
+        /// true: เปิด
+        /// false: ปิด
+        /// </summary>
+        public bool IsEnableMouseOverAnimation
+        {
+            get { return _isCanClick; }
+        }
+
         /// <summary>
         /// แก้วนี้ถูกคลิ๊กแล้วหรือไม่
         /// </summary>
