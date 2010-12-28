@@ -26,6 +26,7 @@ namespace TheS.SperfGames.MayaTukky
         protected string _cupLevel;
         protected List<string> _items;
         protected SwapHelper _questionManager;
+        protected bool _isHasFinished;
 
         #endregion Fields
 

@@ -40,6 +40,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private TimeOutLayerUI _timeOutLayer;
         private TrueFalseMarkUI _trueFalseMark;
         private PrepareLayerUI _prepareLayer;
+        private CloudUI _clound;
 
         #endregion Fields
 
@@ -90,6 +91,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // สร้างตัวจับเวลา
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
+
+            // สร้างหน้าก้อนเมฆในการแสดงการเปลี่ยนฉาก
+            _clound = new CloudUI();
 
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
@@ -148,6 +152,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
             _frontRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
 
+            // กำหนดเหตุการณ์เมื่อก้อนเมฆเปลี่ยนฉากเล่นจบ
+            _clound.Sb_CloudIn.Completed += new EventHandler(Sb_CloudIn_Completed);
+
             // ทำการติดตามเมื่อแก้วถูกเปิดเสร็จสิ้น
             foreach (var cup in _frontRow.Cups) cup.Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
 
@@ -177,8 +184,15 @@ namespace TheS.SperfGames.MayaTukky.Views
             _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
         }
 
-        // แจ้งเหตุการณ์ว่าเกมจบแล้ว
+        // แสดงการเล่นเมฆในการเปลี่ยนฉาก
         private void Tukky_emotion_Completed(object sender, EventArgs e)
+        {
+            LayoutRoot.Children.Add(_clound);
+            _clound.Sb_CloudIn.Begin();
+        }
+
+        // แจ้งเหตุการณ์ว่าเกมจบแล้ว
+        private void Sb_CloudIn_Completed(object sender, EventArgs e)
         {
             var temp = GameFinish;
             if (temp != null)

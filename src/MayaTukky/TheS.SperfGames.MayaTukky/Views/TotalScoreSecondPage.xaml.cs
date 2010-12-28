@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
+using TheS.SperfGames.MayaTukky.Controls;
 
 namespace TheS.SperfGames.MayaTukky.Views
 {
@@ -18,6 +19,12 @@ namespace TheS.SperfGames.MayaTukky.Views
     /// </summary>
     public partial class TotalScoreSecondPage : Page
     {
+        #region Fields
+
+        private CloudUI _clound;
+
+        #endregion Fields
+
         #region Events
 
         /// <summary>
@@ -30,12 +37,11 @@ namespace TheS.SperfGames.MayaTukky.Views
         public TotalScoreSecondPage()
         {
             InitializeComponent();
-
-            poisonSeal.StartPlay();
-            voodooSeal.StartPlay();
-
-            SB_SumScore.Begin();
+            _clound = new CloudUI();
+            LayoutRoot.Children.Add(_clound);
+            
             SB_SumScore.Completed += new EventHandler(SB_SumScore_Completed);
+            _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
 
             poisonSeal.PlayCompleted += (s, e) =>
                 {
@@ -45,6 +51,16 @@ namespace TheS.SperfGames.MayaTukky.Views
               {
                     voodooSeal.StartPlay();
                };
+
+            _clound.Sb_CloudOut.Begin();
+        }
+
+        private void Sb_CloudOut_Completed(object sender, EventArgs e)
+        {
+            poisonSeal.StartPlay();
+            voodooSeal.StartPlay();
+
+            SB_SumScore.Begin();
         }
 
         private void SB_SumScore_Completed(object sender, EventArgs e)
