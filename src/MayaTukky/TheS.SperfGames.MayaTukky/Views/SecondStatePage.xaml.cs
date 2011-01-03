@@ -23,6 +23,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         #region Fields
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
+        private const int QuestionTimeMilisecond = 1000; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
@@ -38,6 +39,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private RowUI _backRow;
         private DispatcherTimer _timer;
         private DispatcherTimer _timerAfterPlayQuestion;
+        private DispatcherTimer _displayQuestionTimer;
         private GameStageManager _gameManager;
         private TimeOutLayerUI _timeOutLayer;
         private TrueFalseMarkUI _trueFalseMark;
@@ -60,6 +62,10 @@ namespace TheS.SperfGames.MayaTukky.Views
         public SecondStatePage()
         {
             InitializeComponent();
+
+            // เหตุการณ์ในการรอให้แสดงคำถามเสร็จสิ้นก่อน
+            _displayQuestionTimer = new DispatcherTimer();
+            _displayQuestionTimer.Interval = TimeSpan.FromMilliseconds(QuestionTimeMilisecond);
 
             // ตัวนับเวลาก่อนเกมเริ่ม
             _prepareLayer = new PrepareLayerUI();
@@ -138,7 +144,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             _cupAutoAnswerCount = Reset;
             _isRoundFinish = false;
             _isGetNextQuestion = false;
-            _isWaitingClickForPlayQuestion = true;
 
             // เรียกคำถาม
             Question question = _gameManager.GetNextQuestion();
@@ -147,6 +152,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // กำหนดข้อมูลของแถวหน้าและแถวหลัง พร้อมกับกำหนดคำถาม
             _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
             _backRow.SetQuestionRow(question.BackRow, _cupStyleName, cupLevel);
+
+            // ตั้งเวลาในการดูคำถาม
+            _displayQuestionTimer.Start();
         }
 
         // กำหนดเหตุการณ์ของเกม
@@ -157,6 +165,9 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เหตุการณ์เมื่อเวลาเดิน
             _timer.Tick += new EventHandler(_timer_Tick);
+
+            // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
+            _displayQuestionTimer.Tick += new EventHandler(_displayQuestionTimer_Tick);
 
             // delay for set after cup items
             _timerAfterPlayQuestion.Tick += new EventHandler(_timerAfterPlayQuestion_Tick);
@@ -200,6 +211,13 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดการเล่นอนิเมชันเมื่อได้รับเวลาเพิ่ม
             clock.Sb_TimeUp.Completed += new EventHandler(Sb_TimeUp_Completed);
+        }
+
+        // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
+        private void _displayQuestionTimer_Tick(object sender, EventArgs e)
+        {
+            _displayQuestionTimer.Stop();
+            _isWaitingClickForPlayQuestion = true;
         }
 
         // เมื่อได้รับเวลาเพิ่ม
