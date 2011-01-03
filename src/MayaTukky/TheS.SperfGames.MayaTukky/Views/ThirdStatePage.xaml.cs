@@ -182,6 +182,15 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดเหตุการณ์เมื่อเล่นการนับเวลาจบ
             _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
+
+            // กำหนดการเล่นอนิเมชันเมื่อได้รับเวลาเพิ่ม
+            clock.Sb_TimeUp.Completed += new EventHandler(Sb_TimeUp_Completed);
+        }
+
+        // เมื่อได้รับเวลาเพิ่ม
+        private void Sb_TimeUp_Completed(object sender, EventArgs e)
+        {
+            clock.Sb_TimeUp.Stop();
         }
 
         // แสดงการเล่นเมฆในการเปลี่ยนฉาก
