@@ -239,8 +239,24 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             if (result != null)
             {
-                // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา
+                // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา และแสดงผลเวลาเกมที่เหลือ
                 _timeCombo = result.TimeCombo;
+                _timeLeftSecond += result.TimeAdvantage;
+
+                const int IncorrectAnswer = 0;
+                if ((int)result.Score > IncorrectAnswer)
+                {
+                    // แสดงผลคะแนนที่ได้รับ
+                    GlobalScore.SecondScore += (int)result.Score;
+                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.SecondScore);
+                    scoreBoard.Sb_ScoreUp.Begin();
+
+                    // จัดการตัวนับการตอบถูกติดต่อกัน
+                    _gameCombo++;
+                    if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
+                }
+
+
 
                 if (result.IsCorrect == false)
                 {
@@ -251,7 +267,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // จัดการตัวนับการตอบผิด
                     _incorrectCount++;
 
-                    // ตอบผิด ทำการเรียกคำถามใหม่
+                    // ตอบผิดทำการเรียกคำถามใหม่
                     _isGetNextQuestion = true;
 
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
@@ -266,17 +282,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    // จัดการตัวนับการตอบถูกติดต่อกัน
-                    _gameCombo++;
-                    if (GlobalScore.FirstMaximumCombo < _gameCombo)
-                        GlobalScore.FirstMaximumCombo = _gameCombo;
-
-                    // จัดการการแสดงผลคะแนนและเวลา
-                    _timeLeftSecond += result.TimeAdvantage;
-                    GlobalScore.SecondScore += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.SecondScore);
-                    scoreBoard.Sb_ScoreUp.Begin();
-
                     // แสดงผลอนิเมชันตอบถูกของ item
                     _frontRow.PlayAnswerResult(result);
                     _backRow.PlayAnswerResult(result);
@@ -413,6 +418,8 @@ namespace TheS.SperfGames.MayaTukky.Views
                 const int AutoCupAmount = 2;
                 if (_cupAutoAnswerCount >= AutoCupAmount && _isRoundFinish)
                 {
+                    _isRoundFinish = false;
+
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
                     tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;

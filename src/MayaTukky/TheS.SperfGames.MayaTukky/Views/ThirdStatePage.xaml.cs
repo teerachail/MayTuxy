@@ -218,8 +218,22 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             if (result != null)
             {
-                // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา
+                // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา และแสดงผลเวลาเกมที่เหลือ
                 _timeCombo = result.TimeCombo;
+                _timeLeftSecond += result.TimeAdvantage;
+
+                const int IncorrectAnswer = 0;
+                if ((int)result.Score > IncorrectAnswer)
+                {
+                    // แสดงผลคะแนนที่ได้รับ
+                    GlobalScore.SecondScore += (int)result.Score;
+                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.SecondScore);
+                    scoreBoard.Sb_ScoreUp.Begin();
+
+                    // จัดการตัวนับการตอบถูกติดต่อกัน
+                    _gameCombo++;
+                    if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
+                }
 
                 if (result.IsCorrect == false)
                 {
@@ -245,16 +259,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    // จัดการตัวนับการตอบถูกติดต่อกัน
-                    _gameCombo++;
-                    if (GlobalScore.FirstMaximumCombo < _gameCombo)
-                        GlobalScore.FirstMaximumCombo = _gameCombo;
-
-                    // จัดการการแสดงผลคะแนนและเวลา
-                    _timeLeftSecond += result.TimeAdvantage;
-                    GlobalScore.ThirdScore += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.ThirdScore);
-                    scoreBoard.Sb_ScoreUp.Begin();
 
                     // แสดงผลอนิเมชันตอบถูกของ item
                     _frontRow.PlayAnswerResult(result);
