@@ -33,6 +33,25 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
         #endregion Fields
 
+        #region Properties
+
+        /// <summary>
+        /// แก้วที่อยู่ภายในแถวนี้
+        /// </summary>
+        public CupUI[] Cups
+        {
+            get
+            {
+                CupUI[] cups = new CupUI[_cupCanvases.Count()];
+                for (int cupIndex = 0; cupIndex < _cupCanvases.Count(); cupIndex++)
+                    cups[cupIndex] = _cupCanvases[cupIndex].Children[ElementCupIndex] as CupUI;
+
+                return cups;
+            }
+        }
+
+        #endregion Properties
+
         #region Events
         
         /// <summary>
@@ -49,21 +68,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// การแสดงอนิเมชันโชว์วัตถุในแก้วเสร็จสิ้น
         /// </summary>
         public event EventHandler ShowItemCompleted;
-
-        /// <summary>
-        /// แก้วที่อยู่ภายในแถวนี้
-        /// </summary>
-        public CupUI[] Cups
-        {
-            get
-            {
-                CupUI[] cups = new CupUI[_cupCanvases.Count()];
-                for (int cupIndex = 0; cupIndex < _cupCanvases.Count(); cupIndex++)
-                    cups[cupIndex] = _cupCanvases[cupIndex].Children[ElementCupIndex] as CupUI;
-
-                return cups;
-            }
-        }
 
         #endregion Events
 

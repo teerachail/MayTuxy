@@ -274,8 +274,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                     if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
                 }
 
-
-
                 if (result.IsCorrect == false)
                 {
                     // จัดการตัวนับการตอบถูกติดต่อกัน
@@ -434,6 +432,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             {
                 _cupAutoAnswerCount++;
                 const int AutoCupAmount = 2;
+
                 if (_cupAutoAnswerCount >= AutoCupAmount && _isRoundFinish)
                 {
                     _isRoundFinish = false;
