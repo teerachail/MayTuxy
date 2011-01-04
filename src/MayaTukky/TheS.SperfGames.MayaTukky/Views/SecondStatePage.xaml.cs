@@ -63,6 +63,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             InitializeComponent();
 
+            GlobalScore.SecondScore = GlobalScore.FirstScore;
+
             // เหตุการณ์ในการรอให้แสดงคำถามเสร็จสิ้นก่อน
             _displayQuestionTimer = new DispatcherTimer();
             _displayQuestionTimer.Interval = TimeSpan.FromMilliseconds(QuestionTimeMilisecond);
@@ -311,7 +313,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                     }
                 }
 
-                // TODO: การเล่นอนิเมชันของนาฬิกา
                 const int First = 1;
                 const int Second = 2;
                 const int Third = 3;
