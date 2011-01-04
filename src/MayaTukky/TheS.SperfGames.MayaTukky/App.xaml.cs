@@ -26,6 +26,7 @@ namespace TheS.SperfGames.MayaTukky
         {
             this.RootVisual = new MainPage();
             //this.RootVisual = new Controls.CloudUI();
+            //this.RootVisual = new testPage();
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)

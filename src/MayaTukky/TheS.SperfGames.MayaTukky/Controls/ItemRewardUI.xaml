@@ -67,6 +67,24 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Collapsed</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimation Duration="0:0:6" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="LayoutRoot" d:IsOptimized="True"/>
 		</Storyboard>
 		<Storyboard x:Name="Sb_ItemMove">
 			<DoubleAnimation Duration="0:0:2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="cv_ItemReward" d:IsOptimized="True">
@@ -77,8 +95,11 @@
 		</Storyboard>
 	</UserControl.Resources>
     
-    <Canvas x:Name="LayoutRoot" Width="625" Height="488">
-		<Canvas x:Name="Smoke3" RenderTransformOrigin="0.5,0.5" Height="726" Width="872" d:LayoutOverrides="Width, Height, Margin" Canvas.Left="-142" Canvas.Top="-146" d:IsLocked="True">
+    <Canvas x:Name="LayoutRoot" Width="625" Height="488" RenderTransformOrigin="0.5,0.5">
+    	<Canvas.RenderTransform>
+    		<CompositeTransform/>
+    	</Canvas.RenderTransform>
+		<Canvas x:Name="Smoke3" RenderTransformOrigin="0.5,0.5" Height="726" Width="872" d:LayoutOverrides="Width, Height, Margin" Canvas.Left="-142" Canvas.Top="-146">
 
 <!-- <Path> -->
 <!-- <Path> -->
@@ -275,7 +296,8 @@
 			</Canvas>
 
 		</Canvas>
-		<TextBlock x:Name="txt_ItemName" Height="50" Canvas.Left="173" TextWrapping="Wrap" Text="Frametal  Potion" Canvas.Top="171" Width="314" TextAlignment="Center" FontSize="21.333" FontFamily="Cooper Black">
+		<TextBlock x:Name="textBlock" Height="35" Canvas.Left="162" TextWrapping="Wrap" Text="You got item" Canvas.Top="158" Width="314" TextAlignment="Center" FontSize="18.667" FontFamily="Myriad Pro" Foreground="Black" FontWeight="Bold"/>
+		<TextBlock x:Name="txt_ItemName" Height="35" Canvas.Left="173" TextWrapping="Wrap" Text="Frametal  Potion" Canvas.Top="182" Width="314" TextAlignment="Center" FontSize="21.333" FontFamily="Cooper Black">
 			<TextBlock.Foreground>
 				<LinearGradientBrush EndPoint="1.002,0.5" StartPoint="0,0.5">
 					<GradientStop Color="Red"/>
@@ -288,7 +310,7 @@
 				</LinearGradientBrush>
 			</TextBlock.Foreground>
 		</TextBlock>
-		<TextBlock x:Name="txt_Description" Height="154" Canvas.Left="312" TextWrapping="Wrap" Text="this Item when you use it will help you open cup one step but burn time 2 second" Canvas.Top="210" Width="136" FontSize="17.333" FontFamily="Franklin Gothic Medium"/>
+		<TextBlock x:Name="txt_Description" Height="154" Canvas.Left="312" TextWrapping="Wrap" Text="this Item when use it will help you open cup one step but burn time 2 second" Canvas.Top="210" Width="136" FontSize="17.333" FontFamily="Franklin Gothic Medium"/>
 		<Canvas x:Name="cv_ItemReward" Height="210" Canvas.Left="200" Canvas.Top="106" Width="110" RenderTransformOrigin="0.5,0.5">
 			<Canvas.RenderTransform>
 				<CompositeTransform/>

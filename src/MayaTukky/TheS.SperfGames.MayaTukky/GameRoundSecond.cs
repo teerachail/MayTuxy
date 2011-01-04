@@ -85,7 +85,7 @@ namespace TheS.SperfGames.MayaTukky
                 "voodoo4",
                 "voodoo5",
                 "voodoo6",
-                //"voodoo7",
+                "voodoo7",
                 "voodoo8",
             };
             

@@ -59,7 +59,7 @@ namespace TheS.SperfGames.MayaTukky
             _items = new List<string>{
                 "monster1",
                 "monster2",
-                //"monster3",
+                "monster3",
                 "monster4",
                 "monster5",
                 "monster6",
