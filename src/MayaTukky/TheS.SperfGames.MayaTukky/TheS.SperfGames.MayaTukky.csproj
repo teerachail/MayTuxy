@@ -106,8 +106,8 @@
     <Compile Include="Controls\EmptyItemUI.xaml.cs">
       <DependentUpon>EmptyItemUI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ItemReward.xaml.cs">
-      <DependentUpon>ItemReward.xaml</DependentUpon>
+    <Compile Include="Controls\ItemRewardUI.xaml.cs">
+      <DependentUpon>ItemRewardUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\MonsterSealUI.xaml.cs">
       <DependentUpon>MonsterSealUI.xaml</DependentUpon>
@@ -240,7 +240,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\ItemReward.xaml">
+    <Page Include="Controls\ItemRewardUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
