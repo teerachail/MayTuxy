@@ -23,6 +23,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         #region Fields
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
+        private const int QuestionTimeMilisecond = 1000; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
@@ -36,6 +37,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private string _cupStyleName;
         private RowUI _frontRow;
         private DispatcherTimer _timer;
+        private DispatcherTimer _displayQuestionTimer;
         private GameStageManager _gameManager;
         private TimeOutLayerUI _timeOutLayer;
         private TrueFalseMarkUI _trueFalseMark;
@@ -58,6 +60,10 @@ namespace TheS.SperfGames.MayaTukky.Views
         public ThirdStatePage()
         {
             InitializeComponent();
+
+            // เหตุการณ์ในการรอให้แสดงคำถามเสร็จสิ้นก่อน
+            _displayQuestionTimer = new DispatcherTimer();
+            _displayQuestionTimer.Interval = TimeSpan.FromMilliseconds(QuestionTimeMilisecond);
 
             // ตัวนับเวลาก่อนเกมเริ่ม
             _prepareLayer = new PrepareLayerUI();
@@ -129,7 +135,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             _isAutoAnswerCompleted = false;
             _isRoundFinish = false;
             _isGetNextQuestion = false;
-            _isWaitingClickForPlayQuestion = true;
 
             // เรียกคำถาม
             Question question = _gameManager.GetNextQuestion();
@@ -138,6 +143,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // กำหนดข้อมูลของแถวหน้า พร้อมกับกำหนดคำถาม
             _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
             showItemUI.SetQuestion(question.BackRow.BeforeCup);
+
+            // ตั้งเวลาในการดูคำถาม
+            _displayQuestionTimer.Start();
         }
 
         // กำหนดเหตุการณ์ของเกม
@@ -148,6 +156,9 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เหตุการณ์เมื่อเวลาเดิน
             _timer.Tick += new EventHandler(_timer_Tick);
+
+            // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
+            _displayQuestionTimer.Tick += new EventHandler(_displayQuestionTimer_Tick);
 
             // ทำการติดตามข้อมูลเมื่อมีการคลิกตัวแก้ว
             _frontRow.ClickAnswer += new CupAnswerEventHandler(CheckAnswer);
@@ -182,6 +193,22 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดเหตุการณ์เมื่อเล่นการนับเวลาจบ
             _timeOutLayer.Sb_TimeOut.Completed += new EventHandler(Sb_TimeOut_Completed);
+
+            // กำหนดการเล่นอนิเมชันเมื่อได้รับเวลาเพิ่ม
+            clock.Sb_TimeUp.Completed += new EventHandler(Sb_TimeUp_Completed);
+        }
+
+        // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
+        private void _displayQuestionTimer_Tick(object sender, EventArgs e)
+        {
+            _displayQuestionTimer.Stop();
+            _isWaitingClickForPlayQuestion = true;
+        }
+
+        // เมื่อได้รับเวลาเพิ่ม
+        private void Sb_TimeUp_Completed(object sender, EventArgs e)
+        {
+            clock.Sb_TimeUp.Stop();
         }
 
         // แสดงการเล่นเมฆในการเปลี่ยนฉาก
@@ -209,8 +236,22 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             if (result != null)
             {
-                // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา
+                // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา และแสดงผลเวลาเกมที่เหลือ
                 _timeCombo = result.TimeCombo;
+                _timeLeftSecond += result.TimeAdvantage;
+
+                const int IncorrectAnswer = 0;
+                if ((int)result.Score > IncorrectAnswer)
+                {
+                    // แสดงผลคะแนนที่ได้รับ
+                    GlobalScore.SecondScore += (int)result.Score;
+                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.SecondScore);
+                    scoreBoard.Sb_ScoreUp.Begin();
+
+                    // จัดการตัวนับการตอบถูกติดต่อกัน
+                    _gameCombo++;
+                    if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
+                }
 
                 if (result.IsCorrect == false)
                 {
@@ -236,16 +277,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    // จัดการตัวนับการตอบถูกติดต่อกัน
-                    _gameCombo++;
-                    if (GlobalScore.FirstMaximumCombo < _gameCombo)
-                        GlobalScore.FirstMaximumCombo = _gameCombo;
-
-                    // จัดการการแสดงผลคะแนนและเวลา
-                    _timeLeftSecond += result.TimeAdvantage;
-                    GlobalScore.ThirdScore += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.ThirdScore);
-                    scoreBoard.Sb_ScoreUp.Begin();
 
                     // แสดงผลอนิเมชันตอบถูกของ item
                     _frontRow.PlayAnswerResult(result);

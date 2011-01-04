@@ -20,7 +20,7 @@ namespace TheS.SperfGames.MayaTukky
         #region Fields
 
         protected const int MaximumIncorrectAnswer = 2;
-        private const int StartTimeSecond = 60;
+        private const int StartTimeSecond = 600;
         protected float _score;
         protected string _username;
         private int _timeLeftSecond = StartTimeSecond;

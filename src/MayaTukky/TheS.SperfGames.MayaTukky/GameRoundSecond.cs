@@ -117,38 +117,42 @@ namespace TheS.SperfGames.MayaTukky
         {
             var answer = new AnswerResult();
 
-            if (_isHasFinished == false)
+            if ((_correctCount < _maximumCorrect) && (!_isHasFinished) )
             {
-                if (string.IsNullOrEmpty(_answer))
-                {
-                    _answer = objName;
-                    answer.IsCorrect = null;
-                }
+                if (string.IsNullOrEmpty(_answer)) _answer = objName;
                 else
                 {
                     if (_answer.Equals(objName))
                     {
+                        // ตอบถูก
                         answer.IsCorrect = true;
                         answer.Score = _currentPoint;
                         _correctCount++;
+                        _answer = string.Empty;
 
-                        // ตรวจสอบการจบรอบเกมนี้แล้วหรือไม่
+                        // ตรวจสอบการจบรอบเกมนี้
                         if (_correctCount >= _maximumCorrect)
                         {
-                            _isHasFinished = true;
-                            const int ResetCorrectAnswer = 0;
-                            _correctCount = ResetCorrectAnswer;
                             answer.IsFinish = true;
                         }
                     }
                     else
                     {
+                        // ตอบผิด
                         answer.IsCorrect = false;
                         _isHasFinished = true;
                     }
-
-                    _answer = string.Empty;
                 } 
+            }
+            else
+            {
+                // ตรวจสอบว่าได้รับคะแนนจากการตอบอัตโนมัติแล้วหรือไม่
+                if (_isHasFinished == false)
+                {
+                    // ยังไม่ได้รับ
+                    _isHasFinished = true;
+                    answer.Score = _currentPoint;
+                }
             }
 
             return answer;
