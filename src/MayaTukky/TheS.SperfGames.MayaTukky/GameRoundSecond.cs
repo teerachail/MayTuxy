@@ -24,6 +24,7 @@ namespace TheS.SperfGames.MayaTukky
         private int _maximumCorrect;
         private int _correctCount;
         private string _answer;
+        private bool _isIncorrect;
 
         #endregion Fields
 
@@ -117,7 +118,7 @@ namespace TheS.SperfGames.MayaTukky
         {
             var answer = new AnswerResult();
 
-            if ((_correctCount < _maximumCorrect) && (!_isHasFinished) )
+            if ((!_isIncorrect))
             {
                 if (string.IsNullOrEmpty(_answer)) _answer = objName;
                 else
@@ -131,28 +132,19 @@ namespace TheS.SperfGames.MayaTukky
                         _answer = string.Empty;
 
                         // ตรวจสอบการจบรอบเกมนี้
-                        if (_correctCount >= _maximumCorrect)
+                        if ((_correctCount >= _maximumCorrect) && (!_isHasFinished))
                         {
                             answer.IsFinish = true;
+                            _isHasFinished = true;
                         }
                     }
                     else
                     {
                         // ตอบผิด
                         answer.IsCorrect = false;
-                        _isHasFinished = true;
+                        _isIncorrect = true;
                     }
                 } 
-            }
-            else
-            {
-                // ตรวจสอบว่าได้รับคะแนนจากการตอบอัตโนมัติแล้วหรือไม่
-                if (_isHasFinished == false)
-                {
-                    // ยังไม่ได้รับ
-                    _isHasFinished = true;
-                    answer.Score = _currentPoint;
-                }
             }
 
             return answer;
