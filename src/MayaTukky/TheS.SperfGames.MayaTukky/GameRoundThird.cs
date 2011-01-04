@@ -56,7 +56,6 @@ namespace TheS.SperfGames.MayaTukky
 
             CreateQuestion();
 
-            // TODO: Monster 3 error
             _items = new List<string>{
                 "monster1",
                 "monster2",

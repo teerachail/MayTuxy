@@ -78,7 +78,6 @@ namespace TheS.SperfGames.MayaTukky
             _cupLevel = cupLevel;
             CreateQuestion();
 
-            // TODO: Voodoo 7 error
             _items = new List<string>{
                 "voodoo1",
                 "voodoo2",

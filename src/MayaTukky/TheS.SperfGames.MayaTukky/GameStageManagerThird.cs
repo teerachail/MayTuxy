@@ -27,7 +27,6 @@ namespace TheS.SperfGames.MayaTukky
         {
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
-                new GameLevelThirdFix(5,5,275,2.765f,10,4,"4"),
                 new GameLevelThirdFix(3,0,050,1.000f,2,2,"1"),
                 new GameLevelThirdFix(3,1,075,1.665f,2,2,"1"),
                 new GameLevelThirdFix(3,2,100,1.940f,3,2,"1"),
