@@ -13,9 +13,9 @@ using PerfEx.Infrastructure;
 
 namespace TheS.SperfGames.MayaTukky.Controls
 {
-    public partial class ItemReward : UserControl,IAnime
+    public partial class ItemRewardUI : UserControl,IAnime
     {
-        public ItemReward()
+        public ItemRewardUI()
         {
             InitializeComponent();
             Sb_ItemMove.RepeatBehavior = RepeatBehavior.Forever;

@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" xmlns:PoisonAnimation_Item="clr-namespace:PoisonAnimation.Item;assembly=PoisonAnimation" x:Class="TheS.SperfGames.MayaTukky.Controls.ItemReward"
+    xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" xmlns:PoisonAnimation_Item="clr-namespace:PoisonAnimation.Item;assembly=PoisonAnimation" x:Class="TheS.SperfGames.MayaTukky.Controls.ItemRewardUI"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400" Width="625" Height="488">
 	<UserControl.Resources>

@@ -724,7 +724,11 @@
 
         	</Canvas>
         </Canvas>
-        <TextBlock x:Name="txt_Timer" Height="34" Canvas.Left="9" TextWrapping="Wrap" Canvas.Top="32" Width="68" Text="120" TextAlignment="Center" FontFamily="Showcard Gothic" FontSize="29.333" Foreground="#FF85C1DC"/>
+        <TextBlock x:Name="txt_Timer" Height="34" Canvas.Left="9" TextWrapping="Wrap" Canvas.Top="32" Width="68" Text="120" TextAlignment="Center" FontFamily="Showcard Gothic" FontSize="29.333" Foreground="#FF85C1DC">
+        	<TextBlock.Effect>
+        		<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="3"/>
+        	</TextBlock.Effect>
+        </TextBlock>
 		
     </Canvas>
 
