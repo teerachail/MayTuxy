@@ -23,19 +23,19 @@ namespace TheS.SperfGames.MayaTukky
             InitializeComponent();
 
             _pages = new string[]{
-                "/TotalScoreFirstPage",
+                "/ResultScorePage",
                 "/SecondStatePage",
-                "/TotalScoreSecondPage",
+                "/ResultScorePage",
                 "/ThirdStatePage",
-                "/TotalScoreThirdPage",
+                "/ResultScorePage",
+                "/TotalScorePage"
             };
 
             Views.FirstStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.SecondStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.ThirdStatePage.GameFinish += new EventHandler(NavigationPage);
-            Views.TotalScoreFirstPage.CalculateScoreCompleted += new EventHandler(NavigationPage);
-            Views.TotalScoreSecondPage.CalculateScoreCompleted += new EventHandler(NavigationPage);
-            Views.TotalScoreThirdPage.CalculateScoreCompleted += new EventHandler(NavigationPage);
+            Views.ResultScorePage.CalculateScoreCompleted +=new EventHandler(NavigationPage);
+            Views.TotalScorePage.CalculateScoreCompleted += new EventHandler(NavigationPage);
         }
 
         private void NavigationPage(object sender, EventArgs e)

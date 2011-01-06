@@ -91,12 +91,21 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             foreach (var canvas in _itemCanvas) canvas.Children.Clear();
 
+            const int VeryEasy = 2;
             const int Easy = 3;
             const int Normal = 4;
             const int Hard = 5;
 
             switch (question.Count)
             {
+                case VeryEasy:
+                    {
+                        _cupRowState = "twoCup";
+                        const float AddPointTwo = 170;
+                        _nextQuestionRectangle = AddPointTwo;
+                        _answerRequest = VeryEasy;
+                        break;
+                    }
                 case Easy:
                     {
                         _cupRowState = "threeCup";

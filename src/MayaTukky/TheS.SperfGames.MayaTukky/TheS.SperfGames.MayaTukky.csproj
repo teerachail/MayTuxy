@@ -31,6 +31,8 @@
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
     <LinkedServerProject>
     </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
   </PropertyGroup>
   <!-- This property group is only here to support building this project using the 
        MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
@@ -88,11 +90,29 @@
     <Reference Include="testVoodooAnime">
       <HintPath>..\..\..\lib\testVoodooAnime.dll</HintPath>
     </Reference>
+    <Reference Include="TotalScore">
+      <HintPath>..\..\..\lib\TotalScore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnswerResult.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonCloseUI.xaml.cs">
+      <DependentUpon>ButtonCloseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonCorrectUI.xaml.cs">
+      <DependentUpon>ButtonCorrectUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonMusicUI.xaml.cs">
+      <DependentUpon>ButtonMusicUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonResolutionUI.xaml.cs">
+      <DependentUpon>ButtonResolutionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonSoundUI.xaml.cs">
+      <DependentUpon>ButtonSoundUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ClockUI.xaml.cs">
       <DependentUpon>ClockUI.xaml</DependentUpon>
@@ -209,14 +229,12 @@
     <Compile Include="Views\ThirdStatePage.xaml.cs">
       <DependentUpon>ThirdStatePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TotalScoreFirstPage.xaml.cs">
-      <DependentUpon>TotalScoreFirstPage.xaml</DependentUpon>
+    <Compile Include="Views\ResultScorePage.xaml.cs">
+      <DependentUpon>ResultScorePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TotalScoreSecondPage.xaml.cs">
-      <DependentUpon>TotalScoreSecondPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TotalScoreThirdPage.xaml.cs">
-      <DependentUpon>TotalScoreThirdPage.xaml</DependentUpon>
+    <Compile Include="Views\TotalScorePage.xaml.cs">
+      <DependentUpon>TotalScorePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +242,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\ButtonCloseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonCorrectUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonMusicUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonResolutionUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonSoundUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\ClockUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -324,15 +362,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TotalScoreFirstPage.xaml">
+    <Page Include="Views\ResultScorePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TotalScoreSecondPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\TotalScoreThirdPage.xaml">
+    <Page Include="Views\TotalScorePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
