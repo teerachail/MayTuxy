@@ -75,6 +75,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
                 { "EmptyItem", typeof(Controls.EmptyItemUI) },
             };
+
+            // กำหนดพิกัดของกรอบวัตถุที่อยู่ภายในแก้วใหม่
+            Sb_FadeAway.Completed += new EventHandler(Sb_FadeAway_Completed);
         }
 
         /// <summary>
@@ -188,6 +191,12 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sb_FadeItemTwo.Stop();
             Sb_FadeItemOne.Stop();
             Sb_ShowLayer.Stop();
+        }
+
+        // กำหนดพิกัดของกรอบวัตถุที่อยู่ภายในแก้วใหม่
+        private void Sb_FadeAway_Completed(object sender, EventArgs e)
+        {
+            Sb_NextItem.Stop();
         }
 
         private void nextItem(float xPoint)

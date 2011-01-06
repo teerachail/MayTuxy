@@ -24,7 +24,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private const int AutoPlayQuestionTimeSecond = 2; // เวลาในการรอให้จำโจทย์ วินาที
-        private const int QuestionTimeMilisecond = 1000; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const int QuestionTimeMilisecond = 1300; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
         private string _cupStyleName;
         private string[] _cupStyles;

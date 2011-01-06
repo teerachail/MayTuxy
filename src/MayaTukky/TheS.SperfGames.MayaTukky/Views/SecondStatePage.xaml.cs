@@ -23,7 +23,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         #region Fields
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
-        private const int QuestionTimeMilisecond = 1000; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const int QuestionTimeMilisecond = 1300; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
@@ -62,6 +62,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         public SecondStatePage()
         {
             InitializeComponent();
+
+            GlobalScore.SecondScore = GlobalScore.FirstScore;
 
             // เหตุการณ์ในการรอให้แสดงคำถามเสร็จสิ้นก่อน
             _displayQuestionTimer = new DispatcherTimer();
@@ -311,7 +313,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                     }
                 }
 
-                // TODO: การเล่นอนิเมชันของนาฬิกา
                 const int First = 1;
                 const int Second = 2;
                 const int Third = 3;

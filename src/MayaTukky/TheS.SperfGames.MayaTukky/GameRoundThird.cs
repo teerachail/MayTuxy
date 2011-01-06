@@ -23,6 +23,7 @@ namespace TheS.SperfGames.MayaTukky
         private int _maximumCorrect;
         private int _correctCount;
         private int _questionIndex;
+        private bool _isIncorrect;
 
         #endregion Fields
 
@@ -55,7 +56,6 @@ namespace TheS.SperfGames.MayaTukky
 
             CreateQuestion();
 
-            // TODO: Monster 3 error
             _items = new List<string>{
                 "monster1",
                 "monster2",
@@ -88,7 +88,7 @@ namespace TheS.SperfGames.MayaTukky
         {
             AnswerResult answer = new AnswerResult();
 
-            if ((_correctCount < _maximumCorrect) && (!_isHasFinished))
+            if (!_isIncorrect)
             {
                 if (objName.Equals(Question.BackRow.BeforeCup[_questionIndex]))
                 {
@@ -99,24 +99,18 @@ namespace TheS.SperfGames.MayaTukky
                     answer.Score = _currentPoint;
 
                     // ตรวจสอบการจบรอบเกมนี้
-                    if (_correctCount >= _maximumCorrect) answer.IsFinish = true;
+                    if ((_correctCount >= _maximumCorrect) && (!_isHasFinished))
+                    {
+                        answer.IsFinish = true;
+                        _isHasFinished = true;
+                    }
                 }
                 else
                 {
                     // ตอบผิด
                     answer.IsCorrect = false;
-                    _isHasFinished = true;
+                    _isIncorrect = true;
                 } 
-            }
-            else
-            {
-                // ตรวจสอบว่าได้รับคะแนนจากการตอบอัตโนมัติแล้วหรือไม่
-                if (!_isHasFinished)
-                {
-                    // ยังไม่ได้รับ
-                    _isHasFinished = true;
-                    answer.Score = _currentPoint;
-                }
             }
 
             return answer;
