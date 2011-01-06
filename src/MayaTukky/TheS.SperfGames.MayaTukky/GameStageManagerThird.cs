@@ -27,17 +27,19 @@ namespace TheS.SperfGames.MayaTukky
             // สร้างระดับความยากของเกมในช่วง (Level 1-12)
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
-                // TODO: แก้ไขระดับความยากของเกม State 3 ใหม่
-                new GameLevelThirdFix(3,0,050,1.000f,02,2,"1"),
-                new GameLevelThirdFix(3,1,075,1.665f,02,2,"1"),
-                new GameLevelThirdFix(3,2,100,1.940f,03,2,"1"),
-                new GameLevelThirdFix(4,1,125,1.665f,04,3,"1"),
-                new GameLevelThirdFix(4,2,150,1.940f,05,3,"2"),
-                new GameLevelThirdFix(4,3,175,2.215f,06,3,"2"),
-                new GameLevelThirdFix(5,2,200,1.940f,07,4,"2"),
-                new GameLevelThirdFix(5,3,225,2.215f,08,4,"2"),
-                new GameLevelThirdFix(5,4,250,2.490f,09,4,"3"),
-                new GameLevelThirdFix(5,5,275,2.765f,10,4,"3"),
+                // TODO: ระดับความยาก State 3 ยังไม่รอบรับการสลับระหว่างที่ทำการเลือกแก้ว
+                new GameLevelThirdFix(2,0,07,1.000f,01,1,"1"),
+                new GameLevelThirdFix(2,1,09,1.665f,02,1,"1"),
+                new GameLevelThirdFix(3,0,11,1.000f,03,2,"1"),
+                new GameLevelThirdFix(3,1,13,1.665f,04,2,"1"),
+                new GameLevelThirdFix(3,1,15,1.665f,05,2,"2"),
+                new GameLevelThirdFix(4,0,17,1.000f,06,3,"2"),
+                new GameLevelThirdFix(4,1,19,1.665f,07,3,"2"),
+                new GameLevelThirdFix(4,1,21,1.665f,08,3,"2"),
+                new GameLevelThirdFix(4,1,23,1.665f,09,3,"3"),
+                new GameLevelThirdFix(5,1,25,1.665f,10,4,"3"),
+                new GameLevelThirdFix(5,1,27,1.665f,11,4,"3"),
+                new GameLevelThirdFix(5,1,29,1.665f,12,4,"3"),
             };
             _currentLevel = _gameLevels.First();
 

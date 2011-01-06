@@ -27,7 +27,7 @@ namespace TheS.SperfGames.MayaTukky
             // สร้างระดับความยากของเกมในช่วง (Level 1-12)
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
-                // TODO: แก้ไขระดับความยากของเกม State 2 ใหม่
+                // TODO: ระดับความยาก State 2 ยังไม่รอบรับการสลับระหว่างที่ทำการเลือกแก้ว
                 new GameLevelSecondFix(2,0,1,2,0,07,1.000f,01,"1"),
                 new GameLevelSecondFix(2,0,1,2,1,09,1.665f,02,"1"),
                 new GameLevelSecondFix(3,0,2,3,0,11,1.000f,03,"1"),
@@ -38,8 +38,8 @@ namespace TheS.SperfGames.MayaTukky
                 new GameLevelSecondFix(4,0,3,4,1,21,1.665f,08,"2"),
                 new GameLevelSecondFix(4,0,3,4,1,23,1.665f,09,"3"),
                 new GameLevelSecondFix(5,1,4,5,1,25,1.665f,10,"3"),
-                new GameLevelSecondFix(5,1,4,5,1,25,1.665f,11,"3"),
-                new GameLevelSecondFix(5,1,4,5,1,25,1.665f,12,"3"),
+                new GameLevelSecondFix(5,1,4,5,1,27,1.665f,11,"3"),
+                new GameLevelSecondFix(5,1,4,5,1,29,1.665f,12,"3"),
             };
             _currentLevel = _gameLevels.First();
 
