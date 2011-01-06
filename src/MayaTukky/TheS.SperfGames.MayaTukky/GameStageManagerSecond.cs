@@ -28,16 +28,18 @@ namespace TheS.SperfGames.MayaTukky
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
                 // TODO: แก้ไขระดับความยากของเกม State 2 ใหม่
-                new GameLevelSecondFix(3,0,2,3,0,050,1.0f,01,"1"),
-                new GameLevelSecondFix(3,0,2,3,1,075,2.0f,02,"1"),
-                new GameLevelSecondFix(4,0,3,4,0,100,1.0f,03,"1"),
-                new GameLevelSecondFix(4,0,3,4,1,125,2.0f,04,"1"),
-                new GameLevelSecondFix(4,0,3,4,2,150,4.0f,05,"2"),
-                new GameLevelSecondFix(4,0,4,5,0,175,1.0f,06,"2"),
-                new GameLevelSecondFix(4,0,4,5,1,200,2.0f,07,"2"),
-                new GameLevelSecondFix(4,0,4,5,2,225,4.0f,08,"2"),
-                new GameLevelSecondFix(5,0,4,5,1,250,2.0f,09,"3"),
-                new GameLevelSecondFix(5,0,4,5,2,275,4.0f,10,"3"),
+                new GameLevelSecondFix(2,0,1,2,0,07,1.000f,01,"1"),
+                new GameLevelSecondFix(2,0,1,2,1,09,1.665f,02,"1"),
+                new GameLevelSecondFix(3,0,2,3,0,11,1.000f,03,"1"),
+                new GameLevelSecondFix(3,0,2,3,1,13,1.665f,04,"1"),
+                new GameLevelSecondFix(3,1,2,3,1,15,1.665f,05,"2"),
+                new GameLevelSecondFix(4,0,3,4,0,17,1.000f,06,"2"),
+                new GameLevelSecondFix(4,0,3,4,1,19,1.665f,07,"2"),
+                new GameLevelSecondFix(4,0,3,4,1,21,1.665f,08,"2"),
+                new GameLevelSecondFix(4,0,3,4,1,23,1.665f,09,"3"),
+                new GameLevelSecondFix(5,1,4,5,1,25,1.665f,10,"3"),
+                new GameLevelSecondFix(5,1,4,5,1,25,1.665f,11,"3"),
+                new GameLevelSecondFix(5,1,4,5,1,25,1.665f,12,"3"),
             };
             _currentLevel = _gameLevels.First();
 

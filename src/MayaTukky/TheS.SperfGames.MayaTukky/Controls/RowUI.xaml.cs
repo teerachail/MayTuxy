@@ -126,11 +126,13 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Storyboard2.SpeedRatio = question.SwapSpeed;
 
             // กำหนด state เริ่มต้นจากจำนวนแก้ว
+            const int VeryEasy = 2;
             const int Easy = 3;
             const int Normal = 4;
             const int Hard = 5;
             switch (question.CupCount)
             {
+                case VeryEasy: _cupRowState = "twoCup"; break;
                 case Easy: _cupRowState = "threeCup"; break;
                 case Normal: _cupRowState = "fourCup"; break;
                 case Hard: _cupRowState = "fiveCup"; break;
