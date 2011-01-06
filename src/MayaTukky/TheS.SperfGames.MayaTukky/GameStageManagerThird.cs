@@ -17,7 +17,6 @@ namespace TheS.SperfGames.MayaTukky
     /// </summary>
     public class GameStageManagerThird : GameStageManager
     {
-
         #region Constructors
 
         /// <summary>
@@ -25,37 +24,46 @@ namespace TheS.SperfGames.MayaTukky
         /// </summary>
         public GameStageManagerThird()
         {
+            // สร้างระดับความยากของเกมในช่วง (Level 1-12)
             _gameLevels = new System.Collections.Generic.List<GameLevel>()
             {
-                new GameLevelThirdFix(3,0,050,1.000f,2,2,"1"),
-                new GameLevelThirdFix(3,1,075,1.665f,2,2,"1"),
-                new GameLevelThirdFix(3,2,100,1.940f,3,2,"1"),
-                new GameLevelThirdFix(4,1,125,1.665f,4,3,"1"),
-                new GameLevelThirdFix(4,2,150,1.940f,5,3,"2"),
-                new GameLevelThirdFix(4,3,175,2.215f,6,3,"2"),
-                new GameLevelThirdFix(5,2,200,1.940f,7,4,"3"),
-                new GameLevelThirdFix(5,3,225,2.215f,8,4,"3"),
-                new GameLevelThirdFix(5,4,250,2.490f,9,4,"4"),
-                new GameLevelThirdFix(5,5,275,2.765f,10,4,"4"),
+                // TODO: แก้ไขระดับความยากของเกม State 3 ใหม่
+                new GameLevelThirdFix(3,0,050,1.000f,02,2,"1"),
+                new GameLevelThirdFix(3,1,075,1.665f,02,2,"1"),
+                new GameLevelThirdFix(3,2,100,1.940f,03,2,"1"),
+                new GameLevelThirdFix(4,1,125,1.665f,04,3,"1"),
+                new GameLevelThirdFix(4,2,150,1.940f,05,3,"2"),
+                new GameLevelThirdFix(4,3,175,2.215f,06,3,"2"),
+                new GameLevelThirdFix(5,2,200,1.940f,07,4,"2"),
+                new GameLevelThirdFix(5,3,225,2.215f,08,4,"2"),
+                new GameLevelThirdFix(5,4,250,2.490f,09,4,"3"),
+                new GameLevelThirdFix(5,5,275,2.765f,10,4,"3"),
             };
             _currentLevel = _gameLevels.First();
 
             const int AddTimeSecond = 5;
-            const float AddPluseCombo = 0.1f;
+            const float AddGameComboPluse = 0.05f;
+            const float GameComboPluse = 0.95f;
             _timeCombo = new TimeCombo(AddTimeSecond);
-            _gameCombo = new GameCombo(AddPluseCombo);
+            _gameCombo = new GameCombo
+            {
+                Pluse = GameComboPluse,
+                AddPluse = AddGameComboPluse
+            };
         }
 
         #endregion Constructors
 
-        //เพิ่มความยาก
+        // เพิ่มความยาก
         protected override GameLevel nextLevel()
         {
             GameLevel newGameLevel = null;
-            const int MaximumLevel = 9;
+            _currentLevelIndex++;
+
+            // ตรวจสอบช่วงระดับความยากของเกม เพื่อทำการสร้างระดับความยากใหม่
+            const int MaximumLevel = 11;
             if (_currentLevelIndex <= MaximumLevel)
             {
-                _currentLevelIndex++;
                 _gameLevels[_currentLevelIndex].IsLevelUp = true;
                 newGameLevel = _gameLevels[_currentLevelIndex];
             }

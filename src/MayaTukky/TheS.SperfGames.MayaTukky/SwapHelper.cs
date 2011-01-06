@@ -56,6 +56,7 @@ namespace TheS.SperfGames.MayaTukky
                 result.Add(sourceNames[elementIndex]);
                 sourceNames.Remove(sourceNames[elementIndex]);
             }
+
             return result;
         }
 

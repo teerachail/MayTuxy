@@ -76,32 +76,8 @@ namespace TheS.SperfGames.MayaTukky
             _backCupCount = backCupCount;
             _maximumCorrect = maximumCorrect;
             _cupLevel = cupLevel;
+
             CreateQuestion();
-
-            _items = new List<string>{
-                "voodoo1",
-                "voodoo2",
-                "voodoo3",
-                "voodoo4",
-                "voodoo5",
-                "voodoo6",
-                "voodoo7",
-                "voodoo8",
-            };
-            
-            _items = _questionManager.CreateQuestionBefore(_items, backCupCount);
-            Question.BackRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, backCupCount);
-            Question.BackRow.Sequence = _questionManager.CreateSwapSequence(backCupCount, backSwapCount);
-            Question.BackRow.AfterCup = _questionManager.GetQuestionAfter(Question.BackRow.BeforeCup, Question.BackRow.Sequence);
-
-            const string Empty = "EmptyItem";
-            if (cupCount != backCupCount)
-            {
-                _items.Add(Empty);
-            }
-            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, cupCount);
-            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(cupCount, swapCount);
-            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
         }
 
         #endregion Constructors
@@ -143,7 +119,7 @@ namespace TheS.SperfGames.MayaTukky
                         answer.IsCorrect = false;
                         _isIncorrect = true;
                     }
-                } 
+                }
             }
 
             return answer;
@@ -158,8 +134,48 @@ namespace TheS.SperfGames.MayaTukky
             {
                 CupLevel = _cupLevel
             };
-            Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount,_swapSpeed, true);
+            Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount, _swapSpeed, true);
             Question.BackRow = Question.AddQuestionRow(_backCupCount, _backSwapCount, _swapSpeed, false);
+
+            // กำหนดชื่อวัตถุที่อยู่ภายในแก้ว
+            _items = new List<string>{
+                "voodoo1",
+                "voodoo2",
+                "voodoo3",
+            };
+
+            int cupLevel = int.Parse(_cupLevel);
+            const int Easy = 2;
+            const int Normal = 3;
+            const int Hard = 4;
+
+            if (cupLevel >= Easy)
+            {
+                _items.Add("voodoo4");
+                _items.Add("voodoo5");
+            }
+
+            if (cupLevel >= Normal)
+            {
+                _items.Add("voodoo6");
+                _items.Add("voodoo7");
+            }
+
+            if (cupLevel >= Hard) _items.Add("voodoo8");
+
+            _items = _questionManager.CreateQuestionBefore(_items, _backCupCount);
+            Question.BackRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _backCupCount);
+            Question.BackRow.Sequence = _questionManager.CreateSwapSequence(_backCupCount, _backSwapCount);
+            Question.BackRow.AfterCup = _questionManager.GetQuestionAfter(Question.BackRow.BeforeCup, Question.BackRow.Sequence);
+
+            const string Empty = "EmptyItem";
+            if (_cupCount != _backCupCount)
+            {
+                _items.Add(Empty);
+            }
+            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _cupCount);
+            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(_cupCount, _swapCount);
+            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
         }
 
         #endregion Methods

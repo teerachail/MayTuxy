@@ -19,8 +19,8 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        protected const int MaximumIncorrectAnswer = 2;
-        private const int StartTimeSecond = 120;
+        // TODO: Test time
+        private const int StartTimeSecond = 600;
         protected float _score;
         protected string _username;
         private int _timeLeftSecond = StartTimeSecond;
@@ -87,12 +87,8 @@ namespace TheS.SperfGames.MayaTukky
                 {
                     // ตอบผิด
                     _incorrectAnswer++;
-                    if (_incorrectAnswer >= MaximumIncorrectAnswer)
-                    {
-                        // ตอบผิดจนครบจำนวนครั้งที่กำหนด
-                        _incorrectAnswer = ResetIncorrectAnswer;
-                        _currentLevel = previousLevel();
-                    }
+                    _incorrectAnswer = ResetIncorrectAnswer;
+                    _currentLevel = previousLevel();
                 }
             }
 
@@ -135,24 +131,22 @@ namespace TheS.SperfGames.MayaTukky
 
             // ตรวจสอบการลดระดับความยากของเกม
             const int MinimumLevel = 0;
-            if (_currentLevelIndex > MinimumLevel)
-            {
-                _currentLevelIndex--;
-            }
+            if (_currentLevelIndex > MinimumLevel) _currentLevelIndex--;
 
             // ตรวจสอบช่วงระดับความยากของเกม เพื่อทำการสร้างระดับความยากใหม่
-            const int MaximumLevel = 9;
+            const int MaximumLevel = 11;
             if (_currentLevelIndex <= MaximumLevel)
             {
-                // ระดับความยากของเกมอยู่ในระดับมาตรฐานที่กำหนดไว้ (Level 1-10)
+                // ระดับความยากของเกมอยู่ในระดับมาตรฐานที่กำหนดไว้ (Level 1-12)
                 _gameLevels[_currentLevelIndex].IsLevelUp = false;
                 newGameLevel = _gameLevels[_currentLevelIndex];
             }
             else
             {
-                // ระดับความยากของเกมเกินระดับมาตรฐานที่กำหนดไว้ (Level 10+)
-                _currentLevel.IsLevelUp = false;
-                newGameLevel = _currentLevel;
+                // ระดับความยากของเกมเกินระดับมาตรฐานที่กำหนดไว้ (Level 13+)
+                _currentLevelIndex = MaximumLevel;
+                _gameLevels[_currentLevelIndex].IsLevelUp = false;
+                newGameLevel = _gameLevels[_currentLevelIndex];
             }
 
             return newGameLevel;

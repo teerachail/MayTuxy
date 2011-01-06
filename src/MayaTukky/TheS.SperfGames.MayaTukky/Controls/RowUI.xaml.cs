@@ -80,7 +80,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
         {
             InitializeComponent();
 
-
             var items = new TheS.SperfGames.MayaTukky.Models.CupItems();
 
             // กำหนดแก้วทั้งหมด
@@ -89,13 +88,21 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 canvas2,
                 canvas3,
                 canvas4,
-                canvas5
+                canvas5,
             };
 
-            foreach (var canvas in _cupCanvases) canvas.Children.Add(new CupUI(items));
-
-            initializeEvents();
-
+            // TODO: Check error
+            try
+            {
+                foreach (var canvas in _cupCanvases) canvas.Children.Add(new CupUI(items));
+                initializeEvents();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("----------------[Error]----------------\n" + ex.Message
+                    + "\n----------------[Data]----------------\n" + ex.Data
+                    + "\n----------------[StackTrace]----------------\n" + ex.StackTrace);
+            }
         }
 
         #endregion Constructors

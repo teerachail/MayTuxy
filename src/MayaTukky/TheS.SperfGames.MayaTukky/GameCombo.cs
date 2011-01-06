@@ -18,24 +18,11 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        private const int Pluse = 1;
-        private readonly float AddPluse;
+        public float Pluse { get; set; }
+        public float AddPluse { get; set; }
         private int _comboCount;
 
         #endregion Fields
-
-        #region Constructors
-
-        /// <summary>
-        /// กำหนดค่าเริ่มต้นให้กับตัวจัดการการให้คะแนนพิเศษ
-        /// </summary>
-        /// <param name="addPluse">ค่าของคะแนนที่จะถูกเพิ่มให้เมื่อตอบถูก</param>
-        public GameCombo(float addPluse)
-        {
-            AddPluse = addPluse;
-        }
-
-        #endregion Constructors
 
         #region Methods
 
@@ -52,8 +39,8 @@ namespace TheS.SperfGames.MayaTukky
                 if (ans.IsCorrect.Equals(true))
                 {
                     // ตอบถูก
-                    ans.Score = ans.Score * (Pluse + (_comboCount * AddPluse));
                     _comboCount++;
+                    ans.Score = ans.Score * (Pluse + (_comboCount * AddPluse));
                 }
                 else
                 {

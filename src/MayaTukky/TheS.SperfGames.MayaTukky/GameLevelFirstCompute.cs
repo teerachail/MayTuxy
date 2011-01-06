@@ -18,9 +18,9 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        private const int AddPoint = 50;
+        private const int AddPoint = 3;
         private const int AddSwapCount = 1;
-        protected const float AddSwapSpeed = 0.277f;
+        protected const float AddSwapSpeed = 0.555f;
 
         #endregion Fields
 
@@ -50,13 +50,17 @@ namespace TheS.SperfGames.MayaTukky
         {
             if (IsLevelUp) _level++;
             else _level--;
-            int gamePoint = AddPoint + (_level * AddPoint);
 
             var previous = previousGameRound as GameRoundFirst;
+
+            const int Point = 10;
+            int gamePoint = Point + (_level * AddPoint);
+
             _swapSpeed = previous.SwapSpeed + AddSwapSpeed;
             _swapCount = previous.SwapCount + AddSwapCount;
 
-            return new GameRoundFirst(gamePoint, _swapSpeed, _swapCount, previous.CupCount, previous.CupLevel);
+            const string cupStyle = "4";
+            return new GameRoundFirst(gamePoint, _swapSpeed, _swapCount, previous.CupCount, cupStyle);
         }
 
         #endregion Methods

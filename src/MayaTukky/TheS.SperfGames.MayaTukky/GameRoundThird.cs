@@ -55,24 +55,6 @@ namespace TheS.SperfGames.MayaTukky
             _cupLevel = cupLevel;
 
             CreateQuestion();
-
-            _items = new List<string>{
-                "monster1",
-                "monster2",
-                "monster3",
-                "monster4",
-                "monster5",
-                "monster6",
-                "monster7",
-                "monster8",
-            };
-
-            _items = _questionManager.CreateQuestionBefore(_items, cupCount);
-            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, cupCount);
-            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(cupCount, swapCount);
-            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
-
-            Question.BackRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, backCupCount);
         }
 
         #endregion Constructors
@@ -129,6 +111,39 @@ namespace TheS.SperfGames.MayaTukky
             const int backSwapCount = 0;
             Question.FrontRow = Question.AddQuestionRow(CupCount, SwapCount,_swapSpeed, true);
             Question.BackRow = Question.AddQuestionRow(CupCount, backSwapCount, _swapSpeed, false);
+
+            // กำหนดชื่อวัตถุที่อยู่ภายในแก้ว
+            _items = new List<string>{
+                "monster1",
+                "monster2",
+                "monster3",
+            };
+
+            int cupLevel = int.Parse(_cupLevel);
+            const int Easy = 2;
+            const int Normal = 3;
+            const int Hard = 4;
+
+            if (cupLevel >= Easy)
+            {
+                _items.Add("monster4");
+                _items.Add("monster5");
+            }
+
+            if (cupLevel >= Normal)
+            {
+                _items.Add("monster6");
+                _items.Add("monster7");
+            }
+
+            if (cupLevel >= Hard) _items.Add("monster8");
+
+            _items = _questionManager.CreateQuestionBefore(_items, _cupCount);
+            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _cupCount);
+            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(_cupCount, _swapCount);
+            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
+
+            Question.BackRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _backCupCount);
         }
 
         #endregion Methods

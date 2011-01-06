@@ -37,23 +37,8 @@ namespace TheS.SperfGames.MayaTukky
             : base(currentPoint, swapSpeed, swapCount, cupCount)
         {
             _cupLevel = cupLevel;
-            CreateQuestion();
 
-            _items = new List<string>{
-                "poison1",
-                "poison2",
-                "poison3",
-                "poison4",
-                "poison5",
-                "poison6",
-                "poison7",
-                "poison8",
-            };
-            
-            _items = _questionManager.CreateQuestionBefore(_items, cupCount,IncorrectAnswerItem);
-            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, cupCount);
-            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(cupCount, swapCount);
-            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
+            CreateQuestion();
         }
 
         #endregion Constructors
@@ -95,11 +80,43 @@ namespace TheS.SperfGames.MayaTukky
         /// </summary>
         protected override void CreateQuestion()
         {
+            // สร้างคำถาม
             Question = new Question()
             {
                 CupLevel = _cupLevel
             };
             Question.FrontRow = Question.AddQuestionRow(_cupCount, _swapCount,_swapSpeed, true);
+
+            // กำหนดชื่อวัตถุที่อยู่ภายในแก้ว
+            _items = new List<string>{
+                "poison1",
+                "poison2",
+                "poison3",
+            };
+
+            int cupLevel = int.Parse(_cupLevel);
+            const int Easy = 2;
+            const int Normal = 3;
+            const int Hard = 4;
+
+            if(cupLevel >= Easy)
+            {
+                _items.Add("poison4");
+                _items.Add("poison5");
+            }
+
+            if(cupLevel >= Normal)
+            {
+                _items.Add("poison6");
+                _items.Add("poison7");
+            }
+
+            if (cupLevel >= Hard) _items.Add("poison8");
+            
+            _items = _questionManager.CreateQuestionBefore(_items, _cupCount, IncorrectAnswerItem);
+            Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _cupCount);
+            Question.FrontRow.Sequence = _questionManager.CreateSwapSequence(_cupCount, _swapCount);
+            Question.FrontRow.AfterCup = _questionManager.GetQuestionAfter(Question.FrontRow.BeforeCup, Question.FrontRow.Sequence);
         }
 
         #endregion Methods
