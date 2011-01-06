@@ -15,9 +15,9 @@ using TheS.SperfGames.MayaTukky.Controls;
 namespace TheS.SperfGames.MayaTukky.Views
 {
     /// <summary>
-    /// หน้าคำนวณเวลาของเกม state 3
+    /// หน้าคำนวณเวลาของเกม state 1
     /// </summary>
-    public partial class TotalScoreThirdPage : Page
+    public partial class ResultScorePage : Page
     {
         #region Fields
 
@@ -34,61 +34,48 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         #endregion Events
 
-        public TotalScoreThirdPage()
+        public ResultScorePage()
         {
             InitializeComponent();
+            Sb_Next.RepeatBehavior = RepeatBehavior.Forever;
             _clound = new CloudUI();
             LayoutRoot.Children.Add(_clound);
 
-
-            poisonSeal.PlayCompleted += (s, e) =>
-            {
-                poisonSeal.StartPlay();
-            };
-            voodooSeal.PlayCompleted += (s, e) =>
-            {
-                voodooSeal.StartPlay();
-            };
-            monsterSeal.PlayCompleted += (s, e) =>
-            {
-                monsterSeal.StartPlay();
-            };
-
-            SB_Calculate.Completed += new EventHandler(SB_Calculate_Completed);
-            SB_Fusion.Completed += new EventHandler(SB_Fusion_Completed);
-            SB_CloudOut.Completed += new EventHandler(SB_CloudOut_Completed);
+            poisonSeal.PlayCompleted += new EventHandler(poisonSeal_PlayCompleted);
+            Sb_Result.Completed += new EventHandler(Sb_Result_Completed);
             _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
+            btn_Next.MouseLeftButtonDown += new MouseButtonEventHandler(btn_Next_MouseLeftButtonDown);
 
             _clound.Sb_CloudOut.Begin();
         }
 
-        private void Sb_CloudOut_Completed(object sender, EventArgs e)
+        private void btn_Next_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            SB_Calculate.Begin();
-
-            poisonSeal.StartPlay();
-            voodooSeal.StartPlay();
-            monsterSeal.StartPlay();
-        }
-
-        private void SB_CloudOut_Completed(object sender, EventArgs e)
-        {
+            Sb_Next.Stop();
+            Sb_Result.Stop();
             var temp = CalculateScoreCompleted;
             if (temp != null)
             {
-                temp(this,null);
+                temp(this, null);
             }
         }
 
-        private void SB_Fusion_Completed(object sender, EventArgs e)
+        private void Sb_CloudOut_Completed(object sender, EventArgs e)
         {
-            SB_CloudOut.Begin();
+            poisonSeal.StartPlay();
+            Sb_Result.Begin();
         }
 
-        private void SB_Calculate_Completed(object sender, EventArgs e)
+        private void Sb_Result_Completed(object sender, EventArgs e)
         {
-            SB_Fusion.Begin();
+            Sb_Next.Begin();
         }
+
+        private void poisonSeal_PlayCompleted(object sender, EventArgs e)
+        {
+            poisonSeal.StartPlay();
+        }
+
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)

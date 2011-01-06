@@ -4,12 +4,12 @@
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" x:Class="TheS.SperfGames.MayaTukky.Views.TotalScoreThirdPage"
+           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" xmlns:TotalScore_AvatarReward="clr-namespace:TotalScore.AvatarReward;assembly=TotalScore" xmlns:poo_JellyFish="clr-namespace:poo.JellyFish;assembly=MonsterAnimation" x:Class="TheS.SperfGames.MayaTukky.Views.TotalScorePage"
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
            Title="TotalScoreThirdPage Page" Width="625" Height="488">
     <navigation:Page.Resources>
-        <Storyboard x:Name="SB_Fusion">
+    	<Storyboard x:Name="SB_Fusion">
     		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="poisonSeal">
     			<DiscreteObjectKeyFrame KeyTime="0">
     				<DiscreteObjectKeyFrame.Value>
@@ -253,407 +253,407 @@
     			<DiscreteObjectKeyFrame KeyTime="0" Value="2418"/>
     		</ObjectAnimationUsingKeyFrames>
     	</Storyboard>
-        <Storyboard x:Name="SB_CloudOut">
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ScoreOnStage">
-        		<DiscreteObjectKeyFrame KeyTime="0">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Clound">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Clound">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Clound">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="-56"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<CircleEase EasingMode="EaseOut"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Clound">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<CircleEase EasingMode="EaseOut"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Hole">
-        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Hole">
-        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Hole">
-        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<CircleEase EasingMode="EaseOut"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Reward">
-        		<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-235">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<BounceEase EasingMode="EaseIn" Bounces="3" Bounciness="0"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        		<EasingDoubleKeyFrame KeyTime="0:0:7" Value="0">
-        			<EasingDoubleKeyFrame.EasingFunction>
-        				<BounceEase EasingMode="EaseOut" Bounces="0" Bounciness="0"/>
-        			</EasingDoubleKeyFrame.EasingFunction>
-        		</EasingDoubleKeyFrame>
-        		<EasingDoubleKeyFrame KeyTime="0:0:8" Value="-235"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas12">
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3.5">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas13">
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.2">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas14">
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.2">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas15">
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:7">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas16">
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:7">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
-        		<DiscreteObjectKeyFrame KeyTime="0">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas11">
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock3">
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="0"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3.7" Value="142"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="284"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.1" Value="426"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.3" Value="568"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.5" Value="700"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.7" Value="842"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:4.9" Value="984"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.1" Value="1126"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.3" Value="1368"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.5" Value="1500"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.7" Value="1642"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:5.9" Value="1884"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6.1" Value="2026"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6.3" Value="2148"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6.5" Value="2264"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6.7" Value="2348"/>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:6.9" Value="2418"/>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
-        		<DiscreteObjectKeyFrame KeyTime="0">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
-        		<DiscreteObjectKeyFrame KeyTime="0">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
-        		<DiscreteObjectKeyFrame KeyTime="0" Value="2418"/>
-        	</ObjectAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TotalScoreSeal">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="AllScore">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Name="SB_Calculate">
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Poison">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Voodoo">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Monster">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="poisonSeal">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="voodooSeal">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="monsterSeal">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score1">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score2">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score3">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="81"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="162"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="243"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="324"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="405"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="486"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="564"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="648"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="728"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="806"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock1">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="81"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="162"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="243"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="324"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="405"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="486"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="564"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.8" Value="648"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="728"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="806"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock2">
-                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="81"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.2" Value="162"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="243"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.4" Value="324"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="405"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="486"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.7" Value="564"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="648"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="728"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="806"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas17">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
-                <DiscreteObjectKeyFrame KeyTime="0:0:3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
-                <DiscreteObjectKeyFrame KeyTime="0:0:3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
-                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.1" Value="243"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.2" Value="486"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.3" Value="729"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.4" Value="972"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="1218"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="1458"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.7" Value="1684"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.8" Value="1944"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="2184"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="2418"/>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
+    	<Storyboard x:Name="SB_CloudOut">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ScoreOnStage">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Clound">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Clound">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Clound">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="-56"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<CircleEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Clound">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<CircleEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Hole">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Hole">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Hole">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<CircleEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Reward">
+    			<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-235">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BounceEase EasingMode="EaseIn" Bounces="3" Bounciness="0"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:7" Value="0">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BounceEase EasingMode="EaseOut" Bounces="0" Bounciness="0"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:8" Value="-235"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarOne">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.5">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarTwo">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.2">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarThree">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.2">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarFour">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:7">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarFive">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:7">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas11">
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock3">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.7" Value="142"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="284"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.1" Value="426"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.3" Value="568"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.5" Value="700"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.7" Value="842"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.9" Value="984"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.1" Value="1126"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.3" Value="1368"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.5" Value="1500"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.7" Value="1642"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5.9" Value="1884"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6.1" Value="2026"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6.3" Value="2148"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6.5" Value="2264"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6.7" Value="2348"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:6.9" Value="2418"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
+    			<DiscreteObjectKeyFrame KeyTime="0" Value="2418"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TotalScoreSeal">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="AllScore">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    	</Storyboard>
+    	<Storyboard x:Name="SB_Calculate">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:5">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Poison">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Voodoo">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Monster">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="poisonSeal">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="voodooSeal">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="monsterSeal">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score1">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score2">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score3">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock">
+    			<DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="81"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="162"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="243"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="324"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="405"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="486"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="564"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="648"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="728"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="806"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock1">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="81"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="162"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="243"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="324"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="405"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="486"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="564"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.8" Value="648"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="728"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2" Value="806"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock2">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="81"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.2" Value="162"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="243"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.4" Value="324"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="405"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="486"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.7" Value="564"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="648"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="728"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3" Value="806"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas17">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Collapsed</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
+    				<DiscreteObjectKeyFrame.Value>
+    					<Visibility>Visible</Visibility>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.1" Value="243"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.2" Value="486"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.3" Value="729"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.4" Value="972"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="1218"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="1458"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.7" Value="1684"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.8" Value="1944"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="2184"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4" Value="2418"/>
+    		</ObjectAnimationUsingKeyFrames>
+    	</Storyboard>
     </navigation:Page.Resources>
     <Canvas x:Name="LayoutRoot" Width="625" Height="488">
         <Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
@@ -747,13 +747,12 @@
 
                         <Canvas>
 
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> --><!-- Layer 3/<Path> -->
                             <Path StrokeThickness="3.0" Stroke="#ff787a31" StrokeMiterLimit="1.0" Fill="#ff959b37" Data="F1 M 57.838,40.272 C 56.423,37.917 44.944,42.211 32.200,49.867 C 19.455,57.519 10.270,65.634 11.684,67.989 C 13.097,70.344 24.577,66.048 37.321,58.396 C 50.067,50.742 59.251,42.628 57.838,40.272 Z"/>
                             <Canvas x:Name="Body" Height="65" Width="49" RenderTransformOrigin="0.5,0.5">
                                 <Canvas.RenderTransform>
@@ -849,16 +848,15 @@
 
                         <Canvas x:Name="canvas" Height="73" Width="67">
 
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
-                            <!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> --><!-- Layer 3/<Path> -->
                             <Path StrokeThickness="3.0" Stroke="#ff68102a" StrokeMiterLimit="1.0" Fill="#ff931938" Data="F1 M 64.864,34.424 C 63.087,32.449 52.465,39.117 41.136,49.316 C 29.807,59.512 22.063,69.379 23.837,71.350 C 25.613,73.322 36.235,66.654 47.563,56.459 C 58.892,46.260 66.639,36.395 64.864,34.424 Z"/>
                             <Canvas x:Name="canvas1" Height="73" Width="67" RenderTransformOrigin="0.5,0.5">
                                 <Canvas.RenderTransform>
@@ -930,8 +928,7 @@
                                     </Canvas>
                                 </Canvas>
 
-                                <!-- Layer 3/<Path> -->
-                                <!-- Layer 3/<Path> -->
+<!-- Layer 3/<Path> --><!-- Layer 3/<Path> -->
 
                                 <Canvas x:Name="canvas2" Height="35" Width="29" RenderTransformOrigin="0.5,0.5">
                                     <Canvas.RenderTransform>
@@ -973,8 +970,7 @@
                     </Canvas>
                 </Canvas>
                 <Canvas x:Name="Monster" Margin="0" Width="100" Height="100" d:LayoutOverrides="Width, Height" Canvas.Top="284" RenderTransformOrigin="0.5,0.5" Canvas.Left="25">
-                    <!-- Generated by Adobe Illustrator CS -> XAML Export Plug-In Version 0.19 PC   -->
-                    <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
+<!-- Generated by Adobe Illustrator CS -> XAML Export Plug-In Version 0.19 PC   --><!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
                     <Canvas.RenderTransform>
                         <CompositeTransform/>
                     </Canvas.RenderTransform>
@@ -1019,13 +1015,12 @@
                                 <Canvas Height="66" Width="59">
 
                                     <Canvas x:Name="E" Height="66" Width="59" RenderTransformOrigin="0.5,0.5">
-                                        <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                        <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                        <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> --><!-- Layer 3/<Group>/<Path> -->
                                         <Canvas.RenderTransform>
                                             <CompositeTransform/>
                                         </Canvas.RenderTransform>
@@ -1064,15 +1059,14 @@
 
                                     </Canvas>
 
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> -->
+<!-- Layer 3/<Group>/<Path> --><!-- Layer 3/<Group>/<Path> -->
                                     <Path x:Name="path5" Fill="#ff067ebc" Height="59.416" UseLayoutRounding="False" Width="44.066" Canvas.Top="-1" Data="M43.243999,52.891827 C43.243999,52.891827 32.421001,57.496826 26.143,59.025826 C26.143,59.025826 31.945999,52.414825 27.552,48.021824 C23.156,43.627827 10.343,36.850826 7.6100001,24.143826 C4.8790002,11.432821 12.77,0.23682222 25.042,1.0398222 C26.836,1.1588223 28.607,1.5848223 30.243999,2.3368223 C31.84,3.0688221 33.286999,4.0988221 34.533001,5.3328233 C35.855,6.6358232 36.952999,8.1488228 37.854,9.7688217 C38.841999,11.541821 39.597,13.437821 40.167999,15.385821 C40.796001,17.518826 41.208,19.711824 41.445,21.922825 C41.706001,24.309826 41.764999,26.723825 41.654999,29.119825 C41.527,31.988825 41.019001,34.814827 40.368999,37.605824 C39.807999,40.014824 38.556,42.625824 38.289001,45.090824 C38.153,46.359825 38.23,47.676826 38.729,48.875824 C39.362999,50.402824 42.981998,52.699825 43.243999,52.891827 z"/>
                                     <Canvas x:Name="canvas5" Height="0" Width="0" RenderTransformOrigin="0.5,0.5">
                                         <Canvas.RenderTransform>
@@ -1273,11 +1267,9 @@
 
             <Canvas>
 
-                <!-- Layer 1/<Path> -->
-
-                <!-- Layer 1/<Path> -->
-
-                <!-- Layer 1/<Path> -->
+<!-- Layer 1/<Path> -->
+<!-- Layer 1/<Path> -->
+<!-- Layer 1/<Path> --><!-- Layer 1/<Path> -->
                 <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 295.688,43.153 C 295.688,43.153 332.674,32.816 359.653,66.983 C 386.635,101.150 381.702,137.375 381.702,137.375 C 381.702,137.375 396.447,150.004 392.084,172.256 C 387.719,194.506 371.767,197.121 371.767,197.121 C 371.767,197.121 390.423,225.612 365.015,253.678 C 339.606,281.743 304.455,274.927 296.751,266.706 C 296.751,266.706 290.444,283.247 266.788,277.008 C 266.788,277.008 254.232,322.163 205.771,336.365 C 157.313,350.567 156.531,320.721 156.531,320.721 C 156.531,320.721 144.414,323.956 137.330,311.288 C 137.330,311.288 112.505,327.918 100.254,303.207 C 100.254,303.207 69.043,319.233 33.112,283.204 C -2.816,247.172 23.803,205.130 23.803,205.130 C 23.803,205.130 5.170,181.719 21.065,167.036 C 21.065,167.036 -9.720,138.604 46.822,77.999 C 88.154,41.600 127.204,62.374 127.204,62.374 C 127.204,62.374 130.998,54.735 139.300,54.695 C 139.300,54.695 139.751,15.316 198.450,5.510 C 257.150,-4.296 258.550,21.737 258.550,21.737 C 258.550,21.737 276.410,17.840 295.688,43.153 Z"/>
 
                 <!-- Layer 1/<Path> -->
@@ -1305,8 +1297,6 @@
                 <Path Opacity="0.3" Fill="#ffb7b7b7" Data="F1 M 331.083,53.545 C 331.083,53.545 368.069,43.208 395.051,77.376 C 422.031,111.542 417.098,147.768 417.098,147.768 C 417.098,147.768 431.843,160.396 427.479,182.648 C 423.115,204.897 407.163,207.513 407.163,207.513 C 407.163,207.513 425.817,236.004 400.412,264.071 C 375.000,292.135 339.850,285.320 332.147,277.098 C 332.147,277.098 325.840,293.639 302.186,287.401 C 302.186,287.401 289.627,332.555 241.167,346.757 C 192.709,360.959 191.928,331.116 191.928,331.116 C 191.928,331.116 179.811,334.348 172.725,321.679 C 172.725,321.679 147.901,338.309 135.651,313.599 C 135.651,313.599 104.438,329.625 68.508,293.597 C 32.579,257.565 59.198,215.522 59.198,215.522 C 59.198,215.522 40.565,192.112 56.461,177.428 C 56.461,177.428 25.676,148.997 82.218,88.391 C 123.551,51.993 162.600,72.766 162.600,72.766 C 162.600,72.766 166.393,65.127 174.695,65.087 C 174.695,65.087 175.146,25.708 233.848,15.902 C 292.546,6.097 293.945,32.130 293.945,32.130 C 293.945,32.130 311.807,28.233 331.083,53.545 Z"/>
 
                 <!-- Layer 1/<Path> -->
-
-                <!-- Layer 1/<Path> -->
                 <Path Opacity="0.3" Fill="#ffedecec" Data="F1 M 331.882,73.590 C 331.882,73.590 368.213,63.829 394.707,96.065 C 421.204,128.301 416.349,162.483 416.349,162.483 C 416.349,162.483 430.830,174.399 426.540,195.395 C 422.250,216.392 406.581,218.863 406.581,218.863 C 406.581,218.863 424.898,245.743 399.937,272.232 C 374.978,298.721 340.452,292.293 332.887,284.538 C 332.887,284.538 326.689,300.147 303.455,294.264 C 303.455,294.264 291.114,336.874 243.511,350.288 C 195.911,363.696 195.150,335.534 195.150,335.534 C 195.150,335.534 183.247,338.586 176.292,326.633 C 176.292,326.633 151.904,342.329 139.877,319.014 C 139.877,319.014 109.216,334.145 73.934,300.154 C 38.650,266.161 64.804,226.483 64.804,226.483 C 64.804,226.483 46.507,204.397 62.123,190.539 C 62.123,190.539 31.889,163.716 87.438,106.518 C 128.041,72.164 166.393,91.759 166.393,91.759 C 166.393,91.759 170.118,84.549 178.273,84.510 C 178.273,84.510 178.724,47.352 236.379,38.088 C 294.041,28.824 295.410,53.389 295.410,53.389 C 295.410,53.389 312.953,49.708 331.882,73.590 Z"/>
 
             </Canvas>
@@ -1323,13 +1313,24 @@
                     <Canvas.RenderTransform>
                         <CompositeTransform/>
                     </Canvas.RenderTransform>
-                    <Canvas x:Name="canvas12" Height="220" Width="200"/>
-                    <Canvas x:Name="canvas13" Height="220" Width="200"/>
-                    <Canvas x:Name="canvas14" Height="220" Width="200"/>
-                    <Canvas x:Name="canvas15" Height="220" Width="200">
-                        <Image Height="162" Canvas.Left="43" Source="Piture/sunny.jpg" Stretch="Fill" Width="116" Canvas.Top="44"/>
+                    <Canvas x:Name="cv_AvatarOne" Height="220" Width="200">
+                    	<TotalScore_AvatarReward:Crow d:LayoutOverrides="Width, Height"/>
                     </Canvas>
-                    <Canvas x:Name="canvas16" Height="220" Width="200"/>
+                    <Canvas x:Name="cv_AvatarTwo" Height="220" Width="200">
+                    	<poo_JellyFish:Gost d:LayoutOverrides="Width, Height"/>
+                    </Canvas>
+                    <Canvas x:Name="cv_AvatarThree" Height="220" Width="200">
+                    	<poo_JellyFish:Gost d:LayoutOverrides="Width, Height"/>
+                    </Canvas>
+                    <Canvas x:Name="cv_AvatarFour" Height="220" Width="200">
+                    	<poo_JellyFish:Gost d:LayoutOverrides="Width, Height"/>
+                    </Canvas>
+                    <Canvas x:Name="cv_AvatarFive" Height="220" Width="200">
+                    	<Canvas x:Name="cv_Aura" Height="100" Width="100">
+                    		<TotalScore_AvatarReward:Aura3 d:LayoutOverrides="Width, Height"/>
+                    	</Canvas>
+                    	<TotalScore_AvatarReward:Berserk d:LayoutOverrides="Width, Height"/>
+                    </Canvas>
                 </Canvas>
 
             </Canvas>

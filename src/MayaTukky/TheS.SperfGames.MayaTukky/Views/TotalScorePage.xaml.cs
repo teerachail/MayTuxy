@@ -15,9 +15,9 @@ using TheS.SperfGames.MayaTukky.Controls;
 namespace TheS.SperfGames.MayaTukky.Views
 {
     /// <summary>
-    /// หน้าคำนวณเวลาของเกม state 1
+    /// หน้าคำนวณเวลาของเกมทั้งหมด
     /// </summary>
-    public partial class TotalScoreFirstPage : Page
+    public partial class TotalScorePage : Page
     {
         #region Fields
 
@@ -34,14 +34,29 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         #endregion Events
 
-        public TotalScoreFirstPage()
+        public TotalScorePage()
         {
             InitializeComponent();
             _clound = new CloudUI();
             LayoutRoot.Children.Add(_clound);
 
-            poisonSeal.PlayCompleted += new EventHandler(poisonSeal_PlayCompleted);
-            SB_SumScore.Completed += new EventHandler(SB_SumScore_Completed);
+
+            poisonSeal.PlayCompleted += (s, e) =>
+            {
+                poisonSeal.StartPlay();
+            };
+            voodooSeal.PlayCompleted += (s, e) =>
+            {
+                voodooSeal.StartPlay();
+            };
+            monsterSeal.PlayCompleted += (s, e) =>
+            {
+                monsterSeal.StartPlay();
+            };
+
+            SB_Calculate.Completed += new EventHandler(SB_Calculate_Completed);
+            SB_Fusion.Completed += new EventHandler(SB_Fusion_Completed);
+            SB_CloudOut.Completed += new EventHandler(SB_CloudOut_Completed);
             _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
 
             _clound.Sb_CloudOut.Begin();
@@ -49,11 +64,14 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private void Sb_CloudOut_Completed(object sender, EventArgs e)
         {
+            SB_Calculate.Begin();
+
             poisonSeal.StartPlay();
-            SB_SumScore.Begin();
+            voodooSeal.StartPlay();
+            monsterSeal.StartPlay();
         }
 
-        private void SB_SumScore_Completed(object sender, EventArgs e)
+        private void SB_CloudOut_Completed(object sender, EventArgs e)
         {
             var temp = CalculateScoreCompleted;
             if (temp != null)
@@ -62,11 +80,15 @@ namespace TheS.SperfGames.MayaTukky.Views
             }
         }
 
-        private void poisonSeal_PlayCompleted(object sender, EventArgs e)
+        private void SB_Fusion_Completed(object sender, EventArgs e)
         {
-            poisonSeal.StartPlay();
+            SB_CloudOut.Begin();
         }
 
+        private void SB_Calculate_Completed(object sender, EventArgs e)
+        {
+            SB_Fusion.Begin();
+        }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)

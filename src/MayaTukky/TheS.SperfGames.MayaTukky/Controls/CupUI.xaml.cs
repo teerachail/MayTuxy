@@ -75,8 +75,6 @@ namespace TheS.SperfGames.MayaTukky.Controls
 
             _items = cupItems;
 
-            Sb_ShowItem.SpeedRatio = 0.2;
-
             Sb_Click.Completed += new EventHandler(Sb_Click_Completed);
             Sb_Up.Completed += new EventHandler(Sb_Up_Completed);
             cv_Cup.MouseLeftButtonDown += new MouseButtonEventHandler(Cup_MouseLeftButtonDown);

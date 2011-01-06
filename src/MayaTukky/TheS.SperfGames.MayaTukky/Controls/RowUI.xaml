@@ -154,6 +154,37 @@
     <Canvas x:Name="LayoutRoot" Width="625" Height="488">
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="Position">
+    			<VisualState x:Name="twoCup">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas4">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas5">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<DoubleAnimation Duration="0" To="160" Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="canvas1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="220" Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="canvas1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="350" Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="canvas2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="220" Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="canvas2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="220" Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="canvas3" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="410" Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="canvas3" d:IsOptimized="True"/>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas3">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>			
+				</VisualState>
     			<VisualState x:Name="threeCup">
     				<Storyboard>
     					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas4">
@@ -212,14 +243,15 @@
     				</Storyboard>
     			</VisualState>
     			<VisualState x:Name="none"/>
+    			
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
-        <Canvas x:Name="canvas1" Width="110" Height="210" Canvas.ZIndex="1">
+        <Canvas x:Name="canvas1" Width="110" Height="210" Canvas.ZIndex="1" Background="{x:Null}">
             <Canvas.RenderTransform>
                 <CompositeTransform/>
             </Canvas.RenderTransform>
         </Canvas>
-        <Canvas x:Name="canvas2" Width="110" Height="210" Canvas.ZIndex="1">
+        <Canvas x:Name="canvas2" Width="110" Height="210" Canvas.ZIndex="1" Background="{x:Null}">
             <Canvas.RenderTransform>
                 <CompositeTransform/>
             </Canvas.RenderTransform>

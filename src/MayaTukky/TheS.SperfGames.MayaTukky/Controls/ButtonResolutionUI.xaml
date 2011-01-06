@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="TheS.SperfGames.MayaTukky.Controls.ButtonResolutionUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+    mc:Ignorable="d"
+    d:DesignHeight="60" d:DesignWidth="60">
+
+    <Canvas x:Name="LayoutRoot" Width="50" Height="50">
+        <i:Interaction.Triggers>
+            <i:EventTrigger>
+                <ei:GoToStateAction StateName="none"/>
+            </i:EventTrigger>
+            <i:EventTrigger EventName="MouseEnter">
+                <ei:GoToStateAction StateName="over"/>
+            </i:EventTrigger>
+            <i:EventTrigger EventName="MouseLeave">
+                <ei:GoToStateAction StateName="none"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ResolutionBase">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition From="none" GeneratedDuration="0:0:0.05" To="over">
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Option">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.3"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Option">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.3"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Option"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="-140" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="canvas"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="-0.75" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="0.625" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="90" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="canvas1"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="90" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="canvas2"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="-0.458" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas1"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="-0.458" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas2"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas1"/>
+                            <DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas2"/>
+                        </Storyboard>
+                    </VisualTransition>
+                    <VisualTransition From="over" GeneratedDuration="0:0:0.1" To="none"/>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="none"/>
+                <VisualState x:Name="over">
+                    <Storyboard>
+                        <DoubleAnimation Duration="0" To="1.3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Option" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="1.3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Option" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Option" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="-140" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="-0.75" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0.625" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="90" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="canvas1" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="90" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="canvas2" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="-0.458" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas1" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="-0.458" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas2" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas1" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas2" d:IsOptimized="True"/>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="ResolutionOnOff">
+            	<VisualStateGroup.Transitions>
+            		<VisualTransition GeneratedDuration="0:0:0.1"/>
+            	</VisualStateGroup.Transitions>
+            	<VisualState x:Name="on"/>
+            	<VisualState x:Name="off">
+            		<Storyboard>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path4">
+            				<DiscreteObjectKeyFrame KeyTime="0">
+            					<DiscreteObjectKeyFrame.Value>
+            						<Visibility>Collapsed</Visibility>
+            					</DiscreteObjectKeyFrame.Value>
+            				</DiscreteObjectKeyFrame>
+            			</ObjectAnimationUsingKeyFrames>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path3">
+            				<DiscreteObjectKeyFrame KeyTime="0">
+            					<DiscreteObjectKeyFrame.Value>
+            						<Visibility>Visible</Visibility>
+            					</DiscreteObjectKeyFrame.Value>
+            				</DiscreteObjectKeyFrame>
+            			</ObjectAnimationUsingKeyFrames>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path5">
+            				<DiscreteObjectKeyFrame KeyTime="0">
+            					<DiscreteObjectKeyFrame.Value>
+            						<Visibility>Collapsed</Visibility>
+            					</DiscreteObjectKeyFrame.Value>
+            				</DiscreteObjectKeyFrame>
+            			</ObjectAnimationUsingKeyFrames>
+            			<ColorAnimation Duration="0" To="#FF878787" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path1" d:IsOptimized="True"/>
+            			<ColorAnimation Duration="0" To="#FF878787" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path2" d:IsOptimized="True"/>
+            			<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path3" d:IsOptimized="True"/>
+            			<ColorAnimation Duration="0" To="#FF838383" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path3" d:IsOptimized="True"/>
+            		</Storyboard>
+            	</VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Canvas x:Name="Option" RenderTransformOrigin="0.966,0.965" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" Height="727" Canvas.Left="-712" Canvas.Top="-677" Width="762">
+
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+            <!-- <Group>/<Path> -->
+            <Path x:Name="path" Fill="#ff055477" Data="F1 M 751.880,711.905 C 751.880,714.591 749.703,716.769 747.016,716.769 L 725.533,716.769 C 722.847,716.769 720.669,714.591 720.669,711.905 L 720.669,690.422 C 720.669,687.736 722.847,685.559 725.533,685.559 L 747.016,685.559 C 749.703,685.559 751.880,687.736 751.880,690.422 L 751.880,711.905 Z" UseLayoutRounding="False"/>
+
+            <!-- <Group>/<Path> -->
+            <Path Fill="#ff2f2f2f" Data="F1 M 749.516,710.277 C 749.516,712.556 747.667,714.404 745.389,714.404 L 727.161,714.404 C 724.881,714.404 723.034,712.556 723.034,710.277 L 723.034,692.050 C 723.034,689.771 724.881,687.923 727.161,687.923 L 745.389,687.923 C 747.667,687.923 749.516,689.771 749.516,692.050 L 749.516,710.277 Z" UseLayoutRounding="False"/>
+            <Canvas x:Name="canvas1" Height="727" Width="762" RenderTransformOrigin="0.966,0.965">
+                <Canvas.RenderTransform>
+                    <CompositeTransform/>
+                </Canvas.RenderTransform>
+                <!-- <Group>/<Path> -->
+                <Path x:Name="path1" Fill="#fffefefe" Data="F1 M 746.604,701.648 C 746.604,707.258 741.980,711.805 736.275,711.805 C 730.570,711.805 725.946,707.258 725.946,701.648" UseLayoutRounding="False"/>
+
+            </Canvas>
+            <Canvas x:Name="canvas2" Height="727" Width="762" RenderTransformOrigin="0.966,0.965">
+                <Canvas.RenderTransform>
+                    <CompositeTransform/>
+                </Canvas.RenderTransform>
+                <!-- <Group>/<Path> -->
+                <Path x:Name="path2" Fill="#fffefefe" Data="F1 M 725.946,700.630 C 725.946,695.021 730.570,690.474 736.275,690.474 C 741.980,690.474 746.604,695.021 746.604,700.630" UseLayoutRounding="False"/>
+
+            </Canvas>
+
+            <!-- <Group>/<Path> -->
+            <Path x:Name="path4" Fill="#ff2f2f2f" Data="F1 M 743.248,701.162 C 743.248,705.013 740.126,708.135 736.275,708.135 C 732.424,708.135 729.302,705.013 729.302,701.162 C 729.302,697.311 732.424,694.189 736.275,694.189 C 740.126,694.189 743.248,697.311 743.248,701.162 Z" UseLayoutRounding="False"/>
+
+            <!-- <Group>/<Path> -->
+            <Path x:Name="path3" Fill="#fffefefe" Data="F1 M 741.844,701.162 C 741.844,704.238 739.351,706.731 736.275,706.731 C 733.200,706.731 730.706,704.238 730.706,701.162 C 730.706,698.086 733.200,695.593 736.275,695.593 C 739.351,695.593 741.844,698.086 741.844,701.162 Z" UseLayoutRounding="False"/>
+            <Canvas x:Name="canvas" Height="727" Width="762" RenderTransformOrigin="0.966,0.965">
+                <Canvas.RenderTransform>
+                    <CompositeTransform/>
+                </Canvas.RenderTransform>
+                <!-- <Group>/<Path> -->
+                <Path x:Name="path5" Fill="#ff2f2f2f" Data="F1 M 740.487,699.104 C 740.487,700.292 739.523,701.257 738.333,701.257 C 737.145,701.257 736.180,700.292 736.180,699.104 C 736.180,697.914 737.145,696.950 738.333,696.950 C 739.523,696.950 740.487,697.914 740.487,699.104 Z" UseLayoutRounding="False"/>
+
+            </Canvas>
+
+        </Canvas>
+    </Canvas>
+</UserControl>
