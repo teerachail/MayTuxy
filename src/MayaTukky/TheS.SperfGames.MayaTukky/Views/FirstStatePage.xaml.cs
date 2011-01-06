@@ -24,10 +24,9 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private const int AutoPlayQuestionTimeSecond = 2; // เวลาในการรอให้จำโจทย์ วินาที
-        private const int QuestionTimeMilisecond = 1300; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const int QuestionTimeMilisecond = 700; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const string CupStyleName = "CylindricalCup";
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
-        private string _cupStyleName;
-        private string[] _cupStyles;
         private int _correctCount;
         private int _incorrectCount;
         private int _timeLeftSecond;
@@ -75,10 +74,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดค่าให้ตัวแจ้งเวลาจบเกม
             _timeOutLayer = new TheS.SperfGames.MayaTukky.Controls.TimeOutLayerUI();
-
-            // กำหนดชนิดของแก้ว และทำการสุ่มลายแก้วที่จะนำมาใช้ในเกม
-            _cupStyles = new string[] { "CylindricalCup", "TallCup", "TriangleCup" };
-            _cupStyleName = randomCupStyle();
 
             // สร้างตัวจับเวลา
             _timer = new DispatcherTimer();
@@ -197,7 +192,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             var question = _gameManager.GetNextQuestion();
 
             // กำหนดข้อมูลของแถวหน้า
-            _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, question.CupLevel);
+            _frontRow.SetQuestionRow(question.FrontRow, CupStyleName, question.CupLevel);
 
             // ตั้งเวลาในการดูคำถาม
             _displayQuestionTimer.Start();
@@ -213,6 +208,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             {
                 // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา
                 _timeCombo = result.TimeCombo;
+
+                // แสดงผลอนิเมชันตอบของ item
+                _frontRow.PlayAnswerResult(result);
 
                 if (result.IsCorrect == false)
                 {
@@ -249,9 +247,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                     GlobalScore.FirstScore += (int)result.Score;
                     scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.FirstScore);
                     scoreBoard.Sb_ScoreUp.Begin();
-
-                    // แสดงผลอนิเมชันตอบถูกของ item
-                    _frontRow.PlayAnswerResult(result);
 
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;
@@ -299,14 +294,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             clock.Sb_Clock3.Stop();
             clock.Sb_Clock4.Stop();
             clock.Sb_Clock5.Stop();
-        }
-
-        // สุ่มแก้วที่จะนำมาแสดงผลใน state นี้
-        private string randomCupStyle()
-        {
-            const int MaximumStyle = 3;
-            var _random = new Random();
-            return _cupStyles[_random.Next(MaximumStyle)];
         }
 
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง

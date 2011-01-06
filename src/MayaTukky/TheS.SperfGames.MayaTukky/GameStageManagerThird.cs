@@ -36,14 +36,14 @@ namespace TheS.SperfGames.MayaTukky
                 new GameLevelThirdFix(4,0,17,1.000f,06,3,"2"),
                 new GameLevelThirdFix(4,1,19,1.665f,07,3,"2"),
                 new GameLevelThirdFix(4,1,21,1.665f,08,3,"2"),
-                new GameLevelThirdFix(4,1,23,1.665f,09,3,"3"),
-                new GameLevelThirdFix(5,1,25,1.665f,10,4,"3"),
+                new GameLevelThirdFix(4,2,23,1.665f,09,3,"3"),
+                new GameLevelThirdFix(5,0,25,1.665f,10,4,"3"),
                 new GameLevelThirdFix(5,1,27,1.665f,11,4,"3"),
-                new GameLevelThirdFix(5,1,29,1.665f,12,4,"3"),
+                new GameLevelThirdFix(5,2,29,1.665f,12,4,"3"),
             };
             _currentLevel = _gameLevels.First();
 
-            const int AddTimeSecond = 5;
+            const int AddTimeSecond = 3;
             const float AddGameComboPluse = 0.05f;
             const float GameComboPluse = 0.95f;
             _timeCombo = new TimeCombo(AddTimeSecond);
