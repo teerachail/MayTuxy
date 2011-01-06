@@ -104,7 +104,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
                 case VeryEasy:
                     {
                         _cupRowState = "twoCup";
-                        const float AddPointTwo = 170;
+                        const float AddPointTwo = 270;
                         _nextQuestionRectangle = AddPointTwo;
                         _answerRequest = VeryEasy;
                         break;
