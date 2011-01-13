@@ -227,12 +227,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             if (_doNotingTime >= SecondHandAnimationSecond)
             {
-                tukkyHand.Hand_playStory3_Right2.Stop();
-                tukkyHand.Hand_playStory3_Right_Left4.Begin();
+                tukkyHand.Sb_HandWaitThreeSecond.Stop();
+                tukkyHand.Sb_HandWaitFiveSecond.Begin();
             }
             else if (_doNotingTime >= FirstHandAnimationSecond)
             {
-                tukkyHand.Hand_playStory3_Right2.Begin();
+                tukkyHand.Sb_HandWaitThreeSecond.Begin();
             }
 
         }
@@ -280,8 +280,8 @@ namespace TheS.SperfGames.MayaTukky.Views
             var result = _gameManager.CheckAnswer(objName.ItemName);
 
             // หยุดการเล่่นอินเมชันมือทักกี้
-            tukkyHand.Hand_playStory3_Right2.Stop();
-            tukkyHand.Hand_playStory3_Right_Left4.Stop();
+            tukkyHand.Sb_HandWaitThreeSecond.Stop();
+            tukkyHand.Sb_HandWaitFiveSecond.Stop();
             _doNotingHandTimer.Stop();
             const int ResetTimer = 0;
             _doNotingTime = ResetTimer;
