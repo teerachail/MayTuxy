@@ -412,8 +412,8 @@ namespace TheS.SperfGames.MayaTukky.Views
                     tukkyWin.ThreeTopLose.StartPlay();
 
                     // เล่นอนิเมชันดาว
-                    scoreBoard.Sb_RoundEnd.Stop();
-                    scoreBoard.Sb_RoundEnd.Begin();
+                    scoreBoard.Sb_ScorePlus.Stop();
+                    scoreBoard.Sb_ScorePlus.Begin();
 
                     // แสดงอนิเมชันการตอบถูก
                     const int DisplayCorrectAnswerAndCombo = 0;
