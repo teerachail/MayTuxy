@@ -23,7 +23,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         #region Fields
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
-        private const int QuestionTimeMilisecond = 1300; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const int QuestionTimeMilisecond = 700; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const string CupStyleName = "TallCup";
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
@@ -33,8 +34,6 @@ namespace TheS.SperfGames.MayaTukky.Views
         private int _correctCount;
         private int _timeLeftSecond;
         private int _gameCombo;
-        private string[] _cupStyles;
-        private string _cupStyleName;
         private RowUI _frontRow;
         private DispatcherTimer _timer;
         private DispatcherTimer _displayQuestionTimer;
@@ -92,10 +91,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             // เครื่องหมายที่แสดงผลการตอบถูกหรือตอบผิด
             _trueFalseMark = new TrueFalseMarkUI();
 
-            // กำหนดชนิดของแก้ว และทำการสุ่มลายแก้วที่จะนำมาใช้ในเกม
-            _cupStyles = new string[] { "CylindricalCup", "TallCup", "TriangleCup" };
-            _cupStyleName = randomCupStyle();
-
             // สร้างตัวจับเวลา
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
@@ -123,14 +118,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 _frontRow.PlayCupDown();
         }
 
-        // สุ่มแก้วที่จะนำมาแสดงผลใน State นี้
-        private string randomCupStyle()
-        {
-            const int MaximumStyle = 3;
-            var _random = new Random();
-            return _cupStyles[_random.Next(MaximumStyle)];
-        }
-
         // เรียกคำถาม
         private void GetQuestion()
         {
@@ -143,7 +130,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             string cupLevel = question.CupLevel;
 
             // กำหนดข้อมูลของแถวหน้า พร้อมกับกำหนดคำถาม
-            _frontRow.SetQuestionRow(question.FrontRow, _cupStyleName, cupLevel);
+            _frontRow.SetQuestionRow(question.FrontRow, CupStyleName, cupLevel);
             showItemUI.SetQuestion(question.BackRow.BeforeCup);
 
             // ตั้งเวลาในการดูคำถาม
@@ -242,6 +229,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                 _timeCombo = result.TimeCombo;
                 _timeLeftSecond += result.TimeAdvantage;
 
+                // แสดงผลอนิเมชันตอบของ item
+                _frontRow.PlayAnswerResult(result);
+
                 const int IncorrectAnswer = 0;
                 if ((int)result.Score > IncorrectAnswer)
                 {
@@ -279,10 +269,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-
-                    // แสดงผลอนิเมชันตอบถูกของ item
-                    _frontRow.PlayAnswerResult(result);
-
                     // จัดการการแสดงผลของตัวแสดงคำถาม
                     showItemUI.PlayAnswerResult(result);
 

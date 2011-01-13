@@ -104,6 +104,9 @@ namespace TheS.SperfGames.MayaTukky.Controls
             cv_Item.Children.Add(_item);
         }
 
+        /// <summary>
+        /// ลบวัตถุที่อยู่ภายในแก้ว
+        /// </summary>
         public void ClearItem()
         {
             cv_Item.Children.Clear();
@@ -123,6 +126,26 @@ namespace TheS.SperfGames.MayaTukky.Controls
             Sb_Correct.Stop();
 
             ClearItem();
+        }
+
+        /// <summary>
+        /// อนิเมชันตอบผิด
+        /// </summary>
+        public void StartCupIncorrect()
+        {
+            const int ItemElementIndex = 0;
+            var item = (cv_Item.Children[ItemElementIndex] as PerfEx.Infrastructure.IAnime);
+            if(item!=null) item.StartPlay();
+        }
+
+        /// <summary>
+        /// หยุดการเล่นอนิเมชัน
+        /// </summary>
+        public void StopCupIncorrect()
+        {
+            const int ItemElementIndex = 0;
+            var item = (cv_Item.Children[ItemElementIndex] as PerfEx.Infrastructure.IAnime);
+            if (item != null) item.StopPlay();
         }
 
         /// <summary>

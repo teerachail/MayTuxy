@@ -51,7 +51,7 @@ namespace TheS.SperfGames.MayaTukky
 
             var previous = previousGameRound as GameRoundSecond;
 
-            const int Point = 5;
+            const int Point = 3;
             int gamePoint = Point + (_level * AddPoint);
 
             const string cupStyle = "4";

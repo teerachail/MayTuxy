@@ -21,7 +21,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
     public partial class RowUI : UserControl
     {
         #region Fields
-        
+
         private const int ElementCupIndex = 0; // ตำแหน่งของแก้วที่อยู่ภายใน Canvas
         private string _cupRowState; // การแสดงผล state ของ cup
         private string _cupStyleName;
@@ -53,7 +53,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         #endregion Properties
 
         #region Events
-        
+
         /// <summary>
         /// การสลับแก้วเสร็จสิ้น
         /// </summary>
@@ -72,7 +72,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
         #endregion Events
 
         #region Constructors
-        
+
         /// <summary>
         /// กำหนดค่าเริ่มต้นให้กับแถว
         /// </summary>
@@ -117,6 +117,8 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="cupLevel">ชนิดระดับความยากของแก้ว</param>
         public void SetQuestionRow(QuestionRow question, string cupStyleName, string cupLevel)
         {
+            if (_lastClickedCup != null) _lastClickedCup.StopCupIncorrect();
+
             _lastClickedCup = null;
             _cupStyleName = cupStyleName;
             _cupLevel = cupLevel;
@@ -197,8 +199,8 @@ namespace TheS.SperfGames.MayaTukky.Controls
         /// <param name="result">ผลลัพธ์</param>
         public void PlayAnswerResult(AnswerResult result)
         {
-            if (result.IsCorrect == true && _lastClickedCup != null)
-                _lastClickedCup.CupCorrect();
+            if (result.IsCorrect == true && _lastClickedCup != null) _lastClickedCup.CupCorrect();
+            else if (result.IsCorrect == false && _lastClickedCup != null) _lastClickedCup.StartCupIncorrect();
 
             if (result.IsFinish) _isAutoAnswerOn = true;
         }
@@ -341,7 +343,7 @@ namespace TheS.SperfGames.MayaTukky.Controls
             var temp = ShowItemCompleted;
             if (temp != null)
             {
-                temp(this,null);
+                temp(this, null);
             }
         }
 
