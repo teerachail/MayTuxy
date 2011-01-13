@@ -280,10 +280,10 @@
   <!-- Layer 1/<Group>/<Path> -->
 
     			<Canvas Height="22" Canvas.Left="6" Canvas.Top="4" Width="13">
-    				<Canvas Height="10" Canvas.Left="1" Canvas.Top="12" Width="11" Clip="M4.2830782,-0.16443688 C4.2830782,-0.16443688 5.4724979,-0.87342751 6.3340282,-0.004465688 C6.3340282,-0.004465688 10.932928,1.7561779 10.726234,8.6406698 C10.726234,8.6406698 5.3334498,11.212536 -0.22280912,8.349123 C-0.22280912,8.349123 -0.46990013,2.5598254 4.2830782,-0.16443688 z">
+    				<Canvas x:Name="yellowSand" Height="10" Canvas.Left="1" Canvas.Top="12" Width="11" Clip="M4.2830782,-0.16443688 C4.2830782,-0.16443688 5.4724979,-0.87342751 6.3340282,-0.004465688 C6.3340282,-0.004465688 10.932928,1.7561779 10.726234,8.6406698 C10.726234,8.6406698 5.3334498,11.212536 -0.22280912,8.349123 C-0.22280912,8.349123 -0.46990013,2.5598254 4.2830782,-0.16443688 z">
     					<Path Fill="#FFFFEF87" Data="F1 M11.733558,34.097038 C11.733558,34.097038 13.61069,33.354942 14.52769,34.272942 C14.52769,34.272942 19.227024,35.891777 19.007023,43.164776 C19.007023,43.164776 13.285982,45.718655 7.2987766,43.121052 C7.2987766,43.121052 6.6745582,36.975037 11.733558,34.097038 z" UseLayoutRounding="False" Height="9.913" Stretch="Fill" Width="11.03" RenderTransformOrigin="0.5,0.5" Canvas.Left="-0.148" Canvas.Top="-0.31"/>
     				</Canvas>
-    				<Canvas Height="11" Canvas.Left="1" Canvas.Top="1" Width="11" Clip="M6.2887073,10.304437 C6.2887073,10.304437 5.1105762,11.013427 4.2572227,10.144465 C4.2572227,10.144465 -0.29803017,8.3838215 -0.093298584,1.4993299 C-0.093298584,1.4993299 5.2483044,-1.0725368 10.75183,1.7908759 C10.75183,1.7908759 10.996576,7.580174 6.2887073,10.304437 z">
+    				<Canvas x:Name="redSand" Height="11" Canvas.Left="1" Canvas.Top="1" Width="11" Clip="M6.2887073,10.304437 C6.2887073,10.304437 5.1105762,11.013427 4.2572227,10.144465 C4.2572227,10.144465 -0.29803017,8.3838215 -0.093298584,1.4993299 C-0.093298584,1.4993299 5.2483044,-1.0725368 10.75183,1.7908759 C10.75183,1.7908759 10.996576,7.580174 6.2887073,10.304437 z">
     					<Path Fill="#ff991b1e" Data="F1 M 12.230,34.429 C 12.230,34.429 13.496,33.680 14.413,34.598 C 14.413,34.598 19.308,36.458 19.088,43.731 C 19.088,43.731 13.348,46.448 7.434,43.423 C 7.434,43.423 7.171,37.307 12.230,34.429 Z" UseLayoutRounding="False" Height="10.139" Stretch="Fill" Width="10.854" RenderTransformOrigin="0.5,0.5" Canvas.Top="0.546" Canvas.Left="-0.084">
     						<Path.RenderTransform>
     							<CompositeTransform Rotation="180"/>
@@ -383,7 +383,7 @@
     		</Canvas>
     	</Canvas>
     	<StackPanel Canvas.Left="94" Orientation="Vertical" Canvas.Top="20" Width="56" Height="35">
-    		<TextBlock x:Name="txt_Timer" Height="35" TextWrapping="Wrap" Text="120" FontFamily="Showcard Gothic" FontSize="29.333" TextAlignment="Center" Foreground="White" d:LayoutOverrides="Width">
+    		<TextBlock x:Name="txt_Timer" Height="35" TextWrapping="Wrap" Text="60" FontFamily="Showcard Gothic" FontSize="29.333" TextAlignment="Center" Foreground="White" d:LayoutOverrides="Width">
     			<TextBlock.Effect>
     				<DropShadowEffect Color="#FF0033AF" BlurRadius="0" ShadowDepth="2"/>
     			</TextBlock.Effect>
