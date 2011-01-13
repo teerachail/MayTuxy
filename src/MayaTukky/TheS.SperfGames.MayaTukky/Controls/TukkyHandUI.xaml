@@ -354,8 +354,8 @@
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Hand_L">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="-65"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-65"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="-35"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-35"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="Hand_R">
@@ -367,8 +367,8 @@
             </PointAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Hand_R">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="65"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="65"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="35"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="35"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.75" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
@@ -539,7 +539,7 @@
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Name="Hand_playStory3_Right2" AutoReverse="False">
+        <Storyboard x:Name="Sb_HandWaitThreeSecond" AutoReverse="False">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Hand_R2_1">
                 <DiscreteObjectKeyFrame KeyTime="0">
                     <DiscreteObjectKeyFrame.Value>
@@ -877,7 +877,7 @@
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Name="Hand_playStory3_Right_Left4" AutoReverse="True">
+        <Storyboard x:Name="Sb_HandWaitFiveSecond" AutoReverse="False">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Hand_R">
                 <DiscreteObjectKeyFrame KeyTime="0">
                     <DiscreteObjectKeyFrame.Value>

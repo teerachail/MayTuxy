@@ -90,6 +90,9 @@
     <Reference Include="testVoodooAnime">
       <HintPath>..\..\..\lib\testVoodooAnime.dll</HintPath>
     </Reference>
+    <Reference Include="TitleGamesMayaTukky">
+      <HintPath>..\..\..\lib\TitleGamesMayaTukky.dll</HintPath>
+    </Reference>
     <Reference Include="TotalScore">
       <HintPath>..\..\..\lib\TotalScore.dll</HintPath>
     </Reference>
