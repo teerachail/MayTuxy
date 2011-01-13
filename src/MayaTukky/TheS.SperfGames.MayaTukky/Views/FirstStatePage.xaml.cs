@@ -140,6 +140,8 @@ namespace TheS.SperfGames.MayaTukky.Views
             // เครื่องหมายที่แสดงผลการตอบถูกหรือตอบผิด
             _trueFalseMark.Sb_Good.Completed += (s, e) => { _trueFalseMark.Sb_Good.Stop(); };
             _trueFalseMark.Sb_Fail.Completed += (s, e) => { _trueFalseMark.Sb_Fail.Stop(); };
+            _trueFalseMark.Sb_ComboContinuing.Completed += (s, e) => { _trueFalseMark.Sb_ComboContinuing.Stop(); };
+            _trueFalseMark.Sb_ComboLost.Completed += (s, e) => { _trueFalseMark.Sb_ComboLost.Stop(); };
 
             // คลิกเพื่อเล่นการแสดงคำถาม
             this.MouseLeftButtonDown += new MouseButtonEventHandler(MainPage_MouseLeftButtonDown);
@@ -230,6 +232,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     if (_gameCombo >= MinimumIncorrectCountForDisplayFail)
                     {
                         // TODO: แสดงกราฟฟิคจำนวน Combo ที่เสียไป State 1
+                        _trueFalseMark.Sb_ComboLost.Begin();
                     }
                     else _trueFalseMark.Sb_Fail.Begin();
 
@@ -268,9 +271,11 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     // แสดงอนิเมชันการตอบถูก
                     const int DisplayCorrectAnswerAndCombo = 0;
-                    if (_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo)
+                    const int DisplayCorrectAnswerForLowLevel = 3;
+                    if ((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo ) || (_gameCombo == DisplayCorrectAnswerForLowLevel))
                     {
-                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่ได้ State 1
+                        _trueFalseMark.Sb_ComboContinuing.Begin();
+                        _trueFalseMark.txt_TrueCombo.Text = _gameCombo.ToString();
                     }
                     else _trueFalseMark.Sb_Good.Begin();
 
