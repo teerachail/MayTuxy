@@ -24,6 +24,8 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private const int QuestionTimeMilisecond = 700; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const int MinimumIncorrectCountForDisplayFail = 5; // จำนวนครั้งที่จะทำการแสดงเครื่องหมายผิดที่มีจำนวนครั้งที่ผิด
+        private const int DisplayGameCombo = 5; // จำนวนครั้งที่จะทำการแสดงผล Combo ที่ได้
         private const string CupStyleName = "TriangleCup";
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
         private bool _isGetNextQuestion; // เมื่อเล่นอนิเมชันสามเกลอจบจะทำการสร้างคำถามใหม่หรือไม่
@@ -269,10 +271,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 if (result.IsCorrect == false)
                 {
-                    // จัดการตัวนับการตอบถูกติดต่อกัน
-                    const int ResetGameCombo = 0;
-                    _gameCombo = ResetGameCombo;
-
                     // จัดการตัวนับการตอบผิด
                     _incorrectCount++;
 
@@ -286,11 +284,20 @@ namespace TheS.SperfGames.MayaTukky.Views
                     tukkyWin.ThreeTopWin.StartPlay();
 
                     // แสดงอนิเมชันการตอบผิด
-                    _trueFalseMark.Sb_Fail.Begin();
+                    if (_gameCombo >= MinimumIncorrectCountForDisplayFail)
+                    {
+                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่เสียไป
+                    }
+                    else _trueFalseMark.Sb_Fail.Begin();
 
+                    // จัดการตัวนับการตอบถูกติดต่อกัน
+                    const int ResetGameCombo = 0;
+                    _gameCombo = ResetGameCombo;
                 }
                 else if (result.IsCorrect == true)
                 {
+                    // TODO: แสดงกราฟฟิคจำนวน Combo ที่ได้
+
                     // ตรวจสอบการจบระดับความยากนี้
                     if (result.IsFinish == true)
                     {
@@ -436,7 +443,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.Sb_RoundEnd.Begin();
 
                     // แสดงอนิเมชันการตอบถูก
-                    _trueFalseMark.Sb_Good.Begin();
+                    const int DisplayCorrectAnswerAndCombo = 0;
+                    if (_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo)
+                    {
+                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่ได้
+                    }
+                    else _trueFalseMark.Sb_Good.Begin();
 
                     _correctCount++;
                 }
