@@ -45,6 +45,11 @@ namespace TheS.SperfGames.MayaTukky.Views
         private PrepareLayerUI _prepareLayer;
         private CloudUI _clound;
 
+        private const int LeftHandTukkyAnimationSecond = 3;
+        private const int DoubleHandsTukkyAnimationSecond = 8;
+        private int _doNotingTime;
+        private DispatcherTimer _doNotingHandTimer;
+
         #endregion Fields
 
         #region Events
@@ -69,6 +74,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             // ตัวนับเวลาก่อนเกมเริ่ม
             _prepareLayer = new PrepareLayerUI();
             LayoutRoot.Children.Add(_prepareLayer);
+
+            // ตัวนับเวลาแสดงมือทักกี้
+            _doNotingHandTimer = new DispatcherTimer();
+            _doNotingHandTimer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
 
             // ค่าเริ่มต้น
             _gameManager = new GameStageManagerFirst();
@@ -158,6 +167,26 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดการเล่นอนิเมชันเมื่อได้รับเวลาเพิ่ม
             clock.Sb_TimeUp.Completed += new EventHandler(Sb_TimeUp_Completed);
+
+            // เหตุการณ์เมื่อไม่มีการทำบางสิ่งบางอย่างนานๆ
+            _doNotingHandTimer.Tick += new EventHandler(_doNotingHandTimer_Tick);
+        }
+
+        // เหตุการณ์เมื่อไม่มีการทำบางสิ่งบางอย่างนานๆ
+        private void _doNotingHandTimer_Tick(object sender, EventArgs e)
+        {
+            _doNotingTime++;
+
+            if (_doNotingTime >= DoubleHandsTukkyAnimationSecond)
+            {
+                tukkyHand.Hand_playStory3_Right2.Stop();
+                tukkyHand.Hand_playStory3_Right_Left4.Begin();
+            }
+            else if (_doNotingTime >= LeftHandTukkyAnimationSecond)
+            {
+                tukkyHand.Hand_playStory3_Right2.Begin();
+            }
+
         }
 
         // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
@@ -208,6 +237,13 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             // ตรวจสอบผลลัพธ์
             var result = _gameManager.CheckAnswer(objName.ItemName);
+
+            // หยุดการเล่่นอินเมชันมือทักกี้
+            tukkyHand.Hand_playStory3_Right2.Stop();
+            tukkyHand.Hand_playStory3_Right_Left4.Stop();
+            _doNotingHandTimer.Stop();
+            const int ResetTimer = 0;
+            _doNotingTime = ResetTimer;
 
             if (result != null)
             {
@@ -307,7 +343,11 @@ namespace TheS.SperfGames.MayaTukky.Views
         private void _frontRow_SwapCompleted(object sender, EventArgs e)
         {
             tukkyHand.StopPlay();
+
             _frontRow.SetAfterCupItem();
+
+            // เริ่มทำการจับเวลาเผื่อเล่นอนิเมชันมือทักกี้
+            _doNotingHandTimer.Start();
         }
 
         // กำหนดเหตุการ์ณ์ของนาฬิกาจับเวลา
