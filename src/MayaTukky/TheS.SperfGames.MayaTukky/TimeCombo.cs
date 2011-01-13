@@ -18,7 +18,7 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        private const int MaximumPluse = 5;
+        private readonly int MaximumPluse;
         private readonly int AddTime;
         private int _pluse;
 
@@ -30,9 +30,11 @@ namespace TheS.SperfGames.MayaTukky
         /// กำหนดค่าเริ่มต้นให้กับตัวจัดการการให้เวลาพิเศษ
         /// </summary>
         /// <param name="addTime">เวลาที่จะเพิ่มให้เมื่อตอบถูกครบจำนวนที่กำหนด</param>
-        public TimeCombo(int addTime)
+        /// <param name="maximumPluse">จำนวนครั้งที่จะได้เวลาเพิ่ม</param>
+        public TimeCombo(int addTime,int maximumPluse)
         {
             AddTime = addTime;
+            MaximumPluse = maximumPluse;
         }
 
         #endregion Constructors

@@ -42,10 +42,11 @@ namespace TheS.SperfGames.MayaTukky
             };
             _currentLevel = _gameLevels.First();
 
-            const int AddTimeSecond = 15;
+            const int AddTimeSecond = 6;
+            const int MaximumTimePluse = 3;
             const float AddGameComboPluse = 0.1f;
             const float GameComboPluse = 0.9f;
-            _timeCombo = new TimeCombo(AddTimeSecond);
+            _timeCombo = new TimeCombo(AddTimeSecond,MaximumTimePluse);
             _gameCombo = new GameCombo
             {
                 Pluse = GameComboPluse,
