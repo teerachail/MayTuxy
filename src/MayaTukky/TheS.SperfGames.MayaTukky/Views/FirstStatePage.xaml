@@ -5,8 +5,12 @@
 	<navigation:Page.Resources>
 		<Storyboard x:Name="Sb_Dark">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0.85"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseIn"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
 			</DoubleAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)" Storyboard.TargetName="clock">
 				<DiscreteObjectKeyFrame KeyTime="0">
@@ -26,6 +30,7 @@
 	</navigation:Page.Resources>
     <Canvas x:Name="LayoutRoot" Clip="M0.5,0.5 L624.5,0.5 L624.5,487.5 L0.5,487.5 z">
         <Image Height="488" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Width="625"/>
+        <TheS_SperfGames_MayaTukky_Controls:OptionButtonUI d:LayoutOverrides="Width, Height"/>
         <TheS_SperfGames_MayaTukky_Controls:TukkyLoseUI RenderTransformOrigin="0.5,0.5" Visibility="Collapsed" Canvas.Top="29" Canvas.Left="7" x:Name="tukkyLose">
             <TheS_SperfGames_MayaTukky_Controls:TukkyLoseUI.RenderTransform>
                 <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>

@@ -262,9 +262,11 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // แสดงอนิเมชันการตอบถูก
                     _trueFalseMark.Sb_Good.Begin();
 
-                    // เล่นอนิเมชันดาว
-                    scoreBoard.Sb_RoundEnd.Stop();
-                    scoreBoard.Sb_RoundEnd.Begin();
+                    // เล่นอนิเมชันแสดงคะแนน
+                    scoreBoard.Sb_ScoreUp.Stop();
+                    scoreBoard.Sb_ScorePlus.Stop();
+                    scoreBoard.Sb_ScoreUp.Begin();
+                    scoreBoard.Sb_ScorePlus.Begin();
                 }
 
                 const int First = 1;
