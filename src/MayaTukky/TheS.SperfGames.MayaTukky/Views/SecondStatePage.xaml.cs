@@ -48,6 +48,11 @@ namespace TheS.SperfGames.MayaTukky.Views
         private PrepareLayerUI _prepareLayer;
         private CloudUI _clound;
 
+        private const int FirstHandAnimationSecond = 3;
+        private const int SecondHandAnimationSecond = 8;
+        private int _doNotingTime;
+        private DispatcherTimer _doNotingHandTimer;
+
         #endregion Fields
 
         #region Events
@@ -132,6 +137,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เรียกคำถาม
         private void GetQuestion()
         {
+            _doNotingHandTimer.Stop();
+
             const int Reset = 0;
             _cupAutoAnswerCount = Reset;
             _isRoundFinish = false;
@@ -157,6 +164,10 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เหตุการณ์เมื่อเวลาเดิน
             _timer.Tick += new EventHandler(_timer_Tick);
+
+            // ตัวนับเวลาแสดงมือทักกี้
+            _doNotingHandTimer = new DispatcherTimer();
+            _doNotingHandTimer.Interval = TimeSpan.FromSeconds(TimeTickSecond);
 
             // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
             _displayQuestionTimer.Tick += new EventHandler(_displayQuestionTimer_Tick);
@@ -188,7 +199,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เมื่อแก้วสลับเสร็จสิ้น
             _frontRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
-            //_backRow.SwapCompleted += new EventHandler(Row_SwapCompleted);
 
             // คลิกเพื่อเล่นการแสดงคำถาม
             this.MouseLeftButtonDown += new MouseButtonEventHandler(MainPage_MouseLeftButtonDown);
@@ -205,6 +215,26 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // กำหนดการเล่นอนิเมชันเมื่อได้รับเวลาเพิ่ม
             clock.Sb_TimeUp.Completed += new EventHandler(Sb_TimeUp_Completed);
+
+            // เหตุการณ์เมื่อไม่มีการทำบางสิ่งบางอย่างนานๆ
+            _doNotingHandTimer.Tick += new EventHandler(_doNotingHandTimer_Tick);
+        }
+
+        // เหตุการณ์เมื่อไม่มีการทำบางสิ่งบางอย่างนานๆ
+        private void _doNotingHandTimer_Tick(object sender, EventArgs e)
+        {
+            _doNotingTime++;
+
+            if (_doNotingTime >= SecondHandAnimationSecond)
+            {
+                tukkyHand.Sb_HandWaitThreeSecond.Stop();
+                tukkyHand.Sb_HandWaitFiveSecond.Begin();
+            }
+            else if (_doNotingTime >= FirstHandAnimationSecond)
+            {
+                tukkyHand.Sb_HandWaitThreeSecond.Begin();
+            }
+
         }
 
         // เมื่อเวลาในการรอดูคำถามเสร็จสิ้น
@@ -248,6 +278,13 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             // ตรวจสอบผลลัพธ์
             var result = _gameManager.CheckAnswer(objName.ItemName);
+
+            // หยุดการเล่่นอินเมชันมือทักกี้
+            tukkyHand.Sb_HandWaitThreeSecond.Stop();
+            tukkyHand.Sb_HandWaitFiveSecond.Stop();
+            _doNotingHandTimer.Stop();
+            const int ResetTimer = 0;
+            _doNotingTime = ResetTimer;
 
             if (result != null)
             {
@@ -401,6 +438,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             tukkyHand.StopPlay();
 
             _timerAfterPlayQuestion.Start();
+
+            // เริ่มทำการจับเวลาเผื่อเล่นอนิเมชันมือทักกี้
+            _doNotingHandTimer.Start();
         }
 
         private void completePlayQuestion()
@@ -436,6 +476,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         // เมื่อแก้วลอยขึ้นจนสุดแล้ว
         private void Sb_Up_Completed(object sender, EventArgs e)
         {
+            _doNotingHandTimer.Start();
+
             if (_isGetNextQuestion)
             {
                 _cupAutoAnswerCount++;
