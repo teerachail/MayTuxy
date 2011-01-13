@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 
 namespace TheS.SperfGames.MayaTukky
 {
@@ -20,5 +21,16 @@ namespace TheS.SperfGames.MayaTukky
         public static int FirstMaximumCombo { get; set; }
         public static int SecondMaximumCombo { get; set; }
         public static int ThirdMaximumCombo { get; set; }
+
+        public static List<string> FirstItemsFound { get; set; }
+        public static List<string> SecondItemsFound { get; set; }
+        public static List<string> ThirdItemsFound { get; set; }
+
+        static GlobalScore()
+        {
+            FirstItemsFound = new List<string>();
+            SecondItemsFound = new List<string>();
+            ThirdItemsFound = new List<string>();
+        }
     }
 }

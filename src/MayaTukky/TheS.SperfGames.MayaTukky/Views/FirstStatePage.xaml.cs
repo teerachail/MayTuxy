@@ -27,6 +27,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private const int MinimumIncorrectCountForDisplayFail = 5; // จำนวนครั้งที่จะทำการแสดงเครื่องหมายผิดที่มีจำนวนครั้งที่ผิด
         private const int DisplayGameCombo = 5; // จำนวนครั้งที่จะทำการแสดงผล Combo ที่ได้
         private const int QuestionTimeMilisecond = 700; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
+        private const int TimeAlertSecond = 10; // แจ้งเตือนเวลาใกล้หมด
         private const string CupStyleName = "CylindricalCup";
         private bool _isWaitingClickForPlayQuestion; // กำลังรอให้คลิกเพื่อเล่นคำถาม
         private int _correctCount;
@@ -228,7 +229,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // แสดงอนิเมชันการตอบผิด
                     if (_gameCombo >= MinimumIncorrectCountForDisplayFail)
                     {
-                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่เสียไป
+                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่เสียไป State 1
                     }
                     else _trueFalseMark.Sb_Fail.Begin();
 
@@ -241,6 +242,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // จัดการตัวนับการตอบถูกติดต่อกัน
                     _gameCombo++;
                     if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
+
+                    // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
+                    if(!GlobalScore.FirstItemsFound.Any(c=>c.Equals(objName.ItemName)))
+                    {
+                        GlobalScore.FirstItemsFound.Add(objName.ItemName);
+                    }
 
                     // จัดการตัวนับการตอบถูก
                     _correctCount++;
@@ -263,7 +270,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     const int DisplayCorrectAnswerAndCombo = 0;
                     if (_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo)
                     {
-                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่ได้
+                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่ได้ State 1
                     }
                     else _trueFalseMark.Sb_Good.Begin();
 
@@ -347,6 +354,11 @@ namespace TheS.SperfGames.MayaTukky.Views
             // แสดงผลเวลา
             _timeLeftSecond = _gameManager.TimeLeftSecond;
             clock.txt_Timer.Text = Convert.ToString(_timeLeftSecond);
+
+            // TODO : เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 1
+            if (_timeLeftSecond <= TimeAlertSecond)
+            {
+            }
 
             // เมื่อเวลาหมด
             if (result)
