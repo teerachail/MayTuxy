@@ -15,6 +15,11 @@ namespace TheS.SperfGames.MayaTukky
 {
     public partial class Home : Page
     {
+        TitleGamesMayaTukky.Intro.Scene1 _pageLoad = new TitleGamesMayaTukky.Intro.Scene1();
+        TitleGamesMayaTukky.Intro.Scene2 _explainGame = new TitleGamesMayaTukky.Intro.Scene2();
+        TitleGamesMayaTukky.Intro.TitleGame1 _titleFirst = new TitleGamesMayaTukky.Intro.TitleGame1();
+        TitleGamesMayaTukky.Intro.TitleGame2 _titleSecond = new TitleGamesMayaTukky.Intro.TitleGame2();
+        TitleGamesMayaTukky.Intro.TitleGame3 _titleThird = new TitleGamesMayaTukky.Intro.TitleGame3();
         public Home()
         {
             InitializeComponent();
