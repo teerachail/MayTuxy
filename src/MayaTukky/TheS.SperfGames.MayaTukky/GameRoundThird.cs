@@ -121,9 +121,9 @@ namespace TheS.SperfGames.MayaTukky
 
             // กำหนดชื่อวัตถุที่อยู่ภายในแก้ว
             _items = new List<string>{
-                "monster1",
-                "monster2",
-                "monster3",
+                "monster8",
+                "monster5",
+                "monster4",
             };
 
             int cupLevel = int.Parse(_cupLevel);
@@ -133,17 +133,17 @@ namespace TheS.SperfGames.MayaTukky
 
             if (cupLevel >= Easy)
             {
-                _items.Add("monster4");
-                _items.Add("monster5");
+                _items.Add("monster7");
+                _items.Add("monster1");
             }
 
             if (cupLevel >= Normal)
             {
+                _items.Add("monster2");
                 _items.Add("monster6");
-                _items.Add("monster7");
             }
 
-            if (cupLevel >= Hard) _items.Add("monster8");
+            if (cupLevel >= Hard) _items.Add("monster3");
 
             _items = _questionManager.CreateQuestionBefore(_items, _cupCount);
             Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _cupCount);

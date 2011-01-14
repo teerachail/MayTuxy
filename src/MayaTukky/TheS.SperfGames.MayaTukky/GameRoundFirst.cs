@@ -90,9 +90,9 @@ namespace TheS.SperfGames.MayaTukky
 
             // กำหนดชื่อวัตถุที่อยู่ภายในแก้ว
             _items = new List<string>{
-                "poison1",
                 "poison2",
-                "poison3",
+                "poison6",
+                "poison4",
             };
 
             int cupLevel = int.Parse(_cupLevel);
@@ -102,17 +102,17 @@ namespace TheS.SperfGames.MayaTukky
 
             if(cupLevel >= Easy)
             {
-                _items.Add("poison4");
+                _items.Add("poison7");
                 _items.Add("poison5");
             }
 
             if(cupLevel >= Normal)
             {
-                _items.Add("poison6");
-                _items.Add("poison7");
+                _items.Add("poison8");
+                _items.Add("poison3");
             }
 
-            if (cupLevel >= Hard) _items.Add("poison8");
+            if (cupLevel >= Hard) _items.Add("poison1");
             
             _items = _questionManager.CreateQuestionBefore(_items, _cupCount, IncorrectAnswerItem);
             Question.FrontRow.BeforeCup = _questionManager.CreateQuestionBefore(_items, _cupCount);
