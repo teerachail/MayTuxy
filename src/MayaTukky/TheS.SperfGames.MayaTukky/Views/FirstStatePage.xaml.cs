@@ -295,9 +295,24 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     // จัดการการแสดงผลคะแนนและเวลา
                     _timeLeftSecond += result.TimeAdvantage;
+
+                    const int Proportion = 5;
+                    int scoreProportion = (int)(result.Score / Proportion);
+
+                    const int SecondAnimation = 2;
+                    const int ThirdAnimation = 3;
+                    const int FourthAnimation = 4;
+
+                    scoreBoard.DokValue1.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion);
+                    scoreBoard.DokValue2.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion*SecondAnimation);
+                    scoreBoard.DokValue3.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion*ThirdAnimation);
+                    scoreBoard.DokValue4.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion*FourthAnimation);
+                    scoreBoard.DokValue5.Value = (GlobalScore.FirstScore + (int)result.Score).ToString();
+
+                    scoreBoard.txt_ScorePlus.Text = ((int)result.Score).ToString();
+                    scoreBoard.Sb_ScorePlus.Begin();
+
                     GlobalScore.FirstScore += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.FirstScore);
-                    scoreBoard.Sb_ScoreUp.Begin();
 
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Collapsed;

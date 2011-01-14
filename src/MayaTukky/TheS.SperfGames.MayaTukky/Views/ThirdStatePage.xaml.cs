@@ -279,13 +279,32 @@ namespace TheS.SperfGames.MayaTukky.Views
                 if ((int)result.Score > IncorrectAnswer)
                 {
                     // แสดงผลคะแนนที่ได้รับ
-                    GlobalScore.SecondScore += (int)result.Score;
-                    scoreBoard.txt_Score.Text = Convert.ToString(GlobalScore.SecondScore);
+                    const int Proportion = 5;
+                    int scoreProportion = (int)(result.Score / Proportion);
+
+                    const int SecondAnimation = 2;
+                    const int ThirdAnimation = 3;
+                    const int FourthAnimation = 4;
+
+                    scoreBoard.DokValue1.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion);
+                    scoreBoard.DokValue2.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion * SecondAnimation);
+                    scoreBoard.DokValue3.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion * ThirdAnimation);
+                    scoreBoard.DokValue4.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion * FourthAnimation);
+                    scoreBoard.DokValue5.Value = (GlobalScore.ThirdScore + (int)result.Score).ToString();
+
+                    scoreBoard.txt_ScorePlus.Text = ((int)result.Score).ToString();
+
+                    // เล่นอนิเมชันแสดงคะแนน
+                    scoreBoard.Sb_ScoreUp.Stop();
+                    scoreBoard.Sb_ScorePlus.Stop();
                     scoreBoard.Sb_ScoreUp.Begin();
+                    scoreBoard.Sb_ScorePlus.Begin();
+
+                    GlobalScore.ThirdScore += (int)result.Score;
 
                     // จัดการตัวนับการตอบถูกติดต่อกัน
                     _gameCombo++;
-                    if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
+                    if (GlobalScore.ThirdMaximumCombo < _gameCombo) GlobalScore.ThirdMaximumCombo = _gameCombo;
                 }
 
                 if (result.IsCorrect == false)
