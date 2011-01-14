@@ -65,12 +65,13 @@ namespace TheS.SperfGames.MayaTukky
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="swapCount">จำนวนครั้งในการสลับแก้วของแถวหน้า</param>
         /// <param name="cupCount">จำนวนแก้วของแถวหน้า</param>
+        /// <param name="cupPoint">คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่</param>
         /// <param name="backSwapCount">จำนวนครั้งในการสลับแก้วของแถวหลัง</param>
         /// <param name="backCupCount">จำนวนแก้วของแถวหลัง</param>
         /// <param name="maximumCorrect">จำนวนครั้งที่ต้องตอบถูกจึงจะผ่านรอบเกมนี้</param>
         /// <param name="cupLevel">ชนิดลายแก้ว</param>
-        public GameRoundSecond(int currentPoint, float swapSpeed, int swapCount, int cupCount, int backSwapCount, int backCupCount, int maximumCorrect, string cupLevel)
-            : base(currentPoint, swapSpeed, swapCount, cupCount)
+        public GameRoundSecond(int currentPoint, float swapSpeed, int swapCount, int cupCount,int cupPoint, int backSwapCount, int backCupCount, int maximumCorrect, string cupLevel)
+            : base(currentPoint, swapSpeed, swapCount, cupCount,cupPoint)
         {
             _backSwapCount = backSwapCount;
             _backCupCount = backCupCount;
@@ -102,9 +103,15 @@ namespace TheS.SperfGames.MayaTukky
                     {
                         // ตอบถูก
                         answer.IsCorrect = true;
-                        answer.Score = _currentPoint;
+                        answer.Score = _cupPoint;
                         _correctCount++;
                         _answer = string.Empty;
+
+                        if (_isHasFinished && (!_isIncorrect))
+                        {
+                            answer.Score = _roundPoint + _cupPoint;
+                            _isIncorrect = true;
+                        }
 
                         // ตรวจสอบการจบรอบเกมนี้
                         if ((_correctCount >= _maximumCorrect) && (!_isHasFinished))
@@ -121,7 +128,7 @@ namespace TheS.SperfGames.MayaTukky
                     }
                 }
             }
-
+            
             return answer;
         }
 

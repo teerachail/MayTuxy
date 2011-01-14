@@ -19,7 +19,8 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        protected int _currentPoint;
+        protected int _roundPoint;
+        protected int _cupPoint;
         protected float _swapSpeed;
         protected int _swapCount;
         protected int _cupCount;
@@ -41,6 +42,14 @@ namespace TheS.SperfGames.MayaTukky
         }
 
         /// <summary>
+        /// คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่
+        /// </summary>
+        public int CupPoint
+        {
+            get { return _cupPoint; }
+        }
+
+        /// <summary>
         /// จำนวนแก้วด้านหน้า
         /// </summary>
         public int CupCount
@@ -51,9 +60,9 @@ namespace TheS.SperfGames.MayaTukky
         /// <summary>
         /// คะแนนที่ได้เมื่อชนะในระดับความยากนี้
         /// </summary>
-        public int CurrentPoint
+        public int RoundPoint
         {
-            get { return _currentPoint; }
+            get { return _roundPoint; }
         }
 
         /// <summary>
@@ -88,13 +97,15 @@ namespace TheS.SperfGames.MayaTukky
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="swapCount">จำนวนครั้งในการสลับแก้ว</param>
         /// <param name="cupCount">จำนวนแก้ว</param>
-        public GameRound(int currentPoint, float swapSpeed, int swapCount, int cupCount)
+        /// <param name="cupPoint">คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่</param>
+        public GameRound(int currentPoint, float swapSpeed, int swapCount, int cupCount, int cupPoint)
         {
             _questionManager = new SwapHelper();
-            _currentPoint = currentPoint;
+            _roundPoint = currentPoint;
             _swapSpeed = swapSpeed;
             _swapCount = swapCount;
             _cupCount = cupCount;
+            _cupPoint = cupPoint;
         }
 
         #endregion Constructors

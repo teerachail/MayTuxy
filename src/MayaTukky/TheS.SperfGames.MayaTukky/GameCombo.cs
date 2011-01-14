@@ -39,7 +39,8 @@ namespace TheS.SperfGames.MayaTukky
                 if (ans.IsCorrect.Equals(true))
                 {
                     // ตอบถูก
-                    _comboCount++;
+                    if (ans.IsFinish) _comboCount++;
+
                     ans.Score = ans.Score * (Pluse + (_comboCount * AddPluse));
                 }
                 else

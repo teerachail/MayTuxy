@@ -56,7 +56,7 @@ namespace TheS.SperfGames.MayaTukky
 
             const string cupStyle = "4";
             return new GameRoundSecond(gamePoint, previous.SwapSpeed, previous.SwapCount
-                , previous.CupCount, previous.BackSwapCount, previous.BackCupCount, previous.MaximumCorrect, cupStyle);
+                , previous.CupCount,previous.CupPoint, previous.BackSwapCount, previous.BackCupCount, previous.MaximumCorrect, cupStyle);
         }
 
         #endregion Methods
