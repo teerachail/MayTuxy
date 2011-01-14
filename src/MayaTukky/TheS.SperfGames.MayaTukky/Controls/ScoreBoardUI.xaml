@@ -10,11 +10,11 @@
 		<Storyboard x:Name="Sb_ScoreUp">
 			
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="txt_Score">
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="1"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="2"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="3"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="4"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="5"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.1" x:Name="DokValue1"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" x:Name="DokValue2"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" x:Name="DokValue3"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" x:Name="DokValue4"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" x:Name="DokValue5"/>
 			</ObjectAnimationUsingKeyFrames>
 			
 		</Storyboard>

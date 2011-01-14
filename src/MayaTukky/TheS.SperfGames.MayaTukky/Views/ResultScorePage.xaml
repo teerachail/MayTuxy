@@ -4,7 +4,7 @@
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" xmlns:PoisonAnimation_Item="clr-namespace:PoisonAnimation.Item;assembly=PoisonAnimation" x:Class="TheS.SperfGames.MayaTukky.Views.ResultScorePage"
+           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" xmlns:PoisonAnimation_Item="clr-namespace:PoisonAnimation.Item;assembly=PoisonAnimation" xmlns:TheS_SperfGames_MayaTukky="clr-namespace:TheS.SperfGames.MayaTukky" x:Class="TheS.SperfGames.MayaTukky.Views.ResultScorePage"
            mc:Ignorable="d"
            d:DesignWidth="640" d:DesignHeight="480"
            Title="TotalScoreFirstPage Page" Width="625" Height="488">
@@ -93,22 +93,22 @@
 			</ObjectAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="next">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.3">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2">
 					<EasingDoubleKeyFrame.EasingFunction>
 						<CircleEase EasingMode="EaseOut"/>
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.900016"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.95001"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="next">
 				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.7">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8">
 					<EasingDoubleKeyFrame.EasingFunction>
 						<CircleEase EasingMode="EaseOut"/>
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.09998"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.05"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="next">
@@ -118,7 +118,7 @@
 						<CircleEase EasingMode="EaseOut"/>
 					</EasingDoubleKeyFrame.EasingFunction>
 				</EasingDoubleKeyFrame>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-13.931"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-6.9"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="next">
@@ -135,11 +135,15 @@
 		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
 		<TheS_SperfGames_MayaTukky_Controls:TukkyPresentUI RenderTransformOrigin="0.5,0.5"/>
 		<Canvas x:Name="cv_Seal" Height="100" Canvas.Left="34" Canvas.Top="125" Width="100">
-			<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5" x:Name="poisonSeal">
-				<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI.RenderTransform>
-					<CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
-				</TheS_SperfGames_MayaTukky_Controls:PoisonSealUI.RenderTransform>
-			</TheS_SperfGames_MayaTukky_Controls:PoisonSealUI>
+			<Canvas x:Name="cv_PoisonSeal" Height="100" Width="100">
+				<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5" x:Name="poisonSeal"/>
+			</Canvas>
+			<Canvas x:Name="cv_VoodooSeal" Height="100" Width="100">
+				<TheS_SperfGames_MayaTukky_Controls:VoodooSealUI d:LayoutOverrides="Width, Height"/>
+			</Canvas>
+			<Canvas x:Name="cv_MonsterSeal" Height="100" Width="100">
+				<TheS_SperfGames_MayaTukky_Controls:MonsterSealUI d:LayoutOverrides="Width, Height"/>
+			</Canvas>
 		</Canvas>
 		<Canvas x:Name="score" Width="92.547" Height="26.100" RenderTransformOrigin="0.5,0.5" Canvas.Left="39" Canvas.Top="79">
 			<Canvas.RenderTransform>
@@ -330,47 +334,33 @@
 				</TextBlock>
 			</StackPanel>
 		</Canvas>
-		<Rectangle Fill="#FFF4F4F5" Height="44" Canvas.Left="23" Canvas.Top="424" Width="297" RadiusX="10" RadiusY="10" Opacity="0.8" d:IsLocked="True"/>
-		<Canvas
-			xmlns="http://schemas.microsoft.com/client/2007"
-			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="slotItem" Width="128.840" Height="57.251"
-			Canvas.Left="35" Canvas.Top="395" d:IsLocked="True">
-<!-- Layer 1/<Path> -->
-			<Path Opacity="0.4" Fill="#ff5a6060" Data="F1 M 0.000,27.830 C 0.802,44.213 14.338,57.251 30.920,57.251 C 47.502,57.251 61.038,44.213 61.840,27.830 L 0.000,27.830 Z" UseLayoutRounding="False"/>
-
-  <!-- Layer 1/<Path> -->
-			<Path Fill="#ff5a6060" Data="F1 M 57.212,26.292 C 57.212,40.813 45.440,52.584 30.920,52.584 C 16.399,52.584 4.628,40.813 4.628,26.292 C 4.628,11.771 16.399,0.000 30.920,0.000 C 45.440,0.000 57.212,11.771 57.212,26.292 Z" UseLayoutRounding="False"/>
-
-  <!-- Layer 1/<Path> -->
-			<Path Fill="#ffd5d463" Data="F1 M 53.253,26.291 C 53.253,38.627 43.254,48.625 30.920,48.625 C 18.586,48.625 8.586,38.627 8.586,26.291 C 8.586,13.956 18.586,3.958 30.920,3.958 C 43.254,3.958 53.253,13.956 53.253,26.291 Z" UseLayoutRounding="False"/>
-
-  <!-- Layer 1/<Path> -->
-			<Path Opacity="0.4" Fill="#ff5a6060" Data="F1 M 67.000,27.830 C 67.802,44.213 81.338,57.251 97.920,57.251 C 114.502,57.251 128.038,44.213 128.840,27.830 L 67.000,27.830 Z" UseLayoutRounding="False"/>
-
-  <!-- Layer 1/<Path> -->
-			<Path Fill="#ff5a6060" Data="F1 M 124.212,26.292 C 124.212,40.813 112.440,52.584 97.920,52.584 C 83.399,52.584 71.628,40.813 71.628,26.292 C 71.628,11.771 83.399,0.000 97.920,0.000 C 112.440,0.000 124.212,11.771 124.212,26.292 Z" UseLayoutRounding="False"/>
-
-  <!-- Layer 1/<Path> -->
-			<Path Fill="#fff7a779" Data="F1 M 120.254,26.291 C 120.254,38.627 110.254,48.625 97.920,48.625 C 85.586,48.625 75.586,38.627 75.586,26.291 C 75.586,13.956 85.586,3.958 97.920,3.958 C 110.254,3.958 120.254,13.956 120.254,26.291 Z" UseLayoutRounding="False"/>
-			<Canvas x:Name="cv_ItemRewardOne" Height="210" Width="110" RenderTransformOrigin="0.5,0.5" Canvas.Left="0.679" Canvas.Top="-118" UseLayoutRounding="False" d:LayoutRounding="Auto">
+		<Canvas x:Name="collection" Height="488" Width="625">
+			<Canvas x:Name="cv_PoisonItemCollection" Height="488" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Left="-46" Canvas.Top="36">
 				<Canvas.RenderTransform>
-					<CompositeTransform ScaleX="0.7" ScaleY="0.7" Rotation="30"/>
+					<CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
 				</Canvas.RenderTransform>
-				<PoisonAnimation_Item:Poison2 d:LayoutOverrides="Width, Height"/>
+				<TheS_SperfGames_MayaTukky:PoisonItemCollection d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
 			</Canvas>
-			<Canvas x:Name="cv_ItemRewardTwo" Height="210" Width="110" RenderTransformOrigin="0.5,0.5" Canvas.Left="66.012" Canvas.Top="-118" UseLayoutRounding="False" d:LayoutRounding="Auto">
+			<Canvas x:Name="cv_VoodooItemCollection" Height="488" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Left="-46" Canvas.Top="36">
 				<Canvas.RenderTransform>
-					<CompositeTransform ScaleX="0.7" ScaleY="0.7" Rotation="30"/>
+					<CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
 				</Canvas.RenderTransform>
-				<PoisonAnimation_Item:Poison4 d:LayoutOverrides="Width, Height"/>
+				<TheS_SperfGames_MayaTukky:VoodooItemCollectionUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
+			</Canvas>
+			<Canvas x:Name="cv_MonsterItemCollection" Height="488" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Left="-46" Canvas.Top="36">
+				<Canvas.RenderTransform>
+					<CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
+				</Canvas.RenderTransform>
+				<TheS_SperfGames_MayaTukky:MonsterItemCollectionUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
 			</Canvas>
 		</Canvas>
-		<TextBlock Height="28" Canvas.Left="37" TextWrapping="Wrap" Text="You can use these items in the next stage" Canvas.Top="449" FontFamily="Myriad Pro" FontWeight="Bold" FontSize="14.667" d:IsLocked="True"/>
+		<TextBlock Height="28" Canvas.Left="9" TextWrapping="Wrap" Text="YOU GOT THIS ITEM! .PLEASE,TRY TO BE EXITED IN TROPHY." Canvas.Top="398" FontFamily="Myriad Pro" FontWeight="Bold" FontSize="13.333" Foreground="White"/>
 		<Canvas x:Name="next" Height="50" Canvas.Left="567" Canvas.Top="430" Width="50" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
 			<Canvas.RenderTransform>
 				<CompositeTransform/>
 			</Canvas.RenderTransform>
 			<TheS_SperfGames_MayaTukky_Controls:ButtonCorrectUI x:Name="btn_Next"/>
+			<TheS_SperfGames_MayaTukky_Controls:PoisonSealUI d:LayoutOverrides="Width, Height"/>
 		</Canvas>
 	</Canvas>
 </navigation:Page>

@@ -132,11 +132,17 @@
     <Compile Include="Controls\ItemRewardUI.xaml.cs">
       <DependentUpon>ItemRewardUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MonsterItemCollectionUI.xaml.cs">
+      <DependentUpon>MonsterItemCollectionUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MonsterSealUI.xaml.cs">
       <DependentUpon>MonsterSealUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\OptionButtonUI.xaml.cs">
       <DependentUpon>OptionButtonUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PoisonItemCollection.xaml.cs">
+      <DependentUpon>PoisonItemCollection.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\PoisonSealUI.xaml.cs">
       <DependentUpon>PoisonSealUI.xaml</DependentUpon>
@@ -146,6 +152,9 @@
     </Compile>
     <Compile Include="Controls\RowUI.xaml.cs">
       <DependentUpon>RowUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SandGlassUI.xaml.cs">
+      <DependentUpon>SandGlassUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ScoreBoardUI.xaml.cs">
       <DependentUpon>ScoreBoardUI.xaml</DependentUpon>
@@ -179,6 +188,9 @@
     </Compile>
     <Compile Include="Controls\TukkyWinUI.xaml.cs">
       <DependentUpon>TukkyWinUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VoodooItemCollectionUI.xaml.cs">
+      <DependentUpon>VoodooItemCollectionUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\VoodooSealUI.xaml.cs">
       <DependentUpon>VoodooSealUI.xaml</DependentUpon>
@@ -288,6 +300,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\MonsterItemCollectionUI.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\MonsterSealUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -295,6 +311,10 @@
     <Page Include="Controls\OptionButtonUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PoisonItemCollection.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\PoisonSealUI.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -306,6 +326,10 @@
     </Page>
     <Page Include="Controls\RowUI.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SandGlassUI.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\ScoreBoardUI.xaml">
@@ -350,6 +374,10 @@
     </Page>
     <Page Include="Controls\TukkyWinUI.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\VoodooItemCollectionUI.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\VoodooSealUI.xaml">
