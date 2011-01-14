@@ -49,6 +49,55 @@ namespace TheS.SperfGames.MayaTukky.Views
             _clound.Sb_CloudOut.Begin();
         }
 
+        /// <summary>
+        /// แสดงผลเฉพาะเมื่อจบ State 1
+        /// </summary>
+        public void ShowTrophiesFirstState()
+        {
+            setItemCollectionsVisibility(
+                System.Windows.Visibility.Collapsed, 
+                System.Windows.Visibility.Visible, 
+                System.Windows.Visibility.Collapsed
+                );
+        }
+
+        /// <summary>
+        /// แสดงผลเฉพาะเมื่อจบ State 2
+        /// </summary>
+        public void ShowTrophiesSecondState()
+        {
+            setItemCollectionsVisibility(
+                System.Windows.Visibility.Visible,
+                System.Windows.Visibility.Collapsed,
+                System.Windows.Visibility.Collapsed
+                );
+        }
+
+        /// <summary>
+        /// แสดงผลเฉพาะเมื่อจบ State 3
+        /// </summary>
+        public void ShowTrophiesThirdState()
+        {
+            setItemCollectionsVisibility(
+                System.Windows.Visibility.Collapsed,
+                System.Windows.Visibility.Collapsed,
+                System.Windows.Visibility.Visible
+                );
+        }
+
+        private void setItemCollectionsVisibility(Visibility voodoo,Visibility poision,Visibility monster)
+        {
+            cv_VoodooItemCollection.Visibility = voodoo;
+            cv_VoodooSeal.Visibility = voodoo;
+
+            cv_MonsterItemCollection.Visibility = monster;
+            cv_MonsterSeal.Visibility = monster;
+
+            cv_PoisonItemCollection.Visibility = poision;
+            cv_PoisonSeal.Visibility = poision;
+        }
+
+
         private void btn_Next_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Sb_Next.Stop();

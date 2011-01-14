@@ -377,6 +377,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             // แสดงผลเวลา
             _timeLeftSecond = _gameManager.TimeLeftSecond;
             clock.txt_Timer.Text = Convert.ToString(_timeLeftSecond);
+            clock.Sb_TikTok.Begin();
 
             // TODO : เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 3
             if (_timeLeftSecond <= TimeAlertSecond)

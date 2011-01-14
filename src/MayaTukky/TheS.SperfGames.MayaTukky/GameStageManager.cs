@@ -19,7 +19,7 @@ namespace TheS.SperfGames.MayaTukky
     {
         #region Fields
 
-        private const int StartTimeSecond = 600;
+        private const int StartTimeSecond = 60;
         protected float _score;
         protected string _username;
         private int _timeLeftSecond = StartTimeSecond;
