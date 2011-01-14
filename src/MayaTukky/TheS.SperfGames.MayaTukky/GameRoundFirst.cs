@@ -32,9 +32,10 @@ namespace TheS.SperfGames.MayaTukky
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="swapCount">จำนวนครั้งในการสลับแก้ว</param>
         /// <param name="cupCount">จำนวนแก้ว</param>
+        /// <param name="cupPoint">คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่</param>
         /// <param name="cupLevel">ชนิดลายแก้ว</param>
-        public GameRoundFirst(int currentPoint, float swapSpeed, int swapCount, int cupCount,string cupLevel)
-            : base(currentPoint, swapSpeed, swapCount, cupCount)
+        public GameRoundFirst(int currentPoint, float swapSpeed, int swapCount, int cupCount,int cupPoint,string cupLevel)
+            : base(currentPoint, swapSpeed, swapCount, cupCount,cupPoint)
         {
             _cupLevel = cupLevel;
 
@@ -67,7 +68,7 @@ namespace TheS.SperfGames.MayaTukky
                 {
                     // ตอบถูก
                     answer.IsCorrect = true;
-                    answer.Score = _currentPoint;
+                    answer.Score = _roundPoint;
                     answer.IsFinish = true;
                 } 
             }

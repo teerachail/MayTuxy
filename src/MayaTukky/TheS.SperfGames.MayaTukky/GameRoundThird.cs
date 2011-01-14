@@ -44,11 +44,12 @@ namespace TheS.SperfGames.MayaTukky
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="swapCount">จำนวนครั้งในการสลับแก้วของแถวหน้า</param>
         /// <param name="cupCount">จำนวนแก้วของแถวหน้า</param>
+        /// <param name="cupPoint">คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่</param>
         /// <param name="backCupCount">จำนวนแก้วของแถวหลัง</param>
         /// <param name="maximumCorrect">จำนวนครั้งที่ต้องตอบถูกจึงจะผ่านรอบเกมนี้</param>
         /// <param name="cupLevel">ถ้วยที่จะนำมาใช้ในการแสดงผล</param>
-        public GameRoundThird(int currentPoint, float swapSpeed, int swapCount, int cupCount, int backCupCount, int maximumCorrect,string cupLevel)
-            : base(currentPoint, swapSpeed, swapCount, cupCount)
+        public GameRoundThird(int currentPoint, float swapSpeed, int swapCount, int cupCount,int cupPoint, int backCupCount, int maximumCorrect,string cupLevel)
+            : base(currentPoint, swapSpeed, swapCount, cupCount,cupPoint)
         {
             _backCupCount = backCupCount;
             _maximumCorrect = maximumCorrect;
@@ -78,7 +79,13 @@ namespace TheS.SperfGames.MayaTukky
                     _questionIndex++;
                     _correctCount++;
                     answer.IsCorrect = true;
-                    answer.Score = _currentPoint;
+                    answer.Score = _cupPoint;
+
+                    if (_isHasFinished && (!_isIncorrect))
+                    {
+                        answer.Score = _roundPoint + _cupPoint;
+                        _isIncorrect = true;
+                    }
 
                     // ตรวจสอบการจบรอบเกมนี้
                     if ((_correctCount >= _maximumCorrect) && (!_isHasFinished))

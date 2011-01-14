@@ -25,19 +25,21 @@ namespace TheS.SperfGames.MayaTukky
         /// <param name="backSwapCount">จำนวนครั้งที่ต้องทำการสลับแถวหลัง</param>
         /// <param name="maximumCorrect">จำนวนครั้งที่ต้องตอบถูกจึงจะผ่านระดับความยากนี้</param>
         /// <param name="cupCount">จำนวนแก้วแถวหน้า</param>
+        /// <param name="cupPoint">คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่</param>
         /// <param name="swapCount">จำนวนครั้งที่ต้องทำการสลับแถวหน้า</param>
-        /// <param name="currentPoint">คะแนนที่จะได้เมื่อผลลัพธ์ถูกต้อง</param>
+        /// <param name="roundPoint">คะแนนที่จะได้เมื่อผลลัพธ์ถูกต้อง</param>
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="level">ระดับความยาก</param>
         /// <param name="cupLevel">ถ้วยที่จะนำมาใช้ในการแสดงผล</param>
-        public GameLevelSecondFix(int backCupCount, int backSwapCount, int maximumCorrect, int cupCount, int swapCount, int currentPoint, float swapSpeed, int level, string cupLevel)
+        public GameLevelSecondFix(int backCupCount, int backSwapCount, int maximumCorrect, int cupCount,int cupPoint, int swapCount, int roundPoint, float swapSpeed, int level, string cupLevel)
         {
             _backCupCount = backCupCount;
             _backSwapCount = backSwapCount;
             _maximumCorrect = maximumCorrect;
             _cupCount = cupCount;
+            _cupPoint = cupPoint;
             _swapSpeed = swapSpeed;
-            _currentPoint = currentPoint;
+            _roundPoint = roundPoint;
             _swapCount = swapCount;
             _level = level;
             _cupLevel = cupLevel;
@@ -54,7 +56,7 @@ namespace TheS.SperfGames.MayaTukky
         /// <returns>รอบเกมใหม่</returns>
         public override GameRound CreateGameRound(GameRound previousGameRound)
         {
-            return new GameRoundSecond(_currentPoint, _swapSpeed, _swapCount, _cupCount, _backSwapCount, _backCupCount, _maximumCorrect, _cupLevel);
+            return new GameRoundSecond(_roundPoint, _swapSpeed, _swapCount, _cupCount,_cupPoint, _backSwapCount, _backCupCount, _maximumCorrect, _cupLevel);
         }
 
         #endregion Methods

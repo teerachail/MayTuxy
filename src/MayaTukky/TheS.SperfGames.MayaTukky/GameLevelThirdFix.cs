@@ -27,20 +27,22 @@ namespace TheS.SperfGames.MayaTukky
         /// </summary>
         /// <param name="cupCount">จำนวนแก้วแถวหน้า</param>
         /// <param name="swapCount">จำนวนครั้งที่ต้องทำการสลับแถวหน้า</param>
-        /// <param name="currentPoint">คะแนนที่จะได้เมื่อผลลัพธ์ถูกต้อง</param>
+        /// <param name="roundPoint">คะแนนที่จะได้เมื่อผลลัพธ์ถูกต้อง</param>
+        /// <param name="cupPoint">คะแนนที่ได้เมื่อตอบถูกต่อหนึ่งคู่</param>
         /// <param name="swapSpeed">ความเร็วในการสลับแก้ว</param>
         /// <param name="level">ระดับความยาก</param>
         /// <param name="maximumCorrect">จำนวนครั้งที่ต้องตอบถูกจึงจะผ่านระดับความยากนี้</param>
         /// <param name="cupLevel">ถ้วยที่จะนำมาใช้ในการแสดงผล</param>
-        public GameLevelThirdFix(int cupCount, int swapCount, int currentPoint, float swapSpeed, int level, int maximumCorrect,string cupLevel)
+        public GameLevelThirdFix(int cupCount, int swapCount, int roundPoint,int cupPoint, float swapSpeed, int level, int maximumCorrect,string cupLevel)
         {
             _cupCount = cupCount;
             _swapCount = swapCount;
-            _currentPoint = currentPoint;
+            _roundPoint = roundPoint;
             _swapSpeed = swapSpeed;
             _level = level;
             _maximumCorrect = maximumCorrect;
             _cupLevel = cupLevel;
+            _cupPoint = cupPoint;
         }
 
         /// <summary>
@@ -50,7 +52,7 @@ namespace TheS.SperfGames.MayaTukky
         /// <returns>รอบเกมใหม่</returns>
         public override GameRound CreateGameRound(GameRound previousGameRound)
         {
-            return new GameRoundThird(_currentPoint, _swapSpeed, _swapCount, _cupCount, _cupCount, _maximumCorrect,_cupLevel);
+            return new GameRoundThird(_roundPoint, _swapSpeed, _swapCount, _cupCount,_cupPoint, _cupCount, _maximumCorrect,_cupLevel);
         }
     }
 }

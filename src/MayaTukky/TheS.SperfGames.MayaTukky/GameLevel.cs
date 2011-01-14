@@ -22,7 +22,8 @@ namespace TheS.SperfGames.MayaTukky
         protected int _level;
         protected int _cupCount;
         protected int _swapCount;
-        protected int _currentPoint;
+        protected int _roundPoint;
+        protected int _cupPoint;
         protected float _swapSpeed;
         protected string _cupLevel;
 
