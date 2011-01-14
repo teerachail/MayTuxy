@@ -155,9 +155,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             // คลิกเพื่อเล่นการแสดงคำถาม
             this.MouseLeftButtonDown += new MouseButtonEventHandler(MainPage_MouseLeftButtonDown);
 
-            // กำหนดเหตุการ์ณ์ของนาฬิกาจับเวลา
-            clock.Sb_Clock5.Completed += new EventHandler(Sb_Clock5_Completed);
-
             // กำหนดเหตุการณ์เมื่อทักกี้แสดงอารมณ์เสร็จ
             tukkyLose.PlayCompleted += new EventHandler(Tukky_emotion_Completed);
             tukkyWin.PlayCompleted += new EventHandler(Tukky_emotion_Completed);
@@ -342,13 +339,13 @@ namespace TheS.SperfGames.MayaTukky.Views
                 const int Third = 3;
                 const int Fourth = 4;
                 const int Fifth = 5;
-                if (_timeCombo == First) clock.Sb_Clock1.Begin();
-                else if (_timeCombo == Second) clock.Sb_Clock2.Begin();
-                else if (_timeCombo == Third) clock.Sb_Clock3.Begin();
-                else if (_timeCombo == Fourth) clock.Sb_Clock4.Begin();
-                else if (_timeCombo == Fifth)
+                if (_timeCombo >= First) clock.PlayClockOne();
+                if (_timeCombo >= Second) clock.PlayClockTwo();
+                if (_timeCombo >= Third) clock.PlayClockThree();
+                if (_timeCombo >= Fourth) clock.PlayClockFour();
+                if (_timeCombo >= Fifth)
                 {
-                    clock.Sb_Clock5.Begin();
+                    clock.PlayClockFive();
                     clock.Sb_TimeUp.Begin();
                 }
             }
@@ -363,16 +360,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เริ่มทำการจับเวลาเผื่อเล่นอนิเมชันมือทักกี้
             _doNotingHandTimer.Start();
-        }
-
-        // กำหนดเหตุการ์ณ์ของนาฬิกาจับเวลา
-        private void Sb_Clock5_Completed(object sender, EventArgs e)
-        {
-            clock.Sb_Clock1.Stop();
-            clock.Sb_Clock2.Stop();
-            clock.Sb_Clock3.Stop();
-            clock.Sb_Clock4.Stop();
-            clock.Sb_Clock5.Stop();
         }
 
         // เมื่อตัวนับเวลาก่อนเริ่มเล่นเกมจบลง

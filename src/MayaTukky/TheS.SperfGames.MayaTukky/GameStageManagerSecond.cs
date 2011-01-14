@@ -45,8 +45,8 @@ namespace TheS.SperfGames.MayaTukky
 
             const int AddTimeSecond = 3;
             const int MaximumTimePluse = 5;
-            const float AddGameComboPluse = 0.05f;
-            const float GameComboPluse = 0.95f;
+            const float AddGameComboPluse = 0.1f;
+            const float GameComboPluse = 0.9f;
             _timeCombo = new TimeCombo(AddTimeSecond,MaximumTimePluse);
             _gameCombo = new GameCombo
             {

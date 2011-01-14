@@ -40,11 +40,6 @@
     			<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
     		</DoubleAnimationUsingKeyFrames>
     	</Storyboard>
-        <Storyboard x:Name="Sb_Clock1"/>
-        <Storyboard x:Name="Sb_Clock2"/>
-        <Storyboard x:Name="Sb_Clock3"/>
-        <Storyboard x:Name="Sb_Clock4"/>
-        <Storyboard x:Name="Sb_Clock5"/>
     </UserControl.Resources>
 
 
