@@ -328,7 +328,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     else _trueFalseMark.Sb_Good.Begin();
 
                     // เล่นอนิเมชันแสดงคะแนน
-                    scoreBoard.Sb_ScoreUp.Stop();
+                    //scoreBoard.Sb_ScoreUp.Stop();
                     scoreBoard.Sb_ScorePlus.Stop();
                     scoreBoard.Sb_ScoreUp.Begin();
                     scoreBoard.Sb_ScorePlus.Begin();
