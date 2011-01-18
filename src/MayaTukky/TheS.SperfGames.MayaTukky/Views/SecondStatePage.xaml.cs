@@ -118,6 +118,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
             _prepareLayer.Sb_Start.Begin();
+            Sb_Dark.Begin();
         }
 
         #endregion Constructors
@@ -321,7 +322,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                     GlobalScore.SecondScore += (int)result.Score;
 
                     // จัดการตัวนับการตอบถูกติดต่อกัน
-                    _gameCombo++;
                     if (GlobalScore.SecondMaximumCombo < _gameCombo) GlobalScore.SecondMaximumCombo = _gameCombo;
                 }
 
@@ -362,6 +362,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // ตรวจสอบการจบระดับความยากนี้
                     if (result.IsFinish == true)
                     {
+                        // จัดการตัวนับการตอบถูกติดต่อกัน
+                        _gameCombo++;
+
                         // ตอบถูก ทำการตรวจสอบการเลื่อนระดับความยาก
                         _isGetNextQuestion = true;
                         _isRoundFinish = true;
@@ -395,9 +398,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             clock.txt_Timer.Text = Convert.ToString(_timeLeftSecond);
             clock.Sb_TikTok.Begin();
 
-            // TODO : เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 2
+            // เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 2
             if (_timeLeftSecond <= TimeAlertSecond)
             {
+                clock.txt_Timer.Foreground = new SolidColorBrush(Colors.Red);
             }
 
             // เมื่อเวลาหมด
@@ -501,10 +505,11 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     // TODO: แสดงอนิเมชันการตอบถูก State 2
                     const int DisplayCorrectAnswerAndCombo = 0;
-                    if (_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo)
+
+                    if ((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo) && (_gameCombo!=DisplayCorrectAnswerAndCombo))
                     {
-                        _trueFalseMark.Sb_ComboContinuing.Begin();
                         _trueFalseMark.txt_TrueCombo.Text = _gameCombo.ToString();
+                        _trueFalseMark.Sb_ComboContinuing.Begin();
                     }
                     else _trueFalseMark.Sb_Good.Begin();
 

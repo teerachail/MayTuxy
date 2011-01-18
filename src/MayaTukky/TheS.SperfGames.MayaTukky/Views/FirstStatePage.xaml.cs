@@ -334,6 +334,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.Sb_ScorePlus.Begin();
                 }
 
+                // TODO: แก้ไขนาฬิกาใน State1 ให้เหลือเพียง 3 ตัว
                 const int First = 1;
                 const int Second = 2;
                 const int Third = 3;
@@ -403,9 +404,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             clock.txt_Timer.Text = Convert.ToString(_timeLeftSecond);
             clock.Sb_TikTok.Begin();
 
-            // TODO : เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 1
+            // เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 1
             if (_timeLeftSecond <= TimeAlertSecond)
             {
+                clock.txt_Timer.Foreground = new SolidColorBrush(Colors.Red);
             }
 
             // เมื่อเวลาหมด
