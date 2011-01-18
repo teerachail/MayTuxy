@@ -11,28 +11,28 @@
 	<navigation:Page.Resources>
 		<Storyboard x:Name="Sb_Result">
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="txt_TrueSum">
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.1" Value="1"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="2"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="3"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="4"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="5"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="6"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="7"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.8" Value="8"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="9"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2" Value="10"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.1"  x:Name="DokTrueValue1"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2"  x:Name="DokTrueValue2"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3"  x:Name="DokTrueValue3"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4"  x:Name="DokTrueValue4"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5"  x:Name="DokTrueValue5"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.6"  x:Name="DokTrueValue6"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7"  x:Name="DokTrueValue7"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.8"  x:Name="DokTrueValue8"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.9"  x:Name="DokTrueValue9"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2"  x:Name="DokTrueValue10"/>
 			</ObjectAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="txt_FlaseSum">
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="1"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.2" Value="2"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="3"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.4" Value="4"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="5"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="6"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.7" Value="7"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="8"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="9"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:3" Value="10"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.1"  x:Name="DokFalseValue1"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.2"  x:Name="DokFalseValue2"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3"  x:Name="DokFalseValue3"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.4"  x:Name="DokFalseValue4"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5"  x:Name="DokFalseValue5"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6"  x:Name="DokFalseValue6"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.7"  x:Name="DokFalseValue7"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.8"  x:Name="DokFalseValue8"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.9"  x:Name="DokFalseValue9"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3"  x:Name="DokFalseValue10"/>
 			</ObjectAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="trueBoard">
 				<DiscreteObjectKeyFrame KeyTime="0:0:1">
