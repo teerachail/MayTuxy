@@ -49,7 +49,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             _clound.Sb_CloudOut.Begin();
 
             const string FirstFinished = "firstStateResult";
-            const string SecondFinished = "secondtStateResult";
+            const string SecondFinished = "secondStateResult";
             const string ThirdFinished = "thirdStateResult";
 
             int firstScore = GlobalScore.FirstScore;
@@ -75,7 +75,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 foreach (var item in GlobalScore.ThirdItemsFound)
                 {
-                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
+                    (thirdCollection.LayoutRoot.FindName(item) as Canvas)
                         .Visibility = System.Windows.Visibility.Visible;
                 }
             }
@@ -89,14 +89,14 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 foreach (var item in GlobalScore.SecondItemsFound)
                 {
-                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
+                    (secondCollection.LayoutRoot.FindName(item) as Canvas)
                         .Visibility = System.Windows.Visibility.Visible;
                 }
             }
             else
             {
                 // ผ่านเกม State 1
-                VisualStateManager.GoToState(this,FirstFinished , false);
+                VisualStateManager.GoToState(this, FirstFinished, false);
                 incorrectAnswerCount = GlobalScore.FirstIncorrectAnswer;
                 correctAnswerCount = GlobalScore.FirstMaximumCombo;
                 maximumCombo = GlobalScore.FirstMaximumCombo;

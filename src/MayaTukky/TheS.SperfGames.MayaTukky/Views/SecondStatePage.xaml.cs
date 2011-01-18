@@ -345,6 +345,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
+                    MessageBox.Show(objName.ItemName);
                     // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
                     if (!GlobalScore.SecondItemsFound.Any(c => c.Equals(objName.ItemName)))
                     {
