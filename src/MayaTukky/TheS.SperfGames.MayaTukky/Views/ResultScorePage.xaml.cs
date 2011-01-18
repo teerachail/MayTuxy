@@ -56,7 +56,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             int secondScore = GlobalScore.SecondScore;
             int thirdScore = GlobalScore.ThirdScore;
 
-            const int KeyFrame = 10;
+            const int KeyFrame = 3;
             const string FalseDok = "DokFalseValue";
             const string TrueDok = "DokTrueValue";
 
@@ -72,6 +72,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                 incorrectAnswerCount = GlobalScore.ThirdIncorrectAnswer;
                 correctAnswerCount = GlobalScore.ThirdMaximumCombo;
                 maximumCombo = GlobalScore.ThirdMaximumCombo;
+
+                foreach (var item in GlobalScore.ThirdItemsFound)
+                {
+                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
+                        .Visibility = System.Windows.Visibility.Visible;
+                }
             }
             else if (GlobalScore.SecondItemsFound.Count != EmptyScore)
             {
@@ -80,6 +86,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                 incorrectAnswerCount = GlobalScore.SecondIncorrectAnswer;
                 correctAnswerCount = GlobalScore.SecondMaximumCombo;
                 maximumCombo = GlobalScore.SecondMaximumCombo;
+
+                foreach (var item in GlobalScore.SecondItemsFound)
+                {
+                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
+                        .Visibility = System.Windows.Visibility.Visible;
+                }
             }
             else
             {
@@ -88,6 +100,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                 incorrectAnswerCount = GlobalScore.FirstIncorrectAnswer;
                 correctAnswerCount = GlobalScore.FirstMaximumCombo;
                 maximumCombo = GlobalScore.FirstMaximumCombo;
+
+                foreach (var item in GlobalScore.FirstItemsFound)
+                {
+                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
+                        .Visibility = System.Windows.Visibility.Visible;
+                }
             }
 
             calculateGameScoreRunner(FalseDok, KeyFrame, incorrectAnswerCount);
