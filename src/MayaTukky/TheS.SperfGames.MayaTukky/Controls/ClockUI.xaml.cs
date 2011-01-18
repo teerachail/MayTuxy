@@ -14,11 +14,25 @@ namespace TheS.SperfGames.MayaTukky.Controls
 {
     public partial class ClockUI : UserControl
     {
+        private bool threeClockAmount;
         public ClockUI()
         {
             InitializeComponent();
-            clockFive.Sb_SandFall.Completed += new EventHandler(Sb_SandFall_Completed);
+            clockFive.Sb_SandFall.Completed += new EventHandler(ClockFive_Sb_SandFall_Completed);
+            clockThree.Sb_SandFall.Completed +=new EventHandler(ClockThree_Sb_SandFall_Completed);
             clockOne.Sb_Light.Completed += new EventHandler(Sb_Light_Completed);
+        }
+
+        public void ShowThreeClock()
+        {
+            VisualStateManager.GoToState(this, "threeClock", false);
+            threeClockAmount = true;
+        }
+
+        public void ShowFiveClock()
+        {
+            VisualStateManager.GoToState(this, "none", false);
+            threeClockAmount = false;
         }
 
         private void Sb_Light_Completed(object sender, EventArgs e)
@@ -31,10 +45,19 @@ namespace TheS.SperfGames.MayaTukky.Controls
             }
         }
 
-        private void Sb_SandFall_Completed(object sender, EventArgs e)
+        private void ClockFive_Sb_SandFall_Completed(object sender, EventArgs e)
         {
             PlayLight();
         }
+
+        private void ClockThree_Sb_SandFall_Completed(object sender, EventArgs e)
+        {
+            if (threeClockAmount)
+            {
+                PlayLight();
+            }
+        }
+
         public void PlayClockOne()
         {
             clockOne.Sb_SandFall.Begin();

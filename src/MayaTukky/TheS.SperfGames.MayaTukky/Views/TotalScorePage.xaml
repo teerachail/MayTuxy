@@ -1317,16 +1317,16 @@
                     	<TotalScore_AvatarReward:Crow d:LayoutOverrides="Width, Height"/>
                     </Canvas>
                     <Canvas x:Name="cv_AvatarTwo" Height="220" Width="200">
-                    	<poo_JellyFish:Gost d:LayoutOverrides="Width, Height"/>
+                    	<TotalScore_AvatarReward:Ghost d:LayoutOverrides="Width, Height"/>
                     </Canvas>
                     <Canvas x:Name="cv_AvatarThree" Height="220" Width="200">
-                    	<poo_JellyFish:Gost d:LayoutOverrides="Width, Height"/>
+                    	<TotalScore_AvatarReward:Golem d:LayoutOverrides="Width, Height"/>
                     </Canvas>
                     <Canvas x:Name="cv_AvatarFour" Height="220" Width="200">
-                    	<poo_JellyFish:Gost d:LayoutOverrides="Width, Height"/>
+                    	<TotalScore_AvatarReward:Knight d:LayoutOverrides="Width, Height"/>
                     </Canvas>
                     <Canvas x:Name="cv_AvatarFive" Height="220" Width="200">
-                    	<Canvas x:Name="cv_Aura" Height="100" Width="100">
+                    	<Canvas x:Name="cv_Aura" Height="100" Width="100" Canvas.Left="50" Canvas.Top="90">
                     		<TotalScore_AvatarReward:Aura3 d:LayoutOverrides="Width, Height"/>
                     	</Canvas>
                     	<TotalScore_AvatarReward:Berserk d:LayoutOverrides="Width, Height"/>

@@ -54,6 +54,40 @@
 
 
     <Canvas>
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="Amount">
+    			<VisualState x:Name="none"/>
+    			<VisualState x:Name="threeClock">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="clockFour">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="clockFive">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<DoubleAnimation Duration="0" To="32" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="clockOne" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="32" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="clockTwo" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="32" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="clockThree" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="32.1919994354248,49.7369995117188" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="29.7390003204346,49.7369995117188" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="27.75,46.9480018615723" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="27.75,43.507999420166" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="27.75,25.7329998016357" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(LineSegment.Point)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="27.75,22.2919998168945" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="29.7390003204346,19.503999710083" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    					<PointAnimation Duration="0" To="32.1919994354248,19.503999710083" Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+    				</Storyboard>
+    			</VisualState>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
     	<Canvas
   xmlns="http://schemas.microsoft.com/client/2007"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="150.389" Height="51.737"
@@ -255,7 +289,22 @@
     		<Canvas>
 
   <!-- Layer 1/<Group>/<Path> -->
-    			<Path Opacity="0.5" StrokeThickness="4.0" Stroke="#ff042d49" StrokeMiterLimit="1.0" Fill="#ffffffff" Data="F1 M 144.141,43.508 C 144.141,46.948 142.152,49.737 139.699,49.737 L 6.442,49.737 C 3.989,49.737 2.000,46.948 2.000,43.508 L 2.000,25.733 C 2.000,22.292 3.989,19.504 6.442,19.504 L 139.699,19.504 C 142.152,19.504 144.141,22.292 144.141,25.733 L 144.141,43.508 Z"/>
+    			<Path x:Name="path" Opacity="0.5" StrokeThickness="4.0" Stroke="#ff042d49" StrokeMiterLimit="1.0" Fill="#ffffffff" Height="51.737" UseLayoutRounding="False" Width="146.141">
+    				<Path.Data>
+    					<PathGeometry FillRule="Nonzero">
+    						<PathFigure IsFilled="True" IsClosed="True" StartPoint="144.141006469727,43.507999420166">
+    							<BezierSegment Point3="139.699005126953,49.7369995117188" Point2="142.151992797852,49.7369995117188" Point1="144.141006469727,46.9480018615723"/>
+    							<LineSegment Point="6.44199991226196,49.7369995117188"/>
+    							<BezierSegment Point3="2,43.507999420166" Point2="2,46.9480018615723" Point1="3.98900008201599,49.7369995117188"/>
+    							<LineSegment Point="2,25.7329998016357"/>
+    							<BezierSegment Point3="6.44199991226196,19.503999710083" Point2="3.98900008201599,19.503999710083" Point1="2,22.2919998168945"/>
+    							<LineSegment Point="139.699005126953,19.503999710083"/>
+    							<BezierSegment Point3="144.141006469727,25.7329998016357" Point2="144.141006469727,22.2919998168945" Point1="142.151992797852,19.503999710083"/>
+    							<LineSegment Point="144.141006469727,43.507999420166"/>
+    						</PathFigure>
+    					</PathGeometry>
+    				</Path.Data>
+    			</Path>
 
     		</Canvas>
 
@@ -281,9 +330,21 @@
 
     		</Canvas>
 
-    		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockOne" Height="30" Canvas.Top="19" Width="25"/>
-    		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockTwo" Height="30" Canvas.Top="19" Width="25" Canvas.Left="17"/>
-    		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockThree" Height="30" Canvas.Top="19" Width="25" Canvas.Left="34"/>
+    		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockOne" Height="30" Canvas.Top="19" Width="25" RenderTransformOrigin="0.5,0.5">
+    			<TheS_SperfGames_MayaTukky:SandGlassUI.RenderTransform>
+    				<CompositeTransform/>
+    			</TheS_SperfGames_MayaTukky:SandGlassUI.RenderTransform>
+    		</TheS_SperfGames_MayaTukky:SandGlassUI>
+    		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockTwo" Height="30" Canvas.Top="19" Width="25" Canvas.Left="17" RenderTransformOrigin="0.5,0.5">
+    			<TheS_SperfGames_MayaTukky:SandGlassUI.RenderTransform>
+    				<CompositeTransform/>
+    			</TheS_SperfGames_MayaTukky:SandGlassUI.RenderTransform>
+    		</TheS_SperfGames_MayaTukky:SandGlassUI>
+    		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockThree" Height="30" Canvas.Top="19" Width="25" Canvas.Left="34" RenderTransformOrigin="0.5,0.5">
+    			<TheS_SperfGames_MayaTukky:SandGlassUI.RenderTransform>
+    				<CompositeTransform/>
+    			</TheS_SperfGames_MayaTukky:SandGlassUI.RenderTransform>
+    		</TheS_SperfGames_MayaTukky:SandGlassUI>
     		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockFour" Height="30" Canvas.Top="19" Width="25" Canvas.Left="50"/>
     		<TheS_SperfGames_MayaTukky:SandGlassUI x:Name="clockFive" Height="30" Canvas.Top="19" Width="25" Canvas.Left="66"/>
     	</Canvas>
