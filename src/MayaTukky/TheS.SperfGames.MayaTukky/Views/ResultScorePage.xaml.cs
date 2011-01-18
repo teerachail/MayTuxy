@@ -47,32 +47,33 @@ namespace TheS.SperfGames.MayaTukky.Views
             btn_Next.MouseLeftButtonDown += new MouseButtonEventHandler(btn_Next_MouseLeftButtonDown);
 
             _clound.Sb_CloudOut.Begin();
-        }
 
-        /// <summary>
-        /// แสดงผลเฉพาะเมื่อจบ State 1
-        /// </summary>
-        public void ShowTrophiesFirstState()
-        {
-            VisualStateManager.GoToState(this, "firstStateResult", false);
-        }
+            const string FirstFinished = "firstStateResult";
+            const string SecondFinished = "secondtStateResult";
+            const string ThirdFinished = "thirdStateResult";
 
-        /// <summary>
-        /// แสดงผลเฉพาะเมื่อจบ State 2
-        /// </summary>
-        public void ShowTrophiesSecondState()
-        {
-            VisualStateManager.GoToState(this, "secondtStateResult", false);
-        }
+            int firstScore = GlobalScore.FirstScore;
+            int secondScore = GlobalScore.SecondScore;
+            int thirdScore = GlobalScore.ThirdScore;
 
-        /// <summary>
-        /// แสดงผลเฉพาะเมื่อจบ State 3
-        /// </summary>
-        public void ShowTrophiesThirdState()
-        {
-            VisualStateManager.GoToState(this, "thirdStateResult", false);
-        }
+            const int EmptyScore = 0;
+            if (GlobalScore.ThirdItemsFound.Count != EmptyScore)
+            {
+                // ผ่านเกม State 3
+                VisualStateManager.GoToState(this,ThirdFinished , false);
+            }
+            else if (GlobalScore.SecondItemsFound.Count != EmptyScore)
+            {
+                // ผ่านเกม State 2
+                VisualStateManager.GoToState(this,SecondFinished , false);
+            }
+            else
+            {
+                // ผ่านเกม State 1
+                VisualStateManager.GoToState(this,FirstFinished , false);
+            }
 
+        }
 
         private void btn_Next_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -101,6 +102,17 @@ namespace TheS.SperfGames.MayaTukky.Views
             poisonSeal.StartPlay();
         }
 
+        private void calculateGameScoreRunner(string objectName, int keyFrame, int scoreValue)
+        {
+            int score = (int)(scoreValue / keyFrame);
+            for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
+            {
+                (LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrameValues)) as DiscreteObjectKeyFrame)
+                    .Value = (score * keyFrameValues).ToString();
+            }
+            (LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrame)) as DiscreteObjectKeyFrame)
+                .Value = scoreValue.ToString();
+        }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
