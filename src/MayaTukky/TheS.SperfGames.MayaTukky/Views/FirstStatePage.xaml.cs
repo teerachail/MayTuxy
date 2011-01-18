@@ -99,6 +99,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
 
+            // เปลี่ยนให้มีนาฬิกา 3 เรือน
+            clock.ShowThreeClock();
+
             // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
             _prepareLayer.Sb_Start.Begin();
             Sb_Dark.Begin();
@@ -292,6 +295,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     // จัดการการแสดงผลคะแนนและเวลา
                     _timeLeftSecond += result.TimeAdvantage;
+                    clock.txt_TimePlus.Text = result.TimeAdvantage.ToString();
 
                     const int Proportion = 5;
                     int scoreProportion = (int)(result.Score / Proportion);
@@ -320,7 +324,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // แสดงอนิเมชันการตอบถูก
                     const int DisplayCorrectAnswerAndCombo = 0;
                     const int DisplayCorrectAnswerForLowLevel = 3;
-                    if ((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo ) || (_gameCombo == DisplayCorrectAnswerForLowLevel))
+                    if (((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo )
+                        && (_gameCombo != DisplayCorrectAnswerAndCombo))
+                        || (_gameCombo == DisplayCorrectAnswerForLowLevel))
                     {
                         _trueFalseMark.Sb_ComboContinuing.Begin();
                         _trueFalseMark.txt_TrueCombo.Text = _gameCombo.ToString();
@@ -328,25 +334,20 @@ namespace TheS.SperfGames.MayaTukky.Views
                     else _trueFalseMark.Sb_Good.Begin();
 
                     // เล่นอนิเมชันแสดงคะแนน
-                    //scoreBoard.Sb_ScoreUp.Stop();
                     scoreBoard.Sb_ScorePlus.Stop();
                     scoreBoard.Sb_ScoreUp.Begin();
                     scoreBoard.Sb_ScorePlus.Begin();
                 }
 
-                // TODO: แก้ไขนาฬิกาใน State1 ให้เหลือเพียง 3 ตัว
+                // แก้ไขนาฬิกาใน State1 ให้เหลือเพียง 3 ตัว
                 const int First = 1;
                 const int Second = 2;
                 const int Third = 3;
-                const int Fourth = 4;
-                const int Fifth = 5;
                 if (_timeCombo >= First) clock.PlayClockOne();
                 if (_timeCombo >= Second) clock.PlayClockTwo();
-                if (_timeCombo >= Third) clock.PlayClockThree();
-                if (_timeCombo >= Fourth) clock.PlayClockFour();
-                if (_timeCombo >= Fifth)
+                if (_timeCombo >= Third)
                 {
-                    clock.PlayClockFive();
+                    clock.PlayClockThree();
                     clock.Sb_TimeUp.Begin();
                 }
             }
