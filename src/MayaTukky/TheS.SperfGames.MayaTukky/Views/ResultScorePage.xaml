@@ -14,25 +14,11 @@
 				<DiscreteObjectKeyFrame KeyTime="0:0:1.1"  x:Name="DokTrueValue1"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1.2"  x:Name="DokTrueValue2"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:1.3"  x:Name="DokTrueValue3"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.4"  x:Name="DokTrueValue4"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.5"  x:Name="DokTrueValue5"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.6"  x:Name="DokTrueValue6"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.7"  x:Name="DokTrueValue7"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.8"  x:Name="DokTrueValue8"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9"  x:Name="DokTrueValue9"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2"  x:Name="DokTrueValue10"/>
 			</ObjectAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="txt_FlaseSum">
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.1"  x:Name="DokFalseValue1"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.2"  x:Name="DokFalseValue2"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.3"  x:Name="DokFalseValue3"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.4"  x:Name="DokFalseValue4"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.5"  x:Name="DokFalseValue5"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.6"  x:Name="DokFalseValue6"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.7"  x:Name="DokFalseValue7"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.8"  x:Name="DokFalseValue8"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.9"  x:Name="DokFalseValue9"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3"  x:Name="DokFalseValue10"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.5"  x:Name="DokFalseValue1"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.6"  x:Name="DokFalseValue2"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.7"  x:Name="DokFalseValue3"/>
 			</ObjectAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="trueBoard">
 				<DiscreteObjectKeyFrame KeyTime="0:0:1">
@@ -42,14 +28,14 @@
 				</DiscreteObjectKeyFrame>
 			</ObjectAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="falseBoard">
-				<DiscreteObjectKeyFrame KeyTime="0:0:2">
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.4">
 					<DiscreteObjectKeyFrame.Value>
 						<Visibility>Visible</Visibility>
 					</DiscreteObjectKeyFrame.Value>
 				</DiscreteObjectKeyFrame>
 			</ObjectAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="combo">
-				<DiscreteObjectKeyFrame KeyTime="0:0:3">
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.7">
 					<DiscreteObjectKeyFrame.Value>
 						<Visibility>Visible</Visibility>
 					</DiscreteObjectKeyFrame.Value>
@@ -221,6 +207,7 @@
 						</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
+				<VisualState x:Name="none"/>
 			</VisualStateGroup>
 		</VisualStateManager.VisualStateGroups>
 		<i:Interaction.Triggers>
@@ -483,19 +470,19 @@
 				<Canvas.RenderTransform>
 					<CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
 				</Canvas.RenderTransform>
-				<TheS_SperfGames_MayaTukky:PoisonItemCollection d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
+				<TheS_SperfGames_MayaTukky:PoisonItemCollection x:Name="firstCollection" d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
 			</Canvas>
 			<Canvas x:Name="cv_VoodooItemCollection" Height="488" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Left="-46" Canvas.Top="36">
 				<Canvas.RenderTransform>
 					<CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
 				</Canvas.RenderTransform>
-				<TheS_SperfGames_MayaTukky:VoodooItemCollectionUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
+				<TheS_SperfGames_MayaTukky:VoodooItemCollectionUI x:Name="secondCollection" d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
 			</Canvas>
 			<Canvas x:Name="cv_MonsterItemCollection" Height="488" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Left="-46" Canvas.Top="36">
 				<Canvas.RenderTransform>
 					<CompositeTransform ScaleX="0.85" ScaleY="0.85"/>
 				</Canvas.RenderTransform>
-				<TheS_SperfGames_MayaTukky:MonsterItemCollectionUI d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
+				<TheS_SperfGames_MayaTukky:MonsterItemCollectionUI x:Name="thirdCollection" d:LayoutOverrides="Width, Height" RenderTransformOrigin="0.5,0.5"/>
 			</Canvas>
 		</Canvas>
 		<TextBlock Height="28" Canvas.Left="9" TextWrapping="Wrap" Text="YOU GOT THIS ITEM! .PLEASE,TRY TO BE EXITED IN TROPHY." Canvas.Top="398" FontFamily="Myriad Pro" FontWeight="Bold" FontSize="13.333" Foreground="White"/>
