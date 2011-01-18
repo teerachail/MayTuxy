@@ -108,14 +108,32 @@
     <Compile Include="Controls\ButtonCorrectUI.xaml.cs">
       <DependentUpon>ButtonCorrectUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ButtonFamilyUI.xaml.cs">
+      <DependentUpon>ButtonFamilyUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonInviteUI.xaml.cs">
+      <DependentUpon>ButtonInviteUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ButtonMusicUI.xaml.cs">
       <DependentUpon>ButtonMusicUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonOnlineUI.xaml.cs">
+      <DependentUpon>ButtonOnlineUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonProfileUI.xaml.cs">
+      <DependentUpon>ButtonProfileUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ButtonResolutionUI.xaml.cs">
       <DependentUpon>ButtonResolutionUI.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ButtonSingleUI.xaml.cs">
+      <DependentUpon>ButtonSingleUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ButtonSoundUI.xaml.cs">
       <DependentUpon>ButtonSoundUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonTrophiesUI.xaml.cs">
+      <DependentUpon>ButtonTrophiesUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ClockUI.xaml.cs">
       <DependentUpon>ClockUI.xaml</DependentUpon>
@@ -268,7 +286,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\ButtonFamilyUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonInviteUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\ButtonMusicUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonOnlineUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonProfileUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -276,7 +310,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\ButtonSingleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\ButtonSoundUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ButtonTrophiesUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

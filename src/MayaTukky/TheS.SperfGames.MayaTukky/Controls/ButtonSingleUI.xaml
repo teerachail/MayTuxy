@@ -1,0 +1,398 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+    x:Class="TheS.SperfGames.MayaTukky.Controls.ButtonSingleUI"
+    d:DesignHeight="300" d:DesignWidth="400" Width="185" Height="120" mc:Ignorable="d">
+    
+	<i:Interaction.Triggers>
+		<i:EventTrigger EventName="Loaded">
+			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
+		</i:EventTrigger>
+		<i:EventTrigger EventName="MouseEnter">
+			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="Over"/>
+		</i:EventTrigger>
+		<i:EventTrigger EventName="MouseLeave">
+			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
+		</i:EventTrigger>
+		<i:EventTrigger EventName="MouseLeftButtonDown">
+			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="Hit"/>
+		</i:EventTrigger>
+		<i:EventTrigger EventName="MouseLeftButtonUp">
+			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+    
+    <Grid x:Name="LayoutRoot" Height="120" Width="185">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition/>
+    	</Grid.ColumnDefinitions>
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="ST_Single">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="0"/>
+    				<VisualTransition From="Over" GeneratedDuration="0:0:0.05" To="Hit">
+    					<Storyboard/>
+    				</VisualTransition>
+    				<VisualTransition From="none" GeneratedDuration="0:0:0.1" To="Over"/>
+    				<VisualTransition From="Over" GeneratedDuration="0:0:0.1" To="none"/>
+    				<VisualTransition From="Hit" GeneratedDuration="0:0:0.1" To="none">
+    					<Storyboard>
+    						<DoubleAnimation Duration="0:0:0.1" To="-52.632" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb1"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-142.768" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb1"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-155.968" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb2"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-39.432" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb2"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-200.968" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb3"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-147.768" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb3"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-47.632" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb4"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="-49.432" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb4"/>
+    						<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb4"/>
+    						<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Bomb4"/>
+    						<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Bomb4"/>
+    						<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb1"/>
+    						<DoubleAnimation Duration="0:0:0.05" From="-61.628" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb3" To="-51.57"/>
+    						<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb1"/>
+    						<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb2"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb_All"/>
+    						<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb_All"/>
+    					</Storyboard>
+    				</VisualTransition>
+    			</VisualStateGroup.Transitions>
+    			<VisualState x:Name="none">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Bomb_All">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Collapsed</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb_All" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-52.632" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-142.768" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-155.968" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-39.432" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-200.968" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb3" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-147.768" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb3" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-47.632" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-49.432" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb_All" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-51.57" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb3" d:IsOptimized="True"/>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="Over">
+    				<Storyboard>
+    					<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb_All" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.6" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.6" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.75" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Bomb_All" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.75" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Bomb_All" d:IsOptimized="True"/>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="Hit">
+    				<Storyboard>
+    					<DoubleAnimation Duration="0" To="-105.966" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-116.098" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-112.632" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-84.435" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-127.463" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb3" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-96.933" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb3" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-110.968" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-74.436" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-214.695" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Bomb4" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-349.908" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="-57.244" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Bomb3" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.7" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb1" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="0.9" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb2" d:IsOptimized="True"/>
+    					<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Bomb_All" d:IsOptimized="True"/>
+    				</Storyboard>
+    			</VisualState>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+    	<Canvas x:Name="canvas" Margin="-77,-682,-6,1" RenderTransformOrigin="0.683,0.945">
+    		<Canvas.RenderTransform>
+    			<CompositeTransform/>
+    		</Canvas.RenderTransform>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff959b37" Data="F1 M 123.319,690.162 C 123.319,690.162 119.415,690.083 116.053,693.933 C 116.053,693.933 124.011,694.168 123.319,690.162 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff959b37" Data="F1 M 102.502,745.478 C 102.502,745.478 93.427,744.799 92.540,741.480 C 91.653,738.161 101.291,728.856 103.651,727.219 C 103.651,727.219 110.802,693.058 120.092,691.148 C 128.434,689.857 138.622,722.730 138.622,722.730 C 138.622,722.730 154.746,725.686 155.858,729.493 C 156.970,733.300 149.669,739.260 148.031,739.788 C 148.031,739.788 147.615,743.598 147.376,744.480 C 147.376,744.480 235.157,716.202 243.975,729.563 C 245.592,732.013 246.664,734.766 247.396,737.599 C 248.193,740.674 248.555,743.824 248.680,746.993 C 248.811,750.274 248.600,753.532 248.212,756.789 C 247.888,759.489 247.308,762.133 246.675,764.773 C 246.163,766.910 245.565,769.031 244.797,771.090 C 243.421,774.789 241.406,778.207 237.617,779.749 C 235.027,780.801 232.162,781.024 229.421,781.434 C 228.628,781.552 227.837,781.670 227.047,781.797 C 226.517,781.882 225.993,781.956 225.461,782.013 C 223.790,782.193 222.120,782.411 220.446,782.584 C 218.692,782.765 216.935,782.875 215.175,782.983 C 213.289,783.099 211.403,783.239 209.516,783.359 C 207.585,783.482 205.652,783.560 203.717,783.625 C 201.734,783.692 199.752,783.772 197.770,783.849 C 195.791,783.925 193.812,783.973 191.830,784.003 C 189.872,784.033 187.915,784.068 185.958,784.108 C 184.058,784.147 182.157,784.171 180.257,784.176 C 178.447,784.180 176.637,784.182 174.826,784.195 C 173.131,784.208 171.436,784.215 169.740,784.202 C 168.201,784.190 166.662,784.173 165.121,784.168 C 163.756,784.165 162.391,784.164 161.027,784.142 C 159.880,784.125 158.734,784.098 157.586,784.085 C 156.678,784.075 155.769,784.073 154.861,784.054 C 154.229,784.041 153.599,784.015 152.967,784.004 C 152.645,783.999 152.320,784.014 151.999,783.997 C 151.992,783.997 151.868,783.989 151.869,783.987 C 151.869,783.987 150.721,791.813 133.529,792.913 C 116.338,794.012 102.798,792.283 108.098,775.283 C 108.595,773.686 106.699,774.929 105.506,774.893 C 104.314,774.858 101.426,774.844 105.083,765.194 C 108.739,755.543 108.969,757.568 108.969,757.568 C 108.969,757.568 102.858,751.594 102.502,745.478 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff0f8fc1" Data="F1 M 105.613,743.461 C 105.613,743.461 96.650,742.803 95.777,739.548 C 94.905,736.294 104.430,727.162 106.763,725.556 C 106.763,725.556 113.853,692.050 123.030,690.169 C 131.269,688.896 141.306,721.125 141.306,721.125 C 141.306,721.125 157.229,724.010 158.324,727.742 C 159.419,731.475 152.202,737.325 150.585,737.844 C 150.585,737.844 150.171,741.580 149.934,742.446 C 149.934,742.446 236.653,714.644 245.353,727.740 C 246.947,730.142 248.004,732.840 248.727,735.617 C 249.510,738.631 249.863,741.720 249.985,744.828 C 250.112,748.045 249.902,751.241 249.514,754.435 C 249.194,757.083 248.619,759.675 247.990,762.265 C 247.483,764.360 246.889,766.441 246.129,768.461 C 244.768,772.089 242.776,775.443 239.033,776.958 C 236.474,777.992 233.643,778.213 230.936,778.617 C 230.154,778.734 229.372,778.850 228.591,778.975 C 228.070,779.059 227.552,779.131 227.024,779.188 C 225.373,779.367 223.726,779.582 222.073,779.752 C 220.340,779.931 218.602,780.039 216.864,780.147 C 215.000,780.262 213.140,780.401 211.276,780.521 C 209.368,780.644 207.458,780.721 205.549,780.787 C 203.590,780.854 201.632,780.934 199.674,781.010 C 197.720,781.086 195.764,781.136 193.808,781.167 C 191.875,781.198 189.941,781.233 188.007,781.274 C 186.132,781.314 184.254,781.339 182.377,781.346 C 180.589,781.351 178.801,781.354 177.013,781.369 C 175.339,781.383 173.665,781.392 171.991,781.381 C 170.470,781.370 168.949,781.354 167.427,781.351 C 166.079,781.348 164.732,781.348 163.383,781.328 C 162.251,781.313 161.119,781.287 159.986,781.275 C 159.088,781.266 158.191,781.266 157.294,781.247 C 156.670,781.234 156.047,781.209 155.423,781.200 C 155.105,781.195 154.785,781.209 154.467,781.194 C 154.460,781.193 154.338,781.187 154.339,781.184 C 154.339,781.184 153.199,788.859 136.220,789.951 C 119.239,791.043 105.867,789.358 111.116,772.684 C 111.608,771.118 109.734,772.337 108.557,772.303 C 107.379,772.270 104.527,772.258 108.146,762.792 C 111.765,753.326 111.990,755.312 111.990,755.312 C 111.990,755.312 105.960,749.458 105.613,743.461 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffb0be35" Data="F1 M 105.613,743.461 C 105.613,743.461 96.650,742.803 95.777,739.548 C 94.905,736.294 104.430,727.162 106.763,725.556 C 106.763,725.556 113.853,692.050 123.030,690.169 C 131.269,688.896 141.306,721.125 141.306,721.125 C 141.306,721.125 157.229,724.010 158.324,727.742 C 159.419,731.475 152.202,737.325 150.585,737.844 C 150.585,737.844 150.171,741.580 149.934,742.446 C 149.934,742.446 236.653,714.644 245.353,727.740 C 246.947,730.142 248.004,732.840 248.727,735.617 C 249.510,738.631 249.863,741.720 249.985,744.828 C 250.112,748.045 249.902,751.241 249.514,754.435 C 249.194,757.083 248.619,759.675 247.990,762.265 C 247.483,764.360 246.889,766.441 246.129,768.461 C 244.768,772.089 242.776,775.443 239.033,776.958 C 236.474,777.992 233.643,778.213 230.936,778.617 C 230.154,778.734 229.372,778.850 228.591,778.975 C 228.070,779.059 227.552,779.131 227.024,779.188 C 225.373,779.367 223.726,779.582 222.073,779.752 C 220.340,779.931 218.602,780.039 216.864,780.147 C 215.000,780.262 213.140,780.401 211.276,780.521 C 209.368,780.644 207.458,780.721 205.549,780.787 C 203.590,780.854 201.632,780.934 199.674,781.010 C 197.720,781.086 195.764,781.136 193.808,781.167 C 191.875,781.198 189.941,781.233 188.007,781.274 C 186.132,781.314 184.254,781.339 182.377,781.346 C 180.589,781.351 178.801,781.354 177.013,781.369 C 175.339,781.383 173.665,781.392 171.991,781.381 C 170.470,781.370 168.949,781.354 167.427,781.351 C 166.079,781.348 164.732,781.348 163.383,781.328 C 162.251,781.313 161.119,781.287 159.986,781.275 C 159.088,781.266 158.191,781.266 157.294,781.247 C 156.670,781.234 156.047,781.209 155.423,781.200 C 155.105,781.195 154.785,781.209 154.467,781.194 C 154.460,781.193 154.338,781.187 154.339,781.184 C 154.339,781.184 153.199,788.859 136.220,789.951 C 119.239,791.043 105.867,789.358 111.116,772.684 C 111.608,771.118 109.734,772.337 108.557,772.303 C 107.379,772.270 104.527,772.258 108.146,762.792 C 111.765,753.326 111.990,755.312 111.990,755.312 C 111.990,755.312 105.960,749.458 105.613,743.461 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff007dc5" Data="F1 M 116.485,762.284 L 144.544,759.094 C 144.544,759.094 147.892,765.704 149.380,776.449 C 149.380,776.449 145.958,783.228 132.290,784.783 C 118.621,786.336 114.916,779.502 114.916,779.502 C 114.916,779.502 113.225,769.910 116.485,762.284 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff005f8e" Data="F1 M 116.604,777.063 C 116.604,777.063 115.239,769.299 117.339,762.187 L 116.485,762.284 C 113.225,769.910 114.916,779.502 114.916,779.502 C 114.916,779.502 118.621,786.336 132.290,784.783 C 145.958,783.228 149.380,776.449 149.380,776.449 C 149.367,776.354 149.352,776.260 149.338,776.165 C 147.164,778.291 142.621,781.360 133.979,782.342 C 120.311,783.896 116.604,777.063 116.604,777.063 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff007dc5" Data="F1 M 117.339,762.187 C 115.239,769.299 116.604,777.063 116.604,777.063 C 116.604,777.063 120.311,783.896 133.979,782.342 C 142.621,781.360 147.164,778.291 149.338,776.165 C 147.831,765.587 144.544,759.094 144.544,759.094 L 117.339,762.187 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path StrokeThickness="1.0" Stroke="#ff231f20" StrokeMiterLimit="1.0" Data="F1 M 109.174,704.363"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path StrokeThickness="1.0" Stroke="#ff231f20" StrokeMiterLimit="1.0" Data="F1 M 105.620,704.808"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Opacity="0.4" Fill="#fffefefe" Data="F1 M 143.507,764.045 C 143.507,764.045 147.088,770.007 147.906,776.375 C 147.906,776.375 149.093,774.461 145.797,763.597 C 145.797,763.597 143.327,761.630 143.507,764.045 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff2b5e63" Data="F1 M 119.786,754.929 C 119.786,754.929 111.679,761.049 111.734,768.170 C 111.734,768.170 117.774,766.727 118.070,767.113 C 118.366,767.499 120.811,774.264 121.925,774.473 C 123.039,774.682 131.000,768.746 131.653,768.587 C 132.305,768.430 138.819,772.636 140.705,772.253 C 142.589,771.871 143.758,764.444 143.895,764.177 C 144.033,763.910 151.523,764.903 151.816,764.534 C 152.110,764.166 145.487,752.750 139.714,751.741 C 138.987,751.613 135.562,752.087 129.478,752.779 C 123.394,753.471 121.201,754.098 119.786,754.929 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff52a2a9" Data="F1 M 130.594,765.483 C 131.125,765.355 136.421,768.774 137.953,768.463 C 139.486,768.153 140.435,762.115 140.547,761.898 C 140.659,761.681 146.749,762.487 146.987,762.188 C 147.226,761.888 141.841,752.607 137.149,751.788 C 136.557,751.684 133.771,752.069 128.826,752.631 C 123.880,753.193 122.098,753.703 120.947,754.378 C 120.947,754.378 114.357,759.354 114.401,765.144 C 114.401,765.144 119.312,763.971 119.552,764.285 C 119.792,764.599 121.781,770.098 122.686,770.267 C 123.591,770.437 130.063,765.611 130.594,765.483"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fffed31a" Data="F1 M 137.903,763.664 C 137.995,764.464 137.419,765.187 136.620,765.278 C 135.819,765.369 135.097,764.794 135.006,763.994 C 134.916,763.194 135.489,762.472 136.290,762.381 C 137.089,762.290 137.812,762.865 137.903,763.664 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fffed31a" Data="F1 M 124.538,711.516 C 124.457,712.828 123.723,713.851 122.896,713.800 C 122.070,713.750 121.465,712.645 121.545,711.333 C 121.625,710.020 122.360,708.997 123.187,709.047 C 124.014,709.098 124.618,710.203 124.538,711.516 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff2b5e63" Data="F1 M 118.938,754.854 C 118.938,754.854 121.505,758.967 128.642,758.156 C 135.777,757.345 139.129,751.755 139.129,751.755 C 139.129,751.755 124.969,748.908 118.938,754.854 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fff8cdaa" Data="F1 M 111.669,737.364 L 141.095,734.019 C 141.095,734.019 146.212,754.691 129.202,756.625 C 109.958,758.813 111.669,737.364 111.669,737.364 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffe1b18c" Data="F1 M 113.362,737.171 L 111.669,737.364 C 111.669,737.364 109.958,758.813 129.202,756.625 C 134.092,756.069 137.151,753.963 139.032,751.246 C 137.154,752.969 134.542,754.227 130.929,754.638 C 115.118,756.436 113.453,742.280 113.362,737.171 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fff8cdaa" Data="F1 M 141.095,734.019 L 113.362,737.171 C 113.453,742.280 115.118,756.436 130.929,754.638 C 134.542,754.227 137.154,752.969 139.032,751.246 C 143.690,744.511 141.095,734.019 141.095,734.019 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffaa7b5c" Data="F1 M 119.565,743.761 C 119.667,744.652 119.026,745.458 118.134,745.559 C 117.243,745.660 116.438,745.019 116.336,744.128 C 116.235,743.236 116.875,742.432 117.768,742.331 C 118.659,742.229 119.464,742.869 119.565,743.761 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffaa7b5c" Data="F1 M 137.444,741.728 C 137.546,742.619 136.905,743.425 136.014,743.525 C 135.122,743.627 134.317,742.986 134.216,742.096 C 134.115,741.204 134.755,740.399 135.646,740.298 C 136.539,740.196 137.342,740.836 137.444,741.728 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path StrokeThickness="2.0" Stroke="#ffaa7b5c" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 120.406,748.948 C 120.406,748.948 128.253,752.708 134.160,747.132"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fffed31a" Data="F1 M 111.637,733.762 L 113.610,733.412 C 113.610,733.412 115.851,728.421 116.623,728.207 C 117.395,727.994 118.580,732.512 118.580,732.512 C 118.580,732.512 122.051,732.075 122.158,732.273 C 122.263,732.471 121.030,735.629 121.030,735.629 C 121.030,735.629 113.593,736.223 111.637,733.762 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Opacity="0.4" Fill="#fffefefe" Data="F1 M 138.775,737.612 C 138.775,737.612 140.094,747.066 138.155,750.054 C 138.155,750.054 141.747,747.285 140.979,736.955 C 140.979,736.955 139.451,736.396 138.775,737.612 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff2b5e63" Data="F1 M 150.345,730.200 C 150.782,734.040 140.406,738.373 127.172,739.877 C 113.938,741.382 102.856,739.488 102.419,735.649 C 101.982,731.809 112.356,727.477 125.591,725.972 C 138.826,724.466 149.908,726.360 150.345,730.200 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff1c4749" Data="F1 M 106.267,733.820 C 106.109,732.431 107.373,730.977 109.670,729.615 C 105.001,731.435 102.188,733.611 102.419,735.649 C 102.856,739.488 113.938,741.382 127.172,739.877 C 135.616,738.917 142.891,736.805 146.941,734.406 C 142.812,736.014 137.231,737.343 131.021,738.049 C 117.786,739.554 106.704,737.661 106.267,733.820 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff2b5e63" Data="F1 M 150.345,730.200 C 149.908,726.360 138.826,724.466 125.591,725.972 C 119.380,726.678 113.800,728.006 109.670,729.615 C 107.373,730.977 106.109,732.431 106.267,733.820 C 106.704,737.661 117.786,739.554 131.021,738.049 C 137.231,737.343 142.812,736.014 146.941,734.406 C 149.239,733.044 150.502,731.590 150.345,730.200 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff52a2a9" Data="F1 M 110.856,732.426 C 110.874,732.292 110.893,732.158 110.913,732.024 C 110.968,731.644 111.025,731.265 111.085,730.885 C 111.177,730.292 111.274,729.701 111.374,729.110 C 111.505,728.339 111.641,727.569 111.784,726.800 C 111.952,725.884 112.129,724.970 112.314,724.056 C 112.522,723.028 112.741,722.002 112.970,720.979 C 113.217,719.873 113.477,718.769 113.752,717.669 C 114.039,716.517 114.341,715.370 114.662,714.228 C 114.990,713.064 115.336,711.906 115.705,710.755 C 116.071,709.612 116.461,708.477 116.881,707.352 C 117.287,706.263 117.722,705.183 118.193,704.121 C 118.638,703.117 119.117,702.127 119.643,701.161 C 120.551,699.494 121.601,697.892 122.914,696.512 C 123.215,696.195 123.527,695.841 123.901,695.608 C 124.149,695.810 124.348,696.120 124.532,696.379 C 124.740,696.673 124.932,696.978 125.124,697.282 C 125.324,697.596 125.520,697.915 125.711,698.235 C 125.958,698.649 126.199,699.065 126.436,699.483 C 126.731,700.007 127.021,700.535 127.307,701.064 C 127.656,701.711 127.998,702.361 128.335,703.014 C 128.741,703.797 129.139,704.582 129.531,705.371 C 129.996,706.302 130.452,707.236 130.904,708.172 C 131.430,709.264 131.951,710.359 132.464,711.457 C 133.057,712.722 133.642,713.990 134.222,715.261 C 134.883,716.712 135.537,718.167 136.185,719.624 C 136.919,721.273 137.646,722.926 138.367,724.581 C 138.651,725.235 138.936,725.891 139.218,726.546 C 139.367,726.889 139.514,727.232 139.662,727.575 C 139.735,727.745 139.808,727.915 139.881,728.084 C 139.928,728.195 140.119,728.484 140.102,728.599 C 140.102,728.599 139.299,733.720 124.898,735.356 C 110.495,736.994 110.856,732.426 110.856,732.426 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ff52a2a9" Data="F1 M 140.102,728.599 C 140.119,728.484 139.928,728.195 139.881,728.084 C 139.808,727.915 139.735,727.745 139.662,727.575 C 139.514,727.232 139.367,726.889 139.218,726.546 C 138.936,725.891 138.651,725.235 138.367,724.581 C 137.646,722.926 136.919,721.273 136.185,719.624 C 135.537,718.167 134.883,716.712 134.222,715.261 C 133.642,713.990 133.057,712.722 132.464,711.457 C 131.951,710.359 131.430,709.264 130.904,708.172 C 130.452,707.236 129.996,706.302 129.531,705.371 C 129.139,704.582 128.741,703.797 128.335,703.014 C 127.998,702.361 127.656,701.711 127.307,701.064 C 127.021,700.535 126.731,700.007 126.436,699.483 C 126.199,699.065 125.958,698.649 125.711,698.235 C 125.647,698.128 125.580,698.022 125.514,697.916 C 125.333,698.223 125.152,698.529 124.983,698.841 C 124.456,699.807 123.978,700.797 123.533,701.801 C 123.061,702.864 122.627,703.944 122.221,705.033 C 121.801,706.158 121.411,707.293 121.044,708.435 C 120.675,709.586 120.330,710.744 120.002,711.908 C 119.681,713.050 119.378,714.198 119.091,715.350 C 118.817,716.449 118.557,717.553 118.309,718.659 C 118.080,719.683 117.862,720.709 117.654,721.737 C 117.469,722.650 117.292,723.565 117.123,724.481 C 116.981,725.250 116.845,726.020 116.714,726.791 C 116.614,727.382 116.518,727.973 116.425,728.565 C 116.365,728.945 116.308,729.325 116.253,729.705 C 116.233,729.838 116.214,729.972 116.196,730.106 C 116.196,730.106 115.835,734.675 130.237,733.038 C 133.181,732.703 135.548,732.222 137.464,731.670 C 139.871,730.059 140.102,728.599 140.102,728.599 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fffed31a" Data="F1 M 133.805,714.516 C 133.805,714.516 133.848,720.422 133.970,721.498 C 133.970,721.498 129.650,723.330 129.583,723.841 C 129.515,724.352 133.797,725.877 133.797,725.877 C 133.797,725.877 133.857,731.195 134.289,731.313 C 134.721,731.431 138.768,725.354 138.768,725.354 L 133.805,714.516 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#fffed31a" Data="F1 M 117.494,705.819 C 117.494,705.819 119.081,703.950 122.482,704.172 C 125.883,704.395 125.130,706.528 123.989,706.712 C 122.848,706.898 120.410,706.870 119.783,709.875 C 119.156,712.880 120.414,715.670 122.407,716.164 C 124.400,716.656 122.384,719.625 118.542,719.176 C 114.700,718.728 114.342,715.337 114.342,715.337 L 117.494,705.819 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Opacity="0.5" Fill="#ff2b5e63" Data="F1 M 116.196,730.106 C 116.214,729.972 116.233,729.838 116.253,729.705 C 116.308,729.325 116.365,728.945 116.425,728.565 C 116.518,727.973 116.614,727.382 116.714,726.791 C 116.845,726.020 116.981,725.250 117.123,724.481 C 117.292,723.565 117.469,722.650 117.654,721.737 C 117.862,720.709 118.080,719.683 118.309,718.659 C 118.557,717.553 118.817,716.449 119.091,715.350 C 119.378,714.198 119.681,713.050 120.002,711.908 C 120.330,710.744 120.675,709.586 121.044,708.435 C 121.411,707.293 121.801,706.158 122.221,705.033 C 122.627,703.944 123.061,702.864 123.533,701.801 C 123.978,700.797 124.456,699.807 124.983,698.841 C 125.152,698.529 125.333,698.223 125.514,697.916 C 125.386,697.704 125.257,697.491 125.124,697.282 C 124.932,696.978 124.740,696.673 124.532,696.379 C 124.348,696.120 124.149,695.810 123.901,695.608 C 123.527,695.841 123.215,696.195 122.914,696.512 C 121.601,697.892 120.551,699.494 119.643,701.161 C 119.117,702.127 118.638,703.117 118.193,704.121 C 117.722,705.183 117.287,706.263 116.881,707.352 C 116.461,708.477 116.071,709.612 115.705,710.755 C 115.336,711.906 114.990,713.064 114.662,714.228 C 114.341,715.370 114.039,716.517 113.752,717.669 C 113.477,718.769 113.217,719.873 112.970,720.979 C 112.741,722.002 112.522,723.028 112.314,724.056 C 112.129,724.970 111.952,725.884 111.784,726.800 C 111.641,727.569 111.505,728.339 111.374,729.110 C 111.274,729.701 111.177,730.292 111.085,730.885 C 111.025,731.265 110.968,731.644 110.913,732.024 C 110.893,732.158 110.874,732.292 110.856,732.426 C 110.856,732.426 110.495,736.994 124.898,735.356 C 131.608,734.594 135.365,733.075 137.464,731.670 C 135.548,732.222 133.181,732.703 130.237,733.038 C 115.835,734.675 116.196,730.106 116.196,730.106 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Opacity="0.4" Fill="#fffefefe" Data="F1 M 125.687,699.500 C 125.687,699.500 139.303,725.823 138.616,729.215 C 137.929,732.606 123.673,698.072 125.687,699.500 Z"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Opacity="0.4" Fill="#fffefefe" Data="F1 M 139.218,726.546 C 139.218,726.546 149.081,726.825 149.471,730.257 C 149.643,732.787 144.026,734.352 144.026,734.352 C 144.026,734.352 147.657,731.623 147.641,730.465 C 147.625,729.308 142.047,726.795 139.218,726.546 Z"/>
+
+    		<Canvas>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 125.332,765.005 C 125.422,765.805 124.847,766.528 124.047,766.620 C 123.247,766.710 122.525,766.135 122.434,765.335 C 122.343,764.535 122.917,763.813 123.718,763.722 C 124.518,763.631 125.240,764.206 125.332,765.005 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffdbb428" Data="F1 M 122.799,765.001 C 122.755,764.611 122.870,764.242 123.090,763.953 C 122.643,764.245 122.370,764.768 122.434,765.335 C 122.525,766.135 123.247,766.710 124.047,766.620 C 124.458,766.572 124.807,766.357 125.040,766.053 C 124.855,766.173 124.646,766.258 124.413,766.285 C 123.613,766.375 122.890,765.801 122.799,765.001 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 123.718,763.722 C 123.485,763.748 123.274,763.833 123.090,763.953 C 122.870,764.242 122.755,764.611 122.799,765.001 C 122.890,765.801 123.613,766.375 124.413,766.285 C 124.646,766.258 124.855,766.173 125.040,766.053 C 125.260,765.764 125.375,765.395 125.332,765.005 C 125.240,764.206 124.518,763.631 123.718,763.722 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Opacity="0.5" Fill="#fffefefe" Data="F1 M 123.986,763.922 C 123.986,763.922 125.164,763.972 125.131,765.295 C 125.131,765.295 124.880,764.371 123.986,763.922 Z"/>
+
+    		</Canvas>
+
+    		<Canvas>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 137.903,763.664 C 137.995,764.464 137.419,765.187 136.620,765.278 C 135.819,765.369 135.097,764.794 135.006,763.994 C 134.916,763.194 135.489,762.472 136.290,762.381 C 137.089,762.290 137.812,762.865 137.903,763.664 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffdbb428" Data="F1 M 135.371,763.660 C 135.327,763.270 135.442,762.901 135.663,762.612 C 135.215,762.904 134.942,763.426 135.006,763.994 C 135.097,764.794 135.819,765.369 136.620,765.278 C 137.030,765.231 137.379,765.017 137.611,764.712 C 137.427,764.832 137.218,764.917 136.984,764.944 C 136.184,765.035 135.462,764.460 135.371,763.660 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 136.290,762.381 C 136.057,762.407 135.847,762.492 135.663,762.612 C 135.442,762.901 135.327,763.270 135.371,763.660 C 135.462,764.460 136.184,765.035 136.984,764.944 C 137.218,764.917 137.427,764.832 137.611,764.712 C 137.832,764.423 137.947,764.053 137.903,763.664 C 137.812,762.865 137.089,762.290 136.290,762.381 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Opacity="0.5" Fill="#fffefefe" Data="F1 M 136.558,762.582 C 136.558,762.582 137.736,762.631 137.703,763.953 C 137.703,763.953 137.451,763.029 136.558,762.582 Z"/>
+
+    		</Canvas>
+
+    		<Canvas>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 144.107,759.302 C 144.175,759.892 143.751,760.425 143.160,760.492 C 142.569,760.559 142.036,760.135 141.969,759.545 C 141.902,758.955 142.327,758.421 142.917,758.354 C 143.508,758.287 144.041,758.711 144.107,759.302 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffdbb428" Data="F1 M 142.238,759.298 C 142.206,759.011 142.291,758.738 142.454,758.525 C 142.125,758.741 141.921,759.127 141.969,759.545 C 142.036,760.135 142.569,760.559 143.160,760.492 C 143.463,760.458 143.721,760.299 143.893,760.074 C 143.757,760.163 143.602,760.226 143.429,760.245 C 142.839,760.313 142.306,759.888 142.238,759.298 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 142.917,758.354 C 142.745,758.374 142.589,758.437 142.454,758.525 C 142.291,758.738 142.206,759.011 142.238,759.298 C 142.306,759.888 142.839,760.313 143.429,760.245 C 143.602,760.226 143.757,760.163 143.893,760.074 C 144.055,759.861 144.141,759.589 144.107,759.302 C 144.041,758.711 143.508,758.287 142.917,758.354 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Opacity="0.5" Fill="#fffefefe" Data="F1 M 143.114,758.502 C 143.114,758.502 143.983,758.539 143.960,759.514 C 143.960,759.514 143.774,758.833 143.114,758.502 Z"/>
+
+    		</Canvas>
+
+    		<Canvas>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 117.910,762.281 C 117.977,762.871 117.553,763.403 116.962,763.471 C 116.373,763.538 115.839,763.113 115.772,762.523 C 115.705,761.933 116.129,761.399 116.719,761.333 C 117.310,761.266 117.843,761.690 117.910,762.281 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffdbb428" Data="F1 M 116.041,762.276 C 116.008,761.990 116.094,761.716 116.256,761.503 C 115.926,761.719 115.724,762.105 115.772,762.523 C 115.839,763.113 116.373,763.538 116.962,763.471 C 117.266,763.436 117.523,763.279 117.695,763.053 C 117.559,763.142 117.404,763.205 117.232,763.224 C 116.641,763.292 116.108,762.867 116.041,762.276 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#fffed31a" Data="F1 M 116.719,761.333 C 116.547,761.352 116.392,761.415 116.256,761.503 C 116.094,761.716 116.008,761.990 116.041,762.276 C 116.108,762.867 116.641,763.292 117.232,763.224 C 117.404,763.205 117.559,763.142 117.695,763.053 C 117.857,762.841 117.942,762.567 117.910,762.281 C 117.843,761.690 117.310,761.266 116.719,761.333 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Opacity="0.5" Fill="#fffefefe" Data="F1 M 116.917,761.481 C 116.917,761.481 117.786,761.518 117.762,762.493 C 117.762,762.493 117.577,761.812 116.917,761.481 Z"/>
+
+    		</Canvas>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 172.091,744.893 C 172.091,744.893 174.390,752.333 173.832,753.828 C 173.465,754.810 171.410,754.715 171.410,754.715 C 171.410,754.715 170.129,751.550 169.523,751.771 C 168.918,751.993 166.296,755.418 166.456,758.389 C 166.616,761.359 173.901,761.840 174.955,765.816 C 176.008,769.792 167.355,774.175 165.612,774.047 C 163.870,773.919 161.228,769.797 161.389,768.366 C 161.550,766.933 162.312,766.695 162.312,766.695 L 163.477,768.771 C 163.477,768.771 169.602,765.758 163.468,762.797 C 157.333,759.835 165.138,747.522 172.091,744.893 Z" d:IsHidden="True"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 176.688,758.291 C 176.688,758.291 179.521,755.978 179.913,756.123 C 180.307,756.271 180.968,754.817 182.678,769.652 C 182.678,769.652 183.304,770.214 180.195,771.112 C 177.086,772.009 176.812,771.788 176.812,771.788 C 176.812,771.788 178.208,767.804 178.121,765.804 C 178.032,763.802 176.688,758.291 176.688,758.291 Z" d:IsHidden="True"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 185.134,752.009 C 185.134,752.009 189.346,748.748 189.847,748.698 C 190.350,748.649 194.429,761.946 194.429,761.946 C 194.429,761.946 193.715,751.302 194.797,750.582 C 195.879,749.860 199.694,752.150 199.694,752.150 L 199.780,755.903 C 199.780,755.903 198.186,754.734 197.992,754.980 C 197.797,755.224 197.931,766.541 197.931,766.541 C 197.931,766.541 199.185,766.387 199.551,766.709 C 199.917,767.032 199.786,769.591 199.786,769.591 C 199.786,769.591 194.900,769.959 193.912,769.558 C 192.924,769.156 189.971,760.389 189.971,760.389 L 190.104,767.081 C 190.104,767.081 191.462,767.680 191.640,768.060 C 191.817,768.438 191.589,769.933 191.589,769.933 C 191.589,769.933 186.359,771.480 185.797,771.465 C 185.236,771.450 184.358,769.238 184.358,769.238 L 185.996,768.720 C 185.996,768.720 187.892,756.333 187.163,755.563 L 185.465,755.955 C 185.465,755.955 184.786,753.312 185.134,752.009 Z" d:IsHidden="True"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 209.681,748.987 L 210.882,745.892 C 210.882,745.892 213.374,745.871 213.835,746.183 C 214.298,746.494 211.322,753.887 211.020,754.210 C 210.720,754.534 207.389,751.862 206.601,754.987 C 205.813,758.113 204.116,764.147 206.818,765.042 C 209.520,765.936 209.788,762.355 209.788,762.355 C 209.788,762.355 208.164,762.788 207.546,763.642 C 207.546,763.642 207.409,758.994 208.033,758.972 C 208.659,758.949 214.076,758.731 214.076,758.731 C 214.076,758.731 212.246,768.355 209.199,768.404 C 206.148,768.453 201.673,768.119 201.833,761.346 C 201.994,754.574 203.647,747.291 207.660,747.313 C 209.612,747.113 209.681,748.987 209.681,748.987 Z" d:IsHidden="True"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 216.010,744.417 C 216.010,744.417 220.971,742.481 221.229,742.892 C 221.488,743.304 222.223,746.622 221.979,746.876 C 221.734,747.132 219.557,746.676 220.226,754.829 C 220.894,762.980 221.448,761.469 222.522,761.197 C 223.602,760.925 225.658,759.549 225.720,758.632 C 225.784,757.713 226.645,759.009 226.739,763.525 C 226.757,764.442 216.485,767.321 215.894,766.917 C 215.301,766.512 216.362,761.408 216.401,759.240 C 216.438,757.073 216.361,749.243 216.010,744.417 Z" d:IsHidden="True"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 227.799,746.761 C 227.799,746.761 225.414,746.506 225.289,745.945 C 225.166,745.384 226.946,742.963 226.946,742.963 L 228.663,742.907 C 228.663,742.907 236.646,738.867 237.268,739.311 C 237.888,739.754 239.205,741.335 239.123,742.364 C 239.042,743.393 237.217,744.799 237.217,744.799 C 237.217,744.799 236.341,743.171 235.084,743.943 C 233.828,744.714 231.600,745.334 231.694,747.428 C 231.792,749.521 232.516,750.337 234.781,749.458 C 237.046,748.579 237.325,747.593 237.790,747.797 C 238.260,748.003 238.665,749.999 238.599,750.580 C 238.533,751.161 237.073,752.401 236.896,752.548 C 236.720,752.693 233.731,752.757 233.503,753.610 C 233.276,754.464 232.227,757.189 233.158,757.537 C 234.088,757.884 238.198,755.786 238.665,754.781 C 238.665,754.781 240.293,753.905 241.063,753.951 C 241.831,753.996 240.601,758.591 240.059,759.477 C 239.516,760.364 232.136,762.299 230.922,762.876 C 229.708,763.452 229.062,762.756 228.914,761.369 C 228.766,759.982 227.799,746.761 227.799,746.761 Z" d:IsHidden="True"/>
+
+  <!-- <Group>/<Path> -->
+    		<Path Fill="#ffeee98e" Data="F1 M 179.503,743.325 C 179.503,743.325 175.176,748.077 175.323,752.011 C 175.472,755.944 180.550,755.673 181.293,753.075 C 182.642,749.119 176.830,749.535 179.503,743.325 Z" d:IsHidden="True"/>
+
+    		<Canvas x:Name="canvas1" Height="801" Width="263" RenderTransformOrigin="0.752,0.947">
+    			<Canvas.RenderTransform>
+    				<CompositeTransform/>
+    			</Canvas.RenderTransform>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path StrokeThickness="3.0" Stroke="#ff757730" StrokeMiterLimit="1.0" Fill="#fffefefe" Data="F1 M 158.296,762.068 C 158.296,762.068 153.545,756.417 161.358,746.032 C 168.626,737.590 174.811,740.197 174.811,740.197 C 174.811,740.197 177.154,737.434 179.181,737.593 C 181.210,737.754 183.823,739.863 183.316,742.180 C 182.810,744.495 183.949,745.755 183.949,745.755 C 183.949,745.755 188.505,742.504 189.014,742.576 C 189.524,742.647 192.736,743.308 193.171,745.022 C 193.171,745.022 194.254,743.398 200.205,746.156 C 200.205,746.156 202.375,741.777 207.855,741.318 C 207.855,741.318 210.030,739.326 212.871,740.027 C 212.871,740.027 218.525,734.146 224.124,738.323 C 224.124,738.323 225.736,736.643 227.747,736.804 C 227.747,736.804 234.496,733.068 236.688,733.588 C 238.880,734.107 241.825,735.804 242.602,738.359 C 243.377,740.916 241.694,743.986 241.513,744.634 C 241.330,745.281 242.981,746.614 242.931,748.504 C 242.931,748.504 245.689,749.654 245.255,753.785 C 245.068,755.564 244.165,760.060 243.250,760.911 C 242.336,761.763 233.122,765.386 230.716,765.643 C 229.694,765.752 228.659,765.486 228.659,765.486 C 228.659,765.486 226.098,767.393 221.829,768.603 C 217.559,769.813 215.984,770.358 213.353,769.257 C 213.353,769.257 209.669,772.415 203.374,769.946 C 203.374,769.946 202.233,772.204 199.996,772.443 C 197.759,772.682 193.029,771.931 193.029,771.931 C 193.029,771.931 190.344,773.851 186.104,774.178 C 182.600,774.301 182.480,773.183 182.480,773.183 C 182.480,773.183 179.951,774.207 177.714,774.446 C 175.478,774.685 173.801,773.105 173.801,773.105 C 173.801,773.105 169.730,776.179 166.168,776.936 C 162.604,777.693 157.946,772.913 156.918,767.997 C 155.890,763.080 158.296,762.068 158.296,762.068 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 172.112,743.443 C 172.112,743.443 174.412,750.883 173.854,752.377 C 173.486,753.360 171.432,753.265 171.432,753.265 C 171.432,753.265 170.150,750.100 169.545,750.321 C 168.940,750.544 166.317,753.968 166.478,756.939 C 166.638,759.910 173.923,760.390 174.976,764.366 C 176.030,768.342 167.378,772.726 165.634,772.597 C 163.892,772.469 161.250,768.349 161.410,766.916 C 161.572,765.483 162.333,765.245 162.333,765.245 L 163.498,767.322 C 163.498,767.322 169.624,764.308 163.490,761.347 C 157.355,758.385 165.160,746.072 172.112,743.443 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 176.710,756.840 C 176.710,756.840 179.542,754.527 179.936,754.674 C 180.329,754.821 180.989,753.368 182.700,768.202 C 182.700,768.202 183.327,768.764 180.217,769.662 C 177.108,770.559 176.833,770.337 176.833,770.337 C 176.833,770.337 178.230,766.355 178.143,764.353 C 178.054,762.352 176.710,756.840 176.710,756.840 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 185.156,750.558 C 185.156,750.558 189.369,747.297 189.869,747.248 C 190.372,747.199 194.451,760.497 194.451,760.497 C 194.451,760.497 193.737,749.852 194.819,749.131 C 195.901,748.410 199.715,750.700 199.715,750.700 L 199.802,754.453 C 199.802,754.453 198.207,753.285 198.014,753.529 C 197.820,753.774 197.953,765.090 197.953,765.090 C 197.953,765.090 199.207,764.938 199.572,765.260 C 199.939,765.581 199.808,768.141 199.808,768.141 C 199.808,768.141 194.922,768.510 193.934,768.108 C 192.946,767.706 189.992,758.938 189.992,758.938 L 190.125,765.630 C 190.125,765.630 191.483,766.229 191.662,766.609 C 191.839,766.989 191.611,768.483 191.611,768.483 C 191.611,768.483 186.381,770.030 185.820,770.015 C 185.257,769.999 184.379,767.788 184.379,767.788 L 186.018,767.270 C 186.018,767.270 187.915,754.883 187.185,754.114 L 185.487,754.506 C 185.487,754.506 184.808,751.862 185.156,750.558 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 209.703,747.537 L 210.903,744.442 C 210.903,744.442 213.395,744.421 213.857,744.732 C 214.319,745.043 211.345,752.437 211.042,752.760 C 210.741,753.084 207.411,750.413 206.623,753.537 C 205.834,756.663 204.138,762.697 206.840,763.592 C 209.542,764.486 209.810,760.906 209.810,760.906 C 209.810,760.906 208.186,761.338 207.567,762.192 C 207.567,762.192 207.431,757.544 208.054,757.521 C 208.681,757.499 214.098,757.281 214.098,757.281 C 214.098,757.281 212.269,766.905 209.220,766.954 C 206.169,767.002 201.695,766.668 201.854,759.896 C 202.015,753.124 203.668,745.840 207.681,745.863 C 209.634,745.663 209.703,747.537 209.703,747.537 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 216.033,742.967 C 216.033,742.967 220.993,741.031 221.250,741.442 C 221.509,741.854 222.246,745.171 222.000,745.426 C 221.757,745.681 219.579,745.226 220.247,753.378 C 220.916,761.530 221.469,760.019 222.545,759.748 C 223.624,759.475 225.679,758.099 225.743,757.182 C 225.807,756.264 226.667,757.560 226.761,762.076 C 226.780,762.993 216.507,765.871 215.916,765.466 C 215.323,765.062 216.383,759.958 216.423,757.790 C 216.460,755.624 216.382,747.792 216.033,742.967 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 227.821,745.311 C 227.821,745.311 225.435,745.056 225.312,744.495 C 225.188,743.935 226.969,741.513 226.969,741.513 L 228.686,741.457 C 228.686,741.457 236.668,737.417 237.291,737.861 C 237.910,738.305 239.227,739.885 239.145,740.914 C 239.063,741.942 237.237,743.350 237.237,743.350 C 237.237,743.350 236.362,741.721 235.105,742.493 C 233.851,743.264 231.623,743.885 231.717,745.979 C 231.813,748.073 232.539,748.888 234.801,748.008 C 237.069,747.128 237.346,746.143 237.812,746.348 C 238.283,746.553 238.687,748.549 238.622,749.129 C 238.554,749.711 237.093,750.951 236.919,751.097 C 236.742,751.244 233.754,751.307 233.525,752.161 C 233.297,753.013 232.249,755.740 233.179,756.087 C 234.109,756.433 238.221,754.337 238.686,753.331 C 238.686,753.331 240.314,752.456 241.083,752.501 C 241.854,752.546 240.624,757.141 240.082,758.027 C 239.537,758.914 232.159,760.850 230.945,761.426 C 229.730,762.001 229.084,761.306 228.936,759.919 C 228.789,758.532 227.821,745.311 227.821,745.311 Z"/>
+
+  <!-- <Group>/<Group>/<Path> -->
+    			<Path Fill="#ffb0be35" Data="F1 M 179.526,741.876 C 179.526,741.876 175.198,746.627 175.345,750.561 C 175.494,754.495 180.571,754.224 181.316,751.625 C 182.664,747.668 176.852,748.085 179.526,741.876 Z"/>
+
+    		</Canvas>
+
+    	</Canvas>
+    	<Canvas x:Name="Bomb_All" Margin="0" RenderTransformOrigin="0.551,0.561" Opacity="0">
+    		<Canvas.RenderTransform>
+    			<CompositeTransform/>
+    		</Canvas.RenderTransform>
+    		<Canvas x:Name="Bomb1" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="226" Height="192" Canvas.Left="117.333" Canvas.Top="46.667">
+    			<Canvas.RenderTransform>
+    				<CompositeTransform ScaleX="0.4" TranslateX="-99.299991831183434" TranslateY="-101.09999899566174" ScaleY="0.4" Rotation="-325.712"/>
+    			</Canvas.RenderTransform>
+    			<Path x:Name="bomb3_Copy4" Fill="#FFD8D8D8" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    			<Path x:Name="bomb4_Copy4" Fill="#FFEDEDED" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy5" Fill="#FFD8D8D8" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    			<Path x:Name="bomb4_Copy5" Fill="#FFEDEDED" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy6" Fill="#FFD8D8D8" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    			<Path x:Name="bomb4_Copy6" Fill="#FFEDEDED" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb1" Fill="#FFD8D8D8" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    			<Path x:Name="bomb2" Fill="#FFEDEDED" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy7" Fill="#FFD8D8D8" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    			<Path x:Name="bomb4_Copy7" Fill="#FFEDEDED" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    		</Canvas>
+    		<Canvas x:Name="Bomb2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="192" Canvas.Top="94.335" Width="226" Canvas.Left="55">
+    			<Canvas.RenderTransform>
+    				<CompositeTransform ScaleX="0.4" TranslateX="-99.299991831183434" TranslateY="-101.09999899566174" ScaleY="0.4" Rotation="-503.493"/>
+    			</Canvas.RenderTransform>
+    			<Path x:Name="bomb3_Copy8" Fill="#FFD8D8D8" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    			<Path x:Name="bomb4_Copy8" Fill="#FFEDEDED" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy9" Fill="#FFD8D8D8" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    			<Path x:Name="bomb4_Copy9" Fill="#FFEDEDED" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy10" Fill="#FFD8D8D8" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    			<Path x:Name="bomb4_Copy10" Fill="#FFEDEDED" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb5" Fill="#FFD8D8D8" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    			<Path x:Name="bomb6" Fill="#FFEDEDED" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy11" Fill="#FFE0E0E0" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    			<Path x:Name="bomb4_Copy11" Fill="#FFEDEDED" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    		</Canvas>
+    		<Canvas x:Name="Bomb3" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="192" Canvas.Left="62.666" Width="226" Canvas.Top="46">
+    			<Canvas.RenderTransform>
+    				<CompositeTransform ScaleX="0.5" TranslateX="-99.299991831183434" TranslateY="-101.09999899566174" ScaleY="0.5" Rotation="-28.94"/>
+    			</Canvas.RenderTransform>
+    			<Path x:Name="bomb3_Copy16" Fill="#FFD8D8D8" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    			<Path x:Name="bomb4_Copy16" Fill="#FFEDEDED" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy17" Fill="#FFD8D8D8" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    			<Path x:Name="bomb4_Copy17" Fill="#FFEDEDED" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy18" Fill="#FFD8D8D8" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    			<Path x:Name="bomb4_Copy18" Fill="#FFEDEDED" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb9" Fill="#FFD8D8D8" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    			<Path x:Name="bomb10" Fill="#FFEDEDED" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy19" Fill="#FFE0E0E0" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    			<Path x:Name="bomb4_Copy19" Fill="#FFEDEDED" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    		</Canvas>
+    		<Canvas x:Name="Bomb4" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="192" Width="226" Canvas.Left="118.333" Canvas.Top="92">
+    			<Canvas.RenderTransform>
+    				<CompositeTransform ScaleX="0.4" TranslateX="-99.299991831183434" TranslateY="-101.09999899566174" ScaleY="0.4" Rotation="-249.322"/>
+    			</Canvas.RenderTransform>
+    			<Path x:Name="bomb3_Copy24" Fill="#FFD8D8D8" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    			<Path x:Name="bomb4_Copy24" Fill="#FFEDEDED" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy25" Fill="#FFD8D8D8" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    			<Path x:Name="bomb4_Copy25" Fill="#FFEDEDED" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy26" Fill="#FFD8D8D8" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    			<Path x:Name="bomb4_Copy26" Fill="#FFEDEDED" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb13" Fill="#FFD8D8D8" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    			<Path x:Name="bomb14" Fill="#FFEDEDED" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    			<Path x:Name="bomb3_Copy27" Fill="#FFE0E0E0" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    			<Path x:Name="bomb4_Copy27" Fill="#FFEDEDED" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    		</Canvas>
+    	</Canvas>
+    </Grid>
+</UserControl>

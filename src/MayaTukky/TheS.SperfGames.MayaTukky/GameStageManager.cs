@@ -17,6 +17,7 @@ namespace TheS.SperfGames.MayaTukky
     /// </summary>
     public abstract class GameStageManager
     {
+        
         #region Fields
 
         private const int StartTimeSecond = 600;
