@@ -513,6 +513,9 @@ namespace TheS.SperfGames.MayaTukky.Views
         // แสดงผลการเล่นอนิเมชันของทักกี้
         private void Sb_TimeOut_Completed(object sender, EventArgs e)
         {
+            GlobalScore.ThirdCorrectAnswer = _correctCount;
+            GlobalScore.ThirdIncorrectAnswer = _incorrectCount;
+
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)
             {

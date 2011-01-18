@@ -56,23 +56,43 @@ namespace TheS.SperfGames.MayaTukky.Views
             int secondScore = GlobalScore.SecondScore;
             int thirdScore = GlobalScore.ThirdScore;
 
+            const int KeyFrame = 10;
+            const string FalseDok = "DokFalseValue";
+            const string TrueDok = "DokTrueValue";
+
+            int correctAnswerCount = 0;
+            int incorrectAnswerCount = 0;
+            int maximumCombo = 0;
+
             const int EmptyScore = 0;
             if (GlobalScore.ThirdItemsFound.Count != EmptyScore)
             {
                 // ผ่านเกม State 3
                 VisualStateManager.GoToState(this,ThirdFinished , false);
+                incorrectAnswerCount = GlobalScore.ThirdIncorrectAnswer;
+                correctAnswerCount = GlobalScore.ThirdMaximumCombo;
+                maximumCombo = GlobalScore.ThirdMaximumCombo;
             }
             else if (GlobalScore.SecondItemsFound.Count != EmptyScore)
             {
                 // ผ่านเกม State 2
                 VisualStateManager.GoToState(this,SecondFinished , false);
+                incorrectAnswerCount = GlobalScore.SecondIncorrectAnswer;
+                correctAnswerCount = GlobalScore.SecondMaximumCombo;
+                maximumCombo = GlobalScore.SecondMaximumCombo;
             }
             else
             {
                 // ผ่านเกม State 1
                 VisualStateManager.GoToState(this,FirstFinished , false);
+                incorrectAnswerCount = GlobalScore.FirstIncorrectAnswer;
+                correctAnswerCount = GlobalScore.FirstMaximumCombo;
+                maximumCombo = GlobalScore.FirstMaximumCombo;
             }
 
+            calculateGameScoreRunner(FalseDok, KeyFrame, incorrectAnswerCount);
+            calculateGameScoreRunner(TrueDok, KeyFrame, correctAnswerCount);
+            txt_Combo.Text = maximumCombo.ToString();
         }
 
         private void btn_Next_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

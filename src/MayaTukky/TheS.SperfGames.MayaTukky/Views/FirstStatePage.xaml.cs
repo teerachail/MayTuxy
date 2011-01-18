@@ -280,6 +280,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 {
                     // จัดการตัวนับการตอบถูกติดต่อกัน
                     _gameCombo++;
+
                     if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
 
                     // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
@@ -456,6 +457,9 @@ namespace TheS.SperfGames.MayaTukky.Views
         // แสดงผลการเล่นอนิเมชันของทักกี้
         private void Sb_TimeOut_Completed(object sender, EventArgs e)
         {
+            GlobalScore.FirstCorrectAnswer = _correctCount;
+            GlobalScore.FirstIncorrectAnswer = _incorrectCount;
+
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)
             {
