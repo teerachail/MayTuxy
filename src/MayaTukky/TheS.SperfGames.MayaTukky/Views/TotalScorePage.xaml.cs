@@ -60,6 +60,24 @@ namespace TheS.SperfGames.MayaTukky.Views
             _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
 
             _clound.Sb_CloudOut.Begin();
+
+            const int TenKeyFrame = 10;
+            const int EighteenKeyFrame = 18;
+
+            const string FirstScore = "DokPoisonScoreValue";
+            const string SecondScore = "DokVoodooScoreValue";
+            const string ThirdScore = "DokMonsterScoreValue";
+            const string SumScore = "DokSumScoreValue";
+            const string AllScore = "DokAllScoreValue";
+
+            calculateGameScore(FirstScore, TenKeyFrame, GlobalScore.FirstScore);
+            calculateGameScore(SecondScore, TenKeyFrame, GlobalScore.SecondScore);
+            calculateGameScore(ThirdScore, TenKeyFrame, GlobalScore.ThirdScore);
+
+            int totalSocre = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
+            calculateGameScore(AllScore, TenKeyFrame, totalSocre);
+            calculateGameScore(SumScore, EighteenKeyFrame, totalSocre);
+            
         }
 
         private void Sb_CloudOut_Completed(object sender, EventArgs e)
@@ -88,6 +106,18 @@ namespace TheS.SperfGames.MayaTukky.Views
         private void SB_Calculate_Completed(object sender, EventArgs e)
         {
             SB_Fusion.Begin();
+        }
+
+        private void calculateGameScore(string objectName,int keyFrame,int scoreValue)
+        {
+            int score = (int)(scoreValue / keyFrame);
+            for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
+            {
+                (LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrameValues)) as DiscreteObjectKeyFrame)
+                    .Value = (score * keyFrameValues).ToString();
+            }
+            (LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrame)) as DiscreteObjectKeyFrame)
+                .Value = scoreValue.ToString();
         }
 
         // Executes when the user navigates to this page.

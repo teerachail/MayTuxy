@@ -99,6 +99,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             // กำหนดเหตุการณ์ของเกม
             initializeEvents();
 
+            // เปลี่ยนให้มีนาฬิกา 3 เรือน
+            clock.ShowThreeClock();
+
             // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
             _prepareLayer.Sb_Start.Begin();
             Sb_Dark.Begin();
@@ -292,19 +295,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     // จัดการการแสดงผลคะแนนและเวลา
                     _timeLeftSecond += result.TimeAdvantage;
+                    clock.txt_TimePlus.Text = result.TimeAdvantage.ToString();
 
+                    // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
                     const int Proportion = 5;
-                    int scoreProportion = (int)(result.Score / Proportion);
-
-                    const int SecondAnimation = 2;
-                    const int ThirdAnimation = 3;
-                    const int FourthAnimation = 4;
-
-                    scoreBoard.DokValue1.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion);
-                    scoreBoard.DokValue2.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion*SecondAnimation);
-                    scoreBoard.DokValue3.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion*ThirdAnimation);
-                    scoreBoard.DokValue4.Value = Convert.ToString(GlobalScore.FirstScore + scoreProportion*FourthAnimation);
-                    scoreBoard.DokValue5.Value = (GlobalScore.FirstScore + (int)result.Score).ToString();
+                    const string ScoreBoardName = "DokValue";
+                    calculateScoreRunning(ScoreBoardName, Proportion, (int)result.Score);
 
                     scoreBoard.txt_ScorePlus.Text = ((int)result.Score).ToString();
                     scoreBoard.Sb_ScorePlus.Begin();
@@ -320,7 +316,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // แสดงอนิเมชันการตอบถูก
                     const int DisplayCorrectAnswerAndCombo = 0;
                     const int DisplayCorrectAnswerForLowLevel = 3;
-                    if ((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo ) || (_gameCombo == DisplayCorrectAnswerForLowLevel))
+                    if (((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo )
+                        && (_gameCombo != DisplayCorrectAnswerAndCombo))
+                        || (_gameCombo == DisplayCorrectAnswerForLowLevel))
                     {
                         _trueFalseMark.Sb_ComboContinuing.Begin();
                         _trueFalseMark.txt_TrueCombo.Text = _gameCombo.ToString();
@@ -328,27 +326,36 @@ namespace TheS.SperfGames.MayaTukky.Views
                     else _trueFalseMark.Sb_Good.Begin();
 
                     // เล่นอนิเมชันแสดงคะแนน
-                    //scoreBoard.Sb_ScoreUp.Stop();
                     scoreBoard.Sb_ScorePlus.Stop();
                     scoreBoard.Sb_ScoreUp.Begin();
                     scoreBoard.Sb_ScorePlus.Begin();
                 }
 
+                // แก้ไขนาฬิกาใน State1 ให้เหลือเพียง 3 ตัว
                 const int First = 1;
                 const int Second = 2;
                 const int Third = 3;
-                const int Fourth = 4;
-                const int Fifth = 5;
                 if (_timeCombo >= First) clock.PlayClockOne();
                 if (_timeCombo >= Second) clock.PlayClockTwo();
-                if (_timeCombo >= Third) clock.PlayClockThree();
-                if (_timeCombo >= Fourth) clock.PlayClockFour();
-                if (_timeCombo >= Fifth)
+                if (_timeCombo >= Third)
                 {
-                    clock.PlayClockFive();
+                    clock.PlayClockThree();
                     clock.Sb_TimeUp.Begin();
                 }
             }
+        }
+
+        // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
+        private void calculateScoreRunning(string objectName,int keyFrame,int score)
+        {
+            int scoreProportion = (score / keyFrame);
+            for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
+            {
+                (scoreBoard.LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrameValues)) as DiscreteObjectKeyFrame)
+                    .Value = (GlobalScore.FirstScore + scoreProportion * keyFrameValues).ToString();
+            }
+            (scoreBoard.LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrame)) as DiscreteObjectKeyFrame)
+                    .Value = (GlobalScore.FirstScore + (int)score).ToString();
         }
 
         // เมื่อการแก้วถูกสลับเสร็จสิ้น
@@ -403,9 +410,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             clock.txt_Timer.Text = Convert.ToString(_timeLeftSecond);
             clock.Sb_TikTok.Begin();
 
-            // TODO : เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 1
+            // เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 1
             if (_timeLeftSecond <= TimeAlertSecond)
             {
+                clock.txt_Timer.Foreground = new SolidColorBrush(Colors.Red);
             }
 
             // เมื่อเวลาหมด

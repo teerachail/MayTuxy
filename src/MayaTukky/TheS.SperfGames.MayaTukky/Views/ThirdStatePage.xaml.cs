@@ -25,7 +25,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private const int QuestionTimeMilisecond = 700; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
         private const int MinimumIncorrectCountForDisplayFail = 5; // จำนวนครั้งที่จะทำการแสดงเครื่องหมายผิดที่มีจำนวนครั้งที่ผิด
-        private const int DisplayGameCombo = 3; // จำนวนครั้งที่จะทำการแสดงผล Combo ที่ได้
+        private const int DisplayGameCombo = 5; // จำนวนครั้งที่จะทำการแสดงผล Combo ที่ได้
         private const int TimeAlertSecond = 10; // แจ้งเตือนเวลาใกล้หมด
         private const string CupStyleName = "TallCup";
         private bool _isRoundFinish; // จบ Round ที่กำลังเล่นนี้แล้วหรือยัง
@@ -115,6 +115,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             // เริ่มเล่นตัวนับเวลาก่อนเข้าเล่นเกม
             _prepareLayer.Sb_Start.Begin();
+            Sb_Dark.Begin();
         }
 
         #endregion Constructors
@@ -127,7 +128,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         public void PlayQuestion()
         {
             _isWaitingClickForPlayQuestion = false;
-                _frontRow.PlayCupDown();
+            _frontRow.PlayCupDown();
         }
 
         // เรียกคำถาม
@@ -268,6 +269,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 // กำหนดค่าให้กับคะแนนความต่อเนื่องของเวลา และแสดงผลเวลาเกมที่เหลือ
                 _timeCombo = result.TimeCombo;
                 _timeLeftSecond += result.TimeAdvantage;
+                clock.txt_TimePlus.Text = result.TimeAdvantage.ToString();
 
                 // แสดงผลอนิเมชันตอบของ item
                 _frontRow.PlayAnswerResult(result);
@@ -276,18 +278,10 @@ namespace TheS.SperfGames.MayaTukky.Views
                 if ((int)result.Score > IncorrectAnswer)
                 {
                     // แสดงผลคะแนนที่ได้รับ
+                    // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
                     const int Proportion = 5;
-                    int scoreProportion = (int)(result.Score / Proportion);
-
-                    const int SecondAnimation = 2;
-                    const int ThirdAnimation = 3;
-                    const int FourthAnimation = 4;
-
-                    scoreBoard.DokValue1.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion);
-                    scoreBoard.DokValue2.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion * SecondAnimation);
-                    scoreBoard.DokValue3.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion * ThirdAnimation);
-                    scoreBoard.DokValue4.Value = Convert.ToString(GlobalScore.ThirdScore + scoreProportion * FourthAnimation);
-                    scoreBoard.DokValue5.Value = (GlobalScore.ThirdScore + (int)result.Score).ToString();
+                    const string ScoreBoardName = "DokValue";
+                    calculateScoreRunning(ScoreBoardName, Proportion, (int)result.Score);
 
                     scoreBoard.txt_ScorePlus.Text = ((int)result.Score).ToString();
 
@@ -301,7 +295,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                     GlobalScore.ThirdScore += (int)result.Score;
 
                     // จัดการตัวนับการตอบถูกติดต่อกัน
-                    _gameCombo++;
                     if (GlobalScore.ThirdMaximumCombo < _gameCombo) GlobalScore.ThirdMaximumCombo = _gameCombo;
                 }
 
@@ -347,6 +340,9 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // ตรวจสอบการจบระดับความยากนี้
                     if (result.IsFinish == true)
                     {
+                        // จัดการตัวนับการตอบถูกติดต่อกัน
+                        _gameCombo++;
+
                         // ตอบถูก ทำการตรวจสอบการเลื่อนระดับความยาก
                         _isGetNextQuestion = true;
                         _isRoundFinish = true;
@@ -370,6 +366,19 @@ namespace TheS.SperfGames.MayaTukky.Views
             }
         }
 
+        // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
+        private void calculateScoreRunning(string objectName, int keyFrame, int score)
+        {
+            int scoreProportion = (score / keyFrame);
+            for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
+            {
+                (scoreBoard.LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrameValues)) as DiscreteObjectKeyFrame)
+                    .Value = (GlobalScore.ThirdScore + scoreProportion * keyFrameValues).ToString();
+            }
+            (scoreBoard.LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrame)) as DiscreteObjectKeyFrame)
+                    .Value = (GlobalScore.ThirdScore + (int)score).ToString();
+        }
+
         // เมื่อเวลาเดิน 1 ติ๊ก
         private void _timer_Tick(object sender, EventArgs e)
         {
@@ -380,9 +389,10 @@ namespace TheS.SperfGames.MayaTukky.Views
             clock.txt_Timer.Text = Convert.ToString(_timeLeftSecond);
             clock.Sb_TikTok.Begin();
 
-            // TODO : เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 3
+            // เปลี่ยนสีของเวลาเมื่อเวลาใกล้หมด State 3
             if (_timeLeftSecond <= TimeAlertSecond)
             {
+                clock.txt_Timer.Foreground = new SolidColorBrush(Colors.Red);
             }
 
             // เมื่อเวลาหมด
@@ -478,9 +488,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                     scoreBoard.Sb_ScorePlus.Stop();
                     scoreBoard.Sb_ScorePlus.Begin();
 
-                    // TODO: แสดงอนิเมชันการตอบถูก State 3
+                    // แสดงอนิเมชันการตอบถูก State 3
                     const int DisplayCorrectAnswerAndCombo = 0;
-                    if (_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo)
+                    const int DisplayCorrectAnswerForLowLevel = 3;
+                    if (((_gameCombo % DisplayGameCombo == DisplayCorrectAnswerAndCombo)
+                        && (_gameCombo != DisplayCorrectAnswerAndCombo))
+                        || (_gameCombo == DisplayCorrectAnswerForLowLevel))
                     {
                         _trueFalseMark.Sb_ComboContinuing.Begin();
                         _trueFalseMark.txt_TrueCombo.Text = _gameCombo.ToString();
