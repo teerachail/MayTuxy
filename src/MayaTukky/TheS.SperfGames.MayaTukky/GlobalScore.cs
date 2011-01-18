@@ -22,6 +22,14 @@ namespace TheS.SperfGames.MayaTukky
         public static int SecondMaximumCombo { get; set; }
         public static int ThirdMaximumCombo { get; set; }
 
+        public static int FirstCorrectAnswer { get; set; }
+        public static int SecondCorrectAnswer { get; set; }
+        public static int ThirdCorrectAnswer { get; set; }
+
+        public static int FirstIncorrectAnswer { get; set; }
+        public static int SecondIncorrectAnswer { get; set; }
+        public static int ThirdIncorrectAnswer { get; set; }
+
         public static List<string> FirstItemsFound { get; set; }
         public static List<string> SecondItemsFound { get; set; }
         public static List<string> ThirdItemsFound { get; set; }

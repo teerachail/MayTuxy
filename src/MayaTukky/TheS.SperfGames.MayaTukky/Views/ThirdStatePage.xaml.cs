@@ -281,7 +281,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
                     const int Proportion = 5;
                     const string ScoreBoardName = "DokValue";
-                    calculateScoreRunning(ScoreBoardName, Proportion, (int)result.Score);
+                    calculateScoreRunner(ScoreBoardName, Proportion, (int)result.Score);
 
                     scoreBoard.txt_ScorePlus.Text = ((int)result.Score).ToString();
 
@@ -367,7 +367,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         }
 
         // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
-        private void calculateScoreRunning(string objectName, int keyFrame, int score)
+        private void calculateScoreRunner(string objectName, int keyFrame, int score)
         {
             int scoreProportion = (score / keyFrame);
             for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
@@ -513,6 +513,9 @@ namespace TheS.SperfGames.MayaTukky.Views
         // แสดงผลการเล่นอนิเมชันของทักกี้
         private void Sb_TimeOut_Completed(object sender, EventArgs e)
         {
+            GlobalScore.ThirdCorrectAnswer = _correctCount;
+            GlobalScore.ThirdIncorrectAnswer = _incorrectCount;
+
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)
             {

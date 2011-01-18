@@ -280,6 +280,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 {
                     // จัดการตัวนับการตอบถูกติดต่อกัน
                     _gameCombo++;
+
                     if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
 
                     // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
@@ -300,7 +301,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
                     const int Proportion = 5;
                     const string ScoreBoardName = "DokValue";
-                    calculateScoreRunning(ScoreBoardName, Proportion, (int)result.Score);
+                    calculateScoreRunner(ScoreBoardName, Proportion, (int)result.Score);
 
                     scoreBoard.txt_ScorePlus.Text = ((int)result.Score).ToString();
                     scoreBoard.Sb_ScorePlus.Begin();
@@ -346,7 +347,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         }
 
         // คำนวณการนำคะแนนที่ได้ไปทำการแสดงผล
-        private void calculateScoreRunning(string objectName,int keyFrame,int score)
+        private void calculateScoreRunner(string objectName,int keyFrame,int score)
         {
             int scoreProportion = (score / keyFrame);
             for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
@@ -456,6 +457,9 @@ namespace TheS.SperfGames.MayaTukky.Views
         // แสดงผลการเล่นอนิเมชันของทักกี้
         private void Sb_TimeOut_Completed(object sender, EventArgs e)
         {
+            GlobalScore.FirstCorrectAnswer = _correctCount;
+            GlobalScore.FirstIncorrectAnswer = _incorrectCount;
+
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)
             {

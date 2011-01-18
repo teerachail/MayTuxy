@@ -70,13 +70,13 @@ namespace TheS.SperfGames.MayaTukky.Views
             const string SumScore = "DokSumScoreValue";
             const string AllScore = "DokAllScoreValue";
 
-            calculateGameScore(FirstScore, TenKeyFrame, GlobalScore.FirstScore);
-            calculateGameScore(SecondScore, TenKeyFrame, GlobalScore.SecondScore);
-            calculateGameScore(ThirdScore, TenKeyFrame, GlobalScore.ThirdScore);
+            calculateGameScoreRunner(FirstScore, TenKeyFrame, GlobalScore.FirstScore);
+            calculateGameScoreRunner(SecondScore, TenKeyFrame, GlobalScore.SecondScore);
+            calculateGameScoreRunner(ThirdScore, TenKeyFrame, GlobalScore.ThirdScore);
 
             int totalSocre = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
-            calculateGameScore(AllScore, TenKeyFrame, totalSocre);
-            calculateGameScore(SumScore, EighteenKeyFrame, totalSocre);
+            calculateGameScoreRunner(AllScore, TenKeyFrame, totalSocre);
+            calculateGameScoreRunner(SumScore, EighteenKeyFrame, totalSocre);
             
         }
 
@@ -108,7 +108,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             SB_Fusion.Begin();
         }
 
-        private void calculateGameScore(string objectName,int keyFrame,int scoreValue)
+        private void calculateGameScoreRunner(string objectName,int keyFrame,int scoreValue)
         {
             int score = (int)(scoreValue / keyFrame);
             for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
