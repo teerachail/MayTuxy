@@ -54,11 +54,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         /// </summary>
         public void ShowTrophiesFirstState()
         {
-            setItemCollectionsVisibility(
-                System.Windows.Visibility.Collapsed, 
-                System.Windows.Visibility.Visible, 
-                System.Windows.Visibility.Collapsed
-                );
+            VisualStateManager.GoToState(this, "firstStateResult", false);
         }
 
         /// <summary>
@@ -66,11 +62,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         /// </summary>
         public void ShowTrophiesSecondState()
         {
-            setItemCollectionsVisibility(
-                System.Windows.Visibility.Visible,
-                System.Windows.Visibility.Collapsed,
-                System.Windows.Visibility.Collapsed
-                );
+            VisualStateManager.GoToState(this, "secondtStateResult", false);
         }
 
         /// <summary>
@@ -78,23 +70,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         /// </summary>
         public void ShowTrophiesThirdState()
         {
-            setItemCollectionsVisibility(
-                System.Windows.Visibility.Collapsed,
-                System.Windows.Visibility.Collapsed,
-                System.Windows.Visibility.Visible
-                );
-        }
-
-        private void setItemCollectionsVisibility(Visibility voodoo,Visibility poision,Visibility monster)
-        {
-            cv_VoodooItemCollection.Visibility = voodoo;
-            cv_VoodooSeal.Visibility = voodoo;
-
-            cv_MonsterItemCollection.Visibility = monster;
-            cv_MonsterSeal.Visibility = monster;
-
-            cv_PoisonItemCollection.Visibility = poision;
-            cv_PoisonSeal.Visibility = poision;
+            VisualStateManager.GoToState(this, "thirdStateResult", false);
         }
 
 
