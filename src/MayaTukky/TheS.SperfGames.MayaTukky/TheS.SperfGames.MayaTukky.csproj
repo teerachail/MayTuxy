@@ -77,6 +77,7 @@
     <Reference Include="PoisonAnimation">
       <HintPath>..\..\..\lib\PoisonAnimation.dll</HintPath>
     </Reference>
+    <Reference Include="Smoke, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.Composition, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -259,6 +260,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadPage.xaml.cs">
+      <DependentUpon>LoadPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SecondStatePage.xaml.cs">
       <DependentUpon>SecondStatePage.xaml</DependentUpon>
     </Compile>
@@ -267,6 +274,15 @@
     </Compile>
     <Compile Include="Views\ResultScorePage.xaml.cs">
       <DependentUpon>ResultScorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TitleFirstPage.xaml.cs">
+      <DependentUpon>TitleFirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TitleSecondPage.xaml.cs">
+      <DependentUpon>TitleSecondPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TitleThirdPage.xaml.cs">
+      <DependentUpon>TitleThirdPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TotalScorePage.xaml.cs">
       <DependentUpon>TotalScorePage.xaml</DependentUpon>
@@ -434,6 +450,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoadPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\SecondStatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -445,6 +469,18 @@
     <Page Include="Views\ResultScorePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TitleFirstPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TitleSecondPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TitleThirdPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\TotalScorePage.xaml">
       <SubType>Designer</SubType>

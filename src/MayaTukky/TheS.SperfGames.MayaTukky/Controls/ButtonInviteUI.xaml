@@ -6,25 +6,25 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="TheS.SperfGames.MayaTukky.Controls.ButtonInviteUI"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400" Width="100" Height="50">
-	<i:Interaction.Triggers>
-		<i:EventTrigger>
-			<ei:GoToStateAction StateName="none" TargetObject="{Binding ElementName=userControl}"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseEnter">
-			<ei:GoToStateAction StateName="Over" TargetObject="{Binding ElementName=userControl}"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeave">
-			<ei:GoToStateAction StateName="none" TargetObject="{Binding ElementName=userControl}"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeftButtonDown">
-			<ei:GoToStateAction StateName="Hit" TargetObject="{Binding ElementName=userControl}"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeftButtonUp">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-	</i:Interaction.Triggers>
     
     <Grid x:Name="LayoutRoot" Width="100" Height="50" Margin="0,2,0,-2" RenderTransformOrigin="0.488,0.55">
+    	<i:Interaction.Triggers>
+    		<i:EventTrigger EventName="MouseLeftButtonUp">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseLeftButtonDown">
+    			<ei:GoToStateAction StateName="Hit"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseLeave">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseEnter">
+    			<ei:GoToStateAction StateName="Over"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger>
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    	</i:Interaction.Triggers>
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="ST_Invite">
     			<VisualStateGroup.Transitions>

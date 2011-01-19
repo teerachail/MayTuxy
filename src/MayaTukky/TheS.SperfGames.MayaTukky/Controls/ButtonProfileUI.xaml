@@ -7,25 +7,24 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400" Width="110" Height="50">
     
-	<i:Interaction.Triggers>
-		<i:EventTrigger>
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseEnter">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="Over"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeave">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeftButtonDown">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="Hit"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeftButtonUp">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-	</i:Interaction.Triggers>
-    
     <Grid x:Name="LayoutRoot" Height="50" Width="110">
+    	<i:Interaction.Triggers>
+    		<i:EventTrigger EventName="MouseLeftButtonUp">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseLeftButtonDown">
+    			<ei:GoToStateAction StateName="Hit"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseLeave">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseEnter">
+    			<ei:GoToStateAction StateName="Over"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger>
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    	</i:Interaction.Triggers>
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="ST_Profile">
     			<VisualStateGroup.Transitions>

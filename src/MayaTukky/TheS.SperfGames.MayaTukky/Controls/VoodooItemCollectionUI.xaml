@@ -26,7 +26,7 @@
 
 				<Canvas>
 					<Canvas.Effect>
-						<ee:BloomEffect BloomIntensity="-0.3" BaseSaturation="0.85" BaseIntensity="1" BloomSaturation="1.2" Threshold="0.5"/>
+						<ee:BloomEffect BloomIntensity="-0.4" BaseSaturation="0.51" BaseIntensity="1" BloomSaturation="0.86" Threshold="0.3"/>
 					</Canvas.Effect>
 
 					<!-- Layer 1/<Group>/<Type> -->
@@ -2763,7 +2763,8 @@
 				<Canvas x:Name="voodoo7" Visibility="Collapsed">
 
 					<!-- Layer 1/<Group>/<Type> -->
-	<!-- Layer 1/<Group>/<Path> -->
+
+				<!-- Layer 1/<Group>/<Path> -->
 					<Path Fill="#ffcececd" Data="F1 M 71.625,25.671 C 71.625,25.671 70.763,13.561 72.362,11.041 C 73.958,8.521 75.798,6.308 79.059,7.415 C 82.319,8.521 83.056,9.566 83.303,12.086 C 83.548,14.606 83.978,24.626 83.978,24.626 C 83.978,24.626 86.438,24.871 87.052,27.700 C 87.667,30.527 89.450,47.431 86.253,48.538 C 83.056,49.645 81.725,47.273 84.901,45.156 C 85.639,44.666 87.176,31.634 84.656,31.695 C 82.133,31.756 70.886,32.740 70.702,34.276 C 70.517,35.813 70.763,45.096 71.931,45.956 C 73.098,46.817 74.143,47.616 73.529,49.215 C 72.916,50.813 68.735,50.934 68.365,46.939 C 67.997,42.945 67.997,36.182 67.997,34.953 C 67.997,33.724 67.627,28.867 71.625,25.671 Z"/>
 
   <!-- Layer 1/<Group>/<Path> -->

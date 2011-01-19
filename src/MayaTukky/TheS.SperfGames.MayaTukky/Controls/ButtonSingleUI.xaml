@@ -2,25 +2,24 @@
     x:Class="TheS.SperfGames.MayaTukky.Controls.ButtonSingleUI"
     d:DesignHeight="300" d:DesignWidth="400" Width="185" Height="120" mc:Ignorable="d">
     
-	<i:Interaction.Triggers>
-		<i:EventTrigger EventName="Loaded">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseEnter">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="Over"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeave">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeftButtonDown">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="Hit"/>
-		</i:EventTrigger>
-		<i:EventTrigger EventName="MouseLeftButtonUp">
-			<ei:GoToStateAction TargetObject="{Binding ElementName=userControl}" StateName="none"/>
-		</i:EventTrigger>
-	</i:Interaction.Triggers>
-    
     <Grid x:Name="LayoutRoot" Height="120" Width="185">
+    	<i:Interaction.Triggers>
+    		<i:EventTrigger EventName="MouseLeftButtonUp">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseLeftButtonDown">
+    			<ei:GoToStateAction StateName="Hit"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseLeave">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="MouseEnter">
+    			<ei:GoToStateAction StateName="Over"/>
+    		</i:EventTrigger>
+    		<i:EventTrigger EventName="Loaded">
+    			<ei:GoToStateAction StateName="none"/>
+    		</i:EventTrigger>
+    	</i:Interaction.Triggers>
     	<Grid.ColumnDefinitions>
     		<ColumnDefinition/>
     	</Grid.ColumnDefinitions>
