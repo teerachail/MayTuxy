@@ -51,7 +51,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ClientBin\song.mp3" />
     <Content Include="ClientBin\TheS.SperfGames.MayaTukky.xap" />
     <Content Include="Silverlight.js" />
     <Content Include="TheS.SperfGames.MayaTukkyTestPage.aspx" />
