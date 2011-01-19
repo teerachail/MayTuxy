@@ -49,14 +49,14 @@ namespace TheS.SperfGames.MayaTukky.Views
             _clound.Sb_CloudOut.Begin();
 
             const string FirstFinished = "firstStateResult";
-            const string SecondFinished = "secondtStateResult";
+            const string SecondFinished = "secondStateResult";
             const string ThirdFinished = "thirdStateResult";
 
             int firstScore = GlobalScore.FirstScore;
             int secondScore = GlobalScore.SecondScore;
             int thirdScore = GlobalScore.ThirdScore;
 
-            const int KeyFrame = 10;
+            const int KeyFrame = 3;
             const string FalseDok = "DokFalseValue";
             const string TrueDok = "DokTrueValue";
 
@@ -72,6 +72,12 @@ namespace TheS.SperfGames.MayaTukky.Views
                 incorrectAnswerCount = GlobalScore.ThirdIncorrectAnswer;
                 correctAnswerCount = GlobalScore.ThirdMaximumCombo;
                 maximumCombo = GlobalScore.ThirdMaximumCombo;
+
+                foreach (var item in GlobalScore.ThirdItemsFound)
+                {
+                    (thirdCollection.LayoutRoot.FindName(item) as Canvas)
+                        .Visibility = System.Windows.Visibility.Visible;
+                }
             }
             else if (GlobalScore.SecondItemsFound.Count != EmptyScore)
             {
@@ -80,14 +86,26 @@ namespace TheS.SperfGames.MayaTukky.Views
                 incorrectAnswerCount = GlobalScore.SecondIncorrectAnswer;
                 correctAnswerCount = GlobalScore.SecondMaximumCombo;
                 maximumCombo = GlobalScore.SecondMaximumCombo;
+
+                foreach (var item in GlobalScore.SecondItemsFound)
+                {
+                    (secondCollection.LayoutRoot.FindName(item) as Canvas)
+                        .Visibility = System.Windows.Visibility.Visible;
+                }
             }
             else
             {
                 // ผ่านเกม State 1
-                VisualStateManager.GoToState(this,FirstFinished , false);
+                VisualStateManager.GoToState(this, FirstFinished, false);
                 incorrectAnswerCount = GlobalScore.FirstIncorrectAnswer;
                 correctAnswerCount = GlobalScore.FirstMaximumCombo;
                 maximumCombo = GlobalScore.FirstMaximumCombo;
+
+                foreach (var item in GlobalScore.FirstItemsFound)
+                {
+                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
+                        .Visibility = System.Windows.Visibility.Visible;
+                }
             }
 
             calculateGameScoreRunner(FalseDok, KeyFrame, incorrectAnswerCount);
