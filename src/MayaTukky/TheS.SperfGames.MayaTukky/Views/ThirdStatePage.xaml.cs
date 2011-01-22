@@ -69,6 +69,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             InitializeComponent();
 
             GlobalScore.ThirdScore = GlobalScore.SecondScore;
+            scoreBoard.txt_Score.Text = GlobalScore.SecondScore.ToString();
 
             // เหตุการณ์ในการรอให้แสดงคำถามเสร็จสิ้นก่อน
             _displayQuestionTimer = new DispatcherTimer();

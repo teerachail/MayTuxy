@@ -70,7 +70,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 // ผ่านเกม State 3
                 VisualStateManager.GoToState(this,ThirdFinished , false);
                 incorrectAnswerCount = GlobalScore.ThirdIncorrectAnswer;
-                correctAnswerCount = GlobalScore.ThirdMaximumCombo;
+                correctAnswerCount = GlobalScore.ThirdCorrectAnswer;
                 maximumCombo = GlobalScore.ThirdMaximumCombo;
 
                 foreach (var item in GlobalScore.ThirdItemsFound)
@@ -84,7 +84,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 // ผ่านเกม State 2
                 VisualStateManager.GoToState(this,SecondFinished , false);
                 incorrectAnswerCount = GlobalScore.SecondIncorrectAnswer;
-                correctAnswerCount = GlobalScore.SecondMaximumCombo;
+                correctAnswerCount = GlobalScore.SecondCorrectAnswer;
                 maximumCombo = GlobalScore.SecondMaximumCombo;
 
                 foreach (var item in GlobalScore.SecondItemsFound)
@@ -98,7 +98,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 // ผ่านเกม State 1
                 VisualStateManager.GoToState(this, FirstFinished, false);
                 incorrectAnswerCount = GlobalScore.FirstIncorrectAnswer;
-                correctAnswerCount = GlobalScore.FirstMaximumCombo;
+                correctAnswerCount = GlobalScore.FirstCorrectAnswer;
                 maximumCombo = GlobalScore.FirstMaximumCombo;
 
                 foreach (var item in GlobalScore.FirstItemsFound)

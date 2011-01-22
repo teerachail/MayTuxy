@@ -69,8 +69,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         public SecondStatePage()
         {
             InitializeComponent();
-
             GlobalScore.SecondScore = GlobalScore.FirstScore;
+            scoreBoard.txt_Score.Text = GlobalScore.SecondScore.ToString();
 
             // เหตุการณ์ในการรอให้แสดงคำถามเสร็จสิ้นก่อน
             _displayQuestionTimer = new DispatcherTimer();
@@ -345,7 +345,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    MessageBox.Show(objName.ItemName);
                     // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
                     if (!GlobalScore.SecondItemsFound.Any(c => c.Equals(objName.ItemName)))
                     {
