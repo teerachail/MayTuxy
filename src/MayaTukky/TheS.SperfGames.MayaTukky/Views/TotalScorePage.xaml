@@ -463,9 +463,6 @@
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
-    			<DiscreteObjectKeyFrame KeyTime="0" Value="2418"/>
-    		</ObjectAnimationUsingKeyFrames>
     		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TotalScoreSeal">
     			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
     			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
