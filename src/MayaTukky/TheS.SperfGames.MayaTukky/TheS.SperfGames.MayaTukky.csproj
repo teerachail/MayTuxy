@@ -241,6 +241,9 @@
     <Compile Include="SwapHelper.cs" />
     <Compile Include="SwapSequence.cs" />
     <Compile Include="TimeCombo.cs" />
+    <Compile Include="Views\BannerPage.xaml.cs">
+      <DependentUpon>BannerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConfirmExitUI.xaml.cs">
       <DependentUpon>ConfirmExitUI.xaml</DependentUpon>
     </Compile>
@@ -442,6 +445,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\BannerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConfirmExitUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -506,6 +513,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Resource Include="Assets\Images\logo_TOT.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
