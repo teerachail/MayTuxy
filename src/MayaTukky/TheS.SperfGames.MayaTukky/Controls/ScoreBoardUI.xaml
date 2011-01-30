@@ -28,19 +28,17 @@
 			</ObjectAnimationUsingKeyFrames>
 			<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="canvas1">
-				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="canvas1">
-				<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas1">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-10"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas1">
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			
@@ -265,11 +263,11 @@
     				<DropShadowEffect Color="#FF5C5B5B" BlurRadius="0" Direction="0" ShadowDepth="2"/>
     			</TextBlock.Effect>
     		</TextBlock>
-    		<Canvas x:Name="canvas" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,116,0" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+    		<Canvas x:Name="canvas" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-30,116,0" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
     			<Canvas.RenderTransform>
     				<CompositeTransform/>
     			</Canvas.RenderTransform>
-    			<Canvas x:Name="canvas1" Height="50" Canvas.Top="-8" Width="114" RenderTransformOrigin="0.5,0.5">
+    			<Canvas x:Name="canvas1" Height="50" Canvas.Top="-8" Width="114" RenderTransformOrigin="0.7,0.5">
     				<Canvas.RenderTransform>
     					<CompositeTransform/>
     				</Canvas.RenderTransform>

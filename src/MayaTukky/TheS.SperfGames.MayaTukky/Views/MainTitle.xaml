@@ -1,0 +1,35 @@
+﻿<navigation:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" x:Class="TheS.SperfGames.MayaTukky.Views.MainTitle"
+           mc:Ignorable="d"
+           d:DesignWidth="625" d:DesignHeight="488"
+           Title="MainTitle Page">
+    <Canvas x:Name="LayoutRoot" Clip="M0.5,0.5 L624.5,0.5 L624.5,487.5 L0.5,487.5 z">
+    	<Image Height="488" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/BgSmoke.jpg" Stretch="Fill" Width="625"/>
+    	<TheS_SperfGames_MayaTukky_Controls:GhostDoorUI x:Name="door" RenderTransformOrigin="0.5,0.5" Canvas.Top="-52" Canvas.Left="-4">
+    		<TheS_SperfGames_MayaTukky_Controls:GhostDoorUI.RenderTransform>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.75"/>
+    		</TheS_SperfGames_MayaTukky_Controls:GhostDoorUI.RenderTransform>
+    	</TheS_SperfGames_MayaTukky_Controls:GhostDoorUI>
+    	<Image Height="488" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Box.png" Stretch="Fill" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Top="6">
+    		<Image.RenderTransform>
+    			<CompositeTransform ScaleX="1.5" ScaleY="1.4"/>
+    		</Image.RenderTransform>
+    	</Image>
+    	<TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI x:Name="tukky" Canvas.Left="106" Canvas.Top="12" RenderTransformOrigin="0.5,0.5">
+    		<TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI.RenderTransform>
+    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
+    		</TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI.RenderTransform>
+    	</TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI>
+    	<TheS_SperfGames_MayaTukky_Controls:AutoCupUI x:Name="cup" Canvas.Left="184" Canvas.Top="262" RenderTransformOrigin="0.5,0.5">
+    		<TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
+    			<CompositeTransform ScaleX="0.8" ScaleY="0.75"/>
+    		</TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
+    	</TheS_SperfGames_MayaTukky_Controls:AutoCupUI>
+    </Canvas>
+</navigation:Page>

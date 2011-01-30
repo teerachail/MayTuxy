@@ -103,6 +103,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AutoCupUI.xaml.cs">
+      <DependentUpon>AutoCupUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ButtonCloseUI.xaml.cs">
       <DependentUpon>ButtonCloseUI.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,9 @@
     </Compile>
     <Compile Include="Controls\EmptyItemUI.xaml.cs">
       <DependentUpon>EmptyItemUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GhostDoorUI.xaml.cs">
+      <DependentUpon>GhostDoorUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ItemRewardUI.xaml.cs">
       <DependentUpon>ItemRewardUI.xaml</DependentUpon>
@@ -195,6 +201,9 @@
     </Compile>
     <Compile Include="Controls\TrueFalseMarkUI.xaml.cs">
       <DependentUpon>TrueFalseMarkUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TukkyCoverUI.xaml.cs">
+      <DependentUpon>TukkyCoverUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TukkyHandUI.xaml.cs">
       <DependentUpon>TukkyHandUI.xaml</DependentUpon>
@@ -269,6 +278,9 @@
     <Compile Include="Views\LoadPage.xaml.cs">
       <DependentUpon>LoadPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainTitle.xaml.cs">
+      <DependentUpon>MainTitle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SecondStatePage.xaml.cs">
       <DependentUpon>SecondStatePage.xaml</DependentUpon>
     </Compile>
@@ -297,6 +309,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\AutoCupUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ButtonCloseUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -356,6 +372,10 @@
     <Page Include="Controls\EmptyItemUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\GhostDoorUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\ItemRewardUI.xaml">
       <SubType>Designer</SubType>
@@ -421,6 +441,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\TukkyCoverUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TukkyHandUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -464,6 +488,10 @@
     <Page Include="Views\LoadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainTitle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SecondStatePage.xaml">
       <SubType>Designer</SubType>
@@ -537,6 +565,9 @@
     <Content Include="Assets\CupStyles\TriangleCup_2.txt" />
     <Content Include="Assets\CupStyles\TriangleCup_3.txt" />
     <Content Include="Assets\CupStyles\TriangleCup_4.txt" />
+    <Resource Include="Assets\Images\logo.png" />
+    <Resource Include="Assets\Images\Box.png" />
+    <Resource Include="Assets\Images\BgSmoke.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

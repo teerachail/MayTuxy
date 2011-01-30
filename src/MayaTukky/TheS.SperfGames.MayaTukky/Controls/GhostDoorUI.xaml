@@ -1,0 +1,1169 @@
+﻿<UserControl x:Class="TheS.SperfGames.MayaTukky.Controls.GhostDoorUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="625" d:DesignWidth="488" Width="625" Height="488">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="Door_story1">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02" Value="24"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="24"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02" Value="-25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="-25"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02" Value="-5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02" Value="5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M_L" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9830000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M_R" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9830000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Door_story2">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7500000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7500000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7500000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7500000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="24"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.7000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2670000" Value="-5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="11"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03.1670000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2670000" Value="5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-11"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="-11"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="-11"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:03.1670000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M_L" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1830000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="M_R" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1830000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Facke" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-2"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-2"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-2.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-2.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="2"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="2"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-2"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-2"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-2.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-2.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0.25"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-0.75"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Facke1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="5.333"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="5.333"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Facke1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1.667"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="1.667"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="5.336"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="5.336"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="E2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="3.335"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="3.335"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="4.002"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="4.002"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="2.668"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="2.668"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="6.003"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="6.003"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="canvas5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1.334"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="1.334"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="-15"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="-15"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:04" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.7500000" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.5000000" Value="15"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:02.7000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Door_story3">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="-4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.1500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.9000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.1500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="M_L" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="M_R" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-2.988"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-3.953"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.9000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.1500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-2.988"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-3.953"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.9000000" Value="3"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.1500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-14.813"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-14.813"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-14.4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-14.4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-3.068"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-3.068"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Hand_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="3.945"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="3.945"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_L" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="10"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="10"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.9000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="10"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.1500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Head_R" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-10"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-10"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.9000000" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-10"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.1500000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <!-- Generated by Adobe Illustrator CS -> XAML Export Plug-In Version 0.19 PC   -->
+    <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
+
+    <Canvas Width="499.525" Height="427.193"
+  xmlns="http://schemas.microsoft.com/client/2007"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Margin="62,24,63,37">
+
+        <Canvas>
+
+            <!-- Door/<Path> -->
+            <Path Opacity="0.9" Fill="#ff202020" Data="F1 M 50.934,417.658 L 468.064,417.658 C 468.064,417.658 506.833,21.594 257.386,21.594 C 7.938,21.594 50.934,417.658 50.934,417.658 Z" d:IsLocked="True"/>
+
+            <Canvas x:Name="Head_L" Width="86" Height="99" Canvas.Top="148.998" Canvas.Left="337.996" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffb5afaf" Data="F1 M 404.053,195.672 C 406.850,210.573 399.485,224.460 387.602,226.692 C 375.720,228.922 363.820,218.653 361.022,203.751 C 358.226,188.851 365.589,174.962 377.471,172.731 C 389.354,170.501 401.252,180.771 404.053,195.672 Z" Canvas.Top="-149" Canvas.Left="-338"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffc1bebe" Data="F1 M 400.418,196.354 C 402.980,209.997 396.237,222.711 385.358,224.755 C 374.479,226.796 363.583,217.394 361.022,203.751 C 358.462,190.109 365.203,177.394 376.082,175.351 C 386.962,173.309 397.855,182.712 400.418,196.354 Z" Canvas.Top="-149" Canvas.Left="-338"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffd3d3d3" Data="F1 M 390.162,194.069 C 391.985,203.779 387.185,212.829 379.442,214.284 C 371.699,215.738 363.943,209.045 362.121,199.333 C 360.298,189.623 365.096,180.572 372.839,179.119 C 380.583,177.665 388.337,184.358 390.162,194.069 Z" Canvas.Top="-149" Canvas.Left="-338"/>
+                <Canvas Height="0" Width="0" Canvas.Left="-338" Canvas.Top="-149" x:Name="Facke" RenderTransformOrigin="0.5,0.5">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                    <Canvas Height="0" Width="0" x:Name="E1" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 375.213,189.019 L 381.364,185.654 C 381.364,185.654 386.170,193.691 382.060,195.747 C 380.435,196.559 377.186,194.587 375.213,189.019 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 376.141,189.211 L 381.621,186.214 C 381.621,186.214 385.902,193.375 382.241,195.206 C 380.794,195.929 377.899,194.173 376.141,189.211 Z"/>
+
+                    </Canvas>
+                    <Canvas Height="0" Width="0" x:Name="E">
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 362.336,193.543 L 366.167,192.962 C 366.167,192.962 367.672,199.806 365.470,200.387 C 363.265,200.967 362.221,196.559 362.336,193.543 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 363.137,194.125 L 366.259,193.652 C 366.259,193.652 367.488,199.234 365.692,199.707 C 363.894,200.180 363.042,196.585 363.137,194.125 Z"/>
+
+                    </Canvas>
+                    <Canvas Height="0" Width="0" x:Name="canvas" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 370.110,192.962 C 372.500,192.394 379.391,203.519 378.696,205.839 C 378.000,208.159 372.779,209.320 371.734,208.159 C 370.689,207.000 367.672,193.543 370.110,192.962 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 371.019,193.786 C 373.158,193.275 379.323,203.231 378.699,205.307 C 378.077,207.384 373.406,208.421 372.470,207.384 C 371.537,206.345 368.839,194.304 371.019,193.786 Z"/>
+
+                    </Canvas>
+                    <Canvas Height="0" Width="0" x:Name="canvas1" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 370.922,211.872 C 370.922,211.872 370.845,215.353 372.237,215.662 C 373.629,215.971 385.152,214.888 387.783,209.784 C 388.091,206.613 386.080,206.148 386.080,206.148 C 385.617,206.226 375.716,208.855 370.922,211.872 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 370.922,211.872 C 370.922,211.872 370.845,215.353 372.237,215.662 C 373.629,215.971 385.152,214.888 387.783,209.784 C 388.091,206.613 386.080,206.148 386.080,206.148 C 385.617,206.226 375.716,208.855 370.922,211.872 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 382.079,207.281 C 382.079,207.281 382.121,210.259 384.177,213.040"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 378.090,208.615 C 378.090,208.615 377.606,211.458 379.368,214.798"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 373.940,210.288 C 373.940,210.288 373.272,212.933 374.868,215.594"/>
+
+                    </Canvas>
+                    <Canvas Height="27.002" Width="46.004" x:Name="canvas2" RenderTransformOrigin="0.5,0.5" Canvas.Top="206.512" Canvas.Left="359.024">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="10.259"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 375.639,218.602 C 375.639,218.602 387.241,213.854 388.942,210.930 C 390.644,208.006 391.802,215.972 391.108,216.591 C 390.411,217.208 382.138,222.932 378.270,222.235 C 375.407,221.308 375.639,218.602 375.639,218.602 Z" Canvas.Top="-204.998" Canvas.Left="-361.996"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 378.745,217.247 C 378.745,217.247 379.900,220.702 381.704,221.769" Canvas.Left="-361.996" Canvas.Top="-204.998"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 382.079,215.647 C 382.079,215.647 382.973,218.039 385.532,220.089" Canvas.Top="-204.998" Canvas.Left="-361.996"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 385.984,213.465 C 385.984,213.465 386.960,216.325 389.294,217.868" Canvas.Left="-361.996" Canvas.Top="-204.998"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 375.639,218.602 C 375.639,218.602 387.241,213.854 388.942,210.930 C 390.644,208.006 391.802,215.972 391.108,216.591 C 390.411,217.208 382.138,222.932 378.270,222.235 C 375.407,221.308 375.639,218.602 375.639,218.602 Z" Canvas.Top="-204.998" Canvas.Left="-361.996"/>
+
+                    </Canvas>
+                </Canvas>
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+            </Canvas>
+
+            <Canvas x:Name="Head_R" Width="78" Height="99" Canvas.Top="133" Canvas.Left="90" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffb5afaf" Data="F1 M 148.229,188.476 C 139.880,201.042 124.713,205.647 114.353,198.766 C 103.994,191.884 102.364,176.116 110.714,163.549 C 119.064,150.983 134.230,146.376 144.589,153.259 C 154.949,160.142 156.579,175.910 148.229,188.476 Z" Canvas.Top="-133" Canvas.Left="-90"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffc1bebe" Data="F1 M 148.103,187.244 C 140.045,199.370 125.408,203.814 115.411,197.173 C 105.414,190.532 103.841,175.317 111.899,163.189 C 119.957,151.063 134.592,146.616 144.589,153.259 C 154.587,159.901 156.159,175.117 148.103,187.244 Z" Canvas.Left="-90" Canvas.Top="-133"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffd3d3d3" Data="F1 M 147.413,180.570 C 140.937,190.316 129.176,193.888 121.142,188.550 C 113.108,183.212 111.844,170.985 118.320,161.239 C 124.795,151.493 136.556,147.921 144.589,153.259 C 152.624,158.597 153.888,170.825 147.413,180.570 Z" Canvas.Top="-133" Canvas.Left="-90"/>
+                <Canvas Height="0" Width="0" Canvas.Left="-90" Canvas.Top="-133" x:Name="Facke1" RenderTransformOrigin="0.5,0.5">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                    <Canvas Height="0" x:Name="E2" Width="0" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 127.547,164.454 C 125.768,167.078 122.958,168.279 121.271,167.136 C 119.583,165.992 119.657,162.937 121.437,160.313 C 123.217,157.688 126.026,156.487 127.714,157.632 C 129.401,158.774 129.327,161.829 127.547,164.454 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 127.547,164.454 C 125.768,167.078 122.958,168.279 121.271,167.136 C 119.583,165.992 119.657,162.937 121.437,160.313 C 123.217,157.688 126.026,156.487 127.714,157.632 C 129.401,158.774 129.327,161.829 127.547,164.454 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 126.830,163.967 C 125.259,166.284 122.779,167.344 121.290,166.334 C 119.801,165.325 119.868,162.629 121.437,160.313 C 123.008,157.997 125.487,156.938 126.976,157.945 C 128.465,158.955 128.399,161.651 126.830,163.967 Z"/>
+
+                    </Canvas>
+                    <Canvas Height="0" x:Name="E3" Width="0">
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 145.555,180.403 C 143.775,183.026 140.967,184.228 139.279,183.084 C 137.590,181.940 137.666,178.885 139.444,176.261 C 141.224,173.636 144.033,172.436 145.722,173.579 C 147.407,174.723 147.334,177.778 145.555,180.403 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 144.850,179.924 C 143.276,182.247 140.790,183.309 139.297,182.297 C 137.805,181.285 137.871,178.583 139.444,176.261 C 141.019,173.939 143.504,172.877 144.997,173.889 C 146.489,174.900 146.424,177.603 144.850,179.924 Z"/>
+
+                    </Canvas>
+                    <Canvas Height="0" Width="0" x:Name="canvas3" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff838384" Data="F1 M 136.251,167.809 C 138.307,169.780 131.695,181.697 130.441,181.727 C 129.186,181.755 122.899,176.129 123.322,174.917 C 123.746,173.706 134.650,166.275 136.251,167.809 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 135.344,168.183 C 137.252,170.012 131.116,181.070 129.952,181.098 C 128.788,181.124 122.953,175.903 123.348,174.778 C 123.740,173.653 133.858,166.760 135.344,168.183 Z"/>
+
+                    </Canvas>
+                    <Canvas Height="0" Width="0" x:Name="canvas4" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 110.744,181.074 C 110.744,181.074 111.907,179.737 112.442,180.124 C 112.979,180.512 128.156,191.752 129.792,193.964 C 131.427,196.176 129.517,197.319 127.869,196.979 C 126.221,196.637 113.174,187.520 110.246,183.867 C 109.548,182.996 109.783,181.914 110.744,181.074 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 110.744,181.074 C 110.744,181.074 111.907,179.737 112.442,180.124 C 112.979,180.512 128.156,191.752 129.792,193.964 C 131.427,196.176 129.517,197.319 127.869,196.979 C 126.221,196.637 113.174,187.520 110.246,183.867 C 109.548,182.996 109.783,181.914 110.744,181.074 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 125.450,190.093 C 125.450,190.093 124.786,192.478 122.880,194.010"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 120.597,186.511 C 120.597,186.511 119.737,188.942 118.016,190.545"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 116.080,182.838 C 116.080,182.838 115.130,186.208 113.513,186.999"/>
+
+                    </Canvas>
+                    <Canvas Height="0" Width="0" x:Name="canvas5" RenderTransformOrigin="0.5,0.5">
+                        <Canvas.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Canvas.RenderTransform>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 112.995,178.620 C 112.995,178.620 112.582,177.346 113.552,175.490 C 114.523,173.636 116.355,173.536 118.683,175.444 C 121.012,177.353 130.416,184.471 130.809,186.461 C 131.202,188.452 130.263,189.531 129.800,189.732 C 128.897,190.604 119.951,185.114 112.995,178.620 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 112.995,178.620 C 112.995,178.620 112.582,177.346 113.552,175.490 C 114.523,173.636 116.355,173.536 118.683,175.444 C 121.012,177.353 130.416,184.471 130.809,186.461 C 131.202,188.452 130.263,189.531 129.800,189.732 C 128.897,190.604 119.951,185.114 112.995,178.620 Z"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 116.073,181.329 C 116.073,181.329 118.819,178.731 119.934,176.445"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 124.666,187.566 C 124.666,187.566 127.096,185.480 128.142,183.478"/>
+
+                        <!-- Door/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 120.368,184.671 C 120.368,184.671 123.284,181.981 124.395,180.025"/>
+
+                    </Canvas>
+                </Canvas>
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+
+            </Canvas>
+
+            <Canvas x:Name="Wall">
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 493.329,302.608 L 493.329,314.834 L 429.589,320.050 L 406.278,306.358 L 406.278,293.479 C 406.278,293.479 428.449,304.728 429.262,304.728 C 430.080,304.728 493.329,302.608 493.329,302.608 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 488.603,243.433 L 486.159,232.184 L 424.375,261.202 L 403.995,261.202 L 405.463,271.797 L 426.980,274.080 L 488.603,243.433 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 405.019,271.797 L 426.980,274.080 C 426.980,274.080 424.781,263.489 424.073,261.752 L 403.598,261.752 L 405.019,271.797 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 466.595,150.349 L 461.379,137.144 L 409.866,180.996 L 394.595,190.125 L 396.661,201.374 L 414.927,195.993 L 466.595,150.349 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 394.074,186.490 C 394.074,186.490 395.650,199.396 396.193,201.374 C 396.736,203.350 414.927,195.993 414.927,195.993 C 414.927,195.993 414.999,190.590 410.509,180.354 L 394.074,186.490 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 370.250,145.132 L 357.889,133.231 L 403.995,57.101 L 422.416,76.664 L 370.250,145.132 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 370.936,146.209 L 380.782,133.032 C 380.782,133.032 371.489,124.521 366.867,121.882 L 359.472,134.889 L 370.936,146.209 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 325.388,17.324 L 339.409,22.215 L 316.586,97.857 L 306.477,109.920 L 295.066,106.007 L 302.565,93.944 L 325.388,17.324 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 316.586,96.464 C 316.586,96.464 317.583,94.503 300.376,92.084 L 295.066,105.556 L 306.477,109.920 L 316.586,96.464 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 193.015,112.703 L 206.711,108.290 L 196.935,92.966 L 174.433,18.875 L 159.434,24.171 C 159.434,24.171 176.388,104.401 193.015,112.703 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 206.711,108.290 L 193.384,112.584 C 193.384,112.584 186.864,110.189 181.829,97.672 L 197.551,93.930 L 206.711,108.290 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 129.277,147.088 L 141.636,135.188 L 95.531,59.058 L 77.109,78.620 L 129.277,147.088 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 132.120,143.947 L 141.636,135.201 L 133.273,122.017 L 119.044,133.840 L 132.120,143.947 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 32.931,152.305 L 38.147,139.100 L 89.662,182.953 L 104.933,192.082 L 102.866,203.331 L 84.600,197.949 L 32.931,152.305 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 103.096,202.133 L 104.933,192.082 L 89.662,182.953 L 84.103,197.510 L 103.096,202.133 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 10.923,245.389 L 13.369,234.140 L 75.153,263.158 L 95.531,263.158 L 94.063,273.753 L 72.545,276.037 L 10.923,245.389 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff888888" Data="F1 M 6.196,304.564 L 6.196,316.792 L 69.376,322.007 L 92.483,308.314 L 92.483,295.435 C 92.483,295.435 70.507,306.684 69.699,306.684 C 68.891,306.684 6.196,304.564 6.196,304.564 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 0.000,368.662 L 73.033,368.662 C 73.033,368.662 95.288,354.775 96.509,349.557 C 97.731,344.341 99.771,305.216 92.597,304.564 L 69.774,316.301 L 6.522,313.693 C 6.522,313.693 0.000,316.955 0.000,324.127 C 0.000,331.299 0.000,368.662 0.000,368.662 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 95.857,270.874 C 95.857,270.874 97.378,287.827 94.770,297.609 L 70.208,311.302 C 70.208,311.302 4.784,308.912 3.044,308.043 C 1.305,307.172 0.654,249.355 10.870,243.269 L 73.252,272.396 L 95.857,270.874 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 96.298,265.582 C 96.298,265.582 103.947,244.659 104.933,201.337 L 85.486,193.215 L 33.547,148.167 C 33.547,148.167 24.932,147.185 17.056,186.321 C 9.178,225.459 7.948,234.814 12.131,237.274 C 16.316,239.736 73.917,267.058 73.917,267.058 L 96.298,265.582 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 134.329,145.675 L 121.724,133.829 L 81.076,71.556 C 42.603,98.944 34.561,139.807 34.561,139.807 L 87.163,186.974 L 104.933,196.102 C 104.933,196.102 107.603,197.785 109.116,191.321 C 113.750,169.553 126.503,156.761 131.287,150.674 C 131.287,150.674 135.443,146.722 134.329,145.675 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 139.328,140.893 C 139.328,140.893 142.370,140.023 156.282,130.895 C 170.193,121.766 195.406,114.375 195.406,114.375 C 196.257,114.307 197.518,112.418 196.634,110.529 C 195.753,108.640 187.567,97.053 187.567,97.053 L 164.517,21.481 C 164.517,21.481 156.827,16.347 123.244,34.930 C 89.662,53.515 85.750,65.252 86.402,66.557 C 87.053,67.860 124.222,129.482 124.222,129.482 L 139.328,140.893 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 331.994,15.221 L 305.410,94.425 L 296.547,109.380 C 296.547,109.380 232.069,105.126 205.157,112.703 L 193.723,95.989 C 193.723,95.989 168.637,20.784 170.817,17.436 C 172.802,14.391 207.612,-0.934 251.339,0.045 C 295.066,1.022 331.103,9.858 331.994,15.221 Z"/>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff888888" Data="F1 M 7.628,360.382 L 7.628,372.609 L 70.808,377.828 L 93.915,364.132 L 93.915,351.255 C 93.915,351.255 71.939,362.502 71.130,362.502 C 70.323,362.502 7.628,360.382 7.628,360.382 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff7c7c7c" Data="F1 M 94.148,354.277 L 94.148,364.132 L 71.369,377.828 L 71.717,363.451 L 94.148,354.277 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ffa4a4a4" Data="F1 M 1.432,424.480 L 74.465,424.480 C 74.465,424.480 96.720,410.593 97.941,405.377 C 99.163,400.160 101.202,361.036 94.029,360.382 L 71.206,372.122 L 7.954,369.511 C 7.954,369.511 1.432,372.773 1.432,379.947 C 1.432,387.120 1.432,424.480 1.432,424.480 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff939597" Data="F1 M 74.465,424.480 C 74.465,424.480 68.164,386.032 71.206,372.122 L 94.029,360.382 C 94.029,360.382 99.189,359.937 99.175,379.511 C 99.168,386.030 98.824,402.425 97.730,405.966 C 96.636,409.507 77.292,422.936 74.465,424.480 Z"/>
+
+                </Canvas>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 85.486,193.215 C 85.486,193.215 75.944,218.903 73.917,267.058 L 96.298,265.582 C 96.298,265.582 104.551,236.748 104.933,201.337 L 85.486,193.215 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 121.480,133.355 C 121.480,133.355 133.936,144.228 134.512,145.543 C 134.512,145.543 134.426,146.857 132.856,148.539 C 131.287,150.218 122.436,160.861 119.680,165.533 C 116.926,170.207 111.578,179.330 109.553,189.321 C 107.530,199.312 104.672,195.966 102.684,194.935 C 100.696,193.903 87.163,186.880 87.163,186.880 C 87.163,186.880 101.073,145.828 121.724,133.204"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 124.222,129.482 C 124.222,129.482 160.598,97.987 187.567,97.053 C 187.567,97.053 196.148,109.348 196.505,110.277 C 196.864,111.207 197.558,112.648 195.913,114.158 C 195.913,114.158 184.611,117.797 179.725,119.714 C 174.839,121.630 160.282,127.576 158.070,129.768 C 154.819,131.852 141.308,140.517 139.328,140.893 L 124.222,129.482 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 499.525,366.706 L 426.493,366.706 C 426.493,366.706 404.240,352.819 403.018,347.601 C 401.794,342.385 399.757,303.261 406.929,302.608 L 429.752,314.344 L 493.004,311.737 C 493.004,311.737 499.525,314.999 499.525,322.170 C 499.525,329.343 499.525,366.706 499.525,366.706 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 403.670,268.918 C 403.670,268.918 402.149,285.872 404.756,295.653 L 429.319,309.346 C 429.319,309.346 494.742,306.956 496.482,306.086 C 498.221,305.216 498.874,247.400 488.657,241.313 L 426.275,270.438 L 403.670,268.918 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 403.228,263.627 C 403.228,263.627 395.579,242.703 394.595,199.381 L 414.040,191.257 L 465.979,146.211 C 465.979,146.211 474.595,145.228 482.474,184.366 C 490.350,223.503 491.578,232.858 487.395,235.319 C 483.210,237.780 425.611,265.103 425.611,265.103 L 403.228,263.627 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 365.197,143.719 L 377.803,131.873 L 418.450,69.600 C 456.922,96.987 464.964,137.850 464.964,137.850 L 412.363,185.018 L 394.595,194.148 C 394.595,194.148 391.923,195.829 390.409,189.364 C 385.776,167.597 373.021,154.804 368.241,148.718 C 368.241,148.718 364.083,144.765 365.197,143.719 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ffa4a4a4" Data="F1 M 360.198,138.937 C 360.198,138.937 357.154,138.068 343.245,128.939 C 329.333,119.810 304.118,112.419 304.118,112.419 C 303.269,112.351 302.009,110.462 302.890,108.574 C 303.773,106.684 311.959,95.096 311.959,95.096 L 335.010,19.525 C 335.010,19.525 342.700,14.391 376.281,32.974 C 409.866,51.559 413.776,63.295 413.125,64.601 C 412.472,65.904 375.304,127.526 375.304,127.526 L 360.198,138.937 Z"/>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff888888" Data="F1 M 491.727,363.093 L 491.727,375.321 L 427.988,380.539 L 404.675,366.845 L 404.675,353.967 C 404.675,353.967 426.847,365.213 427.661,365.213 C 428.478,365.213 491.727,363.093 491.727,363.093 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ffa4a4a4" Data="F1 M 497.923,427.193 L 424.890,427.193 C 424.890,427.193 402.638,413.306 401.416,408.088 C 400.193,402.873 398.156,363.748 405.328,363.093 L 428.151,374.833 L 491.403,372.224 C 491.403,372.224 497.923,375.486 497.923,382.656 C 497.923,389.831 497.923,427.193 497.923,427.193 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff939597" Data="F1 M 424.890,427.193 C 424.890,427.193 431.196,388.743 428.151,374.833 L 405.328,363.093 C 405.328,363.093 400.167,362.649 400.182,382.222 C 400.187,388.743 400.534,405.136 401.626,408.677 C 402.720,412.218 422.064,425.647 424.890,427.193 Z"/>
+
+                </Canvas>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 414.040,191.257 C 414.040,191.257 423.583,216.946 425.611,265.103 L 403.228,263.627 C 403.228,263.627 394.973,234.793 394.595,199.381 L 414.040,191.257 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 375.304,127.526 C 375.304,127.526 338.927,96.031 311.959,95.096 C 311.959,95.096 303.378,107.391 303.021,108.321 C 302.663,109.250 301.967,110.692 303.614,112.202 C 303.614,112.202 314.917,115.841 319.801,117.757 C 324.688,119.674 339.245,125.621 341.456,127.813 C 344.708,129.896 358.218,138.561 360.198,138.937 L 375.304,127.526 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 193.387,94.980 C 193.387,94.980 244.204,80.358 305.772,93.346 L 305.410,94.425 L 296.547,109.380 C 296.547,109.380 269.555,107.793 261.484,108.204 C 253.417,108.615 222.514,107.580 205.157,112.703 C 205.157,112.703 193.188,96.261 193.387,94.980 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff7c7c7c" Data="F1 M 306.477,109.920 L 316.586,97.857 L 306.477,109.920 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 378.046,132.022 C 378.046,132.022 365.590,142.788 365.015,144.090 C 365.015,144.090 365.100,145.391 366.671,147.055 C 368.241,148.718 377.091,159.256 379.846,163.883 C 382.601,168.509 387.948,177.542 389.972,187.434 C 391.998,197.326 394.856,194.014 396.843,192.992 C 398.830,191.970 412.363,185.018 412.363,185.018 C 412.363,185.018 398.454,144.372 377.803,131.873"/>
+
+                <!-- Door/<Group>/<Path> -->
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 70.208,311.302 C 70.208,311.302 70.862,275.654 73.252,272.396 L 95.857,270.874 C 95.857,270.874 96.943,290.654 94.770,297.609 L 70.208,311.302 Z"/>
+
+                <!-- Door/<Group>/<Path> -->
+                <Path Fill="#ff939597" Data="F1 M 429.319,309.346 C 429.319,309.346 428.666,273.699 426.275,270.438 L 403.670,268.918 C 403.670,268.918 402.582,288.697 404.756,295.653 L 429.319,309.346 Z"/>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 148.428,74.484 C 148.609,74.284 148.852,74.134 149.139,74.074 C 149.858,73.919 150.568,74.379 150.722,75.100 L 152.269,82.336 C 152.425,83.055 151.966,83.767 151.243,83.918 C 150.526,84.072 149.815,83.613 149.661,82.893 L 148.114,75.657 C 148.021,75.222 148.151,74.790 148.428,74.484 L 148.428,74.484 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 152.479,72.213 C 152.956,71.687 153.764,71.623 154.316,72.080 L 160.025,76.787 C 160.593,77.254 160.676,78.094 160.205,78.662 C 159.827,79.323 158.901,79.311 158.330,78.842 L 152.622,74.134 C 152.053,73.667 151.970,72.828 152.441,72.260 C 152.453,72.242 152.467,72.227 152.479,72.213 L 152.479,72.213 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 135.674,61.835 C 136.068,61.399 136.718,61.263 137.266,61.542 L 143.865,64.891 C 144.523,65.224 144.784,66.025 144.451,66.682 C 144.109,67.339 143.313,67.601 142.660,67.268 L 136.061,63.917 C 135.404,63.584 135.142,62.783 135.475,62.126 C 135.531,62.019 135.597,61.920 135.674,61.835 L 135.674,61.835 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 133.518,70.898 C 133.699,70.697 133.943,70.548 134.228,70.488 L 141.466,68.939 C 142.183,68.785 142.896,69.245 143.047,69.965 C 143.205,70.686 142.751,71.396 142.022,71.547 L 134.785,73.095 C 134.067,73.249 133.355,72.790 133.204,72.069 C 133.111,71.636 133.242,71.203 133.518,70.898 L 133.518,70.898 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 143.120,55.690 C 143.291,55.500 143.518,55.357 143.789,55.291 C 144.504,55.113 145.227,55.547 145.401,56.264 L 147.181,63.445 C 147.363,64.162 146.926,64.883 146.208,65.059 C 145.493,65.237 144.771,64.802 144.596,64.086 L 142.815,56.904 C 142.704,56.458 142.833,56.007 143.120,55.690 L 143.120,55.690 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 153.000,69.509 C 153.193,69.293 153.459,69.140 153.766,69.087 L 161.061,67.836 C 161.783,67.712 162.472,68.200 162.598,68.928 C 162.720,69.654 162.237,70.340 161.506,70.465 L 154.213,71.716 C 153.489,71.842 152.800,71.353 152.674,70.625 C 152.604,70.207 152.736,69.800 153.000,69.509 L 153.000,69.509 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 153.000,69.509 C 153.193,69.293 153.459,69.140 153.766,69.087 L 161.061,67.836 C 161.783,67.712 162.472,68.200 162.598,68.928 C 162.720,69.654 162.237,70.340 161.506,70.465 L 154.213,71.716 C 153.489,71.842 152.800,71.353 152.674,70.625 C 152.604,70.207 152.736,69.800 153.000,69.509 L 153.000,69.509 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff3a3a3a" Data="F1 M 143.044,77.446 C 138.607,74.372 137.505,68.282 140.579,63.845 C 143.653,59.407 149.743,58.305 154.180,61.379 C 158.618,64.453 159.722,70.543 156.646,74.981 C 153.572,79.418 147.482,80.521 143.044,77.446 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff4f4f4f" Data="F1 M 143.044,77.446 C 139.468,74.968 138.579,70.059 141.058,66.482 C 143.535,62.905 148.445,62.017 152.021,64.494 C 155.598,66.973 156.488,71.882 154.009,75.458 C 151.530,79.036 146.622,79.925 143.044,77.446 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff565656" Data="F1 M 140.494,73.966 C 139.878,72.807 140.156,71.454 141.115,70.944 C 142.074,70.433 143.352,70.959 143.969,72.119 C 144.585,73.278 144.308,74.631 143.348,75.142 C 142.389,75.652 141.111,75.126 140.494,73.966 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#fffefefe" Data="F1 M 148.917,65.740 C 148.782,63.873 150.187,62.250 152.053,62.115 C 153.920,61.979 155.543,63.384 155.678,65.251 C 155.813,67.118 154.409,68.740 152.542,68.875 C 150.676,69.010 149.052,67.607 148.917,65.740 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff3a3a3a" Data="F1 M 150.642,64.794 C 150.558,63.625 151.437,62.609 152.605,62.524 C 153.774,62.440 154.790,63.319 154.875,64.488 C 154.959,65.657 154.080,66.673 152.912,66.758 C 151.743,66.842 150.727,65.963 150.642,64.794 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="0.1" Stroke="#fffefefe" StrokeMiterLimit="1.0" Fill="#ff202020" Data="F1 M 151.523,64.694 C 151.466,63.904 152.061,63.218 152.850,63.161 C 153.641,63.104 154.326,63.698 154.383,64.487 C 154.440,65.277 153.848,65.963 153.057,66.021 C 152.268,66.078 151.580,65.484 151.523,64.694 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 389.358,79.563 C 389.623,79.503 389.907,79.521 390.175,79.635 C 390.853,79.923 391.170,80.708 390.880,81.385 L 387.985,88.194 C 387.697,88.872 386.913,89.191 386.234,88.898 C 385.557,88.612 385.241,87.827 385.530,87.149 L 388.427,80.339 C 388.601,79.933 388.958,79.653 389.358,79.563 L 389.358,79.563 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 393.979,80.036 C 394.672,79.878 395.369,80.290 395.557,80.982 L 397.521,88.116 C 397.714,88.825 397.301,89.561 396.589,89.754 C 395.899,90.077 395.148,89.534 394.952,88.823 L 392.990,81.687 C 392.793,80.980 393.208,80.245 393.920,80.052 C 393.941,80.044 393.961,80.040 393.979,80.036 L 393.979,80.036 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 386.204,61.879 C 386.777,61.748 387.385,62.011 387.674,62.555 L 391.146,69.090 C 391.491,69.741 391.244,70.547 390.594,70.893 C 389.938,71.233 389.134,70.989 388.792,70.341 L 385.320,63.805 C 384.976,63.154 385.223,62.347 385.873,62.002 C 385.980,61.946 386.090,61.905 386.204,61.879 L 386.204,61.879 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 379.226,68.051 C 379.490,67.991 379.774,68.009 380.042,68.124 L 386.853,71.021 C 387.530,71.309 387.847,72.093 387.556,72.771 C 387.271,73.449 386.494,73.771 385.808,73.474 L 378.998,70.579 C 378.322,70.290 378.003,69.505 378.294,68.829 C 378.467,68.421 378.825,68.142 379.226,68.051 L 379.226,68.051 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 395.828,61.135 C 396.080,61.078 396.346,61.093 396.605,61.194 C 397.292,61.461 397.633,62.231 397.364,62.917 L 394.689,69.815 C 394.426,70.506 393.653,70.844 392.965,70.576 C 392.277,70.310 391.937,69.540 392.206,68.852 L 394.881,61.954 C 395.045,61.523 395.412,61.230 395.828,61.135 L 395.828,61.135 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 395.960,78.122 C 396.242,78.058 396.546,78.085 396.829,78.218 L 403.514,81.392 C 404.178,81.706 404.460,82.501 404.145,83.169 C 403.828,83.834 403.038,84.117 402.368,83.798 L 395.681,80.625 C 395.019,80.312 394.737,79.516 395.052,78.849 C 395.235,78.466 395.577,78.209 395.960,78.122 L 395.960,78.122 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff474645" Data="F1 M 395.960,78.122 C 396.242,78.058 396.546,78.085 396.829,78.218 L 403.514,81.392 C 404.178,81.706 404.460,82.501 404.145,83.169 C 403.828,83.834 403.038,84.117 402.368,83.798 L 395.681,80.625 C 395.019,80.312 394.737,79.516 395.052,78.849 C 395.235,78.466 395.577,78.209 395.960,78.122 L 395.960,78.122 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff3a3a3a" Data="F1 M 383.251,78.888 C 381.390,73.821 383.993,68.206 389.058,66.344 C 394.126,64.483 399.742,67.085 401.603,72.152 C 403.463,77.220 400.862,82.835 395.795,84.696 C 390.728,86.558 385.112,83.956 383.251,78.888 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff4f4f4f" Data="F1 M 383.251,78.888 C 381.750,74.804 383.848,70.277 387.933,68.776 C 392.017,67.276 396.543,69.373 398.043,73.458 C 399.545,77.542 397.447,82.070 393.363,83.570 C 389.279,85.070 384.750,82.972 383.251,78.888 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff565656" Data="F1 M 383.167,74.574 C 383.330,73.271 384.336,72.325 385.415,72.459 C 386.492,72.593 387.234,73.760 387.072,75.062 C 386.910,76.365 385.903,77.313 384.825,77.178 C 383.747,77.042 383.004,75.877 383.167,74.574 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#fffefefe" Data="F1 M 394.789,72.691 C 395.752,71.086 397.834,70.566 399.439,71.530 C 401.044,72.494 401.564,74.575 400.600,76.180 C 399.636,77.785 397.555,78.306 395.950,77.342 C 394.345,76.378 393.825,74.296 394.789,72.691 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff3a3a3a" Data="F1 M 396.745,72.910 C 397.347,71.906 398.650,71.580 399.655,72.183 C 400.661,72.787 400.987,74.091 400.383,75.095 C 399.781,76.099 398.477,76.425 397.471,75.821 C 396.465,75.217 396.141,73.914 396.745,72.910 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="0.1" Stroke="#fffefefe" StrokeMiterLimit="1.0" Fill="#ff202020" Data="F1 M 397.522,73.334 C 397.929,72.656 398.811,72.436 399.490,72.844 C 400.168,73.251 400.388,74.133 399.981,74.811 C 399.574,75.490 398.692,75.710 398.013,75.303 C 397.334,74.895 397.115,74.014 397.522,73.334 Z"/>
+
+                </Canvas>
+
+            </Canvas>
+
+            <Canvas x:Name="Hand_L" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 391.900,230.416 C 391.900,230.416 382.516,232.552 383.238,236.391 C 383.962,240.229 390.598,237.353 392.257,236.729 C 393.917,236.106 392.010,234.689 391.773,234.072 C 391.532,233.457 393.475,229.986 391.900,230.416 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 394.082,230.027 C 394.082,230.027 394.037,232.255 393.289,233.687 C 393.289,233.687 393.245,234.114 393.673,234.635 C 394.104,235.156 393.917,236.011 394.486,235.914 C 395.056,235.816 402.836,234.457 402.493,231.466 C 402.149,228.476 396.903,229.478 394.082,230.027 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 391.900,230.416 C 391.900,230.416 382.516,232.552 383.238,236.391 C 383.962,240.229 390.598,237.353 392.257,236.729 C 393.917,236.106 392.010,234.689 391.773,234.072 C 391.532,233.457 393.475,229.986 391.900,230.416 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 394.082,230.027 C 394.082,230.027 394.037,232.255 393.289,233.687 C 393.289,233.687 393.245,234.114 393.673,234.635 C 394.104,235.156 393.917,236.011 394.486,235.914 C 395.056,235.816 402.836,234.457 402.493,231.466 C 402.149,228.476 396.903,229.478 394.082,230.027 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 393.442,238.187 C 393.442,238.187 383.924,240.904 384.492,244.680 C 385.057,248.458 391.860,246.108 395.595,244.398 C 395.595,244.398 395.469,243.021 394.562,242.199 C 393.653,241.375 395.967,239.514 393.442,238.187 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 395.173,237.628 C 395.173,237.628 396.567,239.127 395.935,241.051 C 395.741,241.642 397.440,243.093 397.088,244.078 C 397.088,244.078 406.534,242.702 405.968,239.318 C 405.405,235.934 398.678,236.480 395.173,237.628 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 393.442,238.187 C 393.442,238.187 383.924,240.904 384.492,244.680 C 385.057,248.458 391.860,246.108 395.595,244.398 C 395.595,244.398 395.469,243.021 394.562,242.199 C 393.653,241.375 395.967,239.514 393.442,238.187 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 395.173,237.628 C 395.173,237.628 396.567,239.127 395.935,241.051 C 395.741,241.642 397.440,243.093 397.088,244.078 C 397.088,244.078 406.534,242.702 405.968,239.318 C 405.405,235.934 398.678,236.480 395.173,237.628 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 393.195,247.056 C 393.195,247.056 385.738,248.185 386.415,251.411 C 387.094,254.637 393.639,252.807 394.067,252.852 C 394.494,252.898 395.295,251.614 395.295,251.614 C 395.295,251.614 393.766,249.622 393.576,249.150 C 393.384,248.677 394.583,246.772 393.195,247.056 Z"/>
+
+                    </Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 395.203,246.602 C 395.203,246.602 394.917,248.466 395.054,248.900 C 395.192,249.334 396.482,251.182 396.482,251.182 L 396.390,251.846 C 396.390,251.846 403.743,250.060 403.731,247.402 C 403.721,244.741 399.114,245.186 395.203,246.602 Z"/>
+
+                    <Canvas>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 393.195,247.056 C 393.195,247.056 385.738,248.185 386.415,251.411 C 387.094,254.637 393.639,252.807 394.067,252.852 C 394.494,252.898 395.295,251.614 395.295,251.614 C 395.295,251.614 393.766,249.622 393.576,249.150 C 393.384,248.677 394.583,246.772 393.195,247.056 Z"/>
+
+                    </Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 395.203,246.602 C 395.203,246.602 394.917,248.466 395.054,248.900 C 395.192,249.334 396.482,251.182 396.482,251.182 L 396.390,251.846 C 396.390,251.846 403.743,250.060 403.731,247.402 C 403.721,244.741 399.114,245.186 395.203,246.602 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 393.298,254.813 C 393.298,254.813 387.723,255.937 388.227,258.935 C 388.732,261.932 394.679,260.251 394.679,260.251 C 394.679,260.251 395.217,259.532 395.125,259.175 C 395.035,258.818 393.550,257.614 393.595,257.391 C 393.639,257.165 394.410,256.310 394.422,255.931 C 394.439,255.550 393.961,254.647 393.298,254.813 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 395.314,254.286 C 395.314,254.286 396.030,255.250 395.948,255.752 C 395.867,256.256 395.365,257.096 395.491,257.221 C 395.618,257.348 396.672,258.558 396.631,258.853 C 396.591,259.146 396.341,259.566 396.341,259.566 C 396.341,259.566 403.326,258.166 403.487,255.310 C 403.652,252.450 396.795,253.886 395.314,254.286 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 393.298,254.813 C 393.298,254.813 387.723,255.937 388.227,258.935 C 388.732,261.932 394.679,260.251 394.679,260.251 C 394.679,260.251 395.217,259.532 395.125,259.175 C 395.035,258.818 393.550,257.614 393.595,257.391 C 393.639,257.165 394.410,256.310 394.422,255.931 C 394.439,255.550 393.961,254.647 393.298,254.813 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 395.314,254.286 C 395.314,254.286 396.030,255.250 395.948,255.752 C 395.867,256.256 395.365,257.096 395.491,257.221 C 395.618,257.348 396.672,258.558 396.631,258.853 C 396.591,259.146 396.341,259.566 396.341,259.566 C 396.341,259.566 403.326,258.166 403.487,255.310 C 403.652,252.450 396.795,253.886 395.314,254.286 Z"/>
+
+                </Canvas>
+
+            </Canvas>
+
+            <Canvas x:Name="Hand_R" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+
+                <Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 109.854,202.324 C 109.854,202.324 119.464,202.854 119.396,206.760 C 119.328,210.667 112.303,208.945 110.561,208.609 C 108.822,208.273 110.461,206.556 110.593,205.908 C 110.727,205.261 108.229,202.165 109.854,202.324 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 107.637,202.308 C 107.637,202.308 108.057,204.498 109.034,205.784 C 109.034,205.784 109.151,206.196 108.815,206.782 C 108.478,207.368 108.806,208.179 108.228,208.179 C 107.651,208.179 99.751,208.145 99.587,205.139 C 99.425,202.133 104.765,202.241 107.637,202.308 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 109.854,202.324 C 109.854,202.324 119.464,202.854 119.396,206.760 C 119.328,210.667 112.303,208.945 110.561,208.609 C 108.822,208.273 110.461,206.556 110.593,205.908 C 110.727,205.261 108.229,202.165 109.854,202.324 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 107.637,202.308 C 107.637,202.308 108.057,204.498 109.034,205.784 C 109.034,205.784 109.151,206.196 108.815,206.782 C 108.478,207.368 108.806,208.179 108.228,208.179 C 107.651,208.179 99.751,208.145 99.587,205.139 C 99.425,202.133 104.765,202.241 107.637,202.308 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 109.638,210.245 C 109.638,210.245 119.477,211.324 119.552,215.143 C 119.630,218.962 112.528,217.786 108.562,216.729 C 108.562,216.729 108.451,215.351 109.209,214.387 C 109.968,213.422 107.373,211.978 109.638,210.245 Z"/>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 107.839,209.985 C 107.839,209.985 106.716,211.695 107.663,213.486 C 107.953,214.038 106.521,215.752 107.033,216.665 C 107.033,216.665 97.491,216.894 97.479,213.463 C 97.469,210.032 104.189,209.441 107.839,209.985 Z"/>
+
+                    </Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 109.638,210.245 C 109.638,210.245 119.477,211.324 119.552,215.143 C 119.630,218.962 112.528,217.786 108.562,216.729 C 108.562,216.729 108.451,215.351 109.209,214.387 C 109.968,213.422 107.373,211.978 109.638,210.245 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 107.839,209.985 C 107.839,209.985 106.716,211.695 107.663,213.486 C 107.953,214.038 106.521,215.752 107.033,216.665 C 107.033,216.665 97.491,216.894 97.479,213.463 C 97.469,210.032 104.189,209.441 107.839,209.985 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <Canvas>
+
+                            <!-- Door/<Group>/<Group>/<Group>/<Group>/<Path> -->
+                            <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 111.372,218.946 C 111.372,218.946 118.912,218.806 118.786,222.102 C 118.660,225.396 111.900,224.691 111.487,224.807 C 111.072,224.924 110.067,223.792 110.067,223.792 C 110.067,223.792 111.241,221.571 111.348,221.074 C 111.458,220.576 109.955,218.901 111.372,218.946 Z"/>
+
+                        </Canvas>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 109.316,218.836 C 109.316,218.836 109.911,220.627 109.849,221.077 C 109.785,221.528 108.825,223.564 108.825,223.564 L 109.028,224.205 C 109.028,224.205 101.479,223.678 101.043,221.055 C 100.607,218.432 105.223,218.096 109.316,218.836 Z"/>
+
+                    </Canvas>
+
+                    <Canvas>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path Fill="#ff9f9f9f" Data="F1 M 111.372,218.946 C 111.372,218.946 118.912,218.806 118.786,222.102 C 118.660,225.396 111.900,224.691 111.487,224.807 C 111.072,224.924 110.067,223.792 110.067,223.792 C 110.067,223.792 111.241,221.571 111.348,221.074 C 111.458,220.576 109.955,218.901 111.372,218.946 Z"/>
+
+                    </Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 109.316,218.836 C 109.316,218.836 109.911,220.627 109.849,221.077 C 109.785,221.528 108.825,223.564 108.825,223.564 L 109.028,224.205 C 109.028,224.205 101.479,223.678 101.043,221.055 C 100.607,218.432 105.223,218.096 109.316,218.836 Z"/>
+
+                </Canvas>
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 112.574,226.611 C 112.574,226.611 118.258,226.783 118.264,229.823 C 118.270,232.862 112.122,232.205 112.122,232.205 C 112.122,232.205 111.475,231.585 111.505,231.218 C 111.535,230.851 112.794,229.414 112.713,229.201 C 112.631,228.986 111.729,228.273 111.651,227.900 C 111.572,227.530 111.892,226.559 112.574,226.611 Z"/>
+
+                        <!-- Door/<Group>/<Group>/<Group>/<Path> -->
+                        <Path StrokeThickness="1.0" Stroke="#ff838384" StrokeMiterLimit="1.0" Data="F1 M 110.499,226.430 C 110.499,226.430 109.953,227.499 110.118,227.982 C 110.284,228.464 110.918,229.208 110.815,229.353 C 110.711,229.498 109.875,230.870 109.966,231.152 C 110.055,231.435 110.372,231.807 110.372,231.807 C 110.372,231.807 103.251,231.600 102.610,228.810 C 101.971,226.020 108.968,226.284 110.499,226.430 Z"/>
+
+                    </Canvas>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 112.574,226.611 C 112.574,226.611 118.258,226.783 118.264,229.823 C 118.270,232.862 112.122,232.205 112.122,232.205 C 112.122,232.205 111.475,231.585 111.505,231.218 C 111.535,230.851 112.794,229.414 112.713,229.201 C 112.631,228.986 111.729,228.273 111.651,227.900 C 111.572,227.530 111.892,226.559 112.574,226.611 Z"/>
+
+                    <!-- Door/<Group>/<Group>/<Path> -->
+                    <Path Fill="#ff9f9f9f" Data="F1 M 110.499,226.430 C 110.499,226.430 109.953,227.499 110.118,227.982 C 110.284,228.464 110.918,229.208 110.815,229.353 C 110.711,229.498 109.875,230.870 109.966,231.152 C 110.055,231.435 110.372,231.807 110.372,231.807 C 110.372,231.807 103.251,231.600 102.610,228.810 C 101.971,226.020 108.968,226.284 110.499,226.430 Z"/>
+
+                </Canvas>
+
+            </Canvas>
+
+            <!-- Door/Mark2 -->
+            <Path Fill="#ff939597" Data="F1 M 414.040,191.257 C 414.040,191.257 423.583,216.946 425.611,265.103 L 403.228,263.627 C 403.228,263.627 394.973,234.793 394.595,199.381 L 414.040,191.257 Z" x:Name="M_L"/>
+
+            <!-- Door/Mark1 -->
+            <Path Fill="#ff939597" Data="F1 M 85.486,193.215 C 85.486,193.215 75.944,218.903 73.917,267.058 L 96.298,265.582 C 96.298,265.582 104.551,236.748 104.933,201.337 L 85.486,193.215 Z" x:Name="M_R"/>
+
+        </Canvas>
+    </Canvas>
+</UserControl>

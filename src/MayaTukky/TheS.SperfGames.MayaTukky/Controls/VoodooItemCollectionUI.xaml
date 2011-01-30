@@ -23,11 +23,11 @@
 
 			</Canvas>
 			<Canvas x:Name="unavalible" Height="0" Width="0">
+				<Canvas.Effect>
+					<ee:BloomEffect BloomIntensity="-0.6" BaseSaturation="0.8" BaseIntensity="0.85" Threshold="0.2"/>
+				</Canvas.Effect>
 
 				<Canvas>
-					<Canvas.Effect>
-						<ee:BloomEffect BloomIntensity="-0.4" BaseSaturation="0.51" BaseIntensity="1" BloomSaturation="0.86" Threshold="0.3"/>
-					</Canvas.Effect>
 
 					<!-- Layer 1/<Group>/<Type> -->
 	<!-- Layer 1/<Group>/<Path> -->
@@ -1456,9 +1456,6 @@
 				</Canvas>
 
 				<Canvas>
-					<Canvas.Effect>
-						<ee:BloomEffect BloomIntensity="-0.3" BaseIntensity="1" BloomSaturation="1.2" Threshold="0.5" BaseSaturation="0.85"/>
-					</Canvas.Effect>
 <!-- Layer 1/<Group>/<Path> -->
 					<Path Fill="#ff535352" Data="F1 M 289.316,407.536 C 289.316,407.536 289.597,406.718 289.542,406.207 C 289.488,405.693 288.279,404.011 288.441,403.332 C 288.604,402.652 288.947,400.902 288.062,400.751 C 287.174,400.601 287.090,402.772 287.415,403.724 C 287.742,404.675 288.748,406.072 288.508,406.470 C 288.268,406.871 288.868,407.962 289.316,407.536 Z"/>
 

@@ -843,7 +843,7 @@
             <Rectangle Fill="#ffffffff" Height="488" Width="625"/>
             <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
 
-            <Image Source="bg.jpg" Stretch="Fill" d:IsLocked="True" Height="488" Width="625"/>
+            <Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
             <Canvas x:Name="canvas23" Height="0" Width="0" RenderTransformOrigin="0.5,0.5" Canvas.Left="-2198" Canvas.Top="-1077">
                 <Canvas.RenderTransform>
                     <CompositeTransform ScaleX="0.83" ScaleY="0.83"/>
