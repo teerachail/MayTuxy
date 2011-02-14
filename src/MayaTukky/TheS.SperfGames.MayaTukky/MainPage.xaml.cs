@@ -29,7 +29,7 @@ namespace TheS.SperfGames.MayaTukky
                 "/ThirdStatePage",
                 "/ResultScorePage",
                 "/TotalScorePage"
-            };
+            }; 
 
             Views.FirstStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.SecondStatePage.GameFinish += new EventHandler(NavigationPage);
