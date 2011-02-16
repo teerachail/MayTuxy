@@ -258,6 +258,11 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // จัดการตัวนับการตอบผิด
                     _incorrectCount++;
 
+                    foreach (var cup in _frontRow.Cups)
+                    {
+                        cup.Sb_Up.Begin();
+                    }
+
                     // กำหนดการแสดงผลของสามเกลอ และเริ่มเล่นอนิเมชัน
                     tukkyWin.ThreeTopWin.Visibility = System.Windows.Visibility.Visible;
                     tukkyWin.ThreeTopNormal.Visibility = System.Windows.Visibility.Collapsed;
