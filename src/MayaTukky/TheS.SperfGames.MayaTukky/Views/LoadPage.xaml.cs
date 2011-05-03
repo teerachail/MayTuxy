@@ -16,10 +16,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class LoadPage : Page,IAnime
     {
+        public static event EventHandler NextPage;
+
         double progress = 0;
         public LoadPage()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             Loaded += new RoutedEventHandler(Scene1_Loaded);
             Storyboard1.Completed += new EventHandler(Storyboard1_Completed);
             SB_Timer.Completed += new EventHandler(SB_Timer_Completed);
@@ -45,6 +47,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         private void Scene1_Loaded(object sender, RoutedEventArgs e)
         {
             SB_Timer.Begin();
+            StartPlay();
             if (AutoPlay)
             {
                 StartPlay();
@@ -58,6 +61,11 @@ namespace TheS.SperfGames.MayaTukky.Views
             if (temp != null)
             {
                 temp(this, EventArgs.Empty);
+            }
+            EventHandler temp2 = NextPage;
+            if (temp2 != null)
+            {
+                temp2(null,null);
             }
         }
 

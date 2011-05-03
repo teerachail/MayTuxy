@@ -15,14 +15,27 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class MainTitle : Page
     {
+        public static event EventHandler NextPage;
+
         public MainTitle()
         {
             InitializeComponent();
             Loaded += new RoutedEventHandler(TukkyCover_Loaded);
+            NextButton.MouseLeftButtonDown += new MouseButtonEventHandler(NextButton_MouseLeftButtonDown);
+        }
+
+        private void NextButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            EventHandler temp = NextPage;
+            if (temp != null)
+            {
+                temp(null,null);
+            }
         }
 
         private void TukkyCover_Loaded(object sender, RoutedEventArgs e)
         {
+            StartPlay();
             if (AutoPlay)
             {
                 StartPlay();

@@ -159,7 +159,7 @@
     		</i:EventTrigger>
     	</i:Interaction.Triggers>
 
-		<Canvas Width="111.407" Height="88.109" Canvas.Top="10.054" Canvas.Left="-4.797">
+		<Canvas Width="111.407" Height="88.109" Canvas.Top="10.054" Canvas.Left="-4.797" Visibility="Collapsed">
 
 			<Canvas>
 
@@ -186,6 +186,9 @@
 			xmlns="http://schemas.microsoft.com/client/2007"
 			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="59.481" Height="70.134"
   d:LayoutOverrides="Margin" Canvas.Left="21" Canvas.Top="15">
+			<Canvas.Effect>
+				<DropShadowEffect BlurRadius="0" Direction="240"/>
+			</Canvas.Effect>
 
 			<Canvas>
 

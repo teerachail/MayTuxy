@@ -9,1469 +9,253 @@
            d:DesignWidth="640" d:DesignHeight="480"
            Title="TotalScoreThirdPage Page" Width="625" Height="488">
     <navigation:Page.Resources>
-    	<Storyboard x:Name="SB_Fusion">
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="poisonSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="voodooSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="monsterSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<DoubleAnimation Duration="0:0:0.4" To="104" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Poison" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="112" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Poison" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Poison" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="100" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Voodoo" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Voodoo" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Voodoo" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="100" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Monster" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-86" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Monster" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Monster" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="93" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Score1" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-62" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Score1" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Score1" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-51" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Score2" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Score2" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-73" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Score3" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-51" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Score3" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Score3" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Poison" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Poison" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Voodoo" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Voodoo" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Monster" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Monster" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Score1" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Score1" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Score2" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Score2" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Score3" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="0.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Score3" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<BackEase Amplitude="0.4" EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas8" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas9" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas10" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path10" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path11" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path12" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path13" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path14" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path15" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path16" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path17" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path18" d:IsOptimized="True"/>
-    		<DoubleAnimation Duration="0:0:0.4" To="-180" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Poison" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<CircleEase EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-180" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Voodoo" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<CircleEase EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimation Duration="0:0:0.4" To="-180" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Monster" d:IsOptimized="True">
-    			<DoubleAnimation.EasingFunction>
-    				<CircleEase EasingMode="EaseIn"/>
-    			</DoubleAnimation.EasingFunction>
-    		</DoubleAnimation>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas17">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="0.005"/>
-    			<DiscreteDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimation Duration="0:0:0.4" To="15" Storyboard.TargetProperty="(UIElement.Effect).(SwirlEffect.TwistAmount)" Storyboard.TargetName="MainBoard" d:IsOptimized="True"/>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:0.7">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas17">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
-    			<DiscreteObjectKeyFrame KeyTime="0" Value="2418"/>
-    		</ObjectAnimationUsingKeyFrames>
-    	</Storyboard>
-    	<Storyboard x:Name="SB_CloudOut">
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ScoreOnStage">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Clound">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Clound">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="0">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<BackEase EasingMode="EaseOut" Amplitude="0.4"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Clound">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="-56"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<CircleEase EasingMode="EaseOut"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Clound">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="-21"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<CircleEase EasingMode="EaseOut"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="Hole">
-    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="Hole">
-    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Hole">
-    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<CircleEase EasingMode="EaseOut"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Reward">
-    			<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-235">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<BounceEase EasingMode="EaseIn" Bounces="3" Bounciness="0"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    			<EasingDoubleKeyFrame KeyTime="0:0:7" Value="0">
-    				<EasingDoubleKeyFrame.EasingFunction>
-    					<BounceEase EasingMode="EaseOut" Bounces="0" Bounciness="0"/>
-    				</EasingDoubleKeyFrame.EasingFunction>
-    			</EasingDoubleKeyFrame>
-    			<EasingDoubleKeyFrame KeyTime="0:0:8" Value="-235"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarOne">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3.5">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarTwo">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.2">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarThree">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.2">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarFour">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:7">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cv_AvatarFive">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:7">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas11">
-    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock3">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3.4" Value="0"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3.6"  x:Name="DokSumScoreValue1"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3.8"  x:Name="DokSumScoreValue2"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.0"  x:Name="DokSumScoreValue3"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.2"  x:Name="DokSumScoreValue4"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.4"  x:Name="DokSumScoreValue5"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.6"  x:Name="DokSumScoreValue6"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:4.8"  x:Name="DokSumScoreValue7"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.0"  x:Name="DokSumScoreValue8"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.2"  x:Name="DokSumScoreValue9"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.4"  x:Name="DokSumScoreValue10"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.6"  x:Name="DokSumScoreValue11"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5.8"  x:Name="DokSumScoreValue12"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6.0"  x:Name="DokSumScoreValue13"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6.2"  x:Name="DokSumScoreValue14"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6.4"  x:Name="DokSumScoreValue15"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6.6"  x:Name="DokSumScoreValue16"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:6.8" x:Name="DokSumScoreValue17"/>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:7" x:Name="DokSumScoreValue18"/>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="TotalScoreSeal">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="AllScore">
-    			<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-    		</DoubleAnimationUsingKeyFrames>
-    		<DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas12" d:IsOptimized="True"/>
-    	</Storyboard>
+    	<Storyboard x:Name="Sb_Next">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="next">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.5">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.95001"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.05"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="8">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-6.9"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-0.042"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
     	<Storyboard x:Name="SB_Calculate">
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MainBoard">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:5">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PoisonPic">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Poison">
-    			<DiscreteObjectKeyFrame KeyTime="0">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Voodoo">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:1">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="FirstStateScoreTextBlock">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.3" x:Name="PoisonDiscreteObjectKeyFrameScore1"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.4" x:Name="PoisonDiscreteObjectKeyFrameScore2"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.5" x:Name="PoisonDiscreteObjectKeyFrameScore3"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.6" x:Name="PoisonDiscreteObjectKeyFrameScore4"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.7" x:Name="PoisonDiscreteObjectKeyFrameScore5"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.8" x:Name="PoisonDiscreteObjectKeyFrameScore6"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:0.9" x:Name="PoisonDiscreteObjectKeyFrameScore7"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.0" x:Name="PoisonDiscreteObjectKeyFrameScore8"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="VoodooPic">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Monster">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:2">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas1">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="poisonSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="SecondStateScoreTextBlock">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.3" x:Name="VoodooDiscreteObjectKeyFrameScore1"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.4" x:Name="VoodooDiscreteObjectKeyFrameScore2"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.5" x:Name="VoodooDiscreteObjectKeyFrameScore3"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.6" x:Name="VoodooDiscreteObjectKeyFrameScore4"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.7" x:Name="VoodooDiscreteObjectKeyFrameScore5"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.8" x:Name="VoodooDiscreteObjectKeyFrameScore6"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:1.9" x:Name="VoodooDiscreteObjectKeyFrameScore7"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.0" x:Name="VoodooDiscreteObjectKeyFrameScore8"/>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MonsterPic">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="voodooSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:1">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas2">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="monsterSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:2">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="ThirdStateScoreTextBlock">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.2" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.3" x:Name="MonsterDiscreteObjectKeyFrameScore1"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.4" x:Name="MonsterDiscreteObjectKeyFrameScore2"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.5" x:Name="MonsterDiscreteObjectKeyFrameScore3"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.6" x:Name="MonsterDiscreteObjectKeyFrameScore4"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.7" x:Name="MonsterDiscreteObjectKeyFrameScore5"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.8" x:Name="MonsterDiscreteObjectKeyFrameScore6"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:2.9" x:Name="MonsterDiscreteObjectKeyFrameScore7"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.0" x:Name="MonsterDiscreteObjectKeyFrameScore8"/>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score1">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score2">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:1">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalSeal">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Score3">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    			<DiscreteObjectKeyFrame KeyTime="0:0:2">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="viewbox">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.2">
     				<DiscreteObjectKeyFrame.Value>
     					<Visibility>Visible</Visibility>
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock">
-    			<DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" x:Name="DokPoisonScoreValue1"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" x:Name="DokPoisonScoreValue2"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" x:Name="DokPoisonScoreValue3"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" x:Name="DokPoisonScoreValue4"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" x:Name="DokPoisonScoreValue5"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" x:Name="DokPoisonScoreValue6"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" x:Name="DokPoisonScoreValue7"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" x:Name="DokPoisonScoreValue8"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" x:Name="DokPoisonScoreValue9"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1" x:Name="DokPoisonScoreValue10"/>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock1">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="0" />
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.1" x:Name="DokVoodooScoreValue1"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" x:Name="DokVoodooScoreValue2"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" x:Name="DokVoodooScoreValue3"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" x:Name="DokVoodooScoreValue4"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" x:Name="DokVoodooScoreValue5"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.6" x:Name="DokVoodooScoreValue6"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" x:Name="DokVoodooScoreValue7"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.8" x:Name="DokVoodooScoreValue8"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" x:Name="DokVoodooScoreValue9"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2" x:Name="DokVoodooScoreValue10"/>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock2">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.1" x:Name="DokMonsterScoreValue1"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.2" x:Name="DokMonsterScoreValue2"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" x:Name="DokMonsterScoreValue3"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.4" x:Name="DokMonsterScoreValue4"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" x:Name="DokMonsterScoreValue5"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" x:Name="DokMonsterScoreValue6"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.7" x:Name="DokMonsterScoreValue7"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.8" x:Name="DokMonsterScoreValue8"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.9" x:Name="DokMonsterScoreValue9"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3" x:Name="DokMonsterScoreValue10"/>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="canvas17">
-    			<DiscreteObjectKeyFrame KeyTime="0">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Collapsed</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="TotalScoreSeal">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AllScore">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3">
-    				<DiscreteObjectKeyFrame.Value>
-    					<Visibility>Visible</Visibility>
-    				</DiscreteObjectKeyFrame.Value>
-    			</DiscreteObjectKeyFrame>
-    		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="textBlock4">
-    			<DiscreteObjectKeyFrame KeyTime="0:0:3" Value="0"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.1"  x:Name="DokAllScoreValue1"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.2" x:Name="DokAllScoreValue2"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.3"  x:Name="DokAllScoreValue3"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.4"  x:Name="DokAllScoreValue4"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.5"  x:Name="DokAllScoreValue5"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.6"  x:Name="DokAllScoreValue6"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.7"  x:Name="DokAllScoreValue7"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.8"  x:Name="DokAllScoreValue8"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.9"  x:Name="DokAllScoreValue9"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:4"  x:Name="DokAllScoreValue10"/>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="AllStateScoreTextBlock">
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.2" Value="0"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.3" x:Name="AllDiscreteObjectKeyFrameScore1"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.4" x:Name="AllDiscreteObjectKeyFrameScore2"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.5" x:Name="AllDiscreteObjectKeyFrameScore3"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.6" x:Name="AllDiscreteObjectKeyFrameScore4"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.7" x:Name="AllDiscreteObjectKeyFrameScore5"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.8" x:Name="AllDiscreteObjectKeyFrameScore6"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:3.9" x:Name="AllDiscreteObjectKeyFrameScore7"/>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.0" x:Name="AllDiscreteObjectKeyFrameScore8"/>
     		</ObjectAnimationUsingKeyFrames>
     	</Storyboard>
     </navigation:Page.Resources>
     <Canvas x:Name="LayoutRoot" Width="625" Height="488">
         <Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill" Height="488" Width="625"/>
+        <Image Height="506" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Scroll2.png" Stretch="Fill" Width="403" Canvas.Top="-18"/>
+        <Viewbox Width="79" Height="27" Canvas.Left="166" Canvas.Top="23">
+        	<Canvas Width="125.956" Height="43.4341">
+        		<Path Width="21.6716" Height="43.4341" Canvas.Left="0.111" Canvas.Top="0" Stretch="Fill" Fill="#FF584D3B" Data="F1 M 18.9973,0C 15.748,0 9.5188,0.90094 6.73694,1.72647C 4.93744,2.26041 3.73306,3.07291 2.88531,4.12109C 1.48172,5.85547 1.06119,8.23038 0.563721,11.0416C 0.115845,13.5702 0,16.4388 0.217438,19.6497C 0.371033,21.5298 1.09625,22.9413 2.39185,23.8828C 3.68878,24.8229 5.80078,25.4648 8.73038,25.802C 11.2304,26.1107 14.9623,26.944 15.1172,28.1172C 15.332,29.6888 14.7383,30.746 13.3358,31.2864C 12.7812,31.4993 12.1276,31.5768 11.4323,31.5768C 9.79492,31.5768 7.92773,31.1464 6.58197,31.0403C 5.62491,30.9634 4.28638,30.6823 3.09503,30.6823C 1.65747,30.6823 0.434235,31.0923 0.354126,32.7669C 0.268127,34.6055 0.255188,36.4661 0.40625,38.3006C 0.515564,39.6262 0.568909,42.3853 1.98038,43.1132C 2.41666,43.3385 3.29614,43.4341 4.42838,43.4341C 8.26239,43.4341 14.9876,42.3404 17.1497,41.4948C 20.4817,40.1926 20.8203,37.746 21.4101,34.6159C 21.5637,33.7981 21.6563,32.9505 21.6874,32.0729C 21.7187,31.194 21.7344,30.0911 21.7344,28.7642C 21.703,27.2525 21.6328,25.9883 21.526,24.97C 21.418,23.9517 21.2161,23.0429 20.9232,22.2396C 20.6301,21.4374 20.2604,20.7968 19.8137,20.3189C 19.3658,19.8423 18.7629,19.4492 18.0091,19.1393C 17.2525,18.8306 16.4036,18.6288 15.4634,18.5378C 14.5221,18.4451 13.358,18.3997 11.97,18.3997C 11.1979,18.3997 10.5755,18.3853 10.095,18.3528C 9.61719,18.3216 9.16144,18.2916 8.73038,18.259C 8.29813,18.2291 7.97388,18.1667 7.75906,18.0741C 7.54291,17.9831 7.34241,17.8749 7.15881,17.7512C 6.97388,17.6288 6.86453,17.4569 6.83331,17.2408C 6.802,17.0273 6.78772,16.7955 6.78772,16.5468C 6.78772,16.3006 6.802,15.9765 6.83331,15.5768C 6.95691,14.7122 7.21866,14.0806 7.62103,13.6784C 8.02078,13.2785 8.70825,12.97 9.6796,12.7538C 10.651,12.5378 12.2317,12.3216 14.4232,12.1055C 16.3189,11.9595 20.0377,12.1224 21.2968,10.3607C 22.4296,8.77335 21.4752,0.083313 19.5338,0.0090332C 19.3658,0.00250244 19.1868,0 18.9973,0"/>
+        		<Path Width="25.6694" Height="34.2253" Canvas.Left="75.0195" Canvas.Top="6.73688" Stretch="Fill" Fill="#FF584D3B" Data="F1 M 82.2252,23.1888L 81.9883,18.4673C 81.9478,17.6588 81.9205,17.1055 81.905,16.802C 81.871,15.6588 81.8607,14.1653 83.2005,13.845C 84.2995,13.5819 85.4296,13.5142 86.5585,13.4673C 87.1068,13.4426 87.7434,13.3814 88.3801,13.3814C 89.1511,13.3814 89.9192,13.4713 90.5234,13.8254C 92.1353,14.7708 93.2552,16.6796 92.4804,18.5194C 92.4244,18.647 92.362,18.7747 92.2891,18.9009C 91.7669,19.8112 90.5508,20.1836 89.6457,20.5768C 88.4739,21.0833 87.2773,21.5129 86.0859,21.9713L 82.2252,23.1888M 75.0195,6.73688C 75.0247,7.91144 75.0325,9.08453 75.0391,10.2563C 75.0689,15.6497 75.0976,21.0416 75.1262,26.4336C 75.1511,31.2383 74.9921,40.5259 75.2043,40.8476C 75.2578,40.9277 75.5703,40.9622 76.0456,40.9622C 78.0078,40.9622 82.7304,40.3711 83.3333,39.9075C 84.8229,38.7617 84.2175,35.5455 84.0677,33.9752C 83.8242,31.4492 83.3098,28.9557 82.9739,26.4413L 87.5078,33.2448C 88.9336,35.3372 91.332,39.6003 92.5623,39.8711C 93.5937,40.0956 94.8541,40.1823 96.0716,40.1823C 98.3437,40.1823 100.469,39.8808 100.681,39.6118C 100.957,39.2629 93.9804,29.5833 90.0859,27.0506C 89.6457,26.7656 98.2773,24.7812 99.2525,17.0233C 99.4596,15.3762 99.0572,13.5624 98.4713,11.9948C 96.9219,7.84375 91.2331,7.58063 87.5234,7.22134C 83.371,6.81891 79.1848,6.89972 75.0195,6.73688"/>
+        		<Path Width="24.4492" Height="39.7239" Canvas.Left="101.072" Canvas.Top="1.49478" Stretch="Fill" Fill="#FF584D3B" Data="F1 M 122.451,1.49478C 120.193,1.49527 104.788,4.24347 103.198,5.53116C 102.424,6.14053 101.888,6.91016 101.592,7.83716C 101.298,8.76422 101.126,10.1913 101.085,12.1159C 101.039,14.0416 101.117,17.2134 101.31,21.6301C 101.344,22.397 101.372,23.0547 101.398,23.5976C 101.674,29.8711 102.138,33.9219 102.798,35.75C 103.487,37.6118 104.71,38.7943 106.463,39.2929C 107.785,39.6712 120.895,41.2187 124.074,41.2187C 124.409,41.2187 124.634,41.2017 124.724,41.164C 125.956,40.5976 125.625,33.6055 124.648,31.673C 124.574,31.5285 123.544,31.4837 122.056,31.4837C 120.836,31.4837 119.306,31.5136 117.745,31.5443C 116.184,31.5741 114.589,31.6048 113.238,31.6048C 111.395,31.6048 110.004,31.5481 109.769,31.358C 108.713,30.5 108.391,27.0429 108.801,25.8254C 108.924,25.4616 110.668,25.3893 112.934,25.3893C 113.678,25.3893 114.479,25.397 115.297,25.4049C 116.113,25.4127 116.948,25.4205 117.762,25.4205C 120.815,25.4205 123.564,25.3105 123.948,24.6796C 124.724,23.4023 124.868,18.5429 124.388,17.1314C 124.297,16.8659 123.707,16.7669 122.809,16.7669C 121.491,16.7669 119.513,16.9797 117.48,17.1934C 115.449,17.4068 113.365,17.6197 111.833,17.6197C 111.43,17.6197 111.065,17.6055 110.75,17.5716C 109.385,17.4271 108.398,16.6809 108.187,15.2538C 108.022,14.1288 107.974,12.4986 109.141,11.8345C 109.368,11.7037 110.368,11.6757 111.732,11.6757C 112.237,11.6757 112.793,11.6796 113.378,11.6836C 113.961,11.6874 114.573,11.6913 115.195,11.6913C 117.607,11.6913 120.151,11.6339 121.633,11.2981C 122.4,11.1262 123.273,10.9791 123.747,10.2759C 124.133,9.70303 123.876,1.95694 122.693,1.51813C 122.651,1.5025 122.569,1.49478 122.451,1.49478"/>
+        		<Path Width="23.6926" Height="34.5339" Canvas.Left="48.979" Canvas.Top="5.05981" Stretch="Fill" Fill="#FF584D3B" Data="F1 M 59.9569,30.4049C 59.6145,30.4049 59.2538,30.3736 58.8697,30.3137C 58.4844,30.2512 58.1913,30.1888 57.9908,30.1236C 57.7864,30.056 57.5677,29.9114 57.3333,29.6888C 57.1003,29.4634 56.9284,29.2563 56.8268,29.0637C 56.7252,28.8711 56.608,28.5468 56.4779,28.0897C 55.7787,25.6224 56.677,17.4036 56.8632,15.6497C 57.0169,14.2083 57.306,12.25 58.3593,11.3853C 58.905,10.9361 60.0976,10.7258 61.2669,10.7258C 62.4948,10.7258 63.6992,10.9576 64.1055,11.3866C 65.2434,12.5938 65.4869,14.5885 65.72,16.2577C 66.0598,18.6836 66.9896,26.0938 66.7916,27.4843C 66.3658,30.4622 63.9518,30.3164 62.0468,30.3659C 61.8945,30.3672 61.6523,30.3736 61.3177,30.3828C 60.7486,30.3983 60.2943,30.4049 59.9569,30.4049M 60.6055,5.05981C 57.9413,5.05981 55.1913,5.44263 53.9401,6.2525C 51.5793,7.78384 50.905,11.2227 50.5443,13.7525C 50.1055,16.8306 47.9948,31.2563 49.5312,35.5768C 49.815,36.3776 50.0716,36.944 50.2981,37.2812C 50.5247,37.6159 50.8971,37.9791 51.4219,38.3711C 51.5793,38.4896 51.729,38.5689 51.8801,38.6627C 51.8476,37.7356 51.9662,36.6172 52.6784,36.3749L 54.0299,36.9049L 52.9908,37.1627L 52.6379,39.0298L 52.8841,39.1249C 53.3372,39.2369 53.9908,39.345 54.8503,39.4465C 55.6667,39.5436 56.4401,39.5944 57.276,39.5938C 58.0377,39.5923 59.0533,39.5729 60.3254,39.5403C 61.0703,39.5208 61.612,39.5077 61.9557,39.4986C 66.2148,39.3893 71.6107,39.6184 72.6028,34.3839C 73.065,31.9451 71.0716,18.9595 70.3424,14.7095C 69.8424,11.7825 69.3203,8.28775 66.7916,6.1861C 65.905,5.4505 63.2981,5.05981 60.6055,5.05981"/>
+        		<Path Width="22.0655" Height="37.9004" Canvas.Left="25.026" Canvas.Top="3.40558" Stretch="Fill" Fill="#FF584D3B" Data="F1 M 44.3189,3.40558C 41.6379,3.40558 37.8568,3.75 37.8568,3.75C 37.1197,3.75 36.3776,3.76691 35.6379,3.79947C 36.4101,9.16266 32.4348,10.7903 32.4348,10.7903L 32.2968,9.54547C 34.7787,9.54547 34.8632,5.75381 34.7486,3.84235C 31.6757,4.06119 28.7812,4.76813 27.0287,6.92047C 26.2005,7.93741 25.6276,9.27466 25.4101,11.0364C 25.1536,13.095 25.026,16.703 25.026,21.8659C 25.026,23.7265 25.0338,25.2187 25.0495,26.345C 25.0637,27.4687 25.1172,28.6614 25.2057,29.9219C 25.2968,31.1823 25.3867,32.1509 25.4765,32.8254C 25.5664,33.5025 25.7538,34.2227 26.0391,34.9869C 27.6003,39.1861 32.1262,39.5938 35.8463,40.0897C 39.3482,40.552 44.6588,41.306 46.4524,41.306C 46.8001,41.306 47.0156,41.278 47.0598,41.2134C 47.1249,41.1184 46.9205,33.5259 46.905,32.9622C 46.8749,31.944 46.5664,31.3137 45.9817,31.0741C 45.6224,30.9271 44.7624,30.8541 43.4004,30.8541C 42.5456,30.8541 41.4928,30.8828 40.2421,30.94C 39.2272,30.9941 38.3424,31.0208 37.5886,31.0208C 36.649,31.0208 35.9127,30.9791 35.3789,30.8945C 33.7891,30.6549 32.7538,29.8749 32.2747,28.5533C 30.7096,24.2415 28.093,15.4329 34.8964,15.4329C 35.1113,15.4329 35.3347,15.4413 35.5689,15.4595C 37.2057,15.5865 43.4765,16.6113 45.6295,16.6113C 46.0182,16.6113 46.2722,16.5781 46.3411,16.5C 46.6406,16.1393 47.4557,4.54028 46.905,3.75C 46.7245,3.49146 45.6594,3.40558 44.3189,3.40558"/>
+        	</Canvas>
+        </Viewbox>
         <TheS_SperfGames_MayaTukky_Controls:TukkyPresentUI x:Name="TukkyTalk"/>
-        <Canvas Width="92.547" Height="26.100" RenderTransformOrigin="0.5,0.5" Canvas.Left="167" Canvas.Top="60">
+        <Viewbox x:Name="PoisonPic" Height="78" Width="69" Canvas.Left="64" Canvas.Top="101" Visibility="Collapsed">
+        	<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Poison.png" Stretch="Fill" Height="95" Width="83"/>
+        </Viewbox>
+        <Canvas x:Name="canvas" Height="54" Canvas.Left="175" Width="163" Canvas.Top="110" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
         	<Canvas.RenderTransform>
-        		<CompositeTransform ScaleX="1.1" ScaleY="1.1"/>
+        		<CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
         	</Canvas.RenderTransform>
-
-        	<Canvas>
-
-        		<Canvas x:Name="canvas12">
-
-                    <!-- Layer 1/<Group>/<Path> -->
-        			<Path Fill="#ff2f2f2f" Data="F1 M 89.660,16.026 C 89.275,16.071 87.205,20.415 87.205,20.415 C 87.205,20.415 84.833,20.410 82.928,20.019 C 81.021,19.625 82.659,17.374 82.659,17.374 C 83.329,17.537 86.184,17.620 86.460,17.340 C 86.737,17.062 87.515,14.067 87.496,13.638 C 87.477,13.200 83.047,13.245 82.939,13.175 C 82.833,13.101 83.751,10.887 84.262,9.999 C 84.770,9.114 88.264,8.813 88.721,9.156 C 89.180,9.497 88.877,12.248 89.184,12.188 C 90.152,12.005 92.191,10.466 92.191,10.466 C 92.780,5.481 92.257,3.587 91.320,3.113 C 88.608,1.472 81.007,4.743 81.007,4.743 C 80.569,4.839 78.573,9.571 78.573,9.571 C 78.659,10.067 79.476,10.304 79.476,10.304 C 77.171,12.894 73.508,21.873 73.309,24.362 C 73.110,26.864 76.549,25.962 79.536,25.852 C 82.522,25.735 87.511,25.627 88.959,25.157 C 90.408,24.690 92.459,19.058 92.545,18.210 C 92.626,17.363 90.045,15.981 89.660,16.026 Z"/>
-
-                    <!-- Layer 1/<Group>/<Compound Path> -->
-        			<Path Fill="#ff2f2f2f" Data="F1 M 64.957,6.415 C 64.957,6.415 69.368,5.729 68.975,8.880 C 68.584,12.034 65.112,11.780 64.125,12.251 C 63.129,12.720 63.467,7.778 64.957,6.415 Z M 65.416,15.298 C 66.569,15.248 72.823,14.661 73.581,7.712 C 74.418,0.052 63.888,2.101 60.781,2.219 C 57.670,2.337 56.571,5.979 57.740,5.857 C 58.911,5.734 59.676,7.030 59.676,7.030 C 59.676,7.030 57.249,10.784 55.531,15.513 C 53.811,20.242 51.260,25.791 53.959,25.989 C 56.661,26.187 60.208,25.344 60.333,24.595 C 60.462,23.845 60.494,22.261 61.130,19.758 C 61.274,19.199 61.560,18.671 61.913,18.183 C 64.174,20.247 67.243,23.165 65.640,22.368 C 63.218,21.163 63.414,24.862 63.414,24.862 C 63.414,24.862 68.864,27.196 71.417,24.398 C 73.750,21.839 66.643,16.233 65.416,15.298 Z"/>
-
-                    <!-- Layer 1/<Group>/<Compound Path> -->
-        			<Path Fill="#ff2f2f2f" Data="F1 M 47.391,15.159 C 46.370,17.370 45.262,20.338 43.159,16.983 C 43.159,16.983 43.878,11.946 46.170,10.857 C 48.461,9.768 48.414,12.949 47.391,15.159 Z M 50.610,1.661 C 47.874,1.187 43.791,4.423 43.791,4.423 C 42.237,5.827 37.934,17.966 37.247,19.944 C 36.560,21.930 40.702,25.066 42.546,25.214 C 44.389,25.360 51.278,21.970 52.023,19.482 C 56.624,4.085 53.346,2.136 50.610,1.661 Z"/>
-
-                    <!-- Layer 1/<Group>/<Path> -->
-        			<Path Fill="#ff2f2f2f" Data="F1 M 17.506,17.413 C 16.362,14.713 10.254,14.029 8.069,12.476 C 8.069,12.454 8.509,6.089 11.991,7.001 C 12.514,7.649 12.962,8.362 12.962,8.362 C 12.962,8.362 15.371,8.424 15.765,7.616 C 19.152,3.601 13.408,0.323 13.408,0.323 C 5.365,2.531 -3.331,12.667 3.956,15.039 C 11.240,17.410 4.178,19.926 4.178,19.926 L 2.740,18.237 C 2.740,18.237 1.858,18.438 1.719,19.610 C 1.582,20.784 4.821,24.134 6.866,24.223 C 8.912,24.313 18.881,20.656 17.506,17.413 Z"/>
-
-                    <!-- Layer 1/<Group>/<Path> -->
-        			<Path Fill="#ff2f2f2f" Data="F1 M 28.819,10.730 C 28.803,10.853 29.050,11.053 29.123,11.143 C 29.275,11.330 29.437,11.511 29.600,11.688 C 30.449,12.607 31.276,13.581 32.301,14.332 C 32.528,14.498 32.833,14.729 33.133,14.728 C 34.203,14.724 37.137,11.860 36.915,10.089 C 36.694,8.317 33.151,1.558 30.527,1.188 C 27.901,0.819 23.091,4.954 19.199,7.376 C 15.307,9.798 17.972,26.228 31.427,24.864 C 37.946,24.204 34.666,18.710 35.298,17.946 C 35.929,17.185 31.636,15.557 30.781,17.206 C 29.928,18.855 23.021,19.517 22.721,12.363 C 22.421,5.209 28.303,6.263 28.968,6.195 C 29.154,6.177 29.386,6.304 29.550,6.378 C 29.875,6.528 30.187,6.713 30.480,6.916 C 31.079,7.324 31.768,7.885 31.958,8.583 C 32.205,9.479 31.276,10.001 30.538,10.268 C 30.257,10.369 29.967,10.449 29.675,10.518 C 29.476,10.564 29.265,10.548 29.066,10.593 C 28.983,10.610 28.852,10.628 28.819,10.730 Z"/>
-
-                    <!-- Layer 1/<Group>/<Path> -->
-        			<Path Fill="#ff919192" Data="F1 M 88.440,15.704 C 88.054,15.749 85.985,20.093 85.985,20.093 C 85.985,20.093 83.612,20.087 81.707,19.694 C 79.803,19.302 81.438,17.051 81.438,17.051 C 82.107,17.214 84.963,17.296 85.240,17.017 C 85.518,16.738 86.295,13.745 86.275,13.314 C 86.256,12.877 81.827,12.921 81.719,12.851 C 81.614,12.776 82.532,10.563 83.042,9.676 C 83.549,8.790 87.043,8.489 87.500,8.833 C 87.959,9.173 87.659,11.924 87.963,11.865 C 88.932,11.681 90.971,10.142 90.971,10.142 C 91.560,5.157 91.038,3.263 90.100,2.788 C 87.387,1.148 79.788,4.421 79.788,4.421 C 79.348,4.517 77.351,9.247 77.351,9.247 C 77.438,9.744 78.256,9.979 78.256,9.979 C 75.950,12.569 72.288,21.550 72.088,24.040 C 71.890,26.540 75.329,25.639 78.315,25.528 C 81.302,25.413 86.292,25.304 87.739,24.835 C 89.188,24.367 91.239,18.733 91.324,17.886 C 91.407,17.039 88.826,15.658 88.440,15.704 Z"/>
-
-                    <!-- Layer 1/<Group>/<Compound Path> -->
-        			<Path Fill="#ff919192" Data="F1 M 63.737,6.092 C 63.737,6.092 68.147,5.406 67.756,8.556 C 67.364,11.710 63.892,11.456 62.905,11.929 C 61.909,12.396 62.247,7.456 63.737,6.092 Z M 64.196,14.975 C 65.348,14.925 71.602,14.338 72.362,7.388 C 73.198,-0.272 62.667,1.776 59.559,1.896 C 56.450,2.014 55.349,5.655 56.519,5.534 C 57.690,5.411 58.455,6.708 58.455,6.708 C 58.455,6.708 56.028,10.460 54.310,15.189 C 52.589,19.919 50.040,25.468 52.739,25.666 C 55.439,25.863 58.987,25.021 59.112,24.271 C 59.241,23.521 59.272,21.937 59.911,19.434 C 60.053,18.875 60.340,18.347 60.693,17.860 C 62.953,19.925 66.022,22.841 64.418,22.044 C 61.998,20.840 62.194,24.539 62.194,24.539 C 62.194,24.539 67.645,26.873 70.196,24.075 C 72.530,21.516 65.422,15.909 64.196,14.975 Z"/>
-
-                    <!-- Layer 1/<Group>/<Compound Path> -->
-        			<Path x:Name="path19" Fill="#ff919192" Data="F1 M 46.172,14.836 C 45.149,17.046 44.042,20.015 41.939,16.659 C 41.939,16.659 42.657,11.623 44.950,10.534 C 47.241,9.444 47.194,12.626 46.172,14.836 Z M 49.389,1.338 C 46.653,0.863 42.571,4.101 42.571,4.101 C 41.019,5.503 36.713,17.643 36.027,19.622 C 35.340,21.606 39.482,24.742 41.326,24.891 C 43.168,25.038 50.057,21.646 50.803,19.159 C 55.403,3.762 52.125,1.813 49.389,1.338 Z"/>
-
-                    <!-- Layer 1/<Group>/<Path> -->
-        			<Path Fill="#ff919192" Data="F1 M 16.286,17.090 C 15.142,14.390 9.033,13.706 6.849,12.152 C 6.850,12.131 7.289,5.765 10.770,6.678 C 11.295,7.327 11.742,8.039 11.742,8.039 C 11.742,8.039 14.150,8.101 14.545,7.293 C 17.932,3.276 12.189,0.000 12.189,0.000 C 4.145,2.208 -4.551,12.344 2.734,14.715 C 10.019,17.087 2.957,19.603 2.957,19.603 L 1.520,17.914 C 1.520,17.914 0.637,18.114 0.500,19.286 C 0.361,20.460 3.601,23.809 5.646,23.899 C 7.691,23.989 17.661,20.333 16.286,17.090 Z"/>
-
-                    <!-- Layer 1/<Group>/<Path> -->
-        			<Path Fill="#ff919192" Data="F1 M 27.599,10.407 C 27.584,10.528 27.831,10.729 27.902,10.818 C 28.054,11.006 28.216,11.187 28.380,11.364 C 29.229,12.284 30.055,13.257 31.080,14.009 C 31.307,14.174 31.614,14.405 31.913,14.403 C 32.984,14.399 35.916,11.538 35.695,9.766 C 35.475,7.993 31.932,1.233 29.306,0.864 C 26.682,0.495 21.870,4.631 17.980,7.054 C 14.087,9.475 16.752,25.903 30.207,24.541 C 36.725,23.882 33.446,18.387 34.078,17.624 C 34.708,16.861 30.416,15.232 29.561,16.883 C 28.708,18.532 21.800,19.194 21.500,12.040 C 21.202,4.886 27.083,5.940 27.748,5.873 C 27.935,5.854 28.166,5.979 28.328,6.056 C 28.654,6.206 28.966,6.390 29.261,6.592 C 29.859,7.001 30.547,7.562 30.738,8.261 C 30.984,9.157 30.057,9.677 29.317,9.944 C 29.038,10.046 28.747,10.126 28.455,10.194 C 28.257,10.241 28.044,10.224 27.847,10.269 C 27.763,10.286 27.631,10.304 27.599,10.407 Z"/>
-
-        		</Canvas>
-
-        	</Canvas>
+        	<Path Width="163.643" Height="52.357" Canvas.Top="2.138" Stretch="Fill" Fill="#FF4C3C31" Data="F1 M 145.544,56.6529C 129.851,60.2677 110.013,64.8569 104.79,45.0281C 100.712,29.5368 106.321,10.858 122.559,7.90143C 128.7,6.78778 135.411,8.00742 141.187,10.3693C 145.86,12.2786 166.647,14.4652 172.384,12.9976C 178.349,11.4724 184.351,13.7691 190.411,12.7418C 198.582,11.3558 206.804,10.7369 215.071,10.7066C 229.376,10.6493 251.246,4.82382 262.283,16.6532C 267.841,22.6072 268.097,34.7648 265.766,42.536C 260.034,61.6552 227.194,59.8911 213.811,59.1752C 194.811,58.157 176.4,52.61 157.249,54.4046C 153.933,54.7192 149.898,55.6468 145.544,56.6529 Z " UseLayoutRounding="False"/>
+        	<Path Width="158.215" Height="50.664" Canvas.Left="1.654" Canvas.Top="1.183" Stretch="Fill" Fill="#FF0B0B09" Data="F1 M 258.438,20.8171C 247.851,9.62018 227.106,9.85326 213.383,9.90613C 205.451,9.93512 197.565,10.5221 189.727,11.8338C 183.914,12.8068 178.155,10.401 172.433,11.8444C 166.93,13.2364 146.988,11.165 142.507,9.35841C 136.966,7.12054 130.559,6.1597 124.637,7.02396C 106.712,9.63527 102.141,28.3478 106.712,42.8204C 113.135,63.1593 131.443,57.3036 146.497,53.8809C 148.222,53.4908 150.256,52.9642 151.849,52.6326L 156.845,48.7168L 156.13,45.1492L 163.623,43.1867L 163.266,40.9565L 164.873,43.3667L 158.806,44.7935L 156.309,52.0972C 174.681,50.3993 194.103,55.7709 212.33,56.7347C 219.221,57.101 233.167,57.0509 243.908,54.7738L 241.053,51.0274L 231.24,53.5074L 227.196,48.9877L 231.477,51.6054L 237.425,50.1771L 242.183,50.4144L 246.702,52.7947L 246.047,53.2728C 253.593,51.0153 259.839,46.9573 262.013,39.8032C 264.249,32.4466 263.771,26.4518 258.438,20.8171 Z " UseLayoutRounding="False"/>
+        	<Path Width="157.424" Height="49.554" Canvas.Left="3.304" Stretch="Fill" Fill="#FF847160" Data="F1 M 262.997,18.7925C 259.547,-3.05176e-005 197.804,9.42055 189.963,10.7308C 184.151,11.7052 147.227,10.0619 142.744,8.25534C 137.204,6.01904 130.765,4.86612 124.875,5.91934C 109.299,8.71852 103.919,26.3944 107.83,41.0591C 112.841,59.8274 131.871,55.4819 146.925,52.0592C 148.65,51.6687 150.302,51.2968 151.897,50.9652L 155.834,48.1223L 154.88,44.3169L 163.207,42.6525L 163.92,40.749L 165.348,43.604L 159.163,45.0296L 158.152,49.9349C 176.524,48.2373 194.185,53.4848 212.411,54.4483C 219.305,54.8131 231.576,55.4593 242.316,53.1819L 239.804,50.5023L 231.477,52.4043L 227.433,47.8846L 231.715,50.5023L 237.663,49.0755L 242.42,49.3117L 246.94,51.6917L 246.286,52.1712C 253.83,49.9137 260.076,45.8557 262.251,38.7002C 264.487,31.3435 264.468,26.812 262.997,18.7925 Z " UseLayoutRounding="False"/>
+        	<Grid Canvas.Left="8" Width="154">
+        		<TextBlock x:Name="FirstStateScoreTextBlock" Foreground="White" FontSize="32" FontFamily="Poplar Std Black" FontWeight="Bold" Height="58.1833343505859" TextAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+        	</Grid>
         </Canvas>
-        <Canvas x:Name="MainBoard" Height="542" Canvas.Left="-35" Canvas.Top="-27" Width="695" Visibility="Collapsed">
-            <Canvas.Effect>
-                <ee:SwirlEffect TwistAmount="0" Center="0.3,0.5"/>
-            </Canvas.Effect>
-            <Canvas x:Name="canvas17" Height="542" Width="695" RenderTransformOrigin="0.5,0.5" Background="Black" Opacity="0">
-                <Canvas.RenderTransform>
-                    <CompositeTransform ScaleX="0.9" ScaleY="0.9"/>
-                </Canvas.RenderTransform>
-            </Canvas>
-            <Canvas x:Name="ScoreOnStage" Height="542" Width="695" RenderTransformOrigin="0.5,0.5">
-                <Canvas.RenderTransform>
-                    <CompositeTransform ScaleX="0.9" ScaleY="0.9"/>
-                </Canvas.RenderTransform>
-                <Canvas x:Name="Poison" Margin="0" Width="100" Height="100" d:LayoutOverrides="Width, Height" Canvas.Top="100" RenderTransformOrigin="0.5,0.5" Canvas.Left="25">
-                    <Canvas.RenderTransform>
-                        <CompositeTransform/>
-                    </Canvas.RenderTransform>
-
-                    <Canvas Width="111.407" Height="88.109" Canvas.Top="10.054" Canvas.Left="-4.797">
-
-                        <Canvas>
-
-                            <Canvas>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path10" Fill="#ff242726" Data="F1 M 52.409,1.456 C 15.804,0.090 -1.290,9.450 9.057,41.589 C 21.898,81.476 44.250,87.731 44.250,87.731 C 90.370,91.330 111.749,68.965 111.403,31.116 C 111.163,4.983 74.860,1.258 52.409,1.456 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path11" Fill="#ff5a605f" Data="F1 M 46.328,0.068 C 9.931,-0.907 -7.167,8.446 2.807,39.881 C 15.183,78.893 37.355,84.806 37.355,84.806 C 83.194,87.880 104.684,65.722 104.715,28.586 C 104.738,2.946 68.664,-0.348 46.328,0.068 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path12" Fill="#ff353a39" Data="F1 M 40.108,75.929 C 40.108,75.929 21.080,70.855 10.458,37.373 C 8.012,29.665 7.471,23.508 8.665,18.658 C 6.451,23.848 6.667,30.835 9.581,40.025 C 20.204,73.507 39.232,78.582 39.232,78.582 C 70.342,80.668 88.372,69.204 94.574,48.559 C 87.653,67.528 69.862,77.926 40.108,75.929 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path Fill="#ffe2e2e1" Data="F1 M 46.933,5.859 C 26.336,5.306 12.947,8.612 8.665,18.658 C 7.471,23.508 8.012,29.665 10.458,37.373 C 21.080,70.855 40.108,75.929 40.108,75.929 C 69.862,77.926 87.653,67.528 94.574,48.559 C 96.213,43.096 97.038,37.003 97.043,30.334 C 97.062,8.328 66.102,5.500 46.933,5.859 Z"/>
-
-                            </Canvas>
-
-                        </Canvas>
-                    </Canvas>
-
-                    <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="canvas8" Width="59.481" Height="70.134"
-    					d:LayoutOverrides="Margin" Canvas.Left="21" Canvas.Top="15">
-
-                        <Canvas>
-
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> --><!-- Layer 3/<Path> -->
-                            <Path StrokeThickness="3.0" Stroke="#ff787a31" StrokeMiterLimit="1.0" Fill="#ff959b37" Data="F1 M 57.838,40.272 C 56.423,37.917 44.944,42.211 32.200,49.867 C 19.455,57.519 10.270,65.634 11.684,67.989 C 13.097,70.344 24.577,66.048 37.321,58.396 C 50.067,50.742 59.251,42.628 57.838,40.272 Z"/>
-                            <Canvas x:Name="Body" Height="65" Width="49" RenderTransformOrigin="0.5,0.5">
-                                <Canvas.RenderTransform>
-                                    <CompositeTransform/>
-                                </Canvas.RenderTransform>
-                                <!-- Layer 3/<Path> -->
-                                <Path x:Name="path" Opacity="0.9" Fill="#ffc5cb48" UseLayoutRounding="False" Height="66.217" Width="48.916" Data="F1 M14.065,44.195999 L35.237,29.58 L47.292999,49.865002 C47.292999,49.865002 33.667,59.529999 24.021,63.469002 L14.065,44.195999 z"/>
-
-                                <!-- Layer 3/<Path> -->
-                                <Path Fill="#ffb0be35" Data="F1 M 14.065,44.196 C 14.065,44.196 25.322,42.392 35.237,29.580 C 35.237,29.580 34.593,27.795 22.542,35.474 C 11.676,42.846 14.065,44.196 14.065,44.196 Z" UseLayoutRounding="False"/>
-
-                                <!-- Layer 3/<Path> -->
-                                <Path Fill="#ffaeaf39" Data="F1 M 5.403,19.195 C 5.403,19.195 7.877,22.463 14.917,19.330 C 21.958,16.197 16.341,3.742 11.973,0.856 C 7.603,-2.030 -1.265,2.784 0.152,9.276 C 1.568,15.769 5.403,19.195 5.403,19.195 Z" UseLayoutRounding="False"/>
-
-                                <Canvas>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 8.650,1.379 C 8.650,1.379 9.079,2.479 11.257,2.582"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 7.372,1.889 C 7.372,1.889 9.433,5.068 13.545,4.046"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 5.940,3.186 C 5.940,3.186 7.741,6.882 14.246,5.950"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 12.847,2.954 L 12.228,2.833"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 1.857,10.401 C 1.857,10.401 8.537,9.130 8.892,14.745"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 3.494,11.910 C 3.494,11.910 7.750,12.618 7.764,15.033"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 4.257,13.493 C 4.257,13.493 7.208,13.901 6.424,17.505"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 8.733,15.562 C 8.733,15.562 8.679,16.658 8.375,17.402"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 9.034,18.703 C 9.034,18.703 11.396,15.376 9.292,11.311"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Opacity="0.4" StrokeThickness="0.5" Stroke="#ff959b37" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 2.132,8.988 C 2.132,8.988 5.659,7.939 8.354,10.198"/>
-
-                                </Canvas>
-
-                                <!-- Layer 3/<Path> -->
-                                <Path x:Name="path1" Opacity="0.6" Fill="#ffb0be35" UseLayoutRounding="False" Height="67.051" Width="50.25" Data="M22.374001,64.189003 C22.374001,64.189003 36.339001,58.43 48.925999,48.624001 C48.743,48.286999 39.948002,33.367001 38.922001,31.813 C37.943001,30.329 36.938999,28.863001 35.881001,27.431999 C34.981998,26.209999 34.046001,25.007999 33.025002,23.885 C31.879999,22.622 30.627001,21.535 28.983999,20.975 C28.202,20.709 27.403,20.514 26.591,20.372 C25.438,20.17 24.191,20.107 23.152,19.511 C21.725,18.688 20.907,17.047001 20.243,15.61 C20.173,15.457 20.066999,15.319 20.011,15.158 C19.952,14.99 19.997,14.902 20.028999,14.732 C20.073999,14.498 20.108,14.261 20.132,14.022 C20.204,13.331 20.204,12.618 20.055,11.938 C19.898001,11.205 19.544001,10.502 18.903,10.08 C18.007999,9.4899998 16.834,9.566 15.833,9.7810001 C13.758,10.225 11.812,11.291 10.006,12.369 C8.6960001,13.153 7.473,14.051 6.3530002,15.091 C5.7030001,15.693 5.0840001,16.353001 4.6149998,17.111 C4.0669999,17.995001 3.75,19.072001 4.2059999,20.065001 C4.559,20.841 5.2620001,21.402 5.9759998,21.837 C6.2880001,22.027 6.6139998,22.191 6.9380002,22.356001 C7.1789999,22.478001 7.6059999,22.611 7.7719998,22.839001 C8.3199997,23.59 8.7670002,24.422001 9.1920004,25.245001 C9.6689997,26.16 10.125,27.099001 10.47,28.073999 C10.866,29.195 10.509,30.301001 10.224,31.399 C9.9020004,32.646 9.6569996,33.921001 9.6630001,35.212002 C9.6719999,36.653999 9.8940001,38.094002 10.215,39.498001 C10.741,41.792999 11.544,44.02 12.456,46.187 C13.176,47.898998 13.971,49.577999 14.813,51.231998 C15.857,53.285 20.913,61.917 22.374001,64.189003 z"/>
-
-                                <!-- Layer 3/<Path> -->
-                                <Path Opacity="0.3" Fill="#fff4f5f5" Data="F1 M 16.843,12.908 C 16.843,12.908 17.002,11.163 17.932,11.417 C 18.860,11.668 18.785,11.873 18.765,13.462 C 18.746,15.054 19.649,15.811 18.909,16.646 C 18.167,17.478 16.576,15.212 16.843,12.908 Z" UseLayoutRounding="False"/>
-
-                                <!-- Layer 3/<Path> -->
-                                <Path Opacity="0.3" Fill="#fff4f5f5" Data="F1 M 19.168,18.071 C 19.171,18.064 19.175,18.059 19.179,18.053 C 19.279,17.916 19.591,17.976 19.726,18.016 C 20.083,18.118 20.386,18.374 20.641,18.630 C 21.172,19.165 21.584,19.814 21.954,20.464 C 22.104,20.727 22.247,20.994 22.382,21.263 C 22.478,21.450 22.748,21.521 22.937,21.567 C 23.419,21.683 23.935,21.678 24.428,21.697 C 25.579,21.742 26.735,21.757 27.866,21.992 C 28.061,22.031 28.254,22.080 28.445,22.131 C 29.053,22.303 29.649,22.553 30.156,22.935 C 30.582,23.258 30.935,23.662 31.273,24.071 C 31.974,24.916 32.634,25.830 33.133,26.809 C 33.188,26.913 33.238,27.019 33.286,27.126 C 33.357,27.286 33.568,27.646 33.416,27.805 C 33.297,27.928 33.041,27.779 32.931,27.715 C 32.514,27.462 32.135,27.126 31.768,26.809 C 30.927,26.086 30.071,25.373 29.134,24.775 C 28.639,24.458 28.122,24.178 27.577,23.958 C 26.874,23.675 26.137,23.495 25.391,23.374 C 24.948,23.302 24.501,23.250 24.054,23.207 C 23.500,23.155 22.940,23.146 22.385,23.083 C 22.352,23.078 22.316,23.074 22.283,23.069 C 21.541,22.971 20.883,22.547 20.429,21.961 C 19.819,21.180 19.499,20.196 19.308,19.237 C 19.267,19.028 19.231,18.819 19.204,18.608 C 19.185,18.462 19.086,18.214 19.168,18.071 Z" UseLayoutRounding="False"/>
-
-                            </Canvas>
-
-                        </Canvas>
-                    </Canvas>
-                </Canvas>
-                <Canvas x:Name="Voodoo" Margin="0" Width="100" Height="100" d:LayoutOverrides="Width, Height" Canvas.Top="191" RenderTransformOrigin="0.5,0.5" Canvas.Left="25">
-                    <Canvas.RenderTransform>
-                        <CompositeTransform/>
-                    </Canvas.RenderTransform>
-
-                    <Canvas Width="111.407" Height="88.109" Canvas.Top="10.054" Canvas.Left="-4.797">
-
-                        <Canvas>
-
-                            <Canvas>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path13" Fill="#ff242726" Data="F1 M 52.409,1.456 C 15.804,0.090 -1.290,9.450 9.057,41.589 C 21.898,81.476 44.250,87.731 44.250,87.731 C 90.370,91.330 111.749,68.965 111.403,31.116 C 111.163,4.983 74.860,1.258 52.409,1.456 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path14" Fill="#ff5a605f" Data="F1 M 46.328,0.068 C 9.931,-0.907 -7.167,8.446 2.807,39.881 C 15.183,78.893 37.355,84.806 37.355,84.806 C 83.194,87.880 104.684,65.722 104.715,28.586 C 104.738,2.946 68.664,-0.348 46.328,0.068 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path15" Fill="#ff353a39" Data="F1 M 40.108,75.929 C 40.108,75.929 21.080,70.855 10.458,37.373 C 8.012,29.665 7.471,23.508 8.665,18.658 C 6.451,23.848 6.667,30.835 9.581,40.025 C 20.204,73.507 39.232,78.582 39.232,78.582 C 70.342,80.668 88.372,69.204 94.574,48.559 C 87.653,67.528 69.862,77.926 40.108,75.929 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path Fill="#ffe2e2e1" Data="F1 M 46.933,5.859 C 26.336,5.306 12.947,8.612 8.665,18.658 C 7.471,23.508 8.012,29.665 10.458,37.373 C 21.080,70.855 40.108,75.929 40.108,75.929 C 69.862,77.926 87.653,67.528 94.574,48.559 C 96.213,43.096 97.038,37.003 97.043,30.334 C 97.062,8.328 66.102,5.500 46.933,5.859 Z"/>
-
-                            </Canvas>
-
-                        </Canvas>
-                    </Canvas>
-
-                    <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="canvas9" Width="66.617" Height="73.195"
-    					d:LayoutOverrides="Margin" Canvas.Left="17" Canvas.Top="13">
-
-                        <Canvas x:Name="canvas" Height="73" Width="67">
-
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> -->
-<!-- Layer 3/<Path> --><!-- Layer 3/<Path> -->
-                            <Path StrokeThickness="3.0" Stroke="#ff68102a" StrokeMiterLimit="1.0" Fill="#ff931938" Data="F1 M 64.864,34.424 C 63.087,32.449 52.465,39.117 41.136,49.316 C 29.807,59.512 22.063,69.379 23.837,71.350 C 25.613,73.322 36.235,66.654 47.563,56.459 C 58.892,46.260 66.639,36.395 64.864,34.424 Z"/>
-                            <Canvas x:Name="canvas1" Height="73" Width="67" RenderTransformOrigin="0.5,0.5">
-                                <Canvas.RenderTransform>
-                                    <CompositeTransform/>
-                                </Canvas.RenderTransform>
-                                <Canvas Height="73" Width="67">
-
-                                    <Canvas>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 28.162,8.568 L 26.348,14.854"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#ffbf1e4c" Data="F1 M 29.976,8.568 C 29.976,9.569 29.162,10.383 28.162,10.383 C 27.159,10.383 26.348,9.569 26.348,8.568 C 26.348,7.568 27.159,6.757 28.162,6.757 C 29.162,6.757 29.976,7.568 29.976,8.568 Z"/>
-
-                                    </Canvas>
-
-                                    <Canvas>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#ffbf1e4c" Data="F1 M 17.140,2.751 C 16.726,3.776 15.559,4.270 14.534,3.858 C 13.508,3.444 13.012,2.278 13.426,1.252 C 13.839,0.225 15.006,-0.268 16.031,0.147 C 17.056,0.560 17.554,1.725 17.140,2.751 Z"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 15.283,2.002 L 15.397,8.570"/>
-
-                                    </Canvas>
-
-                                    <!-- Layer 3/<Path> -->
-                                    <Path x:Name="v" Fill="#ffbf1e4c" UseLayoutRounding="False" Height="65.432" Width="58.048" Data="M37.223999,63.227001 C37.223999,63.227001 51.698002,51.047001 55.835999,46.053001 C55.391998,45.473 45.922001,33.987999 44.721001,32.674 C43.278999,31.096001 41.778999,29.563999 40.127998,28.202999 C38.952,27.232 37.716,26.438999 36.138,26.471001 C35.761002,26.476999 35.383999,26.52 35.011002,26.59 C34.117001,26.75 33.278999,27.118999 32.5,27.58 C31.952999,27.903999 31.106001,28.656 30.417,28.368999 C29.195999,27.863001 27.774,25.523001 27.774,25.523001 C27.774,25.523001 31.940001,19.121 22.591,9.4680004 C20.893999,7.7140002 18.74,6.3319998 16.285,5.9959998 C14.241,5.717 12.173,6.2020001 10.384,7.2030001 C8.5799999,8.217 7.0580001,9.7200003 5.9400001,11.457 C4.2989998,14.004 3.7079999,17.037001 4.3979998,19.996 C4.7820001,21.636999 5.4879999,23.188999 6.3340001,24.639 C7.7620001,27.084 9.5860004,29.412001 12.039,30.895 C13.53,31.797001 15.259,32.349998 17.017,32.215 C18.356001,32.111 19.635,31.621 20.766001,30.908001 C21.187,31.305 21.653,31.672001 22.07,32.082001 C22.458,32.459 23.351999,33.186001 23.306,33.805 C23.271,34.23 22.961,34.588001 22.771,34.951 C22.593,35.291 22.447001,35.652 22.316999,36.014 C22.049,36.742001 21.867001,37.504002 21.792,38.278999 C21.49,41.379002 22.799999,44.370998 24.372999,46.960999 C25.004,48.004002 25.695999,49.006001 26.393,50.006001 C28.253,52.666 37.158001,63.283001 37.223999,63.227001 z"/>
-
-                                    <Canvas>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 2.234,12.102 L 9.310,15.315"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#ffbf1e4c" Data="F1 M 4.470,12.102 C 4.470,13.337 3.470,14.338 2.234,14.338 C 1.001,14.338 0.000,13.337 0.000,12.102 C 0.000,10.869 1.001,9.867 2.234,9.867 C 3.470,9.867 4.470,10.869 4.470,12.102 Z"/>
-
-                                    </Canvas>
-
-                                    <Canvas>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 3.320,26.604 L 8.560,25.594"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#ffbf1e4c" Data="F1 M 5.339,26.604 C 5.339,27.717 4.436,28.619 3.320,28.619 C 2.207,28.619 1.304,27.717 1.304,26.604 C 1.304,25.488 2.207,24.582 3.320,24.582 C 4.436,24.582 5.339,25.488 5.339,26.604 Z"/>
-
-                                    </Canvas>
-
-                                    <Canvas>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 19.016,39.346 L 25.892,39.779"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#ffbf1e4c" Data="F1 M 21.159,39.346 C 21.159,40.529 20.199,41.490 19.016,41.490 C 17.833,41.490 16.872,40.529 16.872,39.346 C 16.872,38.162 17.833,37.203 19.016,37.203 C 20.199,37.203 21.159,38.162 21.159,39.346 Z"/>
-
-                                    </Canvas>
-
-                                    <Canvas>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 33.331,21.746 L 35.159,27.865"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#ffbf1e4c" Data="F1 M 35.159,21.746 C 35.159,22.756 34.341,23.574 33.331,23.574 C 32.321,23.574 31.502,22.756 31.502,21.746 C 31.502,20.736 32.321,19.918 33.331,19.918 C 34.341,19.918 35.159,20.736 35.159,21.746 Z"/>
-
-                                    </Canvas>
-                                </Canvas>
-
-<!-- Layer 3/<Path> --><!-- Layer 3/<Path> -->
-
-                                <Canvas x:Name="canvas2" Height="35" Width="29" RenderTransformOrigin="0.5,0.5">
-                                    <Canvas.RenderTransform>
-                                        <CompositeTransform/>
-                                    </Canvas.RenderTransform>
-                                    <!-- Layer 3/<Path> -->
-                                    <Path StrokeThickness="2.0" Stroke="#ffffffff" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 13.646,27.418 C 13.646,27.418 20.443,26.033 23.415,18.705" UseLayoutRounding="False"/>
-
-                                    <!-- Layer 3/<Path> -->
-                                    <Path StrokeThickness="1.5" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 13.996,25.344 L 18.013,27.561" UseLayoutRounding="False"/>
-
-                                    <!-- Layer 3/<Path> -->
-                                    <Path StrokeThickness="1.5" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 17.812,23.063 L 20.405,25.344" UseLayoutRounding="False"/>
-
-                                    <!-- Layer 3/<Path> -->
-                                    <Path StrokeThickness="1.5" Stroke="#ff841539" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 21.461,19.074 L 23.032,23.064" UseLayoutRounding="False"/>
-                                    <!-- Layer 3/<Path> -->
-                                    <Path x:Name="path2" StrokeThickness="2.0" Stroke="#ffffffff" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 13.280,16.916 L 15.641,19.846" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-                                    <Path x:Name="path3" Fill="#ffffffff" Data="F1 M 21.006,12.620 C 21.006,13.853 20.007,14.854 18.771,14.854 C 17.536,14.854 16.537,13.853 16.537,12.620 C 16.537,11.384 17.536,10.383 18.771,10.383 C 20.007,10.383 21.006,11.384 21.006,12.620 Z" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-                                    <Path x:Name="path4" Fill="#ffffffff" Data="F1 M 10.438,20.850 C 10.438,21.887 9.597,22.729 8.560,22.729 C 7.520,22.729 6.679,21.887 6.679,20.850 C 6.679,19.814 7.520,18.971 8.560,18.971 C 9.597,18.971 10.438,19.814 10.438,20.850 Z" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-
-                                </Canvas>
-
-                            </Canvas>
-
-                        </Canvas>
-                    </Canvas>
-                </Canvas>
-                <Canvas x:Name="Monster" Margin="0" Width="100" Height="100" d:LayoutOverrides="Width, Height" Canvas.Top="284" RenderTransformOrigin="0.5,0.5" Canvas.Left="25">
-<!-- Generated by Adobe Illustrator CS -> XAML Export Plug-In Version 0.19 PC   --><!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
-                    <Canvas.RenderTransform>
-                        <CompositeTransform/>
-                    </Canvas.RenderTransform>
-
-                    <!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
-
-                    <Canvas Width="111.407" Height="88.109" Canvas.Top="10" Canvas.Left="-5">
-
-                        <Canvas>
-
-                            <Canvas>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path16" Fill="#ff242726" Data="F1 M 52.409,1.456 C 15.804,0.090 -1.290,9.450 9.057,41.589 C 21.898,81.476 44.250,87.731 44.250,87.731 C 90.370,91.330 111.749,68.965 111.403,31.116 C 111.163,4.983 74.860,1.258 52.409,1.456 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path17" Fill="#ff5a605f" Data="F1 M 46.328,0.068 C 9.931,-0.907 -7.167,8.446 2.807,39.881 C 15.183,78.893 37.355,84.806 37.355,84.806 C 83.194,87.880 104.684,65.722 104.715,28.586 C 104.738,2.946 68.664,-0.348 46.328,0.068 Z"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path x:Name="path18" Fill="#ff353a39" Data="F1 M 40.108,75.929 C 40.108,75.929 21.080,70.855 10.458,37.373 C 8.012,29.665 7.471,23.508 8.665,18.658 C 6.451,23.848 6.667,30.835 9.581,40.025 C 20.204,73.507 39.232,78.582 39.232,78.582 C 70.342,80.668 88.372,69.204 94.574,48.559 C 87.653,67.528 69.862,77.926 40.108,75.929 Z" d:IsHidden="True"/>
-
-                                <!-- Layer 1/<Group>/<Path> -->
-                                <Path Fill="#ffe2e2e1" Data="F1 M 46.933,5.859 C 26.336,5.306 12.947,8.612 8.665,18.658 C 7.471,23.508 8.012,29.665 10.458,37.373 C 21.080,70.855 40.108,75.929 40.108,75.929 C 69.862,77.926 87.653,67.528 94.574,48.559 C 96.213,43.096 97.038,37.003 97.043,30.334 C 97.062,8.328 66.102,5.500 46.933,5.859 Z"/>
-
-                            </Canvas>
-
-                        </Canvas>
-                    </Canvas>
-
-                    <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="canvas10" Width="59.416" Height="64.680"
-    					d:LayoutOverrides="Margin" Canvas.Left="20" Canvas.Top="19">
-
-                        <Canvas Height="65" Width="59">
-
-                            <!-- Layer 3/<Path> -->
-                            <Path StrokeThickness="3.0" Stroke="#ff09465e" StrokeMiterLimit="1.0" Fill="#ff08638c" Data="F1 M 57.868,42.783 C 57.050,40.561 46.043,42.568 33.283,47.266 C 20.523,51.967 10.842,57.572 11.660,59.793 C 12.477,62.016 23.485,60.008 36.245,55.309 C 49.003,50.615 58.686,45.004 57.868,42.783 Z"/>
-                            <Canvas x:Name="Body1" Height="66" Width="59" Canvas.Top="-1" RenderTransformOrigin="0.5,0.5">
-                                <Canvas.RenderTransform>
-                                    <CompositeTransform/>
-                                </Canvas.RenderTransform>
-
-                                <Canvas Height="66" Width="59">
-
-                                    <Canvas x:Name="E" Height="66" Width="59" RenderTransformOrigin="0.5,0.5">
-<!-- Layer 3/<Group>/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> --><!-- Layer 3/<Group>/<Path> -->
-                                        <Canvas.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Canvas.RenderTransform>
-
-                                        <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                        <Canvas x:Name="canvas3" Height="66" Width="59" RenderTransformOrigin="0.5,0.5">
-                                            <Canvas.RenderTransform>
-                                                <CompositeTransform/>
-                                            </Canvas.RenderTransform>
-                                            <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                            <Path Fill="#ff067ebc" Data="F1 M 38.908,14.225 C 39.040,13.627 39.297,13.068 39.522,12.502 C 39.753,11.934 39.969,11.361 40.204,10.795 C 40.625,9.789 41.089,8.797 41.575,7.822 C 42.018,6.932 42.500,6.057 43.121,5.277 C 43.550,4.742 44.044,4.260 44.617,3.885 C 44.858,3.723 45.249,3.475 45.538,3.650 C 45.876,3.850 45.829,4.424 45.867,4.756 C 46.101,6.771 47.198,8.529 47.800,10.436 C 47.903,10.766 47.994,11.102 48.061,11.441 C 48.509,13.711 48.421,16.080 48.017,18.352 C 47.910,18.949 47.779,19.541 47.628,20.129 C 47.063,22.313 46.152,24.529 44.568,26.176 C 43.829,26.947 42.931,27.572 41.911,27.904 C 35.755,29.893 38.021,18.291 38.908,14.225 Z" UseLayoutRounding="False"/>
-
-                                            <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                            <Path StrokeThickness="1.0" Stroke="#ff07648e" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 45.887,11.295 C 45.887,11.295 44.988,7.318 43.938,8.055 C 42.887,8.789 40.162,13.277 39.688,16.660 C 39.688,16.660 42.017,13.154 43.890,14.816 C 45.763,16.480 44.873,21.836 41.536,24.779" UseLayoutRounding="False"/>
-
-                                            <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                            <Path Fill="#ff07648e" Data="F1 M 38.941,17.367 C 38.941,17.367 42.607,12.123 44.385,15.451 C 46.163,18.783 43.117,23.918 40.638,25.584 C 40.638,25.584 36.447,25.074 38.941,17.367 Z" UseLayoutRounding="False"/>
-
-                                            <!-- Layer 3/<Group>/<Group>/<Path> -->
-                                            <Path Fill="#ff067ebc" Data="F1 M 40.189,18.258 C 40.189,18.258 42.094,16.211 42.683,17.227 C 43.273,18.238 44.009,20.076 41.370,23.635 C 38.730,27.189 37.440,20.549 40.189,18.258 Z" UseLayoutRounding="False"/>
-                                        </Canvas>
-                                        <Canvas x:Name="canvas4" Height="66" Width="59" RenderTransformOrigin="0.5,0.5">
-                                            <Canvas.RenderTransform>
-                                                <CompositeTransform/>
-                                            </Canvas.RenderTransform>
-                                            <!-- Layer 3/<Group>/<Path> -->
-                                            <Path Fill="#ff067ebc" Data="F1 M 10.418,27.465 C 9.976,27.188 9.480,27.010 9.000,26.809 C 8.518,26.609 8.039,26.396 7.553,26.203 C 6.688,25.857 5.808,25.549 4.924,25.260 C 4.118,25.002 3.293,24.770 2.448,24.684 C 1.868,24.623 1.277,24.635 0.705,24.758 C 0.463,24.811 0.079,24.900 0.010,25.180 C -0.067,25.510 0.308,25.818 0.488,26.041 C 1.576,27.391 1.992,29.109 2.795,30.617 C 2.933,30.877 3.084,31.131 3.250,31.375 C 4.363,33.006 5.862,34.369 7.485,35.479 C 7.914,35.773 8.352,36.047 8.801,36.305 C 10.470,37.270 12.363,38.039 14.317,38.057 C 15.226,38.068 16.145,37.895 16.956,37.471 C 21.848,34.912 13.426,29.355 10.418,27.465 Z" UseLayoutRounding="False"/>
-                                            <!-- Layer 3/<Group>/<Path> -->
-                                            <Path StrokeThickness="1.0" Stroke="#ff07648e" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 4.462,29.965 C 4.462,29.965 2.575,27.041 3.651,26.836 C 4.727,26.639 9.089,27.658 11.437,29.396 C 11.437,29.396 7.909,28.715 7.802,30.850 C 7.694,32.990 11.489,35.648 15.277,35.375" UseLayoutRounding="False"/>
-                                            <!-- Layer 3/<Group>/<Path> -->
-                                            <Path Fill="#ff07648e" Data="F1 M 12.312,29.361 C 12.312,29.361 6.925,28.459 7.891,31.533 C 8.857,34.607 13.808,35.824 16.305,35.307 C 16.305,35.307 18.500,32.453 12.312,29.361 Z" UseLayoutRounding="False"/>
-                                            <!-- Layer 3/<Group>/<Path> -->
-                                            <Path Fill="#ff067ebc" Data="F1 M 12.109,30.656 C 12.109,30.656 9.725,30.594 9.987,31.559 C 10.253,32.521 10.933,34.074 14.678,34.590 C 18.423,35.105 15.147,30.352 12.109,30.656 Z" UseLayoutRounding="False"/>
-
-                                        </Canvas>
-
-                                    </Canvas>
-
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> -->
-<!-- Layer 3/<Group>/<Path> --><!-- Layer 3/<Group>/<Path> -->
-                                    <Path x:Name="path5" Fill="#ff067ebc" Height="59.416" UseLayoutRounding="False" Width="44.066" Canvas.Top="-1" Data="M43.243999,52.891827 C43.243999,52.891827 32.421001,57.496826 26.143,59.025826 C26.143,59.025826 31.945999,52.414825 27.552,48.021824 C23.156,43.627827 10.343,36.850826 7.6100001,24.143826 C4.8790002,11.432821 12.77,0.23682222 25.042,1.0398222 C26.836,1.1588223 28.607,1.5848223 30.243999,2.3368223 C31.84,3.0688221 33.286999,4.0988221 34.533001,5.3328233 C35.855,6.6358232 36.952999,8.1488228 37.854,9.7688217 C38.841999,11.541821 39.597,13.437821 40.167999,15.385821 C40.796001,17.518826 41.208,19.711824 41.445,21.922825 C41.706001,24.309826 41.764999,26.723825 41.654999,29.119825 C41.527,31.988825 41.019001,34.814827 40.368999,37.605824 C39.807999,40.014824 38.556,42.625824 38.289001,45.090824 C38.153,46.359825 38.23,47.676826 38.729,48.875824 C39.362999,50.402824 42.981998,52.699825 43.243999,52.891827 z"/>
-                                    <Canvas x:Name="canvas5" Height="0" Width="0" RenderTransformOrigin="0.5,0.5">
-                                        <Canvas.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Canvas.RenderTransform>
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="1.0" Stroke="#ff07648e" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="1.0" Data="F1 M 22.095,18.705 C 22.095,18.705 20.885,31.545 27.196,25.945" UseLayoutRounding="False"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#fffefefe" Data="F1 M 16.877,35.771 C 16.877,35.771 29.788,37.922 40.377,26.252 C 40.377,26.252 32.686,46.199 16.877,35.771 Z" UseLayoutRounding="False"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path StrokeThickness="0.8" Stroke="#ff0a6289" StrokeMiterLimit="1.0" Fill="#ff067ebc" Data="F1 M 23.578,34.459 C 23.578,34.459 24.300,37.637 25.881,37.109 C 27.414,36.596 27.897,35.703 27.563,33.488 C 27.554,33.418 27.542,33.346 27.530,33.271 C 27.134,30.900 27.492,36.729 29.431,36.219 C 31.369,35.709 32.020,33.896 31.560,31.113 C 31.102,28.330 24.274,32.061 23.540,34.613" UseLayoutRounding="False"/>
-
-                                        <!-- Layer 3/<Group>/<Path> -->
-                                        <Path Fill="#fffefefe" Data="F1 M 16.877,35.771 C 16.877,35.771 31.941,33.852 40.377,26.252 C 40.377,26.252 24.830,27.219 16.877,35.771 Z" UseLayoutRounding="False"/>
-
-                                    </Canvas>
-
-                                </Canvas>
-
-                                <Canvas x:Name="canvas6" Height="66" Width="59" RenderTransformOrigin="0.5,0.5">
-                                    <Canvas.RenderTransform>
-                                        <CompositeTransform/>
-                                    </Canvas.RenderTransform>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Fill="#fffefefe" Data="F1 M 19.629,21.502 C 18.485,24.363 15.240,25.756 12.379,24.613 C 9.520,23.469 8.126,20.225 9.270,17.363 C 10.413,14.502 13.163,14.373 16.023,15.516 C 18.884,16.658 20.772,18.641 19.629,21.502 Z"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path x:Name="path6" Fill="#ff07648e" Data="F1 M 17.775,20.762 C 17.042,22.598 14.957,23.492 13.120,22.758 C 11.283,22.025 10.388,19.941 11.122,18.104 C 11.857,16.266 13.941,15.373 15.778,16.105 C 17.616,16.838 18.509,18.926 17.775,20.762 Z" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path x:Name="path7" Fill="#fffefefe" Data="F1 M 16.612,18.539 C 16.344,19.215 15.578,19.543 14.904,19.273 C 14.229,19.002 13.901,18.238 14.171,17.564 C 14.439,16.889 15.205,16.559 15.880,16.828 C 16.554,17.100 16.882,17.863 16.612,18.539 Z" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-
-                                </Canvas>
-
-                                <Canvas x:Name="canvas7" RenderTransformOrigin="0.5,0.5" Height="66" Width="59">
-                                    <Canvas.RenderTransform>
-                                        <CompositeTransform/>
-                                    </Canvas.RenderTransform>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path Fill="#fffefefe" Data="F1 M 36.231,16.820 C 34.987,19.934 31.457,21.447 28.344,20.205 C 25.233,18.963 24.779,15.797 26.023,12.686 C 27.266,9.574 29.735,7.691 32.848,8.936 C 35.960,10.178 37.474,13.707 36.231,16.820 Z"/>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path x:Name="path8" Fill="#ff07648e" Data="F1 M 34.214,16.014 C 33.416,18.014 31.149,18.986 29.150,18.189 C 27.151,17.391 26.178,15.121 26.977,13.123 C 27.775,11.123 30.044,10.152 32.042,10.949 C 34.042,11.748 35.013,14.016 34.214,16.014 Z" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-
-                                    <!-- Layer 3/<Group>/<Path> -->
-                                    <Path x:Name="path9" Fill="#fffefefe" Data="F1 M 32.949,13.598 C 32.657,14.330 31.825,14.688 31.090,14.395 C 30.357,14.102 30.000,13.270 30.293,12.535 C 30.586,11.801 31.418,11.443 32.153,11.738 C 32.886,12.029 33.243,12.863 32.949,13.598 Z" RenderTransformOrigin="0.5,0.5">
-                                        <Path.RenderTransform>
-                                            <CompositeTransform/>
-                                        </Path.RenderTransform>
-                                    </Path>
-
-                                </Canvas>
-
-                            </Canvas>
-                            <Canvas x:Name="Hand" Height="65" Width="59">
-
-                                <!-- Layer 3/<Group>/<Path> -->
-                                <Path Fill="#ff067ebc" Data="F1 M 43.529,46.867 C 46.793,46.447 46.868,50.215 46.834,51.438 C 46.803,52.662 46.573,54.600 44.729,54.664 C 42.879,54.729 42.554,52.887 42.137,50.518 C 41.719,48.150 42.835,46.957 43.529,46.867 Z"/>
-
-                                <!-- Layer 3/<Group>/<Path> -->
-                                <Path Fill="#ff067ebc" Data="F1 M 48.178,44.936 C 51.463,44.775 51.242,48.537 51.113,49.756 C 50.983,50.973 50.603,52.885 48.755,52.803 C 46.910,52.721 46.730,50.861 46.501,48.467 C 46.271,46.072 47.476,44.971 48.178,44.936 Z"/>
-
-                                <!-- Layer 3/<Group>/<Path> -->
-                                <Path Fill="#ff067ebc" Data="F1 M 52.832,43.482 C 56.121,43.443 55.761,47.189 55.585,48.406 C 55.411,49.617 54.960,51.514 53.117,51.363 C 51.275,51.213 51.165,49.348 51.024,46.949 C 50.883,44.547 52.130,43.490 52.832,43.482 Z"/>
-
-                                <!-- Layer 3/<Group>/<Path> -->
-                                <Path Fill="#ff067ebc" Data="F1 M 23.786,54.650 C 20.644,55.621 22.131,59.080 22.670,60.180 C 23.207,61.283 24.215,62.949 25.925,62.240 C 27.632,61.539 27.167,59.727 26.565,57.396 C 25.966,55.068 24.456,54.443 23.786,54.650 Z"/>
-
-                                <!-- Layer 3/<Group>/<Path> -->
-                                <Path Fill="#ff067ebc" Data="F1 M 19.620,55.896 C 16.434,56.717 17.755,60.240 18.238,61.367 C 18.721,62.494 19.647,64.207 21.389,63.584 C 23.129,62.963 22.752,61.129 22.264,58.777 C 21.776,56.424 20.298,55.725 19.620,55.896 Z"/>
-
-                                <!-- Layer 3/<Group>/<Path> -->
-                                <Path Fill="#ff067ebc" Data="F1 M 16.266,57.186 C 13.172,57.588 14.006,61.057 14.333,62.174 C 14.657,63.291 15.331,65.010 17.042,64.625 C 18.752,64.242 18.608,62.475 18.421,60.201 C 18.236,57.926 16.925,57.098 16.266,57.186 Z"/>
-
-                            </Canvas>
-
-                        </Canvas>
-                    </Canvas>
-                </Canvas>
-                <Canvas x:Name="Score1" Width="211.776" Height="74.266" Canvas.Left="147" Canvas.Top="109" d:LayoutOverrides="Margin" RenderTransformOrigin="0.5,0.5">
-                    <Canvas.RenderTransform>
-                        <CompositeTransform/>
-                    </Canvas.RenderTransform>
-
-                    <Canvas>
-
-                        <Canvas>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.438,17.532 C 188.549,1.829 163.595,5.876 145.501,10.389 C 121.261,16.174 97.147,16.313 72.082,17.189 C 62.316,17.530 52.503,16.463 42.787,18.214 C 41.917,18.371 41.050,18.546 40.186,18.729 C 38.323,19.121 36.474,19.560 34.634,20.046 C 32.786,20.535 30.953,21.078 29.137,21.672 C 29.116,21.676 29.099,21.679 29.078,21.685 C 29.007,21.701 28.938,21.717 28.868,21.734 C 7.294,26.801 4.534,38.335 4.534,38.335 L 4.391,38.619 C 3.672,40.046 3.000,41.498 2.362,42.962 C 1.907,44.006 1.464,45.058 1.067,46.125 C -2.168,56.115 4.361,65.761 12.321,69.716 C 16.641,72.034 19.896,71.919 25.104,71.738 C 36.158,71.000 47.527,69.896 58.921,69.498 C 81.706,68.701 104.756,66.130 127.052,69.937 C 141.147,72.265 154.930,74.958 169.239,74.104 C 183.550,73.251 203.972,70.068 209.227,52.601 C 213.292,38.351 213.261,28.123 203.438,17.532 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.217,11.198 C 188.327,-4.504 163.373,-0.458 145.279,4.056 C 121.038,9.840 96.927,9.979 71.861,10.855 C 62.096,11.197 52.281,10.129 42.564,11.880 C 41.695,12.037 40.828,12.213 39.964,12.395 C 38.103,12.788 36.251,13.226 34.413,13.712 C 32.564,14.202 30.731,14.744 28.914,15.338 C 28.895,15.343 28.877,15.346 28.856,15.351 C 28.787,15.367 28.716,15.384 28.646,15.400 C 7.072,20.467 4.313,32.002 4.313,32.002 L 4.169,32.285 C 3.451,33.712 2.778,35.164 2.141,36.629 C 1.687,37.673 1.242,38.724 0.847,39.792 C -2.389,49.781 4.141,59.427 12.101,63.382 C 16.418,65.701 19.675,65.585 24.882,65.405 C 35.938,64.666 47.306,63.562 58.699,63.164 C 81.485,62.367 104.534,59.796 126.829,63.603 C 140.925,65.931 154.708,68.623 169.019,67.771 C 183.329,66.917 203.750,63.734 209.005,46.267 C 213.070,32.017 213.039,21.790 203.217,11.198 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.282,13.099 C 188.394,-2.605 163.440,1.442 145.346,5.956 C 121.105,11.741 96.993,11.879 71.927,12.755 C 62.161,13.098 52.348,12.030 42.632,13.780 C 41.762,13.938 40.895,14.114 40.030,14.296 C 38.169,14.688 36.318,15.126 34.479,15.612 C 32.631,16.102 30.799,16.645 28.981,17.238 C 28.961,17.243 28.943,17.247 28.923,17.251 C 28.853,17.268 28.782,17.283 28.713,17.301 C 7.139,22.367 4.379,33.902 4.379,33.902 L 4.235,34.186 C 3.518,35.613 2.845,37.064 2.207,38.529 C 1.752,39.573 1.309,40.625 0.912,41.692 C -2.322,51.681 4.206,61.328 12.167,65.283 C 16.485,67.601 19.740,67.486 24.948,67.304 C 36.004,66.566 47.373,65.462 58.765,65.064 C 81.552,64.267 104.601,61.697 126.896,65.503 C 140.992,67.832 154.774,70.524 169.084,69.671 C 183.396,68.818 203.816,65.634 209.072,48.167 C 213.137,33.917 213.104,23.690 203.282,13.099 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.385,16.019 C 188.495,0.316 163.542,4.363 145.448,8.875 C 121.207,14.661 97.096,14.800 72.029,15.676 C 62.265,16.018 52.449,14.950 42.733,16.701 C 41.863,16.856 40.997,17.034 40.132,17.215 C 38.271,17.607 36.420,18.047 34.581,18.533 C 32.733,19.022 30.900,19.565 29.084,20.159 C 29.063,20.162 29.046,20.167 29.025,20.171 C 28.955,20.188 28.885,20.204 28.814,20.220 C 7.240,25.288 4.480,36.824 4.480,36.824 L 4.338,37.106 C 3.620,38.533 2.946,39.984 2.309,41.449 C 1.854,42.492 1.410,43.544 1.016,44.612 C -2.221,54.601 4.309,64.250 12.270,68.203 C 16.587,70.521 19.843,70.408 25.052,70.224 C 36.106,69.486 47.475,68.382 58.867,67.984 C 81.653,67.187 104.704,64.617 126.998,68.423 C 141.095,70.751 154.876,73.445 169.187,72.591 C 183.497,71.738 203.919,68.554 209.174,51.087 C 213.239,36.837 213.207,26.609 203.385,16.019 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.5" Fill="#fff6f7f7" Data="F1 M 199.233,15.646 C 184.972,0.604 161.067,4.481 143.734,8.804 C 120.513,14.346 97.415,14.479 73.403,15.318 C 64.049,15.645 54.647,14.623 45.340,16.299 C 44.507,16.450 43.676,16.619 42.848,16.793 C 41.065,17.169 39.292,17.590 37.530,18.055 C 35.761,18.524 34.004,19.043 32.264,19.612 C 32.245,19.616 32.228,19.620 32.208,19.625 C 32.140,19.640 32.073,19.656 32.007,19.671 C 11.339,24.525 8.696,35.576 8.696,35.576 L 8.559,35.847 C 7.871,37.214 7.226,38.604 6.615,40.007 C 6.180,41.007 5.755,42.015 5.376,43.037 C 2.277,52.607 8.531,61.848 16.157,65.636 C 20.293,67.857 23.411,67.748 28.400,67.573 C 38.991,66.865 49.882,65.808 60.796,65.426 C 82.623,64.664 104.704,62.201 126.061,65.847 C 139.563,68.078 152.767,70.657 166.474,69.839 C 180.183,69.023 199.745,65.973 204.780,49.242 C 208.675,35.589 208.644,25.792 199.233,15.646 Z"/>
-
-                        </Canvas>
-
-                    </Canvas>
-                    <TextBlock x:Name="textBlock" Foreground="#ffb0be35" Canvas.Left="54" Canvas.Top="8" FontSize="40" FontFamily="Poplar Std Black" Text="806" FontWeight="Bold" Width="85.3099975585938" Height="58.1833343505859" TextAlignment="Right"><TextBlock.Effect>
-    						<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FFEBE7C9"/>
-    					</TextBlock.Effect></TextBlock>
-                </Canvas>
-                <Canvas x:Name="Score2" Width="211.776" Height="74.266" Canvas.Left="147" Canvas.Top="201" d:LayoutOverrides="Margin" RenderTransformOrigin="0.5,0.5">
-                    <Canvas.RenderTransform>
-                        <CompositeTransform/>
-                    </Canvas.RenderTransform>
-
-                    <Canvas>
-
-                        <Canvas>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.438,17.532 C 188.549,1.829 163.595,5.876 145.501,10.389 C 121.261,16.174 97.147,16.313 72.082,17.189 C 62.316,17.530 52.503,16.463 42.787,18.214 C 41.917,18.371 41.050,18.546 40.186,18.729 C 38.323,19.121 36.474,19.560 34.634,20.046 C 32.786,20.535 30.953,21.078 29.137,21.672 C 29.116,21.676 29.099,21.679 29.078,21.685 C 29.007,21.701 28.938,21.717 28.868,21.734 C 7.294,26.801 4.534,38.335 4.534,38.335 L 4.391,38.619 C 3.672,40.046 3.000,41.498 2.362,42.962 C 1.907,44.006 1.464,45.058 1.067,46.125 C -2.168,56.115 4.361,65.761 12.321,69.716 C 16.641,72.034 19.896,71.919 25.104,71.738 C 36.158,71.000 47.527,69.896 58.921,69.498 C 81.706,68.701 104.756,66.130 127.052,69.937 C 141.147,72.265 154.930,74.958 169.239,74.104 C 183.550,73.251 203.972,70.068 209.227,52.601 C 213.292,38.351 213.261,28.123 203.438,17.532 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.217,11.198 C 188.327,-4.504 163.373,-0.458 145.279,4.056 C 121.038,9.840 96.927,9.979 71.861,10.855 C 62.096,11.197 52.281,10.129 42.564,11.880 C 41.695,12.037 40.828,12.213 39.964,12.395 C 38.103,12.788 36.251,13.226 34.413,13.712 C 32.564,14.202 30.731,14.744 28.914,15.338 C 28.895,15.343 28.877,15.346 28.856,15.351 C 28.787,15.367 28.716,15.384 28.646,15.400 C 7.072,20.467 4.313,32.002 4.313,32.002 L 4.169,32.285 C 3.451,33.712 2.778,35.164 2.141,36.629 C 1.687,37.673 1.242,38.724 0.847,39.792 C -2.389,49.781 4.141,59.427 12.101,63.382 C 16.418,65.701 19.675,65.585 24.882,65.405 C 35.938,64.666 47.306,63.562 58.699,63.164 C 81.485,62.367 104.534,59.796 126.829,63.603 C 140.925,65.931 154.708,68.623 169.019,67.771 C 183.329,66.917 203.750,63.734 209.005,46.267 C 213.070,32.017 213.039,21.790 203.217,11.198 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.282,13.099 C 188.394,-2.605 163.440,1.442 145.346,5.956 C 121.105,11.741 96.993,11.879 71.927,12.755 C 62.161,13.098 52.348,12.030 42.632,13.780 C 41.762,13.938 40.895,14.114 40.030,14.296 C 38.169,14.688 36.318,15.126 34.479,15.612 C 32.631,16.102 30.799,16.645 28.981,17.238 C 28.961,17.243 28.943,17.247 28.923,17.251 C 28.853,17.268 28.782,17.283 28.713,17.301 C 7.139,22.367 4.379,33.902 4.379,33.902 L 4.235,34.186 C 3.518,35.613 2.845,37.064 2.207,38.529 C 1.752,39.573 1.309,40.625 0.912,41.692 C -2.322,51.681 4.206,61.328 12.167,65.283 C 16.485,67.601 19.740,67.486 24.948,67.304 C 36.004,66.566 47.373,65.462 58.765,65.064 C 81.552,64.267 104.601,61.697 126.896,65.503 C 140.992,67.832 154.774,70.524 169.084,69.671 C 183.396,68.818 203.816,65.634 209.072,48.167 C 213.137,33.917 213.104,23.690 203.282,13.099 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.385,16.019 C 188.495,0.316 163.542,4.363 145.448,8.875 C 121.207,14.661 97.096,14.800 72.029,15.676 C 62.265,16.018 52.449,14.950 42.733,16.701 C 41.863,16.856 40.997,17.034 40.132,17.215 C 38.271,17.607 36.420,18.047 34.581,18.533 C 32.733,19.022 30.900,19.565 29.084,20.159 C 29.063,20.162 29.046,20.167 29.025,20.171 C 28.955,20.188 28.885,20.204 28.814,20.220 C 7.240,25.288 4.480,36.824 4.480,36.824 L 4.338,37.106 C 3.620,38.533 2.946,39.984 2.309,41.449 C 1.854,42.492 1.410,43.544 1.016,44.612 C -2.221,54.601 4.309,64.250 12.270,68.203 C 16.587,70.521 19.843,70.408 25.052,70.224 C 36.106,69.486 47.475,68.382 58.867,67.984 C 81.653,67.187 104.704,64.617 126.998,68.423 C 141.095,70.751 154.876,73.445 169.187,72.591 C 183.497,71.738 203.919,68.554 209.174,51.087 C 213.239,36.837 213.207,26.609 203.385,16.019 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.5" Fill="#fff6f7f7" Data="F1 M 199.233,15.646 C 184.972,0.604 161.067,4.481 143.734,8.804 C 120.513,14.346 97.415,14.479 73.403,15.318 C 64.049,15.645 54.647,14.623 45.340,16.299 C 44.507,16.450 43.676,16.619 42.848,16.793 C 41.065,17.169 39.292,17.590 37.530,18.055 C 35.761,18.524 34.004,19.043 32.264,19.612 C 32.245,19.616 32.228,19.620 32.208,19.625 C 32.140,19.640 32.073,19.656 32.007,19.671 C 11.339,24.525 8.696,35.576 8.696,35.576 L 8.559,35.847 C 7.871,37.214 7.226,38.604 6.615,40.007 C 6.180,41.007 5.755,42.015 5.376,43.037 C 2.277,52.607 8.531,61.848 16.157,65.636 C 20.293,67.857 23.411,67.748 28.400,67.573 C 38.991,66.865 49.882,65.808 60.796,65.426 C 82.623,64.664 104.704,62.201 126.061,65.847 C 139.563,68.078 152.767,70.657 166.474,69.839 C 180.183,69.023 199.745,65.973 204.780,49.242 C 208.675,35.589 208.644,25.792 199.233,15.646 Z"/>
-
-                        </Canvas>
-
-                    </Canvas>
-                    <TextBlock x:Name="textBlock1" Foreground="#FFBF1E4C" Canvas.Left="58" Canvas.Top="8" FontSize="40" FontFamily="Poplar Std Black" Text="806" FontWeight="Bold" Width="85.3099975585938" Height="58.1833343505859" TextAlignment="Right"><TextBlock.Effect>
-    						<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FFEBE7C9"/>
-    					</TextBlock.Effect></TextBlock>
-                </Canvas>
-                <Canvas x:Name="Score3" Width="211.776" Height="74.266" Canvas.Left="145" Canvas.Top="289" d:LayoutOverrides="Margin" RenderTransformOrigin="0.5,0.5">
-                    <Canvas.RenderTransform>
-                        <CompositeTransform/>
-                    </Canvas.RenderTransform>
-
-                    <Canvas>
-
-                        <Canvas>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.438,17.532 C 188.549,1.829 163.595,5.876 145.501,10.389 C 121.261,16.174 97.147,16.313 72.082,17.189 C 62.316,17.530 52.503,16.463 42.787,18.214 C 41.917,18.371 41.050,18.546 40.186,18.729 C 38.323,19.121 36.474,19.560 34.634,20.046 C 32.786,20.535 30.953,21.078 29.137,21.672 C 29.116,21.676 29.099,21.679 29.078,21.685 C 29.007,21.701 28.938,21.717 28.868,21.734 C 7.294,26.801 4.534,38.335 4.534,38.335 L 4.391,38.619 C 3.672,40.046 3.000,41.498 2.362,42.962 C 1.907,44.006 1.464,45.058 1.067,46.125 C -2.168,56.115 4.361,65.761 12.321,69.716 C 16.641,72.034 19.896,71.919 25.104,71.738 C 36.158,71.000 47.527,69.896 58.921,69.498 C 81.706,68.701 104.756,66.130 127.052,69.937 C 141.147,72.265 154.930,74.958 169.239,74.104 C 183.550,73.251 203.972,70.068 209.227,52.601 C 213.292,38.351 213.261,28.123 203.438,17.532 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.217,11.198 C 188.327,-4.504 163.373,-0.458 145.279,4.056 C 121.038,9.840 96.927,9.979 71.861,10.855 C 62.096,11.197 52.281,10.129 42.564,11.880 C 41.695,12.037 40.828,12.213 39.964,12.395 C 38.103,12.788 36.251,13.226 34.413,13.712 C 32.564,14.202 30.731,14.744 28.914,15.338 C 28.895,15.343 28.877,15.346 28.856,15.351 C 28.787,15.367 28.716,15.384 28.646,15.400 C 7.072,20.467 4.313,32.002 4.313,32.002 L 4.169,32.285 C 3.451,33.712 2.778,35.164 2.141,36.629 C 1.687,37.673 1.242,38.724 0.847,39.792 C -2.389,49.781 4.141,59.427 12.101,63.382 C 16.418,65.701 19.675,65.585 24.882,65.405 C 35.938,64.666 47.306,63.562 58.699,63.164 C 81.485,62.367 104.534,59.796 126.829,63.603 C 140.925,65.931 154.708,68.623 169.019,67.771 C 183.329,66.917 203.750,63.734 209.005,46.267 C 213.070,32.017 213.039,21.790 203.217,11.198 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.282,13.099 C 188.394,-2.605 163.440,1.442 145.346,5.956 C 121.105,11.741 96.993,11.879 71.927,12.755 C 62.161,13.098 52.348,12.030 42.632,13.780 C 41.762,13.938 40.895,14.114 40.030,14.296 C 38.169,14.688 36.318,15.126 34.479,15.612 C 32.631,16.102 30.799,16.645 28.981,17.238 C 28.961,17.243 28.943,17.247 28.923,17.251 C 28.853,17.268 28.782,17.283 28.713,17.301 C 7.139,22.367 4.379,33.902 4.379,33.902 L 4.235,34.186 C 3.518,35.613 2.845,37.064 2.207,38.529 C 1.752,39.573 1.309,40.625 0.912,41.692 C -2.322,51.681 4.206,61.328 12.167,65.283 C 16.485,67.601 19.740,67.486 24.948,67.304 C 36.004,66.566 47.373,65.462 58.765,65.064 C 81.552,64.267 104.601,61.697 126.896,65.503 C 140.992,67.832 154.774,70.524 169.084,69.671 C 183.396,68.818 203.816,65.634 209.072,48.167 C 213.137,33.917 213.104,23.690 203.282,13.099 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 203.385,16.019 C 188.495,0.316 163.542,4.363 145.448,8.875 C 121.207,14.661 97.096,14.800 72.029,15.676 C 62.265,16.018 52.449,14.950 42.733,16.701 C 41.863,16.856 40.997,17.034 40.132,17.215 C 38.271,17.607 36.420,18.047 34.581,18.533 C 32.733,19.022 30.900,19.565 29.084,20.159 C 29.063,20.162 29.046,20.167 29.025,20.171 C 28.955,20.188 28.885,20.204 28.814,20.220 C 7.240,25.288 4.480,36.824 4.480,36.824 L 4.338,37.106 C 3.620,38.533 2.946,39.984 2.309,41.449 C 1.854,42.492 1.410,43.544 1.016,44.612 C -2.221,54.601 4.309,64.250 12.270,68.203 C 16.587,70.521 19.843,70.408 25.052,70.224 C 36.106,69.486 47.475,68.382 58.867,67.984 C 81.653,67.187 104.704,64.617 126.998,68.423 C 141.095,70.751 154.876,73.445 169.187,72.591 C 183.497,71.738 203.919,68.554 209.174,51.087 C 213.239,36.837 213.207,26.609 203.385,16.019 Z"/>
-
-                            <!-- Layer 1/<Group>/<Path> -->
-                            <Path Opacity="0.5" Fill="#fff6f7f7" Data="F1 M 199.233,15.646 C 184.972,0.604 161.067,4.481 143.734,8.804 C 120.513,14.346 97.415,14.479 73.403,15.318 C 64.049,15.645 54.647,14.623 45.340,16.299 C 44.507,16.450 43.676,16.619 42.848,16.793 C 41.065,17.169 39.292,17.590 37.530,18.055 C 35.761,18.524 34.004,19.043 32.264,19.612 C 32.245,19.616 32.228,19.620 32.208,19.625 C 32.140,19.640 32.073,19.656 32.007,19.671 C 11.339,24.525 8.696,35.576 8.696,35.576 L 8.559,35.847 C 7.871,37.214 7.226,38.604 6.615,40.007 C 6.180,41.007 5.755,42.015 5.376,43.037 C 2.277,52.607 8.531,61.848 16.157,65.636 C 20.293,67.857 23.411,67.748 28.400,67.573 C 38.991,66.865 49.882,65.808 60.796,65.426 C 82.623,64.664 104.704,62.201 126.061,65.847 C 139.563,68.078 152.767,70.657 166.474,69.839 C 180.183,69.023 199.745,65.973 204.780,49.242 C 208.675,35.589 208.644,25.792 199.233,15.646 Z"/>
-
-                        </Canvas>
-
-                    </Canvas>
-                    <TextBlock x:Name="textBlock2" Foreground="#FF067EBC" Canvas.Left="58" Canvas.Top="8" FontSize="40" FontFamily="Poplar Std Black" Text="806" FontWeight="Bold" Width="85.3099975585938" Height="58.1833343505859" TextAlignment="Right"><TextBlock.Effect>
-    						<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FFEBE7C9"/>
-    					</TextBlock.Effect></TextBlock>
-                </Canvas>
-                <TheS_SperfGames_MayaTukky_Controls:PoisonSealUI x:Name="poisonSeal" d:LayoutOverrides="Width, Height" Canvas.Top="100" RenderTransformOrigin="0.5,0.5" Canvas.Left="25"/>
-                <TheS_SperfGames_MayaTukky_Controls:VoodooSealUI x:Name="voodooSeal" d:LayoutOverrides="Width, Height" Canvas.Top="191" RenderTransformOrigin="0.5,0.5" Canvas.Left="25"/>
-                <TheS_SperfGames_MayaTukky_Controls:MonsterSealUI x:Name="monsterSeal" d:LayoutOverrides="Width, Height" Canvas.Top="284" RenderTransformOrigin="0.5,0.5" Canvas.Left="25"/>
-            </Canvas>
+        <Viewbox x:Name="VoodooPic" Height="79" Width="69" Canvas.Left="64" Canvas.Top="191" Visibility="Collapsed">
+        	<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Voodoo.png" Stretch="Fill" Height="96" Width="83"/>
+        </Viewbox>
+        <Canvas x:Name="canvas1" Height="54" Canvas.Left="175" Width="163" Canvas.Top="201" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+        	<Canvas.RenderTransform>
+        		<CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
+        	</Canvas.RenderTransform>
+        	<Path Width="163.643" Height="52.357" Canvas.Top="2.138" Stretch="Fill" Fill="#FF4C3C31" Data="F1 M 145.544,56.6529C 129.851,60.2677 110.013,64.8569 104.79,45.0281C 100.712,29.5368 106.321,10.858 122.559,7.90143C 128.7,6.78778 135.411,8.00742 141.187,10.3693C 145.86,12.2786 166.647,14.4652 172.384,12.9976C 178.349,11.4724 184.351,13.7691 190.411,12.7418C 198.582,11.3558 206.804,10.7369 215.071,10.7066C 229.376,10.6493 251.246,4.82382 262.283,16.6532C 267.841,22.6072 268.097,34.7648 265.766,42.536C 260.034,61.6552 227.194,59.8911 213.811,59.1752C 194.811,58.157 176.4,52.61 157.249,54.4046C 153.933,54.7192 149.898,55.6468 145.544,56.6529 Z " UseLayoutRounding="False"/>
+        	<Path Width="158.215" Height="50.664" Canvas.Left="1.654" Canvas.Top="1.183" Stretch="Fill" Fill="#FF0B0B09" Data="F1 M 258.438,20.8171C 247.851,9.62018 227.106,9.85326 213.383,9.90613C 205.451,9.93512 197.565,10.5221 189.727,11.8338C 183.914,12.8068 178.155,10.401 172.433,11.8444C 166.93,13.2364 146.988,11.165 142.507,9.35841C 136.966,7.12054 130.559,6.1597 124.637,7.02396C 106.712,9.63527 102.141,28.3478 106.712,42.8204C 113.135,63.1593 131.443,57.3036 146.497,53.8809C 148.222,53.4908 150.256,52.9642 151.849,52.6326L 156.845,48.7168L 156.13,45.1492L 163.623,43.1867L 163.266,40.9565L 164.873,43.3667L 158.806,44.7935L 156.309,52.0972C 174.681,50.3993 194.103,55.7709 212.33,56.7347C 219.221,57.101 233.167,57.0509 243.908,54.7738L 241.053,51.0274L 231.24,53.5074L 227.196,48.9877L 231.477,51.6054L 237.425,50.1771L 242.183,50.4144L 246.702,52.7947L 246.047,53.2728C 253.593,51.0153 259.839,46.9573 262.013,39.8032C 264.249,32.4466 263.771,26.4518 258.438,20.8171 Z " UseLayoutRounding="False"/>
+        	<Path Width="157.424" Height="49.554" Canvas.Left="3.304" Stretch="Fill" Fill="#FF847160" Data="F1 M 262.997,18.7925C 259.547,-3.05176e-005 197.804,9.42055 189.963,10.7308C 184.151,11.7052 147.227,10.0619 142.744,8.25534C 137.204,6.01904 130.765,4.86612 124.875,5.91934C 109.299,8.71852 103.919,26.3944 107.83,41.0591C 112.841,59.8274 131.871,55.4819 146.925,52.0592C 148.65,51.6687 150.302,51.2968 151.897,50.9652L 155.834,48.1223L 154.88,44.3169L 163.207,42.6525L 163.92,40.749L 165.348,43.604L 159.163,45.0296L 158.152,49.9349C 176.524,48.2373 194.185,53.4848 212.411,54.4483C 219.305,54.8131 231.576,55.4593 242.316,53.1819L 239.804,50.5023L 231.477,52.4043L 227.433,47.8846L 231.715,50.5023L 237.663,49.0755L 242.42,49.3117L 246.94,51.6917L 246.286,52.1712C 253.83,49.9137 260.076,45.8557 262.251,38.7002C 264.487,31.3435 264.468,26.812 262.997,18.7925 Z " UseLayoutRounding="False"/>
+        	<Grid Canvas.Left="8" Width="154">
+        		<TextBlock x:Name="SecondStateScoreTextBlock" Foreground="White" FontSize="32" FontFamily="Poplar Std Black" Text="0" FontWeight="Bold" Height="58.1833343505859" TextAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+        	</Grid>
         </Canvas>
-        <Canvas x:Name="Clound" Height="404" Width="449" Canvas.Top="44" Canvas.Left="-7" RenderTransformOrigin="0.5,0.5">
-            <Canvas.RenderTransform>
-                <CompositeTransform ScaleX="0" ScaleY="0"/>
-            </Canvas.RenderTransform>
-
-            <Canvas>
-
-<!-- Layer 1/<Path> -->
-<!-- Layer 1/<Path> -->
-<!-- Layer 1/<Path> --><!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 295.688,43.153 C 295.688,43.153 332.674,32.816 359.653,66.983 C 386.635,101.150 381.702,137.375 381.702,137.375 C 381.702,137.375 396.447,150.004 392.084,172.256 C 387.719,194.506 371.767,197.121 371.767,197.121 C 371.767,197.121 390.423,225.612 365.015,253.678 C 339.606,281.743 304.455,274.927 296.751,266.706 C 296.751,266.706 290.444,283.247 266.788,277.008 C 266.788,277.008 254.232,322.163 205.771,336.365 C 157.313,350.567 156.531,320.721 156.531,320.721 C 156.531,320.721 144.414,323.956 137.330,311.288 C 137.330,311.288 112.505,327.918 100.254,303.207 C 100.254,303.207 69.043,319.233 33.112,283.204 C -2.816,247.172 23.803,205.130 23.803,205.130 C 23.803,205.130 5.170,181.719 21.065,167.036 C 21.065,167.036 -9.720,138.604 46.822,77.999 C 88.154,41.600 127.204,62.374 127.204,62.374 C 127.204,62.374 130.998,54.735 139.300,54.695 C 139.300,54.695 139.751,15.316 198.450,5.510 C 257.150,-4.296 258.550,21.737 258.550,21.737 C 258.550,21.737 276.410,17.840 295.688,43.153 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 308.506,47.681 C 308.506,47.681 345.492,37.343 372.472,71.512 C 399.453,105.677 394.520,141.902 394.520,141.902 C 394.520,141.902 409.266,154.532 404.902,176.784 C 400.537,199.033 384.586,201.649 384.586,201.649 C 384.586,201.649 403.241,230.139 377.833,258.207 C 352.424,286.271 317.272,279.454 309.568,271.233 C 309.568,271.233 303.263,287.774 279.606,281.538 C 279.606,281.538 267.051,326.688 218.590,340.893 C 170.132,355.094 169.351,325.249 169.351,325.249 C 169.351,325.249 157.232,328.483 150.148,315.815 C 150.148,315.815 125.323,332.444 113.073,307.733 C 113.073,307.733 81.861,323.760 45.931,287.731 C 10.003,251.702 36.621,209.658 36.621,209.658 C 36.621,209.658 17.989,186.247 33.885,171.563 C 33.885,171.563 3.100,143.132 59.642,82.526 C 100.975,46.127 140.023,66.901 140.023,66.901 C 140.023,66.901 143.815,59.262 152.119,59.223 C 152.119,59.223 152.569,19.844 211.270,10.038 C 269.968,0.231 271.368,26.265 271.368,26.265 C 271.368,26.265 289.229,22.368 308.506,47.681 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#ffb7b7b7" Data="F1 M 321.830,47.680 C 321.830,47.680 358.815,37.342 385.795,71.511 C 412.777,105.677 407.844,141.902 407.844,141.902 C 407.844,141.902 422.590,154.532 418.226,176.783 C 413.861,199.033 397.909,201.648 397.909,201.648 C 397.909,201.648 416.564,230.139 391.157,258.207 C 365.748,286.271 330.597,279.454 322.893,271.233 C 322.893,271.233 316.588,287.774 292.932,281.537 C 292.932,281.537 280.375,326.688 231.914,340.893 C 183.454,355.093 182.673,325.249 182.673,325.249 C 182.673,325.249 170.556,328.483 163.472,315.815 C 163.472,315.815 138.646,332.444 126.397,307.733 C 126.397,307.733 95.184,323.760 59.255,287.731 C 23.326,251.701 49.945,209.657 49.945,209.657 C 49.945,209.657 31.313,186.246 47.208,171.563 C 47.208,171.563 16.423,143.131 72.965,82.526 C 114.297,46.127 153.347,66.901 153.347,66.901 C 153.347,66.901 157.139,59.261 165.442,59.223 C 165.442,59.223 165.893,19.844 224.593,10.038 C 283.292,0.231 284.693,26.264 284.693,26.264 C 284.693,26.264 302.553,22.368 321.830,47.680 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 338.480,94.236 C 338.480,94.236 375.465,83.697 402.447,118.547 C 429.434,153.396 424.503,190.341 424.503,190.341 C 424.503,190.341 439.250,203.224 434.888,225.917 C 430.527,248.612 414.574,251.276 414.574,251.276 C 414.574,251.276 433.232,280.336 407.828,308.958 C 382.421,337.581 347.269,330.624 339.564,322.238 C 339.564,322.238 333.259,339.110 309.604,332.745 C 309.604,332.745 297.051,378.793 248.591,393.276 C 200.133,407.754 199.350,377.317 199.350,377.317 C 199.350,377.317 187.232,380.614 180.146,367.692 C 180.146,367.692 155.323,384.650 143.071,359.447 C 143.071,359.447 111.859,375.790 75.927,339.042 C 39.994,302.290 66.609,259.411 66.609,259.411 C 66.609,259.411 47.975,235.534 63.869,220.558 C 63.869,220.558 33.081,191.559 89.617,129.752 C 130.947,92.633 169.999,113.824 169.999,113.824 C 169.999,113.824 173.790,106.033 182.093,105.993 C 182.093,105.993 182.539,65.831 241.237,55.834 C 299.938,45.839 301.341,72.392 301.341,72.392 C 301.341,72.392 319.199,68.418 338.480,94.236 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#ffb7b7b7" Data="F1 M 350.254,85.472 C 350.254,85.472 387.238,75.135 414.219,109.302 C 441.202,143.468 436.268,179.692 436.268,179.692 C 436.268,179.692 451.014,192.322 446.650,214.575 C 442.286,236.825 426.334,239.439 426.334,239.439 C 426.334,239.439 444.987,267.930 419.582,295.997 C 394.172,324.063 359.020,317.245 351.317,309.024 C 351.317,309.024 345.010,325.565 321.355,319.329 C 321.355,319.329 308.799,364.480 260.337,378.684 C 211.878,392.885 211.096,363.042 211.096,363.042 C 211.096,363.042 198.979,366.275 191.896,353.604 C 191.896,353.604 167.070,370.235 154.820,345.524 C 154.820,345.524 123.607,361.551 87.678,325.523 C 51.750,289.493 78.369,247.448 78.369,247.448 C 78.369,247.448 59.736,224.038 75.632,209.354 C 75.632,209.354 44.847,180.923 101.389,120.317 C 142.721,83.918 181.771,104.692 181.771,104.692 C 181.771,104.692 185.563,97.054 193.865,97.014 C 193.865,97.014 194.316,57.635 253.016,47.829 C 311.715,38.022 313.118,64.056 313.118,64.056 C 313.118,64.056 330.976,60.159 350.254,85.472 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 331.184,105.007 C 331.184,105.007 368.170,94.670 395.148,128.837 C 422.133,163.003 417.199,199.229 417.199,199.229 C 417.199,199.229 431.943,211.860 427.581,234.108 C 423.216,256.360 407.264,258.975 407.264,258.975 C 407.264,258.975 425.919,287.466 400.512,315.532 C 375.104,343.598 339.951,336.780 332.247,328.559 C 332.247,328.559 325.941,345.100 302.286,338.862 C 302.286,338.862 289.729,384.016 241.268,398.219 C 192.809,412.419 192.027,382.576 192.027,382.576 C 192.027,382.576 179.909,385.809 172.826,373.139 C 172.826,373.139 148.000,389.772 135.751,365.060 C 135.751,365.060 104.537,381.088 68.608,345.058 C 32.681,309.026 59.299,266.983 59.299,266.983 C 59.299,266.983 40.667,243.573 56.562,228.890 C 56.562,228.890 25.776,200.459 82.319,139.853 C 123.651,103.454 162.701,124.228 162.701,124.228 C 162.701,124.228 166.494,116.589 174.796,116.549 C 174.796,116.549 175.246,77.170 233.945,67.364 C 292.646,57.558 294.048,83.591 294.048,83.591 C 294.048,83.591 311.906,79.694 331.184,105.007 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#fffefefe" Data="F1 M 307.217,76.364 C 307.217,76.364 345.323,66.021 373.115,100.185 C 400.909,134.347 395.820,170.572 395.820,170.572 C 395.820,170.572 411.012,183.200 406.512,205.452 C 402.014,227.704 385.578,230.321 385.578,230.321 C 385.578,230.321 404.793,258.809 378.612,286.879 C 352.430,314.948 316.215,308.135 308.279,299.915 C 308.279,299.915 301.779,316.458 277.407,310.223 C 277.407,310.223 264.465,355.379 214.535,369.588 C 164.605,383.797 163.806,353.954 163.806,353.954 C 163.806,353.954 151.320,357.188 144.023,344.521 C 144.023,344.521 118.444,361.155 105.826,336.444 C 105.826,336.444 73.666,352.477 36.654,316.454 C -0.356,280.427 27.075,238.379 27.075,238.379 C 27.075,238.379 7.882,214.971 24.259,200.285 C 24.259,200.285 -7.454,171.859 50.810,111.245 C 93.398,74.840 133.627,95.608 133.627,95.608 C 133.627,95.608 137.535,87.968 146.091,87.928 C 146.091,87.928 146.561,48.549 207.040,38.735 C 267.519,28.920 268.958,54.953 268.958,54.953 C 268.958,54.953 287.357,51.053 307.217,76.364 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#ffb7b7b7" Data="F1 M 340.846,78.939 C 340.846,78.939 377.831,68.602 404.813,102.770 C 431.795,136.936 426.859,173.161 426.859,173.161 C 426.859,173.161 441.605,185.790 437.243,208.042 C 432.878,230.292 416.926,232.907 416.926,232.907 C 416.926,232.907 435.580,261.398 410.174,289.465 C 384.765,317.530 349.613,310.713 341.910,302.493 C 341.910,302.493 335.604,319.034 311.947,312.795 C 311.947,312.795 299.392,357.947 250.929,372.151 C 202.471,386.352 201.689,356.507 201.689,356.507 C 201.689,356.507 189.573,359.743 182.489,347.073 C 182.489,347.073 157.663,363.704 145.413,338.991 C 145.413,338.991 114.200,355.020 78.271,318.989 C 42.343,282.960 68.961,240.916 68.961,240.916 C 68.961,240.916 50.329,217.505 66.225,202.821 C 66.225,202.821 35.439,174.390 91.981,113.785 C 133.313,77.386 172.363,98.160 172.363,98.160 C 172.363,98.160 176.156,90.520 184.459,90.480 C 184.459,90.480 184.908,51.103 243.609,41.296 C 302.309,31.490 303.710,57.523 303.710,57.523 C 303.710,57.523 321.569,53.625 340.846,78.939 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#ffb7b7b7" Data="F1 M 331.083,53.545 C 331.083,53.545 368.069,43.208 395.051,77.376 C 422.031,111.542 417.098,147.768 417.098,147.768 C 417.098,147.768 431.843,160.396 427.479,182.648 C 423.115,204.897 407.163,207.513 407.163,207.513 C 407.163,207.513 425.817,236.004 400.412,264.071 C 375.000,292.135 339.850,285.320 332.147,277.098 C 332.147,277.098 325.840,293.639 302.186,287.401 C 302.186,287.401 289.627,332.555 241.167,346.757 C 192.709,360.959 191.928,331.116 191.928,331.116 C 191.928,331.116 179.811,334.348 172.725,321.679 C 172.725,321.679 147.901,338.309 135.651,313.599 C 135.651,313.599 104.438,329.625 68.508,293.597 C 32.579,257.565 59.198,215.522 59.198,215.522 C 59.198,215.522 40.565,192.112 56.461,177.428 C 56.461,177.428 25.676,148.997 82.218,88.391 C 123.551,51.993 162.600,72.766 162.600,72.766 C 162.600,72.766 166.393,65.127 174.695,65.087 C 174.695,65.087 175.146,25.708 233.848,15.902 C 292.546,6.097 293.945,32.130 293.945,32.130 C 293.945,32.130 311.807,28.233 331.083,53.545 Z"/>
-
-                <!-- Layer 1/<Path> -->
-                <Path Opacity="0.3" Fill="#ffedecec" Data="F1 M 331.882,73.590 C 331.882,73.590 368.213,63.829 394.707,96.065 C 421.204,128.301 416.349,162.483 416.349,162.483 C 416.349,162.483 430.830,174.399 426.540,195.395 C 422.250,216.392 406.581,218.863 406.581,218.863 C 406.581,218.863 424.898,245.743 399.937,272.232 C 374.978,298.721 340.452,292.293 332.887,284.538 C 332.887,284.538 326.689,300.147 303.455,294.264 C 303.455,294.264 291.114,336.874 243.511,350.288 C 195.911,363.696 195.150,335.534 195.150,335.534 C 195.150,335.534 183.247,338.586 176.292,326.633 C 176.292,326.633 151.904,342.329 139.877,319.014 C 139.877,319.014 109.216,334.145 73.934,300.154 C 38.650,266.161 64.804,226.483 64.804,226.483 C 64.804,226.483 46.507,204.397 62.123,190.539 C 62.123,190.539 31.889,163.716 87.438,106.518 C 128.041,72.164 166.393,91.759 166.393,91.759 C 166.393,91.759 170.118,84.549 178.273,84.510 C 178.273,84.510 178.724,47.352 236.379,38.088 C 294.041,28.824 295.410,53.389 295.410,53.389 C 295.410,53.389 312.953,49.708 331.882,73.590 Z"/>
-
-            </Canvas>
+        <Viewbox x:Name="MonsterPic" Height="80" Width="69" Canvas.Left="64" Canvas.Top="288" Visibility="Collapsed">
+        	<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Monster.png" Stretch="Fill" Height="96" Width="83"/>
+        </Viewbox>
+        <Canvas x:Name="canvas2" Height="54" Canvas.Left="175" Width="163" Canvas.Top="294" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+        	<Canvas.RenderTransform>
+        		<CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
+        	</Canvas.RenderTransform>
+        	<Path Width="163.643" Height="52.357" Canvas.Top="2.138" Stretch="Fill" Fill="#FF4C3C31" Data="F1 M 145.544,56.6529C 129.851,60.2677 110.013,64.8569 104.79,45.0281C 100.712,29.5368 106.321,10.858 122.559,7.90143C 128.7,6.78778 135.411,8.00742 141.187,10.3693C 145.86,12.2786 166.647,14.4652 172.384,12.9976C 178.349,11.4724 184.351,13.7691 190.411,12.7418C 198.582,11.3558 206.804,10.7369 215.071,10.7066C 229.376,10.6493 251.246,4.82382 262.283,16.6532C 267.841,22.6072 268.097,34.7648 265.766,42.536C 260.034,61.6552 227.194,59.8911 213.811,59.1752C 194.811,58.157 176.4,52.61 157.249,54.4046C 153.933,54.7192 149.898,55.6468 145.544,56.6529 Z " UseLayoutRounding="False"/>
+        	<Path Width="158.215" Height="50.664" Canvas.Left="1.654" Canvas.Top="1.183" Stretch="Fill" Fill="#FF0B0B09" Data="F1 M 258.438,20.8171C 247.851,9.62018 227.106,9.85326 213.383,9.90613C 205.451,9.93512 197.565,10.5221 189.727,11.8338C 183.914,12.8068 178.155,10.401 172.433,11.8444C 166.93,13.2364 146.988,11.165 142.507,9.35841C 136.966,7.12054 130.559,6.1597 124.637,7.02396C 106.712,9.63527 102.141,28.3478 106.712,42.8204C 113.135,63.1593 131.443,57.3036 146.497,53.8809C 148.222,53.4908 150.256,52.9642 151.849,52.6326L 156.845,48.7168L 156.13,45.1492L 163.623,43.1867L 163.266,40.9565L 164.873,43.3667L 158.806,44.7935L 156.309,52.0972C 174.681,50.3993 194.103,55.7709 212.33,56.7347C 219.221,57.101 233.167,57.0509 243.908,54.7738L 241.053,51.0274L 231.24,53.5074L 227.196,48.9877L 231.477,51.6054L 237.425,50.1771L 242.183,50.4144L 246.702,52.7947L 246.047,53.2728C 253.593,51.0153 259.839,46.9573 262.013,39.8032C 264.249,32.4466 263.771,26.4518 258.438,20.8171 Z " UseLayoutRounding="False"/>
+        	<Path Width="157.424" Height="49.554" Canvas.Left="3.304" Stretch="Fill" Fill="#FF847160" Data="F1 M 262.997,18.7925C 259.547,-3.05176e-005 197.804,9.42055 189.963,10.7308C 184.151,11.7052 147.227,10.0619 142.744,8.25534C 137.204,6.01904 130.765,4.86612 124.875,5.91934C 109.299,8.71852 103.919,26.3944 107.83,41.0591C 112.841,59.8274 131.871,55.4819 146.925,52.0592C 148.65,51.6687 150.302,51.2968 151.897,50.9652L 155.834,48.1223L 154.88,44.3169L 163.207,42.6525L 163.92,40.749L 165.348,43.604L 159.163,45.0296L 158.152,49.9349C 176.524,48.2373 194.185,53.4848 212.411,54.4483C 219.305,54.8131 231.576,55.4593 242.316,53.1819L 239.804,50.5023L 231.477,52.4043L 227.433,47.8846L 231.715,50.5023L 237.663,49.0755L 242.42,49.3117L 246.94,51.6917L 246.286,52.1712C 253.83,49.9137 260.076,45.8557 262.251,38.7002C 264.487,31.3435 264.468,26.812 262.997,18.7925 Z " UseLayoutRounding="False"/>
+        	<Grid Canvas.Left="8" Width="154">
+        		<TextBlock x:Name="ThirdStateScoreTextBlock" Foreground="White" FontSize="32" FontFamily="Poplar Std Black" Text="0" FontWeight="Bold" Height="58.1833343505859" TextAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+        	</Grid>
         </Canvas>
-        <Canvas x:Name="Hole" Height="74" Width="180" Canvas.Left="128" Canvas.Top="211" Opacity="0" RenderTransformOrigin="0.5,0.5">
-            <Canvas.RenderTransform>
-                <CompositeTransform/>
-            </Canvas.RenderTransform>
-            <Canvas x:Name="BlackHole" Height="217" Canvas.Left="-139" Canvas.Top="-155" Width="308" Clip="M145.562,190.567 C143,5 126.89878,-32.916302 229,-35 C327,-37 311,-15 307.965,191.27699 C307.74911,205.95055 271.49399,217.694 226.646,217.495 C181.80299,217.30299 145.76465,205.24474 145.562,190.567 z">
-                <!-- Layer 1/<Group>/<Path> -->
-                <Path Fill="#ff474747" Data="F1 M 145.562,190.567 C 145.624,175.896 182.033,164.156 226.879,164.354 C 271.726,164.547 308.031,176.603 307.965,191.277 C 307.902,205.952 271.494,217.694 226.646,217.495 C 181.803,217.303 145.498,205.246 145.562,190.567 Z" UseLayoutRounding="False"/>
-                <Path Data="M81.171997,0.0023956299 C120.44501,0.1743927 153.14902,9.4403992 160.63101,21.59639 C160.93802,22.093399 161.20901,22.5914 161.42801,23.097397 C160.229,29.973389 151.03,36.116394 136.83801,40.557388 C122.198,45.140396 102.241,47.91539 80.25,47.81839 C39.375,47.642395 5.6119995,37.60939 0,24.72139 C0.068008423,24.31839 0.16799927,23.916397 0.29299927,23.518402 C0.57200623,22.631393 0.98100281,21.758392 1.5200043,20.901398 C9.1080017,8.8123932 41.900009,-0.16860962 81.171997,0.0023956299 z" Fill="#ff2a2a2a" Height="47.82" Canvas.Left="146.396" Stretch="Fill" Canvas.Top="169.677" UseLayoutRounding="False" Width="161.428"/>
-                <Canvas x:Name="Reward" Height="220" Canvas.Left="126" Width="200" Canvas.Top="218" RenderTransformOrigin="0.5,0.5">
-                    <Canvas.RenderTransform>
-                        <CompositeTransform ScaleX="0.84" ScaleY="0.84"/>
-                    </Canvas.RenderTransform>
-                    <Canvas x:Name="cv_AvatarOne" Height="220" Width="200">
-                    	<TotalScore_AvatarReward:Crow d:LayoutOverrides="Width, Height"/>
-                    </Canvas>
-                    <Canvas x:Name="cv_AvatarTwo" Height="220" Width="200">
-                    	<TotalScore_AvatarReward:Ghost d:LayoutOverrides="Width, Height"/>
-                    </Canvas>
-                    <Canvas x:Name="cv_AvatarThree" Height="220" Width="200">
-                    	<TotalScore_AvatarReward:Golem d:LayoutOverrides="Width, Height"/>
-                    </Canvas>
-                    <Canvas x:Name="cv_AvatarFour" Height="220" Width="200">
-                    	<TotalScore_AvatarReward:Knight d:LayoutOverrides="Width, Height"/>
-                    </Canvas>
-                    <Canvas x:Name="cv_AvatarFive" Height="220" Width="200">
-                    	<Canvas x:Name="cv_Aura" Height="100" Width="100" Canvas.Left="50" Canvas.Top="90">
-                    		<TotalScore_AvatarReward:Aura3 d:LayoutOverrides="Width, Height"/>
-                    	</Canvas>
-                    	<TotalScore_AvatarReward:Berserk d:LayoutOverrides="Width, Height"/>
-                    </Canvas>
-                </Canvas>
-
-            </Canvas>
-
-        </Canvas>
-        <Canvas x:Name="canvas11" Width="164.727" Height="87.555" Canvas.Left="134" Canvas.Top="288" d:LayoutOverrides="Margin" RenderTransformOrigin="0.5,0.5" Opacity="0">
-            <Canvas.RenderTransform>
-                <CompositeTransform ScaleX="0.9" ScaleY="0.9"/>
-            </Canvas.RenderTransform>
-
-        	<Canvas>
-
-        		<Canvas>
-
-        			<Canvas>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-        				<Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 161.022,24.008 C 160.981,23.960 160.942,23.911 160.900,23.864 C 160.836,23.790 160.770,23.718 160.705,23.646 C 159.908,22.794 158.895,22.173 157.977,21.461 C 152.801,17.455 147.253,14.006 141.270,11.334 C 135.606,8.806 129.656,6.955 123.590,5.671 C 117.500,4.382 111.301,3.658 105.090,3.306 C 98.754,2.945 92.403,2.969 86.064,3.184 C 79.637,3.401 73.221,3.817 66.808,4.256 C 60.413,4.693 54.020,5.156 47.618,5.469 C 47.333,5.482 47.046,5.497 46.760,5.510 C 26.627,6.451 15.178,10.044 6.997,31.215 C -0.605,51.747 0.452,74.321 24.006,81.168 C 41.957,85.833 60.230,84.366 78.534,83.510 C 99.277,82.542 120.391,89.500 141.574,84.842 C 153.690,82.442 163.661,73.415 164.283,60.547 C 164.748,55.153 164.803,49.713 164.653,44.304 C 164.548,40.554 164.385,36.798 163.892,33.076 C 163.485,30.012 163.060,26.479 161.022,24.008 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-        				<Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 158.393,25.101 C 158.353,25.051 158.314,25.004 158.272,24.956 C 158.208,24.882 158.143,24.810 158.077,24.738 C 157.280,23.885 156.267,23.264 155.349,22.554 C 150.174,18.546 144.625,15.098 138.643,12.426 C 132.978,9.898 127.028,8.047 120.962,6.764 C 114.873,5.475 108.674,4.750 102.462,4.396 C 96.126,4.037 89.775,4.061 83.436,4.276 C 77.010,4.493 70.594,4.909 64.180,5.347 C 57.786,5.785 51.391,6.247 44.991,6.561 C 44.705,6.575 44.418,6.588 44.133,6.602 C 24.000,7.542 12.551,11.135 4.368,32.308 C -3.232,52.838 -2.176,75.413 21.379,82.258 C 39.329,86.924 57.602,85.458 75.906,84.602 C 96.649,83.631 117.763,90.592 138.946,85.934 C 151.061,83.534 161.034,74.508 161.655,61.637 C 162.120,56.247 162.175,50.805 162.026,45.396 C 161.920,41.646 161.757,37.890 161.264,34.169 C 160.857,31.104 160.432,27.569 158.393,25.101 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-        				<Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 160.880,20.981 C 160.839,20.933 160.800,20.885 160.759,20.837 C 160.695,20.764 160.629,20.691 160.563,20.619 C 159.765,19.767 158.753,19.146 157.834,18.434 C 152.660,14.428 147.112,10.979 141.129,8.308 C 135.463,5.779 129.514,3.928 123.449,2.645 C 117.358,1.355 111.160,0.632 104.949,0.278 C 98.613,-0.082 92.261,-0.059 85.922,0.157 C 79.497,0.375 73.080,0.790 66.667,1.229 C 60.272,1.666 53.877,2.129 47.477,2.441 C 47.190,2.456 46.905,2.470 46.619,2.482 C 26.486,3.424 15.037,7.017 6.854,28.188 C -0.746,48.719 0.309,71.293 23.866,78.141 C 41.815,82.805 60.088,81.338 78.391,80.483 C 99.135,79.514 120.250,86.473 141.432,81.817 C 153.547,79.415 163.519,70.389 164.141,57.520 C 164.606,52.127 164.662,46.686 164.511,41.277 C 164.407,37.527 164.244,33.771 163.750,30.050 C 163.342,26.985 162.918,23.451 160.880,20.981 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-        				<Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 158.233,21.656 C 158.193,21.608 158.153,21.560 158.112,21.513 C 158.047,21.438 157.982,21.366 157.917,21.294 C 157.119,20.441 156.106,19.821 155.188,19.109 C 150.012,15.103 144.465,11.654 138.482,8.981 C 132.817,6.454 126.868,4.603 120.801,3.319 C 114.711,2.030 108.512,1.306 102.301,0.953 C 95.965,0.594 89.614,0.617 83.276,0.832 C 76.848,1.050 70.432,1.466 64.019,1.904 C 57.625,2.342 51.231,2.804 44.830,3.117 C 44.543,3.131 44.258,3.145 43.971,3.158 C 23.838,4.100 12.389,7.691 4.207,28.863 C -3.393,49.395 -2.337,71.969 21.217,78.817 C 39.167,83.481 57.442,82.014 75.745,81.159 C 96.489,80.188 117.602,87.149 138.785,82.491 C 150.901,80.090 160.873,71.063 161.495,58.196 C 161.958,52.801 162.015,47.362 161.865,41.952 C 161.759,38.202 161.596,34.446 161.103,30.725 C 160.696,27.660 160.272,24.127 158.233,21.656 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-        				<Path Opacity="0.5" Fill="#fff6f7f7" Data="F1 M 158.349,24.133 C 158.308,24.085 158.269,24.036 158.227,23.989 C 158.164,23.915 158.097,23.843 158.032,23.771 C 157.235,22.918 156.221,22.298 155.303,21.586 C 150.128,17.579 144.581,14.131 138.598,11.460 C 132.932,8.931 126.983,7.079 120.917,5.796 C 114.827,4.507 108.628,3.783 102.418,3.430 C 96.081,3.070 89.729,3.094 83.391,3.309 C 76.964,3.526 70.548,3.942 64.135,4.381 C 57.741,4.818 51.346,5.281 44.945,5.594 C 44.659,5.607 44.374,5.622 44.088,5.635 C 23.955,6.576 12.505,10.169 4.323,31.340 C -3.277,51.872 -2.221,74.446 21.334,81.293 C 39.284,85.958 57.557,84.491 75.860,83.635 C 96.604,82.667 117.718,89.625 138.901,84.967 C 151.016,82.567 160.989,73.540 161.610,60.672 C 162.075,55.278 162.130,49.838 161.981,44.429 C 161.875,40.679 161.712,36.923 161.219,33.201 C 160.812,30.137 160.387,26.604 158.349,24.133 Z"/>
-
-        			</Canvas>
-
-        		</Canvas>
-
-        	</Canvas>
-        	<TextBlock x:Name="textBlock3" Foreground="#FF767F80" Canvas.Left="25" Canvas.Top="17" FontSize="48" FontFamily="Cooper Black" Text="0" FontWeight="Bold" Width="116" TextAlignment="Right"><TextBlock.Effect>
-        			<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FFEBE7C9"/>
-        		</TextBlock.Effect></TextBlock>
-        </Canvas>
-        <Canvas x:Name="TotalScoreSeal" Height="85" Width="122" Canvas.Top="338" Canvas.Left="8" Visibility="Collapsed">
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 10.881,359.220 C 10.881,359.220 7.679,360.263 7.857,343.533 C 8.035,326.802 12.386,326.297 15.815,325.571 C 19.243,324.844 91.229,319.106 101.671,330.426 C 110.155,340.500 112.604,360.816 105.250,363.489 C 99.481,365.586 27.428,366.121 10.881,359.220 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 8.979,358.741 C 8.979,358.741 5.776,359.785 5.954,343.054 C 6.132,326.324 10.483,325.818 13.912,325.091 C 17.340,324.366 89.327,318.626 99.769,329.947 C 108.252,340.022 110.700,360.336 103.347,363.010 C 97.577,365.108 25.523,365.641 8.979,358.741 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 10.881,358.062 C 10.881,358.062 7.679,359.106 7.857,342.375 C 8.035,325.644 12.386,325.140 15.815,324.414 C 19.243,323.688 91.229,317.949 101.671,329.269 C 110.155,339.343 112.604,359.658 105.250,362.333 C 99.481,364.429 27.428,364.962 10.881,358.062 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 8.979,356.818 C 8.979,356.818 5.776,357.862 5.954,341.131 C 6.132,324.399 10.483,323.896 13.912,323.169 C 17.340,322.443 89.327,316.704 99.769,328.024 C 108.252,338.099 110.700,358.413 103.347,361.087 C 97.577,363.184 25.523,363.718 8.979,356.818 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Opacity="0.5" Fill="#fff6f7f7" Data="F1 M 9.621,357.782 C 9.621,357.782 6.418,358.825 6.596,342.093 C 6.774,325.364 11.125,324.858 14.554,324.131 C 17.983,323.405 89.970,317.667 100.411,328.988 C 108.895,339.062 111.344,359.376 103.989,362.049 C 98.220,364.148 26.166,364.681 9.621,357.782 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Fill="#ff202020" Data="F1 M 13.522,328.139 C 20.862,323.099 96.366,324.124 99.117,329.946 C 101.869,335.767 114.923,360.802 97.505,361.668 C 80.085,362.531 12.238,360.001 9.649,354.777 C 7.061,349.552 9.274,330.626 13.522,328.139 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Fill="#ff2f2f2f" Data="F1 M 12.178,327.075 C 19.335,322.159 92.952,323.159 95.636,328.835 C 98.317,334.512 111.046,358.921 94.062,359.764 C 77.078,360.607 12.060,358.619 9.535,353.526 C 7.011,348.431 8.035,329.500 12.178,327.075 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Fill="#ff202020" Data="F1 M 15.483,350.952 C 13.516,346.982 13.993,333.490 16.650,328.917 C 16.474,329.000 16.312,329.086 16.182,329.173 C 12.527,331.314 11.623,348.024 13.851,352.520 C 16.078,357.016 73.463,358.770 88.453,358.026 C 91.604,357.870 93.593,356.792 94.753,355.144 C 93.604,355.890 92.079,356.360 90.087,356.458 C 75.097,357.202 17.712,355.448 15.483,350.952 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <!-- Layer 1/<Group>/<Path> -->
-            <Path Fill="#ff5a605f" Data="F1 M 89.842,330.729 C 87.522,325.821 25.131,324.875 16.650,328.917 C 13.993,333.490 13.516,346.982 15.483,350.952 C 17.712,355.448 75.097,357.202 90.087,356.458 C 92.079,356.360 93.604,355.890 94.753,355.144 C 99.106,348.954 91.712,334.686 89.842,330.729 Z" Canvas.Top="-302" UseLayoutRounding="False" Canvas.Left="2"/>
-
-            <Canvas Canvas.Top="-302" Canvas.Left="2">
-
-                <!-- Layer 1/<Group>/<Group>/<Compound Path> -->
-                <Path Fill="#ff202020" Data="F1 M 69.717,344.130 C 69.717,344.130 71.298,340.052 70.505,337.983 L 72.778,337.656 C 72.778,337.656 72.678,341.753 73.786,343.249 L 69.717,344.130 Z M 76.165,336.409 C 76.026,335.186 76.954,333.823 76.954,333.823 L 75.649,332.069 C 75.001,332.310 67.515,333.774 67.515,333.774 C 69.981,336.122 63.435,352.595 63.435,352.595 C 65.039,352.869 68.249,352.205 68.620,351.877 C 68.991,351.552 69.569,347.801 69.569,347.801 C 69.569,347.801 73.644,346.796 73.991,346.892 C 74.337,346.985 74.054,352.938 74.054,352.938 C 78.352,354.130 80.440,352.215 80.440,352.215 C 78.556,351.916 76.306,337.628 76.165,336.409 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Compound Path> -->
-                <Path Fill="#ff202020" Data="F1 M 43.507,342.273 C 42.716,344.287 41.879,346.984 40.003,343.965 C 40.003,343.965 40.448,339.397 42.342,338.389 C 44.236,337.380 44.297,340.263 43.507,342.273 Z M 44.348,330.613 C 42.029,330.208 38.695,333.180 38.695,333.180 C 37.434,334.466 34.196,345.500 33.682,347.302 C 33.167,349.104 36.752,351.907 38.309,352.023 C 39.863,352.138 45.554,349.000 46.102,346.740 C 49.485,332.750 46.665,331.015 44.348,330.613 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Path> -->
-                <Path Fill="#ff202020" Data="F1 M 81.019,333.169 C 81.019,333.169 83.656,331.610 84.114,331.851 C 84.573,332.085 85.517,334.221 86.094,334.652 C 86.671,335.083 84.856,336.532 84.784,337.596 C 84.712,338.662 83.876,346.290 84.951,346.625 C 86.026,346.956 90.630,344.148 91.169,344.513 C 91.707,344.879 92.399,347.728 93.159,347.966 C 93.918,348.200 93.527,350.286 93.527,350.286 C 93.527,350.286 85.607,353.430 84.505,353.299 C 83.401,353.164 80.739,351.534 81.122,350.914 C 81.504,350.292 80.354,335.800 81.019,333.169 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Path> -->
-                <Path Fill="#ff202020" Data="F1 M 22.165,331.117 C 22.149,331.262 23.296,331.768 23.434,331.833 C 23.883,332.034 24.348,332.184 24.823,332.276 C 25.798,332.462 26.831,332.428 27.805,332.166 C 29.922,331.602 32.046,331.072 34.170,330.537 C 34.635,330.422 35.098,330.307 35.561,330.193 C 35.770,330.139 36.085,329.989 36.288,330.036 C 36.225,330.712 36.048,331.374 35.944,332.048 C 35.851,332.638 35.769,333.233 35.704,333.827 C 35.684,334.028 35.481,336.880 35.679,336.845 C 34.507,337.061 33.364,337.292 32.428,338.246 C 32.566,338.107 32.352,337.558 32.329,337.402 C 32.276,337.060 32.212,336.727 32.123,336.399 C 32.030,336.057 31.846,335.369 31.448,335.392 C 30.685,335.435 28.977,337.519 28.859,351.365 C 28.859,351.365 22.586,350.478 21.940,351.315 C 21.940,351.315 25.537,337.449 24.763,335.886 C 24.268,334.888 23.782,337.516 23.732,337.839 C 23.195,337.433 22.645,337.056 22.066,336.729 C 21.872,336.614 20.841,335.903 20.653,336.231 C 21.089,335.460 21.464,334.640 21.735,333.776 C 21.877,333.333 21.987,332.880 22.064,332.416 C 22.134,331.983 22.115,331.548 22.165,331.117 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Path> -->
-                <Path Fill="#ff202020" Data="F1 M 51.055,332.488 C 51.040,332.631 52.187,333.137 52.325,333.202 C 52.773,333.401 53.237,333.553 53.714,333.643 C 54.689,333.832 55.721,333.797 56.696,333.538 C 58.813,332.973 60.936,332.442 63.061,331.907 C 63.525,331.792 63.989,331.674 64.452,331.561 C 64.659,331.508 64.976,331.361 65.179,331.406 C 65.116,332.083 64.937,332.745 64.835,333.417 C 64.741,334.008 64.660,334.602 64.595,335.194 C 64.573,335.396 64.370,338.250 64.570,338.215 C 63.397,338.430 62.253,338.662 61.319,339.616 C 61.456,339.474 61.242,338.927 61.219,338.773 C 61.167,338.430 61.103,338.096 61.012,337.768 C 60.920,337.424 60.737,336.736 60.339,336.761 C 59.575,336.806 57.867,338.888 57.750,352.733 C 57.750,352.733 51.477,351.847 50.830,352.685 C 50.830,352.685 54.427,338.817 53.653,337.255 C 53.159,336.257 52.672,338.885 52.623,339.209 C 52.086,338.803 51.535,338.424 50.957,338.097 C 50.763,337.981 49.731,337.273 49.544,337.599 C 49.979,336.830 50.354,336.008 50.626,335.146 C 50.767,334.703 50.878,334.249 50.955,333.786 C 51.025,333.354 51.004,332.918 51.055,332.488 Z"/>
-
-            </Canvas>
-
-            <Canvas Canvas.Top="-302" Canvas.Left="2">
-
-                <!-- Layer 1/<Group>/<Group>/<Compound Path> -->
-                <Path Fill="#ffefefef" Data="F1 M 68.474,343.307 C 68.474,343.307 70.055,339.229 69.263,337.162 L 71.536,336.833 C 71.536,336.833 71.435,340.929 72.544,342.426 L 68.474,343.307 Z M 74.923,335.584 C 74.784,334.364 75.712,333.000 75.712,333.000 L 74.408,331.249 C 73.758,331.487 66.272,332.952 66.272,332.952 C 68.739,335.298 62.192,351.772 62.192,351.772 C 63.795,352.047 67.005,351.382 67.378,351.056 C 67.749,350.728 68.326,346.978 68.326,346.978 C 68.326,346.978 72.401,345.975 72.750,346.068 C 73.095,346.163 72.812,352.115 72.812,352.115 C 77.110,353.307 79.197,351.393 79.197,351.393 C 77.313,351.095 75.063,336.806 74.923,335.584 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Compound Path> -->
-                <Path Fill="#ffefefef" Data="F1 M 42.264,341.451 C 41.474,343.463 40.638,346.162 38.760,343.143 C 38.760,343.143 39.206,338.577 41.100,337.566 C 42.993,336.556 43.055,339.440 42.264,341.451 Z M 43.104,329.790 C 40.786,329.386 37.454,332.357 37.454,332.357 C 36.191,333.644 32.954,344.678 32.440,346.479 C 31.924,348.283 35.509,351.083 37.066,351.201 C 38.620,351.316 44.312,348.176 44.858,345.916 C 48.242,331.926 45.421,330.193 43.104,329.790 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Path> -->
-                <Path Fill="#ffefefef" Data="F1 M 79.776,332.347 C 79.776,332.347 82.414,330.788 82.870,331.028 C 83.330,331.263 84.272,333.398 84.851,333.830 C 85.429,334.259 83.614,335.709 83.542,336.773 C 83.469,337.839 82.634,345.468 83.709,345.801 C 84.782,346.134 89.387,343.327 89.927,343.691 C 90.466,344.058 91.157,346.906 91.917,347.143 C 92.676,347.375 92.284,349.462 92.284,349.462 C 92.284,349.462 84.364,352.608 83.263,352.476 C 82.157,352.341 79.497,350.711 79.878,350.090 C 80.261,349.470 79.110,334.977 79.776,332.347 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Path> -->
-                <Path Fill="#ffefefef" Data="F1 M 20.922,330.293 C 20.907,330.439 22.055,330.943 22.191,331.009 C 22.641,331.211 23.104,331.363 23.580,331.453 C 24.555,331.640 25.588,331.607 26.563,331.342 C 28.679,330.781 30.803,330.249 32.927,329.714 C 33.392,329.599 33.856,329.485 34.318,329.372 C 34.527,329.316 34.843,329.167 35.045,329.212 C 34.983,329.891 34.805,330.552 34.701,331.226 C 34.607,331.815 34.527,332.412 34.462,333.003 C 34.440,333.206 34.238,336.058 34.437,336.022 C 33.265,336.238 32.122,336.468 31.186,337.422 C 31.323,337.283 31.108,336.735 31.086,336.581 C 31.035,336.238 30.970,335.903 30.879,335.577 C 30.786,335.233 30.604,334.544 30.206,334.570 C 29.443,334.614 27.734,336.697 27.617,350.542 C 27.617,350.542 21.344,349.655 20.696,350.491 C 20.696,350.491 24.293,336.625 23.521,335.064 C 23.025,334.065 22.539,336.693 22.489,337.018 C 21.953,336.613 21.403,336.234 20.823,335.906 C 20.629,335.792 19.599,335.080 19.410,335.409 C 19.847,334.637 20.221,333.817 20.493,332.955 C 20.635,332.511 20.745,332.057 20.821,331.592 C 20.892,331.162 20.872,330.725 20.922,330.293 Z"/>
-
-                <!-- Layer 1/<Group>/<Group>/<Path> -->
-                <Path Fill="#ffefefef" Data="F1 M 49.813,331.663 C 49.797,331.808 50.946,332.314 51.083,332.379 C 51.531,332.579 51.996,332.732 52.471,332.823 C 53.446,333.009 54.479,332.976 55.454,332.712 C 57.570,332.151 59.694,331.619 61.817,331.083 C 62.282,330.967 62.746,330.851 63.208,330.739 C 63.417,330.686 63.732,330.538 63.936,330.584 C 63.873,331.258 63.695,331.921 63.593,332.595 C 63.497,333.187 63.417,333.779 63.351,334.374 C 63.330,334.574 63.128,337.427 63.328,337.394 C 62.155,337.608 61.011,337.837 60.076,338.792 C 60.213,338.653 60.000,338.105 59.977,337.950 C 59.926,337.609 59.860,337.273 59.769,336.944 C 59.677,336.604 59.495,335.914 59.096,335.938 C 58.333,335.982 56.624,338.067 56.507,351.911 C 56.507,351.911 50.234,351.024 49.587,351.861 C 49.587,351.861 53.184,337.995 52.411,336.434 C 51.917,335.436 51.429,338.062 51.380,338.387 C 50.844,337.981 50.293,337.602 49.715,337.274 C 49.520,337.161 48.489,336.450 48.302,336.776 C 48.737,336.007 49.113,335.186 49.383,334.323 C 49.525,333.879 49.636,333.427 49.711,332.961 C 49.782,332.532 49.762,332.095 49.813,331.663 Z"/>
-
-            </Canvas>
-
-        </Canvas>
-        <Canvas x:Name="AllScore" Width="164.727" Height="87.555" Canvas.Left="138" Canvas.Top="326" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Margin" Visibility="Collapsed">
-            <Canvas.RenderTransform>
-                <CompositeTransform ScaleX="0.8" ScaleY="0.8"/>
-            </Canvas.RenderTransform>
-
-            <Canvas>
-
-                <Canvas>
-
-                    <Canvas>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-                        <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 161.022,24.008 C 160.981,23.960 160.942,23.911 160.900,23.864 C 160.836,23.790 160.770,23.718 160.705,23.646 C 159.908,22.794 158.895,22.173 157.977,21.461 C 152.801,17.455 147.253,14.006 141.270,11.334 C 135.606,8.806 129.656,6.955 123.590,5.671 C 117.500,4.382 111.301,3.658 105.090,3.306 C 98.754,2.945 92.403,2.969 86.064,3.184 C 79.637,3.401 73.221,3.817 66.808,4.256 C 60.413,4.693 54.020,5.156 47.618,5.469 C 47.333,5.482 47.046,5.497 46.760,5.510 C 26.627,6.451 15.178,10.044 6.997,31.215 C -0.605,51.747 0.452,74.321 24.006,81.168 C 41.957,85.833 60.230,84.366 78.534,83.510 C 99.277,82.542 120.391,89.500 141.574,84.842 C 153.690,82.442 163.661,73.415 164.283,60.547 C 164.748,55.153 164.803,49.713 164.653,44.304 C 164.548,40.554 164.385,36.798 163.892,33.076 C 163.485,30.012 163.060,26.479 161.022,24.008 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-                        <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 158.393,25.101 C 158.353,25.051 158.314,25.004 158.272,24.956 C 158.208,24.882 158.143,24.810 158.077,24.738 C 157.280,23.885 156.267,23.264 155.349,22.554 C 150.174,18.546 144.625,15.098 138.643,12.426 C 132.978,9.898 127.028,8.047 120.962,6.764 C 114.873,5.475 108.674,4.750 102.462,4.396 C 96.126,4.037 89.775,4.061 83.436,4.276 C 77.010,4.493 70.594,4.909 64.180,5.347 C 57.786,5.785 51.391,6.247 44.991,6.561 C 44.705,6.575 44.418,6.588 44.133,6.602 C 24.000,7.542 12.551,11.135 4.368,32.308 C -3.232,52.838 -2.176,75.413 21.379,82.258 C 39.329,86.924 57.602,85.458 75.906,84.602 C 96.649,83.631 117.763,90.592 138.946,85.934 C 151.061,83.534 161.034,74.508 161.655,61.637 C 162.120,56.247 162.175,50.805 162.026,45.396 C 161.920,41.646 161.757,37.890 161.264,34.169 C 160.857,31.104 160.432,27.569 158.393,25.101 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-                        <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 160.880,20.981 C 160.839,20.933 160.800,20.885 160.759,20.837 C 160.695,20.764 160.629,20.691 160.563,20.619 C 159.765,19.767 158.753,19.146 157.834,18.434 C 152.660,14.428 147.112,10.979 141.129,8.308 C 135.463,5.779 129.514,3.928 123.449,2.645 C 117.358,1.355 111.160,0.632 104.949,0.278 C 98.613,-0.082 92.261,-0.059 85.922,0.157 C 79.497,0.375 73.080,0.790 66.667,1.229 C 60.272,1.666 53.877,2.129 47.477,2.441 C 47.190,2.456 46.905,2.470 46.619,2.482 C 26.486,3.424 15.037,7.017 6.854,28.188 C -0.746,48.719 0.309,71.293 23.866,78.141 C 41.815,82.805 60.088,81.338 78.391,80.483 C 99.135,79.514 120.250,86.473 141.432,81.817 C 153.547,79.415 163.519,70.389 164.141,57.520 C 164.606,52.127 164.662,46.686 164.511,41.277 C 164.407,37.527 164.244,33.771 163.750,30.050 C 163.342,26.985 162.918,23.451 160.880,20.981 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-                        <Path Opacity="0.3" Fill="#fff6f7f7" Data="F1 M 158.233,21.656 C 158.193,21.608 158.153,21.560 158.112,21.513 C 158.047,21.438 157.982,21.366 157.917,21.294 C 157.119,20.441 156.106,19.821 155.188,19.109 C 150.012,15.103 144.465,11.654 138.482,8.981 C 132.817,6.454 126.868,4.603 120.801,3.319 C 114.711,2.030 108.512,1.306 102.301,0.953 C 95.965,0.594 89.614,0.617 83.276,0.832 C 76.848,1.050 70.432,1.466 64.019,1.904 C 57.625,2.342 51.231,2.804 44.830,3.117 C 44.543,3.131 44.258,3.145 43.971,3.158 C 23.838,4.100 12.389,7.691 4.207,28.863 C -3.393,49.395 -2.337,71.969 21.217,78.817 C 39.167,83.481 57.442,82.014 75.745,81.159 C 96.489,80.188 117.602,87.149 138.785,82.491 C 150.901,80.090 160.873,71.063 161.495,58.196 C 161.958,52.801 162.015,47.362 161.865,41.952 C 161.759,38.202 161.596,34.446 161.103,30.725 C 160.696,27.660 160.272,24.127 158.233,21.656 Z"/>
-
-                        <!-- Layer 1/<Group>/<Group>/<Path> -->
-                        <Path Opacity="0.5" Fill="#fff6f7f7" Data="F1 M 158.349,24.133 C 158.308,24.085 158.269,24.036 158.227,23.989 C 158.164,23.915 158.097,23.843 158.032,23.771 C 157.235,22.918 156.221,22.298 155.303,21.586 C 150.128,17.579 144.581,14.131 138.598,11.460 C 132.932,8.931 126.983,7.079 120.917,5.796 C 114.827,4.507 108.628,3.783 102.418,3.430 C 96.081,3.070 89.729,3.094 83.391,3.309 C 76.964,3.526 70.548,3.942 64.135,4.381 C 57.741,4.818 51.346,5.281 44.945,5.594 C 44.659,5.607 44.374,5.622 44.088,5.635 C 23.955,6.576 12.505,10.169 4.323,31.340 C -3.277,51.872 -2.221,74.446 21.334,81.293 C 39.284,85.958 57.557,84.491 75.860,83.635 C 96.604,82.667 117.718,89.625 138.901,84.967 C 151.016,82.567 160.989,73.540 161.610,60.672 C 162.075,55.278 162.130,49.838 161.981,44.429 C 161.875,40.679 161.712,36.923 161.219,33.201 C 160.812,30.137 160.387,26.604 158.349,24.133 Z"/>
-
-                    </Canvas>
-
-                </Canvas>
-
-            </Canvas>
-            <TextBlock x:Name="textBlock4" Foreground="#FF767F80" Canvas.Left="25" Canvas.Top="17" FontSize="40" FontFamily="Poplar Std Black" Text="0" FontWeight="Bold" TextAlignment="Right" Width="106"><TextBlock.Effect>
-    				<DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="0" Color="#FFEBE7C9"/>
-    			</TextBlock.Effect></TextBlock>
+        <Viewbox x:Name="TotalSeal" Height="50" Canvas.Left="36" Canvas.Top="384" Width="120" Visibility="Collapsed">
+        	<Grid Height="80.9225959777832" Width="195">
+        		<Path Width="195.426" Height="77.5205" Stretch="Fill" Fill="#FF4C3C31" Data="F1 M 161.101,110.38C 174.212,115.917 190.785,122.949 195.147,92.5812C 198.553,68.8572 193.867,45.1225 180.303,40.5985C 175.173,38.8892 167.001,36.8625 162.176,40.4772C 158.273,43.4025 143.472,44.8065 138.68,42.5559C 133.696,40.2212 69.9627,44.7132 64.9014,43.1359C 58.0734,41.0159 51.2054,40.0692 44.2987,40.0212C 32.3494,39.9305 14.0787,31.0105 4.85736,49.1252C 0.214691,58.2439 2.03451e-005,76.8599 1.94936,88.7652C 6.73602,118.047 34.1734,115.341 45.352,114.245C 61.2254,112.684 135.324,104.191 151.323,106.943C 154.093,107.419 157.463,108.843 161.101,110.38 Z " Margin="0,2.922,0,0.077" UseLayoutRounding="False"/>
+        		<Path Width="190.893" Height="74.3073" Stretch="Fill" Fill="#FF111213" Data="F1 M 8.07136,55.5036C 16.9154,38.3609 34.2447,38.7129 45.71,38.7969C 52.334,38.8422 58.9247,39.7436 65.4727,41.7476C 70.3274,43.2369 130.779,42.9156 136.749,43.8889C 141.621,44.6849 157.329,41.6983 161.073,38.9303C 165.703,35.5063 173.619,37.9303 178.567,39.2516C 193.542,43.2556 197.359,67.0369 193.542,89.1996C 188.177,120.345 172.881,111.381 160.306,106.137C 158.865,105.54 157.165,104.733 155.834,104.225L 151.661,98.2302L 152.257,92.7663L 145.997,89.7609L 146.295,86.3449L 144.954,90.0343L 150.022,92.2223L 152.107,103.408C 136.761,100.808 61.8167,109.032 46.59,110.51C 40.8314,111.07 29.182,110.992 20.21,107.502L 22.5967,101.765L 30.7927,105.568L 34.1687,98.6449L 30.5954,102.654L 25.6247,100.468L 21.6514,100.829L 17.874,104.474L 18.4234,105.208C 12.1167,101.75 6.9007,95.5369 5.08335,84.5782C 3.21402,73.3116 3.61402,64.1369 8.07136,55.5036 Z " Margin="3.028,2.509,0.971,4.491" UseLayoutRounding="False"/>
+        		<Path Width="190.231" Height="73.3" Stretch="Fill" Fill="#FF847160" Data="F1 M 4.26283,52.406C 7.14416,23.626 58.7268,38.0487 65.2748,40.0607C 67.6442,40.786 159.375,37.2727 160.875,37.242C 169.091,37.0686 173.447,35.946 178.368,37.562C 191.38,41.846 195.875,64.0473 192.608,86.506C 188.42,115.242 172.524,108.591 159.948,103.347C 158.507,102.749 157.125,102.183 155.794,101.673L 152.505,97.318L 153.3,91.4913L 146.347,88.9433L 145.748,86.0273L 144.559,90.3993L 149.724,92.586L 150.568,100.094C 135.22,97.4927 61.7481,105.529 46.5188,107.006C 40.7628,107.567 30.5122,108.554 21.5402,105.065L 23.6375,100.966L 30.5948,103.878L 33.9722,96.958L 30.3948,100.966L 25.4242,98.7793L 21.4522,99.142L 17.6775,102.785L 18.2242,103.521C 11.9188,100.058 6.70149,93.8473 4.88549,82.8913C 3.01615,71.6247 3.03349,64.6833 4.26283,52.406 Z " Margin="2.514,0,2.485,8" UseLayoutRounding="False"/>
+        		<Path Width="30.7716" Height="41.0313" Stretch="Fill" Fill="#B30C0F0F" Data="F1 M 21.238,47.6247C 21.9447,46.5193 49.666,47.17 51.4727,49.1873C 52.2567,50.062 50.5434,57.0686 49.818,57.7126C 49.0887,58.3593 47.578,58.786 45.2874,58.9927L 39.7914,59.4927C 39.7914,59.4927 44.23,83.7726 42.914,87.1033C 42.582,87.9447 30.0247,88.4167 29.6074,87.9167C 28.914,87.0993 30.5447,58.494 30.5447,58.494L 25.8607,58.9927C 23.8194,59.2047 22.5394,59.046 22.018,58.526C 21.4967,58.0047 20.3287,49.046 21.238,47.6247 Z " HorizontalAlignment="Left" Margin="19.9,12.282,0,27.717" UseLayoutRounding="False"/>
+        		<Path Width="35.0477" Height="39.6332" Stretch="Fill" Fill="#B30C0F0F" Data="F1 M 127.928,70.2497C 127.891,68.0044 127.135,65.4111 125.664,62.4657C 124.743,60.6271 124.027,59.7631 123.512,59.8724C 123.439,59.9084 123.364,59.9831 123.291,60.0937C 122.665,61.0871 122.004,63.4431 121.303,67.1591C 121.12,68.1871 120.981,68.9604 120.891,69.4764C 120.797,69.9924 120.76,70.4977 120.78,70.9937C 120.797,71.4897 120.844,71.8217 120.918,71.9871C 120.991,72.1524 121.193,72.3191 121.524,72.4831C 121.856,72.6511 122.196,72.7417 122.547,72.7591C 122.896,72.7791 123.419,72.787 124.119,72.787C 125.479,72.787 126.464,72.5857 127.071,72.1791C 127.677,71.7764 127.961,71.1311 127.928,70.2497 Z M 119.483,49.2217C 119.849,48.7071 128.575,48.6417 129.084,49.3417C 130.004,50.6071 130.704,52.5871 131.403,54.3537C 132.101,56.1191 132.784,58.0057 133.447,60.011C 134.108,62.0164 135.011,64.7831 136.151,68.3177L 142.165,87.3017C 142.349,87.8884 135.599,88.8764 134.827,88.2684C 134.053,87.6604 133.354,86.4751 132.729,84.7084C 132.212,83.2737 129.951,77.9844 129.031,77.7804C 128.111,77.5804 126.601,77.479 124.505,77.479C 122.408,77.479 120.891,77.5804 119.953,77.7804C 119.012,77.9844 116.796,83.2737 116.283,84.7084C 115.693,86.399 115.02,87.5684 114.268,88.2137C 113.512,88.8564 107.121,87.9644 107.121,87.5231C 107.121,86.1977 108.996,79.7217 112.751,68.0964C 116.503,56.4711 118.745,50.1777 119.483,49.2217 Z " HorizontalAlignment="Right" Margin="0,14.002,53.856,26.997" UseLayoutRounding="False"/>
+        		<Path Width="27.3209" Height="39.8244" Stretch="Fill" Fill="#B30C0F0F" Data="F1 M 73.7771,73.9828C 73.2864,77.4175 70.5024,77.2481 68.3051,77.3055C 68.1304,77.3081 67.8518,77.3161 67.4651,77.3255C 66.8078,77.3441 66.2838,77.3495 65.8958,77.3495C 65.5011,77.3495 65.0851,77.3161 64.6411,77.2455C 64.1971,77.1735 63.8598,77.1015 63.6291,77.0268C 63.3944,76.9495 63.1398,76.7828 62.8704,76.5255C 62.6011,76.2668 62.4051,76.0268 62.2878,75.8055C 62.1704,75.5828 62.0331,75.2095 61.8837,74.6801C 61.0784,71.8374 62.1131,62.3588 62.3278,60.3374C 62.5051,58.6748 62.8398,56.4161 64.0531,55.4188C 65.3438,54.3561 69.7638,54.4548 70.6797,55.4214C 71.9918,56.8121 72.2731,59.1134 72.5411,61.0375C 72.9318,63.8348 74.0064,72.3801 73.7771,73.9828 Z M 77.8718,59.2521C 77.2958,55.8775 76.6931,51.8455 73.7758,49.4228C 71.7424,47.7348 61.8598,47.6215 58.9584,49.5014C 56.2358,51.2655 55.4584,55.2321 55.0411,58.1481C 54.5344,61.6974 52.1024,78.3335 53.8731,83.3161C 54.2011,84.2375 54.4971,84.8921 54.7571,85.2801C 55.0198,85.6668 55.4491,86.0854 56.0531,86.5361C 56.2358,86.6748 56.4078,86.7668 56.5824,86.8735C 56.5451,85.8028 56.6811,84.5148 57.5038,84.2348L 59.0611,84.8455L 57.8624,85.1428L 57.4557,87.2961C 57.5491,87.3295 57.6491,87.3841 57.7411,87.4068C 58.2624,87.5361 59.0171,87.6615 60.0078,87.7788C 60.9931,87.8961 61.9251,87.9535 62.8051,87.9481C 63.6838,87.9455 64.8544,87.9228 66.3211,87.8855C 67.1811,87.8628 67.8051,87.8468 68.1998,87.8388C 73.1118,87.7108 79.3344,87.9748 80.4784,81.9401C 81.0104,79.1281 78.7118,64.1535 77.8718,59.2521 Z " HorizontalAlignment="Left" Margin="52.395,13.3,0,27.699" UseLayoutRounding="False"/>
+        		<Path Width="25.6649" Height="39.6446" Stretch="Fill" Fill="#B30C0F0F" Data="F1 M 169.449,79.3369C 169.372,78.6023 169.38,76.9396 168.784,76.4729C 168.45,76.2089 155.466,80.2436 154.117,79.8583C 153.44,79.6423 154.1,75.5103 154.937,70.3556L 152.402,67.1582L 154.069,66.3249L 155.465,67.0782C 156.586,59.9823 157.604,52.1543 155.97,49.9342C 154.261,47.6169 144.772,48.6663 144.453,49.9342C 144.001,51.7303 144.741,63.9983 144.741,63.9983C 144.778,65.9289 144.8,67.3756 144.8,68.3409C 144.953,75.8263 145.417,80.6863 146.188,82.9236C 146.96,85.1249 148.445,86.5516 150.644,87.2076C 152.344,87.7076 156.122,87.9596 161.988,87.9596C 161.988,87.9596 169.109,88.5156 169.912,87.9596C 170.182,87.7729 169.449,79.3369 169.449,79.3369 Z " HorizontalAlignment="Right" Margin="0,13.738,25.694,27.261" UseLayoutRounding="False"/>
+        		<Path Width="30.7709" Height="41.0313" Stretch="Fill" Fill="#B30C0F0F" Data="F1 M 109.806,49.1872C 108,47.1699 80.2777,46.5192 79.5711,47.6245C 78.6631,49.0472 79.8311,58.0045 80.3511,58.5259C 80.8724,59.0472 82.1524,59.2045 84.1938,58.9925L 88.8791,58.4939C 88.8791,58.4939 87.2471,87.1005 87.9417,87.9165C 88.3578,88.4165 100.915,87.9445 101.247,87.1045C 102.083,84.9885 100.598,74.4205 99.4018,66.9912L 94.4018,62.9925L 93.2911,65.8819L 91.9578,64.1032L 93.7351,60.9925L 98.5898,62.1245C 98.3098,60.5032 98.1244,59.4925 98.1244,59.4925L 103.62,58.9925C 105.911,58.7859 107.422,58.3592 108.151,57.7139C 108.878,57.0685 110.59,50.0619 109.806,49.1872 Z " Margin="78.234,12.282,85.765,27.717" UseLayoutRounding="False"/>
+        	</Grid>
+        </Viewbox>
+        <Viewbox x:Name="viewbox" Height="72" Canvas.Left="166" Canvas.Top="375" Width="196" Visibility="Collapsed">
+        	<Grid Height="110.091899871826" Width="305">
+        		<Path Width="304.762" Height="106.081" Stretch="Fill" Fill="#FF4C3C31" Data="F1 M 273.578,118.876C 253.133,126.455 227.289,136.076 220.485,94.52C 215.171,62.056 222.479,29.576 243.633,23.3867C 251.633,21.0467 264.377,18.2733 271.901,23.2213C 277.989,27.2227 301.07,29.144 308.545,26.064C 316.315,22.8693 415.705,29.016 423.599,26.8587C 434.245,23.9573 444.955,22.66 455.726,22.5973C 474.362,22.472 502.854,10.264 517.234,35.0533C 524.474,47.5333 524.81,73.008 521.771,89.2973C 514.305,129.368 471.518,125.665 454.083,124.167C 429.33,122.028 313.775,110.407 288.827,114.172C 284.507,114.825 279.25,116.772 273.578,118.876 Z " Margin="0,4.091,0,-0.092" UseLayoutRounding="False"/>
+        		<Path Width="297.69" Height="101.684" Stretch="Fill" Fill="#FF111213" Data="F1 M 512.224,43.7823C 498.429,20.3236 471.404,20.8063 453.526,20.9209C 443.196,20.9823 432.918,22.2143 422.706,24.9569C 415.134,26.9956 320.862,26.5556 311.554,27.8889C 303.956,28.9769 279.461,24.8889 273.622,21.1036C 266.404,16.4182 254.057,19.7343 246.341,21.5409C 222.986,27.0222 217.033,59.5663 222.986,89.8929C 231.356,132.513 255.208,120.248 274.82,113.069C 277.068,112.254 279.716,111.149 281.792,110.454L 288.3,102.252L 287.369,94.7729L 297.133,90.6609L 296.666,85.9849L 298.758,91.0356L 290.857,94.0303L 287.601,109.334C 311.536,105.777 428.409,117.033 452.153,119.054C 461.133,119.821 479.3,119.713 493.292,114.938L 489.573,107.088L 476.789,112.29L 471.524,102.818L 477.098,108.306L 484.846,105.312L 491.044,105.808L 496.934,110.794L 496.081,111.8C 505.912,107.066 514.046,98.5662 516.882,83.5676C 519.794,68.1516 519.172,55.5943 512.224,43.7823 Z " Margin="2.015,3.275,4.985,4.724" UseLayoutRounding="False"/>
+        		<Path Width="296.657" Height="100.305" Stretch="Fill" Fill="#FF847160" Data="F1 M 518.161,39.544C 513.669,0.159988 433.229,19.8973 423.016,22.6507C 419.32,23.6427 276.271,18.836 273.931,18.7933C 261.12,18.556 254.325,17.02 246.651,19.232C 226.359,25.092 219.351,55.4747 224.445,86.2066C 230.973,125.529 255.765,116.428 275.377,109.253C 277.624,108.433 279.779,107.66 281.855,106.961L 286.983,101.001L 285.743,93.0293L 296.588,89.5426L 297.519,85.552L 299.377,91.5333L 291.32,94.5253L 290.004,104.8C 313.937,101.241 428.516,112.239 452.263,114.26C 461.24,115.028 477.227,116.379 491.219,111.603L 487.948,105.993L 477.099,109.98L 471.831,100.509L 477.409,105.993L 485.159,103.003L 491.356,103.499L 497.243,108.483L 496.391,109.489C 506.221,104.752 514.356,96.2533 517.189,81.26C 520.104,65.8427 520.079,56.3453 518.161,39.544 Z " Margin="4.03,0,3.97,10" UseLayoutRounding="False"/>
+        		<Grid d:LayoutOverrides="Height">
+        			<TextBlock x:Name="AllStateScoreTextBlock" Foreground="White" FontSize="61.333" FontFamily="Poplar Std Black" Text="0" FontWeight="Bold" TextAlignment="Center" d:LayoutOverrides="Width" Margin="0,8,0,22"/>
+        		</Grid>
+        	</Grid>
+        </Viewbox>
+        <Canvas x:Name="next" Height="50" Canvas.Left="567" Canvas.Top="430" Width="50" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+        	<Canvas.RenderTransform>
+        		<CompositeTransform/>
+        	</Canvas.RenderTransform>
+        	<TheS_SperfGames_MayaTukky_Controls:ButtonCorrectUI x:Name="btn_Next"/>
         </Canvas>
     </Canvas>
 </navigation:Page>

@@ -1188,7 +1188,6 @@
         </Storyboard>
     </UserControl.Resources>
     <Canvas x:Name="LayoutRoot" Width="625" Height="488" Clip="M0,0 L625,0 L625,488 L0,488 z">
-        <Image Height="488" Source="/TotalScore;component/Piture/bg.jpg" Stretch="Fill" Width="625"/>
         <Canvas x:Name="Tukky_All" Height="3870" Width="1610" Canvas.Left="-381" Canvas.Top="-1856" RenderTransformOrigin="0.553,0.607" d:IsLocked="True">
             <Canvas.RenderTransform>
                 <CompositeTransform ScaleY="0.25" ScaleX="0.25"/>
@@ -2371,10 +2370,10 @@
             </Canvas>
 
         </Canvas>
-        <Canvas Height="211" Width="251" Canvas.Left="364" Canvas.Top="68">
+        <Canvas Height="211" Width="221" Canvas.Left="394" Canvas.Top="68">
 <!-- Layer 1/<Path> -->
-        	<Path Opacity="0.85" Fill="#fff6f7f7" Data="F1 M 239.182,0.000 L 10.913,0.000 C 4.886,0.000 0.000,5.372 0.000,12.000 L 0.000,164.527 C 0.000,171.155 4.886,176.527 10.913,176.527 L 167.784,176.527 C 177.590,183.580 182.997,194.005 174.739,209.287 L 197.062,176.527 L 239.182,176.527 C 245.208,176.527 250.095,171.155 250.095,164.527 L 250.095,12.000 C 250.095,5.372 245.208,0.000 239.182,0.000 Z" UseLayoutRounding="False"/>
-        	<TextBlock x:Name="txt_Word" Height="156" Canvas.Left="8" TextWrapping="Wrap" Text="Oh ! You are the winner. This reward already accept to you. Keep it and play again and again." Canvas.Top="8" Width="234" FontWeight="Bold" FontSize="16" FontFamily="Myriad Pro" Padding="35,10,20,10"/>
+        	<Path Opacity="0.85" Fill="#fff6f7f7" Data="F1 M 239.182,0.000 L 10.913,0.000 C 4.886,0.000 0.000,5.372 0.000,12.000 L 0.000,164.527 C 0.000,171.155 4.886,176.527 10.913,176.527 L 167.784,176.527 C 177.590,183.580 182.997,194.005 174.739,209.287 L 197.062,176.527 L 239.182,176.527 C 245.208,176.527 250.095,171.155 250.095,164.527 L 250.095,12.000 C 250.095,5.372 245.208,0.000 239.182,0.000 Z" UseLayoutRounding="False" Height="211" Stretch="Fill" Width="221"/>
+        	<TextBlock x:Name="txt_Word" Height="156" TextWrapping="Wrap" Text="Oh ! You are the winner. This reward already accept to you. Keep it and play again and again." Canvas.Top="8" Width="221" FontWeight="Bold" FontSize="16" FontFamily="Myriad Pro" Padding="35,10,20,10"/>
         </Canvas>
     </Canvas>
 </UserControl>

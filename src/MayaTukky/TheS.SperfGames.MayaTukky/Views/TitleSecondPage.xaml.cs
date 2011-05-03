@@ -15,6 +15,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class TitleSecondPage : Page
     {
+        public static event EventHandler NextPage;
         private const float beginTimeVoodoo3 = 12.1f;
         private const float beginTimeVoodoo2 = 17.4f;
         private const float beginTimeVoodoo1 = 15.8f;
@@ -37,6 +38,16 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             SB2_Ex2.Begin();
             SB2_Ex2.Completed += new EventHandler(SB2_Ex2_Completed);
+            btn_NextStage.MouseLeftButtonDown += new MouseButtonEventHandler(btn_NextStage_MouseLeftButtonDown);
+        }
+
+        void btn_NextStage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var temp = NextPage;
+            if (temp != null)
+            {
+                temp(null,null);
+            }
         }
 
         private void SB2_Ex2_Completed(object sender, EventArgs e)

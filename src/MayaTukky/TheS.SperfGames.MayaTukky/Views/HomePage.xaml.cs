@@ -15,6 +15,8 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class HomePage : Page
     {
+        public static event EventHandler NextPage;
+
         public HomePage()
         {
             InitializeComponent();
@@ -42,6 +44,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             SB2_Family_Move.RepeatBehavior = RepeatBehavior.Forever;
             SB2_Online_Move.RepeatBehavior = RepeatBehavior.Forever;
 
+            StartPlay();
             if (AutoPlay)
             {
                 StartPlay();
@@ -50,6 +53,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private void bT_Single_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            var tempt = NextPage;
+            if (tempt != null)
+            {
+                tempt(null, null);
+            }
+
             EventHandler temp = NextStage;
             if (temp != null)
             {

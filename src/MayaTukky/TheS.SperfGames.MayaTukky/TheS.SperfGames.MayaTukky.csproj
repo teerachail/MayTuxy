@@ -84,6 +84,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit" />
+    <Reference Include="System.Windows.Controls.Toolkit.Internals" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
@@ -247,6 +249,9 @@
     <Compile Include="Models\CupItems.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="QuestionRow.cs" />
+    <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
+      <DependentUpon>SampleDataSource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SwapHelper.cs" />
     <Compile Include="SwapSequence.cs" />
     <Compile Include="TimeCombo.cs" />
@@ -275,11 +280,17 @@
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\InviteFriendsPage.xaml.cs">
+      <DependentUpon>InviteFriendsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoadPage.xaml.cs">
       <DependentUpon>LoadPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainTitle.xaml.cs">
       <DependentUpon>MainTitle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResultAppoRewardPage.xaml.cs">
+      <DependentUpon>ResultAppoRewardPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SecondStatePage.xaml.cs">
       <DependentUpon>SecondStatePage.xaml</DependentUpon>
@@ -302,6 +313,9 @@
     <Compile Include="Views\TotalScorePage.xaml.cs">
       <DependentUpon>TotalScorePage.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\TrophiesPage.xaml.cs">
+      <DependentUpon>TrophiesPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -469,6 +483,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\BannerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -485,11 +503,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\InviteFriendsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainTitle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ResultAppoRewardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -521,6 +547,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\TrophiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Resource Include="Assets\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -542,8 +572,24 @@
       <SubType>Designer</SubType>
     </Page>
     <Resource Include="Assets\Images\logo_TOT.png" />
+    <BlendEmbeddedFont Include="Fonts\tahoma.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\tahomabd.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image01.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image02.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image03.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image04.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image05.png" />
   </ItemGroup>
   <ItemGroup>
+    <DesignTimeOnly Include="SampleData\SampleDataSource\SampleDataSource.xsd" />
     <Resource Include="Assets\Fonts\Tukky Font.ttf" />
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
@@ -566,6 +612,35 @@
     <Content Include="Assets\CupStyles\TriangleCup_2.txt" />
     <Content Include="Assets\CupStyles\TriangleCup_3.txt" />
     <Content Include="Assets\CupStyles\TriangleCup_4.txt" />
+    <Resource Include="Assets\Images\Scroll2.png" />
+    <Resource Include="Assets\Images\GobinCard.png" />
+    <Resource Include="Assets\Images\GolemCard.png" />
+    <Resource Include="Assets\Images\HeimdellCard.png" />
+    <Resource Include="Assets\Images\HerbalistsCard.png" />
+    <Resource Include="Assets\Images\KnightCard.png" />
+    <Resource Include="Assets\Images\OdinCard.png" />
+    <Resource Include="Assets\Images\PriestCard.png" />
+    <Resource Include="Assets\Images\SorcererFirstCard.png" />
+    <Resource Include="Assets\Images\SorcererSecondCard.png" />
+    <Resource Include="Assets\Images\SorcererThirdCard.png" />
+    <Resource Include="Assets\Images\ThorCard.png" />
+    <Resource Include="Assets\Images\ToadCard.png" />
+    <Resource Include="Assets\Images\TreeCard.png" />
+    <Resource Include="Assets\Images\TribeCard.png" />
+    <Resource Include="Assets\Images\WolfCard.png" />
+    <Resource Include="Assets\Images\AstrologerCard.png" />
+    <Resource Include="Assets\Images\BerserkCard.png" />
+    <Resource Include="Assets\Images\CrowCard.png" />
+    <Resource Include="Assets\Images\GhostCard.png" />
+    <Resource Include="Assets\Images\PercentileEng.png" />
+    <Resource Include="Assets\Images\ApEng.png" />
+    <Resource Include="Assets\Images\HpEng.png" />
+    <Resource Include="Assets\Images\AppoFrame.png" />
+    <Resource Include="Assets\Images\ApHp.png" />
+    <Resource Include="Assets\Images\Monster.png" />
+    <Resource Include="Assets\Images\Poison.png" />
+    <Resource Include="Assets\Images\Voodoo.png" />
+    <Resource Include="Assets\Images\Scroll.png" />
     <Resource Include="Assets\Images\logo.png" />
     <Resource Include="Assets\Images\Box.png" />
     <Resource Include="Assets\Images\BgSmoke.jpg" />

@@ -12,10 +12,10 @@
         <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}" Margin="0" Background="White" BorderBrush="{x:Null}">
 
             <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
-                              Source="/FirstStatePage" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed" BorderThickness="1">
+                              Source="/LoadPage" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed" BorderThickness="1">
                 <navigation:Frame.UriMapper>
                   <uriMapper:UriMapper>
-                        <uriMapper:UriMapping Uri="" MappedUri="/Views/FirstStatePage.xaml"/>
+                        <uriMapper:UriMapping Uri="" MappedUri="/Views/LoadPage.xaml"/>
                     <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
                   </uriMapper:UriMapper>
                 </navigation:Frame.UriMapper>
@@ -38,7 +38,7 @@
                 <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
 
                     <HyperlinkButton Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/FirstStatePage" TargetName="ContentFrame" Content="FirstStatePage"/>
+                                     NavigateUri="/LoadPage" TargetName="ContentFrame" Content="LoadPage"/>
 									 
                     <Rectangle Style="{StaticResource DividerStyle}"/>
                     <HyperlinkButton Style="{StaticResource LinkStyle}" 

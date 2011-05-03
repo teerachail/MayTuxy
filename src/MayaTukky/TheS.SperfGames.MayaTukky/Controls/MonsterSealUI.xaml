@@ -293,7 +293,7 @@
 
 		<!-- For questions, contact Mike Swanson: http://www.mikeswanson.com/XAMLExport -->
 
-        <Canvas Width="111.407" Height="88.109" Canvas.Top="10" Canvas.Left="-5">
+        <Canvas Width="111.407" Height="88.109" Canvas.Top="10" Canvas.Left="-5" Visibility="Collapsed">
 
         	<Canvas>
 
@@ -320,6 +320,9 @@
 			xmlns="http://schemas.microsoft.com/client/2007"
 			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="59.416" Height="64.680"
   d:LayoutOverrides="Margin" Canvas.Left="20" Canvas.Top="19">
+			<Canvas.Effect>
+				<DropShadowEffect BlurRadius="0" Direction="240"/>
+			</Canvas.Effect>
 
 			<Canvas Height="65" Width="59">
 

@@ -23,14 +23,24 @@ namespace TheS.SperfGames.MayaTukky
             InitializeComponent();
 
             _pages = new string[]{
+                "/HomePage",
+                "/TitleFirstPage",
+                "/FirstStatePage",
                 "/ResultScorePage",
+                "/TitleSecondPage",
                 "/SecondStatePage",
                 "/ResultScorePage",
+                "/TitleThirdPage",
                 "/ThirdStatePage",
                 "/ResultScorePage",
                 "/TotalScorePage"
-            }; 
+            };
 
+            Views.LoadPage.NextPage += new EventHandler(NavigationPage);
+            Views.HomePage.NextPage += new EventHandler(NavigationPage);
+            Views.TitleFirstPage.NextPage += new EventHandler(NavigationPage);
+            Views.TitleSecondPage.NextPage += new EventHandler(NavigationPage);
+            Views.TitleThirdPage.NextPage += new EventHandler(NavigationPage);
             Views.FirstStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.SecondStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.ThirdStatePage.GameFinish += new EventHandler(NavigationPage);

@@ -10,26 +10,35 @@
            d:DesignWidth="625" d:DesignHeight="488"
            Title="MainTitle Page">
     <Canvas x:Name="LayoutRoot" Clip="M0.5,0.5 L624.5,0.5 L624.5,487.5 L0.5,487.5 z">
-    	<Image Height="488" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/BgSmoke.jpg" Stretch="Fill" Width="625"/>
-    	<TheS_SperfGames_MayaTukky_Controls:GhostDoorUI x:Name="door" RenderTransformOrigin="0.5,0.5" Canvas.Top="-52" Canvas.Left="-4">
-    		<TheS_SperfGames_MayaTukky_Controls:GhostDoorUI.RenderTransform>
-    			<CompositeTransform ScaleX="0.7" ScaleY="0.75"/>
-    		</TheS_SperfGames_MayaTukky_Controls:GhostDoorUI.RenderTransform>
-    	</TheS_SperfGames_MayaTukky_Controls:GhostDoorUI>
-    	<Image Height="488" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Box.png" Stretch="Fill" Width="625" RenderTransformOrigin="0.5,0.5" Canvas.Top="6">
-    		<Image.RenderTransform>
-    			<CompositeTransform ScaleX="1.5" ScaleY="1.4"/>
-    		</Image.RenderTransform>
-    	</Image>
-    	<TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI x:Name="tukky" Canvas.Left="106" Canvas.Top="12" RenderTransformOrigin="0.5,0.5">
-    		<TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI.RenderTransform>
-    			<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
-    		</TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI.RenderTransform>
-    	</TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI>
-    	<TheS_SperfGames_MayaTukky_Controls:AutoCupUI x:Name="cup" Canvas.Left="184" Canvas.Top="262" RenderTransformOrigin="0.5,0.5">
-    		<TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
-    			<CompositeTransform ScaleX="0.8" ScaleY="0.75"/>
-    		</TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
-    	</TheS_SperfGames_MayaTukky_Controls:AutoCupUI>
+    	<Grid Height="546" Canvas.Left="-4" Canvas.Top="-52" Width="629">
+    		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/BgSmoke.jpg" Stretch="Fill" Margin="4,52,0,6"/>
+    		<TheS_SperfGames_MayaTukky_Controls:GhostDoorUI x:Name="door" RenderTransformOrigin="0.5,0.5" Height="Auto" Margin="0,0,4,58" Width="Auto">
+    			<TheS_SperfGames_MayaTukky_Controls:GhostDoorUI.RenderTransform>
+    				<CompositeTransform ScaleX="0.7" ScaleY="0.75"/>
+    			</TheS_SperfGames_MayaTukky_Controls:GhostDoorUI.RenderTransform>
+    		</TheS_SperfGames_MayaTukky_Controls:GhostDoorUI>
+    		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Box.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Margin="4,58,0,0">
+    			<Image.RenderTransform>
+    				<CompositeTransform ScaleX="1.5" ScaleY="1.4"/>
+    			</Image.RenderTransform>
+    		</Image>
+    		<TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI x:Name="tukky" RenderTransformOrigin="0.5,0.5" Height="Auto" Margin="110,64,119,82" Width="Auto">
+    			<TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI.RenderTransform>
+    				<CompositeTransform ScaleX="0.7" ScaleY="0.7"/>
+    			</TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI.RenderTransform>
+    		</TheS_SperfGames_MayaTukky_Controls:TukkyCoverUI>
+    		<TheS_SperfGames_MayaTukky_Controls:AutoCupUI x:Name="cup" RenderTransformOrigin="0.5,0.5" Margin="188,0,189,152" VerticalAlignment="Bottom" d:LayoutOverrides="Width">
+    			<TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
+    				<CompositeTransform ScaleX="0.8" ScaleY="0.75"/>
+    			</TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
+    		</TheS_SperfGames_MayaTukky_Controls:AutoCupUI>
+    		<Canvas x:Name="NextButton" Height="50" Margin="290,0,289,6" VerticalAlignment="Bottom">
+    			<TheS_SperfGames_MayaTukky_Controls:ButtonCorrectUI/>
+    		</Canvas>
+    		<Canvas Height="95" Margin="134,66,135,0" VerticalAlignment="Top">
+    			<Path Opacity="0.85" Fill="#fff6f7f7" Data="F1 M367.3739,0 L21.180788,0 C7.0254979,1.110223E-15 -0.54023314,11.070518 0,29.71269 L0,112.02844 C0.54016197,127.67999 4.8639569,138.01248 20.640379,139.52699 C20.640379,139.52699 367.3739,139.52699 367.3739,139.52699 C383.69092,140.22516 388.01416,131.37007 389.095,114.24253 L389.095,28.236635 C389.095,21.608631 388.01419,0 367.3739,0 z" UseLayoutRounding="False" Height="94.552" Width="360.025" Stretch="Fill"/>
+    			<TextBlock x:Name="txt_Block" Height="72" TextWrapping="Wrap" Text="lol You spin my head right round right rounf when you go down when yoou go down down !@#$%^!@#$%^&amp;" Canvas.Top="11" Width="330" FontSize="13.333" FontWeight="Bold" Padding="8,4,8,2" Canvas.Left="17"/>
+    		</Canvas>
+    	</Grid>
     </Canvas>
 </navigation:Page>

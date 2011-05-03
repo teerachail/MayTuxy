@@ -41,7 +41,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             _clound = new CloudUI();
             LayoutRoot.Children.Add(_clound);
 
-            poisonSeal.PlayCompleted += new EventHandler(poisonSeal_PlayCompleted);
+            //poisonSeal.PlayCompleted += new EventHandler(poisonSeal_PlayCompleted);
             Sb_Result.Completed += new EventHandler(Sb_Result_Completed);
             _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
             btn_Next.MouseLeftButtonDown += new MouseButtonEventHandler(btn_Next_MouseLeftButtonDown);
@@ -75,8 +75,8 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 foreach (var item in GlobalScore.ThirdItemsFound)
                 {
-                    (thirdCollection.LayoutRoot.FindName(item) as Canvas)
-                        .Visibility = System.Windows.Visibility.Visible;
+                    //(thirdCollection.LayoutRoot.FindName(item) as Canvas)
+                    //    .Visibility = System.Windows.Visibility.Visible;
                 }
             }
             else if (GlobalScore.SecondItemsFound.Count != EmptyScore)
@@ -89,8 +89,8 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 foreach (var item in GlobalScore.SecondItemsFound)
                 {
-                    (secondCollection.LayoutRoot.FindName(item) as Canvas)
-                        .Visibility = System.Windows.Visibility.Visible;
+                    //(secondCollection.LayoutRoot.FindName(item) as Canvas)
+                    //    .Visibility = System.Windows.Visibility.Visible;
                 }
             }
             else
@@ -103,8 +103,8 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 foreach (var item in GlobalScore.FirstItemsFound)
                 {
-                    (firstCollection.LayoutRoot.FindName(item) as Canvas)
-                        .Visibility = System.Windows.Visibility.Visible;
+                    //(firstCollection.LayoutRoot.FindName(item) as Canvas)
+                    //    .Visibility = System.Windows.Visibility.Visible;
                 }
             }
 
@@ -126,7 +126,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private void Sb_CloudOut_Completed(object sender, EventArgs e)
         {
-            poisonSeal.StartPlay();
+            //poisonSeal.StartPlay();
             Sb_Result.Begin();
         }
 
@@ -137,7 +137,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private void poisonSeal_PlayCompleted(object sender, EventArgs e)
         {
-            poisonSeal.StartPlay();
+            //poisonSeal.StartPlay();
         }
 
         private void calculateGameScoreRunner(string objectName, int keyFrame, int scoreValue)

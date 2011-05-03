@@ -15,6 +15,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class TitleThirdPage : Page
     {
+        public static event EventHandler NextPage;
         private const float beginTimeMonster1 = 14;
         private const float beginTimeMonster2 = 8.7f;
         private const float beginTimeMonster3 = 12.5f;
@@ -32,6 +33,16 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             SB3_Ex3.Begin();
             SB3_Ex3.Completed += new EventHandler(SB3_Ex3_Completed);
+            btn_NextStage.MouseLeftButtonDown += new MouseButtonEventHandler(btn_NextStage_MouseLeftButtonDown);
+        }
+
+        void btn_NextStage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var temp = NextPage;
+            if (temp != null)
+            {
+                temp(null,null);
+            }
         }
 
         private void SB3_Ex3_Completed(object sender, EventArgs e)

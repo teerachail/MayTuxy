@@ -41,22 +41,22 @@ namespace TheS.SperfGames.MayaTukky.Views
             LayoutRoot.Children.Add(_clound);
 
 
-            poisonSeal.PlayCompleted += (s, e) =>
-            {
-                poisonSeal.StartPlay();
-            };
-            voodooSeal.PlayCompleted += (s, e) =>
-            {
-                voodooSeal.StartPlay();
-            };
-            monsterSeal.PlayCompleted += (s, e) =>
-            {
-                monsterSeal.StartPlay();
-            };
+            //poisonSeal.PlayCompleted += (s, e) =>
+            //{
+            //    poisonSeal.StartPlay();
+            //};
+            //voodooSeal.PlayCompleted += (s, e) =>
+            //{
+            //    voodooSeal.StartPlay();
+            //};
+            //monsterSeal.PlayCompleted += (s, e) =>
+            //{
+            //    monsterSeal.StartPlay();
+            //};
 
             SB_Calculate.Completed += new EventHandler(SB_Calculate_Completed);
-            SB_Fusion.Completed += new EventHandler(SB_Fusion_Completed);
-            SB_CloudOut.Completed += new EventHandler(SB_CloudOut_Completed);
+            //SB_Fusion.Completed += new EventHandler(SB_Fusion_Completed);
+            //SB_CloudOut.Completed += new EventHandler(SB_CloudOut_Completed);
             _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
 
             _clound.Sb_CloudOut.Begin();
@@ -84,9 +84,9 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             SB_Calculate.Begin();
 
-            poisonSeal.StartPlay();
-            voodooSeal.StartPlay();
-            monsterSeal.StartPlay();
+            //poisonSeal.StartPlay();
+            //voodooSeal.StartPlay();
+            //monsterSeal.StartPlay();
         }
 
         private void SB_CloudOut_Completed(object sender, EventArgs e)
@@ -100,12 +100,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private void SB_Fusion_Completed(object sender, EventArgs e)
         {
-            SB_CloudOut.Begin();
+            //SB_CloudOut.Begin();
         }
 
         private void SB_Calculate_Completed(object sender, EventArgs e)
         {
-            SB_Fusion.Begin();
+            //SB_Fusion.Begin();
         }
 
         private void calculateGameScoreRunner(string objectName,int keyFrame,int scoreValue)
