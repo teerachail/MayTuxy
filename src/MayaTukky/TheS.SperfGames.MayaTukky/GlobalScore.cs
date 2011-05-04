@@ -36,9 +36,9 @@ namespace TheS.SperfGames.MayaTukky
 
         static GlobalScore()
         {
-            FirstScore = 100;
-            SecondScore= 100;
-            ThirdScore = 100;
+            FirstScore = 56476;
+            SecondScore= 13161;
+            ThirdScore = 21341;
         }
     }
 }

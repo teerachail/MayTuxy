@@ -105,6 +105,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppoTable.cs" />
+    <Compile Include="CardInformation.cs" />
     <Compile Include="Controls\AutoCupUI.xaml.cs">
       <DependentUpon>AutoCupUI.xaml</DependentUpon>
     </Compile>

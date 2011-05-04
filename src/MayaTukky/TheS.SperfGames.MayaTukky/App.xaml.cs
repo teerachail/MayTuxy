@@ -24,7 +24,7 @@ namespace TheS.SperfGames.MayaTukky
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            this.RootVisual = new Views.TotalScorePage();
+            this.RootVisual = new Views.ResultScorePage();
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
