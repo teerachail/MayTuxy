@@ -65,47 +65,29 @@ namespace TheS.SperfGames.MayaTukky.Views
             int maximumCombo = 0;
 
             const int EmptyScore = 0;
-            if (GlobalScore.ThirdItemsFound.Count != EmptyScore)
+            if (GlobalScore.ThirdCompleted)
             {
                 // ผ่านเกม State 3
                 VisualStateManager.GoToState(this,ThirdFinished , false);
                 incorrectAnswerCount = GlobalScore.ThirdIncorrectAnswer;
                 correctAnswerCount = GlobalScore.ThirdCorrectAnswer;
                 maximumCombo = GlobalScore.ThirdMaximumCombo;
-
-                foreach (var item in GlobalScore.ThirdItemsFound)
-                {
-                    //(thirdCollection.LayoutRoot.FindName(item) as Canvas)
-                    //    .Visibility = System.Windows.Visibility.Visible;
-                }
             }
-            else if (GlobalScore.SecondItemsFound.Count != EmptyScore)
+            else if (GlobalScore.SecondCompleted)
             {
                 // ผ่านเกม State 2
                 VisualStateManager.GoToState(this,SecondFinished , false);
                 incorrectAnswerCount = GlobalScore.SecondIncorrectAnswer;
                 correctAnswerCount = GlobalScore.SecondCorrectAnswer;
                 maximumCombo = GlobalScore.SecondMaximumCombo;
-
-                foreach (var item in GlobalScore.SecondItemsFound)
-                {
-                    //(secondCollection.LayoutRoot.FindName(item) as Canvas)
-                    //    .Visibility = System.Windows.Visibility.Visible;
-                }
             }
-            else
+            else if(GlobalScore.FirstCompleted)
             {
                 // ผ่านเกม State 1
                 VisualStateManager.GoToState(this, FirstFinished, false);
                 incorrectAnswerCount = GlobalScore.FirstIncorrectAnswer;
                 correctAnswerCount = GlobalScore.FirstCorrectAnswer;
                 maximumCombo = GlobalScore.FirstMaximumCombo;
-
-                foreach (var item in GlobalScore.FirstItemsFound)
-                {
-                    //(firstCollection.LayoutRoot.FindName(item) as Canvas)
-                    //    .Visibility = System.Windows.Visibility.Visible;
-                }
             }
 
             calculateGameScoreRunner(FalseDok, KeyFrame, incorrectAnswerCount);
