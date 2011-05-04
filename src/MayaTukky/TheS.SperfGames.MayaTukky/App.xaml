@@ -133,8 +133,9 @@
     				</VisualStateGroup>
     			</VisualStateManager.VisualStateGroups>
     			<Grid>
-    				<Path Width="36.152" Stretch="Fill" Fill="Black" Data="F1 M 394.666,222.715C 388.391,222.715 383.304,217.768 383.304,211.668C 383.304,205.566 388.391,200.62 394.666,200.62C 400.942,200.62 406.028,205.566 406.028,211.668C 406.028,217.768 400.942,222.715 394.666,222.715M 394.666,194.092C 384.684,194.092 376.59,201.962 376.59,211.668C 376.59,221.372 384.684,229.241 394.666,229.241C 404.65,229.241 412.743,221.372 412.743,211.668C 412.743,201.962 404.65,194.092 394.666,194.092" HorizontalAlignment="Left" UseLayoutRounding="False" d:LayoutOverrides="VerticalAlignment" Opacity="0.4" Margin="0,0,0,-0.148"/>
-    				<Path Stretch="Fill" Fill="#FF38251B" Data="F1 M 394.666,202.504C 389.462,202.504 385.24,206.605 385.24,211.668C 385.24,216.73 389.462,220.831 394.666,220.831C 399.873,220.831 404.093,216.73 404.093,211.668C 404.093,206.605 399.873,202.504 394.666,202.504" UseLayoutRounding="False" d:LayoutOverrides="VerticalAlignment" Margin="8.834,8.327,8.313,8.346"/>
+    				<Path Width="36.152" Stretch="Fill" Fill="Black" Data="F1 M 394.666,222.715C 388.391,222.715 383.304,217.768 383.304,211.668C 383.304,205.566 388.391,200.62 394.666,200.62C 400.942,200.62 406.028,205.566 406.028,211.668C 406.028,217.768 400.942,222.715 394.666,222.715M 394.666,194.092C 384.684,194.092 376.59,201.962 376.59,211.668C 376.59,221.372 384.684,229.241 394.666,229.241C 404.65,229.241 412.743,221.372 412.743,211.668C 412.743,201.962 404.65,194.092 394.666,194.092" HorizontalAlignment="Left" UseLayoutRounding="False" d:LayoutOverrides="VerticalAlignment" Opacity="0.4" Margin="0,0,0,-0.148" Visibility="Collapsed"/>
+    				<Path Stretch="Fill" Fill="#FF38251B" Data="F1 M 394.666,202.504C 389.462,202.504 385.24,206.605 385.24,211.668C 385.24,216.73 389.462,220.831 394.666,220.831C 399.873,220.831 404.093,216.73 404.093,211.668C 404.093,206.605 399.873,202.504 394.666,202.504" UseLayoutRounding="False" d:LayoutOverrides="VerticalAlignment" Margin="8.834,8.327,8.313,8.346" Visibility="Collapsed"/>
+    				<Rectangle Fill="#FF38251B" Margin="10,0" RadiusY="3" RadiusX="3"/>
     			</Grid>
     		</Grid>
     	</ControlTemplate>
@@ -815,7 +816,23 @@
     			<Setter.Value>
     				<ControlTemplate TargetType="Button">
     					<Grid>
-    						<Grid>
+    						<VisualStateManager.VisualStateGroups>
+    							<VisualStateGroup x:Name="CommonStates">
+    								<VisualState x:Name="Normal"/>
+    								<VisualState x:Name="MouseOver">
+    									<Storyboard>
+    										<DoubleAnimation Duration="0" To="1.2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+    										<DoubleAnimation Duration="0" To="1.2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+    									</Storyboard>
+    								</VisualState>
+    								<VisualState x:Name="Pressed"/>
+    								<VisualState x:Name="Disabled"/>
+    							</VisualStateGroup>
+    						</VisualStateManager.VisualStateGroups>
+    						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+    							<Grid.RenderTransform>
+    								<CompositeTransform/>
+    							</Grid.RenderTransform>
     							<Viewbox>
     								<Grid Height="40.1289999932051" Width="65.7479999959469">
     									<Path Stretch="Fill" Fill="#D233302E" Data="F1 M 619.736,79.0421L 617.891,78.1341L 619.204,78.1341L 614.612,77.2101L 619.719,76.5341C 619.604,67.1461 618.876,57.6208 617.97,57.2501L 616.582,59.7608L 616.146,57.3821L 614.832,58.1755L 615.083,56.7301C 602.638,55.3861 557.992,55.6741 555.591,57.2501C 555.274,57.4581 555.004,58.3528 554.783,59.7355L 555.806,60.4541L 556.788,61.1475L 556.132,62.8355L 554.676,60.4488C 554.25,63.6261 554.023,68.7701 553.988,74.1261L 558.21,74.0381L 554.711,75.4915L 556.898,75.6248L 553.991,77.5328C 554.063,85.5848 554.56,93.2968 555.454,94.7875L 557.772,94.1968L 557.224,94.9915L 558.756,94.7928L 558.866,94.0675L 559.959,95.1235L 558.92,95.4661C 566.038,95.9835 583.13,96.1101 597.135,95.9181L 598.107,92.9741L 599.235,95.8875C 608.942,95.7328 616.756,95.4141 617.97,94.9675C 618.746,94.6808 619.234,91.8328 619.494,87.8181L 617.566,86.9928L 619.547,86.9408C 619.678,84.5688 619.736,81.8475 619.736,79.0421 Z " UseLayoutRounding="False" Margin="0,0,0.252,-0.129"/>
