@@ -61,14 +61,15 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             _clound.Sb_CloudOut.Begin();
 
-            const int TenKeyFrame = 10;
+            const int TenKeyFrame = 8;
             const int EighteenKeyFrame = 18;
 
-            const string FirstScore = "DokPoisonScoreValue";
-            const string SecondScore = "DokVoodooScoreValue";
-            const string ThirdScore = "DokMonsterScoreValue";
-            const string SumScore = "DokSumScoreValue";
-            const string AllScore = "DokAllScoreValue";
+            const string FirstScore = "PoisonDiscreteObjectKeyFrameScore";
+            const string SecondScore = "VoodooDiscreteObjectKeyFrameScore";
+            const string ThirdScore = "MonsterDiscreteObjectKeyFrameScore";
+
+            //const string SumScore = "DokSumScoreValue";
+            const string AllScore = "AllDiscreteObjectKeyFrameScore";
 
             calculateGameScoreRunner(FirstScore, TenKeyFrame, GlobalScore.FirstScore);
             calculateGameScoreRunner(SecondScore, TenKeyFrame, GlobalScore.SecondScore);
@@ -76,7 +77,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             int totalSocre = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
             calculateGameScoreRunner(AllScore, TenKeyFrame, totalSocre);
-            calculateGameScoreRunner(SumScore, EighteenKeyFrame, totalSocre);
+            //calculateGameScoreRunner(SumScore, EighteenKeyFrame, totalSocre);
             
         }
 

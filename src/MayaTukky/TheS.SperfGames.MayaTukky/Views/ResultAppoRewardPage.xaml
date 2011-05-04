@@ -16,7 +16,637 @@
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="CloudOutStoryboard"/>
-	</navigation:Page.Resources>
+        <Storyboard x:Name="SB1_Bite">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0011250019306316972"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.40000000596046448"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.00084375147707760334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.30000001192092896"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.00098437664564698935"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.34999999403953552"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.00084375147707760334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.30000001192092896"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0042188465595245361"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0042188465595245361"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0039375065825879574"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.10633688420057297"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.3999999761581421"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0039375065825879574"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.10633688420057297"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.3999999761581421"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0021094232797622681"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687949679791927"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.699999988079071"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500515915453434"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.800000011920929"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500515915453434"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.800000011920929"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.699999988079071"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.699999988079071"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0033749344293028116"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2000000476837158"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0033749344293028116"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2000000476837158"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500038612633944"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.800000011920929"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500038612633944"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.800000011920929"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.699999988079071"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.699999988079071"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-99.299995422363281"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-99.299995422363281"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-101.09999847412109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-101.09999847412109"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.20000000298023224"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.20000000298023224"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.15000000596046448"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.15000000596046448"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.800000011920929"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.800000011920929"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0.800000011920929"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.89999997615814209"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.89999997615814209"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0.89999997615814209"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </navigation:Page.Resources>
     <Canvas>
     	<Grid x:Name="LayoutRoot" Height="488" Width="625">
     		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill"/>
@@ -111,5 +741,315 @@
 
     		</Canvas>
     	</Canvas>
+        <Canvas x:Name="Poision2_All" Height="928" Width="800" RenderTransformOrigin="1,0.776">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Canvas x:Name="Bomb_c1" Height="93" Width="94" Canvas.Left="124" Canvas.Top="616" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Canvas x:Name="Bomb_c1_Copy" Height="78" Width="91" Canvas.Top="15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.6" ScaleY="0.7"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="269.787"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                    <Path x:Name="bomb29" Fill="#FF949494" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+                    <Path x:Name="bomb30" Fill="#FFA5A5A5" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                </Canvas>
+                <Canvas x:Name="Bomb_c1sfdf" Height="78" Width="91" Canvas.Left="10" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.5" ScaleY="0.45"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-47.923"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                    <Path x:Name="bomb1" Fill="#FF949494" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+                    <Path x:Name="bomb2" Fill="#FFA5A5A5" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                </Canvas>
+            </Canvas>
+            <Canvas x:Name="Bomb_c2" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" Canvas.Left="611.5" Canvas.Top="580" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.4" ScaleY="0.3"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="20.613"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb7" Fill="#FF8C8C8C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+                <Path x:Name="bomb8" Fill="#FF9F9F9F" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb_c3" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" Canvas.Left="575" Canvas.Top="178" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.2" ScaleY="0.15"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="21.8"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb11" Fill="#FF9B9B9B" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+                <Path x:Name="bomb12" Fill="#FFBDBDBD" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+            <Canvas x:Name="Bomb_c4" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" Canvas.Left="223" Canvas.Top="134" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.35" ScaleY="0.3"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-31.541"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb13" Fill="#FFC9C9C9" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+                <Path x:Name="bomb14" Fill="Gainsboro" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb1" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="198" Canvas.Top="308">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy2" Fill="#FFADADAD" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy2" Fill="#FFD4D4D4" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy1" Fill="#FF9D9D9D" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy1" Fill="#FFD8D8D8" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy" Fill="#FFADADAD" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy" Fill="#FFD8D8D8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3" Fill="#FFA9A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb4" Fill="#FFD6D6D6" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy3" Fill="#FFBFBFBF" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy3" Fill="#FFD0D0D0" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb2" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="363" Canvas.Top="462" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-20.119"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy4" Fill="#FF828282" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy4" Fill="#FFADADAD" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy5" Fill="Gray" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy5" Fill="#FFA3A1A1" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy6" Fill="#FF8C8A8A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy6" Fill="#FFB1B1B1" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb5" Fill="#FF888A8C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb6" Fill="#FF9B9B9B" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy7" Fill="#FFB1B1B1" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy7" Fill="#FFC1C1C1" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb11" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="285" Canvas.Top="580" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.9"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-43"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy40" Fill="#FF8A8A8A" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy40" Fill="#FFB3B3B3" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy41" Fill="#FF828282" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy41" Fill="#FFABABAB" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy42" Fill="#FF7A7A7A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy42" Fill="#FFA3A3A3" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb31" Fill="#FF676767" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb32" Fill="#FF9B9B9B" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy43" Fill="#FF9B9B9B" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy43" Fill="#FFB9B7B7" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb3" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="456" Canvas.Top="629" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="27.741"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy8" Fill="#FF909090" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy8" Fill="#FF858585" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy9" Fill="#FF9A9898" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy9" Fill="DarkGray" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy10" Fill="#FF8C8C8C" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy10" Fill="#FFA3A2A2" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb9" Fill="#FF8E8E8E" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb10" Fill="#FFBBBBBB" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy11" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy11" Fill="#FFC7C7C7" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb4" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="191" Canvas.Top="539" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.75" ScaleY="0.7"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-20.119"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy12" Fill="#FFA3A2A2" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy12" Fill="#FFBBBBBB" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy13" Fill="#FF848484" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy13" Fill="#FFC3C3C3" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy14" Fill="#FFADADAD" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy14" Fill="#FFD0D0D0" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb15" Fill="#FF9B9A9A" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb16" Fill="#FFCBCBCB" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy15" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy15" Fill="#FFD0D0D0" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb6" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="369" Canvas.Top="228" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="12.896"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy20" Fill="#FF9F9F9F" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy20" Fill="#FFC1C1C1" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy21" Fill="#FF7E7E7E" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy21" Fill="#FFB7B7B7" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy22" Fill="#FF888686" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy22" Fill="#FFBBB8B8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb19" Fill="#FF6C6C6C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb20" Fill="#FF969696" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy23" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy23" Fill="#FFAFAFAF" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb5" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="317" Canvas.Top="664" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="4.758"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy16" Fill="#FF949494" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy16" Fill="#FFB7B7B7" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy17" Fill="#FF929292" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy17" Fill="#FFBBBBBB" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy18" Fill="#FF9A9A9A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy18" Fill="#FFAFAFAF" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb17" Fill="#FFA7A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb18" Fill="#FFB1B1B1" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy19" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy19" Fill="#FFB1B1B1" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb7" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="344" Canvas.Top="321" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-27.788"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy24" Fill="#FFADADAD" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy24" Fill="#FFCECECE" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy25" Fill="#FFA9A7A7" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy25" Fill="#FFBFBCBC" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy26" Fill="#FFB9B6B6" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy26" Fill="#FFD8D8D8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb21" Fill="#FFA7A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb22" Fill="#FFA7A7A7" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy27" Fill="#FFB9B6B6" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy27" Fill="#FFD8D8D8" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb8" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="484" Canvas.Top="310" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-29.247"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy28" Fill="#FF909090" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy28" Fill="#FFB9B9B9" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy29" Fill="#FFB1B1B1" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy29" Fill="#FFC1C1C1" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy30" Fill="#FFB3B2B2" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy30" Fill="#FFC9C9C9" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb23" Fill="#FF9B9B9B" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb24" Fill="#FFADADAD" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy31" Fill="#FFABABAB" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy31" Fill="#FFC5C5C5" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb9" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="596" Canvas.Top="513" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="17.471"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy32" Fill="#FFA1A1A1" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy32" Fill="#FFB1B1B1" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy33" Fill="#FF8C8C8C" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy33" Fill="#FFA5A4A4" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy34" Fill="#FF9D9D9D" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy34" Fill="#FFB3B3B3" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb25" Fill="#FF9A9A9A" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb26" Fill="DarkGray" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy35" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy35" Fill="#FFAFAFAF" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+            <Canvas x:Name="Bomb10" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="423" Canvas.Top="523" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-40.048"/>
+                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Path x:Name="bomb3_Copy36" Fill="#FF8E8E8E" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+                <Path x:Name="bomb4_Copy36" Fill="#FF989898" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy37" Fill="#FF8E8D8D" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+                <Path x:Name="bomb4_Copy37" Fill="#FFBFBFBF" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy38" Fill="#FFA3A3A3" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+                <Path x:Name="bomb4_Copy38" Fill="#FFB7B7B7" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb27" Fill="DarkGray" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+                <Path x:Name="bomb28" Fill="#FFC1C1C1" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+                <Path x:Name="bomb3_Copy39" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+                <Path x:Name="bomb4_Copy39" Fill="#FFB9B9B9" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+            </Canvas>
+
+        </Canvas>
     </Canvas>
 </navigation:Page>
