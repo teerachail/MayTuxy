@@ -12,11 +12,10 @@
 		<Storyboard x:Name="AppoSlideStoryboard">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="grid">
 				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-177"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-177"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-177"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
-		<Storyboard x:Name="CloudOutStoryboard"/>
-        <Storyboard x:Name="SB1_Bite">
+        <Storyboard x:Name="CloundBomberStoryboard">
             <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="0">
                     <DiscreteObjectKeyFrame.Value>
@@ -395,19 +394,19 @@
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.Opacity)">
@@ -419,31 +418,31 @@
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
@@ -642,12 +641,175 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0.89999997615814209"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="viewbox1">
+            	<DiscreteObjectKeyFrame KeyTime="0">
+            		<DiscreteObjectKeyFrame.Value>
+            			<Visibility>Visible</Visibility>
+            		</DiscreteObjectKeyFrame.Value>
+            	</DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="viewbox2">
+        		<DiscreteObjectKeyFrame KeyTime="0">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="AppoNameTextBlock">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Visible</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="viewbox3">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+        			<DiscreteObjectKeyFrame.Value>
+        				<Visibility>Collapsed</Visibility>
+        			</DiscreteObjectKeyFrame.Value>
+        		</DiscreteObjectKeyFrame>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </navigation:Page.Resources>
     <Canvas>
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="StarStates">
+    			<VisualState x:Name="OneStar">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="TwoStar">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="ThreeStar">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="FourStar">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon3">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="FiveStar">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon3">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon4">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    			<VisualState x:Name="NoneStar"/>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
     	<Grid x:Name="LayoutRoot" Height="488" Width="625">
     		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill"/>
     		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Scroll2.png" Stretch="Fill" Margin="8,-18,214,0"/>
@@ -669,7 +831,7 @@
     		<Viewbox Margin="116,87,309,81" >
     			<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/AppoFrame.png" Stretch="Fill" Height="392" Width="245"/>
     		</Viewbox>
-    		<Viewbox Width="55" Height="18" Canvas.Left="350.46" Canvas.Top="196.559" HorizontalAlignment="Left" Margin="145,97,0,0" VerticalAlignment="Top">
+    		<Viewbox x:Name="viewbox3" Width="55" Height="18" Canvas.Left="350.46" Canvas.Top="196.559" HorizontalAlignment="Left" Margin="145,97,0,0" VerticalAlignment="Top">
     			<Canvas Width="88.7656" Height="30.1042">
     				<Path Width="18.5821" Height="25.5861" Canvas.Left="49.3998" Canvas.Top="1.32552" Stretch="Fill" Fill="#FFEBEBE7" Data="F1 M 49.4401,26.8047C 49.2878,26.5586 49.6094,19.625 49.6979,16.0378C 49.7214,15.0625 49.7448,14.0872 49.7669,13.1133C 49.8386,10.0599 49.9115,7.00781 49.9844,3.95572C 50.0039,3.07942 50.0234,2.20181 50.0443,1.32552C 53.1523,1.53906 56.2813,1.5677 59.3724,1.95833C 62.1354,2.30859 66.3789,2.62891 67.4453,5.76172C 67.8464,6.94531 68.1081,8.31119 67.9193,9.53516C 67.0222,15.3099 62.3438,16.6784 60.8542,16.8255C 57.7656,17.1302 55.5547,16.2135 55.5547,16.2135C 55.7513,18.099 56.0807,19.9713 56.2083,21.8646C 56.2865,23.0391 56.6693,25.4544 55.5313,26.2786C 54.9597,26.6927 49.6341,27.1146 49.4401,26.8047 Z M 62.8294,10.5052C 63.4479,9.14713 62.6537,7.69791 61.4714,6.95703C 60.6602,6.45052 59.4232,6.58984 58.5156,6.60156C 57.6719,6.61458 56.8255,6.64063 55.9987,6.8125C 54.9922,7.02213 54.9688,8.13802 54.9688,8.99348C 54.974,9.21875 54.9831,9.63281 54.9948,10.237L 55.069,13.7669L 57.9779,12.9427C 58.8789,12.6263 59.78,12.3333 60.668,11.9792C 61.3503,11.707 62.2656,11.4557 62.6784,10.7865C 62.7344,10.6927 62.7839,10.6003 62.8294,10.5052 Z "/>
     				<Path Width="18.5841" Height="25.5861" Canvas.Left="28.7246" Canvas.Top="1.32552" Stretch="Fill" Fill="#FFEBEBE7" Data="F1 M 28.7643,26.8047C 28.6133,26.5586 28.9349,19.625 29.0222,16.0378C 29.1185,12.0104 29.2136,7.98306 29.3099,3.95572C 29.3294,3.07942 29.3503,2.20181 29.3711,1.32552C 32.4792,1.53906 35.6068,1.5677 38.6992,1.95833C 41.4609,2.30859 45.7044,2.62891 46.7708,5.76172C 47.1732,6.94531 47.4349,8.31119 47.2461,9.53516C 46.3464,15.3099 41.6706,16.6784 40.181,16.8255C 37.0912,17.1302 34.8815,16.2135 34.8815,16.2135C 35.0781,18.099 35.4076,19.9713 35.5352,21.8646C 35.612,23.0391 35.9948,25.4544 34.8568,26.2786C 34.2852,26.6927 28.9597,27.1146 28.7643,26.8047 Z M 42.1563,10.5052C 42.7734,9.14713 41.9792,7.69791 40.7956,6.95703C 39.987,6.45052 38.7487,6.58984 37.8412,6.60156C 36.9987,6.61458 36.1523,6.64063 35.3255,6.8125C 34.319,7.02213 34.2943,8.13802 34.2943,8.99348C 34.2995,9.21875 34.3086,9.63281 34.319,10.237L 34.3945,13.7669L 37.3034,12.9427C 38.2044,12.6263 39.1068,12.3333 39.9948,11.9792C 40.6771,11.707 41.5925,11.4557 42.0039,10.7865C 42.0599,10.6927 42.1107,10.6003 42.1563,10.5052 Z "/>
@@ -677,6 +839,7 @@
     				<Path Width="24.7385" Height="27.9791" Canvas.Left="0" Canvas.Top="0.128429" Stretch="Fill" Fill="#FFEBEBE7" Data="F1 M 8.72397,0.41275C 8.987,0.0416565 15.1406,0 15.5026,0.490875C 16.1537,1.3815 16.6445,2.78906 17.1432,4.03384C 17.6315,5.28125 18.112,6.60938 18.5833,8.02734C 19.0521,9.4427 19.6862,11.3984 20.4909,13.8867L 24.7357,27.2838C 24.8698,27.7083 20.1055,28.3997 19.5573,27.974C 19.013,27.5417 18.5182,26.7122 18.0794,25.4648C 17.7136,24.444 16.1146,20.7083 15.4675,20.5716C 14.8138,20.4297 13.7539,20.3594 12.2708,20.3594C 10.7917,20.3594 9.71616,20.4297 9.05731,20.5716C 8.39584,20.7083 6.83075,24.444 6.46356,25.4648C 6.05469,26.651 5.57162,27.4792 5.04688,27.9375C 4.50781,28.3841 0,27.7669 0,27.4453C 0,26.5065 1.32553,21.9362 3.97006,13.7357C 6.61591,5.51822 8.20313,1.08072 8.72397,0.41275 Z M 14.694,15.2526C 14.6628,13.668 14.1276,11.8398 13.0859,9.75781C 12.4401,8.45052 11.9349,7.85025 11.569,7.92969C 11.5208,7.95052 11.4648,8.00391 11.4141,8.07813C 10.9688,8.78384 10.5091,10.4414 10.0078,13.0677C 9.87631,13.7982 9.77997,14.3411 9.71616,14.7018C 9.65366,15.069 9.62891,15.4362 9.64194,15.7799C 9.65366,16.125 9.68491,16.362 9.73959,16.4792C 9.78906,16.595 9.93359,16.7057 10.168,16.8281C 10.4011,16.9453 10.6393,17.0078 10.8841,17.0208C 11.1315,17.0417 11.5078,17.0443 12,17.0443C 12.9609,17.0443 13.6537,16.901 14.0833,16.6185C 14.513,16.3307 14.7136,15.8815 14.694,15.2526 Z "/>
     			</Canvas>
     		</Viewbox>
+    		<TextBlock x:Name="AppoNameTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="142,97,0,0" Foreground="#FFEBEBE7" FontFamily="Comic Sans MS" FontSize="16" Visibility="Collapsed"/>
     		<Viewbox x:Name="viewbox" Height="48" Margin="155,0,0,100" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="130">
     			<Grid Height="110.091899871826" Width="305">
     				<Path Width="304.762" Height="106.081" Stretch="Fill" Fill="#FF4C3C31" Data="F1 M 273.578,118.876C 253.133,126.455 227.289,136.076 220.485,94.52C 215.171,62.056 222.479,29.576 243.633,23.3867C 251.633,21.0467 264.377,18.2733 271.901,23.2213C 277.989,27.2227 301.07,29.144 308.545,26.064C 316.315,22.8693 415.705,29.016 423.599,26.8587C 434.245,23.9573 444.955,22.66 455.726,22.5973C 474.362,22.472 502.854,10.264 517.234,35.0533C 524.474,47.5333 524.81,73.008 521.771,89.2973C 514.305,129.368 471.518,125.665 454.083,124.167C 429.33,122.028 313.775,110.407 288.827,114.172C 284.507,114.825 279.25,116.772 273.578,118.876 Z " Margin="0,4.091,0,-0.092" UseLayoutRounding="False"/>
@@ -692,18 +855,335 @@
     				<Grid.RenderTransform>
     					<CompositeTransform/>
     				</Grid.RenderTransform>
-    				<Viewbox Height="152" VerticalAlignment="Top" >
-    					<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ThorCard.png" Stretch="Fill"/>
+    				<Viewbox x:Name="viewbox2" Height="152" VerticalAlignment="Top" >
+    					<Image x:Name="FirstImage" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ThorCard.png" Stretch="Fill"/>
     				</Viewbox>
     				<Viewbox Height="152" VerticalAlignment="Bottom" >
-    					<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/OdinCard.png" Stretch="Fill"/>
+    					<Image x:Name="SecondImage" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/OdinCard.png" Stretch="Fill"/>
     				</Viewbox>
     			</Grid>
     		</Grid>
+    		<Grid Height="27" Width="153" HorizontalAlignment="Left" Margin="142,0,0,157" VerticalAlignment="Bottom">
+    			<ed:RegularPolygon x:Name="regularPolygon" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Left" Margin="0,0,0,0.333" Visibility="Collapsed"/>
+    			<ed:RegularPolygon x:Name="regularPolygon1" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Left" Margin="32.348,0,0,0.333" Visibility="Collapsed"/>
+    			<ed:RegularPolygon x:Name="regularPolygon2" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" Margin="65.348,0,60.985,0.333" Visibility="Collapsed"/>
+    			<ed:RegularPolygon x:Name="regularPolygon3" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Right" Margin="0,0,29.985,0.333" Visibility="Collapsed"/>
+    			<ed:RegularPolygon x:Name="regularPolygon4" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Right" Margin="0,0,-0.015,0.333" Visibility="Collapsed"/>
+    		</Grid>
+    		<Viewbox x:Name="viewbox1" Visibility="Collapsed" Margin="-61,-95,129,-61" >
+    			<Canvas Height="928" RenderTransformOrigin="1,0.776" Width="800">
+    				<Canvas.RenderTransform>
+    					<TransformGroup>
+    						<ScaleTransform/>
+    						<SkewTransform/>
+    						<RotateTransform/>
+    						<TranslateTransform/>
+    					</TransformGroup>
+    				</Canvas.RenderTransform>
+    				<Canvas x:Name="Bomb_c1" Height="93" Width="94" RenderTransformOrigin="0.5,0.5" Canvas.Left="124" Canvas.Top="616">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform/>
+    							<SkewTransform/>
+    							<RotateTransform/>
+    							<TranslateTransform/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Canvas x:Name="Bomb_c1_Copy" Height="78" Width="91" Canvas.Top="15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+    						<Canvas.RenderTransform>
+    							<TransformGroup>
+    								<ScaleTransform ScaleX="0.6" ScaleY="0.7"/>
+    								<SkewTransform/>
+    								<RotateTransform Angle="269.787"/>
+    								<TranslateTransform/>
+    							</TransformGroup>
+    						</Canvas.RenderTransform>
+    						<Path x:Name="bomb29" Fill="#FF949494" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+    						<Path x:Name="bomb30" Fill="#FFA5A5A5" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					</Canvas>
+    					<Canvas x:Name="Bomb_c1sfdf" Height="78" Width="91" Canvas.Left="10" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+    						<Canvas.RenderTransform>
+    							<TransformGroup>
+    								<ScaleTransform ScaleX="0.5" ScaleY="0.45"/>
+    								<SkewTransform/>
+    								<RotateTransform Angle="-47.923"/>
+    								<TranslateTransform/>
+    							</TransformGroup>
+    						</Canvas.RenderTransform>
+    						<Path x:Name="bomb1" Fill="#FF949494" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+    						<Path x:Name="bomb2" Fill="#FFA5A5A5" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					</Canvas>
+    				</Canvas>
+    				<Canvas x:Name="Bomb_c2" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="611.5" Canvas.Top="580">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.4" ScaleY="0.3"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="20.613"/>
+    							<TranslateTransform/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb7" Fill="#FF8C8C8C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+    					<Path x:Name="bomb8" Fill="#FF9F9F9F" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb_c3" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="575" Canvas.Top="178">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.2" ScaleY="0.15"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="21.8"/>
+    							<TranslateTransform/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb11" Fill="#FF9B9B9B" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+    					<Path x:Name="bomb12" Fill="#FFBDBDBD" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z" RenderTransformOrigin="0.5,0.5">
+    						<Path.RenderTransform>
+    							<TransformGroup>
+    								<ScaleTransform/>
+    								<SkewTransform/>
+    								<RotateTransform/>
+    								<TranslateTransform/>
+    							</TransformGroup>
+    						</Path.RenderTransform>
+    					</Path>
+    				</Canvas>
+    				<Canvas x:Name="Bomb_c4" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="223" Canvas.Top="134">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.35" ScaleY="0.3"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-31.541"/>
+    							<TranslateTransform/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb13" Fill="#FFC9C9C9" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
+    					<Path x:Name="bomb14" Fill="Gainsboro" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb1" RenderTransformOrigin="0.5,0.5" Height="192" Canvas.Left="235" Canvas.Top="320" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform/>
+    							<SkewTransform/>
+    							<RotateTransform/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy2" Fill="#FFADADAD" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy2" Fill="#FFD4D4D4" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy1" Fill="#FF9D9D9D" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy1" Fill="#FFD8D8D8" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy" Fill="#FFADADAD" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy" Fill="#FFD8D8D8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3" Fill="#FFA9A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb4" Fill="#FFD6D6D6" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy3" Fill="#FFBFBFBF" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy3" Fill="#FFD0D0D0" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="192" Canvas.Left="363" Canvas.Top="462" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-20.119"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy4" Fill="#FF828282" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy4" Fill="#FFADADAD" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy5" Fill="Gray" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy5" Fill="#FFA3A1A1" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy6" Fill="#FF8C8A8A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy6" Fill="#FFB1B1B1" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb5" Fill="#FF888A8C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb6" Fill="#FF9B9B9B" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy7" Fill="#FFB1B1B1" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy7" Fill="#FFC1C1C1" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb11" Height="192" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="285" Canvas.Top="580" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.8" ScaleY="0.9"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-43"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy40" Fill="#FF8A8A8A" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy40" Fill="#FFB3B3B3" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy41" Fill="#FF828282" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy41" Fill="#FFABABAB" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy42" Fill="#FF7A7A7A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy42" Fill="#FFA3A3A3" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb31" Fill="#FF676767" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb32" Fill="#FF9B9B9B" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy43" Fill="#FF9B9B9B" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy43" Fill="#FFB9B7B7" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb3" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="456" Canvas.Top="629">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="27.741"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy8" Fill="#FF909090" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy8" Fill="#FF858585" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy9" Fill="#FF9A9898" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy9" Fill="DarkGray" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy10" Fill="#FF8C8C8C" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy10" Fill="#FFA3A2A2" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb9" Fill="#FF8E8E8E" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb10" Fill="#FFBBBBBB" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy11" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy11" Fill="#FFC7C7C7" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb4" Height="192" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="191" Canvas.Top="539" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.75" ScaleY="0.7"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-20.119"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy12" Fill="#FFA3A2A2" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy12" Fill="#FFBBBBBB" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy13" Fill="#FF848484" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy13" Fill="#FFC3C3C3" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy14" Fill="#FFADADAD" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy14" Fill="#FFD0D0D0" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb15" Fill="#FF9B9A9A" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb16" Fill="#FFCBCBCB" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy15" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy15" Fill="#FFD0D0D0" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb6" Height="192" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="369" Canvas.Top="228" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="12.896"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy20" Fill="#FF9F9F9F" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy20" Fill="#FFC1C1C1" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy21" Fill="#FF7E7E7E" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy21" Fill="#FFB7B7B7" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy22" Fill="#FF888686" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy22" Fill="#FFBBB8B8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb19" Fill="#FF6C6C6C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb20" Fill="#FF969696" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy23" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy23" Fill="#FFAFAFAF" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb5" Height="192" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="317" Canvas.Top="664" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="4.758"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy16" Fill="#FF949494" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy16" Fill="#FFB7B7B7" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy17" Fill="#FF929292" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy17" Fill="#FFBBBBBB" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy18" Fill="#FF9A9A9A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy18" Fill="#FFAFAFAF" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb17" Fill="#FFA7A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb18" Fill="#FFB1B1B1" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy19" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy19" Fill="#FFB1B1B1" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb7" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="192" Canvas.Left="344" Canvas.Top="321" Width="226">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-27.788"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy24" Fill="#FFADADAD" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy24" Fill="#FFCECECE" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy25" Fill="#FFA9A7A7" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy25" Fill="#FFBFBCBC" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy26" Fill="#FFB9B6B6" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy26" Fill="#FFD8D8D8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb21" Fill="#FFA7A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb22" Fill="#FFA7A7A7" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy27" Fill="#FFB9B6B6" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy27" Fill="#FFD8D8D8" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb8" Width="226" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="192" Canvas.Left="484" Canvas.Top="310">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-29.247"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy28" Fill="#FF909090" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy28" Fill="#FFB9B9B9" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy29" Fill="#FFB1B1B1" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy29" Fill="#FFC1C1C1" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy30" Fill="#FFB3B2B2" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy30" Fill="#FFC9C9C9" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb23" Fill="#FF9B9B9B" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb24" Fill="#FFADADAD" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy31" Fill="#FFABABAB" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy31" Fill="#FFC5C5C5" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb9" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="550" Canvas.Top="473">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="17.471"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy32" Fill="#FFA1A1A1" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy32" Fill="#FFB1B1B1" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy33" Fill="#FF8C8C8C" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy33" Fill="#FFA5A4A4" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy34" Fill="#FF9D9D9D" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy34" Fill="#FFB3B3B3" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb25" Fill="#FF9A9A9A" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb26" Fill="DarkGray" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy35" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy35" Fill="#FFAFAFAF" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+    				<Canvas x:Name="Bomb10" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="423" Canvas.Top="523">
+    					<Canvas.RenderTransform>
+    						<TransformGroup>
+    							<ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+    							<SkewTransform/>
+    							<RotateTransform Angle="-40.048"/>
+    							<TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
+    						</TransformGroup>
+    					</Canvas.RenderTransform>
+    					<Path x:Name="bomb3_Copy36" Fill="#FF8E8E8E" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
+    					<Path x:Name="bomb4_Copy36" Fill="#FF989898" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy37" Fill="#FF8E8D8D" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
+    					<Path x:Name="bomb4_Copy37" Fill="#FFBFBFBF" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy38" Fill="#FFA3A3A3" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
+    					<Path x:Name="bomb4_Copy38" Fill="#FFB7B7B7" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb27" Fill="DarkGray" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
+    					<Path x:Name="bomb28" Fill="#FFC1C1C1" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
+    					<Path x:Name="bomb3_Copy39" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
+    					<Path x:Name="bomb4_Copy39" Fill="#FFB9B9B9" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
+    				</Canvas>
+
+    			</Canvas>
+    		</Viewbox>
     	</Grid>
-    	<ed:RegularPolygon Fill="#FFE6E71B" Height="26.667" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" Canvas.Left="148" Canvas.Top="303.999" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round"/>
-    	<ed:RegularPolygon Fill="#FFE6E71B" Height="26.667" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" Canvas.Left="177.348" Canvas.Top="303.999"/>
-    	<Canvas x:Name="Clound" RenderTransformOrigin="0.5,0.5" Height="404" Canvas.Left="-7" Canvas.Top="44" Width="449">
+    	<Canvas x:Name="Clound" RenderTransformOrigin="0.5,0.5" Height="404" Canvas.Left="-7" Canvas.Top="44" Width="449" Visibility="Collapsed">
 
     		<Canvas d:IsHidden="True">
 
@@ -741,315 +1221,5 @@
 
     		</Canvas>
     	</Canvas>
-        <Canvas x:Name="Poision2_All" Height="928" Width="800" RenderTransformOrigin="1,0.776">
-            <Canvas.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Canvas.RenderTransform>
-            <Canvas x:Name="Bomb_c1" Height="93" Width="94" Canvas.Left="124" Canvas.Top="616" RenderTransformOrigin="0.5,0.5">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Canvas x:Name="Bomb_c1_Copy" Height="78" Width="91" Canvas.Top="15" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <Canvas.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="0.6" ScaleY="0.7"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="269.787"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Canvas.RenderTransform>
-                    <Path x:Name="bomb29" Fill="#FF949494" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
-                    <Path x:Name="bomb30" Fill="#FFA5A5A5" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                </Canvas>
-                <Canvas x:Name="Bomb_c1sfdf" Height="78" Width="91" Canvas.Left="10" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <Canvas.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="0.5" ScaleY="0.45"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-47.923"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Canvas.RenderTransform>
-                    <Path x:Name="bomb1" Fill="#FF949494" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
-                    <Path x:Name="bomb2" Fill="#FFA5A5A5" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                </Canvas>
-            </Canvas>
-            <Canvas x:Name="Bomb_c2" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" Canvas.Left="611.5" Canvas.Top="580" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.4" ScaleY="0.3"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="20.613"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb7" Fill="#FF8C8C8C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
-                <Path x:Name="bomb8" Fill="#FF9F9F9F" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb_c3" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" Canvas.Left="575" Canvas.Top="178" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.2" ScaleY="0.15"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="21.8"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb11" Fill="#FF9B9B9B" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
-                <Path x:Name="bomb12" Fill="#FFBDBDBD" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z" RenderTransformOrigin="0.5,0.5">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-            </Canvas>
-            <Canvas x:Name="Bomb_c4" Height="78" Width="91" RenderTransformOrigin="0.5,0.5" Canvas.Left="223" Canvas.Top="134" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.35" ScaleY="0.3"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-31.541"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb13" Fill="#FFC9C9C9" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z"/>
-                <Path x:Name="bomb14" Fill="Gainsboro" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="10.322" Canvas.Top="0.326" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb1" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="198" Canvas.Top="308">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy2" Fill="#FFADADAD" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy2" Fill="#FFD4D4D4" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy1" Fill="#FF9D9D9D" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy1" Fill="#FFD8D8D8" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy" Fill="#FFADADAD" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy" Fill="#FFD8D8D8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3" Fill="#FFA9A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb4" Fill="#FFD6D6D6" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy3" Fill="#FFBFBFBF" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy3" Fill="#FFD0D0D0" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb2" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="363" Canvas.Top="462" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-20.119"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy4" Fill="#FF828282" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy4" Fill="#FFADADAD" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy5" Fill="Gray" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy5" Fill="#FFA3A1A1" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy6" Fill="#FF8C8A8A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy6" Fill="#FFB1B1B1" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb5" Fill="#FF888A8C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb6" Fill="#FF9B9B9B" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy7" Fill="#FFB1B1B1" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy7" Fill="#FFC1C1C1" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb11" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="285" Canvas.Top="580" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.8" ScaleY="0.9"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-43"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy40" Fill="#FF8A8A8A" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy40" Fill="#FFB3B3B3" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy41" Fill="#FF828282" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy41" Fill="#FFABABAB" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy42" Fill="#FF7A7A7A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy42" Fill="#FFA3A3A3" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb31" Fill="#FF676767" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb32" Fill="#FF9B9B9B" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy43" Fill="#FF9B9B9B" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy43" Fill="#FFB9B7B7" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb3" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="456" Canvas.Top="629" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="27.741"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy8" Fill="#FF909090" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy8" Fill="#FF858585" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy9" Fill="#FF9A9898" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy9" Fill="DarkGray" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy10" Fill="#FF8C8C8C" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy10" Fill="#FFA3A2A2" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb9" Fill="#FF8E8E8E" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb10" Fill="#FFBBBBBB" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy11" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy11" Fill="#FFC7C7C7" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb4" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="191" Canvas.Top="539" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.75" ScaleY="0.7"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-20.119"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy12" Fill="#FFA3A2A2" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy12" Fill="#FFBBBBBB" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy13" Fill="#FF848484" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy13" Fill="#FFC3C3C3" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy14" Fill="#FFADADAD" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy14" Fill="#FFD0D0D0" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb15" Fill="#FF9B9A9A" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb16" Fill="#FFCBCBCB" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy15" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy15" Fill="#FFD0D0D0" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb6" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="369" Canvas.Top="228" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="12.896"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy20" Fill="#FF9F9F9F" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy20" Fill="#FFC1C1C1" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy21" Fill="#FF7E7E7E" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy21" Fill="#FFB7B7B7" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy22" Fill="#FF888686" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy22" Fill="#FFBBB8B8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb19" Fill="#FF6C6C6C" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb20" Fill="#FF969696" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy23" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy23" Fill="#FFAFAFAF" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb5" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="317" Canvas.Top="664" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="4.758"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy16" Fill="#FF949494" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy16" Fill="#FFB7B7B7" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy17" Fill="#FF929292" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy17" Fill="#FFBBBBBB" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy18" Fill="#FF9A9A9A" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy18" Fill="#FFAFAFAF" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb17" Fill="#FFA7A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb18" Fill="#FFB1B1B1" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy19" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy19" Fill="#FFB1B1B1" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb7" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="344" Canvas.Top="321" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-27.788"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy24" Fill="#FFADADAD" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy24" Fill="#FFCECECE" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy25" Fill="#FFA9A7A7" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy25" Fill="#FFBFBCBC" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy26" Fill="#FFB9B6B6" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy26" Fill="#FFD8D8D8" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb21" Fill="#FFA7A7A7" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb22" Fill="#FFA7A7A7" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy27" Fill="#FFB9B6B6" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy27" Fill="#FFD8D8D8" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb8" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="484" Canvas.Top="310" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-29.247"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy28" Fill="#FF909090" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy28" Fill="#FFB9B9B9" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy29" Fill="#FFB1B1B1" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy29" Fill="#FFC1C1C1" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy30" Fill="#FFB3B2B2" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy30" Fill="#FFC9C9C9" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb23" Fill="#FF9B9B9B" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb24" Fill="#FFADADAD" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy31" Fill="#FFABABAB" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy31" Fill="#FFC5C5C5" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb9" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="596" Canvas.Top="513" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="17.471"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy32" Fill="#FFA1A1A1" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy32" Fill="#FFB1B1B1" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy33" Fill="#FF8C8C8C" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy33" Fill="#FFA5A4A4" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy34" Fill="#FF9D9D9D" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy34" Fill="#FFB3B3B3" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb25" Fill="#FF9A9A9A" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb26" Fill="DarkGray" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy35" Fill="#FF9D9D9D" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy35" Fill="#FFAFAFAF" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-            <Canvas x:Name="Bomb10" Height="192" Width="226" RenderTransformOrigin="0.5,0.5" Canvas.Left="423" Canvas.Top="523" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-40.048"/>
-                        <TranslateTransform X="-99.299991831183434" Y="-101.09999899566174"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path x:Name="bomb3_Copy36" Fill="#FF8E8E8E" Stretch="Fill" Height="98.198" Width="107.117" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="6.555" Canvas.Top="29.583"/>
-                <Path x:Name="bomb4_Copy36" Fill="#FF989898" Stretch="Fill" Height="63.849" Width="91.045" UseLayoutRounding="False" Canvas.Left="18.738" Canvas.Top="29.968" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy37" Fill="#FF8E8D8D" Stretch="Fill" Height="108.408" Width="118.255" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="75.417" Canvas.Top="6.873"/>
-                <Path x:Name="bomb4_Copy37" Fill="#FFBFBFBF" Stretch="Fill" Height="70.487" Width="100.512" UseLayoutRounding="False" Canvas.Left="88.867" Canvas.Top="7.298" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy38" Fill="#FFA3A3A3" Stretch="Fill" Height="145.387" Width="158.592" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="33.83" Canvas.Top="42.082"/>
-                <Path x:Name="bomb4_Copy38" Fill="#FFB7B7B7" Stretch="Fill" Height="94.533" Width="134.798" UseLayoutRounding="False" Canvas.Left="51.866" Canvas.Top="42.652" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb27" Fill="DarkGray" Stretch="Fill" Height="83.198" Width="90.755" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="127.917" Canvas.Top="62.083"/>
-                <Path x:Name="bomb28" Fill="#FFC1C1C1" Stretch="Fill" Height="54.096" Width="77.138" UseLayoutRounding="False" Canvas.Left="138.239" Canvas.Top="62.409" Data="M67.333336,26.666561 C67.333336,34.806572 69.024261,39.478523 60.083687,43.293827 C54.162529,45.820621 48.79155,51.95784 41.750816,52.043705 C30.456606,52.181438 15.22629,49.540001 9.6675491,46.209846 C1.7734706,41.480629 -8.2491493,31.210012 -9.4994421,22.460196 C-11.624637,7.5876327 5.4951782,-5.2565861 31,-1.333428 C48.333332,1.3327895 67.333336,13.135584 67.333336,26.666561 z"/>
-                <Path x:Name="bomb3_Copy39" Fill="#FFADADAD" Stretch="Fill" Height="86.949" Width="112.783" UseLayoutRounding="False" Data="M90.75,40.00016 C90.999969,61.750576 81.999992,84.794907 50.499992,83.794907 C24.831686,82.980042 0,70.750336 0,39.5 C0,17.684752 17.999908,-0.33398661 46.666428,0.66610026 C72.170509,1.5558593 90.505798,18.75144 90.75,40.00016 z" Canvas.Left="57" Canvas.Top="66.498"/>
-                <Path x:Name="bomb4_Copy39" Fill="#FFB9B9B9" Stretch="Fill" Height="61.417" Width="106.106" UseLayoutRounding="False" Canvas.Left="59.428" Canvas.Top="64.892" Data="M67.333336,26.666561 C67.333336,34.806572 67.624199,44.647259 62.211895,53.765442 C58.925892,59.301414 48.641933,42.224689 43.267899,37.675068 C37.482052,32.776814 24.624554,25.517832 12.59659,27.305687 C-2.6094689,29.565939 -5.7460747,43.396202 -17.924517,29.272041 C-20.049711,14.399479 6.3365073,-7.3687181 31.84133,-3.44556 C49.17466,-0.77934253 67.333336,13.135584 67.333336,26.666561 z"/>
-            </Canvas>
-
-        </Canvas>
     </Canvas>
 </navigation:Page>
