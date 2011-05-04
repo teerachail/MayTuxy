@@ -59,96 +59,115 @@ namespace TheS.SperfGames.MayaTukky.Views
                     new CardInformation{
                         RequireScore = 0,
                         Rank = 1,
-                        ImageUrl = "ToadCard"
+                        Name = "Toad card",
+                        ImageUrl = "ToadCard",
                     },
                     new CardInformation{
                         RequireScore = 100,
                         Rank = 1,
+                        Name = "Crow card",
                         ImageUrl = "CrowCard"
                     },
                     new CardInformation{
                         RequireScore = 200,
                         Rank = 1,
+                        Name = "Ghost card",
                         ImageUrl = "GhostCard"
                     },
                     new CardInformation{
                         RequireScore = 300,
                         Rank = 1,
+                        Name = "Wolf card",
                         ImageUrl = "WolfCard"
                     },
                     new CardInformation{
                         RequireScore = 400,
                         Rank = 2,
+                        Name = "Tree card",
                         ImageUrl = "TreeCard"
                     },
                     new CardInformation{
                         RequireScore = 500,
                         Rank = 2,
+                        Name = "Golem card",
                         ImageUrl = "GolemCard"
                     },
                     new CardInformation{
                         RequireScore = 600,
                         Rank = 2,
+                        Name = "Gobin card",
                         ImageUrl = "GobinCard"
                     },
                     new CardInformation{
                         RequireScore = 700,
                         Rank = 2,
+                        Name = "Tribe card",
                         ImageUrl = "TribeCard"
                     },
                     new CardInformation{
                         RequireScore = 800,
                         Rank = 3,
+                        Name = "Knight card",
                         ImageUrl = "KnightCard"
                     },
                     new CardInformation{
                         RequireScore = 900,
                         Rank = 3,
+                        Name = "Astrologer card",
                         ImageUrl = "AstrologerCard"
                     },
                     new CardInformation{
                         RequireScore = 1000,
                         Rank = 3,
+                        Name = "Herbalists card",
                         ImageUrl = "HerbalistsCard"
                     },
                     new CardInformation{
                         RequireScore = 1100,
                         Rank = 3,
+                        Name = "Priest card",
                         ImageUrl = "PriestCard"
                     },
                     new CardInformation{
                         RequireScore = 1200,
                         Rank = 4,
+                        Name = "Sorcerer first card",
                         ImageUrl = "SorcererFirstCard"
                     },
                     new CardInformation{
                         RequireScore = 1300,
                         Rank = 4,
+                        Name = "Sorcerer second card",
                         ImageUrl = "SorcererSecondCard"
                     },
                     new CardInformation{
                         RequireScore = 1400,
                         Rank = 4,
+                        Name = "Sorcerer third card",
                         ImageUrl = "SorcererThirdCard"
                     },
                     new CardInformation{
                         RequireScore = 1500,
                         Rank = 4,
+                        Name = "Berserk card",
                         ImageUrl = "BerserkCard"
                     },
                     new CardInformation{
                         RequireScore = 1600,
                         Rank = 5,
+                        Name = "Heimdell card",
                         ImageUrl = "HeimdellCard"
                     },
                     new CardInformation{
                         RequireScore = 1700,
                         Rank = 5,
+                        Name = "Thor card",
                         ImageUrl = "ThorCard"
                     },
                     new CardInformation{
                         RequireScore = 1800,
                         Rank = 5,
+                        Name = "Odin card",
                         ImageUrl = "OdinCard"
                     },
                 },
@@ -156,6 +175,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
             _currentCard = _table.CardLevelList.First();
             FirstImage.Source = _currentCard.ImageSource;
+            CardNameTextBlock.Text = _currentCard.Name;
             displayCardRank(_currentCard);
         }
 
@@ -182,6 +202,8 @@ namespace TheS.SperfGames.MayaTukky.Views
                         AppoSlideStoryboard.Begin();
 
                         displayCardRank(_currentCard);
+
+                        CardNameTextBlock.Text = _currentCard.Name;
                     }
                 }
 

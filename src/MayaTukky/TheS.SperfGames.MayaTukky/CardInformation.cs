@@ -53,5 +53,7 @@ namespace TheS.SperfGames.MayaTukky
         
 
         #endregion Properties
+
+        public string Name { get; set; }
     }
 }
