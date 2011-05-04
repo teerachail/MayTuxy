@@ -22,12 +22,7 @@ namespace TheS.SperfGames.MayaTukky
         /// <summary>
         /// ลำดับชั้นของการ์ด
         /// </summary>
-        public IEnumerable<int> CardLevelList { get; set; }
-
-        /// <summary>
-        /// ระดับของการ์ด
-        /// </summary>
-        public IDictionary<string, int> CardRanks { get; set; }
+        public IEnumerable<CardInformation> CardLevelList { get; set; }
 
         #endregion Properties
     }

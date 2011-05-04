@@ -36,9 +36,18 @@ namespace TheS.SperfGames.MayaTukky
 
         static GlobalScore()
         {
-            FirstScore = 56476;
-            SecondScore= 13161;
-            ThirdScore = 21341;
+            // TODO: ตัวอย่างให้พี่พายตรวจสอบการเล่น animation เมื่อตรวจแล้วให้ลบ Constructor นี้ทิ้ง
+            //FirstScore = 50;
+            //SecondScore= 100;
+            //ThirdScore = 553;
+
+            FirstScore = 600;
+            SecondScore = 600;
+            ThirdScore = 600;
+
+            //FirstScore = 56;
+            //SecondScore = 192;
+            //ThirdScore = 423;
         }
     }
 }

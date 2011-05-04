@@ -10,10 +10,7 @@
            Title="ResultAppoRewardPage Page" Width="625" Height="488">
 	<navigation:Page.Resources>
 		<Storyboard x:Name="AppoSlideStoryboard">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="grid">
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-177"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-177"/>
-			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimation Duration="0:0:0.3" To="-177" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
 		</Storyboard>
         <Storyboard x:Name="CloundBomberStoryboard">
             <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.Visibility)">
@@ -678,6 +675,23 @@
         		</DiscreteObjectKeyFrame>
         	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="RunningScoreStoryboard">
+			
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="AllStateScoreTextBlock">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.0" Value="0"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6" x:Name="AllScoreDiscreteObjectKeyFrame1"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.9" x:Name="AllScoreDiscreteObjectKeyFrame2"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.2" x:Name="AllScoreDiscreteObjectKeyFrame3"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.5" x:Name="AllScoreDiscreteObjectKeyFrame4"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.8" x:Name="AllScoreDiscreteObjectKeyFrame5"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.1" x:Name="AllScoreDiscreteObjectKeyFrame6"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.4" x:Name="AllScoreDiscreteObjectKeyFrame7"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:2.7" x:Name="AllScoreDiscreteObjectKeyFrame8"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:3.0" x:Name="AllScoreDiscreteObjectKeyFrame9"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:3.3" x:Name="AllScoreDiscreteObjectKeyFrame10"/>
+				
+        	</ObjectAnimationUsingKeyFrames>
+        </Storyboard>
     </navigation:Page.Resources>
     <Canvas>
     	<VisualStateManager.VisualStateGroups>
@@ -856,10 +870,10 @@
     					<CompositeTransform/>
     				</Grid.RenderTransform>
     				<Viewbox x:Name="viewbox2" Height="152" VerticalAlignment="Top" >
-    					<Image x:Name="FirstImage" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ThorCard.png" Stretch="Fill"/>
+    					<Image x:Name="FirstImage" Stretch="Fill"/>
     				</Viewbox>
     				<Viewbox Height="152" VerticalAlignment="Bottom" >
-    					<Image x:Name="SecondImage" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/OdinCard.png" Stretch="Fill"/>
+    					<Image x:Name="SecondImage" Stretch="Fill"/>
     				</Viewbox>
     			</Grid>
     		</Grid>
