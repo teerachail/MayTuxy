@@ -288,12 +288,6 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                     if (GlobalScore.FirstMaximumCombo < _gameCombo) GlobalScore.FirstMaximumCombo = _gameCombo;
 
-                    // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
-                    if(!GlobalScore.FirstItemsFound.Any(c=>c.Equals(objName.ItemName)))
-                    {
-                        GlobalScore.FirstItemsFound.Add(objName.ItemName);
-                    }
-
                     // จัดการตัวนับการตอบถูก
                     _correctCount++;
 
@@ -464,6 +458,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             GlobalScore.FirstCorrectAnswer = _correctCount;
             GlobalScore.FirstIncorrectAnswer = _incorrectCount;
+            GlobalScore.FirstCompleted = true;
 
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)

@@ -30,15 +30,15 @@ namespace TheS.SperfGames.MayaTukky
         public static int SecondIncorrectAnswer { get; set; }
         public static int ThirdIncorrectAnswer { get; set; }
 
-        public static List<string> FirstItemsFound { get; set; }
-        public static List<string> SecondItemsFound { get; set; }
-        public static List<string> ThirdItemsFound { get; set; }
+        public static bool FirstCompleted { get; set; }
+        public static bool SecondCompleted { get; set; }
+        public static bool ThirdCompleted { get; set; }
 
         static GlobalScore()
         {
-            FirstItemsFound = new List<string>();
-            SecondItemsFound = new List<string>();
-            ThirdItemsFound = new List<string>();
+            FirstScore = 100;
+            SecondScore= 100;
+            ThirdScore = 100;
         }
     }
 }

@@ -329,12 +329,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
-                    if (!GlobalScore.ThirdItemsFound.Any(c => c.Equals(objName.ItemName)))
-                    {
-                        GlobalScore.ThirdItemsFound.Add(objName.ItemName);
-                    }
-
                     // จัดการการแสดงผลของตัวแสดงคำถาม
                     showItemUI.PlayAnswerResult(result);
 
@@ -516,6 +510,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             GlobalScore.ThirdCorrectAnswer = _correctCount;
             GlobalScore.ThirdIncorrectAnswer = _incorrectCount;
+            GlobalScore.ThirdCompleted = true;
 
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)

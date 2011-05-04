@@ -345,12 +345,6 @@ namespace TheS.SperfGames.MayaTukky.Views
                 }
                 else if (result.IsCorrect == true)
                 {
-                    // เพิ่มรายชื่อวัตถุที่อยู่ภายในแก้วที่ตอบถูก
-                    if (!GlobalScore.SecondItemsFound.Any(c => c.Equals(objName.ItemName)))
-                    {
-                        GlobalScore.SecondItemsFound.Add(objName.ItemName);
-                    }
-
                     // ตรวจสอบการจบระดับความยากนี้
                     if (result.IsFinish == true)
                     {
@@ -530,6 +524,7 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             GlobalScore.SecondCorrectAnswer = _correctCount;
             GlobalScore.SecondIncorrectAnswer = _incorrectCount;
+            GlobalScore.SecondCompleted = true;
 
             // จัดการการแสดงผลของทักกี้
             if (_incorrectCount >= _correctCount)
