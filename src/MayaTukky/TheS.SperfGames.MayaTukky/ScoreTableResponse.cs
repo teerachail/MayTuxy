@@ -15,7 +15,7 @@ namespace TheS.SperfGames.MayaTukky
     /// <summary>
     /// ตารางข้อมูลของ Appo
     /// </summary>
-    public class AppoTable
+    public class ScoreTableResponse
     {
         #region Properties
 

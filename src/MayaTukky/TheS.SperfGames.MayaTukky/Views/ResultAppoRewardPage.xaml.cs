@@ -14,163 +14,110 @@ using System.Windows.Threading;
 
 namespace TheS.SperfGames.MayaTukky.Views
 {
+    /// <summary>
+    /// หน้าแสดงผลลัพท์จากการเล่นเกมทั้ง 3 ด่าน
+    /// </summary>
     public partial class ResultAppoRewardPage : Page
     {
+        #region Fields
+
+        private const int DisplayScoreOneCircleMillisecond = 280;
+        private const int HoldTimeMillisecond = 720;
         private const int MaximumDisplayScoreRound = 10;
         private const int DisplaySmokeEffectRound = 9;
-        private const int DisplayScoreOneCircleMilisecond = 300;
+        private const int RestartScoreRound = 1;
+        private const int DisplayScorePerRoundMillisecond = 30;
 
         private int _currentRound;
         private int _totalScore;
         private int _scorePerRound;
+        private int _miniRound;
+        private int _currentDisplayScoreRound = RestartScoreRound;
+        private double _scorePerMiniRound;
         private bool _isFinished;
 
-        private AppoTable _table;
+        private ScoreTableResponse _table;
         private CardInformation _currentCard;
+        private DispatcherTimer _displayCardTimer;
+        private DispatcherTimer _holdingTimer;
         private DispatcherTimer _displayScoreTimer;
 
+        private IGameService _svc;
+
+        #endregion Fields
+
+        #region Constructors
+
+        /// <summary>
+        /// Initialize objects and events
+        /// </summary>
         public ResultAppoRewardPage()
         {
             InitializeComponent();
             initializeObject();
             initializeEvents();
-            //calculateGameScoreRunner();
             StartShowScore();
         }
 
+        #endregion Constructors
+
+        #region Methods
+
+        /// <summary>
+        /// เริ่มทำการแสดงคะแนนและการ์ด
+        /// </summary>
         public void StartShowScore()
         {
-            _displayScoreTimer.Start();
+            _svc.RequestScoreTable(getScoreTableCallback);
         }
 
+        // Initialize objects
         private void initializeObject()
         {
+            _svc = new GameService();
+
             _totalScore = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
-            
-            _scorePerRound= (int)(_totalScore / MaximumDisplayScoreRound);
 
-            _displayScoreTimer = new DispatcherTimer {
-                Interval = TimeSpan.FromMilliseconds(DisplayScoreOneCircleMilisecond)
-            };
+            _scorePerRound = (int)(_totalScore / MaximumDisplayScoreRound);
+            _scorePerMiniRound = _totalScore / MaximumDisplayScoreRound/ MaximumDisplayScoreRound;
 
-            // TODO: กำหนดค่า Appo table ตัวอย่าง พี่บุ๊งยังไม่ได้ตัดสินใจ
-            _table = new AppoTable {
-                CardLevelList = new List<CardInformation> {
-                    new CardInformation{
-                        RequireScore = 0,
-                        Rank = 1,
-                        ImageUrl = "ToadCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 100,
-                        Rank = 1,
-                        ImageUrl = "CrowCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 200,
-                        Rank = 1,
-                        ImageUrl = "GhostCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 300,
-                        Rank = 1,
-                        ImageUrl = "WolfCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 400,
-                        Rank = 2,
-                        ImageUrl = "TreeCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 500,
-                        Rank = 2,
-                        ImageUrl = "GolemCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 600,
-                        Rank = 2,
-                        ImageUrl = "GobinCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 700,
-                        Rank = 2,
-                        ImageUrl = "TribeCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 800,
-                        Rank = 3,
-                        ImageUrl = "KnightCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 900,
-                        Rank = 3,
-                        ImageUrl = "AstrologerCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1000,
-                        Rank = 3,
-                        ImageUrl = "HerbalistsCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1100,
-                        Rank = 3,
-                        ImageUrl = "PriestCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1200,
-                        Rank = 4,
-                        ImageUrl = "SorcererFirstCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1300,
-                        Rank = 4,
-                        ImageUrl = "SorcererSecondCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1400,
-                        Rank = 4,
-                        ImageUrl = "SorcererThirdCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1500,
-                        Rank = 4,
-                        ImageUrl = "BerserkCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1600,
-                        Rank = 5,
-                        ImageUrl = "HeimdellCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1700,
-                        Rank = 5,
-                        ImageUrl = "ThorCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1800,
-                        Rank = 5,
-                        ImageUrl = "OdinCard"
-                    },
-                },
-            };
-
-            _currentCard = _table.CardLevelList.First();
-            FirstImage.Source = _currentCard.ImageSource;
-            displayCardRank(_currentCard);
+            _displayCardTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(DisplayScoreOneCircleMillisecond) };
+            _holdingTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(HoldTimeMillisecond) };
+            _displayScoreTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(DisplayScorePerRoundMillisecond) };
         }
 
+        // Initialize events
         private void initializeEvents()
         {
             _displayScoreTimer.Tick += (s, e) => {
 
+                if (_currentDisplayScoreRound >= MaximumDisplayScoreRound) {
+                    _currentDisplayScoreRound = RestartScoreRound;
+                    _displayScoreTimer.Stop();
+                    _holdingTimer.Start();
+                }
+                else {
+                    _miniRound++;
+                    AllStateScoreTextBlock.Text = ((int)(_miniRound * _scorePerMiniRound)).ToString();
+                    _currentDisplayScoreRound++;
+                }
+            };
+
+            #region ถึงเวลาที่ต้องเปลี่ยนการ์ดใหม่
+
+            _displayCardTimer.Tick += (s, e) => {
+
+                // ตรวจการเล่น effect ควันที่ภาพรองสุดท้าย
                 if (_currentRound == DisplaySmokeEffectRound) CloundBomberStoryboard.Begin();
 
-                AllStateScoreTextBlock.Text = (_scorePerRound * _currentRound).ToString();
+                // แสดงคะแนนที่ได้ออกมา
+                if (_isFinished == false) _displayScoreTimer.Start();
 
                 _currentRound++;
 
+                // แสดงภาพการ์ดที่ได้
                 var nextLevelScore = _scorePerRound * _currentRound;
-                var nextCard = getCardInformation(nextLevelScore);
+                var nextCard = getCardInformationByScore(nextLevelScore);
                 if (nextCard != null) {
                     if (nextCard != _currentCard) {
 
@@ -185,25 +132,39 @@ namespace TheS.SperfGames.MayaTukky.Views
                     }
                 }
 
-                // ตรวจสอบการแสดงจบ และ effect ควัน
+                // ตรวจสอบการแสดงจบ
                 if (_currentRound >= MaximumDisplayScoreRound) {
-                    _displayScoreTimer.Stop();
                     AllStateScoreTextBlock.Text = _totalScore.ToString();
                     _isFinished = true;
                 }
+
+                _displayCardTimer.Stop();
             };
 
-            #region การเลื่อนภาพเสร็จสิ้น
-            
+            #endregion ถึงเวลาที่ต้องเปลี่ยนการ์ดใหม่
+
+            #region หมดเวลาในการแสดงการ์ด
+
+            _holdingTimer.Tick += (s, e) => {
+                _holdingTimer.Start();
+                _displayCardTimer.Start();
+            };
+
+            #endregion หมดเวลาในการแสดงการ์ด
+
+            #region การเลื่อนการ์ดเสร็จสิ้น
+
             AppoSlideStoryboard.Completed += (s, e) => {
                 FirstImage.Source = _currentCard.ImageSource;
                 AppoSlideStoryboard.Stop();
+                CardNameTextBlock.Text = _currentCard.Name;
             };
 
-            #endregion การเลื่อนภาพเสร็จสิ้น
+            #endregion การเลื่อนการ์ดเสร็จสิ้น
         }
 
-        public CardInformation getCardInformation(int score)
+        // แสดงการ์ดทีได้จากคะแนน
+        private CardInformation getCardInformationByScore(int score)
         {
             CardInformation result = null;
 
@@ -215,23 +176,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             return result;
         }
 
-        private void calculateGameScoreRunner()
-        {
-            const string ObjectName = "AllScoreDiscreteObjectKeyFrame";
-            const int MaximumKeyFrame = 10;
-            var totalScore = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
-
-            int score = (int)(totalScore / MaximumKeyFrame);
-            for (int keyFrameValues = 1; keyFrameValues <= MaximumKeyFrame; keyFrameValues++) {
-                (LayoutRoot.FindName(string.Format("{0}{1}", ObjectName, keyFrameValues)) as DiscreteObjectKeyFrame)
-                    .Value = (score * keyFrameValues).ToString();
-            }
-            (LayoutRoot.FindName(string.Format("{0}{1}", ObjectName, MaximumKeyFrame)) as DiscreteObjectKeyFrame)
-                .Value = totalScore.ToString();
-
-            //RunningScoreStoryboard.Begin();
-        }
-
+        // แสดงผล Rank ของ card
         private void displayCardRank(CardInformation card)
         {
             if (card != null) {
@@ -246,9 +191,29 @@ namespace TheS.SperfGames.MayaTukky.Views
             }
         }
 
+        // ได้รับข้อตารางลำดับคะแนนกลับไป
+        private void getScoreTableCallback(ScoreTableResponse scoreTable)
+        {
+            if (scoreTable != null) {
+
+                _table = scoreTable;
+                _currentCard = _table.CardLevelList.FirstOrDefault();
+
+                if (_currentCard != null)
+                {
+                    FirstImage.Source = _currentCard.ImageSource;
+                    CardNameTextBlock.Text = _currentCard.Name;
+                    displayCardRank(_currentCard);
+                    _displayCardTimer.Start(); 
+                }
+            }
+        }
+
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        #endregion Methods
     }
 }
