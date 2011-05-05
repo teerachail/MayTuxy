@@ -70,7 +70,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 TimeTextBlock.Text = _statistics.Time.ToString();
 
                 AllAveragePointTextBlock.Text = Convert.ToString(_statistics.FirstAveragePoint + _statistics.SecondAveragePoint + _statistics.ThirdAveragePoint);
-                AllHighScorePointTextBlock.Text = Convert.ToString(_statistics.FirstHighScorePoint + _statistics.SecondHighScorePoint + _statistics.ThirdHighScorePoint);
+                AllHighScorePointTextBlock.Text = _statistics.AllHighScorePoint.ToString();
 
                 if (_callbackCompleted)
                     displayCardInformationByScore(

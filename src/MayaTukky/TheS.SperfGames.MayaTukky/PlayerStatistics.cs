@@ -41,6 +41,11 @@ namespace TheS.SperfGames.MayaTukky
         public int ThirdHighScorePoint { get; set; }
 
         /// <summary>
+        /// คะแนนสูงสุดที่เคยทำได้
+        /// </summary>
+        public int AllHighScorePoint { get; set; }
+
+        /// <summary>
         /// คะแนนที่ได้เมื่อเทียบกับผู้เล่นทั้งหมด
         /// </summary>
         public double Percentile { get; set; }
