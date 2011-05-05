@@ -291,8 +291,8 @@
     <Compile Include="Views\LoadPage.xaml.cs">
       <DependentUpon>LoadPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainTitle.xaml.cs">
-      <DependentUpon>MainTitle.xaml</DependentUpon>
+    <Compile Include="Views\MainTitlePage.xaml.cs">
+      <DependentUpon>MainTitlePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ResultAppoRewardPage.xaml.cs">
       <DependentUpon>ResultAppoRewardPage.xaml</DependentUpon>
@@ -516,7 +516,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\MainTitle.xaml">
+    <Page Include="Views\MainTitlePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -556,6 +556,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Resource Include="Assets\Images\Cloud.png" />
     <Resource Include="Assets\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

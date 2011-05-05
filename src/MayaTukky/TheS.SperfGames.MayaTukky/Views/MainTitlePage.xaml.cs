@@ -13,11 +13,11 @@ using System.Windows.Navigation;
 
 namespace TheS.SperfGames.MayaTukky.Views
 {
-    public partial class MainTitle : Page
+    public partial class MainTitlePage : Page
     {
         public static event EventHandler NextPage;
 
-        public MainTitle()
+        public MainTitlePage()
         {
             InitializeComponent();
             Loaded += new RoutedEventHandler(TukkyCover_Loaded);

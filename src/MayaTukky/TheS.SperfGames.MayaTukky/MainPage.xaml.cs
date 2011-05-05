@@ -24,6 +24,7 @@ namespace TheS.SperfGames.MayaTukky
 
             _pages = new string[]{
                 "/HomePage",
+                "/MainTitlePage",
                 "/TitleFirstPage",
                 "/FirstStatePage",
                 "/ResultScorePage",

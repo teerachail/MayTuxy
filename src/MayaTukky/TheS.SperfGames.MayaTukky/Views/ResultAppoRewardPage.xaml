@@ -9,665 +9,94 @@
            d:DesignWidth="640" d:DesignHeight="480"
            Title="ResultAppoRewardPage Page" Width="625" Height="488">
 	<navigation:Page.Resources>
+		<Storyboard x:Name="Sb_Next">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="next">
+				<DiscreteObjectKeyFrame KeyTime="0">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+				<DiscreteObjectKeyFrame KeyTime="0:0:1.5">
+					<DiscreteObjectKeyFrame.Value>
+						<Visibility>Visible</Visibility>
+					</DiscreteObjectKeyFrame.Value>
+				</DiscreteObjectKeyFrame>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.95001"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.8">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.05"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="8">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-6.9"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="next">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CircleEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-0.042"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 		<Storyboard x:Name="AppoSlideStoryboard">
 			<DoubleAnimation Duration="0:0:0.3" To="-177" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
 		</Storyboard>
-        <Storyboard x:Name="CloundBomberStoryboard">
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0011250019306316972"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.40000000596046448"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.00084375147707760334"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.30000001192092896"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.00098437664564698935"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.34999999403953552"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.00084375147707760334"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.30000001192092896"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0042188465595245361"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0042188465595245361"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0039375065825879574"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.10633688420057297"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.3999999761581421"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0039375065825879574"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.10633688420057297"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.3999999761581421"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0021094232797622681"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.75"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687949679791927"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.699999988079071"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500515915453434"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.800000011920929"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500515915453434"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.800000011920929"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.002812504768371582"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.699999988079071"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.699999988079071"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0033749344293028116"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2000000476837158"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0033749344293028116"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.2000000476837158"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500038612633944"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.800000011920929"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0022500038612633944"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.800000011920929"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.699999988079071"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.0019687532912939787"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.699999988079071"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb6" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb7" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb8" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb9" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-99.299995422363281"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-99.299995422363281"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb10" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-101.09999847412109"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-101.09999847412109"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.20000000298023224"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.20000000298023224"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.15000000596046448"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.15000000596046448"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb_c3" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.Visibility)">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.8">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.800000011920929"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.800000011920929"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0.800000011920929"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.89999997615814209"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.89999997615814209"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0.89999997615814209"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Bomb11" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="viewbox1">
-            	<DiscreteObjectKeyFrame KeyTime="0">
-            		<DiscreteObjectKeyFrame.Value>
-            			<Visibility>Visible</Visibility>
-            		</DiscreteObjectKeyFrame.Value>
-            	</DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="viewbox2">
-        		<DiscreteObjectKeyFrame KeyTime="0">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Collapsed</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        		<DiscreteObjectKeyFrame KeyTime="0:0:0.6">
-        			<DiscreteObjectKeyFrame.Value>
-        				<Visibility>Visible</Visibility>
-        			</DiscreteObjectKeyFrame.Value>
-        		</DiscreteObjectKeyFrame>
-        	</ObjectAnimationUsingKeyFrames>
-        </Storyboard>
     </navigation:Page.Resources>
     <Canvas>
     	<VisualStateManager.VisualStateGroups>
     		<VisualStateGroup x:Name="StarStates">
+    			<VisualStateGroup.Transitions>
+    				<VisualTransition GeneratedDuration="0">
+    				
+    				</VisualTransition>
+    			</VisualStateGroup.Transitions>
     			<VisualState x:Name="OneStar">
     				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="grid1">
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="15"/>
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    						</DoubleAnimationUsingKeyFrames>
     					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon_Copy">
     						<DiscreteObjectKeyFrame KeyTime="0">
     							<DiscreteObjectKeyFrame.Value>
     								<Visibility>Visible</Visibility>
@@ -678,6 +107,10 @@
     			</VisualState>
     			<VisualState x:Name="TwoStar">
     				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="grid1">
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="15"/>
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    						</DoubleAnimationUsingKeyFrames>
     					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
     						<DiscreteObjectKeyFrame KeyTime="0">
     							<DiscreteObjectKeyFrame.Value>
@@ -692,10 +125,28 @@
     							</DiscreteObjectKeyFrame.Value>
     						</DiscreteObjectKeyFrame>
     					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
     				</Storyboard>
     			</VisualState>
     			<VisualState x:Name="ThreeStar">
     				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="grid1">
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="15"/>
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    						</DoubleAnimationUsingKeyFrames>
     					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
     						<DiscreteObjectKeyFrame KeyTime="0">
     							<DiscreteObjectKeyFrame.Value>
@@ -717,10 +168,35 @@
     							</DiscreteObjectKeyFrame.Value>
     						</DiscreteObjectKeyFrame>
     					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
     				</Storyboard>
     			</VisualState>
     			<VisualState x:Name="FourStar">
     				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="grid1">
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="15"/>
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    						</DoubleAnimationUsingKeyFrames>
     					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
     						<DiscreteObjectKeyFrame KeyTime="0">
     							<DiscreteObjectKeyFrame.Value>
@@ -749,10 +225,42 @@
     							</DiscreteObjectKeyFrame.Value>
     						</DiscreteObjectKeyFrame>
     					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon3_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
     				</Storyboard>
     			</VisualState>
     			<VisualState x:Name="FiveStar">
     				<Storyboard>
+    					<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(BlurEffect.Radius)" Storyboard.TargetName="grid1">
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="15"/>
+    							<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    						</DoubleAnimationUsingKeyFrames>
     					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
     						<DiscreteObjectKeyFrame KeyTime="0">
     							<DiscreteObjectKeyFrame.Value>
@@ -788,6 +296,41 @@
     							</DiscreteObjectKeyFrame.Value>
     						</DiscreteObjectKeyFrame>
     					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon3_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon4_Copy">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
     				</Storyboard>
     			</VisualState>
     			<VisualState x:Name="NoneStar"/>
@@ -797,6 +340,53 @@
     		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/bg.jpg" Stretch="Fill"/>
     		<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Scroll2.png" Stretch="Fill" Margin="8,-18,214,0"/>
     		<TheS_SperfGames_MayaTukky_Controls:TukkyPresentUI x:Name="TukkyTalk" d:LayoutOverrides="Width, Height"/>
+    		<Image Margin="44,71,250,84" Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/Cloud.png" Stretch="Fill" Opacity="0.3"/>
+    		<Viewbox x:Name="Clound" RenderTransformOrigin="0.5,0.5" Margin="19,60,220,80" UseLayoutRounding="False" d:LayoutRounding="Auto">
+    			<Viewbox.RenderTransform>
+    				<CompositeTransform Rotation="-90"/>
+    			</Viewbox.RenderTransform>
+
+    			<Canvas Height="404" Width="449">
+
+    				<!-- Layer 1/<Path> -->
+    				<!-- Layer 1/<Path> -->
+    				<!-- Layer 1/<Path> -->
+    <!-- Layer 1/<Path> -->
+    				<Path Fill="#fffefefe" Data="F1 M 295.688,43.153 C 295.688,43.153 332.674,32.816 359.653,66.983 C 386.635,101.150 381.702,137.375 381.702,137.375 C 381.702,137.375 396.447,150.004 392.084,172.256 C 387.719,194.506 371.767,197.121 371.767,197.121 C 371.767,197.121 390.423,225.612 365.015,253.678 C 339.606,281.743 304.455,274.927 296.751,266.706 C 296.751,266.706 290.444,283.247 266.788,277.008 C 266.788,277.008 254.232,322.163 205.771,336.365 C 157.313,350.567 156.531,320.721 156.531,320.721 C 156.531,320.721 144.414,323.956 137.330,311.288 C 137.330,311.288 112.505,327.918 100.254,303.207 C 100.254,303.207 69.043,319.233 33.112,283.204 C -2.816,247.172 23.803,205.130 23.803,205.130 C 23.803,205.130 5.170,181.719 21.065,167.036 C 21.065,167.036 -9.720,138.604 46.822,77.999 C 88.154,41.600 127.204,62.374 127.204,62.374 C 127.204,62.374 130.998,54.735 139.300,54.695 C 139.300,54.695 139.751,15.316 198.450,5.510 C 257.150,-4.296 258.550,21.737 258.550,21.737 C 258.550,21.737 276.410,17.840 295.688,43.153 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#fffefefe" Data="F1 M 308.506,47.681 C 308.506,47.681 345.492,37.343 372.472,71.512 C 399.453,105.677 394.520,141.902 394.520,141.902 C 394.520,141.902 409.266,154.532 404.902,176.784 C 400.537,199.033 384.586,201.649 384.586,201.649 C 384.586,201.649 403.241,230.139 377.833,258.207 C 352.424,286.271 317.272,279.454 309.568,271.233 C 309.568,271.233 303.263,287.774 279.606,281.538 C 279.606,281.538 267.051,326.688 218.590,340.893 C 170.132,355.094 169.351,325.249 169.351,325.249 C 169.351,325.249 157.232,328.483 150.148,315.815 C 150.148,315.815 125.323,332.444 113.073,307.733 C 113.073,307.733 81.861,323.760 45.931,287.731 C 10.003,251.702 36.621,209.658 36.621,209.658 C 36.621,209.658 17.989,186.247 33.885,171.563 C 33.885,171.563 3.100,143.132 59.642,82.526 C 100.975,46.127 140.023,66.901 140.023,66.901 C 140.023,66.901 143.815,59.262 152.119,59.223 C 152.119,59.223 152.569,19.844 211.270,10.038 C 269.968,0.231 271.368,26.265 271.368,26.265 C 271.368,26.265 289.229,22.368 308.506,47.681 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#ffb7b7b7" Data="F1 M 321.830,47.680 C 321.830,47.680 358.815,37.342 385.795,71.511 C 412.777,105.677 407.844,141.902 407.844,141.902 C 407.844,141.902 422.590,154.532 418.226,176.783 C 413.861,199.033 397.909,201.648 397.909,201.648 C 397.909,201.648 416.564,230.139 391.157,258.207 C 365.748,286.271 330.597,279.454 322.893,271.233 C 322.893,271.233 316.588,287.774 292.932,281.537 C 292.932,281.537 280.375,326.688 231.914,340.893 C 183.454,355.093 182.673,325.249 182.673,325.249 C 182.673,325.249 170.556,328.483 163.472,315.815 C 163.472,315.815 138.646,332.444 126.397,307.733 C 126.397,307.733 95.184,323.760 59.255,287.731 C 23.326,251.701 49.945,209.657 49.945,209.657 C 49.945,209.657 31.313,186.246 47.208,171.563 C 47.208,171.563 16.423,143.131 72.965,82.526 C 114.297,46.127 153.347,66.901 153.347,66.901 C 153.347,66.901 157.139,59.261 165.442,59.223 C 165.442,59.223 165.893,19.844 224.593,10.038 C 283.292,0.231 284.693,26.264 284.693,26.264 C 284.693,26.264 302.553,22.368 321.830,47.680 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#fffefefe" Data="F1 M 338.480,94.236 C 338.480,94.236 375.465,83.697 402.447,118.547 C 429.434,153.396 424.503,190.341 424.503,190.341 C 424.503,190.341 439.250,203.224 434.888,225.917 C 430.527,248.612 414.574,251.276 414.574,251.276 C 414.574,251.276 433.232,280.336 407.828,308.958 C 382.421,337.581 347.269,330.624 339.564,322.238 C 339.564,322.238 333.259,339.110 309.604,332.745 C 309.604,332.745 297.051,378.793 248.591,393.276 C 200.133,407.754 199.350,377.317 199.350,377.317 C 199.350,377.317 187.232,380.614 180.146,367.692 C 180.146,367.692 155.323,384.650 143.071,359.447 C 143.071,359.447 111.859,375.790 75.927,339.042 C 39.994,302.290 66.609,259.411 66.609,259.411 C 66.609,259.411 47.975,235.534 63.869,220.558 C 63.869,220.558 33.081,191.559 89.617,129.752 C 130.947,92.633 169.999,113.824 169.999,113.824 C 169.999,113.824 173.790,106.033 182.093,105.993 C 182.093,105.993 182.539,65.831 241.237,55.834 C 299.938,45.839 301.341,72.392 301.341,72.392 C 301.341,72.392 319.199,68.418 338.480,94.236 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#ffb7b7b7" Data="F1 M 350.254,85.472 C 350.254,85.472 387.238,75.135 414.219,109.302 C 441.202,143.468 436.268,179.692 436.268,179.692 C 436.268,179.692 451.014,192.322 446.650,214.575 C 442.286,236.825 426.334,239.439 426.334,239.439 C 426.334,239.439 444.987,267.930 419.582,295.997 C 394.172,324.063 359.020,317.245 351.317,309.024 C 351.317,309.024 345.010,325.565 321.355,319.329 C 321.355,319.329 308.799,364.480 260.337,378.684 C 211.878,392.885 211.096,363.042 211.096,363.042 C 211.096,363.042 198.979,366.275 191.896,353.604 C 191.896,353.604 167.070,370.235 154.820,345.524 C 154.820,345.524 123.607,361.551 87.678,325.523 C 51.750,289.493 78.369,247.448 78.369,247.448 C 78.369,247.448 59.736,224.038 75.632,209.354 C 75.632,209.354 44.847,180.923 101.389,120.317 C 142.721,83.918 181.771,104.692 181.771,104.692 C 181.771,104.692 185.563,97.054 193.865,97.014 C 193.865,97.014 194.316,57.635 253.016,47.829 C 311.715,38.022 313.118,64.056 313.118,64.056 C 313.118,64.056 330.976,60.159 350.254,85.472 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#fffefefe" Data="F1 M 331.184,105.007 C 331.184,105.007 368.170,94.670 395.148,128.837 C 422.133,163.003 417.199,199.229 417.199,199.229 C 417.199,199.229 431.943,211.860 427.581,234.108 C 423.216,256.360 407.264,258.975 407.264,258.975 C 407.264,258.975 425.919,287.466 400.512,315.532 C 375.104,343.598 339.951,336.780 332.247,328.559 C 332.247,328.559 325.941,345.100 302.286,338.862 C 302.286,338.862 289.729,384.016 241.268,398.219 C 192.809,412.419 192.027,382.576 192.027,382.576 C 192.027,382.576 179.909,385.809 172.826,373.139 C 172.826,373.139 148.000,389.772 135.751,365.060 C 135.751,365.060 104.537,381.088 68.608,345.058 C 32.681,309.026 59.299,266.983 59.299,266.983 C 59.299,266.983 40.667,243.573 56.562,228.890 C 56.562,228.890 25.776,200.459 82.319,139.853 C 123.651,103.454 162.701,124.228 162.701,124.228 C 162.701,124.228 166.494,116.589 174.796,116.549 C 174.796,116.549 175.246,77.170 233.945,67.364 C 292.646,57.558 294.048,83.591 294.048,83.591 C 294.048,83.591 311.906,79.694 331.184,105.007 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#fffefefe" Data="F1 M 307.217,76.364 C 307.217,76.364 345.323,66.021 373.115,100.185 C 400.909,134.347 395.820,170.572 395.820,170.572 C 395.820,170.572 411.012,183.200 406.512,205.452 C 402.014,227.704 385.578,230.321 385.578,230.321 C 385.578,230.321 404.793,258.809 378.612,286.879 C 352.430,314.948 316.215,308.135 308.279,299.915 C 308.279,299.915 301.779,316.458 277.407,310.223 C 277.407,310.223 264.465,355.379 214.535,369.588 C 164.605,383.797 163.806,353.954 163.806,353.954 C 163.806,353.954 151.320,357.188 144.023,344.521 C 144.023,344.521 118.444,361.155 105.826,336.444 C 105.826,336.444 73.666,352.477 36.654,316.454 C -0.356,280.427 27.075,238.379 27.075,238.379 C 27.075,238.379 7.882,214.971 24.259,200.285 C 24.259,200.285 -7.454,171.859 50.810,111.245 C 93.398,74.840 133.627,95.608 133.627,95.608 C 133.627,95.608 137.535,87.968 146.091,87.928 C 146.091,87.928 146.561,48.549 207.040,38.735 C 267.519,28.920 268.958,54.953 268.958,54.953 C 268.958,54.953 287.357,51.053 307.217,76.364 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#ffb7b7b7" Data="F1 M 340.846,78.939 C 340.846,78.939 377.831,68.602 404.813,102.770 C 431.795,136.936 426.859,173.161 426.859,173.161 C 426.859,173.161 441.605,185.790 437.243,208.042 C 432.878,230.292 416.926,232.907 416.926,232.907 C 416.926,232.907 435.580,261.398 410.174,289.465 C 384.765,317.530 349.613,310.713 341.910,302.493 C 341.910,302.493 335.604,319.034 311.947,312.795 C 311.947,312.795 299.392,357.947 250.929,372.151 C 202.471,386.352 201.689,356.507 201.689,356.507 C 201.689,356.507 189.573,359.743 182.489,347.073 C 182.489,347.073 157.663,363.704 145.413,338.991 C 145.413,338.991 114.200,355.020 78.271,318.989 C 42.343,282.960 68.961,240.916 68.961,240.916 C 68.961,240.916 50.329,217.505 66.225,202.821 C 66.225,202.821 35.439,174.390 91.981,113.785 C 133.313,77.386 172.363,98.160 172.363,98.160 C 172.363,98.160 176.156,90.520 184.459,90.480 C 184.459,90.480 184.908,51.103 243.609,41.296 C 302.309,31.490 303.710,57.523 303.710,57.523 C 303.710,57.523 321.569,53.625 340.846,78.939 Z" Opacity="0.2" Height="354.198" Stretch="Fill" Width="413.522" RenderTransformOrigin="0.5,0.5" Canvas.Left="4.378" Canvas.Top="46.959">
+    					<Path.RenderTransform>
+    						<CompositeTransform Rotation="217.083"/>
+    					</Path.RenderTransform>
+    				</Path>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#ffb7b7b7" Data="F1 M 331.083,53.545 C 331.083,53.545 368.069,43.208 395.051,77.376 C 422.031,111.542 417.098,147.768 417.098,147.768 C 417.098,147.768 431.843,160.396 427.479,182.648 C 423.115,204.897 407.163,207.513 407.163,207.513 C 407.163,207.513 425.817,236.004 400.412,264.071 C 375.000,292.135 339.850,285.320 332.147,277.098 C 332.147,277.098 325.840,293.639 302.186,287.401 C 302.186,287.401 289.627,332.555 241.167,346.757 C 192.709,360.959 191.928,331.116 191.928,331.116 C 191.928,331.116 179.811,334.348 172.725,321.679 C 172.725,321.679 147.901,338.309 135.651,313.599 C 135.651,313.599 104.438,329.625 68.508,293.597 C 32.579,257.565 59.198,215.522 59.198,215.522 C 59.198,215.522 40.565,192.112 56.461,177.428 C 56.461,177.428 25.676,148.997 82.218,88.391 C 123.551,51.993 162.600,72.766 162.600,72.766 C 162.600,72.766 166.393,65.127 174.695,65.087 C 174.695,65.087 175.146,25.708 233.848,15.902 C 292.546,6.097 293.945,32.130 293.945,32.130 C 293.945,32.130 311.807,28.233 331.083,53.545 Z" Opacity="0.2"/>
+
+                <!-- Layer 1/<Path> -->
+    				<Path Fill="#ffedecec" Data="F1 M 331.882,73.590 C 331.882,73.590 368.213,63.829 394.707,96.065 C 421.204,128.301 416.349,162.483 416.349,162.483 C 416.349,162.483 430.830,174.399 426.540,195.395 C 422.250,216.392 406.581,218.863 406.581,218.863 C 406.581,218.863 424.898,245.743 399.937,272.232 C 374.978,298.721 340.452,292.293 332.887,284.538 C 332.887,284.538 326.689,300.147 303.455,294.264 C 303.455,294.264 291.114,336.874 243.511,350.288 C 195.911,363.696 195.150,335.534 195.150,335.534 C 195.150,335.534 183.247,338.586 176.292,326.633 C 176.292,326.633 151.904,342.329 139.877,319.014 C 139.877,319.014 109.216,334.145 73.934,300.154 C 38.650,266.161 64.804,226.483 64.804,226.483 C 64.804,226.483 46.507,204.397 62.123,190.539 C 62.123,190.539 31.889,163.716 87.438,106.518 C 128.041,72.164 166.393,91.759 166.393,91.759 C 166.393,91.759 170.118,84.549 178.273,84.510 C 178.273,84.510 178.724,47.352 236.379,38.088 C 294.041,28.824 295.410,53.389 295.410,53.389 C 295.410,53.389 312.953,49.708 331.882,73.590 Z" Opacity="0.2"/>
+
+    			</Canvas>
+    		</Viewbox>
     		<Viewbox Height="24" Canvas.Left="215.505" Canvas.Top="190.656" Margin="113,22,309,0" VerticalAlignment="Top">
     			<Canvas Width="358.444" Height="42.0208">
     				<Path Width="27.3155" Height="30.8945" Canvas.Left="128.408" Canvas.Top="7.76042" Stretch="Fill" Fill="#FF3B3428" Data="F1 M 141.659,26.4466C 141.112,26.4466 140.701,26.4349 140.427,26.4115C 140.156,26.4023 139.892,26.3268 139.634,26.1992C 139.378,26.069 139.219,25.9427 139.163,25.8138C 139.099,25.6849 139.068,25.4297 139.056,25.0391C 139.034,24.6589 139.068,24.2591 139.139,23.8516C 139.21,23.4505 139.318,22.8555 139.461,22.043C 140.012,19.151 140.52,17.319 141.009,16.5456L 141.258,16.3685C 141.654,16.3685 142.187,17.0404 142.855,18.3893C 144.007,20.6888 144.6,22.7135 144.629,24.4635C 144.652,25.151 144.434,25.6563 143.956,25.9635C 143.486,26.28 142.715,26.4466 141.659,26.4466M 141.629,7.76042C 139.883,7.76042 138.182,7.8737 138.039,8.07031C 137.466,8.80859 135.715,13.7175 132.796,22.7813C 129.874,31.8425 128.408,36.8893 128.408,37.9193C 128.408,38.1849 131.208,38.6393 132.859,38.6393C 133.41,38.6393 133.833,38.5885 133.982,38.4635C 134.564,37.9583 135.091,37.0456 135.543,35.7292C 135.951,34.612 137.677,30.4896 138.41,30.3294C 139.139,30.1693 140.324,30.099 141.956,30.099C 143.595,30.099 144.764,30.1693 145.486,30.3294C 146.199,30.4896 147.965,34.612 148.368,35.7292C 148.857,37.1133 149.402,38.0313 150.004,38.5052C 150.138,38.6107 150.504,38.655 150.99,38.655C 152.682,38.655 155.835,38.1159 155.72,37.7526L 151.036,22.9479C 150.143,20.2005 149.443,18.0417 148.926,16.4792C 148.409,14.9193 147.875,13.4466 147.339,12.0755C 146.788,10.7018 146.249,9.14973 145.526,8.16145C 145.323,7.88281 143.452,7.76042 141.629,7.76042"/>
@@ -839,6 +429,16 @@
     			</Grid>
     		</Grid>
     		<Grid Height="27" Width="153" HorizontalAlignment="Left" Margin="142,0,0,157" VerticalAlignment="Bottom">
+    			<Grid x:Name="grid1">
+    				<Grid.Effect>
+    					<BlurEffect Radius="0"/>
+    				</Grid.Effect>
+    				<ed:RegularPolygon x:Name="regularPolygon_Copy" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Left" Margin="0,0,0,0.333" Visibility="Collapsed"/>
+    				<ed:RegularPolygon x:Name="regularPolygon1_Copy" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Left" Margin="32.348,0,0,0.333" Visibility="Collapsed"/>
+    				<ed:RegularPolygon x:Name="regularPolygon2_Copy" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" Margin="65.348,0,60.985,0.333" Visibility="Collapsed"/>
+    				<ed:RegularPolygon x:Name="regularPolygon3_Copy" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Right" Margin="0,0,29.985,0.333" Visibility="Collapsed"/>
+    				<ed:RegularPolygon x:Name="regularPolygon4_Copy" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Right" Margin="0,0,-0.015,0.333" Visibility="Collapsed"/>
+    			</Grid>
     			<ed:RegularPolygon x:Name="regularPolygon" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Left" Margin="0,0,0,0.333" Visibility="Collapsed"/>
     			<ed:RegularPolygon x:Name="regularPolygon1" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" Width="26.667" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" HorizontalAlignment="Left" Margin="32.348,0,0,0.333" Visibility="Collapsed"/>
     			<ed:RegularPolygon x:Name="regularPolygon2" Fill="#FFE6E71B" InnerRadius="0.6" PointCount="5" Stretch="Fill" UseLayoutRounding="False" StrokeLineJoin="Round" StrokeDashOffset="10" StrokeStartLineCap="Round" Margin="65.348,0,60.985,0.333" Visibility="Collapsed"/>
@@ -1157,44 +757,12 @@
 
     			</Canvas>
     		</Viewbox>
-    	</Grid>
-    	<Canvas x:Name="Clound" RenderTransformOrigin="0.5,0.5" Height="404" Canvas.Left="-7" Canvas.Top="44" Width="449" Visibility="Collapsed">
-
-    		<Canvas d:IsHidden="True">
-
-    			<!-- Layer 1/<Path> -->
-    			<!-- Layer 1/<Path> -->
-    			<!-- Layer 1/<Path> --><!-- Layer 1/<Path> -->
-    			<Path Fill="#fffefefe" Data="F1 M 295.688,43.153 C 295.688,43.153 332.674,32.816 359.653,66.983 C 386.635,101.150 381.702,137.375 381.702,137.375 C 381.702,137.375 396.447,150.004 392.084,172.256 C 387.719,194.506 371.767,197.121 371.767,197.121 C 371.767,197.121 390.423,225.612 365.015,253.678 C 339.606,281.743 304.455,274.927 296.751,266.706 C 296.751,266.706 290.444,283.247 266.788,277.008 C 266.788,277.008 254.232,322.163 205.771,336.365 C 157.313,350.567 156.531,320.721 156.531,320.721 C 156.531,320.721 144.414,323.956 137.330,311.288 C 137.330,311.288 112.505,327.918 100.254,303.207 C 100.254,303.207 69.043,319.233 33.112,283.204 C -2.816,247.172 23.803,205.130 23.803,205.130 C 23.803,205.130 5.170,181.719 21.065,167.036 C 21.065,167.036 -9.720,138.604 46.822,77.999 C 88.154,41.600 127.204,62.374 127.204,62.374 C 127.204,62.374 130.998,54.735 139.300,54.695 C 139.300,54.695 139.751,15.316 198.450,5.510 C 257.150,-4.296 258.550,21.737 258.550,21.737 C 258.550,21.737 276.410,17.840 295.688,43.153 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#fffefefe" Data="F1 M 308.506,47.681 C 308.506,47.681 345.492,37.343 372.472,71.512 C 399.453,105.677 394.520,141.902 394.520,141.902 C 394.520,141.902 409.266,154.532 404.902,176.784 C 400.537,199.033 384.586,201.649 384.586,201.649 C 384.586,201.649 403.241,230.139 377.833,258.207 C 352.424,286.271 317.272,279.454 309.568,271.233 C 309.568,271.233 303.263,287.774 279.606,281.538 C 279.606,281.538 267.051,326.688 218.590,340.893 C 170.132,355.094 169.351,325.249 169.351,325.249 C 169.351,325.249 157.232,328.483 150.148,315.815 C 150.148,315.815 125.323,332.444 113.073,307.733 C 113.073,307.733 81.861,323.760 45.931,287.731 C 10.003,251.702 36.621,209.658 36.621,209.658 C 36.621,209.658 17.989,186.247 33.885,171.563 C 33.885,171.563 3.100,143.132 59.642,82.526 C 100.975,46.127 140.023,66.901 140.023,66.901 C 140.023,66.901 143.815,59.262 152.119,59.223 C 152.119,59.223 152.569,19.844 211.270,10.038 C 269.968,0.231 271.368,26.265 271.368,26.265 C 271.368,26.265 289.229,22.368 308.506,47.681 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#ffb7b7b7" Data="F1 M 321.830,47.680 C 321.830,47.680 358.815,37.342 385.795,71.511 C 412.777,105.677 407.844,141.902 407.844,141.902 C 407.844,141.902 422.590,154.532 418.226,176.783 C 413.861,199.033 397.909,201.648 397.909,201.648 C 397.909,201.648 416.564,230.139 391.157,258.207 C 365.748,286.271 330.597,279.454 322.893,271.233 C 322.893,271.233 316.588,287.774 292.932,281.537 C 292.932,281.537 280.375,326.688 231.914,340.893 C 183.454,355.093 182.673,325.249 182.673,325.249 C 182.673,325.249 170.556,328.483 163.472,315.815 C 163.472,315.815 138.646,332.444 126.397,307.733 C 126.397,307.733 95.184,323.760 59.255,287.731 C 23.326,251.701 49.945,209.657 49.945,209.657 C 49.945,209.657 31.313,186.246 47.208,171.563 C 47.208,171.563 16.423,143.131 72.965,82.526 C 114.297,46.127 153.347,66.901 153.347,66.901 C 153.347,66.901 157.139,59.261 165.442,59.223 C 165.442,59.223 165.893,19.844 224.593,10.038 C 283.292,0.231 284.693,26.264 284.693,26.264 C 284.693,26.264 302.553,22.368 321.830,47.680 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#fffefefe" Data="F1 M 338.480,94.236 C 338.480,94.236 375.465,83.697 402.447,118.547 C 429.434,153.396 424.503,190.341 424.503,190.341 C 424.503,190.341 439.250,203.224 434.888,225.917 C 430.527,248.612 414.574,251.276 414.574,251.276 C 414.574,251.276 433.232,280.336 407.828,308.958 C 382.421,337.581 347.269,330.624 339.564,322.238 C 339.564,322.238 333.259,339.110 309.604,332.745 C 309.604,332.745 297.051,378.793 248.591,393.276 C 200.133,407.754 199.350,377.317 199.350,377.317 C 199.350,377.317 187.232,380.614 180.146,367.692 C 180.146,367.692 155.323,384.650 143.071,359.447 C 143.071,359.447 111.859,375.790 75.927,339.042 C 39.994,302.290 66.609,259.411 66.609,259.411 C 66.609,259.411 47.975,235.534 63.869,220.558 C 63.869,220.558 33.081,191.559 89.617,129.752 C 130.947,92.633 169.999,113.824 169.999,113.824 C 169.999,113.824 173.790,106.033 182.093,105.993 C 182.093,105.993 182.539,65.831 241.237,55.834 C 299.938,45.839 301.341,72.392 301.341,72.392 C 301.341,72.392 319.199,68.418 338.480,94.236 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#ffb7b7b7" Data="F1 M 350.254,85.472 C 350.254,85.472 387.238,75.135 414.219,109.302 C 441.202,143.468 436.268,179.692 436.268,179.692 C 436.268,179.692 451.014,192.322 446.650,214.575 C 442.286,236.825 426.334,239.439 426.334,239.439 C 426.334,239.439 444.987,267.930 419.582,295.997 C 394.172,324.063 359.020,317.245 351.317,309.024 C 351.317,309.024 345.010,325.565 321.355,319.329 C 321.355,319.329 308.799,364.480 260.337,378.684 C 211.878,392.885 211.096,363.042 211.096,363.042 C 211.096,363.042 198.979,366.275 191.896,353.604 C 191.896,353.604 167.070,370.235 154.820,345.524 C 154.820,345.524 123.607,361.551 87.678,325.523 C 51.750,289.493 78.369,247.448 78.369,247.448 C 78.369,247.448 59.736,224.038 75.632,209.354 C 75.632,209.354 44.847,180.923 101.389,120.317 C 142.721,83.918 181.771,104.692 181.771,104.692 C 181.771,104.692 185.563,97.054 193.865,97.014 C 193.865,97.014 194.316,57.635 253.016,47.829 C 311.715,38.022 313.118,64.056 313.118,64.056 C 313.118,64.056 330.976,60.159 350.254,85.472 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#fffefefe" Data="F1 M 331.184,105.007 C 331.184,105.007 368.170,94.670 395.148,128.837 C 422.133,163.003 417.199,199.229 417.199,199.229 C 417.199,199.229 431.943,211.860 427.581,234.108 C 423.216,256.360 407.264,258.975 407.264,258.975 C 407.264,258.975 425.919,287.466 400.512,315.532 C 375.104,343.598 339.951,336.780 332.247,328.559 C 332.247,328.559 325.941,345.100 302.286,338.862 C 302.286,338.862 289.729,384.016 241.268,398.219 C 192.809,412.419 192.027,382.576 192.027,382.576 C 192.027,382.576 179.909,385.809 172.826,373.139 C 172.826,373.139 148.000,389.772 135.751,365.060 C 135.751,365.060 104.537,381.088 68.608,345.058 C 32.681,309.026 59.299,266.983 59.299,266.983 C 59.299,266.983 40.667,243.573 56.562,228.890 C 56.562,228.890 25.776,200.459 82.319,139.853 C 123.651,103.454 162.701,124.228 162.701,124.228 C 162.701,124.228 166.494,116.589 174.796,116.549 C 174.796,116.549 175.246,77.170 233.945,67.364 C 292.646,57.558 294.048,83.591 294.048,83.591 C 294.048,83.591 311.906,79.694 331.184,105.007 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#fffefefe" Data="F1 M 307.217,76.364 C 307.217,76.364 345.323,66.021 373.115,100.185 C 400.909,134.347 395.820,170.572 395.820,170.572 C 395.820,170.572 411.012,183.200 406.512,205.452 C 402.014,227.704 385.578,230.321 385.578,230.321 C 385.578,230.321 404.793,258.809 378.612,286.879 C 352.430,314.948 316.215,308.135 308.279,299.915 C 308.279,299.915 301.779,316.458 277.407,310.223 C 277.407,310.223 264.465,355.379 214.535,369.588 C 164.605,383.797 163.806,353.954 163.806,353.954 C 163.806,353.954 151.320,357.188 144.023,344.521 C 144.023,344.521 118.444,361.155 105.826,336.444 C 105.826,336.444 73.666,352.477 36.654,316.454 C -0.356,280.427 27.075,238.379 27.075,238.379 C 27.075,238.379 7.882,214.971 24.259,200.285 C 24.259,200.285 -7.454,171.859 50.810,111.245 C 93.398,74.840 133.627,95.608 133.627,95.608 C 133.627,95.608 137.535,87.968 146.091,87.928 C 146.091,87.928 146.561,48.549 207.040,38.735 C 267.519,28.920 268.958,54.953 268.958,54.953 C 268.958,54.953 287.357,51.053 307.217,76.364 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#ffb7b7b7" Data="F1 M 340.846,78.939 C 340.846,78.939 377.831,68.602 404.813,102.770 C 431.795,136.936 426.859,173.161 426.859,173.161 C 426.859,173.161 441.605,185.790 437.243,208.042 C 432.878,230.292 416.926,232.907 416.926,232.907 C 416.926,232.907 435.580,261.398 410.174,289.465 C 384.765,317.530 349.613,310.713 341.910,302.493 C 341.910,302.493 335.604,319.034 311.947,312.795 C 311.947,312.795 299.392,357.947 250.929,372.151 C 202.471,386.352 201.689,356.507 201.689,356.507 C 201.689,356.507 189.573,359.743 182.489,347.073 C 182.489,347.073 157.663,363.704 145.413,338.991 C 145.413,338.991 114.200,355.020 78.271,318.989 C 42.343,282.960 68.961,240.916 68.961,240.916 C 68.961,240.916 50.329,217.505 66.225,202.821 C 66.225,202.821 35.439,174.390 91.981,113.785 C 133.313,77.386 172.363,98.160 172.363,98.160 C 172.363,98.160 176.156,90.520 184.459,90.480 C 184.459,90.480 184.908,51.103 243.609,41.296 C 302.309,31.490 303.710,57.523 303.710,57.523 C 303.710,57.523 321.569,53.625 340.846,78.939 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#ffb7b7b7" Data="F1 M 331.083,53.545 C 331.083,53.545 368.069,43.208 395.051,77.376 C 422.031,111.542 417.098,147.768 417.098,147.768 C 417.098,147.768 431.843,160.396 427.479,182.648 C 423.115,204.897 407.163,207.513 407.163,207.513 C 407.163,207.513 425.817,236.004 400.412,264.071 C 375.000,292.135 339.850,285.320 332.147,277.098 C 332.147,277.098 325.840,293.639 302.186,287.401 C 302.186,287.401 289.627,332.555 241.167,346.757 C 192.709,360.959 191.928,331.116 191.928,331.116 C 191.928,331.116 179.811,334.348 172.725,321.679 C 172.725,321.679 147.901,338.309 135.651,313.599 C 135.651,313.599 104.438,329.625 68.508,293.597 C 32.579,257.565 59.198,215.522 59.198,215.522 C 59.198,215.522 40.565,192.112 56.461,177.428 C 56.461,177.428 25.676,148.997 82.218,88.391 C 123.551,51.993 162.600,72.766 162.600,72.766 C 162.600,72.766 166.393,65.127 174.695,65.087 C 174.695,65.087 175.146,25.708 233.848,15.902 C 292.546,6.097 293.945,32.130 293.945,32.130 C 293.945,32.130 311.807,28.233 331.083,53.545 Z"/>
-
-                <!-- Layer 1/<Path> -->
-    			<Path Fill="#ffedecec" Data="F1 M 331.882,73.590 C 331.882,73.590 368.213,63.829 394.707,96.065 C 421.204,128.301 416.349,162.483 416.349,162.483 C 416.349,162.483 430.830,174.399 426.540,195.395 C 422.250,216.392 406.581,218.863 406.581,218.863 C 406.581,218.863 424.898,245.743 399.937,272.232 C 374.978,298.721 340.452,292.293 332.887,284.538 C 332.887,284.538 326.689,300.147 303.455,294.264 C 303.455,294.264 291.114,336.874 243.511,350.288 C 195.911,363.696 195.150,335.534 195.150,335.534 C 195.150,335.534 183.247,338.586 176.292,326.633 C 176.292,326.633 151.904,342.329 139.877,319.014 C 139.877,319.014 109.216,334.145 73.934,300.154 C 38.650,266.161 64.804,226.483 64.804,226.483 C 64.804,226.483 46.507,204.397 62.123,190.539 C 62.123,190.539 31.889,163.716 87.438,106.518 C 128.041,72.164 166.393,91.759 166.393,91.759 C 166.393,91.759 170.118,84.549 178.273,84.510 C 178.273,84.510 178.724,47.352 236.379,38.088 C 294.041,28.824 295.410,53.389 295.410,53.389 C 295.410,53.389 312.953,49.708 331.882,73.590 Z"/>
-
+    		<Canvas x:Name="next" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Margin="0,0,8,8" VerticalAlignment="Bottom" Visibility="Collapsed">
+    			<Canvas.RenderTransform>
+    				<CompositeTransform/>
+    			</Canvas.RenderTransform>
+    			<TheS_SperfGames_MayaTukky_Controls:ButtonCorrectUI x:Name="btn_Next"/>
     		</Canvas>
-    	</Canvas>
+    	</Grid>
     </Canvas>
 </navigation:Page>

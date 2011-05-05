@@ -108,7 +108,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             _displayCardTimer.Tick += (s, e) => {
 
                 // ตรวจการเล่น effect ควันที่ภาพรองสุดท้าย
-                if (_currentRound == DisplaySmokeEffectRound) CloundBomberStoryboard.Begin();
+                if (_currentRound == DisplaySmokeEffectRound) ;
 
                 // แสดงคะแนนที่ได้ออกมา
                 if (_isFinished == false) _displayScoreTimer.Start();

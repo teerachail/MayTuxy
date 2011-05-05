@@ -5,7 +5,7 @@
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
            xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" x:Class="TheS.SperfGames.MayaTukky.Views.MainTitle"
+           xmlns:TheS_SperfGames_MayaTukky_Controls="clr-namespace:TheS.SperfGames.MayaTukky.Controls" x:Class="TheS.SperfGames.MayaTukky.Views.MainTitlePage"
            mc:Ignorable="d"
            d:DesignWidth="625" d:DesignHeight="488"
            Title="MainTitle Page">
@@ -33,12 +33,13 @@
     			</TheS_SperfGames_MayaTukky_Controls:AutoCupUI.RenderTransform>
     		</TheS_SperfGames_MayaTukky_Controls:AutoCupUI>
     		<Canvas x:Name="NextButton" Height="50" Margin="290,0,289,6" VerticalAlignment="Bottom">
-    			<TheS_SperfGames_MayaTukky_Controls:ButtonCorrectUI/>
+    			<TheS_SperfGames_MayaTukky_Controls:ButtonCorrectUI x:Name="btn_Next"/>
     		</Canvas>
     		<Canvas Height="95" Margin="134,66,135,0" VerticalAlignment="Top">
     			<Path Opacity="0.85" Fill="#fff6f7f7" Data="F1 M367.3739,0 L21.180788,0 C7.0254979,1.110223E-15 -0.54023314,11.070518 0,29.71269 L0,112.02844 C0.54016197,127.67999 4.8639569,138.01248 20.640379,139.52699 C20.640379,139.52699 367.3739,139.52699 367.3739,139.52699 C383.69092,140.22516 388.01416,131.37007 389.095,114.24253 L389.095,28.236635 C389.095,21.608631 388.01419,0 367.3739,0 z" UseLayoutRounding="False" Height="94.552" Width="360.025" Stretch="Fill"/>
     			<TextBlock x:Name="txt_Block" Height="72" TextWrapping="Wrap" Text="lol You spin my head right round right rounf when you go down when yoou go down down !@#$%^!@#$%^&amp;" Canvas.Top="11" Width="330" FontSize="13.333" FontWeight="Bold" Padding="8,4,8,2" Canvas.Left="17"/>
     		</Canvas>
     	</Grid>
+    	<TheS_SperfGames_MayaTukky_Controls:OptionButtonUI d:LayoutOverrides="Width, Height"/>
     </Canvas>
 </navigation:Page>
