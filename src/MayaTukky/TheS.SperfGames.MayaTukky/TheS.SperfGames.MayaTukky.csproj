@@ -617,6 +617,7 @@
     <Content Include="Assets\CupStyles\TriangleCup_2.txt" />
     <Content Include="Assets\CupStyles\TriangleCup_3.txt" />
     <Content Include="Assets\CupStyles\TriangleCup_4.txt" />
+    <Resource Include="Assets\Images\KBankBanner.png" />
     <Resource Include="Assets\Images\Scroll2.png" />
     <Resource Include="Assets\Images\GobinCard.png" />
     <Resource Include="Assets\Images\GolemCard.png" />
