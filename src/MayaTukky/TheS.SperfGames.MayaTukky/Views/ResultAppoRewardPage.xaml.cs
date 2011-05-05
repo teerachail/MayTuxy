@@ -229,7 +229,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             (LayoutRoot.FindName(string.Format("{0}{1}", ObjectName, MaximumKeyFrame)) as DiscreteObjectKeyFrame)
                 .Value = totalScore.ToString();
 
-            RunningScoreStoryboard.Begin();
+            //RunningScoreStoryboard.Begin();
         }
 
         private void displayCardRank(CardInformation card)

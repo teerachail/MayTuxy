@@ -884,6 +884,38 @@
     			</Setter.Value>
     		</Setter>
     	</Style>
+    	<Style x:Key="SkipButtonStyle" TargetType="Button">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="Button">
+    					<Grid>
+    						<VisualStateManager.VisualStateGroups>
+    							<VisualStateGroup x:Name="CommonStates">
+    								<VisualState x:Name="Normal"/>
+    								<VisualState x:Name="MouseOver">
+    									<Storyboard>
+    										<DoubleAnimation Duration="0" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+    										<DoubleAnimation Duration="0" To="1.1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+    									</Storyboard>
+    								</VisualState>
+    								<VisualState x:Name="Pressed"/>
+    								<VisualState x:Name="Disabled"/>
+    							</VisualStateGroup>
+    						</VisualStateManager.VisualStateGroups>
+    						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+    							<Grid.RenderTransform>
+    								<CompositeTransform/>
+    							</Grid.RenderTransform>
+    							<Rectangle Fill="#FF2F2F2F" RadiusY="5" RadiusX="5" Opacity="0.01"/>
+    							<ContentPresenter/>
+    						</Grid>
+    					</Grid>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    		<Setter Property="FontSize" Value="32"/>
+    		<Setter Property="Foreground" Value="#FFF6F7F8"/>
+    	</Style>
     </ResourceDictionary>
   </Application.Resources>
 
