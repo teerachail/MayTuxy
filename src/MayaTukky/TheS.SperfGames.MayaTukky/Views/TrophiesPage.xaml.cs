@@ -16,7 +16,8 @@ namespace TheS.SperfGames.MayaTukky.Views
     public partial class TrophiesPage : Page
     {
         #region Fields
-        
+
+        public static event EventHandler Close;
         private string _username;
         private bool _callbackCompleted;
         private IGameService _svc;
@@ -35,6 +36,15 @@ namespace TheS.SperfGames.MayaTukky.Views
             InitializeComponent();
             _svc = new GameService();
             InitializeInformation("");
+            CloseButton.Click += new RoutedEventHandler(CloseButton_Click);
+        }
+
+        void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            var temp = Close;
+            if (temp != null) {
+                temp(null, null);
+            }
         }
 
         #endregion Constructors

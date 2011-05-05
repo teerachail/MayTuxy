@@ -16,6 +16,8 @@ namespace TheS.SperfGames.MayaTukky.Views
     public partial class HomePage : Page
     {
         public static event EventHandler NextPage;
+        public static event EventHandler TrophiesPage;
+        public static event EventHandler InvitePage;
 
         public HomePage()
         {
@@ -24,6 +26,24 @@ namespace TheS.SperfGames.MayaTukky.Views
             bT_Single.MouseLeftButtonDown += new MouseButtonEventHandler(bT_Single_MouseLeftButtonDown);
             SB0_Intro.Completed += new EventHandler(SB0_Intro_Completed);
             SB1_Intro.Completed += new EventHandler(SB1_Intro_Completed);
+            bT_Trophies.MouseLeftButtonDown += new MouseButtonEventHandler(bT_Trophies_MouseLeftButtonDown);
+            bT_Invite.MouseLeftButtonDown += new MouseButtonEventHandler(bT_Invite_MouseLeftButtonDown);
+        }
+
+        void bT_Invite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var temp = InvitePage;
+            if (temp != null) {
+                temp(null,null);
+            }
+        }
+
+        void bT_Trophies_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var temp = TrophiesPage;
+            if (temp != null) {
+                temp(null,null);
+            }
         }
 
         private void Scene2_Loaded(object sender, RoutedEventArgs e)

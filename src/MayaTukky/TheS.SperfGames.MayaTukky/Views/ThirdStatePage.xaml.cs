@@ -24,7 +24,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private const int TimeTickSecond = 1;   // เวลาในการเดินของนาฬิกา ต่อวินาที
         private const int QuestionTimeMilisecond = 700; // เวลาในการที่ต้องรอดูโจทย์ มิลิวินาที
-        private const int MinimumIncorrectCountForDisplayFail = 5; // จำนวนครั้งที่จะทำการแสดงเครื่องหมายผิดที่มีจำนวนครั้งที่ผิด
+        private const int MinimumIncorrectCountForDisplayFail = 3; // จำนวนครั้งที่จะทำการแสดงเครื่องหมายผิดที่มีจำนวนครั้งที่ผิด
         private const int DisplayGameCombo = 5; // จำนวนครั้งที่จะทำการแสดงผล Combo ที่ได้
         private const int TimeAlertSecond = 10; // แจ้งเตือนเวลาใกล้หมด
         private const string CupStyleName = "TallCup";
@@ -316,7 +316,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                     // แสดงอนิเมชันการตอบผิด
                     if (_gameCombo >= MinimumIncorrectCountForDisplayFail)
                     {
-                        // TODO: แสดงกราฟฟิคจำนวน Combo ที่เสียไป State 3
+                        _trueFalseMark.LostComboTextBlock.Text = _gameCombo.ToString();
                         _trueFalseMark.Sb_ComboLost.Begin();
                     }
                     else _trueFalseMark.Sb_Fail.Begin();

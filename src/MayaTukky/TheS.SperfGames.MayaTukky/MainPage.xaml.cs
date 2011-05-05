@@ -37,7 +37,14 @@ namespace TheS.SperfGames.MayaTukky
             };
 
             Views.LoadPage.NextPage += new EventHandler(NavigationPage);
+            
             Views.HomePage.NextPage += new EventHandler(NavigationPage);
+            Views.HomePage.InvitePage += new EventHandler(HomePage_InvitePage);
+            Views.HomePage.TrophiesPage += new EventHandler(HomePage_TrophiesPage);
+            Views.TrophiesPage.Close += new EventHandler(TrophiesPage_Close);
+            Views.InviteFriendsPage.Close += new EventHandler(TrophiesPage_Close);
+
+
             Views.TitleFirstPage.NextPage += new EventHandler(NavigationPage);
             Views.TitleSecondPage.NextPage += new EventHandler(NavigationPage);
             Views.TitleThirdPage.NextPage += new EventHandler(NavigationPage);
@@ -46,6 +53,21 @@ namespace TheS.SperfGames.MayaTukky
             Views.ThirdStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.ResultScorePage.CalculateScoreCompleted +=new EventHandler(NavigationPage);
             Views.TotalScorePage.CalculateScoreCompleted += new EventHandler(NavigationPage);
+        }
+
+        void TrophiesPage_Close(object sender, EventArgs e)
+        {
+            ContentFrame.Navigate(new Uri("/HomePage", UriKind.Relative));
+        }
+
+        void HomePage_TrophiesPage(object sender, EventArgs e)
+        {
+            ContentFrame.Navigate(new Uri("/TrophiesPage", UriKind.Relative));
+        }
+
+        void HomePage_InvitePage(object sender, EventArgs e)
+        {
+            ContentFrame.Navigate(new Uri("/InviteFriendsPage", UriKind.Relative));
         }
 
         private void NavigationPage(object sender, EventArgs e)

@@ -15,9 +15,20 @@ namespace TheS.SperfGames.MayaTukky.Views
 {
     public partial class InviteFriendsPage : Page
     {
+        public static event EventHandler Close;
+
         public InviteFriendsPage()
         {
             InitializeComponent();
+            CloseButton.Click += new RoutedEventHandler(CloseButton_Click);
+        }
+
+        void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            var temp = Close;
+            if (temp != null) {
+                temp(null,null);
+            }
         }
 
         // Executes when the user navigates to this page.
