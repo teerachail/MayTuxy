@@ -60,7 +60,7 @@
     				</Path.RenderTransform>
     			</Path>
     			<Grid Canvas.Left="35" Canvas.Top="1">
-    				<TextBlock x:Name="TimeTextBlock" TextWrapping="Wrap" Text="612" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Left" FontSize="9.333"/>
+    				<TextBlock x:Name="TimeTextBlock" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Left" FontSize="9.333"/>
     			</Grid>
     		</Canvas>
     		<Canvas Height="88" RenderTransformOrigin="0.5,0.5" Margin="297,0,162,101" VerticalAlignment="Bottom">
@@ -86,10 +86,10 @@
     			<Path Width="11.491" Height="15.274" Canvas.Left="14.963" Canvas.Top="54.818" Stretch="Fill" Fill="#FF33302E" Data="F1 M 32.1567,166.757C 31.778,166.124 31.634,152.806 31.626,151.952C 31.6207,151.405 34.7834,151.601 35.2714,152.09C 35.5167,152.333 35.1087,158.348 35.1087,158.348L 39.546,158.348C 39.546,158.348 39.094,152.828 39.4287,152.304C 39.6994,151.88 42.7207,151.353 43.05,151.893C 43.2794,152.27 42.878,165.049 42.4607,166.757C 42.3873,167.066 40.626,166.726 40.438,166.669C 39.1713,166.278 39.546,160.358 39.546,160.358L 35.1087,160.358C 35.1087,160.358 35.2887,165.869 34.9047,166.397C 34.5127,166.934 32.306,167.012 32.1567,166.757 Z " UseLayoutRounding="False"/>
     			<Path Width="10.55" Height="14.87" Canvas.Left="28.552" Canvas.Top="55.206" Stretch="Fill" Fill="#FF33302E" Data="F1 M 53.046,157.265C 53.3833,156.468 52.8953,155.637 52.1954,155.229C 51.7167,154.948 50.9993,155.046 50.4727,155.07C 49.9834,155.093 49.4914,155.122 49.014,155.234C 48.4314,155.374 48.4367,156.025 48.45,156.522C 48.458,156.653 48.47,156.893 48.4887,157.244L 48.59,159.293L 50.2674,158.768C 50.786,158.565 51.3047,158.38 51.814,158.161C 52.2074,157.989 52.7367,157.83 52.962,157.432C 52.994,157.377 53.022,157.322 53.046,157.265 Z M 45.5393,166.968C 45.4473,166.828 45.518,162.793 45.5074,160.705C 45.494,158.364 45.4807,156.017 45.4673,153.68C 45.4647,153.166 45.462,152.656 45.4607,152.148C 47.27,152.218 49.0874,152.181 50.8927,152.358C 52.5047,152.513 54.9753,152.629 55.6473,154.432C 55.9034,155.112 56.0767,155.901 55.9873,156.617C 55.5647,159.989 52.8687,160.861 52.006,160.973C 50.2154,161.202 48.9154,160.708 48.9154,160.708C 49.062,161.801 49.286,162.882 49.3927,163.981C 49.4554,164.664 49.7207,166.062 49.0727,166.557C 48.746,166.809 45.658,167.145 45.5393,166.968 Z " UseLayoutRounding="False"/>
     			<Grid Canvas.Left="44" Canvas.Top="7" Width="99">
-    				<TextBlock x:Name="AllAveragePointTextBlock" TextWrapping="Wrap" Text="78500" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="16"/>
+    				<TextBlock x:Name="AllAveragePointTextBlock" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="16"/>
     			</Grid>
     			<Grid Canvas.Left="49" Canvas.Top="49" Width="104">
-    				<TextBlock x:Name="AllHighScorePointTextBlock" TextWrapping="Wrap" Text="566712" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="18.667"/>
+    				<TextBlock x:Name="AllHighScorePointTextBlock" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="18.667"/>
     			</Grid>
     		</Canvas>
     		<Canvas Height="47" Width="26" HorizontalAlignment="Right" Margin="0,0,268,122" VerticalAlignment="Bottom">
@@ -118,10 +118,10 @@
     			<Grid Height="93" Width="128">
     				<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ApHp.png" Stretch="Fill"/>
     				<Grid Margin="36,11,22,0" VerticalAlignment="Top">
-    					<TextBlock x:Name="FirstAveragePointTextBlock" TextWrapping="Wrap" Text="995" Foreground="#FFE8E9EB" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12"/>
+    					<TextBlock x:Name="FirstAveragePointTextBlock" TextWrapping="Wrap" Text="0" Foreground="#FFE8E9EB" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12"/>
     				</Grid>
     				<Grid Margin="40,0,8,18" VerticalAlignment="Bottom">
-    					<TextBlock x:Name="FirstHighScorePointTextBlock" Margin="0,0,5,0" TextWrapping="Wrap" Text="5600" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="13.333"/>
+    					<TextBlock x:Name="FirstHighScorePointTextBlock" Margin="0,0,5,0" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="13.333"/>
     				</Grid>
     			</Grid>
     		</Viewbox>
@@ -129,10 +129,10 @@
     			<Grid Height="93" Width="128">
     				<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ApHp.png" Stretch="Fill"/>
     				<Grid Margin="36,11,22,0" VerticalAlignment="Top">
-    					<TextBlock x:Name="SecondAveragePointTextBlock" TextWrapping="Wrap" Text="995" Foreground="#FFE8E9EB" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12"/>
+    					<TextBlock x:Name="SecondAveragePointTextBlock" TextWrapping="Wrap" Text="0" Foreground="#FFE8E9EB" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12"/>
     				</Grid>
     				<Grid Margin="40,0,8,18" VerticalAlignment="Bottom">
-    					<TextBlock x:Name="SecondHighScoePointTextBlock" Margin="0,0,5,0" TextWrapping="Wrap" Text="5600" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="13.333"/>
+    					<TextBlock x:Name="SecondHighScorePointTextBlock" Margin="0,0,5,0" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="13.333"/>
     				</Grid>
     			</Grid>
     		</Viewbox>
@@ -140,10 +140,10 @@
     			<Grid Height="93" Width="128">
     				<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ApHp.png" Stretch="Fill"/>
     				<Grid Margin="36,11,22,0" VerticalAlignment="Top">
-    					<TextBlock x:Name="ThirdAveragePointTextBlock" TextWrapping="Wrap" Text="995" Foreground="#FFE8E9EB" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12"/>
+    					<TextBlock x:Name="ThirdAveragePointTextBlock" TextWrapping="Wrap" Text="0" Foreground="#FFE8E9EB" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12"/>
     				</Grid>
     				<Grid Margin="40,0,8,18" VerticalAlignment="Bottom">
-    					<TextBlock x:Name="ThirdHighScorePointTextBlock" Margin="0,0,5,0" TextWrapping="Wrap" Text="5600" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="13.333"/>
+    					<TextBlock x:Name="ThirdHighScorePointTextBlock" Margin="0,0,5,0" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" FontWeight="Bold" HorizontalAlignment="Center" FontSize="13.333"/>
     				</Grid>
     			</Grid>
     		</Viewbox>
@@ -157,13 +157,13 @@
     			<Grid Height="31" Width="148">
     				<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/PercentileEng.png" Stretch="Fill"/>
     				<Grid HorizontalAlignment="Right" Margin="0,6,37,11" d:LayoutOverrides="Height" Width="31">
-    					<TextBlock x:Name="PercentileTextBlock" TextWrapping="Wrap" Text="99.5" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" HorizontalAlignment="Right"/>
+    					<TextBlock x:Name="PercentileTextBlock" TextWrapping="Wrap" Text="0" d:LayoutOverrides="Width" Foreground="#FFE8E9EB" HorizontalAlignment="Right"/>
     				</Grid>
     			</Grid>
     		</Viewbox>
     		<Grid Width="155" HorizontalAlignment="Right" Margin="0,136,143,177">
     			<Viewbox Margin="0,12" >
-    				<Image Source="/TheS.SperfGames.MayaTukky;component/Assets/Images/ThorCard.png" Stretch="Fill"/>
+    				<Image Stretch="Fill" Name="CardImage" />
     			</Viewbox>
     		</Grid>
     	</Grid>

@@ -19,7 +19,7 @@ namespace TheS.SperfGames.MayaTukky.Views
     /// </summary>
     public partial class ResultAppoRewardPage : Page
     {
-        #region Properties
+        #region Fields
 
         private const int DisplayScoreOneCircleMillisecond = 280;
         private const int HoldTimeMillisecond = 720;
@@ -36,16 +36,18 @@ namespace TheS.SperfGames.MayaTukky.Views
         private double _scorePerMiniRound;
         private bool _isFinished;
 
-        private AppoTable _table;
+        private ScoreTableResponse _table;
         private CardInformation _currentCard;
         private DispatcherTimer _displayCardTimer;
         private DispatcherTimer _holdingTimer;
         private DispatcherTimer _displayScoreTimer;
 
-        #endregion Properties
+        private IGameService _svc;
+
+        #endregion Fields
 
         #region Constructors
-        
+
         /// <summary>
         /// Initialize objects and events
         /// </summary>
@@ -66,12 +68,14 @@ namespace TheS.SperfGames.MayaTukky.Views
         /// </summary>
         public void StartShowScore()
         {
-            _displayCardTimer.Start();
+            _svc.RequestScoreTable(getScoreTableCallback);
         }
 
         // Initialize objects
         private void initializeObject()
         {
+            _svc = new GameService();
+
             _totalScore = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
 
             _scorePerRound = (int)(_totalScore / MaximumDisplayScoreRound);
@@ -80,131 +84,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             _displayCardTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(DisplayScoreOneCircleMillisecond) };
             _holdingTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(HoldTimeMillisecond) };
             _displayScoreTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(DisplayScorePerRoundMillisecond) };
-
-            // TODO: กำหนดค่า Appo table ตัวอย่าง พี่บุ๊งยังไม่ได้ตัดสินใจ
-            _table = new AppoTable {
-                CardLevelList = new List<CardInformation> {
-                    new CardInformation{
-                        RequireScore = 0,
-                        Rank = 1,
-                        Name = "Toad",
-                        ImageUrl = "ToadCard",
-                    },
-                    new CardInformation{
-                        RequireScore = 100,
-                        Rank = 1,
-                        Name = "Crow",
-                        ImageUrl = "CrowCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 200,
-                        Rank = 1,
-                        Name = "Ghost",
-                        ImageUrl = "GhostCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 300,
-                        Rank = 1,
-                        Name = "Wolf",
-                        ImageUrl = "WolfCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 400,
-                        Rank = 2,
-                        Name = "Tree",
-                        ImageUrl = "TreeCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 500,
-                        Rank = 2,
-                        Name = "Golem",
-                        ImageUrl = "GolemCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 600,
-                        Rank = 2,
-                        Name = "Gobin",
-                        ImageUrl = "GobinCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 700,
-                        Rank = 2,
-                        Name = "Tribe",
-                        ImageUrl = "TribeCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 800,
-                        Rank = 3,
-                        Name = "Knight",
-                        ImageUrl = "KnightCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 900,
-                        Rank = 3,
-                        Name = "Astrologer",
-                        ImageUrl = "AstrologerCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1000,
-                        Rank = 3,
-                        Name = "Herbalists",
-                        ImageUrl = "HerbalistsCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1100,
-                        Rank = 3,
-                        Name = "Priest",
-                        ImageUrl = "PriestCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1200,
-                        Rank = 4,
-                        Name = "Sorcerer first",
-                        ImageUrl = "SorcererFirstCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1300,
-                        Rank = 4,
-                        Name = "Sorcerer second",
-                        ImageUrl = "SorcererSecondCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1400,
-                        Rank = 4,
-                        Name = "Sorcerer third",
-                        ImageUrl = "SorcererThirdCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1500,
-                        Rank = 4,
-                        Name = "Berserk",
-                        ImageUrl = "BerserkCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1600,
-                        Rank = 5,
-                        Name = "Heimdell",
-                        ImageUrl = "HeimdellCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1700,
-                        Rank = 5,
-                        Name = "Thor",
-                        ImageUrl = "ThorCard"
-                    },
-                    new CardInformation{
-                        RequireScore = 1800,
-                        Rank = 5,
-                        Name = "Odin",
-                        ImageUrl = "OdinCard"
-                    },
-                },
-            };
-
-            _currentCard = _table.CardLevelList.First();
-            FirstImage.Source = _currentCard.ImageSource;
-            CardNameTextBlock.Text = _currentCard.Name;
-            displayCardRank(_currentCard);
         }
 
         // Initialize events
@@ -238,7 +117,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
                 // แสดงภาพการ์ดที่ได้
                 var nextLevelScore = _scorePerRound * _currentRound;
-                var nextCard = getCardInformation(nextLevelScore);
+                var nextCard = getCardInformationByScore(nextLevelScore);
                 if (nextCard != null) {
                     if (nextCard != _currentCard) {
 
@@ -284,7 +163,8 @@ namespace TheS.SperfGames.MayaTukky.Views
             #endregion การเลื่อนการ์ดเสร็จสิ้น
         }
 
-        public CardInformation getCardInformation(int score)
+        // แสดงการ์ดทีได้จากคะแนน
+        private CardInformation getCardInformationByScore(int score)
         {
             CardInformation result = null;
 
@@ -296,6 +176,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             return result;
         }
 
+        // แสดงผล Rank ของ card
         private void displayCardRank(CardInformation card)
         {
             if (card != null) {
@@ -306,6 +187,24 @@ namespace TheS.SperfGames.MayaTukky.Views
                     case 4: VisualStateManager.GoToState(this, FourStar.Name, true); break;
                     case 5: VisualStateManager.GoToState(this, FiveStar.Name, true); break;
                     default: VisualStateManager.GoToState(this, NoneStar.Name, true); break;
+                }
+            }
+        }
+
+        // ได้รับข้อตารางลำดับคะแนนกลับไป
+        private void getScoreTableCallback(ScoreTableResponse scoreTable)
+        {
+            if (scoreTable != null) {
+
+                _table = scoreTable;
+                _currentCard = _table.CardLevelList.FirstOrDefault();
+
+                if (_currentCard != null)
+                {
+                    FirstImage.Source = _currentCard.ImageSource;
+                    CardNameTextBlock.Text = _currentCard.Name;
+                    displayCardRank(_currentCard);
+                    _displayCardTimer.Start(); 
                 }
             }
         }

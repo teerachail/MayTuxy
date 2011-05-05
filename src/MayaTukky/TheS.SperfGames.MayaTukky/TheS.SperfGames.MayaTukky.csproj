@@ -105,7 +105,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppoTable.cs" />
+    <Compile Include="ScoreTableResponse.cs" />
     <Compile Include="CardInformation.cs" />
     <Compile Include="Controls\AutoCupUI.xaml.cs">
       <DependentUpon>AutoCupUI.xaml</DependentUpon>
@@ -243,12 +243,15 @@
     <Compile Include="GameRoundFirst.cs" />
     <Compile Include="GameRoundSecond.cs" />
     <Compile Include="GameRoundThird.cs" />
+    <Compile Include="GameService.cs" />
     <Compile Include="GameStageManager.cs" />
     <Compile Include="GameStageManagerFirst.cs" />
     <Compile Include="GameStageManagerSecond.cs" />
     <Compile Include="GameStageManagerThird.cs" />
     <Compile Include="GlobalScore.cs" />
+    <Compile Include="IGameService.cs" />
     <Compile Include="Models\CupItems.cs" />
+    <Compile Include="PlayerStatistics.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="QuestionRow.cs" />
     <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
