@@ -34,7 +34,9 @@ namespace TheS.SperfGames.MayaTukky
                 "/TitleThirdPage",
                 "/ThirdStatePage",
                 "/ResultScorePage",
-                "/TotalScorePage"
+                "/TotalScorePage",
+                "/ResultAppoRewardPage",
+                "/BannerPage"
             };
 
             Views.LoadPage.NextPage += new EventHandler(NavigationPage);
@@ -54,6 +56,8 @@ namespace TheS.SperfGames.MayaTukky
             Views.ThirdStatePage.GameFinish += new EventHandler(NavigationPage);
             Views.ResultScorePage.CalculateScoreCompleted +=new EventHandler(NavigationPage);
             Views.TotalScorePage.CalculateScoreCompleted += new EventHandler(NavigationPage);
+
+            Views.ResultAppoRewardPage.Completed += new EventHandler(NavigationPage);
         }
 
         void TrophiesPage_Close(object sender, EventArgs e)
@@ -73,8 +77,11 @@ namespace TheS.SperfGames.MayaTukky
 
         private void NavigationPage(object sender, EventArgs e)
         {
-            if (_gamePageIndex<_pages.Count())
-                ContentFrame.Navigate(new Uri(_pages[_gamePageIndex++], UriKind.Relative));
+            if (_gamePageIndex < _pages.Count()) ContentFrame.Navigate(new Uri(_pages[_gamePageIndex++], UriKind.Relative));
+            else {
+                const int ResetPage = 0;
+                _gamePageIndex = ResetPage;
+            }
         }
 
         // After the Frame navigates, ensure the HyperlinkButton representing the current page is selected

@@ -61,6 +61,12 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         #endregion Constructors
 
+        #region Events
+
+        public static event EventHandler Completed;
+
+        #endregion Events
+
         #region Methods
 
         /// <summary>
@@ -89,6 +95,17 @@ namespace TheS.SperfGames.MayaTukky.Views
         // Initialize events
         private void initializeEvents()
         {
+            #region กดปุ่มไปต่อ
+
+            btn_Next.MouseLeftButtonDown += (s, e) => {
+                var temp = Completed;
+                if (temp != null) temp(null, null);
+            };
+
+            #endregion กดปุ่มไปต่อ
+
+            #region ถึงเวลาในการทำเล่นคะแนนวิ่ง
+
             _displayScoreTimer.Tick += (s, e) => {
 
                 if (_currentDisplayScoreRound >= MaximumDisplayScoreRound) {
@@ -102,6 +119,8 @@ namespace TheS.SperfGames.MayaTukky.Views
                     _currentDisplayScoreRound++;
                 }
             };
+
+            #endregion ถึงเวลาในการทำเล่นคะแนนวิ่ง
 
             #region ถึงเวลาที่ต้องเปลี่ยนการ์ดใหม่
 
@@ -136,6 +155,7 @@ namespace TheS.SperfGames.MayaTukky.Views
                 if (_currentRound >= MaximumDisplayScoreRound) {
                     AllStateScoreTextBlock.Text = _totalScore.ToString();
                     _isFinished = true;
+                    Sb_Next.Begin();
                 }
 
                 _displayCardTimer.Stop();
