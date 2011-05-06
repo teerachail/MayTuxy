@@ -37,7 +37,8 @@ namespace TheS.SperfGames.MayaTukky.Views
         public TotalScorePage()
         {
             InitializeComponent();
-            _clound = new CloudUI();
+            //_clound = new CloudUI();
+            SB_Calculate.Begin();
             LayoutRoot.Children.Add(_clound);
 
 
@@ -59,7 +60,7 @@ namespace TheS.SperfGames.MayaTukky.Views
             //SB_CloudOut.Completed += new EventHandler(SB_CloudOut_Completed);
             _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
 
-            _clound.Sb_CloudOut.Begin();
+            //_clound.Sb_CloudOut.Begin();
 
             const int TenKeyFrame = 8;
             const int EighteenKeyFrame = 18;
@@ -83,7 +84,7 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         private void Sb_CloudOut_Completed(object sender, EventArgs e)
         {
-            SB_Calculate.Begin();
+            
 
             //poisonSeal.StartPlay();
             //voodooSeal.StartPlay();
