@@ -21,15 +21,14 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
             InitializeComponent();
             Loaded += new RoutedEventHandler(TukkyCover_Loaded);
-            NextButton.MouseLeftButtonDown += new MouseButtonEventHandler(NextButton_MouseLeftButtonDown);
+            btn_Next.MouseLeftButtonDown += new MouseButtonEventHandler(btn_Next_MouseLeftButtonDown);
         }
 
-        private void NextButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void btn_Next_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             EventHandler temp = NextPage;
-            if (temp != null)
-            {
-                temp(null,null);
+            if (temp != null) {
+                temp(null, null);
             }
         }
 

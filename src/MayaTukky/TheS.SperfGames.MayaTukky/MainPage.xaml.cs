@@ -40,12 +40,14 @@ namespace TheS.SperfGames.MayaTukky
             };
 
             Views.LoadPage.NextPage += new EventHandler(NavigationPage);
-            
+
             Views.HomePage.NextPage += new EventHandler(NavigationPage);
             Views.HomePage.InvitePage += new EventHandler(HomePage_InvitePage);
             Views.HomePage.TrophiesPage += new EventHandler(HomePage_TrophiesPage);
             Views.TrophiesPage.Close += new EventHandler(TrophiesPage_Close);
             Views.InviteFriendsPage.Close += new EventHandler(TrophiesPage_Close);
+
+            Views.MainTitlePage.NextPage += new EventHandler(NavigationPage);
 
 
             Views.TitleFirstPage.NextPage += new EventHandler(NavigationPage);
@@ -58,6 +60,7 @@ namespace TheS.SperfGames.MayaTukky
             Views.TotalScorePage.CalculateScoreCompleted += new EventHandler(NavigationPage);
 
             Views.ResultAppoRewardPage.Completed += new EventHandler(NavigationPage);
+            Views.BannerPage.Completed += new EventHandler(NavigationPage);
         }
 
         void TrophiesPage_Close(object sender, EventArgs e)
