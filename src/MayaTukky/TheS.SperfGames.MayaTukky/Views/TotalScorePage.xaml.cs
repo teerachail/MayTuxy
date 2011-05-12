@@ -34,87 +34,69 @@ namespace TheS.SperfGames.MayaTukky.Views
 
         #endregion Events
 
+        #region Constructors
+
+        /// <summary>
+        /// Initialize total score page
+        /// </summary>
         public TotalScorePage()
         {
             InitializeComponent();
-            //_clound = new CloudUI();
-            SB_Calculate.Begin();
+            initializeObjects();
+            initializeEvents();
+
             LayoutRoot.Children.Add(_clound);
+            SB_Calculate.Begin();
 
-
-            //poisonSeal.PlayCompleted += (s, e) =>
-            //{
-            //    poisonSeal.StartPlay();
-            //};
-            //voodooSeal.PlayCompleted += (s, e) =>
-            //{
-            //    voodooSeal.StartPlay();
-            //};
-            //monsterSeal.PlayCompleted += (s, e) =>
-            //{
-            //    monsterSeal.StartPlay();
-            //};
-
-            SB_Calculate.Completed += new EventHandler(SB_Calculate_Completed);
-            //SB_Fusion.Completed += new EventHandler(SB_Fusion_Completed);
-            //SB_CloudOut.Completed += new EventHandler(SB_CloudOut_Completed);
-            _clound.Sb_CloudOut.Completed += new EventHandler(Sb_CloudOut_Completed);
-
-            //_clound.Sb_CloudOut.Begin();
-
-            const int TenKeyFrame = 8;
-            const int EighteenKeyFrame = 18;
-
+            // SCalculate state 1
+            const int TotalRunningScoreKeyFrame = 8;
             const string FirstScore = "PoisonDiscreteObjectKeyFrameScore";
+            calculateGameScoreRunner(FirstScore, TotalRunningScoreKeyFrame, GlobalScore.FirstScore);
+
+            // SCalculate state 2
             const string SecondScore = "VoodooDiscreteObjectKeyFrameScore";
+            calculateGameScoreRunner(SecondScore, TotalRunningScoreKeyFrame, GlobalScore.SecondScore);
+
+            // SCalculate state 3
             const string ThirdScore = "MonsterDiscreteObjectKeyFrameScore";
+            calculateGameScoreRunner(ThirdScore, TotalRunningScoreKeyFrame, GlobalScore.ThirdScore);
 
-            //const string SumScore = "DokSumScoreValue";
-            const string AllScore = "AllDiscreteObjectKeyFrameScore";
-
-            calculateGameScoreRunner(FirstScore, TenKeyFrame, GlobalScore.FirstScore);
-            calculateGameScoreRunner(SecondScore, TenKeyFrame, GlobalScore.SecondScore);
-            calculateGameScoreRunner(ThirdScore, TenKeyFrame, GlobalScore.ThirdScore);
-
+            // SCalculate total score
+            const string TotalScore = "AllDiscreteObjectKeyFrameScore";
             int totalSocre = GlobalScore.FirstScore + GlobalScore.SecondScore + GlobalScore.ThirdScore;
-            calculateGameScoreRunner(AllScore, TenKeyFrame, totalSocre);
-            //calculateGameScoreRunner(SumScore, EighteenKeyFrame, totalSocre);
-            
+            calculateGameScoreRunner(TotalScore, TotalRunningScoreKeyFrame, totalSocre);
         }
 
-        private void Sb_CloudOut_Completed(object sender, EventArgs e)
+        #endregion Constructors
+
+        #region Methods
+
+        // กำหนดค่าข้อมูลพื้นฐาน
+        private void initializeObjects()
         {
-            
-
-            //poisonSeal.StartPlay();
-            //voodooSeal.StartPlay();
-            //monsterSeal.StartPlay();
+            _clound = new CloudUI();
         }
 
-        private void SB_CloudOut_Completed(object sender, EventArgs e)
+        // กำหนดเหตุการณ์ต่างๆ
+        private void initializeEvents()
         {
-            var temp = CalculateScoreCompleted;
-            if (temp != null)
-            {
-                temp(this,null);
-            }
+            // เมื่อแสดงคะแนนรวมเสร็จสิ้น จะทำการแสดงปุ่มไปต่อ
+            TotalScoreObjectAnimation.Completed += (s, e) => Sb_Next.Begin();
+
+            // เมื่อทำการคลิกปุ่มไปต่อ
+            btn_Next.MouseLeftButtonDown += (s, e) => {
+                var temp = CalculateScoreCompleted;
+                if (temp != null) {
+                    temp(this, null);
+                }
+            };
         }
 
-        private void SB_Fusion_Completed(object sender, EventArgs e)
-        {
-            //SB_CloudOut.Begin();
-        }
-
-        private void SB_Calculate_Completed(object sender, EventArgs e)
-        {
-            //SB_Fusion.Begin();
-        }
-
-        private void calculateGameScoreRunner(string objectName,int keyFrame,int scoreValue)
+        // กำหนดข้อมูลในการแสดงคะแนน
+        private void calculateGameScoreRunner(string objectName, int keyFrame, int scoreValue)
         {
             int score = (int)(scoreValue / keyFrame);
-            for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++)
-            {
+            for (int keyFrameValues = 1; keyFrameValues <= keyFrame; keyFrameValues++) {
                 (LayoutRoot.FindName(string.Format("{0}{1}", objectName, keyFrameValues)) as DiscreteObjectKeyFrame)
                     .Value = (score * keyFrameValues).ToString();
             }
@@ -127,5 +109,6 @@ namespace TheS.SperfGames.MayaTukky.Views
         {
         }
 
+        #endregion Methods
     }
 }

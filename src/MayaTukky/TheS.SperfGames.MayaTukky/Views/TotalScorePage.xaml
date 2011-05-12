@@ -161,7 +161,7 @@
     				</DiscreteObjectKeyFrame.Value>
     			</DiscreteObjectKeyFrame>
     		</ObjectAnimationUsingKeyFrames>
-    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="AllStateScoreTextBlock">
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="AllStateScoreTextBlock" x:Name="TotalScoreObjectAnimation">
     			<DiscreteObjectKeyFrame KeyTime="0:0:3.2" Value="0"/>
     			<DiscreteObjectKeyFrame KeyTime="0:0:3.3" x:Name="AllDiscreteObjectKeyFrameScore1"/>
     			<DiscreteObjectKeyFrame KeyTime="0:0:3.4" x:Name="AllDiscreteObjectKeyFrameScore2"/>

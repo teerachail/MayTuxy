@@ -37,6 +37,9 @@ namespace TheS.SperfGames.MayaTukky.Views
             {
                 progress = 0;
                 txt_Number.Text = "100%";
+
+                var temp = NextPage;
+                if (temp != null) temp(null, null);
             }
             else
             {
@@ -61,11 +64,6 @@ namespace TheS.SperfGames.MayaTukky.Views
             if (temp != null)
             {
                 temp(this, EventArgs.Empty);
-            }
-            EventHandler temp2 = NextPage;
-            if (temp2 != null)
-            {
-                temp2(null,null);
             }
         }
 
